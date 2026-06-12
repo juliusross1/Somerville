@@ -1,0 +1,31 @@
+Refer to the "The Playfair Axes.txt" document for an explanation of the axes, and how they are setup in Glyphs.
+
+Executing this script will delete all existing instances (save for the VF instances).
+
+#Optical size:opsz
+5>5:Micro
+200>6:Minuscule
+325>7:Miniature
+400>8:Caption
+550>12:Regular*
+640>16:SubHeading
+700>21:Trumpet
+800>32:Headline
+900>48:Display
+980>72:Titling
+1020>96:Hairline
+1200>1200:Needlepoint
+
+#Width:wdth
+95>88|4:SemiCondensed
+100>100|5:Regular*
+113>113|6:SemiExpanded
+
+#Weight:wght
+360>360:SemiLight
+400>400:Regular*
+475>500:Medium
+550>600:SemiBold
+650>700:Bold
+750>800:ExtraBold
+900>900:Black

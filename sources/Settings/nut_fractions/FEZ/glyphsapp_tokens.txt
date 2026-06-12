@@ -1,0 +1,86 @@
+Turns out Glyphs can’t operate on parentheses. Puts the kibosh on that idea – for now at least.
+
+Static feature code output from Fez:
+pos one.numr.afrc' <314 0 -243 0> one.numr.afrc' <557 0 -243 0> one.numr.afrc' <800 0 -243 0> one.numr.afrc' <1043 0 -243 0> bar.afrc bar.afrc bar.afrc bar.afrc;
+
+GPOS is specified as <xPlacement yPlacement xAdvance yAdvance>
+
+Becomes interpolatable in a Variable Font by using Glyphs tokens:
+pos one.numr.afrc' <314 0 ${one.numr.afrc:width*-1} 0> one.numr.afrc' <557 0 ${one.numr.afrc:width*-1} 0> one.numr.afrc' <800 0 ${one.numr.afrc:width*-1} 0> one.numr.afrc' <1043 0 ${one.numr.afrc:width*-1} 0> bar.afrc bar.afrc bar.afrc bar.afrc;
+
+${zero.numr.afrc:width}
+${one.numr.afrc:width}
+${two.numr.afrc:width}
+${three.numr.afrc:width}
+${four.numr.afrc:width}
+${five.numr.afrc:width}
+${six.numr.afrc:width}
+${seven.numr.afrc:width}
+${eight.numr.afrc:width}
+${nine.numr.afrc:width}
+
+${zero.dnom.afrc:width}
+${one.dnom.afrc:width}
+${two.dnom.afrc:width}
+${three.dnom.afrc:width}
+${four.dnom.afrc:width}
+${five.dnom.afrc:width}
+${six.dnom.afrc:width}
+${seven.dnom.afrc:width}
+${eight.dnom.afrc:width}
+${nine.dnom.afrc:width}
+
+
+Instances calculated
+Bin of zero, six, nine averages is 405, negative -405
+${((zero.numr.afrc:width+six.numr.afrc:width+nine.numr.afrc:width)/3)*-1}
+
+Various calculations
+bar.afrc
+400 = 400
+400/2 = 200
+
+one.numr.afrc
+243 width = 243
+243/2 = 121,5
+
+314-243 = 71
+243*2+71 = 557
+
+557-314 = 243
+800-557 = 243
+1043-800 = 243
+
+Average widths for SemiCond Regular Needepoint
+423 = 423
+243 = 243
+351 = 351
+353 = 353
+351 = 351
+335 = 335
+396 = 396
+333 = 333
+368 = 368
+396 = 396
+avg 354,9
+
+335/2 = 167,5
+
+(400/2)-(335/2) = 32,5
+
+335-314 = 21
+
+Nine, six, zero
+396 = 396
+396 = 396
+423 = 423
+avg 405
+
+Eight, five, four, seven, three, two
+368 = 368
+335 = 335
+351 = 351
+333 = 333
+353 = 353
+351 = 351
+avg 348,5
