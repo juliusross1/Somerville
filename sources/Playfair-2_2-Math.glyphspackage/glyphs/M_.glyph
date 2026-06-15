@@ -1,5 +1,4 @@
 {
-color = 4;
 glyphname = M;
 kernLeft = KO_H;
 kernRight = KO_H;
@@ -9,6 +8,10 @@ anchors = (
 {
 name = bottom;
 pos = (428,0);
+},
+{
+name = math.ta;
+pos = (434,708);
 },
 {
 name = top;
@@ -99,6 +102,10 @@ name = bottom;
 pos = (524,0);
 },
 {
+name = math.ta;
+pos = (524,708);
+},
+{
 name = top;
 pos = (524,708);
 },
@@ -185,6 +192,10 @@ anchors = (
 {
 name = bottom;
 pos = (640,0);
+},
+{
+name = math.ta;
+pos = (640,708);
 },
 {
 name = top;
@@ -275,6 +286,10 @@ name = bottom;
 pos = (483,0);
 },
 {
+name = math.ta;
+pos = (483,708);
+},
+{
 name = top;
 pos = (483,708);
 },
@@ -361,6 +376,10 @@ anchors = (
 {
 name = bottom;
 pos = (565,0);
+},
+{
+name = math.ta;
+pos = (566,708);
 },
 {
 name = top;
@@ -451,6 +470,10 @@ name = bottom;
 pos = (514,0);
 },
 {
+name = math.ta;
+pos = (514,708);
+},
+{
 name = top;
 pos = (514,708);
 },
@@ -539,6 +562,10 @@ name = bottom;
 pos = (513,0);
 },
 {
+name = math.ta;
+pos = (513,708);
+},
+{
 name = top;
 pos = (513,708);
 },
@@ -625,6 +652,10 @@ anchors = (
 {
 name = bottom;
 pos = (647,0);
+},
+{
+name = math.ta;
+pos = (647,708);
 },
 {
 name = top;
