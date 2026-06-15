@@ -1,0 +1,128 @@
+PlayfairItalicVF.ttf:
+- name: Optical size
+  tag: opsz
+  values:
+  - name: Micro
+    value: 5
+  - name: Minuscule
+    value: 6
+  - name: Miniature
+    value: 7
+  - name: Caption
+    value: 8
+  - flags: 2
+    name: Text
+    value: 12
+  - name: SubHeading
+    value: 16
+  - name: Trumpet
+    value: 21
+  - name: Headline
+    value: 32
+  - name: Display
+    value: 48
+  - name: Titling
+    value: 72
+  - name: Hairline
+    value: 96
+  - name: Needlepoint
+    value: 1200
+- name: Width
+  tag: wdth
+  values:
+  - name: SemiCondensed
+    value: 87.5
+  - flags: 2
+    name: Normal
+    value: 100
+  - name: SemiExpanded
+    value: 112.5
+- name: Weight
+  tag: wght
+  values:
+  - name: Light
+    value: 300
+  - flags: 2
+    linkedValue: 700
+    name: Regular
+    value: 400
+  - name: Medium
+    value: 500
+  - name: SemiBold
+    value: 600
+  - name: Bold
+    value: 700
+  - name: ExtraBold
+    value: 800
+  - name: Black
+    value: 900
+- name: Italic
+  tag: ital
+  values:
+  - name: Italic
+    value: 1
+PlayfairRomanVF.ttf:
+- name: Optical size
+  tag: opsz
+  values:
+  - name: Micro
+    value: 5
+  - name: Minuscule
+    value: 6
+  - name: Miniature
+    value: 7
+  - name: Caption
+    value: 8
+  - flags: 2
+    name: Text
+    value: 12
+  - name: SubHeading
+    value: 16
+  - name: Trumpet
+    value: 21
+  - name: Headline
+    value: 32
+  - name: Display
+    value: 48
+  - name: Titling
+    value: 72
+  - name: Hairline
+    value: 96
+  - name: Needlepoint
+    value: 1200
+- name: Width
+  tag: wdth
+  values:
+  - name: SemiCondensed
+    value: 87.5
+  - flags: 2
+    name: Normal
+    value: 100
+  - name: SemiExpanded
+    value: 112.5
+- name: Weight
+  tag: wght
+  values:
+  - name: Light
+    value: 300
+  - flags: 2
+    linkedValue: 700
+    name: Regular
+    value: 400
+  - name: Medium
+    value: 500
+  - name: SemiBold
+    value: 600
+  - name: Bold
+    value: 700
+  - name: ExtraBold
+    value: 800
+  - name: Black
+    value: 900
+- name: Italic
+  tag: ital
+  values:
+  - flags: 2
+    linkedValue: 1
+    name: Roman
+    value: 0

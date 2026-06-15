@@ -1,5 +1,5 @@
 {
-.appVersion = "3326";
+.appVersion = "3527";
 .formatVersion = 3;
 axes = (
 {
@@ -13,11 +13,6 @@ tag = wdth;
 {
 name = Weight;
 tag = wght;
-},
-{
-hidden = 1;
-name = Italic;
-tag = ital;
 }
 );
 classes = (
@@ -132,9 +127,6 @@ value = 1;
 {
 name = "Axis Mappings";
 value = {
-ital = {
-1 = 1;
-};
 opsz = {
 5 = 5;
 6 = 200;
@@ -2698,8 +2690,7 @@ fontMaster = (
 axesValues = (
 1200,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -2929,8 +2920,7 @@ KernOnUserSetAutopairs = (
 axesValues = (
 1200,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -3154,8 +3144,7 @@ KernOnUserSetAutopairs = (
 axesValues = (
 1200,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -3375,8 +3364,7 @@ KernOnUserSetAutopairs = (
 axesValues = (
 1200,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -3602,8 +3590,7 @@ KernOnUserSetAutopairs = (
 axesValues = (
 5,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -3818,8 +3805,7 @@ KernOnUserSetAutopairs = (
 axesValues = (
 5,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -4034,8 +4020,7 @@ KernOnUserSetAutopairs = (
 axesValues = (
 5,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -4260,8 +4245,7 @@ KernOnUserSetAutopairs = (
 axesValues = (
 5,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -4517,8 +4501,7 @@ type = variable;
 axesValues = (
 5,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -4556,8 +4539,7 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -4595,8 +4577,7 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -4635,8 +4616,7 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -4675,8 +4655,7 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -4716,8 +4695,7 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -4756,8 +4734,7 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -4795,8 +4772,7 @@ widthClass = 4;
 axesValues = (
 5,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -4834,8 +4810,7 @@ weightClass = 360;
 axesValues = (
 5,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -4874,8 +4849,7 @@ name = "Micro Italic";
 axesValues = (
 5,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -4915,8 +4889,7 @@ weightClass = 500;
 axesValues = (
 5,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -4956,8 +4929,7 @@ weightClass = 600;
 axesValues = (
 5,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -4998,8 +4970,7 @@ weightClass = 700;
 axesValues = (
 5,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -5039,8 +5010,7 @@ weightClass = 800;
 axesValues = (
 5,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -5078,8 +5048,7 @@ weightClass = 900;
 axesValues = (
 5,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -5117,8 +5086,7 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -5156,8 +5124,7 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -5196,8 +5163,7 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -5236,8 +5202,7 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -5277,8 +5242,7 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -5317,8 +5281,7 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -5356,8 +5319,7 @@ widthClass = 6;
 axesValues = (
 200,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -5396,8 +5358,7 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -5437,8 +5398,7 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -5479,8 +5439,7 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -5521,8 +5480,7 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -5564,8 +5522,7 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -5606,8 +5563,7 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -5646,8 +5602,7 @@ widthClass = 4;
 axesValues = (
 200,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -5687,8 +5642,7 @@ weightClass = 360;
 axesValues = (
 200,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -5731,8 +5685,7 @@ name = "Minuscule Italic";
 axesValues = (
 200,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -5776,8 +5729,7 @@ weightClass = 500;
 axesValues = (
 200,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -5821,8 +5773,7 @@ weightClass = 600;
 axesValues = (
 200,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -5867,8 +5818,7 @@ weightClass = 700;
 axesValues = (
 200,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -5912,8 +5862,7 @@ weightClass = 800;
 axesValues = (
 200,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -5953,8 +5902,7 @@ weightClass = 900;
 axesValues = (
 200,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -5993,8 +5941,7 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -6034,8 +5981,7 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -6076,8 +6022,7 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -6118,8 +6063,7 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -6161,8 +6105,7 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -6203,8 +6146,7 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -6243,8 +6185,7 @@ widthClass = 6;
 axesValues = (
 325,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -6283,8 +6224,7 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -6324,8 +6264,7 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -6366,8 +6305,7 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -6408,8 +6346,7 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -6451,8 +6388,7 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -6493,8 +6429,7 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -6533,8 +6468,7 @@ widthClass = 4;
 axesValues = (
 325,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -6574,8 +6508,7 @@ weightClass = 360;
 axesValues = (
 325,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -6618,8 +6551,7 @@ name = "Miniature Italic";
 axesValues = (
 325,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -6663,8 +6595,7 @@ weightClass = 500;
 axesValues = (
 325,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -6708,8 +6639,7 @@ weightClass = 600;
 axesValues = (
 325,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -6754,8 +6684,7 @@ weightClass = 700;
 axesValues = (
 325,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -6799,8 +6728,7 @@ weightClass = 800;
 axesValues = (
 325,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -6840,8 +6768,7 @@ weightClass = 900;
 axesValues = (
 325,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -6880,8 +6807,7 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -6921,8 +6847,7 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -6963,8 +6888,7 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -7005,8 +6929,7 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -7048,8 +6971,7 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -7090,8 +7012,7 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -7130,8 +7051,7 @@ widthClass = 6;
 axesValues = (
 400,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -7170,8 +7090,7 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -7211,8 +7130,7 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -7253,8 +7171,7 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -7295,8 +7212,7 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -7338,8 +7254,7 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -7380,8 +7295,7 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -7420,8 +7334,7 @@ widthClass = 4;
 axesValues = (
 400,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -7461,8 +7374,7 @@ weightClass = 360;
 axesValues = (
 400,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -7505,8 +7417,7 @@ name = "Caption Italic";
 axesValues = (
 400,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -7550,8 +7461,7 @@ weightClass = 500;
 axesValues = (
 400,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -7595,8 +7505,7 @@ weightClass = 600;
 axesValues = (
 400,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -7641,8 +7550,7 @@ weightClass = 700;
 axesValues = (
 400,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -7686,8 +7594,7 @@ weightClass = 800;
 axesValues = (
 400,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -7727,8 +7634,7 @@ weightClass = 900;
 axesValues = (
 400,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -7767,8 +7673,7 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -7808,8 +7713,7 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -7850,8 +7754,7 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -7892,8 +7795,7 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -7935,8 +7837,7 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -7977,8 +7878,7 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -8017,8 +7917,7 @@ widthClass = 6;
 axesValues = (
 550,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -8057,8 +7956,7 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -8098,8 +7996,7 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -8140,8 +8037,7 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -8182,8 +8078,7 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -8225,8 +8120,7 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -8267,8 +8161,7 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -8307,8 +8200,7 @@ widthClass = 4;
 axesValues = (
 550,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -8348,8 +8240,7 @@ weightClass = 360;
 axesValues = (
 550,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -8392,8 +8283,7 @@ name = "Italic Italic";
 axesValues = (
 550,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -8437,8 +8327,7 @@ weightClass = 500;
 axesValues = (
 550,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -8482,8 +8371,7 @@ weightClass = 600;
 axesValues = (
 550,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -8528,8 +8416,7 @@ weightClass = 700;
 axesValues = (
 550,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -8573,8 +8460,7 @@ weightClass = 800;
 axesValues = (
 550,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -8614,8 +8500,7 @@ weightClass = 900;
 axesValues = (
 550,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -8654,8 +8539,7 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -8695,8 +8579,7 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -8737,8 +8620,7 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -8779,8 +8661,7 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -8822,8 +8703,7 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -8864,8 +8744,7 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -8904,8 +8783,7 @@ widthClass = 6;
 axesValues = (
 640,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -8944,8 +8822,7 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -8985,8 +8862,7 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -9027,8 +8903,7 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -9069,8 +8944,7 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -9112,8 +8986,7 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -9154,8 +9027,7 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -9194,8 +9066,7 @@ widthClass = 4;
 axesValues = (
 640,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -9235,8 +9106,7 @@ weightClass = 360;
 axesValues = (
 640,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -9279,8 +9149,7 @@ name = "SubHeading Italic";
 axesValues = (
 640,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -9324,8 +9193,7 @@ weightClass = 500;
 axesValues = (
 640,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -9369,8 +9237,7 @@ weightClass = 600;
 axesValues = (
 640,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -9415,8 +9282,7 @@ weightClass = 700;
 axesValues = (
 640,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -9460,8 +9326,7 @@ weightClass = 800;
 axesValues = (
 640,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -9501,8 +9366,7 @@ weightClass = 900;
 axesValues = (
 640,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -9541,8 +9405,7 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -9582,8 +9445,7 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -9624,8 +9486,7 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -9666,8 +9527,7 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -9709,8 +9569,7 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -9751,8 +9610,7 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -9791,8 +9649,7 @@ widthClass = 6;
 axesValues = (
 700,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -9831,8 +9688,7 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -9872,8 +9728,7 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -9914,8 +9769,7 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -9956,8 +9810,7 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -9999,8 +9852,7 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -10041,8 +9893,7 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -10081,8 +9932,7 @@ widthClass = 4;
 axesValues = (
 700,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -10122,8 +9972,7 @@ weightClass = 360;
 axesValues = (
 700,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -10166,8 +10015,7 @@ name = "Trumpet Italic";
 axesValues = (
 700,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -10211,8 +10059,7 @@ weightClass = 500;
 axesValues = (
 700,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -10256,8 +10103,7 @@ weightClass = 600;
 axesValues = (
 700,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -10302,8 +10148,7 @@ weightClass = 700;
 axesValues = (
 700,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -10347,8 +10192,7 @@ weightClass = 800;
 axesValues = (
 700,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -10388,8 +10232,7 @@ weightClass = 900;
 axesValues = (
 700,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -10428,8 +10271,7 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -10469,8 +10311,7 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -10511,8 +10352,7 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -10553,8 +10393,7 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -10596,8 +10435,7 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -10638,8 +10476,7 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -10678,8 +10515,7 @@ widthClass = 6;
 axesValues = (
 800,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -10718,8 +10554,7 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -10759,8 +10594,7 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -10801,8 +10635,7 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -10843,8 +10676,7 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -10886,8 +10718,7 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -10928,8 +10759,7 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -10968,8 +10798,7 @@ widthClass = 4;
 axesValues = (
 800,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -11009,8 +10838,7 @@ weightClass = 360;
 axesValues = (
 800,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -11053,8 +10881,7 @@ name = "Headline Italic";
 axesValues = (
 800,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -11098,8 +10925,7 @@ weightClass = 500;
 axesValues = (
 800,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -11143,8 +10969,7 @@ weightClass = 600;
 axesValues = (
 800,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -11189,8 +11014,7 @@ weightClass = 700;
 axesValues = (
 800,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -11234,8 +11058,7 @@ weightClass = 800;
 axesValues = (
 800,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -11275,8 +11098,7 @@ weightClass = 900;
 axesValues = (
 800,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -11315,8 +11137,7 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -11356,8 +11177,7 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -11398,8 +11218,7 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -11440,8 +11259,7 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -11483,8 +11301,7 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -11525,8 +11342,7 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -11565,8 +11381,7 @@ widthClass = 6;
 axesValues = (
 900,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -11605,8 +11420,7 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -11646,8 +11460,7 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -11688,8 +11501,7 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -11730,8 +11542,7 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -11773,8 +11584,7 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -11815,8 +11625,7 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -11855,8 +11664,7 @@ widthClass = 4;
 axesValues = (
 900,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -11896,8 +11704,7 @@ weightClass = 360;
 axesValues = (
 900,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -11940,8 +11747,7 @@ name = "Display Italic";
 axesValues = (
 900,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -11985,8 +11791,7 @@ weightClass = 500;
 axesValues = (
 900,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -12030,8 +11835,7 @@ weightClass = 600;
 axesValues = (
 900,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -12076,8 +11880,7 @@ weightClass = 700;
 axesValues = (
 900,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -12121,8 +11924,7 @@ weightClass = 800;
 axesValues = (
 900,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -12162,8 +11964,7 @@ weightClass = 900;
 axesValues = (
 900,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -12202,8 +12003,7 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -12243,8 +12043,7 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -12285,8 +12084,7 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -12327,8 +12125,7 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -12370,8 +12167,7 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -12412,8 +12208,7 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -12452,8 +12247,7 @@ widthClass = 6;
 axesValues = (
 980,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -12492,8 +12286,7 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -12533,8 +12326,7 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -12575,8 +12367,7 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -12617,8 +12408,7 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -12660,8 +12450,7 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -12702,8 +12491,7 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -12742,8 +12530,7 @@ widthClass = 4;
 axesValues = (
 980,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -12783,8 +12570,7 @@ weightClass = 360;
 axesValues = (
 980,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -12827,8 +12613,7 @@ name = "Titling Italic";
 axesValues = (
 980,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -12872,8 +12657,7 @@ weightClass = 500;
 axesValues = (
 980,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -12917,8 +12701,7 @@ weightClass = 600;
 axesValues = (
 980,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -12963,8 +12746,7 @@ weightClass = 700;
 axesValues = (
 980,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -13008,8 +12790,7 @@ weightClass = 800;
 axesValues = (
 980,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -13049,8 +12830,7 @@ weightClass = 900;
 axesValues = (
 980,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -13089,8 +12869,7 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -13130,8 +12909,7 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -13172,8 +12950,7 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -13214,8 +12991,7 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -13257,8 +13033,7 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -13299,8 +13074,7 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -13339,8 +13113,7 @@ widthClass = 6;
 axesValues = (
 1020,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -13379,8 +13152,7 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -13420,8 +13192,7 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -13462,8 +13233,7 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -13504,8 +13274,7 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -13547,8 +13316,7 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -13589,8 +13357,7 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -13629,8 +13396,7 @@ widthClass = 4;
 axesValues = (
 1020,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -13670,8 +13436,7 @@ weightClass = 360;
 axesValues = (
 1020,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -13714,8 +13479,7 @@ name = "Hairline Italic";
 axesValues = (
 1020,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -13759,8 +13523,7 @@ weightClass = 500;
 axesValues = (
 1020,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -13804,8 +13567,7 @@ weightClass = 600;
 axesValues = (
 1020,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -13850,8 +13612,7 @@ weightClass = 700;
 axesValues = (
 1020,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -13895,8 +13656,7 @@ weightClass = 800;
 axesValues = (
 1020,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -13936,8 +13696,7 @@ weightClass = 900;
 axesValues = (
 1020,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -13976,8 +13735,7 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -14017,8 +13775,7 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -14059,8 +13816,7 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -14101,8 +13857,7 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -14144,8 +13899,7 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -14186,8 +13940,7 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -14226,8 +13979,7 @@ widthClass = 6;
 axesValues = (
 1200,
 95,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -14265,8 +14017,7 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -14304,8 +14055,7 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -14344,8 +14094,7 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -14384,8 +14133,7 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -14425,8 +14173,7 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -14465,8 +14212,7 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -14504,8 +14250,7 @@ widthClass = 4;
 axesValues = (
 1200,
 100,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -14543,8 +14288,7 @@ weightClass = 360;
 axesValues = (
 1200,
 100,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -14583,8 +14327,7 @@ name = "Needlepoint Italic";
 axesValues = (
 1200,
 100,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -14624,8 +14367,7 @@ weightClass = 500;
 axesValues = (
 1200,
 100,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -14665,8 +14407,7 @@ weightClass = 600;
 axesValues = (
 1200,
 100,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -14707,8 +14448,7 @@ weightClass = 700;
 axesValues = (
 1200,
 100,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -14748,8 +14488,7 @@ weightClass = 800;
 axesValues = (
 1200,
 100,
-900,
-1
+900
 );
 customParameters = (
 {
@@ -14787,8 +14526,7 @@ weightClass = 900;
 axesValues = (
 1200,
 113,
-360,
-1
+360
 );
 customParameters = (
 {
@@ -14826,8 +14564,7 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-400,
-1
+400
 );
 customParameters = (
 {
@@ -14865,8 +14602,7 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-475,
-1
+475
 );
 customParameters = (
 {
@@ -14905,8 +14641,7 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-550,
-1
+550
 );
 customParameters = (
 {
@@ -14945,8 +14680,7 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-650,
-1
+650
 );
 customParameters = (
 {
@@ -14986,8 +14720,7 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-750,
-1
+750
 );
 customParameters = (
 {
@@ -15026,8 +14759,7 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-900,
-1
+900
 );
 customParameters = (
 {
