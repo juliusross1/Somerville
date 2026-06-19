@@ -3,6 +3,20 @@ color = 6;
 glyphname = Delta;
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (246,2);
+},
+{
+name = math.ta;
+pos = (269,928);
+},
+{
+name = top;
+pos = (269,732);
+}
+);
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
@@ -31,6 +45,20 @@ nodes = (
 width = 504;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (251,3);
+},
+{
+name = math.ta;
+pos = (272,918);
+},
+{
+name = top;
+pos = (272,723);
+}
+);
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
@@ -59,6 +87,20 @@ nodes = (
 width = 504;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (323,2);
+},
+{
+name = math.ta;
+pos = (348,918);
+},
+{
+name = top;
+pos = (348,723);
+}
+);
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
@@ -87,6 +129,20 @@ nodes = (
 width = 649;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (248,3);
+},
+{
+name = math.ta;
+pos = (268,920);
+},
+{
+name = top;
+pos = (268,732);
+}
+);
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
@@ -115,6 +171,20 @@ nodes = (
 width = 498;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (299,3);
+},
+{
+name = math.ta;
+pos = (324,920);
+},
+{
+name = top;
+pos = (324,732);
+}
+);
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
@@ -143,6 +213,20 @@ nodes = (
 width = 603;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (300,1);
+},
+{
+name = math.ta;
+pos = (323,918);
+},
+{
+name = top;
+pos = (323,718);
+}
+);
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
@@ -171,6 +255,20 @@ nodes = (
 width = 606;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (248,2);
+},
+{
+name = math.ta;
+pos = (269,910);
+},
+{
+name = top;
+pos = (269,723);
+}
+);
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
@@ -199,6 +297,20 @@ nodes = (
 width = 498;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (324,3);
+},
+{
+name = math.ta;
+pos = (351,910);
+},
+{
+name = top;
+pos = (351,722);
+}
+);
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {

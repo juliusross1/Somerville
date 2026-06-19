@@ -13,17 +13,21 @@ tag = wdth;
 {
 name = Weight;
 tag = wght;
+},
+{
+name = "Math Weight";
+tag = MGHT;
 }
 );
 classes = (
 {
 automatic = 1;
-code = "A B C D E Esh Ezh G I J L M N O P Q R S T U V W X Y Z Delta Omega Aitalic-math";
+code = "A B C D E Esh Ezh F G H I J K L M N O P Q R S T U V W X Y Z Delta Omega Aitalic-math Bitalic-math Citalic-math Ditalic-math Eitalic-math Fitalic-math Gitalic-math Hitalic-math Iitalic-math Jitalic-math Kitalic-math Litalic-math Mitalic-math Nitalic-math Oitalic-math Pitalic-math Qitalic-math Ritalic-math Sitalic-math Titalic-math Uitalic-math Vitalic-math Witalic-math Xitalic-math Yitalic-math Zitalic-math Deltaitalic-math Omegaitalic-math Eitalic-math.ss02 Titalic-math.ss07 Zitalic-math.ss12 Xitalic-math.ss13";
 name = Uppercase;
 },
 {
 automatic = 1;
-code = "a b beta-latin c chi-latin d e eopen esh ezh f g glottalstop glottalstopsmall h i idotless iota-latin j jdotless l m n o omega-latin ou oe p r ramshorn rfishhook s germandbls t u upsilon-latin v vhook w x y yhook z j.cv01 jdotless.cv01 a-cy be-cy ve-cy ge-cy gje-cy geupturn-cy ghestroke-cy de-cy ie-cy iegrave-cy io-cy zhe-cy ze-cy ka-cy kje-cy el-cy em-cy o-cy pe-cy er-cy es-cy te-cy u-cy ushort-cy ef-cy ha-cy che-cy sha-cy shcha-cy softsign-cy yeru-cy hardsign-cy lje-cy dze-cy e-cy ereversed-cy i-cy yi-cy je-cy tshe-cy yu-cy ya-cy dje-cy yat-cy yusbig-cy zhedescender-cy kadescender-cy ustraight-cy ustraightstroke-cy hadescender-cy shha-cy schwa-cy ve-cy.loclBGR ge-cy.loclBGR de-cy.loclBGR zhe-cy.loclBGR ze-cy.loclBGR ii-cy.loclBGR iishort-cy.loclBGR el-cy.loclBGR en-cy.loclBGR pe-cy.loclBGR te-cy.loclBGR u-cy.loclBGR ef-cy.loclBGR tse-cy.loclBGR che-cy.loclBGR sha-cy.loclBGR shcha-cy.loclBGR softsign-cy.loclBGR hardsign-cy.loclBGR yu-cy.loclBGR ya-cy.loclBGR be-cy.loclSRB ef-cy.loclSRB yi-cy.narrow mu pi";
+code = "a b beta-latin c chi-latin d e eopen esh ezh f g h i idotless iota-latin j jdotless k l lambda-latin m n o omega-latin ou oe p r ramshorn rfishhook s germandbls t u upsilon-latin v vhook w x y yhook z j.cv01 jdotless.cv01 mu pi tau aitalic-math bitalic-math citalic-math ditalic-math eitalic-math fitalic-math gitalic-math iitalic-math jitalic-math kitalic-math litalic-math mitalic-math nitalic-math oitalic-math pitalic-math qitalic-math ritalic-math sitalic-math titalic-math uitalic-math vitalic-math witalic-math xitalic-math yitalic-math zitalic-math lambdaitalic-math muitalic-math piitalic-math pitalic-math.ss01 gitalic-math.ss05 yitalic-math.ss06 zitalic-math.ss12 xitalic-math.ss13 planckconstant";
 name = Lowercase;
 },
 {
@@ -149,6 +153,15 @@ value = 1;
 {
 name = "Axis Mappings";
 value = {
+MGHT = {
+0 = 400;
+300 = 360;
+500 = 475;
+600 = 550;
+700 = 650;
+800 = 750;
+900 = 900;
+};
 opsz = {
 5 = 5;
 6 = 200;
@@ -187,6 +200,27 @@ value = rlig;
 {
 name = "Use case marks for double marks";
 value = 0;
+},
+{
+name = "Virtual Master";
+value = (
+{
+Axis = "Optical size";
+Location = 5;
+},
+{
+Axis = Width;
+Location = 95;
+},
+{
+Axis = Weight;
+Location = 360;
+},
+{
+Axis = "Math Weight";
+Location = 900;
+}
+);
 }
 );
 date = "2024-11-05 07:24:09 +0000";
@@ -338,6 +372,13 @@ feature smcp;
 feature zero;
 feature ss11;
 feature cv01;
+feature ss01;
+feature ss02;
+feature ss05;
+feature ss06;
+feature ss07;
+feature ss12;
+feature ss13;
 ";
 tag = aalt;
 },
@@ -352,8 +393,8 @@ code = "lookup ccmp_DFLT_1 {
 
 lookup ccmp_Other_1 {
 	lookupflag 0;
-	@Markscomb = [brevecomb-cy dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb hookabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb cedillacomb ogonekcomb circumflexbelowcomb macronbelowcomb dotaboverightcomb doublemacronbelowcomb acutemacroncomb gravemacroncomb macronacutecomb macrongravecomb acutecomb.loclPLK dieresiscomb.narrow];
-	@MarkscombCase = [brevecomb-cy.case dieresiscomb.case dotaccentcomb.case gravecomb.case acutecomb.case hungarumlautcomb.case circumflexcomb.case caroncomb.case brevecomb.case ringcomb.case tildecomb.case macroncomb.case hookabovecomb.case dblgravecomb.case candraBinducomb.case breveinvertedcomb.case commaturnedabovecomb.case commaabovecomb.case cedillacomb.case ogonekcomb.case circumflexbelowcomb.case macronbelowcomb.case dotaboverightcomb.case doublemacronbelowcomb.case acutemacroncomb.case gravemacroncomb.case macronacutecomb.case macrongravecomb.case acutecomb.loclPLK.case dieresiscomb.narrow.case];
+	@Markscomb = [dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb hookabovecomb dblgravecomb candraBinducomb breveinvertedcomb commaturnedabovecomb commaabovecomb cedillacomb ogonekcomb circumflexbelowcomb macronbelowcomb dotaboverightcomb doublemacronbelowcomb acutemacroncomb gravemacroncomb macronacutecomb macrongravecomb acutecomb.loclPLK dieresiscomb.narrow];
+	@MarkscombCase = [dieresiscomb.case dotaccentcomb.case gravecomb.case acutecomb.case hungarumlautcomb.case circumflexcomb.case caroncomb.case brevecomb.case ringcomb.case tildecomb.case macroncomb.case hookabovecomb.case dblgravecomb.case candraBinducomb.case breveinvertedcomb.case commaturnedabovecomb.case commaabovecomb.case cedillacomb.case ogonekcomb.case circumflexbelowcomb.case macronbelowcomb.case dotaboverightcomb.case doublemacronbelowcomb.case acutemacroncomb.case gravemacroncomb.case macronacutecomb.case macrongravecomb.case acutecomb.loclPLK.case dieresiscomb.narrow.case];
 	sub @Uppercase @Markscomb' by @MarkscombCase;
 } ccmp_Other_1;
 
@@ -366,36 +407,7 @@ tag = ccmp;
 },
 {
 automatic = 1;
-code = "script cyrl;
-language BGR;
-lookup locl_cyrl_0 {
-	sub ve-cy by ve-cy.loclBGR;
-	sub ge-cy by ge-cy.loclBGR;
-	sub de-cy by de-cy.loclBGR;
-	sub zhe-cy by zhe-cy.loclBGR;
-	sub ze-cy by ze-cy.loclBGR;
-	sub el-cy by el-cy.loclBGR;
-	sub pe-cy by pe-cy.loclBGR;
-	sub te-cy by te-cy.loclBGR;
-	sub u-cy by u-cy.loclBGR;
-	sub ef-cy by ef-cy.loclBGR;
-	sub che-cy by che-cy.loclBGR;
-	sub sha-cy by sha-cy.loclBGR;
-	sub shcha-cy by shcha-cy.loclBGR;
-	sub softsign-cy by softsign-cy.loclBGR;
-	sub hardsign-cy by hardsign-cy.loclBGR;
-	sub yu-cy by yu-cy.loclBGR;
-	sub ya-cy by ya-cy.loclBGR;
-} locl_cyrl_0;
-
-script cyrl;
-language SRB;
-lookup locl_cyrl_1 {
-	sub be-cy by be-cy.loclSRB;
-	sub ef-cy by ef-cy.loclSRB;
-} locl_cyrl_1;
-
-script latn;
+code = "script latn;
 language PLK;
 lookup locl_latn_0 {
 	sub acutecomb by acutecomb.loclPLK;
@@ -838,6 +850,36 @@ tag = zero;
 },
 {
 automatic = 1;
+code = "sub pitalic-math by pitalic-math.ss01;
+";
+tag = ss01;
+},
+{
+automatic = 1;
+code = "sub Eitalic-math by Eitalic-math.ss02;
+";
+tag = ss02;
+},
+{
+automatic = 1;
+code = "sub gitalic-math by gitalic-math.ss05;
+";
+tag = ss05;
+},
+{
+automatic = 1;
+code = "sub yitalic-math by yitalic-math.ss06;
+";
+tag = ss06;
+},
+{
+automatic = 1;
+code = "sub Titalic-math by Titalic-math.ss07;
+";
+tag = ss07;
+},
+{
+automatic = 1;
 code = "sub sterling by sterling.ss11;
 ";
 labels = (
@@ -875,10 +917,36 @@ tag = ss14;
 },
 {
 automatic = 1;
+code = "sub Zitalic-math by Zitalic-math.ss12;
+sub zitalic-math by zitalic-math.ss12;
+";
+labels = (
+{
+language = dflt;
+value = "";
+}
+);
+tag = ss12;
+},
+{
+automatic = 1;
+code = "sub Xitalic-math by Xitalic-math.ss13;
+sub xitalic-math by xitalic-math.ss13;
+";
+tag = ss13;
+},
+{
+automatic = 1;
 code = "sub j by j.cv01;
 sub jdotless by jdotless.cv01;
 ";
 tag = cv01;
+},
+{
+code = "	sub i by idotless;
+	sub j by jdotless;
+";
+tag = dtls;
 }
 );
 fontMaster = (
@@ -886,6 +954,7 @@ fontMaster = (
 axesValues = (
 1200,
 95,
+360,
 360
 );
 customParameters = (
@@ -1213,6 +1282,7 @@ UpperLimitGapMin = 2;
 axesValues = (
 1200,
 113,
+360,
 360
 );
 customParameters = (
@@ -1525,7 +1595,8 @@ UpperLimitGapMin = 2;
 axesValues = (
 1200,
 95,
-900
+900,
+360
 );
 customParameters = (
 {
@@ -1850,7 +1921,8 @@ UpperLimitGapMin = 2;
 axesValues = (
 1200,
 113,
-900
+900,
+360
 );
 customParameters = (
 {
@@ -2188,6 +2260,7 @@ UpperLimitGapMin = 2;
 axesValues = (
 5,
 95,
+360,
 360
 );
 customParameters = (
@@ -2530,6 +2603,7 @@ UpperLimitGapMin = 160;
 axesValues = (
 5,
 113,
+360,
 360
 );
 customParameters = (
@@ -2866,7 +2940,8 @@ UpperLimitGapMin = 160;
 axesValues = (
 5,
 95,
-900
+900,
+360
 );
 customParameters = (
 {
@@ -3209,7 +3284,8 @@ UpperLimitGapMin = 160;
 axesValues = (
 5,
 113,
-900
+900,
+360
 );
 customParameters = (
 {
@@ -3616,7 +3692,8 @@ type = variable;
 axesValues = (
 5,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -3637,6 +3714,7 @@ Location = 360;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 1;
 };
@@ -3648,7 +3726,8 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -3669,6 +3748,7 @@ Location = 400;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.07407;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.92593;
@@ -3680,7 +3760,8 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -3714,7 +3795,8 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -3748,7 +3830,8 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -3784,7 +3867,8 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -3818,6 +3902,7 @@ widthClass = 4;
 axesValues = (
 5,
 95,
+900,
 900
 );
 customParameters = (
@@ -3839,6 +3924,7 @@ Location = 900;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 1;
 };
@@ -3850,7 +3936,8 @@ widthClass = 4;
 axesValues = (
 5,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -3883,7 +3970,8 @@ weightClass = 360;
 axesValues = (
 5,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -3917,7 +4005,8 @@ name = Micro;
 axesValues = (
 5,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -3952,7 +4041,8 @@ weightClass = 500;
 axesValues = (
 5,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -3987,7 +4077,8 @@ weightClass = 600;
 axesValues = (
 5,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -4024,7 +4115,8 @@ weightClass = 700;
 axesValues = (
 5,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -4059,6 +4151,7 @@ weightClass = 800;
 axesValues = (
 5,
 100,
+900,
 900
 );
 customParameters = (
@@ -4092,7 +4185,8 @@ weightClass = 900;
 axesValues = (
 5,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -4125,7 +4219,8 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -4158,7 +4253,8 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -4192,7 +4288,8 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -4226,7 +4323,8 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -4262,7 +4360,8 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -4296,6 +4395,7 @@ widthClass = 6;
 axesValues = (
 5,
 113,
+900,
 900
 );
 customParameters = (
@@ -4329,7 +4429,8 @@ widthClass = 6;
 axesValues = (
 200,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -4363,7 +4464,8 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -4398,7 +4500,8 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -4434,7 +4537,8 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -4470,7 +4574,8 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -4508,7 +4613,8 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -4544,6 +4650,7 @@ widthClass = 4;
 axesValues = (
 200,
 95,
+900,
 900
 );
 customParameters = (
@@ -4578,7 +4685,8 @@ widthClass = 4;
 axesValues = (
 200,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -4613,7 +4721,8 @@ weightClass = 360;
 axesValues = (
 200,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -4651,7 +4760,8 @@ name = Minuscule;
 axesValues = (
 200,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -4690,7 +4800,8 @@ weightClass = 500;
 axesValues = (
 200,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -4729,7 +4840,8 @@ weightClass = 600;
 axesValues = (
 200,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -4770,7 +4882,8 @@ weightClass = 700;
 axesValues = (
 200,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -4809,6 +4922,7 @@ weightClass = 800;
 axesValues = (
 200,
 100,
+900,
 900
 );
 customParameters = (
@@ -4844,7 +4958,8 @@ weightClass = 900;
 axesValues = (
 200,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -4878,7 +4993,8 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -4913,7 +5029,8 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -4949,7 +5066,8 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -4985,7 +5103,8 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -5023,7 +5142,8 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -5059,6 +5179,7 @@ widthClass = 6;
 axesValues = (
 200,
 113,
+900,
 900
 );
 customParameters = (
@@ -5093,7 +5214,8 @@ widthClass = 6;
 axesValues = (
 325,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -5127,7 +5249,8 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -5162,7 +5285,8 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -5198,7 +5322,8 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -5234,7 +5359,8 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -5272,7 +5398,8 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -5308,6 +5435,7 @@ widthClass = 4;
 axesValues = (
 325,
 95,
+900,
 900
 );
 customParameters = (
@@ -5342,7 +5470,8 @@ widthClass = 4;
 axesValues = (
 325,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -5377,7 +5506,8 @@ weightClass = 360;
 axesValues = (
 325,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -5415,7 +5545,8 @@ name = Miniature;
 axesValues = (
 325,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -5454,7 +5585,8 @@ weightClass = 500;
 axesValues = (
 325,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -5493,7 +5625,8 @@ weightClass = 600;
 axesValues = (
 325,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -5534,7 +5667,8 @@ weightClass = 700;
 axesValues = (
 325,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -5573,6 +5707,7 @@ weightClass = 800;
 axesValues = (
 325,
 100,
+900,
 900
 );
 customParameters = (
@@ -5608,7 +5743,8 @@ weightClass = 900;
 axesValues = (
 325,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -5642,7 +5778,8 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -5677,7 +5814,8 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -5713,7 +5851,8 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -5749,7 +5888,8 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -5787,7 +5927,8 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -5823,6 +5964,7 @@ widthClass = 6;
 axesValues = (
 325,
 113,
+900,
 900
 );
 customParameters = (
@@ -5857,7 +5999,8 @@ widthClass = 6;
 axesValues = (
 400,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -5891,7 +6034,8 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -5926,7 +6070,8 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -5962,7 +6107,8 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -5998,7 +6144,8 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -6036,7 +6183,8 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -6072,6 +6220,7 @@ widthClass = 4;
 axesValues = (
 400,
 95,
+900,
 900
 );
 customParameters = (
@@ -6106,7 +6255,8 @@ widthClass = 4;
 axesValues = (
 400,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -6141,7 +6291,8 @@ weightClass = 360;
 axesValues = (
 400,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -6179,7 +6330,8 @@ name = Caption;
 axesValues = (
 400,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -6218,7 +6370,8 @@ weightClass = 500;
 axesValues = (
 400,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -6257,7 +6410,8 @@ weightClass = 600;
 axesValues = (
 400,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -6298,7 +6452,8 @@ weightClass = 700;
 axesValues = (
 400,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -6337,6 +6492,7 @@ weightClass = 800;
 axesValues = (
 400,
 100,
+900,
 900
 );
 customParameters = (
@@ -6372,7 +6528,8 @@ weightClass = 900;
 axesValues = (
 400,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -6406,7 +6563,8 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -6441,7 +6599,8 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -6477,7 +6636,8 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -6513,7 +6673,8 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -6551,7 +6712,8 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -6587,6 +6749,7 @@ widthClass = 6;
 axesValues = (
 400,
 113,
+900,
 900
 );
 customParameters = (
@@ -6621,7 +6784,8 @@ widthClass = 6;
 axesValues = (
 550,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -6642,6 +6806,7 @@ Location = 360;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.54393;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.45607;
@@ -6654,7 +6819,8 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -6675,6 +6841,7 @@ Location = 400;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.04029;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.50364;
@@ -6688,7 +6855,8 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -6724,7 +6892,8 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -6760,7 +6929,8 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -6798,7 +6968,8 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -6834,6 +7005,7 @@ widthClass = 4;
 axesValues = (
 550,
 95,
+900,
 900
 );
 customParameters = (
@@ -6855,6 +7027,7 @@ Location = 900;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.54393;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.45607;
@@ -6867,7 +7040,8 @@ widthClass = 4;
 axesValues = (
 550,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -6888,6 +7062,7 @@ Location = 360;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.15109;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.12669;
@@ -6901,7 +7076,8 @@ weightClass = 360;
 axesValues = (
 550,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -6922,6 +7098,7 @@ Location = 400;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.1399;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.0291;
@@ -6938,7 +7115,8 @@ name = Regular;
 axesValues = (
 550,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -6959,6 +7137,7 @@ Location = 500;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11892;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.08366;
@@ -6976,7 +7155,8 @@ weightClass = 500;
 axesValues = (
 550,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -6997,6 +7177,7 @@ Location = 600;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09793;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.13822;
@@ -7014,7 +7195,8 @@ weightClass = 600;
 axesValues = (
 550,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -7035,6 +7217,7 @@ Location = 700;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06995;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.21097;
@@ -7054,7 +7237,8 @@ weightClass = 700;
 axesValues = (
 550,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -7075,6 +7259,7 @@ Location = 800;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04197;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.28372;
@@ -7092,6 +7277,7 @@ weightClass = 800;
 axesValues = (
 550,
 100,
+900,
 900
 );
 customParameters = (
@@ -7113,6 +7299,7 @@ Location = 900;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.39284;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.12669;
@@ -7126,7 +7313,8 @@ weightClass = 900;
 axesValues = (
 550,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -7160,7 +7348,8 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -7195,7 +7384,8 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -7231,7 +7421,8 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -7267,7 +7458,8 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -7305,7 +7497,8 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -7341,6 +7534,7 @@ widthClass = 6;
 axesValues = (
 550,
 113,
+900,
 900
 );
 customParameters = (
@@ -7375,7 +7569,8 @@ widthClass = 6;
 axesValues = (
 640,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -7409,7 +7604,8 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -7444,7 +7640,8 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -7480,7 +7677,8 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -7516,7 +7714,8 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -7554,7 +7753,8 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -7590,6 +7790,7 @@ widthClass = 4;
 axesValues = (
 640,
 95,
+900,
 900
 );
 customParameters = (
@@ -7624,7 +7825,8 @@ widthClass = 4;
 axesValues = (
 640,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -7659,7 +7861,8 @@ weightClass = 360;
 axesValues = (
 640,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -7697,7 +7900,8 @@ name = SubHeading;
 axesValues = (
 640,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -7736,7 +7940,8 @@ weightClass = 500;
 axesValues = (
 640,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -7775,7 +7980,8 @@ weightClass = 600;
 axesValues = (
 640,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -7816,7 +8022,8 @@ weightClass = 700;
 axesValues = (
 640,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -7855,6 +8062,7 @@ weightClass = 800;
 axesValues = (
 640,
 100,
+900,
 900
 );
 customParameters = (
@@ -7890,7 +8098,8 @@ weightClass = 900;
 axesValues = (
 640,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -7924,7 +8133,8 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -7959,7 +8169,8 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -7995,7 +8206,8 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -8031,7 +8243,8 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -8069,7 +8282,8 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -8105,6 +8319,7 @@ widthClass = 6;
 axesValues = (
 640,
 113,
+900,
 900
 );
 customParameters = (
@@ -8139,7 +8354,8 @@ widthClass = 6;
 axesValues = (
 700,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -8173,7 +8389,8 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -8208,7 +8425,8 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -8244,7 +8462,8 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -8280,7 +8499,8 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -8318,7 +8538,8 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -8354,6 +8575,7 @@ widthClass = 4;
 axesValues = (
 700,
 95,
+900,
 900
 );
 customParameters = (
@@ -8388,7 +8610,8 @@ widthClass = 4;
 axesValues = (
 700,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -8423,7 +8646,8 @@ weightClass = 360;
 axesValues = (
 700,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -8461,7 +8685,8 @@ name = Trumpet;
 axesValues = (
 700,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -8500,7 +8725,8 @@ weightClass = 500;
 axesValues = (
 700,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -8539,7 +8765,8 @@ weightClass = 600;
 axesValues = (
 700,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -8580,7 +8807,8 @@ weightClass = 700;
 axesValues = (
 700,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -8619,6 +8847,7 @@ weightClass = 800;
 axesValues = (
 700,
 100,
+900,
 900
 );
 customParameters = (
@@ -8654,7 +8883,8 @@ weightClass = 900;
 axesValues = (
 700,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -8688,7 +8918,8 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -8723,7 +8954,8 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -8759,7 +8991,8 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -8795,7 +9028,8 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -8833,7 +9067,8 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -8869,6 +9104,7 @@ widthClass = 6;
 axesValues = (
 700,
 113,
+900,
 900
 );
 customParameters = (
@@ -8903,7 +9139,8 @@ widthClass = 6;
 axesValues = (
 800,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -8937,7 +9174,8 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -8972,7 +9210,8 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -9008,7 +9247,8 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -9044,7 +9284,8 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -9082,7 +9323,8 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -9118,6 +9360,7 @@ widthClass = 4;
 axesValues = (
 800,
 95,
+900,
 900
 );
 customParameters = (
@@ -9152,7 +9395,8 @@ widthClass = 4;
 axesValues = (
 800,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -9187,7 +9431,8 @@ weightClass = 360;
 axesValues = (
 800,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -9225,7 +9470,8 @@ name = Headline;
 axesValues = (
 800,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -9264,7 +9510,8 @@ weightClass = 500;
 axesValues = (
 800,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -9303,7 +9550,8 @@ weightClass = 600;
 axesValues = (
 800,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -9344,7 +9592,8 @@ weightClass = 700;
 axesValues = (
 800,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -9383,6 +9632,7 @@ weightClass = 800;
 axesValues = (
 800,
 100,
+900,
 900
 );
 customParameters = (
@@ -9418,7 +9668,8 @@ weightClass = 900;
 axesValues = (
 800,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -9452,7 +9703,8 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -9487,7 +9739,8 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -9523,7 +9776,8 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -9559,7 +9813,8 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -9597,7 +9852,8 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -9633,6 +9889,7 @@ widthClass = 6;
 axesValues = (
 800,
 113,
+900,
 900
 );
 customParameters = (
@@ -9667,7 +9924,8 @@ widthClass = 6;
 axesValues = (
 900,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -9688,6 +9946,7 @@ Location = 360;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.25105;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.74895;
@@ -9700,7 +9959,8 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -9721,6 +9981,7 @@ Location = 400;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.0186;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.23245;
@@ -9734,7 +9995,8 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -9770,7 +10032,8 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -9806,7 +10069,8 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -9844,7 +10108,8 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -9880,6 +10145,7 @@ widthClass = 4;
 axesValues = (
 900,
 95,
+900,
 900
 );
 customParameters = (
@@ -9901,6 +10167,7 @@ Location = 900;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25105;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.74895;
@@ -9913,7 +10180,8 @@ widthClass = 4;
 axesValues = (
 900,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -9948,7 +10216,8 @@ weightClass = 360;
 axesValues = (
 900,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -9986,7 +10255,8 @@ name = Display;
 axesValues = (
 900,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -10025,7 +10295,8 @@ weightClass = 500;
 axesValues = (
 900,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -10064,7 +10335,8 @@ weightClass = 600;
 axesValues = (
 900,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -10105,7 +10377,8 @@ weightClass = 700;
 axesValues = (
 900,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -10144,6 +10417,7 @@ weightClass = 800;
 axesValues = (
 900,
 100,
+900,
 900
 );
 customParameters = (
@@ -10179,7 +10453,8 @@ weightClass = 900;
 axesValues = (
 900,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -10213,7 +10488,8 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -10248,7 +10524,8 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -10284,7 +10561,8 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -10320,7 +10598,8 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -10358,7 +10637,8 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -10394,6 +10674,7 @@ widthClass = 6;
 axesValues = (
 900,
 113,
+900,
 900
 );
 customParameters = (
@@ -10428,7 +10709,8 @@ widthClass = 6;
 axesValues = (
 980,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -10462,7 +10744,8 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -10497,7 +10780,8 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -10533,7 +10817,8 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -10569,7 +10854,8 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -10607,7 +10893,8 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -10643,6 +10930,7 @@ widthClass = 4;
 axesValues = (
 980,
 95,
+900,
 900
 );
 customParameters = (
@@ -10677,7 +10965,8 @@ widthClass = 4;
 axesValues = (
 980,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -10712,7 +11001,8 @@ weightClass = 360;
 axesValues = (
 980,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -10750,7 +11040,8 @@ name = Titling;
 axesValues = (
 980,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -10789,7 +11080,8 @@ weightClass = 500;
 axesValues = (
 980,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -10828,7 +11120,8 @@ weightClass = 600;
 axesValues = (
 980,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -10869,7 +11162,8 @@ weightClass = 700;
 axesValues = (
 980,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -10908,6 +11202,7 @@ weightClass = 800;
 axesValues = (
 980,
 100,
+900,
 900
 );
 customParameters = (
@@ -10943,7 +11238,8 @@ weightClass = 900;
 axesValues = (
 980,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -10977,7 +11273,8 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -11012,7 +11309,8 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -11048,7 +11346,8 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -11084,7 +11383,8 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -11122,7 +11422,8 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -11158,6 +11459,7 @@ widthClass = 6;
 axesValues = (
 980,
 113,
+900,
 900
 );
 customParameters = (
@@ -11192,7 +11494,8 @@ widthClass = 6;
 axesValues = (
 1020,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -11226,7 +11529,8 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -11261,7 +11565,8 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -11297,7 +11602,8 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -11333,7 +11639,8 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -11371,7 +11678,8 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -11407,6 +11715,7 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
+900,
 900
 );
 customParameters = (
@@ -11441,7 +11750,8 @@ widthClass = 4;
 axesValues = (
 1020,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -11476,7 +11786,8 @@ weightClass = 360;
 axesValues = (
 1020,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -11514,7 +11825,8 @@ name = Hairline;
 axesValues = (
 1020,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -11553,7 +11865,8 @@ weightClass = 500;
 axesValues = (
 1020,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -11592,7 +11905,8 @@ weightClass = 600;
 axesValues = (
 1020,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -11633,7 +11947,8 @@ weightClass = 700;
 axesValues = (
 1020,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -11672,6 +11987,7 @@ weightClass = 800;
 axesValues = (
 1020,
 100,
+900,
 900
 );
 customParameters = (
@@ -11707,7 +12023,8 @@ weightClass = 900;
 axesValues = (
 1020,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -11741,7 +12058,8 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -11776,7 +12094,8 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -11812,7 +12131,8 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -11848,7 +12168,8 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -11886,7 +12207,8 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -11922,6 +12244,7 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
+900,
 900
 );
 customParameters = (
@@ -11956,7 +12279,8 @@ widthClass = 6;
 axesValues = (
 1200,
 95,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -11973,6 +12297,10 @@ Location = 88;
 {
 Axis = Weight;
 Location = 360;
+},
+{
+Axis = "Math Weight";
+Location = 900;
 }
 );
 }
@@ -11988,7 +12316,8 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -12009,6 +12338,7 @@ Location = 400;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.92593;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.07407;
@@ -12020,7 +12350,8 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -12054,7 +12385,8 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -12088,7 +12420,8 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -12124,7 +12457,8 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -12158,6 +12492,7 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
+900,
 900
 );
 customParameters = (
@@ -12179,6 +12514,7 @@ Location = 900;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "F497C50F-30EB-4580-9148-0005B36D0333" = 1;
 };
@@ -12190,7 +12526,8 @@ widthClass = 4;
 axesValues = (
 1200,
 100,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -12211,6 +12548,7 @@ Location = 360;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.27778;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.72222;
@@ -12222,7 +12560,8 @@ weightClass = 360;
 axesValues = (
 1200,
 100,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -12256,7 +12595,8 @@ name = Needlepoint;
 axesValues = (
 1200,
 100,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -12291,7 +12631,8 @@ weightClass = 500;
 axesValues = (
 1200,
 100,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -12326,7 +12667,8 @@ weightClass = 600;
 axesValues = (
 1200,
 100,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -12363,7 +12705,8 @@ weightClass = 700;
 axesValues = (
 1200,
 100,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -12398,6 +12741,7 @@ weightClass = 800;
 axesValues = (
 1200,
 100,
+900,
 900
 );
 customParameters = (
@@ -12431,7 +12775,8 @@ weightClass = 900;
 axesValues = (
 1200,
 113,
-360
+360,
+900
 );
 customParameters = (
 {
@@ -12452,6 +12797,7 @@ Location = 360;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 1;
 };
@@ -12463,7 +12809,8 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-400
+400,
+900
 );
 customParameters = (
 {
@@ -12496,7 +12843,8 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-475
+475,
+900
 );
 customParameters = (
 {
@@ -12530,7 +12878,8 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-550
+550,
+900
 );
 customParameters = (
 {
@@ -12564,7 +12913,8 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-650
+650,
+900
 );
 customParameters = (
 {
@@ -12600,7 +12950,8 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-750
+750,
+900
 );
 customParameters = (
 {
@@ -12634,6 +12985,7 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
+900,
 900
 );
 customParameters = (
