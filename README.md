@@ -9,13 +9,13 @@ Things to consider include glyph coverage, existing italic and bold styles, and 
 *Step 2: Math Constants Table*
 Install the Math OpenType plugin (version made by JR link). Go to Edit -> Edit Math Constants. The three-dot menu has a drop-down item for "Guess all Masters". It will make reasonable guesses for many constants. One exception may be DisplayOperatorMinHeight, which you can edit yourself or leave as zero and return to later.
 
-The rulethickness will take values from the minus - glyph or underscore glyph
+The rulethickness will take values from the minus glyph or underscore glyph
 DisplayOperatorMinHeight will take a guess based on the integral glyph (if available)
 SuperscriptShiftUp (and others) will either use the superscriptYOffset custom paramter, or information from zero.sups if the sups feature has been setup in the font.
 
 ** Accents **
-Qn: What is the difference between 0302 and 02C6 for instance?
-Accents need a math.ta position on them (0302,...)
+Mathematics typesetting uses accents, but I think we can ignore all the "combining accents". The standard list can be found in the filter.
+
 
 *Step 3*
 Change the languages to
@@ -31,7 +31,7 @@ Export instances at each master coordinate. It is also useful to export several 
 *Step 4: The MathConstants Tool*
 Download and use the MathConstants tool. You will need to edit `axes-config` with the coordinates of the masters and list the fonts you want to test with. Run `server.py --help` for more help. This tool will save the math constants, which you can then insert into your Glyphs file (add more detail on how to do this).
 
-Ones to do at this point: 
+Ones to do at this point: :
 Axis Height
 Factions Display
 Fractions Inline
