@@ -40,6 +40,9 @@ ROTATION_SOURCE_LOW_VALUE = 360
 ROTATION_SOURCE_HIGH_VALUE = 900
 ROTATION_TARGET_VALUE = 900
 SCRIPT_VERSION = "2026-06-21 factored-axis-rotation"
+SOURCE_GLYPH_NAME_OVERRIDES = {
+    "hbolditalic-math": "planckconstant",
+}
 
 
 def script_directory():
@@ -138,6 +141,8 @@ def all_available_bold_math_glyphs(font, bold_math_names):
 
 
 def source_name_for_bold_math_glyph(glyph_name):
+    if glyph_name in SOURCE_GLYPH_NAME_OVERRIDES:
+        return SOURCE_GLYPH_NAME_OVERRIDES[glyph_name]
     if glyph_name.endswith(BOLD_ITALIC_MATH_SUFFIX):
         return glyph_name[:-len(BOLD_ITALIC_MATH_SUFFIX)] + ITALIC_MATH_SUFFIX
     if not glyph_name.endswith(BOLD_MATH_SUFFIX):

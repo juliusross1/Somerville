@@ -20,6 +20,8 @@ Remove ligatures, these are not used in a mathematics font.
 
 The main uppercase and lowercase latin letters for a Math font are A-Z and a-z.  Accented versions of these should be removed.  One way to do this is to use a Smart Filter "Has Components >1" and select "Uppercase letters" and you will get a view of letters that can be either deleted or set not to export (some letters may be worth keeping to be used as a template for the future; those can just be set to not export)
 
+Keep the .ssXX and .cvYY alternates of such letters as you probably want to keep those to match the text font
+
 I also removed all the .lf and .tf glyphs as these are not used in math (is that correct? look again at unicode-math for the features it supports)
 
 *Step 4: Remove or disable features*
@@ -128,6 +130,7 @@ Design a test document for this (perhaps buy fontproofer?)
 Then do the script for ssty for the Latin Letters and
 Design a test document for this
 
+Fix issue with mathopentype plugin versions!
 Then...
 Minus at various widths (need to fix this one up)
 Math constants and create testing documents
