@@ -6,6 +6,8 @@ This records the steps taken to create a math font to pair with Playfair. The ho
 
 Things to consider include glyph coverage, existing italic and bold styles, and possible optical sizing. Existing mathematical glyphs, such as plus and minus, may also be helpful. Check the font license to make sure you can reuse it, and confirm that there is not already an existing math-font pairing available.  Go to Font->Name and change the name if appropriate.
 
+Give your font its new name (if appropriate)
+
 *Step 2*
 Change the languages to
 ```
@@ -16,9 +18,9 @@ languagesystem math dflt;
 *Step 3: Remove non-mathematics letters from the font*
 Remove ligatures, these are not used in a mathematics font.
 
-The main uppercase and lowercase latin letters for a Math font are A-Z and a-z.  Accented versions of these can be removed.  Filter "Has Components >1" and select "Uppercase letters" and you will get a view of letters that can be either deleted or set not to export (some letters may be worth keeping to be used as a template for the future; those can just be set to not export)
+The main uppercase and lowercase latin letters for a Math font are A-Z and a-z.  Accented versions of these should be removed.  One way to do this is to use a Smart Filter "Has Components >1" and select "Uppercase letters" and you will get a view of letters that can be either deleted or set not to export (some letters may be worth keeping to be used as a template for the future; those can just be set to not export)
 
-I also disable all the .lf and .tf as I do not think these are useful in a math font.
+I also removed all the .lf and .tf glyphs as these are not used in math (is that correct? look again at unicode-math for the features it supports)
 
 *Step 4: Remove or disable features*
 Many font features do not make sense in a math font and can be removed or made non-active.  The following can be safely removed:
@@ -50,7 +52,8 @@ SuperscriptShiftUp (and others) will either use the superscriptYOffset custom pa
 You may well have to go back to this step later as more of the font is being created.
 
 ** Step 7: Import Italics **
-If you have italics in another font then you will want to import those glyphs into the math font.  The script "Import Italics" will attempt to help you with this.
+If you have italics in another font then you will want to import those glyphs into the math font.  The script "Import Italics" will attempt to help you with this.  If your font has them, import also idotless and jdotless from your italics font.
+There is a case here to consider, namely if the source glyph has bracket or alternate layers.
 
 ** Step 8: Accents **
 Mathematics typesetting uses accents, but I think we can ignore all the "combining accents". The standard list can be found in the filter.
@@ -79,12 +82,16 @@ Add an axis called "Math Weight" with code MGHT.   It is probably a good idea to
 
 Add a virtual master for the Math Weight axis (so for Playfair this had position Weight = minimum (360); opsz = minimum (5); Width = minimum (94); Math Weight = maximum (900))
 
-Create your mathbold letteres as needed.   Run the script Create or adjust math bold letters (you can apply this to just the selected glyphs or all the boldmath glyphs).
+Create your mathbold letteres as needed.   Run the script Create or adjust math bold letters (you can apply this to just the selected bold-math glyphs or all the boldmath glyphs).  Now do the same for bolditalic-math glyphs.
+
+Test files: FINISH ME
 
 Now adjust your instances to give them a suitable MGHT value.  For Playfair MGHT is set to max(WGHT + 200,900).  Note that this means that if Weight is 900 then the boldmath is the same as the non-bold, and if Weight is close to 900 then there is little distinction.  There is no easy way around this.  One option is to not create instances at higher weights.  Another is to add a small "underline" to all the bold-math characters at high weight (see next step for how to do that)
 
 ** Step 13: Optical Sizing **
-Playfair has an opz axes so optical sizing is easily done.  The script **blah** will populate any glyph that ends with .ssty.  We also needed an avar2 table for this.
+Playfair has an opz axes so optical sizing is easily done.  The script **blah** will populate any glyph that ends with .ssty.  
+
+Again you need to edit your instances for this.  If the scriptsize is 70%/50% then if your instance is designed for 10pt you want to set the STYA and STYB values so that the .ssty1/ssty glyphs are designed at 7pt/5pt.
 
 
 *Step 13: Add Math Axis Metric*
@@ -110,11 +117,18 @@ These can be taken in pretty much any order
 
 
 *Playfair Math Todo*
-Bolditalics
-Bracketlayers for bold
-ssty (+ bracket layers)
+Go back to a version of the glyphs file from 8pm on Saturday
+Look at h and yitalic
+Fix VF exporting
+Test instance exporting and overlap
 
+Add all bold and bolditalics of the glyphs that you have
+Design a test document for this (perhaps buy fontproofer?)
 
+Then do the script for ssty for the Latin Letters and
+Design a test document for this
+
+Then...
 Minus at various widths (need to fix this one up)
 Math constants and create testing documents
 Redo the existing + divide, = and many others :-(
@@ -126,8 +140,7 @@ Longer testing document
 
 Double integrals
 Sum and sizing
-Import Italics
-Deal with Bold
+Deal with Bold (progress!)
 Circle and sizing
 Contour integral
 Other display operators?

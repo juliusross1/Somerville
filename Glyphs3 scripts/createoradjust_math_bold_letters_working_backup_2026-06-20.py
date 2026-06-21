@@ -1,4 +1,4 @@
-#MenuTitle: Create or adjust math bold letters
+#MenuTitle: Backup of Create or adjust math bold letters
 # -*- coding: utf-8 -*-
 
 """
