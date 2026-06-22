@@ -378,6 +378,8 @@ class InstanceActiveStatusWindow(object):
         margin = 15
         row_height = 24
         heading_height = 22
+        header_button_width = 24
+        header_button_gap = 4
         button_height = 28
         max_rows = max(len(self.values[key]) for key, title, names in AXIS_GROUPS)
         window_width = margin * 2 + column_width * len(AXIS_GROUPS)
@@ -389,7 +391,23 @@ class InstanceActiveStatusWindow(object):
             left = margin + column_index * column_width
             self.w.__setattr__(
                 "%sLabel" % key,
-                vanilla.TextBox((left, margin, column_width - 10, 18), title),
+                vanilla.TextBox((left, margin + 3, column_width - 2 * header_button_width - header_button_gap - 16, 18), title),
+            )
+            self.w.__setattr__(
+                "%sPlusButton" % key,
+                vanilla.Button(
+                    (left + column_width - 2 * header_button_width - header_button_gap - 10, margin, header_button_width, 22),
+                    "+",
+                    callback=lambda sender, column_key=key: self.set_column_checked(column_key, True),
+                ),
+            )
+            self.w.__setattr__(
+                "%sMinusButton" % key,
+                vanilla.Button(
+                    (left + column_width - header_button_width - 10, margin, header_button_width, 22),
+                    "-",
+                    callback=lambda sender, column_key=key: self.set_column_checked(column_key, False),
+                ),
             )
             self.checkboxes[key] = []
             for row_index, axis_value in enumerate(self.values[key]):
@@ -402,14 +420,36 @@ class InstanceActiveStatusWindow(object):
                 self.checkboxes[key].append((axis_value, checkbox))
 
         button_top = window_height - margin - button_height
+        self.w.allButton = vanilla.Button(
+            (margin, button_top, 28, button_height),
+            "+",
+            callback=self.select_all_callback,
+        )
+        self.w.noneButton = vanilla.Button(
+            (margin + 34, button_top, 28, button_height),
+            "-",
+            callback=self.select_none_callback,
+        )
         self.w.applyButton = vanilla.Button(
-            (margin, button_top, -margin, button_height),
+            (margin + 72, button_top, -margin, button_height),
             "Set active instances",
             callback=self.apply_callback,
         )
         self.w.open()
         self.w.makeKey()
         print("UI opened.")
+
+    def set_column_checked(self, key, checked):
+        for axis_value, checkbox in self.checkboxes.get(key, []):
+            checkbox.set(checked)
+
+    def select_all_callback(self, sender):
+        for key, title, names in AXIS_GROUPS:
+            self.set_column_checked(key, True)
+
+    def select_none_callback(self, sender):
+        for key, title, names in AXIS_GROUPS:
+            self.set_column_checked(key, False)
 
     def selected_values(self):
         selected = {}

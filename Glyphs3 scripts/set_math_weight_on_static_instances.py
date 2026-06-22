@@ -70,7 +70,7 @@ def number_value(value):
 
 
 def calculated_math_weight(weight):
-    return min(540, number_value(weight) + 200 - 360)
+    return min(900, number_value(weight) + 200)
 
 
 def axis_location_parameter(instance):
