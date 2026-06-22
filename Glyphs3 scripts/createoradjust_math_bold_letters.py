@@ -18,6 +18,7 @@ the target axis.
 
 import os
 import plistlib
+import re
 import sys
 import vanilla
 from GlyphsApp import Glyphs
@@ -39,7 +40,8 @@ ROTATION_TARGET_AXIS_TAG = "MGHT"
 ROTATION_SOURCE_LOW_VALUE = 360
 ROTATION_SOURCE_HIGH_VALUE = 900
 ROTATION_TARGET_VALUE = 900
-SCRIPT_VERSION = "2026-06-22 factored-axis-rotation-mght-900"
+SCRIPT_VERSION = "2026-06-22 factored-axis-rotation-mght-900-alternates"
+ALTERNATE_SUFFIX_PATTERN = re.compile(r"\.(ss|cv)\d+$")
 SOURCE_GLYPH_NAME_OVERRIDES = {
     "hbolditalic-math": "planckconstant",
 }
@@ -125,29 +127,85 @@ def unique_selected_glyphs(font):
 
 def selected_bold_math_glyphs(font, bold_math_names):
     bold_name_set = set(bold_math_names)
-    return [glyph for glyph in unique_selected_glyphs(font) if glyph.name in bold_name_set]
+    return [
+        glyph
+        for glyph in unique_selected_glyphs(font)
+        if is_bold_math_target_name(glyph.name, bold_name_set)
+    ]
 
 
 def all_available_bold_math_glyphs(font, bold_math_names):
     glyphs = []
     missing = 0
+    all_glyph_names = glyph_names_in_font(font)
     for glyph_name in bold_math_names:
         glyph = font.glyphs[glyph_name]
         if glyph is None:
             missing += 1
             continue
         glyphs.append(glyph)
+        for alternate_name in alternate_names_for_base(glyph_name, all_glyph_names):
+            alternate_glyph = font.glyphs[alternate_name]
+            if alternate_glyph is not None:
+                glyphs.append(alternate_glyph)
     return glyphs, missing
 
 
-def source_name_for_bold_math_glyph(glyph_name):
-    if glyph_name in SOURCE_GLYPH_NAME_OVERRIDES:
-        return SOURCE_GLYPH_NAME_OVERRIDES[glyph_name]
-    if glyph_name.endswith(BOLD_ITALIC_MATH_SUFFIX):
-        return glyph_name[:-len(BOLD_ITALIC_MATH_SUFFIX)] + ITALIC_MATH_SUFFIX
-    if not glyph_name.endswith(BOLD_MATH_SUFFIX):
+def glyph_names_in_font(font):
+    names = set()
+    for glyph in font.glyphs:
+        name = getattr(glyph, "name", None)
+        if name:
+            names.add(name)
+    return names
+
+
+def split_alternate_suffix(glyph_name):
+    match = ALTERNATE_SUFFIX_PATTERN.search(glyph_name)
+    if not match:
+        return glyph_name, ""
+    suffix = match.group(0)
+    return glyph_name[:-len(suffix)], suffix
+
+
+def alternate_sort_key(glyph_name):
+    base_name, suffix = split_alternate_suffix(glyph_name)
+    if not suffix:
+        return (glyph_name, "", -1)
+    kind = suffix[1:3]
+    number = int(suffix[3:])
+    return (base_name, kind, number)
+
+
+def alternate_names_for_base(base_name, all_glyph_names):
+    alternate_pattern = re.compile(r"^%s(\.(?:ss|cv)\d+)$" % re.escape(base_name))
+    return sorted(
+        [glyph_name for glyph_name in all_glyph_names if alternate_pattern.match(glyph_name)],
+        key=alternate_sort_key,
+    )
+
+
+def is_bold_math_target_name(glyph_name, bold_name_set):
+    base_name, alternate_suffix = split_alternate_suffix(glyph_name)
+    return base_name in bold_name_set
+
+
+def source_name_for_base_bold_math_glyph(base_glyph_name):
+    if base_glyph_name in SOURCE_GLYPH_NAME_OVERRIDES:
+        return SOURCE_GLYPH_NAME_OVERRIDES[base_glyph_name]
+    if base_glyph_name.endswith(BOLD_ITALIC_MATH_SUFFIX):
+        return base_glyph_name[:-len(BOLD_ITALIC_MATH_SUFFIX)] + ITALIC_MATH_SUFFIX
+    if not base_glyph_name.endswith(BOLD_MATH_SUFFIX):
         return None
-    return glyph_name[:-len(BOLD_MATH_SUFFIX)]
+    return base_glyph_name[:-len(BOLD_MATH_SUFFIX)]
+
+
+def source_name_for_bold_math_glyph(glyph_name):
+    base_glyph_name, alternate_suffix = split_alternate_suffix(glyph_name)
+    source_name = source_name_for_base_bold_math_glyph(base_glyph_name)
+    if source_name is None:
+        return None
+    return source_name + alternate_suffix
 
 
 def append_unique(items, item):

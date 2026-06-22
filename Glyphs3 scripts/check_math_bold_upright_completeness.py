@@ -6,8 +6,9 @@ Warn about missing math-bold glyphs for upright math alphabet glyphs.
 
 The script reads the upright blocks from "CustomFilter Mathematics Alphabets.plist".
 For each upright glyph that exists in the open font, it checks that matching
-bold-math and bolditalic-math glyphs also exist. It also checks .ssNN and .cvNN
-alternates of each upright glyph when those alternates exist in the font.
+bold-math and bolditalic-math glyphs also exist. It checks bold-math alternates
+from upright alternates, and bolditalic-math alternates from italic-math
+alternates.
 """
 
 import os
@@ -20,8 +21,15 @@ from GlyphsApp import Glyphs
 MATHEMATICAL_ALPHABETS_PLIST = "CustomFilter Mathematics Alphabets.plist"
 BOLD_MATH_SUFFIX = "bold-math"
 BOLD_ITALIC_MATH_SUFFIX = "bolditalic-math"
+ITALIC_MATH_SUFFIX = "italic-math"
 UPRIGHT_BLOCK_NAME_PART = "Upright"
 ALTERNATE_SUFFIX_PATTERN = re.compile(r"\.(ss|cv)\d+$")
+ITALIC_SOURCE_NAME_OVERRIDES = {
+    "h": "planckconstant",
+}
+BOLD_ITALIC_TARGET_NAME_OVERRIDES = {
+    "planckconstant": "hbolditalic-math",
+}
 
 
 def script_directory():
@@ -112,33 +120,61 @@ def alternate_sort_key(glyph_name):
     return (base_name, kind, number)
 
 
-def expected_bold_names(upright_name):
+def split_alternate_suffix(glyph_name):
     suffix = ""
-    base_name = upright_name
-    alternate_match = ALTERNATE_SUFFIX_PATTERN.search(upright_name)
+    base_name = glyph_name
+    alternate_match = ALTERNATE_SUFFIX_PATTERN.search(glyph_name)
     if alternate_match:
         suffix = alternate_match.group(0)
-        base_name = upright_name[:-len(suffix)]
+        base_name = glyph_name[:-len(suffix)]
+    return base_name, suffix
 
-    return (
-        "%s%s%s" % (base_name, BOLD_MATH_SUFFIX, suffix),
-        "%s%s%s" % (base_name, BOLD_ITALIC_MATH_SUFFIX, suffix),
+
+def italic_source_name_for_upright_name(upright_name):
+    if upright_name in ITALIC_SOURCE_NAME_OVERRIDES:
+        return ITALIC_SOURCE_NAME_OVERRIDES[upright_name]
+    return "%s%s" % (upright_name, ITALIC_MATH_SUFFIX)
+
+
+def expected_bold_name_from_source(source_name):
+    base_name, suffix = split_alternate_suffix(source_name)
+    return "%s%s%s" % (base_name, BOLD_MATH_SUFFIX, suffix)
+
+
+def expected_bold_italic_name_from_source(source_name):
+    base_name, suffix = split_alternate_suffix(source_name)
+    if base_name in BOLD_ITALIC_TARGET_NAME_OVERRIDES:
+        return BOLD_ITALIC_TARGET_NAME_OVERRIDES[base_name] + suffix
+    if not base_name.endswith(ITALIC_MATH_SUFFIX):
+        return None
+    base_upright_name = base_name[:-len(ITALIC_MATH_SUFFIX)]
+    return "%s%s%s" % (base_upright_name, BOLD_ITALIC_MATH_SUFFIX, suffix)
+
+
+def check_expected_name(source_name, expected_name, all_glyph_names):
+    missing_names = []
+
+    if expected_name is not None and expected_name not in all_glyph_names:
+        print_warning("%s exists, but %s is missing." % (source_name, expected_name))
+        missing_names.append(expected_name)
+
+    return missing_names
+
+
+def check_bold_source_name(source_name, all_glyph_names):
+    return check_expected_name(
+        source_name,
+        expected_bold_name_from_source(source_name),
+        all_glyph_names,
     )
 
 
-def check_upright_name(upright_name, all_glyph_names):
-    missing_names = []
-    bold_name, bold_italic_name = expected_bold_names(upright_name)
-
-    if bold_name not in all_glyph_names:
-        print_warning("%s exists, but %s is missing." % (upright_name, bold_name))
-        missing_names.append(bold_name)
-
-    if bold_italic_name not in all_glyph_names:
-        print_warning("%s exists, but %s is missing." % (upright_name, bold_italic_name))
-        missing_names.append(bold_italic_name)
-
-    return missing_names
+def check_bold_italic_source_name(source_name, all_glyph_names):
+    return check_expected_name(
+        source_name,
+        expected_bold_italic_name_from_source(source_name),
+        all_glyph_names,
+    )
 
 
 def append_unique(items, item):
@@ -177,16 +213,27 @@ def main():
             skipped_count += 1
             continue
 
-        names_to_check = [upright_name]
-        names_to_check.extend(alternate_names_for_base(upright_name, all_glyph_names))
+        bold_source_names = [upright_name]
+        bold_source_names.extend(alternate_names_for_base(upright_name, all_glyph_names))
 
-        for name_to_check in names_to_check:
+        italic_source_name = italic_source_name_for_upright_name(upright_name)
+        bold_italic_source_names = []
+        if italic_source_name in all_glyph_names:
+            bold_italic_source_names.append(italic_source_name)
+            bold_italic_source_names.extend(alternate_names_for_base(italic_source_name, all_glyph_names))
+
+        for source_name in bold_source_names:
             checked_count += 1
-            for missing_name in check_upright_name(name_to_check, all_glyph_names):
+            for missing_name in check_bold_source_name(source_name, all_glyph_names):
+                append_unique(missing_names, missing_name)
+
+        for source_name in bold_italic_source_names:
+            checked_count += 1
+            for missing_name in check_bold_italic_source_name(source_name, all_glyph_names):
                 append_unique(missing_names, missing_name)
 
     print("")
-    print("Done. Checked %i upright glyph(s), skipped %i missing plist glyph(s), found %i missing bold glyph(s)." % (
+    print("Done. Checked %i source glyph(s), skipped %i missing plist glyph(s), found %i missing bold glyph(s)." % (
         checked_count,
         skipped_count,
         len(missing_names),

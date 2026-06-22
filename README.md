@@ -115,9 +115,9 @@ Create your mathbold lettere as needed from the filter on the left.    Run the s
 
 Consider using the check_math_bold_upright_completeness to see for any missing bold and bolditalics.  You may want to use this script again as you build more letters.
 
-**need to make sure we are properly dealing with .ssXX and .cvXX alternates as well and make sure the script will act on this OK**
+Now adjust your instances to give them a suitable MGHT value.  For Playfair MGHT is set to min(WGHT + 200,900).   The script set_math_weight_on_static instances does this.
 
-Now adjust your instances to give them a suitable MGHT value.  For Playfair MGHT is set to max(WGHT + 200,900).  Note that this means that if Weight is 900 then the boldmath is the same as the non-bold, and if Weight is close to 900 then there is little distinction.  There is no easy way around this.  One option is to not create instances at higher weights.  Another is to add a small "underline" to all the bold-math characters at high weight (see next step for how to do that)
+ Note that this means that if Weight is 900 then the boldmath is the same as the non-bold, and if Weight is close to 900 then there is little distinction.  There is no easy way around this.  One option is to not create instances at these higher weights.  Another is to add a small "underline" to all the bold-math characters at high weight (see next step for how to do that)
 
 ** Need testing files here **
 
