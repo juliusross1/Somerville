@@ -1419,6 +1419,13 @@ sub fhook.smcp by fhook.smcp.cv01;
 ";
 disabled = 1;
 tag = cv01;
+},
+{
+code = "sub i by idotless;
+sub j by jdotless;
+sub iitalic-math by idotlessitalic-math;
+sub jitalic-math by jdotlessitalic-math;";
+tag = dtls;
 }
 );
 fontMaster = (
