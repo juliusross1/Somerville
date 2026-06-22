@@ -82,7 +82,9 @@ UNICODE_TEXT = """
 1D452  # eitalic-math
 1D453  # fitalic-math
 1D454  # gitalic-math
+1D6A4  # idotlessitalic-math
 1D456  # iitalic-math
+1D6A5  # jdotlessitalic-math
 1D457  # jitalic-math
 1D458  # kitalic-math
 1D459  # litalic-math
@@ -551,6 +553,56 @@ def copy_glyph_layers(source_font, destination_font, source_glyph, target_glyph,
             )
 
 
+def remove_layer_from_glyph(glyph, layer):
+    for method_name in ("remove_", "removeObject_", "removeObject", "removeLayer_"):
+        method = getattr(glyph.layers, method_name, None)
+        if method is None:
+            continue
+        try:
+            method(layer)
+            return True
+        except Exception:
+            pass
+
+    try:
+        index = list(glyph.layers).index(layer)
+        del glyph.layers[index]
+        return True
+    except Exception:
+        return False
+
+
+def is_master_layer(layer):
+    value = getattr(layer, "isMasterLayer", False)
+    if callable(value):
+        try:
+            value = value()
+        except Exception:
+            value = False
+    return bool(value)
+
+
+def clear_glyph_for_overwrite(glyph):
+    removed_layers = 0
+    for layer in reversed(list(glyph.layers)):
+        if is_master_layer(layer):
+            continue
+        if remove_layer_from_glyph(glyph, layer):
+            removed_layers += 1
+
+    try:
+        glyph.smartComponentAxes = []
+    except Exception:
+        pass
+
+    try:
+        glyph.stems = []
+    except Exception:
+        pass
+
+    return removed_layers
+
+
 def warn_unrepointed_components(target_glyph, component_name_map):
     warned = set()
     for layer in target_glyph.layers:
@@ -692,6 +744,7 @@ def copy_source_glyph(
     smart_axis_maps,
     created_glyph_names,
     is_stylistic_set=False,
+    overwrite_existing=False,
 ):
     source_glyph = source_font.glyphs[source_name]
     if source_glyph is None:
@@ -702,14 +755,15 @@ def copy_source_glyph(
             print("Missing source glyph: %s for %s" % (source_name, target_name))
         return
 
-    if destination_font.glyphs[target_name] is not None:
+    existing_target_glyph = destination_font.glyphs[target_name]
+    if existing_target_glyph is not None and not overwrite_existing:
         skipped["target_exists"] += 1
         print("Skipped existing destination glyph: %s" % target_name)
         return
 
     if unicode_value:
         existing_unicode_glyph = glyph_for_unicode(destination_font, unicode_value)
-        if existing_unicode_glyph is not None:
+        if existing_unicode_glyph is not None and existing_unicode_glyph.name != target_name:
             skipped["unicode_exists"] += 1
             print("Skipped %s, U+%s already exists as %s" % (target_name, unicode_value, existing_unicode_glyph.name))
             return
@@ -725,13 +779,23 @@ def copy_source_glyph(
         created_glyph_names,
     )
 
-    target_glyph = GSGlyph(target_name)
+    if existing_target_glyph is not None:
+        target_glyph = existing_target_glyph
+        removed_layers = clear_glyph_for_overwrite(target_glyph)
+        copied["overwritten"] += 1
+        print("Overwriting existing destination glyph: %s (%i old special layer(s) removed)" % (
+            target_name,
+            removed_layers,
+        ))
+    else:
+        target_glyph = GSGlyph(target_name)
+        destination_font.glyphs.append(target_glyph)
+
     if unicode_value:
         target_glyph.unicode = unicode_value
     copy_stems(source_glyph, target_glyph)
     axis_id_map = copy_smart_component_axes(source_glyph, target_glyph)
     smart_axis_maps[source_name] = axis_id_map
-    destination_font.glyphs.append(target_glyph)
     copy_glyph_layers(
         source_font,
         destination_font,
@@ -764,6 +828,7 @@ def copy_math_glyph(
     component_name_map,
     smart_axis_maps,
     created_glyph_names,
+    overwrite_existing=False,
 ):
     copy_source_glyph(
         source_font,
@@ -776,6 +841,7 @@ def copy_math_glyph(
         component_name_map,
         smart_axis_maps,
         created_glyph_names,
+        overwrite_existing=overwrite_existing,
     )
 
     for alternate_source_name in stylistic_set_source_names(source_font, source_name):
@@ -797,6 +863,7 @@ def copy_math_glyph(
             smart_axis_maps,
             created_glyph_names,
             is_stylistic_set=True,
+            overwrite_existing=overwrite_existing,
         )
 
 
@@ -814,12 +881,14 @@ class MathItalicGlyphCopier(object):
         destination_index = font_index(self.fonts, destination_font)
         source_index = guessed_source_index(self.fonts, destination_font)
 
-        self.w = vanilla.FloatingWindow((420, 150), "Copy Math Italic Glyphs")
+        self.w = vanilla.FloatingWindow((420, 202), "Copy Math Italic Glyphs")
         self.w.sourceLabel = vanilla.TextBox((15, 18, 90, 20), "Source")
         self.w.source = vanilla.PopUpButton((110, 15, -15, 24), self.labels)
         self.w.destinationLabel = vanilla.TextBox((15, 53, 90, 20), "Destination")
         self.w.destination = vanilla.PopUpButton((110, 50, -15, 24), self.labels)
-        self.w.copyButton = vanilla.Button((15, 103, -15, 30), "Copy missing math italic glyphs", callback=self.copy_callback)
+        self.w.overwrite = vanilla.CheckBox((110, 82, -15, 22), "Overwrite existing destination glyphs", value=False)
+        self.w.openTab = vanilla.CheckBox((110, 108, -15, 22), "Open tab with imported glyphs", value=False)
+        self.w.copyButton = vanilla.Button((15, 155, -15, 30), "Copy math italic glyphs", callback=self.copy_callback)
 
         self.w.source.set(source_index)
         self.w.destination.set(destination_index)
@@ -839,6 +908,8 @@ class MathItalicGlyphCopier(object):
 
         source_index = self.w.source.get()
         destination_index = self.w.destination.get()
+        overwrite_existing = bool(self.w.overwrite.get())
+        open_tab = bool(self.w.openTab.get())
         self.w.close()
 
         source_font = self.fonts[source_index]
@@ -850,9 +921,11 @@ class MathItalicGlyphCopier(object):
 
         print("Source: %s" % font_label(source_font))
         print("Destination: %s" % font_label(destination_font))
+        print("Overwrite existing destination glyphs: %s" % ("yes" if overwrite_existing else "no"))
+        print("Open tab with imported glyphs: %s" % ("yes" if open_tab else "no"))
         print("")
 
-        copied = {"math": 0, "stylistic_sets": 0, "components": 0, "renamed_components": 0}
+        copied = {"math": 0, "stylistic_sets": 0, "components": 0, "renamed_components": 0, "overwritten": 0}
         component_name_map = {}
         smart_axis_maps = {}
         created_glyph_names = []
@@ -884,11 +957,13 @@ class MathItalicGlyphCopier(object):
                     component_name_map,
                     smart_axis_maps,
                     created_glyph_names,
+                    overwrite_existing,
                 )
         finally:
             destination_font.enableUpdateInterface()
 
-        open_destination_tab(destination_font, created_glyph_names)
+        if open_tab:
+            open_destination_tab(destination_font, created_glyph_names)
 
         print("")
         print("Done.")
@@ -896,6 +971,7 @@ class MathItalicGlyphCopier(object):
         print("Stylistic-set glyphs copied: %i" % copied["stylistic_sets"])
         print("Component glyphs copied: %i" % copied["components"])
         print("Components renamed to avoid destination glyphs: %i" % copied["renamed_components"])
+        print("Existing destination glyphs overwritten: %i" % copied["overwritten"])
         print("Skipped existing target glyphs: %i" % skipped["target_exists"])
         print("Skipped existing target unicodes: %i" % skipped["unicode_exists"])
         print("Missing source glyphs: %i" % skipped["missing_source"])

@@ -1,6 +1,8 @@
 **Playfair Math**
 
-This records the steps taken to create a math font to pair with Playfair. The hope is that these notes may also help with other font pairings in the future.  Not all the steps need to be done in the order they appear here
+This records the steps taken to create a math font to pair with Playfair. The hope is that these notes may also help with other font pairings in the future.  Not all the steps need to be done in the order they appear here.
+
+My preference is to start with a text font and remove unwanted things.  The other route would be to start with a blank font and import the pieces that you need.
 
 *Step 1: Select a font to pair*
 
@@ -22,22 +24,38 @@ The main uppercase and lowercase latin letters for a Math font are A-Z and a-z. 
 
 Keep the .ssXX and .cvYY alternates of such letters as you probably want to keep those to match the text font
 
-I also removed all the .lf and .tf glyphs as these are not used in math (is that correct? look again at unicode-math for the features it supports)
+I also disabled all the .lf and .tf glyphs as these are not used in math (is that correct? look again at unicode-math for the features it supports)
 
 *Step 4: Remove or disable features*
-Many font features do not make sense in a math font and can be removed or made non-active.  The following can be safely removed:
+Many font features do not make sense in a math font and can be removed or made non-active.  The following can be safely removed/made inactive:
 
-cpsp
-liga
-c2sc
+Maybe keep
+Uppercase/lowercase
 
-Not sure, but I disabled
-sups
+Remove
+All other classes
+ccmp
+locl
 subs
+sups
 numr
 dnom
 frac
+afrc
+kern
+mark
+mkmk
 sinf
+orfn
+lnum
+pnum
+tnum
+onum
+c2sc
+case
+smcp
+dlig
+liga
 
 
 *Step 5: Export Instances*
@@ -45,27 +63,36 @@ sinf
 Export instances at each master coordinate. It is also useful to export several intermediate instances (see next step).
 
 *Step 6: Math Constants Table*
-Install the Math OpenType plugin (version made by JR link). Go to Edit -> Edit Math Constants. The three-dot menu has a drop-down item for "Guess all Masters". It will make reasonable guesses for many constants. One exception may be DisplayOperatorMinHeight, which you can edit yourself or leave as zero and return to later.
+Install the Math OpenType plugin (version made by JR link). Go to Edit -> Edit Math Constants. The three-dot menu has a drop-down item for "Guess all Masters". It will make reasonable guesses for many constants. 
+
+One exception may be DisplayOperatorMinHeight, which you can edit yourself or leave as zero and return to later. **Todo: have this make gusses for thse and the skewedfraction constants*
 
 The rulethickness will take values from the minus glyph or underscore glyph
 DisplayOperatorMinHeight will take a guess based on the integral glyph (if available)
 SuperscriptShiftUp (and others) will either use the superscriptYOffset custom paramter, or information from zero.sups if the sups feature has been setup in the font.
 
-You may well have to go back to this step later as more of the font is being created.
+You should expect to go back to these constants as you develop your font.
 
 ** Step 7: Import Italics **
 If you have italics in another font then you will want to import those glyphs into the math font.  The script "Import Italics" will attempt to help you with this.  If your font has them, import also idotless and jdotless from your italics font.
 There is a case here to consider, namely if the source glyph has bracket or alternate layers.
 
+** Step 9: Dotless **
+Add the dtls feature
+Here is mine at this stage
+``sub i by idotless;
+sub j by jdotless;
+sub iitalic-math by idotlessitalic-math;
+sub jitalic-math by jdotlessitalic-math;``
+
 ** Step 8: Accents **
-Mathematics typesetting uses accents, but I think we can ignore all the "combining accents". The standard list can be found in the filter.
+The filter will show you the accents.  Many typesetting system use the non-combining accents, but I imagine it does not do any harm to leave the combining onese in as well.
 
 The Glyphs3 script "Add math.ta Anchors for Combining Marks" will add math.ta anchors (it will guess the position based on either availability of _top or _bottom anchors, else pick the midpoint).   You can run this script again when further accents are created.
 
 Test file: accenthorizontal.tex.
 
-** Step 9: Dotless **
-Dotless feature
+
 
 ** Step 10: Add bottom anchors **
 Not strictly necessary; only used for the bold variants described in Step XX.

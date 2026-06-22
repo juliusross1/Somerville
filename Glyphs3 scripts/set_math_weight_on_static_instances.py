@@ -70,7 +70,7 @@ def number_value(value):
 
 
 def calculated_math_weight(weight):
-    return max(560, number_value(weight) + 200 - 360)
+    return min(540, number_value(weight) + 200 - 360)
 
 
 def axis_location_parameter(instance):
@@ -78,13 +78,6 @@ def axis_location_parameter(instance):
         if parameter.name == AXIS_LOCATION_PARAMETER_NAME:
             return parameter
     return None
-
-
-def axis_location_weight(axis_locations, fallback_weight):
-    for location in axis_locations:
-        if location.get("Axis") == WEIGHT_AXIS_NAME:
-            return location.get("Location", fallback_weight)
-    return fallback_weight
 
 
 def mutable_axis_locations(value):
@@ -155,12 +148,58 @@ def axes_values_with_axis_value(axes_values, current_axis_index, current_axis_id
     return axes_list
 
 
+def set_wrapped_value(wrapped_value, value):
+    for setter_name in ("setValue_", "setPosition_", "setPos_", "setFloatValue_"):
+        setter = getattr(wrapped_value, setter_name, None)
+        if callable(setter):
+            try:
+                setter(value)
+                return True
+            except Exception:
+                pass
+
+    for attribute_name in ("value", "position", "pos", "floatValue"):
+        try:
+            setattr(wrapped_value, attribute_name, value)
+            return True
+        except Exception:
+            pass
+
+    return False
+
+
 def set_instance_axes_values(instance, axes_values):
     setter = getattr(instance, "setAxesValues_", None)
     if callable(setter):
         setter(axes_values)
     else:
         instance.axesValues = axes_values
+
+
+def set_instance_axis_value(instance, axes_values, current_axis_index, current_axis_id, value):
+    for setter_name in ("setAxisValueValue_forId_", "setAxisValue_forId_"):
+        setter = getattr(instance, setter_name, None)
+        if callable(setter):
+            try:
+                setter(value, current_axis_id)
+                return True
+            except Exception:
+                pass
+
+    axes_dictionary = dictionary_copy(axes_values)
+    if axes_dictionary is not None and current_axis_id is not None:
+        existing_value = axes_dictionary.get(current_axis_id)
+        if existing_value is not None and set_wrapped_value(existing_value, value):
+            return True
+
+    updated_axes_values = axes_values_with_axis_value(
+        axes_values,
+        current_axis_index,
+        current_axis_id,
+        value,
+    )
+    set_instance_axes_values(instance, updated_axes_values)
+    return True
 
 
 font = Glyphs.font
@@ -187,13 +226,13 @@ try:
             continue
 
         math_weight = calculated_math_weight(weight)
-        axes_values = axes_values_with_axis_value(
+        set_instance_axis_value(
+            instance,
             axes_values,
             math_index,
             math_axis_id,
             math_weight,
         )
-        set_instance_axes_values(instance, axes_values)
 
         parameter = axis_location_parameter(instance)
         if parameter is None:
@@ -201,17 +240,26 @@ try:
             instance.customParameters.append(parameter)
 
         axis_locations = mutable_axis_locations(parameter.value)
-        location_weight = axis_location_weight(axis_locations, weight)
-        location_math_weight = calculated_math_weight(location_weight)
-        set_axis_location(axis_locations, MATH_AXIS_NAME, location_math_weight)
+        set_axis_location(axis_locations, MATH_AXIS_NAME, math_weight)
         parameter.value = axis_locations
 
+        read_back_math_weight = axis_value(
+            raw_instance_axes_values(instance),
+            math_index,
+            math_axis_id,
+        )
+        try:
+            read_back_math_weight = number_value(read_back_math_weight)
+        except Exception:
+            pass
+
         updated_count += 1
-        print("%s: Weight %s -> Math Weight %s; Axis Location Math Weight %s" % (
+        print("%s: Weight %s -> Math Weight %s; read back %s; Axis Location Math Weight %s" % (
             instance.name,
             weight,
             math_weight,
-            location_math_weight,
+            read_back_math_weight,
+            math_weight,
         ))
 
 finally:

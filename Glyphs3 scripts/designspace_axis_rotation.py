@@ -156,13 +156,129 @@ def coordinates_match(font, first_coordinates, second_coordinates):
     return True
 
 
-def attribute_value(layer, key):
-    attributes = getattr(layer, "attributes", None)
-    if not attributes:
+def coordinate_axis_value(font, coordinates, axis_id_value, axis_index_value):
+    if coordinates is None:
         return None
 
+    if hasattr(coordinates, "keys"):
+        try:
+            return float(coordinates[str(axis_id_value)])
+        except Exception:
+            return None
+
+    values = coordinate_values(font, coordinates)
+    if values is None:
+        return None
     try:
-        return attributes[key]
+        return float(values[axis_index_value])
+    except Exception:
+        return None
+
+
+def layer_name(layer):
+    value = getattr(layer, "name", "")
+    if callable(value):
+        try:
+            value = value()
+        except Exception:
+            value = ""
+    return str(value or "")
+
+
+def layer_id(layer):
+    value = getattr(layer, "layerId", None)
+    if callable(value):
+        try:
+            value = value()
+        except Exception:
+            value = None
+    if value is None:
+        return None
+    return str(value)
+
+
+def is_master_layer(layer):
+    value = getattr(layer, "isMasterLayer", False)
+    if callable(value):
+        try:
+            value = value()
+        except Exception:
+            value = False
+    return bool(value)
+
+
+def glyph_has_layer_id(glyph, target_layer_id):
+    if target_layer_id is None:
+        return False
+    for layer in glyph.layers:
+        if layer_id(layer) == target_layer_id:
+            return True
+    return False
+
+
+def layer_matches_axis_coordinate_or_name(font, layer, target_axis_tag, target_axis_id, target_axis_index, value):
+    coordinates = attribute_value(layer, "coordinates")
+    current_value = None
+    if coordinates is not None:
+        current_value = coordinate_axis_value(font, coordinates, target_axis_id, target_axis_index)
+
+    suffixes = (
+        "%s %s" % (target_axis_tag, value),
+        "%s %s" % (target_axis_tag, float(value)),
+    )
+    current_layer_name = layer_name(layer)
+    name_matches_value = bool(current_layer_name and any(suffix in current_layer_name for suffix in suffixes))
+
+    if current_value is not None and abs(current_value - float(value)) <= 0.001:
+        return True
+    return name_matches_value
+
+
+def remove_stale_coordinate_layers(font, glyph, target_axis_tag, target_axis_id, target_axis_index, stale_value):
+    if stale_value is None:
+        return 0
+
+    removed = 0
+    for layer in list(glyph.layers):
+        if is_master_layer(layer):
+            continue
+        if not layer_matches_axis_coordinate_or_name(
+            font,
+            layer,
+            target_axis_tag,
+            target_axis_id,
+            target_axis_index,
+            stale_value,
+        ):
+            continue
+        removed_layer_name = layer_name(layer) or layer_id(layer)
+        if remove_layer(glyph, layer):
+            removed += 1
+            print("%s: removed stale layer %s" % (glyph.name, removed_layer_name))
+        else:
+            print_warning("%s: matched stale layer but could not remove %s" % (glyph.name, removed_layer_name))
+    return removed
+
+
+def attribute_value(layer, key):
+    attributes = getattr(layer, "attributes", None)
+    if attributes:
+        try:
+            return attributes[key]
+        except Exception:
+            pass
+
+    for method_name in ("attributeForKey_", "valueForKey_"):
+        method = getattr(layer, method_name, None)
+        if method is None:
+            continue
+        try:
+            return method(key)
+        except Exception:
+            pass
+
+    try:
+        return layer.attributes[key]
     except Exception:
         return None
 
@@ -171,7 +287,7 @@ def copied_attribute_value(value):
     if value is None:
         return None
     if isinstance(value, (list, tuple)):
-        return [copied_axis_rule(item) if hasattr(item, "keys") else item for item in value]
+        return [copied_attribute_value(item) if hasattr(item, "keys") else item for item in value]
     try:
         return value.copy()
     except Exception:
@@ -573,15 +689,60 @@ def replace_layer_contents(target_layer, coordinates, axis_rules, associated_mas
 
 
 def remove_layer(glyph, layer):
+    target_layer_id = layer_id(layer)
+
+    for method_name in ("remove_", "removeObject_", "removeObject", "removeLayer_"):
+        method = getattr(glyph.layers, method_name, None)
+        if method is None:
+            continue
+        try:
+            method(layer)
+            if not glyph_has_layer_id(glyph, target_layer_id):
+                return True
+        except Exception:
+            pass
+
+    if target_layer_id is not None:
+        try:
+            del glyph.layers[target_layer_id]
+            if not glyph_has_layer_id(glyph, target_layer_id):
+                return True
+        except Exception:
+            pass
+
+        method = getattr(glyph.layers, "removeObjectForKey_", None)
+        if method is not None:
+            try:
+                method(target_layer_id)
+                if not glyph_has_layer_id(glyph, target_layer_id):
+                    return True
+            except Exception:
+                pass
+
     try:
         index = layer_index(glyph, layer)
     except Exception:
-        return False
-    try:
-        del glyph.layers[index]
-        return True
-    except Exception:
-        return False
+        index = None
+
+    if index is not None:
+        try:
+            del glyph.layers[index]
+            if not glyph_has_layer_id(glyph, target_layer_id):
+                return True
+        except Exception:
+            pass
+
+    for index, existing_layer in reversed(list(enumerate(glyph.layers))):
+        if layer_id(existing_layer) != target_layer_id:
+            continue
+        try:
+            del glyph.layers[index]
+            if not glyph_has_layer_id(glyph, target_layer_id):
+                return True
+        except Exception:
+            pass
+
+    return not glyph_has_layer_id(glyph, target_layer_id)
 
 
 def remove_stale_special_layers(font, glyph, keep_layer, stale_axis_rules, name, associated_master_id, coordinates, has_coordinates):
@@ -1008,6 +1169,7 @@ def create_rotated_source_coordinate_layers(
     target_axis_id,
     source_axis_index,
     target_axis_index,
+    fixed_target_axis_value,
     source_layers_by_target_layer_id,
 ):
     created = 0
@@ -1024,16 +1186,7 @@ def create_rotated_source_coordinate_layers(
             ))
             continue
 
-        try:
-            target_axis_value = float(source_coordinates[str(source_axis_id)])
-        except Exception:
-            skipped += 1
-            print_warning("%s: skipped source coordinate layer %s, could not read %s coordinate" % (
-                destination_glyph.name,
-                source_layer.name or source_layer.layerId,
-                source_axis_tag,
-            ))
-            continue
+        target_axis_value = float(fixed_target_axis_value)
 
         source_axis_rules = attribute_value(source_layer, "axisRules")
         target_axis_rules = None
@@ -1183,6 +1336,14 @@ def rotate_glyph_designspace(
 
     source_axis_index = axis_index(font, source_axis_tag)
     target_axis_index = axis_index(font, target_axis_tag)
+    stale_layers_removed = remove_stale_coordinate_layers(
+        font,
+        destination_glyph,
+        target_axis_tag,
+        target_axis_id,
+        target_axis_index,
+        source_high_value,
+    )
     created = 0
     refreshed = 0
     alternates_created = 0
@@ -1195,6 +1356,13 @@ def rotate_glyph_designspace(
 
     print("")
     print("[%s]" % destination_glyph.name)
+    if stale_layers_removed:
+        print("%s: removed %i stale %s=%s layer(s)" % (
+            destination_glyph.name,
+            stale_layers_removed,
+            target_axis_tag,
+            source_high_value,
+        ))
 
     for master in font.masters:
         master_layer = destination_glyph.layers[master.id]
@@ -1256,6 +1424,7 @@ def rotate_glyph_designspace(
         target_axis_id,
         source_axis_index,
         target_axis_index,
+        target_axis_value,
         source_layers_by_target_layer_id,
     )
     created += coord_created
@@ -1495,12 +1664,13 @@ def rotate_glyph_designspace(
     layers_copied += copied
     copy_layers_skipped += copy_skipped
 
-    print("%s summary: created %i, refreshed %i, alternate created %i, alternate refreshed %i, skipped %i" % (
+    print("%s summary: created %i, refreshed %i, alternate created %i, alternate refreshed %i, stale removed %i, skipped %i" % (
         destination_glyph.name,
         created,
         refreshed,
         alternates_created,
         alternates_refreshed,
+        stale_layers_removed,
         skipped,
     ))
 
@@ -1512,6 +1682,7 @@ def rotate_glyph_designspace(
         copy_layers_skipped=copy_layers_skipped,
         alternates_created=alternates_created,
         alternates_refreshed=alternates_refreshed,
+        stale_layers_removed=stale_layers_removed,
         modified=True,
     )
 
@@ -1524,6 +1695,7 @@ def process_stats(
     copy_layers_skipped=0,
     alternates_created=0,
     alternates_refreshed=0,
+    stale_layers_removed=0,
     modified=False,
 ):
     return {
@@ -1534,5 +1706,6 @@ def process_stats(
         "skipped": skipped,
         "layers_copied": layers_copied,
         "copy_layers_skipped": copy_layers_skipped,
+        "stale_layers_removed": stale_layers_removed,
         "modified": int(bool(modified)),
     }
