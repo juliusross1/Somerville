@@ -113,7 +113,7 @@ Add a virtual master for the Math Weight axis (so for Playfair this had position
 
 Create your mathbold lettere as needed from the filter on the left.    Run the script Create or adjust math bold letters (you can apply this to just the selected bold-math glyphs or all the boldmath glyphs).  Now do the same for bolditalic-math glyphs.
 
-**need a script that warns if bold or bolditalics are missing**
+Consider using the check_math_bold_upright_completeness to see for any missing bold and bolditalics.  You may want to use this script again as you build more letters.
 
 **need to make sure we are properly dealing with .ssXX and .cvXX alternates as well and make sure the script will act on this OK**
 

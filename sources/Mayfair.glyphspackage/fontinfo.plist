@@ -172,6 +172,10 @@ value = 1;
 {
 name = "Axis Mappings";
 value = {
+MGHT = {
+360 = 360;
+900 = 900;
+};
 opsz = {
 5 = 5;
 6 = 200;
@@ -4123,7 +4127,7 @@ instances = (
 customParameters = (
 {
 name = fileName;
-value = PlayfairRomanVF;
+value = MayfairVF;
 },
 {
 name = "Variable Font Origin";
@@ -4168,8 +4172,7 @@ name = Filter;
 value = "RemoveOverlap; include:bar2.afrc,bar3.afrc,bar4.afrc,bar5.afrc,bar6.afrc,bar7.afrc,bar8.afrc,bar9.afrc,bar10.afrc";
 }
 );
-exports = 0;
-name = Roman;
+name = "Mayfair Variable";
 type = variable;
 },
 {
@@ -7630,6 +7633,7 @@ Location = 560;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.54393;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.45607;
@@ -7668,6 +7672,7 @@ Location = 600;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.04029;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.50364;
@@ -7707,6 +7712,7 @@ Location = 675;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.11584;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.4281;
@@ -7747,6 +7753,7 @@ Location = 750;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.19138;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.35255;
@@ -7787,6 +7794,7 @@ Location = 850;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.29211;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.25182;
@@ -7829,6 +7837,7 @@ Location = 900;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.39284;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.15109;
@@ -7869,6 +7878,7 @@ Location = 900;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.54393;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.45607;
