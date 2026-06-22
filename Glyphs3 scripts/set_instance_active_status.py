@@ -1,0 +1,492 @@
+#MenuTitle: Set Instance Active Status
+# -*- coding: utf-8 -*-
+
+import re
+
+import vanilla
+from GlyphsApp import Glyphs
+
+
+AXIS_GROUPS = (
+    ("weights", "Weight", ("Weight",)),
+    ("widths", "Width", ("Width",)),
+    ("optical_sizes", "Optical sizes", ("Optical size", "Optical Size")),
+)
+
+DEFAULT_AXIS_VALUE_NAMES = {
+    "weights": {
+        360: "SemiLight",
+        400: "Regular",
+        475: "Medium",
+        500: "Medium",
+        550: "SemiBold",
+        600: "SemiBold",
+        650: "Bold",
+        700: "Bold",
+        750: "ExtraBold",
+        800: "ExtraBold",
+        900: "Black",
+    },
+    "widths": {
+        95: "SemiCondensed",
+        100: "Normal",
+        113: "SemiExpanded",
+    },
+    "optical_sizes": {
+        5: "Micro",
+        6: "Minuscule",
+        7: "Miniature",
+        8: "Caption",
+        12: "Regular",
+        16: "SubHeading",
+        21: "Trumpet",
+        32: "Headline",
+        48: "Display",
+        72: "Titling",
+        96: "Hairline",
+        1200: "Needlepoint",
+    },
+}
+
+KNOWN_AXIS_VALUE_NAMES = {
+    "weights": (
+        "SemiLight",
+        "Regular",
+        "Medium",
+        "SemiBold",
+        "Bold",
+        "ExtraBold",
+        "Black",
+    ),
+    "widths": (
+        "SemiCondensed",
+        "Normal",
+        "SemiExpanded",
+    ),
+    "optical_sizes": (
+        "Micro",
+        "Minuscule",
+        "Miniature",
+        "Caption",
+        "Regular",
+        "SubHeading",
+        "Trumpet",
+        "Headline",
+        "Display",
+        "Titling",
+        "Hairline",
+        "Needlepoint",
+    ),
+}
+
+
+def axis_name(axis):
+    value = getattr(axis, "name", "")
+    if callable(value):
+        try:
+            value = value()
+        except Exception:
+            value = ""
+    return str(value or "")
+
+
+def axis_id(axis):
+    for attribute_name in ("axisId", "id"):
+        value = getattr(axis, attribute_name, None)
+        if callable(value):
+            try:
+                value = value()
+            except Exception:
+                value = None
+        if value:
+            return str(value)
+    return None
+
+
+def axis_info(font, wanted_axis_names):
+    wanted_names = set(wanted_axis_names)
+    for index, axis in enumerate(font.axes):
+        if axis_name(axis) in wanted_names:
+            return index, axis_id(axis), axis_name(axis)
+    raise ValueError("Could not find any axis named %s" % ", ".join(wanted_axis_names))
+
+
+def raw_axes_values(instance):
+    values = getattr(instance, "axesValues", None)
+    if callable(values):
+        values = values()
+    return values
+
+
+def dictionary_keys(value):
+    try:
+        return list(value.keys())
+    except Exception:
+        return None
+
+
+def dictionary_copy(value):
+    keys = dictionary_keys(value)
+    if keys is None:
+        return None
+    return dict((key, value[key]) for key in keys)
+
+
+def number_value(value):
+    for attribute_name in ("value", "position", "pos", "floatValue"):
+        attribute_value = getattr(value, attribute_name, None)
+        if attribute_value is None:
+            continue
+        if callable(attribute_value):
+            try:
+                attribute_value = attribute_value()
+            except Exception:
+                continue
+        if attribute_value is value:
+            continue
+        try:
+            return number_value(attribute_value)
+        except Exception:
+            pass
+
+    try:
+        numeric_value = float(value)
+    except Exception:
+        match = re.search(r":\s*(-?\d+(?:\.\d+)?)\s*/", repr(value))
+        if match is None:
+            raise ValueError("Expected a numeric axis value, got %r" % value)
+        numeric_value = float(match.group(1))
+
+    if numeric_value.is_integer():
+        return int(numeric_value)
+    return numeric_value
+
+
+def value_key(value):
+    return number_value(value)
+
+
+def value_label(value):
+    numeric_value = number_value(value)
+    if isinstance(numeric_value, float) and numeric_value.is_integer():
+        numeric_value = int(numeric_value)
+    return str(numeric_value)
+
+
+def normalized_name(value):
+    return re.sub(r"[^a-z0-9]+", "", str(value).lower())
+
+
+def axis_value_label(axis_key, value, axis_value_names=None):
+    label = value_label(value)
+    axis_name_value = None
+
+    if axis_value_names is not None:
+        axis_name_value = axis_value_names.get(axis_key, {}).get(value)
+
+    if axis_name_value is None:
+        axis_name_value = DEFAULT_AXIS_VALUE_NAMES.get(axis_key, {}).get(value)
+
+    if axis_name_value:
+        return "%s - %s" % (label, axis_name_value)
+    return label
+
+
+def axis_value_from_axes_values(axes_values, axis_index_value, axis_id_value):
+    axes_dictionary = dictionary_copy(axes_values)
+    if axes_dictionary is not None:
+        if axis_id_value is None:
+            return None
+        return axes_dictionary.get(axis_id_value)
+
+    try:
+        axes_list = list(axes_values or [])
+    except Exception:
+        return None
+
+    if axis_index_value >= len(axes_list):
+        return None
+    return axes_list[axis_index_value]
+
+
+def read_axis_value(instance, axis_index_value, axis_id_value):
+    if axis_id_value is not None:
+        for method_name in ("axisValueValueForId_", "axisValueForId_"):
+            method = getattr(instance, method_name, None)
+            if callable(method):
+                try:
+                    return method(axis_id_value)
+                except Exception:
+                    pass
+
+    return axis_value_from_axes_values(raw_axes_values(instance), axis_index_value, axis_id_value)
+
+
+def instance_name(instance):
+    value = getattr(instance, "name", "Unnamed instance")
+    if callable(value):
+        try:
+            value = value()
+        except Exception:
+            value = "Unnamed instance"
+    return str(value or "Unnamed instance")
+
+
+def read_instance_active(instance):
+    for attribute_name in ("active", "exports"):
+        value = getattr(instance, attribute_name, None)
+        if value is None:
+            continue
+        if callable(value):
+            try:
+                value = value()
+            except Exception:
+                continue
+        return bool(value)
+    return True
+
+
+def set_instance_active(instance, active):
+    success = False
+    active_value = bool(active)
+
+    for setter_name in ("setActive_", "setExports_"):
+        setter = getattr(instance, setter_name, None)
+        if callable(setter):
+            try:
+                setter(active_value)
+                success = True
+            except Exception:
+                pass
+
+    for attribute_name in ("active", "exports"):
+        try:
+            setattr(instance, attribute_name, active_value)
+            success = True
+        except Exception:
+            pass
+
+    return success
+
+
+def collect_font_data(font):
+    axis_infos = {}
+    for key, title, names in AXIS_GROUPS:
+        index, identifier, actual_name = axis_info(font, names)
+        axis_infos[key] = {
+            "index": index,
+            "id": identifier,
+            "name": actual_name,
+            "title": title,
+        }
+
+    values = dict((key, set()) for key, title, names in AXIS_GROUPS)
+    instance_records = []
+
+    for instance in font.instances:
+        axes = {}
+        complete = True
+        for key, title, names in AXIS_GROUPS:
+            info = axis_infos[key]
+            raw_value = read_axis_value(instance, info["index"], info["id"])
+            if raw_value is None:
+                complete = False
+                break
+            try:
+                axes[key] = value_key(raw_value)
+            except Exception:
+                complete = False
+                break
+
+        if not complete:
+            continue
+
+        for key, axis_value in axes.items():
+            values[key].add(axis_value)
+        instance_records.append((instance, axes))
+
+    sorted_values = {}
+    for key, title, names in AXIS_GROUPS:
+        sorted_values[key] = sorted(values[key])
+
+    return axis_infos, sorted_values, instance_records
+
+
+def infer_axis_value_names(instance_records):
+    inferred_names = {}
+
+    for key, title, names in AXIS_GROUPS:
+        inferred_names[key] = {}
+        known_names = KNOWN_AXIS_VALUE_NAMES.get(key, ())
+        normalized_known_names = [
+            (known_name, normalized_name(known_name))
+            for known_name in known_names
+        ]
+
+        axis_values = sorted(set(axes[key] for instance, axes in instance_records))
+        for axis_value in axis_values:
+            scores = dict((known_name, 0) for known_name in known_names)
+
+            for instance, axes in instance_records:
+                if axes[key] != axis_value:
+                    continue
+
+                normalized_instance_name = normalized_name(instance_name(instance))
+                for known_name, normalized_known_name in normalized_known_names:
+                    if normalized_known_name and normalized_known_name in normalized_instance_name:
+                        scores[known_name] += 1
+
+            best_name = None
+            best_score = 0
+            for known_name in known_names:
+                score = scores[known_name]
+                if score > best_score:
+                    best_name = known_name
+                    best_score = score
+
+            if best_name is not None and best_score > 0:
+                inferred_names[key][axis_value] = best_name
+
+    return inferred_names
+
+
+class InstanceActiveStatusWindow(object):
+    def __init__(self):
+        self.font = Glyphs.font
+        Glyphs.clearLog()
+        Glyphs.showMacroWindow()
+        print("Set Instance Active Status")
+        print("")
+
+        if self.font is None:
+            print("No font is open.")
+            return
+
+        try:
+            self.axis_infos, self.values, self.instance_records = collect_font_data(self.font)
+        except Exception as error:
+            print("Could not collect instance axis values: %s" % error)
+            return
+
+        if not self.instance_records:
+            print("No instances with complete Weight, Width, and Optical size values were found.")
+            return
+
+        self.axis_value_names = infer_axis_value_names(self.instance_records)
+        self.checkboxes = {}
+        column_width = 190
+        margin = 15
+        row_height = 24
+        heading_height = 22
+        button_height = 28
+        max_rows = max(len(self.values[key]) for key, title, names in AXIS_GROUPS)
+        window_width = margin * 2 + column_width * len(AXIS_GROUPS)
+        window_height = margin * 3 + heading_height + row_height * max_rows + button_height
+
+        self.w = vanilla.FloatingWindow((window_width, window_height), "Set Instance Active Status")
+
+        for column_index, (key, title, names) in enumerate(AXIS_GROUPS):
+            left = margin + column_index * column_width
+            self.w.__setattr__(
+                "%sLabel" % key,
+                vanilla.TextBox((left, margin, column_width - 10, 18), title),
+            )
+            self.checkboxes[key] = []
+            for row_index, axis_value in enumerate(self.values[key]):
+                checkbox = vanilla.CheckBox(
+                    (left, margin + heading_height + row_index * row_height, column_width - 10, 20),
+                    axis_value_label(key, axis_value, self.axis_value_names),
+                    value=True,
+                )
+                self.w.__setattr__("%s_%i" % (key, row_index), checkbox)
+                self.checkboxes[key].append((axis_value, checkbox))
+
+        button_top = window_height - margin - button_height
+        self.w.applyButton = vanilla.Button(
+            (margin, button_top, -margin, button_height),
+            "Set active instances",
+            callback=self.apply_callback,
+        )
+        self.w.open()
+        self.w.makeKey()
+        print("UI opened.")
+
+    def selected_values(self):
+        selected = {}
+        for key, title, names in AXIS_GROUPS:
+            selected[key] = set(
+                axis_value
+                for axis_value, checkbox in self.checkboxes[key]
+                if checkbox.get()
+            )
+        return selected
+
+    def apply_callback(self, sender):
+        Glyphs.clearLog()
+        Glyphs.showMacroWindow()
+        print("Set Instance Active Status")
+        print("")
+
+        selected = self.selected_values()
+        for key, title, names in AXIS_GROUPS:
+            print("%s selected: %s" % (
+                title,
+                ", ".join(
+                    axis_value_label(key, value, self.axis_value_names)
+                    for value in sorted(selected[key])
+                ) or "none",
+            ))
+        print("")
+
+        if any(not selected[key] for key, title, names in AXIS_GROUPS):
+            print("At least one axis has no selected values. All complete static instances will be made inactive.")
+            print("")
+
+        changed_count = 0
+        unchanged_count = 0
+        skipped_count = len(self.font.instances) - len(self.instance_records)
+
+        self.font.disableUpdateInterface()
+        try:
+            for instance, axes in self.instance_records:
+                should_be_active = all(axes[key] in selected[key] for key, title, names in AXIS_GROUPS)
+                old_active = read_instance_active(instance)
+
+                if not set_instance_active(instance, should_be_active):
+                    skipped_count += 1
+                    print("Skipping %s: could not set active status" % instance_name(instance))
+                    continue
+
+                status_text = "active" if should_be_active else "inactive"
+                if old_active != should_be_active:
+                    changed_count += 1
+                    print("%s: %s -> %s" % (
+                        instance_name(instance),
+                        "active" if old_active else "inactive",
+                        status_text,
+                    ))
+                else:
+                    unchanged_count += 1
+                    print("%s: already %s" % (instance_name(instance), status_text))
+        finally:
+            self.font.enableUpdateInterface()
+
+        print("")
+        print("Done. Changed %i instance(s); unchanged %i; skipped %i." % (
+            changed_count,
+            unchanged_count,
+            skipped_count,
+        ))
+
+
+try:
+    INSTANCE_ACTIVE_STATUS_WINDOW = InstanceActiveStatusWindow()
+except Exception as error:
+    import traceback
+
+    Glyphs.clearLog()
+    Glyphs.showMacroWindow()
+    print("Set Instance Active Status")
+    print("")
+    print("Could not open UI: %s" % error)
+    print(traceback.format_exc())

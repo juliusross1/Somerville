@@ -87,27 +87,6 @@ guides = (
 pos = (-5,80);
 }
 );
-hints = (
-{
-name = "_corner.LC-serif";
-origin = (4,1);
-scale = (-1.5,1);
-type = Corner;
-},
-{
-name = "_corner.LC-single-sided-serif";
-options = 1;
-origin = (4,3);
-scale = (-1,1);
-type = Corner;
-},
-{
-name = "_corner.LC-serif";
-origin = (4,4);
-scale = (1.5,1);
-type = Corner;
-}
-);
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
@@ -132,6 +111,7 @@ nodes = (
 {
 closed = 1;
 nodes = (
+(448,-18,l),
 (622,-18,o),
 (759,62,o),
 (759,257,cs),
@@ -144,8 +124,7 @@ nodes = (
 (662,257,cs),
 (662,61,o),
 (573,-17,o),
-(448,-17,c),
-(448,-18,l)
+(448,-17,c)
 );
 },
 {
@@ -235,27 +214,6 @@ nodes = (
 }
 );
 };
-hints = (
-{
-name = "_corner.LC-serif";
-origin = (4,1);
-scale = (-1.5,1);
-type = Corner;
-},
-{
-name = "_corner.LC-single-sided-serif";
-options = 1;
-origin = (4,3);
-scale = (-1,1);
-type = Corner;
-},
-{
-name = "_corner.LC-serif";
-origin = (4,4);
-scale = (1.5,1);
-type = Corner;
-}
-);
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
@@ -280,6 +238,7 @@ nodes = (
 {
 closed = 1;
 nodes = (
+(472,-18,l),
 (647,-18,o),
 (784,62,o),
 (784,257,cs),
@@ -292,8 +251,7 @@ nodes = (
 (687,257,cs),
 (687,111,o),
 (598,52,o),
-(472,52,c),
-(472,-18,l)
+(472,52,c)
 );
 },
 {
@@ -383,27 +341,6 @@ nodes = (
 }
 );
 };
-hints = (
-{
-name = "_corner.LC-serif";
-origin = (4,1);
-scale = (-1.5,1);
-type = Corner;
-},
-{
-name = "_corner.LC-single-sided-serif";
-options = 1;
-origin = (4,3);
-scale = (-1,1);
-type = Corner;
-},
-{
-name = "_corner.LC-serif";
-origin = (4,4);
-scale = (1.5,1);
-type = Corner;
-}
-);
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
@@ -428,6 +365,7 @@ nodes = (
 {
 closed = 1;
 nodes = (
+(545,-18,l),
 (766,-18,o),
 (911,62,o),
 (911,257,cs),
@@ -440,8 +378,7 @@ nodes = (
 (814,257,cs),
 (814,111,o),
 (718,52,o),
-(545,52,c),
-(545,-18,l)
+(545,52,c)
 );
 },
 {
@@ -531,27 +468,6 @@ nodes = (
 }
 );
 };
-hints = (
-{
-name = "_corner.LC-serif";
-origin = (4,1);
-scale = (-1.5,1);
-type = Corner;
-},
-{
-name = "_corner.LC-single-sided-serif";
-options = 1;
-origin = (4,3);
-scale = (-1,1);
-type = Corner;
-},
-{
-name = "_corner.LC-serif";
-origin = (4,4);
-scale = (1.5,1);
-type = Corner;
-}
-);
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
@@ -576,6 +492,7 @@ nodes = (
 {
 closed = 1;
 nodes = (
+(528,-14,l),
 (725,-14,o),
 (855,77,o),
 (855,259,cs),
@@ -588,8 +505,7 @@ nodes = (
 (668,259,cs),
 (668,67,o),
 (621,-13,o),
-(528,-13,c),
-(528,-14,l)
+(528,-13,c)
 );
 },
 {
@@ -679,27 +595,6 @@ nodes = (
 }
 );
 };
-hints = (
-{
-name = "_corner.LC-serif";
-origin = (4,1);
-scale = (-1.5,1);
-type = Corner;
-},
-{
-name = "_corner.LC-single-sided-serif";
-options = 1;
-origin = (4,3);
-scale = (-1,1);
-type = Corner;
-},
-{
-name = "_corner.LC-serif";
-origin = (4,4);
-scale = (1.5,1);
-type = Corner;
-}
-);
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
@@ -724,6 +619,7 @@ nodes = (
 {
 closed = 1;
 nodes = (
+(610,-14,l),
 (890,-14,o),
 (1007,90,o),
 (1007,259,cs),
@@ -736,8 +632,7 @@ nodes = (
 (820,260,cs),
 (820,95,o),
 (752,-13,o),
-(610,-13,c),
-(610,-14,l)
+(610,-13,c)
 );
 },
 {
@@ -827,27 +722,6 @@ nodes = (
 }
 );
 };
-hints = (
-{
-name = "_corner.LC-serif";
-origin = (4,1);
-scale = (-1.5,1);
-type = Corner;
-},
-{
-name = "_corner.LC-single-sided-serif";
-options = 1;
-origin = (4,3);
-scale = (-1,1);
-type = Corner;
-},
-{
-name = "_corner.LC-serif";
-origin = (4,4);
-scale = (1.5,1);
-type = Corner;
-}
-);
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
@@ -872,6 +746,7 @@ nodes = (
 {
 closed = 1;
 nodes = (
+(522,-18,l),
 (767,-18,o),
 (893,82,o),
 (893,257,cs),
@@ -884,8 +759,7 @@ nodes = (
 (795,257,cs),
 (795,83,o),
 (708,-17,o),
-(522,-17,c),
-(522,-18,l)
+(522,-17,c)
 );
 },
 {
@@ -975,27 +849,6 @@ nodes = (
 }
 );
 };
-hints = (
-{
-name = "_corner.LC-serif";
-origin = (4,1);
-scale = (-1.5,1);
-type = Corner;
-},
-{
-name = "_corner.LC-single-sided-serif";
-options = 1;
-origin = (4,3);
-scale = (-1,1);
-type = Corner;
-},
-{
-name = "_corner.LC-serif";
-origin = (4,4);
-scale = (1.5,1);
-type = Corner;
-}
-);
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
@@ -1020,6 +873,7 @@ nodes = (
 {
 closed = 1;
 nodes = (
+(498,-14,l),
 (724,-14,o),
 (845,77,o),
 (845,259,cs),
@@ -1032,8 +886,7 @@ nodes = (
 (658,259,cs),
 (658,115,o),
 (604,56,o),
-(498,56,c),
-(498,-14,l)
+(498,56,c)
 );
 },
 {
@@ -1123,27 +976,6 @@ nodes = (
 }
 );
 };
-hints = (
-{
-name = "_corner.LC-serif";
-origin = (4,1);
-scale = (-1.5,1);
-type = Corner;
-},
-{
-name = "_corner.LC-single-sided-serif";
-options = 1;
-origin = (4,3);
-scale = (-1,1);
-type = Corner;
-},
-{
-name = "_corner.LC-serif";
-origin = (4,4);
-scale = (1.5,1);
-type = Corner;
-}
-);
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
@@ -1168,6 +1000,7 @@ nodes = (
 {
 closed = 1;
 nodes = (
+(546,-14,l),
 (833,-14,o),
 (974,77,o),
 (974,259,cs),
@@ -1180,8 +1013,7 @@ nodes = (
 (787,262,cs),
 (787,115,o),
 (717,56,o),
-(546,56,c),
-(546,-14,l)
+(546,56,c)
 );
 },
 {

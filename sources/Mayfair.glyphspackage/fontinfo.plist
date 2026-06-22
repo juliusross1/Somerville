@@ -13,6 +13,10 @@ tag = wdth;
 {
 name = Weight;
 tag = wght;
+},
+{
+name = "Math Weight";
+tag = MGHT;
 }
 );
 classes = (
@@ -206,6 +210,27 @@ value = rlig;
 {
 name = "Use case marks for double marks";
 value = 0;
+},
+{
+name = "Virtual Master";
+value = (
+{
+Axis = "Optical size";
+Location = 5;
+},
+{
+Axis = Width;
+Location = 94;
+},
+{
+Axis = Weight;
+Location = 360;
+},
+{
+Axis = "Math Weight";
+Location = 900;
+}
+);
 }
 );
 date = "2024-11-05 07:24:09 +0000";
@@ -1433,6 +1458,7 @@ fontMaster = (
 axesValues = (
 1200,
 95,
+360,
 360
 );
 customParameters = (
@@ -1755,6 +1781,7 @@ UpperLimitGapMin = 2;
 axesValues = (
 1200,
 113,
+360,
 360
 );
 customParameters = (
@@ -2065,7 +2092,8 @@ UpperLimitGapMin = 2;
 axesValues = (
 1200,
 95,
-900
+900,
+360
 );
 customParameters = (
 {
@@ -2387,7 +2415,8 @@ UpperLimitGapMin = 2;
 axesValues = (
 1200,
 113,
-900
+900,
+360
 );
 customParameters = (
 {
@@ -2723,6 +2752,7 @@ UpperLimitGapMin = 2;
 axesValues = (
 5,
 95,
+360,
 360
 );
 customParameters = (
@@ -3063,6 +3093,7 @@ UpperLimitGapMin = 160;
 axesValues = (
 5,
 113,
+360,
 360
 );
 customParameters = (
@@ -3397,7 +3428,8 @@ UpperLimitGapMin = 160;
 axesValues = (
 5,
 95,
-900
+900,
+360
 );
 customParameters = (
 {
@@ -3738,7 +3770,8 @@ UpperLimitGapMin = 160;
 axesValues = (
 5,
 113,
-900
+900,
+360
 );
 customParameters = (
 {
@@ -4143,7 +4176,8 @@ type = variable;
 axesValues = (
 5,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -4176,7 +4210,8 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -4209,7 +4244,8 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -4243,7 +4279,8 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -4277,7 +4314,8 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -4313,7 +4351,8 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -4347,7 +4386,8 @@ widthClass = 4;
 axesValues = (
 5,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -4380,7 +4420,8 @@ widthClass = 4;
 axesValues = (
 5,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -4413,7 +4454,8 @@ weightClass = 360;
 axesValues = (
 5,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -4447,7 +4489,8 @@ name = Micro;
 axesValues = (
 5,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -4482,7 +4525,8 @@ weightClass = 500;
 axesValues = (
 5,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -4517,7 +4561,8 @@ weightClass = 600;
 axesValues = (
 5,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -4554,7 +4599,8 @@ weightClass = 700;
 axesValues = (
 5,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -4589,7 +4635,8 @@ weightClass = 800;
 axesValues = (
 5,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -4622,7 +4669,8 @@ weightClass = 900;
 axesValues = (
 5,
 113,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -4655,7 +4703,8 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -4688,7 +4737,8 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -4722,7 +4772,8 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -4756,7 +4807,8 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -4792,7 +4844,8 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -4826,7 +4879,8 @@ widthClass = 6;
 axesValues = (
 5,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -4859,7 +4913,8 @@ widthClass = 6;
 axesValues = (
 200,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -4893,7 +4948,8 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -4928,7 +4984,8 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -4964,7 +5021,8 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -5000,7 +5058,8 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -5038,7 +5097,8 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -5074,7 +5134,8 @@ widthClass = 4;
 axesValues = (
 200,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -5108,7 +5169,8 @@ widthClass = 4;
 axesValues = (
 200,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -5143,7 +5205,8 @@ weightClass = 360;
 axesValues = (
 200,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -5181,7 +5244,8 @@ name = Minuscule;
 axesValues = (
 200,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -5220,7 +5284,8 @@ weightClass = 500;
 axesValues = (
 200,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -5259,7 +5324,8 @@ weightClass = 600;
 axesValues = (
 200,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -5300,7 +5366,8 @@ weightClass = 700;
 axesValues = (
 200,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -5339,7 +5406,8 @@ weightClass = 800;
 axesValues = (
 200,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -5374,7 +5442,8 @@ weightClass = 900;
 axesValues = (
 200,
 113,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -5408,7 +5477,8 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -5443,7 +5513,8 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -5479,7 +5550,8 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -5515,7 +5587,8 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -5553,7 +5626,8 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -5589,7 +5663,8 @@ widthClass = 6;
 axesValues = (
 200,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -5623,7 +5698,8 @@ widthClass = 6;
 axesValues = (
 325,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -5657,7 +5733,8 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -5692,7 +5769,8 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -5728,7 +5806,8 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -5764,7 +5843,8 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -5802,7 +5882,8 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -5838,7 +5919,8 @@ widthClass = 4;
 axesValues = (
 325,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -5872,7 +5954,8 @@ widthClass = 4;
 axesValues = (
 325,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -5907,7 +5990,8 @@ weightClass = 360;
 axesValues = (
 325,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -5945,7 +6029,8 @@ name = Miniature;
 axesValues = (
 325,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -5984,7 +6069,8 @@ weightClass = 500;
 axesValues = (
 325,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -6023,7 +6109,8 @@ weightClass = 600;
 axesValues = (
 325,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -6063,7 +6150,8 @@ weightClass = 700;
 axesValues = (
 325,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -6101,7 +6189,8 @@ weightClass = 800;
 axesValues = (
 325,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -6135,7 +6224,8 @@ weightClass = 900;
 axesValues = (
 325,
 113,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -6168,7 +6258,8 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -6203,7 +6294,8 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -6239,7 +6331,8 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -6275,7 +6368,8 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -6313,7 +6407,8 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -6349,7 +6444,8 @@ widthClass = 6;
 axesValues = (
 325,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -6383,7 +6479,8 @@ widthClass = 6;
 axesValues = (
 400,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -6417,7 +6514,8 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -6452,7 +6550,8 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -6488,7 +6587,8 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -6523,7 +6623,8 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -6560,7 +6661,8 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -6595,7 +6697,8 @@ widthClass = 4;
 axesValues = (
 400,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -6628,7 +6731,8 @@ widthClass = 4;
 axesValues = (
 400,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -6663,7 +6767,8 @@ weightClass = 360;
 axesValues = (
 400,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -6701,7 +6806,8 @@ name = Caption;
 axesValues = (
 400,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -6740,7 +6846,8 @@ weightClass = 500;
 axesValues = (
 400,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -6779,7 +6886,8 @@ weightClass = 600;
 axesValues = (
 400,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -6820,7 +6928,8 @@ weightClass = 700;
 axesValues = (
 400,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -6859,7 +6968,8 @@ weightClass = 800;
 axesValues = (
 400,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -6894,7 +7004,8 @@ weightClass = 900;
 axesValues = (
 400,
 113,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -6927,7 +7038,8 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -6962,7 +7074,8 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -6998,7 +7111,8 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -7033,7 +7147,8 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -7071,7 +7186,8 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -7107,7 +7223,8 @@ widthClass = 6;
 axesValues = (
 400,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -7141,7 +7258,8 @@ widthClass = 6;
 axesValues = (
 550,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -7175,7 +7293,8 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -7210,7 +7329,8 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -7246,7 +7366,8 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -7282,7 +7403,8 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -7320,7 +7442,8 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -7356,7 +7479,8 @@ widthClass = 4;
 axesValues = (
 550,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -7390,7 +7514,8 @@ widthClass = 4;
 axesValues = (
 550,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -7424,7 +7549,8 @@ weightClass = 360;
 axesValues = (
 550,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -7462,7 +7588,8 @@ name = Regular;
 axesValues = (
 550,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -7501,7 +7628,8 @@ weightClass = 500;
 axesValues = (
 550,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -7540,7 +7668,8 @@ weightClass = 600;
 axesValues = (
 550,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -7581,7 +7710,8 @@ weightClass = 700;
 axesValues = (
 550,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -7620,7 +7750,8 @@ weightClass = 800;
 axesValues = (
 550,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -7655,7 +7786,8 @@ weightClass = 900;
 axesValues = (
 550,
 113,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -7689,7 +7821,8 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -7724,7 +7857,8 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -7760,7 +7894,8 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -7795,7 +7930,8 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -7833,7 +7969,8 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -7869,7 +8006,8 @@ widthClass = 6;
 axesValues = (
 550,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -7903,7 +8041,8 @@ widthClass = 6;
 axesValues = (
 640,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -7937,7 +8076,8 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -7972,7 +8112,8 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -8008,7 +8149,8 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -8044,7 +8186,8 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -8082,7 +8225,8 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -8118,7 +8262,8 @@ widthClass = 4;
 axesValues = (
 640,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -8152,7 +8297,8 @@ widthClass = 4;
 axesValues = (
 640,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -8186,7 +8332,8 @@ weightClass = 360;
 axesValues = (
 640,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -8224,7 +8371,8 @@ name = SubHeading;
 axesValues = (
 640,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -8263,7 +8411,8 @@ weightClass = 500;
 axesValues = (
 640,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -8302,7 +8451,8 @@ weightClass = 600;
 axesValues = (
 640,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -8343,7 +8493,8 @@ weightClass = 700;
 axesValues = (
 640,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -8382,7 +8533,8 @@ weightClass = 800;
 axesValues = (
 640,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -8417,6 +8569,7 @@ weightClass = 900;
 axesValues = (
 640,
 113,
+360,
 360
 );
 customParameters = (
@@ -8450,7 +8603,8 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -8485,7 +8639,8 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -8521,7 +8676,8 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -8557,7 +8713,8 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -8595,7 +8752,8 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -8631,7 +8789,8 @@ widthClass = 6;
 axesValues = (
 640,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -8665,7 +8824,8 @@ widthClass = 6;
 axesValues = (
 700,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -8698,7 +8858,8 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -8733,7 +8894,8 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -8769,7 +8931,8 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -8805,7 +8968,8 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -8843,7 +9007,8 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -8879,7 +9044,8 @@ widthClass = 4;
 axesValues = (
 700,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -8912,7 +9078,8 @@ widthClass = 4;
 axesValues = (
 700,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -8947,7 +9114,8 @@ weightClass = 360;
 axesValues = (
 700,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -8985,7 +9153,8 @@ name = Trumpet;
 axesValues = (
 700,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -9024,7 +9193,8 @@ weightClass = 500;
 axesValues = (
 700,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -9063,7 +9233,8 @@ weightClass = 600;
 axesValues = (
 700,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -9104,7 +9275,8 @@ weightClass = 700;
 axesValues = (
 700,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -9143,7 +9315,8 @@ weightClass = 800;
 axesValues = (
 700,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -9178,7 +9351,8 @@ weightClass = 900;
 axesValues = (
 700,
 113,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -9212,7 +9386,8 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -9247,7 +9422,8 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -9283,7 +9459,8 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -9319,7 +9496,8 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -9357,7 +9535,8 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -9393,7 +9572,8 @@ widthClass = 6;
 axesValues = (
 700,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -9427,7 +9607,8 @@ widthClass = 6;
 axesValues = (
 800,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -9461,7 +9642,8 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -9496,7 +9678,8 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -9532,7 +9715,8 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -9568,7 +9752,8 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -9606,7 +9791,8 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -9642,7 +9828,8 @@ widthClass = 4;
 axesValues = (
 800,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -9676,7 +9863,8 @@ widthClass = 4;
 axesValues = (
 800,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -9711,7 +9899,8 @@ weightClass = 360;
 axesValues = (
 800,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -9749,7 +9938,8 @@ name = Headline;
 axesValues = (
 800,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -9788,7 +9978,8 @@ weightClass = 500;
 axesValues = (
 800,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -9827,7 +10018,8 @@ weightClass = 600;
 axesValues = (
 800,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -9868,7 +10060,8 @@ weightClass = 700;
 axesValues = (
 800,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -9907,7 +10100,8 @@ weightClass = 800;
 axesValues = (
 800,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -9942,7 +10136,8 @@ weightClass = 900;
 axesValues = (
 800,
 113,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -9976,7 +10171,8 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -10011,7 +10207,8 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -10047,7 +10244,8 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -10083,7 +10281,8 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -10121,7 +10320,8 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -10157,7 +10357,8 @@ widthClass = 6;
 axesValues = (
 800,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -10191,7 +10392,8 @@ widthClass = 6;
 axesValues = (
 900,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -10225,7 +10427,8 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -10260,7 +10463,8 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -10296,7 +10500,8 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -10332,7 +10537,8 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -10370,7 +10576,8 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -10406,7 +10613,8 @@ widthClass = 4;
 axesValues = (
 900,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -10440,7 +10648,8 @@ widthClass = 4;
 axesValues = (
 900,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -10475,7 +10684,8 @@ weightClass = 360;
 axesValues = (
 900,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -10513,7 +10723,8 @@ name = Display;
 axesValues = (
 900,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -10552,7 +10763,8 @@ weightClass = 500;
 axesValues = (
 900,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -10591,7 +10803,8 @@ weightClass = 600;
 axesValues = (
 900,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -10632,7 +10845,8 @@ weightClass = 700;
 axesValues = (
 900,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -10671,7 +10885,8 @@ weightClass = 800;
 axesValues = (
 900,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -10706,7 +10921,8 @@ weightClass = 900;
 axesValues = (
 900,
 113,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -10740,7 +10956,8 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -10775,7 +10992,8 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -10811,7 +11029,8 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -10847,7 +11066,8 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -10885,7 +11105,8 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -10921,7 +11142,8 @@ widthClass = 6;
 axesValues = (
 900,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -10955,7 +11177,8 @@ widthClass = 6;
 axesValues = (
 980,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -10989,7 +11212,8 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -11024,7 +11248,8 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -11060,7 +11285,8 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -11096,7 +11322,8 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -11134,7 +11361,8 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -11170,7 +11398,8 @@ widthClass = 4;
 axesValues = (
 980,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -11204,7 +11433,8 @@ widthClass = 4;
 axesValues = (
 980,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -11239,7 +11469,8 @@ weightClass = 360;
 axesValues = (
 980,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -11277,7 +11508,8 @@ name = Titling;
 axesValues = (
 980,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -11316,7 +11548,8 @@ weightClass = 500;
 axesValues = (
 980,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -11355,7 +11588,8 @@ weightClass = 600;
 axesValues = (
 980,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -11396,7 +11630,8 @@ weightClass = 700;
 axesValues = (
 980,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -11435,7 +11670,8 @@ weightClass = 800;
 axesValues = (
 980,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -11470,7 +11706,8 @@ weightClass = 900;
 axesValues = (
 980,
 113,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -11504,7 +11741,8 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -11539,7 +11777,8 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -11575,7 +11814,8 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -11611,7 +11851,8 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -11649,7 +11890,8 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -11685,7 +11927,8 @@ widthClass = 6;
 axesValues = (
 980,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -11719,7 +11962,8 @@ widthClass = 6;
 axesValues = (
 1020,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -11753,7 +11997,8 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -11788,7 +12033,8 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -11824,7 +12070,8 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -11860,7 +12107,8 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -11898,7 +12146,8 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -11934,7 +12183,8 @@ widthClass = 4;
 axesValues = (
 1020,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -11968,7 +12218,8 @@ widthClass = 4;
 axesValues = (
 1020,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -12003,7 +12254,8 @@ weightClass = 360;
 axesValues = (
 1020,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -12041,7 +12293,8 @@ name = Hairline;
 axesValues = (
 1020,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -12080,7 +12333,8 @@ weightClass = 500;
 axesValues = (
 1020,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -12119,7 +12373,8 @@ weightClass = 600;
 axesValues = (
 1020,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -12160,7 +12415,8 @@ weightClass = 700;
 axesValues = (
 1020,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -12199,7 +12455,8 @@ weightClass = 800;
 axesValues = (
 1020,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -12234,7 +12491,8 @@ weightClass = 900;
 axesValues = (
 1020,
 113,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -12268,7 +12526,8 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -12303,7 +12562,8 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -12339,7 +12599,8 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -12375,7 +12636,8 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -12413,7 +12675,8 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -12449,7 +12712,8 @@ widthClass = 6;
 axesValues = (
 1020,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -12483,7 +12747,8 @@ widthClass = 6;
 axesValues = (
 1200,
 95,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -12516,7 +12781,8 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -12549,7 +12815,8 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -12583,7 +12850,8 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -12617,7 +12885,8 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -12653,7 +12922,8 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -12687,7 +12957,8 @@ widthClass = 4;
 axesValues = (
 1200,
 95,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -12720,7 +12991,8 @@ widthClass = 4;
 axesValues = (
 1200,
 100,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -12753,7 +13025,8 @@ weightClass = 360;
 axesValues = (
 1200,
 100,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -12787,7 +13060,8 @@ name = Needlepoint;
 axesValues = (
 1200,
 100,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -12822,7 +13096,8 @@ weightClass = 500;
 axesValues = (
 1200,
 100,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -12857,7 +13132,8 @@ weightClass = 600;
 axesValues = (
 1200,
 100,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -12894,7 +13170,8 @@ weightClass = 700;
 axesValues = (
 1200,
 100,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -12929,7 +13206,8 @@ weightClass = 800;
 axesValues = (
 1200,
 100,
-900
+900,
+0
 );
 customParameters = (
 {
@@ -12962,7 +13240,8 @@ weightClass = 900;
 axesValues = (
 1200,
 113,
-360
+360,
+0
 );
 customParameters = (
 {
@@ -12995,7 +13274,8 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-400
+400,
+0
 );
 customParameters = (
 {
@@ -13028,7 +13308,8 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-475
+475,
+0
 );
 customParameters = (
 {
@@ -13062,7 +13343,8 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-550
+550,
+0
 );
 customParameters = (
 {
@@ -13096,7 +13378,8 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-650
+650,
+0
 );
 customParameters = (
 {
@@ -13132,7 +13415,8 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-750
+750,
+0
 );
 customParameters = (
 {
@@ -13166,7 +13450,8 @@ widthClass = 6;
 axesValues = (
 1200,
 113,
-900
+900,
+0
 );
 customParameters = (
 {
