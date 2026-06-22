@@ -80,15 +80,20 @@ Note: This script will create the math.ta anchors at cap-height (the y-position 
 You may still need to adjust some of these by hand.  Test document: blah.
 
 ** Step 12: Bold **
-Add an axis called "Math Weight" with code MGHT.   It is probably a good idea to have the same axis mapping as the weight axis if the font has such an axis mapping.
+Add an axis called "Math Weight" with code MGHT.    Here I found a glitch with corner components that had width/height intermediate layers that was avoided by setting the minimum MGHT axis value to be 0.  This was then fixed with the axis mapping so the external coordinates were the same as that of wght
 
-Add a virtual master for the Math Weight axis (so for Playfair this had position Weight = minimum (360); opsz = minimum (5); Width = minimum (94); Math Weight = maximum (900))
+Add a virtual master for the Math Weight axis (so for Playfair this had position Weight = minimum (360); opsz = minimum (5); Width = minimum (94); Math Weight = maximum (540))
 
-Create your mathbold letteres as needed.   Run the script Create or adjust math bold letters (you can apply this to just the selected bold-math glyphs or all the boldmath glyphs).  Now do the same for bolditalic-math glyphs.
+Create your mathbold lettere as needed from the filter on the left.    Run the script Create or adjust math bold letters (you can apply this to just the selected bold-math glyphs or all the boldmath glyphs).  Now do the same for bolditalic-math glyphs.
 
-Test files: FINISH ME
+**need a script that warns if bold or bolditalics are missing**
+
+**need to make sure we are properly dealing with .ssXX and .cvXX alternates as well and make sure the script will act on this OK**
 
 Now adjust your instances to give them a suitable MGHT value.  For Playfair MGHT is set to max(WGHT + 200,900).  Note that this means that if Weight is 900 then the boldmath is the same as the non-bold, and if Weight is close to 900 then there is little distinction.  There is no easy way around this.  One option is to not create instances at higher weights.  Another is to add a small "underline" to all the bold-math characters at high weight (see next step for how to do that)
+
+** Need testing files here **
+
 
 ** Step 13: Optical Sizing **
 Playfair has an opz axes so optical sizing is easily done.  The script **blah** will populate any glyph that ends with .ssty.  
