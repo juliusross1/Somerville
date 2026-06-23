@@ -214,24 +214,19 @@ These can be taken in pretty much any order
 
 **Arrows**
 
-
-
-
 *Playfair Math Todo*
-Design a test document for ststy in html and in Context
-Adjust the math constants
-is _1 different from _k in size?
-
 Minus at various widths (need to fix this one up)
 Brackets and sizing
-Math constants and create testing documents
 Redo the existing + divide, = and many others :-(
+Circle and sizing
+
+Adjust the math constants
+Math constants and create testing documents
 Times at size
 Integral and sizing and split into three pieces
 
 Double integrals
 Sum and sizing
-Circle and sizing
 Contour integral
 Other display operators?
 other simple math symbols and anchors (redo the current ones with anchors)

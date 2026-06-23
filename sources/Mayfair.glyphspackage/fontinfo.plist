@@ -4331,6 +4331,19 @@ bar10.afrc
 {
 name = Filter;
 value = "RemoveOverlap; include:bar2.afrc,bar3.afrc,bar4.afrc,bar5.afrc,bar6.afrc,bar7.afrc,bar8.afrc,bar9.afrc,bar10.afrc";
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
 }
 );
 name = "Mayfair Variable";
@@ -4364,6 +4377,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4404,6 +4425,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4444,6 +4473,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4485,6 +4522,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4526,6 +4571,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4569,6 +4622,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4610,6 +4671,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4650,6 +4719,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4690,6 +4767,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4731,6 +4816,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4773,6 +4866,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4815,6 +4916,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4859,6 +4968,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4901,6 +5018,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4941,6 +5066,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4981,6 +5114,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5021,6 +5162,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5062,6 +5211,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5103,6 +5260,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5146,6 +5311,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5187,6 +5360,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5227,6 +5408,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5268,6 +5457,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5310,6 +5507,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5353,6 +5558,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5396,6 +5609,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5441,6 +5662,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5484,6 +5713,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5525,6 +5762,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5567,6 +5812,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5612,6 +5865,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5658,6 +5919,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5704,6 +5973,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5752,6 +6029,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5798,6 +6083,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5840,6 +6133,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5881,6 +6182,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5923,6 +6232,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -5966,6 +6283,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6009,6 +6334,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6054,6 +6387,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6097,6 +6438,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6116,7 +6465,7 @@ axesValues = (
 95,
 360,
 560,
-5,
+122,
 5
 );
 customParameters = (
@@ -6138,6 +6487,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6157,7 +6514,7 @@ axesValues = (
 95,
 400,
 600,
-5,
+122,
 5
 );
 customParameters = (
@@ -6179,6 +6536,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6199,7 +6564,7 @@ axesValues = (
 95,
 475,
 675,
-5,
+122,
 5
 );
 customParameters = (
@@ -6221,6 +6586,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6242,7 +6615,7 @@ axesValues = (
 95,
 550,
 750,
-5,
+122,
 5
 );
 customParameters = (
@@ -6264,6 +6637,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6285,7 +6666,7 @@ axesValues = (
 95,
 650,
 850,
-5,
+122,
 5
 );
 customParameters = (
@@ -6307,6 +6688,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6330,7 +6719,7 @@ axesValues = (
 95,
 750,
 900,
-5,
+122,
 5
 );
 customParameters = (
@@ -6352,6 +6741,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6373,7 +6770,7 @@ axesValues = (
 95,
 900,
 900,
-5,
+122,
 5
 );
 customParameters = (
@@ -6395,6 +6792,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6414,7 +6819,7 @@ axesValues = (
 100,
 360,
 560,
-5,
+122,
 5
 );
 customParameters = (
@@ -6436,6 +6841,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6456,7 +6869,7 @@ axesValues = (
 100,
 400,
 600,
-5,
+122,
 5
 );
 customParameters = (
@@ -6478,6 +6891,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6501,7 +6922,7 @@ axesValues = (
 100,
 475,
 675,
-5,
+122,
 5
 );
 customParameters = (
@@ -6523,6 +6944,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6547,7 +6976,7 @@ axesValues = (
 100,
 550,
 750,
-5,
+122,
 5
 );
 customParameters = (
@@ -6569,6 +6998,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6593,7 +7030,7 @@ axesValues = (
 100,
 650,
 850,
-5,
+122,
 5
 );
 customParameters = (
@@ -6615,6 +7052,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6641,7 +7086,7 @@ axesValues = (
 100,
 750,
 900,
-5,
+122,
 5
 );
 customParameters = (
@@ -6663,6 +7108,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6687,7 +7140,7 @@ axesValues = (
 100,
 900,
 900,
-5,
+122,
 5
 );
 customParameters = (
@@ -6709,6 +7162,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6729,7 +7190,7 @@ axesValues = (
 113,
 360,
 560,
-5,
+122,
 5
 );
 customParameters = (
@@ -6751,6 +7212,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6770,7 +7239,7 @@ axesValues = (
 113,
 400,
 600,
-5,
+122,
 5
 );
 customParameters = (
@@ -6792,6 +7261,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6812,7 +7289,7 @@ axesValues = (
 113,
 475,
 675,
-5,
+122,
 5
 );
 customParameters = (
@@ -6834,6 +7311,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6855,7 +7340,7 @@ axesValues = (
 113,
 550,
 750,
-5,
+122,
 5
 );
 customParameters = (
@@ -6877,6 +7362,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6898,7 +7391,7 @@ axesValues = (
 113,
 650,
 850,
-5,
+122,
 5
 );
 customParameters = (
@@ -6920,6 +7413,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6943,7 +7444,7 @@ axesValues = (
 113,
 750,
 900,
-5,
+122,
 5
 );
 customParameters = (
@@ -6965,6 +7466,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -6986,7 +7495,7 @@ axesValues = (
 113,
 900,
 900,
-5,
+122,
 5
 );
 customParameters = (
@@ -7008,6 +7517,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 122;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7027,7 +7544,7 @@ axesValues = (
 95,
 360,
 560,
-122,
+250,
 5
 );
 customParameters = (
@@ -7049,6 +7566,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7068,7 +7593,7 @@ axesValues = (
 95,
 400,
 600,
-122,
+250,
 5
 );
 customParameters = (
@@ -7090,6 +7615,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7110,7 +7643,7 @@ axesValues = (
 95,
 475,
 675,
-122,
+250,
 5
 );
 customParameters = (
@@ -7132,6 +7665,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7153,7 +7694,7 @@ axesValues = (
 95,
 550,
 750,
-122,
+250,
 5
 );
 customParameters = (
@@ -7175,6 +7716,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7196,7 +7745,7 @@ axesValues = (
 95,
 650,
 850,
-122,
+250,
 5
 );
 customParameters = (
@@ -7218,6 +7767,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7241,7 +7798,7 @@ axesValues = (
 95,
 750,
 900,
-122,
+250,
 5
 );
 customParameters = (
@@ -7263,6 +7820,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7284,7 +7849,7 @@ axesValues = (
 95,
 900,
 900,
-122,
+250,
 5
 );
 customParameters = (
@@ -7306,6 +7871,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7325,7 +7898,7 @@ axesValues = (
 100,
 360,
 560,
-122,
+250,
 5
 );
 customParameters = (
@@ -7347,6 +7920,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7367,7 +7948,7 @@ axesValues = (
 100,
 400,
 600,
-122,
+250,
 5
 );
 customParameters = (
@@ -7389,6 +7970,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7412,7 +8001,7 @@ axesValues = (
 100,
 475,
 675,
-122,
+250,
 5
 );
 customParameters = (
@@ -7434,6 +8023,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7458,7 +8055,7 @@ axesValues = (
 100,
 550,
 750,
-122,
+250,
 5
 );
 customParameters = (
@@ -7480,6 +8077,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7504,7 +8109,7 @@ axesValues = (
 100,
 650,
 850,
-122,
+250,
 5
 );
 customParameters = (
@@ -7526,6 +8131,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7552,7 +8165,7 @@ axesValues = (
 100,
 750,
 900,
-122,
+250,
 5
 );
 customParameters = (
@@ -7574,6 +8187,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7598,7 +8219,7 @@ axesValues = (
 100,
 900,
 900,
-122,
+250,
 5
 );
 customParameters = (
@@ -7620,6 +8241,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7640,7 +8269,7 @@ axesValues = (
 113,
 360,
 560,
-122,
+250,
 5
 );
 customParameters = (
@@ -7662,6 +8291,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7681,7 +8318,7 @@ axesValues = (
 113,
 400,
 600,
-122,
+250,
 5
 );
 customParameters = (
@@ -7703,6 +8340,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7723,7 +8368,7 @@ axesValues = (
 113,
 475,
 675,
-122,
+250,
 5
 );
 customParameters = (
@@ -7745,6 +8390,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7766,7 +8419,7 @@ axesValues = (
 113,
 550,
 750,
-122,
+250,
 5
 );
 customParameters = (
@@ -7788,6 +8441,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7809,7 +8470,7 @@ axesValues = (
 113,
 650,
 850,
-122,
+250,
 5
 );
 customParameters = (
@@ -7831,6 +8492,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7854,7 +8523,7 @@ axesValues = (
 113,
 750,
 900,
-122,
+250,
 5
 );
 customParameters = (
@@ -7876,6 +8545,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7897,7 +8574,7 @@ axesValues = (
 113,
 900,
 900,
-122,
+250,
 5
 );
 customParameters = (
@@ -7919,6 +8596,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 250;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -7938,8 +8623,8 @@ axesValues = (
 95,
 360,
 560,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -7960,6 +8645,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -7979,8 +8672,8 @@ axesValues = (
 95,
 400,
 600,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8001,6 +8694,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8021,8 +8722,8 @@ axesValues = (
 95,
 475,
 675,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8043,6 +8744,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8064,8 +8773,8 @@ axesValues = (
 95,
 550,
 750,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8086,6 +8795,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8107,8 +8824,8 @@ axesValues = (
 95,
 650,
 850,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8129,6 +8846,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8152,8 +8877,8 @@ axesValues = (
 95,
 750,
 900,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8174,6 +8899,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8195,8 +8928,8 @@ axesValues = (
 95,
 900,
 900,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8217,6 +8950,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8236,8 +8977,8 @@ axesValues = (
 100,
 360,
 560,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8258,6 +8999,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8278,8 +9027,8 @@ axesValues = (
 100,
 400,
 600,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8300,6 +9049,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 },
@@ -8326,8 +9083,8 @@ axesValues = (
 100,
 475,
 675,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8348,6 +9105,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8372,8 +9137,8 @@ axesValues = (
 100,
 550,
 750,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8394,6 +9159,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8418,8 +9191,8 @@ axesValues = (
 100,
 650,
 850,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8440,6 +9213,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8466,8 +9247,8 @@ axesValues = (
 100,
 750,
 900,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8488,6 +9269,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8512,8 +9301,8 @@ axesValues = (
 100,
 900,
 900,
-415,
-200
+460,
+340
 );
 customParameters = (
 {
@@ -8534,6 +9323,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8554,8 +9351,8 @@ axesValues = (
 113,
 360,
 560,
-1200,
-1200
+460,
+340
 );
 customParameters = (
 {
@@ -8576,6 +9373,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8595,8 +9400,8 @@ axesValues = (
 113,
 400,
 600,
-1200,
-1200
+460,
+340
 );
 customParameters = (
 {
@@ -8617,6 +9422,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8637,8 +9450,8 @@ axesValues = (
 113,
 475,
 675,
-1200,
-1200
+460,
+340
 );
 customParameters = (
 {
@@ -8659,6 +9472,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8680,8 +9501,8 @@ axesValues = (
 113,
 550,
 750,
-1200,
-1200
+460,
+340
 );
 customParameters = (
 {
@@ -8702,6 +9523,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8723,8 +9552,8 @@ axesValues = (
 113,
 650,
 850,
-1200,
-1200
+460,
+340
 );
 customParameters = (
 {
@@ -8745,6 +9574,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8768,8 +9605,8 @@ axesValues = (
 113,
 750,
 900,
-1200,
-1200
+460,
+340
 );
 customParameters = (
 {
@@ -8790,6 +9627,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8811,8 +9656,8 @@ axesValues = (
 113,
 900,
 900,
-1200,
-1200
+460,
+340
 );
 customParameters = (
 {
@@ -8833,6 +9678,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 460;
+},
+{
+Axis = ssty2;
+Location = 340;
 }
 );
 }
@@ -8852,8 +9705,8 @@ axesValues = (
 95,
 360,
 560,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -8874,6 +9727,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -8893,8 +9754,8 @@ axesValues = (
 95,
 400,
 600,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -8915,6 +9776,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -8935,8 +9804,8 @@ axesValues = (
 95,
 475,
 675,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -8957,6 +9826,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -8978,8 +9855,8 @@ axesValues = (
 95,
 550,
 750,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9000,6 +9877,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9021,8 +9906,8 @@ axesValues = (
 95,
 650,
 850,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9043,6 +9928,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9066,8 +9959,8 @@ axesValues = (
 95,
 750,
 900,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9088,6 +9981,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9109,8 +10010,8 @@ axesValues = (
 95,
 900,
 900,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9131,6 +10032,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9150,8 +10059,8 @@ axesValues = (
 100,
 360,
 560,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9172,6 +10081,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9192,8 +10109,8 @@ axesValues = (
 100,
 400,
 600,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9214,6 +10131,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9236,8 +10161,8 @@ axesValues = (
 100,
 475,
 675,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9258,6 +10183,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9282,8 +10215,8 @@ axesValues = (
 100,
 550,
 750,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9304,6 +10237,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9328,8 +10269,8 @@ axesValues = (
 100,
 650,
 850,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9350,6 +10291,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9376,8 +10325,8 @@ axesValues = (
 100,
 750,
 900,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9398,6 +10347,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9422,8 +10379,8 @@ axesValues = (
 100,
 900,
 900,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9444,6 +10401,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9464,8 +10429,8 @@ axesValues = (
 113,
 360,
 560,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9486,6 +10451,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9505,8 +10478,8 @@ axesValues = (
 113,
 400,
 600,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9527,6 +10500,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9547,8 +10528,8 @@ axesValues = (
 113,
 475,
 675,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9569,6 +10550,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9590,8 +10579,8 @@ axesValues = (
 113,
 550,
 750,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9612,6 +10601,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9633,8 +10630,8 @@ axesValues = (
 113,
 650,
 850,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9655,6 +10652,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9678,8 +10683,8 @@ axesValues = (
 113,
 750,
 900,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9700,6 +10705,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9721,8 +10734,8 @@ axesValues = (
 113,
 900,
 900,
-520,
-400
+568,
+460
 );
 customParameters = (
 {
@@ -9743,6 +10756,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 568;
+},
+{
+Axis = ssty2;
+Location = 460;
 }
 );
 }
@@ -9762,8 +10783,8 @@ axesValues = (
 95,
 360,
 560,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -9784,6 +10805,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -9803,8 +10832,8 @@ axesValues = (
 95,
 400,
 600,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -9825,6 +10854,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -9845,8 +10882,8 @@ axesValues = (
 95,
 475,
 675,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -9867,6 +10904,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -9888,8 +10933,8 @@ axesValues = (
 95,
 550,
 750,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -9910,6 +10955,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -9931,8 +10984,8 @@ axesValues = (
 95,
 650,
 850,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -9953,6 +11006,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -9976,8 +11037,8 @@ axesValues = (
 95,
 750,
 900,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -9998,6 +11059,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10019,8 +11088,8 @@ axesValues = (
 95,
 900,
 900,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -10041,6 +11110,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10060,8 +11137,8 @@ axesValues = (
 100,
 360,
 560,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -10082,6 +11159,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10102,8 +11187,8 @@ axesValues = (
 100,
 400,
 600,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -10124,6 +11209,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10146,8 +11239,8 @@ axesValues = (
 100,
 475,
 675,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -10168,6 +11261,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10192,8 +11293,8 @@ axesValues = (
 100,
 550,
 750,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -10214,6 +11315,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10238,8 +11347,8 @@ axesValues = (
 100,
 650,
 850,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -10260,6 +11369,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10286,8 +11403,8 @@ axesValues = (
 100,
 750,
 900,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -10308,6 +11425,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10332,8 +11457,8 @@ axesValues = (
 100,
 900,
 900,
-610,
-494
+650,
+564
 );
 customParameters = (
 {
@@ -10354,6 +11479,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10374,8 +11507,8 @@ axesValues = (
 113,
 360,
 560,
-1200,
-1200
+650,
+564
 );
 customParameters = (
 {
@@ -10396,6 +11529,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10415,8 +11556,8 @@ axesValues = (
 113,
 400,
 600,
-1200,
-1200
+650,
+564
 );
 customParameters = (
 {
@@ -10437,6 +11578,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10457,8 +11606,8 @@ axesValues = (
 113,
 475,
 675,
-1200,
-1200
+650,
+564
 );
 customParameters = (
 {
@@ -10479,6 +11628,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10500,8 +11657,8 @@ axesValues = (
 113,
 550,
 750,
-1200,
-1200
+650,
+564
 );
 customParameters = (
 {
@@ -10522,6 +11679,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10543,8 +11708,8 @@ axesValues = (
 113,
 650,
 850,
-1200,
-1200
+650,
+564
 );
 customParameters = (
 {
@@ -10565,6 +11730,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10588,8 +11761,8 @@ axesValues = (
 113,
 750,
 900,
-1200,
-1200
+650,
+564
 );
 customParameters = (
 {
@@ -10610,6 +11783,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10631,8 +11812,8 @@ axesValues = (
 113,
 900,
 900,
-1200,
-1200
+650,
+564
 );
 customParameters = (
 {
@@ -10653,6 +11834,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 650;
+},
+{
+Axis = ssty2;
+Location = 564;
 }
 );
 }
@@ -10672,8 +11861,8 @@ axesValues = (
 95,
 360,
 560,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -10694,6 +11883,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -10713,8 +11910,8 @@ axesValues = (
 95,
 400,
 600,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -10735,6 +11932,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -10755,8 +11960,8 @@ axesValues = (
 95,
 475,
 675,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -10777,6 +11982,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -10798,8 +12011,8 @@ axesValues = (
 95,
 550,
 750,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -10820,6 +12033,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -10841,8 +12062,8 @@ axesValues = (
 95,
 650,
 850,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -10863,6 +12084,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -10886,8 +12115,8 @@ axesValues = (
 95,
 750,
 900,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -10908,6 +12137,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -10929,8 +12166,8 @@ axesValues = (
 95,
 900,
 900,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -10951,6 +12188,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -10970,8 +12215,8 @@ axesValues = (
 100,
 360,
 560,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -10992,6 +12237,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11012,8 +12265,8 @@ axesValues = (
 100,
 400,
 600,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11034,6 +12287,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11057,8 +12318,8 @@ axesValues = (
 100,
 475,
 675,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11079,6 +12340,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11103,8 +12372,8 @@ axesValues = (
 100,
 550,
 750,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11125,6 +12394,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11149,8 +12426,8 @@ axesValues = (
 100,
 650,
 850,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11171,6 +12448,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11197,8 +12482,8 @@ axesValues = (
 100,
 750,
 900,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11219,6 +12504,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11243,8 +12536,8 @@ axesValues = (
 100,
 900,
 900,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11265,6 +12558,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11285,8 +12586,8 @@ axesValues = (
 113,
 360,
 560,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11307,6 +12608,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11326,8 +12635,8 @@ axesValues = (
 113,
 400,
 600,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11348,6 +12657,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11368,8 +12685,8 @@ axesValues = (
 113,
 475,
 675,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11390,6 +12707,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11411,8 +12736,8 @@ axesValues = (
 113,
 550,
 750,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11433,6 +12758,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11454,8 +12787,8 @@ axesValues = (
 113,
 650,
 850,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11476,6 +12809,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11499,8 +12840,8 @@ axesValues = (
 113,
 750,
 900,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11521,6 +12862,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11542,8 +12891,8 @@ axesValues = (
 113,
 900,
 900,
-1200,
-1200
+742,
+678
 );
 customParameters = (
 {
@@ -11564,6 +12913,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 742;
+},
+{
+Axis = ssty2;
+Location = 678;
 }
 );
 }
@@ -11583,8 +12940,8 @@ axesValues = (
 95,
 360,
 560,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -11605,6 +12962,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -11624,8 +12989,8 @@ axesValues = (
 95,
 400,
 600,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -11646,6 +13011,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -11666,8 +13039,8 @@ axesValues = (
 95,
 475,
 675,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -11688,6 +13061,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -11709,8 +13090,8 @@ axesValues = (
 95,
 550,
 750,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -11731,6 +13112,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -11752,8 +13141,8 @@ axesValues = (
 95,
 650,
 850,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -11774,6 +13163,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -11797,8 +13194,8 @@ axesValues = (
 95,
 750,
 900,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -11819,6 +13216,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -11840,8 +13245,8 @@ axesValues = (
 95,
 900,
 900,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -11862,6 +13267,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -11881,8 +13294,8 @@ axesValues = (
 100,
 360,
 560,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -11903,6 +13316,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -11923,8 +13344,8 @@ axesValues = (
 100,
 400,
 600,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -11945,6 +13366,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -11968,8 +13397,8 @@ axesValues = (
 100,
 475,
 675,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -11990,6 +13419,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12014,8 +13451,8 @@ axesValues = (
 100,
 550,
 750,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -12036,6 +13473,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12060,8 +13505,8 @@ axesValues = (
 100,
 650,
 850,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -12082,6 +13527,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12108,8 +13561,8 @@ axesValues = (
 100,
 750,
 900,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -12130,6 +13583,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12154,8 +13615,8 @@ axesValues = (
 100,
 900,
 900,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -12176,6 +13637,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12196,8 +13665,8 @@ axesValues = (
 113,
 360,
 560,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -12218,6 +13687,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12237,8 +13714,8 @@ axesValues = (
 113,
 400,
 600,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -12259,6 +13736,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12279,8 +13764,8 @@ axesValues = (
 113,
 475,
 675,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -12301,6 +13786,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12322,8 +13815,8 @@ axesValues = (
 113,
 550,
 750,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -12344,6 +13837,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12365,8 +13866,8 @@ axesValues = (
 113,
 650,
 850,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -12387,6 +13888,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12410,8 +13919,8 @@ axesValues = (
 113,
 750,
 900,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -12432,6 +13941,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12453,8 +13970,8 @@ axesValues = (
 113,
 900,
 900,
-1200,
-1200
+785,
+716
 );
 customParameters = (
 {
@@ -12475,6 +13992,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 785;
+},
+{
+Axis = ssty2;
+Location = 716;
 }
 );
 }
@@ -12494,8 +14019,8 @@ axesValues = (
 95,
 360,
 560,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12516,6 +14041,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -12535,8 +14068,8 @@ axesValues = (
 95,
 400,
 600,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12557,6 +14090,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -12577,8 +14118,8 @@ axesValues = (
 95,
 475,
 675,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12599,6 +14140,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -12620,8 +14169,8 @@ axesValues = (
 95,
 550,
 750,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12642,6 +14191,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -12663,8 +14220,8 @@ axesValues = (
 95,
 650,
 850,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12685,6 +14242,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -12708,8 +14273,8 @@ axesValues = (
 95,
 750,
 900,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12730,6 +14295,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -12751,8 +14324,8 @@ axesValues = (
 95,
 900,
 900,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12773,6 +14346,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -12792,8 +14373,8 @@ axesValues = (
 100,
 360,
 560,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12814,6 +14395,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -12834,8 +14423,8 @@ axesValues = (
 100,
 400,
 600,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12856,6 +14445,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -12879,8 +14476,8 @@ axesValues = (
 100,
 475,
 675,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12901,6 +14498,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -12925,8 +14530,8 @@ axesValues = (
 100,
 550,
 750,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12947,6 +14552,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -12971,8 +14584,8 @@ axesValues = (
 100,
 650,
 850,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -12993,6 +14606,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -13019,8 +14640,8 @@ axesValues = (
 100,
 750,
 900,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -13041,6 +14662,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -13065,8 +14694,8 @@ axesValues = (
 100,
 900,
 900,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -13087,6 +14716,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -13107,8 +14744,8 @@ axesValues = (
 113,
 360,
 560,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -13129,6 +14766,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -13148,8 +14793,8 @@ axesValues = (
 113,
 400,
 600,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -13170,6 +14815,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -13190,8 +14843,8 @@ axesValues = (
 113,
 475,
 675,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -13212,6 +14865,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -13233,8 +14894,8 @@ axesValues = (
 113,
 550,
 750,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -13255,6 +14916,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -13276,8 +14945,8 @@ axesValues = (
 113,
 650,
 850,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -13298,6 +14967,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -13321,8 +14998,8 @@ axesValues = (
 113,
 750,
 900,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -13343,6 +15020,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -13364,8 +15049,8 @@ axesValues = (
 113,
 900,
 900,
-1200,
-1200
+946,
+912
 );
 customParameters = (
 {
@@ -13386,6 +15071,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 946;
+},
+{
+Axis = ssty2;
+Location = 912;
 }
 );
 }
@@ -13405,8 +15098,8 @@ axesValues = (
 95,
 360,
 560,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13427,6 +15120,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13446,8 +15147,8 @@ axesValues = (
 95,
 400,
 600,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13468,6 +15169,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13488,8 +15197,8 @@ axesValues = (
 95,
 475,
 675,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13510,6 +15219,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13531,8 +15248,8 @@ axesValues = (
 95,
 550,
 750,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13553,6 +15270,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13574,8 +15299,8 @@ axesValues = (
 95,
 650,
 850,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13596,6 +15321,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13619,8 +15352,8 @@ axesValues = (
 95,
 750,
 900,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13641,6 +15374,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13662,8 +15403,8 @@ axesValues = (
 95,
 900,
 900,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13684,6 +15425,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13703,8 +15452,8 @@ axesValues = (
 100,
 360,
 560,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13725,6 +15474,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13745,8 +15502,8 @@ axesValues = (
 100,
 400,
 600,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13767,6 +15524,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13790,8 +15555,8 @@ axesValues = (
 100,
 475,
 675,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13812,6 +15577,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13836,8 +15609,8 @@ axesValues = (
 100,
 550,
 750,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13858,6 +15631,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13882,8 +15663,8 @@ axesValues = (
 100,
 650,
 850,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13904,6 +15685,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13930,8 +15719,8 @@ axesValues = (
 100,
 750,
 900,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13952,6 +15741,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -13976,8 +15773,8 @@ axesValues = (
 100,
 900,
 900,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -13998,6 +15795,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -14018,8 +15823,8 @@ axesValues = (
 113,
 360,
 560,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -14040,6 +15845,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -14059,8 +15872,8 @@ axesValues = (
 113,
 400,
 600,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -14081,6 +15894,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -14101,8 +15922,8 @@ axesValues = (
 113,
 475,
 675,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -14123,6 +15944,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -14144,8 +15973,8 @@ axesValues = (
 113,
 550,
 750,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -14166,6 +15995,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -14187,8 +16024,8 @@ axesValues = (
 113,
 650,
 850,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -14209,6 +16046,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -14232,8 +16077,8 @@ axesValues = (
 113,
 750,
 900,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -14254,6 +16099,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -14275,8 +16128,8 @@ axesValues = (
 113,
 900,
 900,
-1200,
-1200
+988,
+946
 );
 customParameters = (
 {
@@ -14297,6 +16150,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 988;
+},
+{
+Axis = ssty2;
+Location = 946;
 }
 );
 }
@@ -14316,8 +16177,8 @@ axesValues = (
 95,
 360,
 560,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14338,6 +16199,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14356,8 +16225,8 @@ axesValues = (
 95,
 400,
 600,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14378,6 +16247,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14396,8 +16273,8 @@ axesValues = (
 95,
 475,
 675,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14418,6 +16295,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14437,8 +16322,8 @@ axesValues = (
 95,
 550,
 750,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14459,6 +16344,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14478,8 +16371,8 @@ axesValues = (
 95,
 650,
 850,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14500,6 +16393,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14521,8 +16422,8 @@ axesValues = (
 95,
 750,
 900,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14543,6 +16444,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14562,8 +16471,8 @@ axesValues = (
 95,
 900,
 900,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14584,6 +16493,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14602,8 +16519,8 @@ axesValues = (
 100,
 360,
 560,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14624,6 +16541,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14642,8 +16567,8 @@ axesValues = (
 100,
 400,
 600,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14664,6 +16589,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14683,8 +16616,8 @@ axesValues = (
 100,
 475,
 675,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14705,6 +16638,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14725,8 +16666,8 @@ axesValues = (
 100,
 550,
 750,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14747,6 +16688,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14767,8 +16716,8 @@ axesValues = (
 100,
 650,
 850,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14789,6 +16738,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14811,8 +16768,8 @@ axesValues = (
 100,
 750,
 900,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14833,6 +16790,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14853,8 +16818,8 @@ axesValues = (
 100,
 900,
 900,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14875,6 +16840,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14893,8 +16866,8 @@ axesValues = (
 113,
 360,
 560,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14915,6 +16888,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 560;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14933,8 +16914,8 @@ axesValues = (
 113,
 400,
 600,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14955,6 +16936,14 @@ Location = 400;
 {
 Axis = "Math Weight";
 Location = 600;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -14973,8 +16962,8 @@ axesValues = (
 113,
 475,
 675,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -14995,6 +16984,14 @@ Location = 500;
 {
 Axis = "Math Weight";
 Location = 675;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -15014,8 +17011,8 @@ axesValues = (
 113,
 550,
 750,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -15036,6 +17033,14 @@ Location = 600;
 {
 Axis = "Math Weight";
 Location = 750;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -15055,8 +17060,8 @@ axesValues = (
 113,
 650,
 850,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -15077,6 +17082,14 @@ Location = 700;
 {
 Axis = "Math Weight";
 Location = 850;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -15098,8 +17111,8 @@ axesValues = (
 113,
 750,
 900,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -15120,6 +17133,14 @@ Location = 800;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
@@ -15139,8 +17160,8 @@ axesValues = (
 113,
 900,
 900,
-1200,
-1200
+1161,
+1122
 );
 customParameters = (
 {
@@ -15161,6 +17182,14 @@ Location = 900;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 1161;
+},
+{
+Axis = ssty2;
+Location = 1122;
 }
 );
 }
