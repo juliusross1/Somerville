@@ -99,6 +99,21 @@ KernOnSpecialSpacing = {
 L = parenthesis;
 R = parenthesis;
 };
+com.nagwa.MATHPlugin.variants = {
+vVariants = (
+bracketright,
+bracketright.s01,
+bracketright.s02,
+bracketright.s03,
+bracketright.s04,
+bracketright.s05,
+bracketright.s06,
+bracketright.s07,
+bracketright.s08,
+bracketright.s09,
+bracketright.s10
+);
+};
 com.opentypemathtools.smartComponentVariants = {
 N = 10;
 axis = height;

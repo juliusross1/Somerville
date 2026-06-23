@@ -212,6 +212,22 @@ These can be taken in pretty much any order
 - ideally my script sets the smart component layers as well
 - ideally my script will adjust the math variants as well
 
+a. Make sure all the brackets are exactly the same height (brace, bracket, bar, parenthesis ...)
+
+a1. Make a smart component from the left bracket
+
+b. Use the create high layers script
+
+c. Adjust the high layers all by exactly the same amount. Also adjust the high layers on the other fences, also by exactly the same amount
+
+d. (Optional): Add metrics
+
+e. Use script to create the variants
+
+f. adjust the right ones to use the smart component and repeat step e for the right.
+
+Note: the script record the step and n for each glyph, but ideally you want to use these same values for all of the braces for pairing reasons.
+
 **Integrals**
 
 **Large Operators**
