@@ -13,6 +13,9 @@ import uuid
 from GlyphsApp import GSLayer
 
 
+DESIGNSPACE_AXIS_ROTATION_VERSION = "2026-06-22 16:12 CDT temp-composite-brace-source"
+
+
 def print_warning(message):
     print("🔴 WARNING: %s" % message)
 
@@ -156,13 +159,85 @@ def coordinates_match(font, first_coordinates, second_coordinates):
     return True
 
 
-def attribute_value(layer, key):
-    attributes = getattr(layer, "attributes", None)
-    if not attributes:
+def coordinate_axis_value(font, coordinates, axis_id_value, axis_index_value):
+    if coordinates is None:
         return None
 
+    if hasattr(coordinates, "keys"):
+        try:
+            return float(coordinates[str(axis_id_value)])
+        except Exception:
+            return None
+
+    values = coordinate_values(font, coordinates)
+    if values is None:
+        return None
     try:
-        return attributes[key]
+        return float(values[axis_index_value])
+    except Exception:
+        return None
+
+
+def layer_name(layer):
+    value = getattr(layer, "name", "")
+    if callable(value):
+        try:
+            value = value()
+        except Exception:
+            value = ""
+    return str(value or "")
+
+
+def layer_id(layer):
+    value = getattr(layer, "layerId", None)
+    if callable(value):
+        try:
+            value = value()
+        except Exception:
+            value = None
+    if value is None:
+        return None
+    return str(value)
+
+
+def is_master_layer(layer):
+    value = getattr(layer, "isMasterLayer", False)
+    if callable(value):
+        try:
+            value = value()
+        except Exception:
+            value = False
+    return bool(value)
+
+
+def glyph_has_layer_id(glyph, target_layer_id):
+    if target_layer_id is None:
+        return False
+    for layer in glyph.layers:
+        if layer_id(layer) == target_layer_id:
+            return True
+    return False
+
+
+def attribute_value(layer, key):
+    attributes = getattr(layer, "attributes", None)
+    if attributes:
+        try:
+            return attributes[key]
+        except Exception:
+            pass
+
+    for method_name in ("attributeForKey_", "valueForKey_"):
+        method = getattr(layer, method_name, None)
+        if method is None:
+            continue
+        try:
+            return method(key)
+        except Exception:
+            pass
+
+    try:
+        return layer.attributes[key]
     except Exception:
         return None
 
@@ -171,7 +246,7 @@ def copied_attribute_value(value):
     if value is None:
         return None
     if isinstance(value, (list, tuple)):
-        return [copied_axis_rule(item) if hasattr(item, "keys") else item for item in value]
+        return [copied_attribute_value(item) if hasattr(item, "keys") else item for item in value]
     try:
         return value.copy()
     except Exception:
@@ -507,25 +582,6 @@ def alternate_rules_name(master, axis_rules, font):
     return "%s [%s]" % (master.name, ", ".join(parts))
 
 
-def matching_special_layer(font, glyph, associated_master_id, coordinates=None, axis_rules=None, name=None, has_coordinates=None):
-    for layer in glyph.layers:
-        if layer.isMasterLayer:
-            continue
-        if associated_master_id is not None and getattr(layer, "associatedMasterId", None) != associated_master_id:
-            continue
-        if has_coordinates is not None and has_coordinates_attribute(layer) != has_coordinates:
-            continue
-        if name is not None and layer.name != name:
-            continue
-        if coordinates is not None and not coordinates_match(font, layer_coordinates(font, layer), coordinates):
-            continue
-        if axis_rules is not None and not axis_rules_match(attribute_value(layer, "axisRules"), axis_rules):
-            continue
-        if name is not None or coordinates is not None or axis_rules is not None:
-            return layer
-    return None
-
-
 def special_layer_shell(layer_id, name, coordinates, axis_rules, associated_master_id, width):
     layer = GSLayer()
     layer.layerId = layer_id
@@ -543,59 +599,70 @@ def layer_index(glyph, layer):
     return list(glyph.layers).index(layer)
 
 
-def replace_layer_contents(target_layer, coordinates, axis_rules, associated_master_id, width):
-    refreshed_layer = special_layer_shell(
-        target_layer.layerId,
-        target_layer.name,
-        coordinates,
-        axis_rules,
-        associated_master_id,
-        width,
-    )
-    glyph = target_layer.parent
-    index = layer_index(glyph, target_layer)
-    del glyph.layers[index]
-    glyph.layers.insert(index, refreshed_layer)
-    if axis_rules is not None:
-        set_layer_axis_rules(refreshed_layer, axis_rules)
-    return refreshed_layer
-
-
 def remove_layer(glyph, layer):
+    target_layer_id = layer_id(layer)
+
+    for method_name in ("remove_", "removeObject_", "removeObject", "removeLayer_"):
+        method = getattr(glyph.layers, method_name, None)
+        if method is None:
+            continue
+        try:
+            method(layer)
+            if not glyph_has_layer_id(glyph, target_layer_id):
+                return True
+        except Exception:
+            pass
+
+    if target_layer_id is not None:
+        try:
+            del glyph.layers[target_layer_id]
+            if not glyph_has_layer_id(glyph, target_layer_id):
+                return True
+        except Exception:
+            pass
+
+        method = getattr(glyph.layers, "removeObjectForKey_", None)
+        if method is not None:
+            try:
+                method(target_layer_id)
+                if not glyph_has_layer_id(glyph, target_layer_id):
+                    return True
+            except Exception:
+                pass
+
     try:
         index = layer_index(glyph, layer)
     except Exception:
-        return False
-    try:
-        del glyph.layers[index]
-        return True
-    except Exception:
-        return False
+        index = None
+
+    if index is not None:
+        try:
+            del glyph.layers[index]
+            if not glyph_has_layer_id(glyph, target_layer_id):
+                return True
+        except Exception:
+            pass
+
+    for index, existing_layer in reversed(list(enumerate(glyph.layers))):
+        if layer_id(existing_layer) != target_layer_id:
+            continue
+        try:
+            del glyph.layers[index]
+            if not glyph_has_layer_id(glyph, target_layer_id):
+                return True
+        except Exception:
+            pass
+
+    return not glyph_has_layer_id(glyph, target_layer_id)
 
 
-def remove_stale_special_layers(font, glyph, keep_layer, stale_axis_rules, name, associated_master_id, coordinates, has_coordinates):
-    if stale_axis_rules is None:
-        return 0
-
+def delete_non_master_layers(glyph):
     removed = 0
     for layer in list(glyph.layers):
-        if keep_layer is not None and layer is keep_layer:
-            continue
         if layer.isMasterLayer:
-            continue
-        if associated_master_id is not None and getattr(layer, "associatedMasterId", None) != associated_master_id:
-            continue
-        if name is not None and layer.name != name:
-            continue
-        if has_coordinates is not None and has_coordinates_attribute(layer) != has_coordinates:
-            continue
-        if coordinates is not None and not coordinates_match(font, layer_coordinates(font, layer), coordinates):
-            continue
-        if not axis_rules_match(attribute_value(layer, "axisRules"), stale_axis_rules):
             continue
         if remove_layer(glyph, layer):
             removed += 1
-
     return removed
 
 
@@ -626,17 +693,31 @@ def create_special_layer_after(glyph, previous_layer, name, associated_master_id
     return new_layer
 
 
+def create_rotated_coordinate_layer_after(glyph, previous_layer, name, associated_master_id, coordinates, axis_rules, width):
+    new_layer = special_layer_shell(
+        str(uuid.uuid4()).upper(),
+        name,
+        coordinates,
+        axis_rules,
+        associated_master_id,
+        width,
+    )
+    glyph.layers.insert(layer_index(glyph, previous_layer) + 1, new_layer)
+    return new_layer
+
+
 def has_coordinates_attribute(layer):
     return attribute_value(layer, "coordinates") is not None
 
 
-def source_glyph_has_special_layers(source_glyph):
+def source_coordinate_layers(source_glyph):
+    layers = []
     for layer in source_glyph.layers:
         if layer.isMasterLayer:
             continue
         if has_coordinates_attribute(layer):
-            return True
-    return False
+            layers.append(layer)
+    return layers
 
 
 def source_alternate_layers(source_glyph):
@@ -739,6 +820,204 @@ def count_components(layer):
         return 0
 
 
+def component_name_from_object(component):
+    for attribute_name in ("componentName", "name"):
+        value = getattr(component, attribute_name, None)
+        if value:
+            return str(value)
+    return None
+
+
+def is_brace_layer(layer):
+    method = getattr(layer, "isBraceLayer", None)
+    if method is not None:
+        try:
+            return bool(method())
+        except Exception:
+            pass
+    return bool(getattr(layer, "isSpecialLayer", False) and "{" in layer_name(layer) and "}" in layer_name(layer))
+
+
+def is_bracket_layer(layer):
+    method = getattr(layer, "isBracketLayer", None)
+    if method is not None:
+        try:
+            return bool(method())
+        except Exception:
+            pass
+    return bool(getattr(layer, "isSpecialLayer", False) and "[" in layer_name(layer) and "]" in layer_name(layer))
+
+
+def layer_has_same_name_and_master(glyph, source_layer):
+    source_name = layer_name(source_layer)
+    source_master_id = getattr(source_layer, "associatedMasterId", None)
+    for layer in glyph.layers:
+        if layer_name(layer) != source_name:
+            continue
+        if getattr(layer, "associatedMasterId", None) == source_master_id:
+            return True
+    return False
+
+
+def set_associated_master_id(layer, associated_master_id):
+    method = getattr(layer, "setAssociatedMasterId_", None)
+    if method is not None:
+        try:
+            method(associated_master_id)
+            return
+        except Exception:
+            pass
+    try:
+        layer.associatedMasterId = associated_master_id
+    except Exception:
+        pass
+
+
+def copy_layer_attributes(source_layer, target_layer):
+    attributes = getattr(source_layer, "attributes", None)
+    if not attributes:
+        return
+
+    try:
+        keys = list(attributes.keys())
+    except Exception:
+        keys = []
+
+    for key in keys:
+        try:
+            set_layer_attribute(target_layer, key, attributes[key])
+        except Exception:
+            pass
+
+
+def call_layer_method(layer, method_name):
+    method = getattr(layer, method_name, None)
+    if method is None:
+        return False
+    try:
+        method()
+        return True
+    except Exception:
+        return False
+
+
+def sync_component_alignment_from_master(master_layer, special_layer):
+    try:
+        master_components = list(master_layer.components)
+        special_components = list(special_layer.components)
+    except Exception:
+        return
+
+    for index, master_component in enumerate(master_components):
+        try:
+            special_component = special_components[index]
+        except Exception:
+            continue
+
+        alignment = getattr(master_component, "alignment", None)
+        method = getattr(special_component, "setAlignment_", None)
+        if method is not None and alignment is not None:
+            try:
+                method(alignment)
+            except Exception:
+                pass
+
+        method = getattr(special_component, "setIsAligned_", None)
+        is_aligned = getattr(master_component, "isAligned", None)
+        if method is not None and is_aligned is not None:
+            try:
+                method(is_aligned() if callable(is_aligned) else is_aligned)
+            except Exception:
+                pass
+
+
+def add_component_special_layer_to_composite(font, composite_glyph, master_layer, component_special_layer):
+    if layer_has_same_name_and_master(composite_glyph, component_special_layer):
+        return None
+
+    new_layer = GSLayer()
+    new_layer.name = layer_name(component_special_layer)
+    set_associated_master_id(new_layer, getattr(component_special_layer, "associatedMasterId", None))
+    new_layer.width = component_special_layer.width
+    copy_layer_attributes(component_special_layer, new_layer)
+
+    composite_glyph.layers.append(new_layer)
+    call_layer_method(new_layer, "reinterpolate")
+    call_layer_method(new_layer, "reinterpolateMetrics")
+    call_layer_method(new_layer, "syncMetrics")
+    sync_component_alignment_from_master(master_layer, new_layer)
+    return new_layer
+
+
+def add_component_special_layers_to_composite_source(font, composite_glyph):
+    added = 0
+    added_names = []
+    master_layers = [layer for layer in composite_glyph.layers if is_master_layer(layer)]
+
+    for master_layer in master_layers:
+        try:
+            components = list(master_layer.components)
+        except Exception:
+            components = []
+        if not components:
+            continue
+
+        for component in components:
+            component_name = component_name_from_object(component)
+            if component_name is None:
+                continue
+            try:
+                component_glyph = font.glyphs[component_name]
+            except Exception:
+                component_glyph = None
+            if component_glyph is None:
+                continue
+
+            method = getattr(component_glyph, "isSmartGlyph", None)
+            try:
+                if method is not None and method():
+                    continue
+            except Exception:
+                pass
+
+            for component_layer in component_glyph.layers:
+                if not (is_brace_layer(component_layer) or is_bracket_layer(component_layer)):
+                    continue
+                new_layer = add_component_special_layer_to_composite(
+                    font,
+                    composite_glyph,
+                    master_layer,
+                    component_layer,
+                )
+                if new_layer is None:
+                    continue
+                added += 1
+                added_names.append(layer_name(new_layer) or layer_id(new_layer))
+
+    return added, added_names
+
+
+def prepared_composite_source_glyph(font, source_glyph):
+    glyph_copy = source_glyph.copy()
+    glyph_copy.name = "__tmp_composite_source_%s_%s" % (source_glyph.name, str(uuid.uuid4()).replace("-", ""))
+    try:
+        glyph_copy.export = False
+    except Exception:
+        pass
+
+    font.glyphs.append(glyph_copy)
+    added, added_names = add_component_special_layers_to_composite_source(font, glyph_copy)
+    if added:
+        print("%s: prepared temporary composite source with %i component brace/bracket layer(s): %s" % (
+            source_glyph.name,
+            added,
+            ", ".join(added_names),
+        ))
+    else:
+        print("%s: temporary composite source needed no component brace/bracket layers" % source_glyph.name)
+    return glyph_copy, added
+
+
 def remove_temp_glyph(font, glyph):
     try:
         font.glyphs.remove(glyph)
@@ -753,6 +1032,11 @@ def remove_temp_glyph(font, glyph):
 
 
 def source_layer_copy_in_temp_glyph(font, source_glyph, source_layer):
+    try:
+        source_layer_index = layer_index(source_glyph, source_layer)
+    except Exception:
+        source_layer_index = None
+
     glyph_copy = source_glyph.copy()
     glyph_copy.name = "__tmp_decompose_%s_%s" % (source_glyph.name, str(uuid.uuid4()).replace("-", ""))
     try:
@@ -761,6 +1045,13 @@ def source_layer_copy_in_temp_glyph(font, source_glyph, source_layer):
         pass
 
     font.glyphs.append(glyph_copy)
+
+    if source_layer_index is not None:
+        try:
+            return glyph_copy, list(glyph_copy.layers)[source_layer_index]
+        except Exception:
+            pass
+
     for layer in glyph_copy.layers:
         if layer.layerId == source_layer.layerId:
             return glyph_copy, layer
@@ -870,12 +1161,7 @@ def source_layer_for_target_layer(
     source_low_value,
     source_high_value,
     intermediate_coordinates_by_layer_id,
-    source_layers_by_target_layer_id,
 ):
-    mapped_source_layer = source_layers_by_target_layer_id.get(target_layer.layerId)
-    if mapped_source_layer is not None:
-        return mapped_source_layer, None
-
     coordinates = intermediate_coordinates_by_layer_id.get(target_layer.layerId)
     if coordinates is None:
         coordinates = coordinates_for_layer(font, target_layer)
@@ -897,9 +1183,8 @@ def source_layer_for_target_layer(
         return None, source_axis_value
 
     if axis_rules is not None:
-        source_layer = source_alternate_layer_for_rules(source_glyph, source_master.id, axis_rules)
-    else:
-        source_layer = source_glyph.layers[source_master.id]
+        return None, source_axis_value
+    source_layer = source_glyph.layers[source_master.id]
     return source_layer, source_axis_value
 
 
@@ -913,12 +1198,14 @@ def copy_source_layers_into_target(
     source_low_value,
     source_high_value,
     intermediate_coordinates_by_layer_id,
-    source_layers_by_target_layer_id,
 ):
     copied = 0
     skipped = 0
 
     for layer in glyph.layers:
+        if attribute_value(layer, "axisRules") is not None:
+            continue
+
         source_layer, source_axis_value = source_layer_for_target_layer(
             font,
             source_glyph,
@@ -928,7 +1215,6 @@ def copy_source_layers_into_target(
             source_low_value,
             source_high_value,
             intermediate_coordinates_by_layer_id,
-            source_layers_by_target_layer_id,
         )
         if source_layer is None:
             skipped += 1
@@ -946,13 +1232,14 @@ def copy_source_layers_into_target(
             layer,
         )
         copied += 1
-        print("%s: copied fully decomposed %s from %s (%i shapes, %i anchors, %i stems, width %s; remaining components %i, helpers %i)" % (
+        print("%s: copied fully decomposed %s from %s (%i shapes, %i anchors, %i stems, source width %s, target width %s; remaining components %i, helpers %i)" % (
             layer.name or layer.layerId,
             source_glyph.name,
             source_layer.name or source_layer.layerId,
             shape_count,
             anchor_count,
             stem_count,
+            source_layer.width,
             layer.width,
             remaining_components,
             remaining_helpers,
@@ -961,7 +1248,131 @@ def copy_source_layers_into_target(
     return copied, skipped
 
 
-def rotate_glyph_designspace(
+def rotated_coordinate_layer_name(master, source_layer, target_axis_tag, target_axis_value, axis_rules, font):
+    if axis_rules is not None:
+        return "%s %s %s" % (
+            alternate_rules_name(master, axis_rules, font),
+            target_axis_tag,
+            target_axis_value,
+        )
+    if source_layer.name:
+        return "%s %s %s" % (master.name, target_axis_tag, target_axis_value)
+    return intermediate_layer_name(master, target_axis_tag, target_axis_value)
+
+
+def create_rotated_source_coordinate_layers(
+    font,
+    source_glyph,
+    destination_glyph,
+    source_axis_tag,
+    target_axis_tag,
+    source_axis_id,
+    target_axis_id,
+    source_axis_index,
+    target_axis_index,
+    fixed_target_axis_value,
+):
+    created = 0
+    skipped = 0
+
+    for source_layer in source_coordinate_layers(source_glyph):
+        source_coordinates = coordinates_for_layer(font, source_layer)
+        if source_coordinates is None:
+            skipped += 1
+            print_warning("%s: skipped source coordinate layer %s, could not read coordinates" % (
+                destination_glyph.name,
+                source_layer.name or source_layer.layerId,
+            ))
+            continue
+
+        target_axis_value = float(fixed_target_axis_value)
+
+        source_axis_rules = attribute_value(source_layer, "axisRules")
+        target_axis_rules = None
+        remapped_source_rule = False
+        if source_axis_rules is not None:
+            target_axis_rules, remapped_source_rule = remap_axis_rules_native(
+                source_axis_rules,
+                source_axis_index,
+                target_axis_index,
+                source_axis_id,
+                target_axis_id,
+            )
+
+        matched_master_count = 0
+        for master in font.masters:
+            master_coordinates_for_match = master_coordinates(font, master)
+            if master_coordinates_for_match is None:
+                continue
+            if not coordinates_match_except_axes(
+                font,
+                master_coordinates_for_match,
+                source_coordinates,
+                [source_axis_id, target_axis_id],
+            ):
+                continue
+
+            matched_master_count += 1
+            destination_coordinates = dict(master_coordinates_for_match)
+            destination_coordinates[str(target_axis_id)] = target_axis_value
+            layer_name = rotated_coordinate_layer_name(
+                master,
+                source_layer,
+                target_axis_tag,
+                target_axis_value,
+                target_axis_rules,
+                font,
+            )
+
+            previous_layer = destination_glyph.layers[master.id]
+            if previous_layer is None:
+                skipped += 1
+                print_warning("%s: skipped rotated source coordinate for %s, no destination master layer" % (
+                    destination_glyph.name,
+                    master.name,
+                ))
+                continue
+            destination_layer = create_rotated_coordinate_layer_after(
+                destination_glyph,
+                previous_layer,
+                layer_name,
+                master.id,
+                destination_coordinates,
+                target_axis_rules,
+                source_layer.width,
+            )
+            created += 1
+
+            destination_layer.name = layer_name
+            if remapped_source_rule:
+                force_layer_rules_to_target_axis(
+                    destination_layer,
+                    source_axis_index,
+                    target_axis_index,
+                    source_axis_id,
+                    target_axis_id,
+                )
+                destination_layer.name = layer_name
+            if target_axis_rules is not None:
+                copy_decomposed_layer_contents(font, source_glyph, source_layer, destination_layer)
+            print("%s: created rotated coordinate layer %s from source %s at %s" % (
+                master.name,
+                layer_name,
+                source_layer.name or source_layer.layerId,
+                destination_coordinates,
+            ))
+
+        if matched_master_count == 0:
+            skipped += 1
+            print_warning("%s: skipped source coordinate layer %s, no matching destination master location" % (
+                destination_glyph.name,
+                source_layer.name or source_layer.layerId,
+            ))
+
+    return created, 0, skipped
+
+
+def rotate_glyph_designspace_from_source(
     font,
     source_glyph,
     destination_glyph,
@@ -983,6 +1394,7 @@ def rotate_glyph_designspace(
 
     source_axis_index = axis_index(font, source_axis_tag)
     target_axis_index = axis_index(font, target_axis_tag)
+    non_master_layers_removed = delete_non_master_layers(destination_glyph)
     created = 0
     refreshed = 0
     alternates_created = 0
@@ -991,18 +1403,14 @@ def rotate_glyph_designspace(
     layers_copied = 0
     copy_layers_skipped = 0
     intermediate_coordinates_by_layer_id = {}
-    source_layers_by_target_layer_id = {}
 
     print("")
     print("[%s]" % destination_glyph.name)
-
-    if source_glyph_has_special_layers(source_glyph):
-        copy_layers_skipped += len(destination_glyph.layers)
-        print_warning("%s: skipped because source glyph %s has coordinate/intermediate layers" % (
+    if non_master_layers_removed:
+        print("%s: deleted %i non-master layer(s) before rebuilding" % (
             destination_glyph.name,
-            source_glyph.name,
+            non_master_layers_removed,
         ))
-        return process_stats(copy_layers_skipped=copy_layers_skipped)
 
     for master in font.masters:
         master_layer = destination_glyph.layers[master.id]
@@ -1018,32 +1426,37 @@ def rotate_glyph_designspace(
             continue
         coordinates[str(target_axis_id)] = float(target_axis_value)
 
-        layer_name = intermediate_layer_name(master, target_axis_tag, target_axis_value)
-        existing_layer = matching_special_layer(font, destination_glyph, master.id, coordinates, None, name=layer_name, has_coordinates=True)
-        if existing_layer is None:
-            layer = create_intermediate_layer(
-                destination_glyph,
-                master_layer,
-                master,
-                coordinates,
-                master_layer.width,
-                target_axis_tag,
-                target_axis_value,
-            )
-            intermediate_coordinates_by_layer_id[layer.layerId] = dict(coordinates)
-            created += 1
-            print("%s: created intermediate layer at %s" % (
-                master.name,
-                coordinates,
-            ))
-        else:
-            layer = replace_layer_contents(existing_layer, coordinates, None, master.id, master_layer.width)
-            intermediate_coordinates_by_layer_id[layer.layerId] = dict(coordinates)
-            refreshed += 1
-            print("%s: refreshed intermediate layer at %s" % (
-                master.name,
-                coordinates,
-            ))
+        layer = create_intermediate_layer(
+            destination_glyph,
+            master_layer,
+            master,
+            coordinates,
+            master_layer.width,
+            target_axis_tag,
+            target_axis_value,
+        )
+        intermediate_coordinates_by_layer_id[layer.layerId] = dict(coordinates)
+        created += 1
+        print("%s: created intermediate layer at %s" % (
+            master.name,
+            coordinates,
+        ))
+
+    coord_created, coord_refreshed, coord_skipped = create_rotated_source_coordinate_layers(
+        font,
+        source_glyph,
+        destination_glyph,
+        source_axis_tag,
+        target_axis_tag,
+        source_axis_id,
+        target_axis_id,
+        source_axis_index,
+        target_axis_index,
+        target_axis_value,
+    )
+    created += coord_created
+    refreshed += coord_refreshed
+    skipped += coord_skipped
 
     for source_alternate_layer in source_alternate_layers(source_glyph):
         axis_rules = attribute_value(source_alternate_layer, "axisRules")
@@ -1106,58 +1519,23 @@ def rotate_glyph_designspace(
             continue
 
         alternate_name = alternate_rules_name(master, target_axis_rules, font)
-        if remapped_source_rule:
-            stale_removed = remove_stale_special_layers(
-                font,
-                destination_glyph,
-                None,
-                axis_rules,
-                None,
-                master.id,
-                None,
-                False,
-            )
-            if stale_removed:
-                print("%s: deleted %i old alternate layer(s) using %s rules before recreating with %s rules" % (
-                    master.name,
-                    stale_removed,
-                    source_axis_tag,
-                    target_axis_tag,
-                ))
-
-        existing_alternate = matching_special_layer(
-            font,
+        # The remapped rule layer still lives under the low/source master; only
+        # its companion coordinate layer at the target-axis value uses high.
+        alternate_source_layer = low_source_alternate
+        alternate_layer = create_special_layer_after(
             destination_glyph,
+            master_layer,
+            alternate_name,
             master.id,
             None,
             target_axis_rules,
-            name=alternate_name,
-            has_coordinates=False,
+            alternate_source_layer.width,
         )
-
-        alternate_source_layer = high_source_alternate if remapped_source_rule else low_source_alternate
-        if existing_alternate is None:
-            alternate_layer = create_special_layer_after(
-                destination_glyph,
-                master_layer,
-                alternate_name,
-                master.id,
-                None,
-                target_axis_rules,
-                alternate_source_layer.width,
-            )
-            alternates_created += 1
-            if remapped_source_rule:
-                print("%s: created alternate layer %s with %s rule remapped to %s" % (master.name, alternate_name, source_axis_tag, target_axis_tag))
-            else:
-                print("%s: created alternate layer %s" % (master.name, alternate_name))
+        alternates_created += 1
+        if remapped_source_rule:
+            print("%s: created alternate layer %s with %s rule remapped to %s" % (master.name, alternate_name, source_axis_tag, target_axis_tag))
         else:
-            alternate_layer = replace_layer_contents(existing_alternate, None, target_axis_rules, master.id, alternate_source_layer.width)
-            alternates_refreshed += 1
-            if remapped_source_rule:
-                print("%s: refreshed alternate layer %s with %s rule remapped to %s" % (master.name, alternate_name, source_axis_tag, target_axis_tag))
-            else:
-                print("%s: refreshed alternate layer %s" % (master.name, alternate_name))
+            print("%s: created alternate layer %s" % (master.name, alternate_name))
         if remapped_source_rule:
             force_layer_rules_to_target_axis(
                 alternate_layer,
@@ -1167,88 +1545,40 @@ def rotate_glyph_designspace(
                 target_axis_id,
             )
             alternate_layer.name = alternate_name
-        source_layers_by_target_layer_id[alternate_layer.layerId] = alternate_source_layer
+        copy_decomposed_layer_contents(font, source_glyph, alternate_source_layer, alternate_layer)
+        print("%s: copied alternate layer %s from %s" % (
+            master.name,
+            alternate_layer.name or alternate_layer.layerId,
+            alternate_source_layer.name or alternate_source_layer.layerId,
+        ))
 
         alternate_coordinates = dict(master_coords)
         alternate_coordinates[str(target_axis_id)] = float(target_axis_value)
         alternate_intermediate_name = "%s %s %s" % (alternate_name, target_axis_tag, target_axis_value)
-        if remapped_source_rule:
-            stale_removed = remove_stale_special_layers(
-                font,
-                destination_glyph,
-                None,
-                axis_rules,
-                None,
-                master.id,
-                alternate_coordinates,
-                True,
-            )
-            if stale_removed:
-                print("%s: deleted %i old alternate intermediate layer(s) using %s rules before recreating with %s rules" % (
-                    master.name,
-                    stale_removed,
-                    source_axis_tag,
-                    target_axis_tag,
-                ))
-
-        existing_alternate_intermediate = matching_special_layer(
-            font,
+        alternate_intermediate_layer = create_special_layer_after(
             destination_glyph,
+            alternate_layer,
+            alternate_intermediate_name,
             master.id,
             alternate_coordinates,
             target_axis_rules,
-            name=alternate_intermediate_name,
-            has_coordinates=True,
+            high_source_alternate.width,
         )
-
-        if existing_alternate_intermediate is None:
-            alternate_intermediate_layer = create_special_layer_after(
-                destination_glyph,
-                alternate_layer,
+        alternates_created += 1
+        if remapped_source_rule:
+            print("%s: created alternate intermediate layer %s with %s rule remapped to %s at %s" % (
+                master.name,
                 alternate_intermediate_name,
-                master.id,
+                source_axis_tag,
+                target_axis_tag,
                 alternate_coordinates,
-                target_axis_rules,
-                high_source_alternate.width,
-            )
-            alternates_created += 1
-            if remapped_source_rule:
-                print("%s: created alternate intermediate layer %s with %s rule remapped to %s at %s" % (
-                    master.name,
-                    alternate_intermediate_name,
-                    source_axis_tag,
-                    target_axis_tag,
-                    alternate_coordinates,
-                ))
-            else:
-                print("%s: created alternate intermediate layer %s at %s" % (
-                    master.name,
-                    alternate_intermediate_name,
-                    alternate_coordinates,
-                ))
+            ))
         else:
-            alternate_intermediate_layer = replace_layer_contents(
-                existing_alternate_intermediate,
+            print("%s: created alternate intermediate layer %s at %s" % (
+                master.name,
+                alternate_intermediate_name,
                 alternate_coordinates,
-                target_axis_rules,
-                master.id,
-                high_source_alternate.width,
-            )
-            alternates_refreshed += 1
-            if remapped_source_rule:
-                print("%s: refreshed alternate intermediate layer %s with %s rule remapped to %s at %s" % (
-                    master.name,
-                    alternate_intermediate_name,
-                    source_axis_tag,
-                    target_axis_tag,
-                    alternate_coordinates,
-                ))
-            else:
-                print("%s: refreshed alternate intermediate layer %s at %s" % (
-                    master.name,
-                    alternate_intermediate_name,
-                    alternate_coordinates,
-                ))
+            ))
         if remapped_source_rule:
             force_layer_rules_to_target_axis(
                 alternate_intermediate_layer,
@@ -1259,7 +1589,12 @@ def rotate_glyph_designspace(
             )
             alternate_intermediate_layer.name = alternate_intermediate_name
         intermediate_coordinates_by_layer_id[alternate_intermediate_layer.layerId] = dict(alternate_coordinates)
-        source_layers_by_target_layer_id[alternate_intermediate_layer.layerId] = high_source_alternate
+        copy_decomposed_layer_contents(font, source_glyph, high_source_alternate, alternate_intermediate_layer)
+        print("%s: copied alternate intermediate layer %s from %s" % (
+            master.name,
+            alternate_intermediate_layer.name or alternate_intermediate_layer.layerId,
+            high_source_alternate.name or high_source_alternate.layerId,
+        ))
 
     copied, copy_skipped = copy_source_layers_into_target(
         font,
@@ -1271,13 +1606,13 @@ def rotate_glyph_designspace(
         source_low_value,
         source_high_value,
         intermediate_coordinates_by_layer_id,
-        source_layers_by_target_layer_id,
     )
     layers_copied += copied
     copy_layers_skipped += copy_skipped
 
-    print("%s summary: created %i, refreshed %i, alternate created %i, alternate refreshed %i, skipped %i" % (
+    print("%s summary: deleted non-master %i, created %i, refreshed %i, alternate created %i, alternate refreshed %i, skipped %i" % (
         destination_glyph.name,
+        non_master_layers_removed,
         created,
         refreshed,
         alternates_created,
@@ -1293,8 +1628,37 @@ def rotate_glyph_designspace(
         copy_layers_skipped=copy_layers_skipped,
         alternates_created=alternates_created,
         alternates_refreshed=alternates_refreshed,
+        stale_layers_removed=non_master_layers_removed,
         modified=True,
     )
+
+
+def rotate_glyph_designspace(
+    font,
+    source_glyph,
+    destination_glyph,
+    source_axis_tag,
+    target_axis_tag,
+    source_low_value,
+    source_high_value,
+    target_axis_value,
+):
+    prepared_source_glyph = None
+    try:
+        prepared_source_glyph, _ = prepared_composite_source_glyph(font, source_glyph)
+        return rotate_glyph_designspace_from_source(
+            font,
+            prepared_source_glyph,
+            destination_glyph,
+            source_axis_tag,
+            target_axis_tag,
+            source_low_value,
+            source_high_value,
+            target_axis_value,
+        )
+    finally:
+        if prepared_source_glyph is not None:
+            remove_temp_glyph(font, prepared_source_glyph)
 
 
 def process_stats(
@@ -1305,6 +1669,7 @@ def process_stats(
     copy_layers_skipped=0,
     alternates_created=0,
     alternates_refreshed=0,
+    stale_layers_removed=0,
     modified=False,
 ):
     return {
@@ -1315,5 +1680,6 @@ def process_stats(
         "skipped": skipped,
         "layers_copied": layers_copied,
         "copy_layers_skipped": copy_layers_skipped,
+        "stale_layers_removed": stale_layers_removed,
         "modified": int(bool(modified)),
     }

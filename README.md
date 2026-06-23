@@ -107,20 +107,71 @@ Note: This script will create the math.ta anchors at cap-height (the y-position 
 You may still need to adjust some of these by hand.  Test document: blah.
 
 ** Step 12: Bold **
-Add an axis called "Math Weight" with code MGHT.    Here I found a glitch with corner components that had width/height intermediate layers that was avoided by setting the minimum MGHT axis value to be 0.  This was then fixed with the axis mapping so the external coordinates were the same as that of wght
+Add an axis called "Math Weight" with code MGHT.    Have the axis mapping be the same as that of the Weight axis.
 
 Add a virtual master for the Math Weight axis (so for Playfair this had position Weight = minimum (360); opsz = minimum (5); Width = minimum (94); Math Weight = maximum (540))
 
-Create your mathbold lettere as needed from the filter on the left.    Run the script Create or adjust math bold letters (you can apply this to just the selected bold-math glyphs or all the boldmath glyphs).  Now do the same for bolditalic-math glyphs.
+Create your mathbold letters as needed from the filter on the left.    Run the script Create or adjust math bold letters (you can apply this to just the selected bold-math glyphs or all the boldmath glyphs).  Now do the same for bolditalic-math glyphs.
 
 Consider using the check_math_bold_upright_completeness to see for any missing bold and bolditalics.  You may want to use this script again as you build more letters.
 
 Now adjust your instances to give them a suitable MGHT value.  For Playfair MGHT is set to min(WGHT + 200,900).   The script set_math_weight_on_static instances does this.
 
- Note that this means that if Weight is 900 then the boldmath is the same as the non-bold, and if Weight is close to 900 then there is little distinction.  There is no easy way around this.  One option is to not create instances at these higher weights.  Another is to add a small "underline" to all the bold-math characters at high weight (see next step for how to do that)
+The boldmath.html page will help you check if the bold has been created correctly.  The red and the black *should* be identical, but there appears to be some minor (hopefully unnoticable) differences.
 
-** Need testing files here **
+**need also a latex test here**
 
+*Step 12b Optional*
+ Note that the above setup means that if Weight is 900 then the boldmath is the same as the non-bold, and if Weight is close to 900 then there is little distinction.  There is no easy way around this.  
+ 
+ One option is to not create instances at these higher weights.  Another is to add a small "underline" to all the bold-math characters at high weight.  This is easily done by ensuring that all the bold and bolditalics have a bottom anchor and then pasting the below feature into say ss10 or similar (you might want this turned on automatically at higher weights, it is a judgement call).  Adjust the below to include other bold letters as needed.  Manually adjustment of the bottom anchor may be needed for some letters as appropriate.  I do not think this bottom anchor is used for anything else in mathematics.
+
+```
+ @LatinBoldMath = [
+    abold-math bbold-math cbold-math dbold-math
+    ebold-math fbold-math gbold-math hbold-math
+    ibold-math jbold-math kbold-math lbold-math
+    mbold-math nbold-math obold-math pbold-math
+    qbold-math rbold-math sbold-math tbold-math
+    ubold-math vbold-math wbold-math xbold-math
+    ybold-math zbold-math
+
+    Abold-math Bbold-math Cbold-math Dbold-math
+    Ebold-math Fbold-math Gbold-math Hbold-math
+    Ibold-math Jbold-math Kbold-math Lbold-math
+    Mbold-math Nbold-math Obold-math Pbold-math
+    Qbold-math Rbold-math Sbold-math Tbold-math
+    Ubold-math Vbold-math Wbold-math Xbold-math
+    Ybold-math Zbold-math
+];
+
+@LatinBoldItalicMath = [
+    abolditalic-math bbolditalic-math cbolditalic-math dbolditalic-math
+    ebolditalic-math fbolditalic-math gbolditalic-math hbolditalic-math
+    ibolditalic-math jbolditalic-math kbolditalic-math lbolditalic-math
+    mbolditalic-math nbolditalic-math obolditalic-math pbolditalic-math
+    qbolditalic-math rbolditalic-math sbolditalic-math tbolditalic-math
+    ubolditalic-math vbolditalic-math wbolditalic-math xbolditalic-math
+    ybolditalic-math zbolditalic-math
+
+    Abolditalic-math Bbolditalic-math Cbolditalic-math Dbolditalic-math
+    Ebolditalic-math Fbolditalic-math Gbolditalic-math Hbolditalic-math
+    Ibolditalic-math Jbolditalic-math Kbolditalic-math Lbolditalic-math
+    Mbolditalic-math Nbolditalic-math Obolditalic-math Pbolditalic-math
+    Qbolditalic-math Rbolditalic-math Sbolditalic-math Tbolditalic-math
+    Ubolditalic-math Vbolditalic-math Wbolditalic-math Xbolditalic-math
+    Ybolditalic-math Zbolditalic-math
+];
+
+@AllMathUnderlineTargets = [
+    @LatinBoldMath
+    @LatinBoldItalicMath
+];
+
+lookup AddMathUnderline {
+    sub @AllMathUnderlineTargets by @AllMathUnderlineTargets macronbelowcomb;
+} AddMathUnderline;
+'''
 
 ** Step 13: Optical Sizing **
 Playfair has an opz axes so optical sizing is easily done.  The script **blah** will populate any glyph that ends with .ssty.  

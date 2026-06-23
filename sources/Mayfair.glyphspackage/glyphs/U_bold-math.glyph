@@ -4,6 +4,14 @@ layers = (
 {
 anchors = (
 {
+name = "^entry";
+pos = (121,0);
+},
+{
+name = "^exit";
+pos = (121,0);
+},
+{
 name = bottom;
 pos = (365,0);
 },
@@ -116,6 +124,14 @@ width = 684;
 },
 {
 anchors = (
+{
+name = "^entry";
+pos = (150,0);
+},
+{
+name = "^exit";
+pos = (150,0);
+},
 {
 name = bottom;
 pos = (437,0);
@@ -230,6 +246,14 @@ width = 822;
 {
 anchors = (
 {
+name = "^entry";
+pos = (121,0);
+},
+{
+name = "^exit";
+pos = (121,0);
+},
+{
 name = bottom;
 pos = (365,0);
 },
@@ -342,6 +366,14 @@ width = 684;
 },
 {
 anchors = (
+{
+name = "^entry";
+pos = (150,0);
+},
+{
+name = "^exit";
+pos = (150,0);
+},
 {
 name = bottom;
 pos = (437,0);
@@ -456,6 +488,14 @@ width = 822;
 {
 anchors = (
 {
+name = "^entry";
+pos = (210,0);
+},
+{
+name = "^exit";
+pos = (210,0);
+},
+{
 name = bottom;
 pos = (456,0);
 },
@@ -568,6 +608,14 @@ width = 874;
 },
 {
 anchors = (
+{
+name = "^entry";
+pos = (256,0);
+},
+{
+name = "^exit";
+pos = (256,0);
+},
 {
 name = bottom;
 pos = (562,0);
@@ -682,6 +730,14 @@ width = 1099;
 {
 anchors = (
 {
+name = "^entry";
+pos = (210,0);
+},
+{
+name = "^exit";
+pos = (210,0);
+},
+{
 name = bottom;
 pos = (456,0);
 },
@@ -794,6 +850,14 @@ width = 874;
 },
 {
 anchors = (
+{
+name = "^entry";
+pos = (256,0);
+},
+{
+name = "^exit";
+pos = (256,0);
+},
 {
 name = bottom;
 pos = (562,0);
@@ -908,6 +972,14 @@ width = 1099;
 {
 anchors = (
 {
+name = "^entry";
+pos = (100,0);
+},
+{
+name = "^exit";
+pos = (100,0);
+},
+{
 name = bottom;
 pos = (384,0);
 },
@@ -949,7 +1021,7 @@ coordinates = (
 900
 );
 };
-layerId = "7A1DA95B-C892-4BA9-8B45-6F02FA61A215";
+layerId = "AE818AEE-99F1-430D-BAC8-3B265AE50698";
 name = "Needlepoint SemiCondensed Upright MGHT 900";
 shapes = (
 {
@@ -1031,6 +1103,14 @@ width = 699;
 {
 anchors = (
 {
+name = "^entry";
+pos = (130,0);
+},
+{
+name = "^exit";
+pos = (130,0);
+},
+{
 name = bottom;
 pos = (466,0);
 },
@@ -1072,7 +1152,7 @@ coordinates = (
 900
 );
 };
-layerId = "377C992B-DA76-4E91-B679-5BFF6405E31C";
+layerId = "F16B4543-D738-43C0-B162-C612FFF3B5DA";
 name = "Needlepoint SemiExpanded Upright MGHT 900";
 shapes = (
 {
@@ -1154,6 +1234,14 @@ width = 838;
 {
 anchors = (
 {
+name = "^entry";
+pos = (100,0);
+},
+{
+name = "^exit";
+pos = (100,0);
+},
+{
 name = bottom;
 pos = (384,0);
 },
@@ -1195,7 +1283,7 @@ coordinates = (
 900
 );
 };
-layerId = "03BD8531-9325-4F17-B3F5-7A1E9C1C1D79";
+layerId = "4393C750-686B-4303-8A09-69062CAAA7F4";
 name = "Needlepoint Black SemiCondensed Upright MGHT 900";
 shapes = (
 {
@@ -1277,6 +1365,14 @@ width = 699;
 {
 anchors = (
 {
+name = "^entry";
+pos = (130,0);
+},
+{
+name = "^exit";
+pos = (130,0);
+},
+{
 name = bottom;
 pos = (466,0);
 },
@@ -1318,7 +1414,7 @@ coordinates = (
 900
 );
 };
-layerId = "71B2726D-39FF-475A-B25D-DEBFFEC49861";
+layerId = "F23FB787-9CDE-46F6-BC97-052752E71DE6";
 name = "Needlepoint Black SemiExpanded Upright MGHT 900";
 shapes = (
 {
@@ -1400,6 +1496,14 @@ width = 838;
 {
 anchors = (
 {
+name = "^entry";
+pos = (130,0);
+},
+{
+name = "^exit";
+pos = (130,0);
+},
+{
 name = bottom;
 pos = (428,0);
 },
@@ -1441,7 +1545,7 @@ coordinates = (
 900
 );
 };
-layerId = "F3760947-BC3D-4C3A-A791-0DEC70F4FDFC";
+layerId = "D772429A-4FA0-4963-BE7E-CDB888733829";
 name = "Agate SemiCondensed Upright MGHT 900";
 shapes = (
 {
@@ -1523,6 +1627,14 @@ width = 792;
 {
 anchors = (
 {
+name = "^entry";
+pos = (188,0);
+},
+{
+name = "^exit";
+pos = (188,0);
+},
+{
 name = bottom;
 pos = (548,0);
 },
@@ -1564,7 +1676,7 @@ coordinates = (
 900
 );
 };
-layerId = "673A702B-F8D0-41B8-8997-26DE377A94C6";
+layerId = "31310EA1-6BB9-4554-8C56-A518E9BAFF34";
 name = "Agate SemiExpanded Upright MGHT 900";
 shapes = (
 {
@@ -1646,6 +1758,14 @@ width = 1038;
 {
 anchors = (
 {
+name = "^entry";
+pos = (130,0);
+},
+{
+name = "^exit";
+pos = (130,0);
+},
+{
 name = bottom;
 pos = (428,0);
 },
@@ -1687,7 +1807,7 @@ coordinates = (
 900
 );
 };
-layerId = "F7F0F9AE-5A0B-4828-8A29-B3CE4867051F";
+layerId = "15A6079E-2A5F-4918-A0B0-8D58C72E584A";
 name = "Agate Black SemiCondensed Upright MGHT 900";
 shapes = (
 {
@@ -1769,6 +1889,14 @@ width = 792;
 {
 anchors = (
 {
+name = "^entry";
+pos = (188,0);
+},
+{
+name = "^exit";
+pos = (188,0);
+},
+{
 name = bottom;
 pos = (548,0);
 },
@@ -1810,7 +1938,7 @@ coordinates = (
 900
 );
 };
-layerId = "B11DF02A-6AA2-4689-92BE-D74C18F47E22";
+layerId = "232FA5C9-44D1-4C5C-8DDB-789B08CCC45C";
 name = "Agate Black SemiExpanded Upright MGHT 900";
 shapes = (
 {
