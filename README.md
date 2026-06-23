@@ -8,7 +8,7 @@ My preference is to start with a text font and remove unwanted things.  The othe
 
 Things to consider include glyph coverage, existing italic and bold styles, and possible optical sizing. Existing mathematical glyphs, such as plus and minus, may also be helpful. Check the font license to make sure you can reuse it, and confirm that there is not already an existing math-font pairing available.  Go to Font->Name and change the name if appropriate.
 
-Give your font its new name (if appropriate)
+Give your font its new name.
 
 *Step 2*
 Change the languages to
@@ -20,11 +20,13 @@ languagesystem math dflt;
 *Step 3: Remove non-mathematics letters from the font*
 Remove ligatures, these are not used in a mathematics font.
 
-The main uppercase and lowercase latin letters for a Math font are A-Z and a-z.  Accented versions of these should be removed.  One way to do this is to use a Smart Filter "Has Components >1" and select "Uppercase letters" and you will get a view of letters that can be either deleted or set not to export (some letters may be worth keeping to be used as a template for the future; those can just be set to not export)
+The main uppercase and lowercase latin letters for a Math font are A-Z and a-z.  Accented versions of these should be removed.  One way to do this is to select all letters and make them non-exporting.  Then Filter -> Mathematics -> Latin and select those ones and make them exporting.
 
-Keep the .ssXX and .cvYY alternates of such letters as you probably want to keep those to match the text font
+Check the .ssXX and .cvYY alternates of such letters as you probably want to keep those to match the text font
 
 I also disabled all the .lf and .tf glyphs as these are not used in math (is that correct? look again at unicode-math for the features it supports)
+
+I also replaced the Playfair figures with the .lf versions as I think that is more useful in mathematics.
 
 *Step 4: Remove or disable features*
 Many font features do not make sense in a math font and can be removed or made non-active.  The following can be safely removed/made inactive:
@@ -189,9 +191,9 @@ Create an axis called STYA and one called STYB. These can be hidden axes. Create
 
  **need testing document here**
 
-
 Next you need to edit your instances for this.  If the scriptsize is 70%/50% then if your instance is designed for 10pt you want to set the STYA and STYB values so that the .ssty1/ssty glyphs are designed at 7pt/5pt.
 
+**need testing documents here**
 
 *Step 13: Add Math Axis Metric*
 It is useful to have a Math Axis metric.  You can select multiple masters to create this all at once.  It should be at the midheight of the minus glyph.  
@@ -216,35 +218,21 @@ These can be taken in pretty much any order
 
 
 *Playfair Math Todo*
-Go back to a version of the glyphs file from 8pm on Saturday
-Look at h and yitalic
-Fix VF exporting
-Test instance exporting and overlap
+Design a test document for ststy in html and in Context
+Adjust the math constants
+is _1 different from _k in size?
 
-Add all bold and bolditalics of the glyphs that you have
-Design a test document for this (perhaps buy fontproofer?)
-
-Then do the script for ssty for the Latin Letters and
-Design a test document for this
-
-Fix issue with mathopentype plugin versions!
-Then...
 Minus at various widths (need to fix this one up)
+Brackets and sizing
 Math constants and create testing documents
 Redo the existing + divide, = and many others :-(
 Times at size
-Brackets and sizing
 Integral and sizing and split into three pieces
-
-Longer testing document
 
 Double integrals
 Sum and sizing
-Deal with Bold (progress!)
 Circle and sizing
 Contour integral
 Other display operators?
-Sylistic set for sizing
-See about ssty
 other simple math symbols and anchors (redo the current ones with anchors)
 
