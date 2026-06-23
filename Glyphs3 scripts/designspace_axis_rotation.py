@@ -12,7 +12,7 @@ import uuid
 from GlyphsApp import GSLayer
 
 
-DESIGNSPACE_AXIS_ROTATION_VERSION = "2026-06-23 10:19 CDT ssty-coordinate-axis-map"
+DESIGNSPACE_AXIS_ROTATION_VERSION = "2026-06-23 10:27 CDT destination-axis-defaults"
 
 INSIDE_MAX_RULE_OFFSET = 0.0
 INSIDE_MIN_RULE_OFFSET = 0.01
@@ -386,6 +386,24 @@ def corresponding_master_for_axis_value(font, coordinates, source_axis_id, targe
         if coordinates_match_except_axes(font, master_coords, wanted_coordinates, [target_axis_id]):
             return master
     return None
+
+
+def resolved_axis_value_overrides(font, axis_values_by_tag):
+    resolved = {}
+    for axis_tag_value, value in (axis_values_by_tag or {}).items():
+        current_axis_id = axis_id_for_tag(font, axis_tag_value)
+        if current_axis_id is None:
+            print_warning("Could not find axis %s for destination coordinate default." % axis_tag_value)
+            continue
+        resolved[str(current_axis_id)] = float(value)
+    return resolved
+
+
+def coordinates_with_axis_value_overrides(coordinates, axis_value_overrides):
+    result = dict(coordinates)
+    for current_axis_id, value in (axis_value_overrides or {}).items():
+        result[str(current_axis_id)] = float(value)
+    return result
 
 
 def call_layer_method(layer, method_name):
@@ -1734,6 +1752,7 @@ def enqueue_master_and_intermediate_samples(
     target_axis_tag,
     target_axis_value,
     samples_by_layer_id,
+    destination_axis_value_overrides=None,
 ):
     created = 0
     skipped = 0
@@ -1777,7 +1796,10 @@ def enqueue_master_and_intermediate_samples(
                 source_low_value,
             ))
 
-        intermediate_coordinates = dict(target_master_coordinates)
+        intermediate_coordinates = coordinates_with_axis_value_overrides(
+            target_master_coordinates,
+            destination_axis_value_overrides,
+        )
         intermediate_coordinates[str(target_axis_id)] = float(target_axis_value)
         intermediate_layer = create_intermediate_layer(
             destination_glyph,
@@ -1833,6 +1855,7 @@ def enqueue_source_coordinate_layers(
     target_axis_value,
     samples_by_layer_id,
     map_source_axis_coordinates_to_target_axis=False,
+    destination_axis_value_overrides=None,
 ):
     created = 0
     skipped = 0
@@ -1877,7 +1900,10 @@ def enqueue_source_coordinate_layers(
             if master_layer is None:
                 skipped += 1
                 continue
-            destination_coordinates = dict(target_master_coordinates)
+            destination_coordinates = coordinates_with_axis_value_overrides(
+                target_master_coordinates,
+                destination_axis_value_overrides,
+            )
             destination_target_axis_value = target_axis_value
             if map_source_axis_coordinates_to_target_axis:
                 destination_target_axis_value = source_coordinates.get(str(source_axis_id), target_axis_value)
@@ -1943,6 +1969,7 @@ def enqueue_alternate_layers(
     source_high_value,
     target_axis_value,
     samples_by_layer_id,
+    destination_axis_value_overrides=None,
 ):
     created = 0
     skipped = 0
@@ -2034,7 +2061,10 @@ def enqueue_alternate_layers(
             else:
                 print("%s: created alternate layer %s" % (master.name, alternate_name))
 
-            alternate_coordinates = dict(target_master_coordinates)
+            alternate_coordinates = coordinates_with_axis_value_overrides(
+                target_master_coordinates,
+                destination_axis_value_overrides,
+            )
             alternate_coordinates[str(target_axis_id)] = float(target_axis_value)
             alternate_intermediate_name = "%s %s %s" % (alternate_name, target_axis_tag, target_axis_value)
             alternate_intermediate_layer = create_special_layer_after(
@@ -2217,6 +2247,7 @@ def rotate_glyph_designspace_from_source(
     source_high_value,
     target_axis_value,
     map_source_axis_coordinates_to_target_axis=False,
+    forced_destination_axis_values=None,
 ):
     source_axis_id = axis_id_for_tag(font, source_axis_tag)
     target_axis_id = axis_id_for_tag(font, target_axis_tag)
@@ -2229,6 +2260,7 @@ def rotate_glyph_designspace_from_source(
 
     source_axis_index = axis_index(font, source_axis_tag)
     target_axis_index = axis_index(font, target_axis_tag)
+    destination_axis_value_overrides = resolved_axis_value_overrides(font, forced_destination_axis_values)
     samples_by_layer_id = {}
     created = 0
     skipped = 0
@@ -2251,6 +2283,7 @@ def rotate_glyph_designspace_from_source(
         target_axis_tag,
         target_axis_value,
         samples_by_layer_id,
+        destination_axis_value_overrides,
     )
     created += master_created
     skipped += master_skipped
@@ -2269,6 +2302,7 @@ def rotate_glyph_designspace_from_source(
         target_axis_value,
         samples_by_layer_id,
         map_source_axis_coordinates_to_target_axis,
+        destination_axis_value_overrides,
     )
     created += coord_created
     skipped += coord_skipped
@@ -2287,6 +2321,7 @@ def rotate_glyph_designspace_from_source(
         source_high_value,
         target_axis_value,
         samples_by_layer_id,
+        destination_axis_value_overrides,
     )
     skipped += alternate_skipped
 
@@ -2329,6 +2364,7 @@ def rotate_glyph_designspace(
     source_high_value,
     target_axis_value,
     map_source_axis_coordinates_to_target_axis=False,
+    forced_destination_axis_values=None,
 ):
     sampling_source_glyph = None
     try:
@@ -2344,6 +2380,7 @@ def rotate_glyph_designspace(
             source_high_value,
             target_axis_value,
             map_source_axis_coordinates_to_target_axis,
+            forced_destination_axis_values,
         )
     finally:
         if sampling_source_glyph is not None:

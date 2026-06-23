@@ -26,11 +26,13 @@ TARGET_AXIS_BY_SUFFIX = {
     SSTY1_SUFFIX: "STYA",
     SSTY2_SUFFIX: "STYB",
 }
+SSTY_AXIS_MIN_VALUE = 5
+SSTY_AXIS_MAX_VALUE = 1200
 ROTATION_SOURCE_AXIS_TAG = "opsz"
 ROTATION_SOURCE_BASE_VALUE = 1200
 ROTATION_SOURCE_SMALL_VALUE = 5
-ROTATION_TARGET_VALUE = ROTATION_SOURCE_SMALL_VALUE
-SCRIPT_VERSION = "2026-06-23 10:19 CDT ssty-opsz-to-stya-styb"
+ROTATION_TARGET_VALUE = SSTY_AXIS_MAX_VALUE
+SCRIPT_VERSION = "2026-06-23 10:33 CDT ssty-intermediate-at-1200"
 
 
 def script_directory():
@@ -100,6 +102,15 @@ def target_axis_tag_for_ssty_glyph(glyph_name):
     return TARGET_AXIS_BY_SUFFIX[suffix]
 
 
+def sibling_axis_defaults_for_ssty_glyph(glyph_name):
+    suffix = ssty_suffix_for_glyph_name(glyph_name)
+    if suffix == SSTY1_SUFFIX:
+        return {TARGET_AXIS_BY_SUFFIX[SSTY2_SUFFIX]: SSTY_AXIS_MIN_VALUE}
+    if suffix == SSTY2_SUFFIX:
+        return {TARGET_AXIS_BY_SUFFIX[SSTY1_SUFFIX]: SSTY_AXIS_MIN_VALUE}
+    return {}
+
+
 def selected_ssty_glyphs(font):
     return [glyph for glyph in unique_selected_glyphs(font) if is_ssty_target_name(glyph.name)]
 
@@ -164,6 +175,7 @@ def process_target_glyph(font, glyph):
         ROTATION_SOURCE_SMALL_VALUE,
         ROTATION_TARGET_VALUE,
         map_source_axis_coordinates_to_target_axis=True,
+        forced_destination_axis_values=sibling_axis_defaults_for_ssty_glyph(glyph.name),
     )
 
 
@@ -173,7 +185,11 @@ def run_for_glyphs(font, glyphs, open_tab=False):
         print_warning("Could not find axis %s in the open font." % ROTATION_SOURCE_AXIS_TAG)
         return
 
-    required_target_axes = sorted(set(target_axis_tag_for_ssty_glyph(glyph.name) for glyph in glyphs))
+    required_target_axes = set()
+    for glyph in glyphs:
+        required_target_axes.add(target_axis_tag_for_ssty_glyph(glyph.name))
+        required_target_axes.update(sibling_axis_defaults_for_ssty_glyph(glyph.name).keys())
+    required_target_axes = sorted(required_target_axes)
     missing_target_axes = [
         axis_tag for axis_tag in required_target_axes
         if axis_tag is None or axis_id_for_tag(font, axis_tag) is None
@@ -186,6 +202,8 @@ def run_for_glyphs(font, glyphs, open_tab=False):
     print("Glyphs to process: %i" % len(glyphs))
     print(".ssty1 target axis: %s" % TARGET_AXIS_BY_SUFFIX[SSTY1_SUFFIX])
     print(".ssty2 target axis: %s" % TARGET_AXIS_BY_SUFFIX[SSTY2_SUFFIX])
+    print("Sibling SSTY axis default: %s" % SSTY_AXIS_MIN_VALUE)
+    print("Active SSTY intermediate axis value: %s" % ROTATION_TARGET_VALUE)
     print("Master layers use %s=%s; SSTY layers use %s=%s." % (
         ROTATION_SOURCE_AXIS_TAG,
         ROTATION_SOURCE_BASE_VALUE,

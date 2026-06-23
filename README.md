@@ -174,9 +174,21 @@ lookup AddMathUnderline {
 '''
 
 ** Step 13: Optical Sizing **
-Playfair has an opz axes so optical sizing is easily done.  The script **blah** will populate any glyph that ends with .ssty.  
 
-Again you need to edit your instances for this.  If the scriptsize is 70%/50% then if your instance is designed for 10pt you want to set the STYA and STYB values so that the .ssty1/ssty glyphs are designed at 7pt/5pt.
+Playfair has an opz axes so optical sizing is easily done. 
+
+Create an axis called STYA and one called STYB. These can be hidden axes. Create virtual masters.  Since they are hidden you do not really need an axis table for these.
+
+ Add glyphs A.ssty1 A.ssty2 B.ssty1 B.ssty2 etc.  Select these and run the script populate_ssty.py.  
+
+ You can repeat this step for other glyphs that you want optical sizing for, either now or later.
+
+ Add the feature ssty and have it autogenerate
+
+ **need testing document here**
+
+
+Next you need to edit your instances for this.  If the scriptsize is 70%/50% then if your instance is designed for 10pt you want to set the STYA and STYB values so that the .ssty1/ssty glyphs are designed at 7pt/5pt.
 
 
 *Step 13: Add Math Axis Metric*
