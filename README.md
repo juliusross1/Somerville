@@ -185,6 +185,8 @@ Create an axis called STYA and one called STYB. These can be hidden axes. Create
 
  Add the feature ssty and have it autogenerate
 
+ ** there was a bug here since I did not create all the axes first; need to change this README and change the populate bold script as well **
+
  **need testing document here**
 
 
