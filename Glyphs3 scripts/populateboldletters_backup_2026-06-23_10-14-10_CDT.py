@@ -1,4 +1,4 @@
-#MenuTitle: Backup - Create bold glyphs 2026-06-22 20-20
+#MenuTitle: Backup of Populate bold layers
 # -*- coding: utf-8 -*-
 
 """
@@ -41,7 +41,7 @@ ROTATION_TARGET_AXIS_TAG = "MGHT"
 ROTATION_SOURCE_LOW_VALUE = 360
 ROTATION_SOURCE_HIGH_VALUE = 900
 ROTATION_TARGET_VALUE = 900
-SCRIPT_VERSION = "2026-06-22 20:13 CDT preserve-component-smart-values"
+SCRIPT_VERSION = "2026-06-22 23:01 CDT exact-max-rule-sampling"
 ALTERNATE_SUFFIX_PATTERN = re.compile(r"\.(ss|cv)\d+$")
 SOURCE_GLYPH_NAME_OVERRIDES = {
     "hbolditalic-math": "planckconstant",
@@ -71,10 +71,10 @@ from designspace_axis_rotation import (
 
 Glyphs.clearLog()
 Glyphs.showMacroWindow()
-print("Create bold glyphs")
+print("Populate bold layers")
 print("Script version: %s" % SCRIPT_VERSION)
 print("Helper version: %s" % DESIGNSPACE_AXIS_ROTATION_VERSION)
-print("Ready. Choose the scope and press 'Create'.")
+print("Ready. Choose the scope and press 'Populate'.")
 print("")
 
 
@@ -320,7 +320,7 @@ def run_for_glyphs(font, glyphs, open_tab=False):
 class BoldMathWindow(object):
     def __init__(self):
         self.bold_math_names = load_bold_math_names()
-        self.w = vanilla.FloatingWindow((360, 162), "Create bold glyphs")
+        self.w = vanilla.FloatingWindow((360, 162), "Populate bold layers")
         self.w.scope = vanilla.RadioGroup(
             (15, 15, -15, 42),
             ["Selected target glyphs", "All available target glyphs"],
@@ -328,7 +328,7 @@ class BoldMathWindow(object):
         )
         self.w.scope.set(0)
         self.w.openTab = vanilla.CheckBox((15, 70, -15, 20), "Open tab with modified glyphs", value=False)
-        self.w.runButton = vanilla.Button((15, 111, -15, 24), "Create", callback=self.run_callback)
+        self.w.runButton = vanilla.Button((15, 111, -15, 24), "Populate", callback=self.run_callback)
         self.w.open()
         self.w.makeKey()
         print("UI opened.")
@@ -336,7 +336,7 @@ class BoldMathWindow(object):
     def run_callback(self, sender):
         Glyphs.clearLog()
         Glyphs.showMacroWindow()
-        print("Create bold glyphs")
+        print("Populate bold layers")
         print("Script version: %s" % SCRIPT_VERSION)
         print("Helper version: %s" % DESIGNSPACE_AXIS_ROTATION_VERSION)
         print("")
@@ -377,7 +377,7 @@ except Exception as error:
 
     Glyphs.clearLog()
     Glyphs.showMacroWindow()
-    print("Create bold glyphs")
+    print("Populate bold layers")
     print("")
     print_warning("Could not open UI: %s" % error)
     print_warning(traceback.format_exc())

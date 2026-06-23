@@ -12,7 +12,7 @@ import uuid
 from GlyphsApp import GSLayer
 
 
-DESIGNSPACE_AXIS_ROTATION_VERSION = "2026-06-23 10:19 CDT ssty-coordinate-axis-map"
+DESIGNSPACE_AXIS_ROTATION_VERSION = "2026-06-22 23:01 CDT exact-max-rule-sampling"
 
 INSIDE_MAX_RULE_OFFSET = 0.0
 INSIDE_MIN_RULE_OFFSET = 0.01
@@ -1832,7 +1832,6 @@ def enqueue_source_coordinate_layers(
     target_axis_index,
     target_axis_value,
     samples_by_layer_id,
-    map_source_axis_coordinates_to_target_axis=False,
 ):
     created = 0
     skipped = 0
@@ -1878,15 +1877,12 @@ def enqueue_source_coordinate_layers(
                 skipped += 1
                 continue
             destination_coordinates = dict(target_master_coordinates)
-            destination_target_axis_value = target_axis_value
-            if map_source_axis_coordinates_to_target_axis:
-                destination_target_axis_value = source_coordinates.get(str(source_axis_id), target_axis_value)
-            destination_coordinates[str(target_axis_id)] = float(destination_target_axis_value)
+            destination_coordinates[str(target_axis_id)] = float(target_axis_value)
             new_layer_name = rotated_coordinate_layer_name(
                 master,
                 source_layer,
                 target_axis_tag,
-                destination_target_axis_value,
+                target_axis_value,
                 target_axis_rules,
                 font,
             )
@@ -2216,7 +2212,6 @@ def rotate_glyph_designspace_from_source(
     source_low_value,
     source_high_value,
     target_axis_value,
-    map_source_axis_coordinates_to_target_axis=False,
 ):
     source_axis_id = axis_id_for_tag(font, source_axis_tag)
     target_axis_id = axis_id_for_tag(font, target_axis_tag)
@@ -2268,7 +2263,6 @@ def rotate_glyph_designspace_from_source(
         target_axis_index,
         target_axis_value,
         samples_by_layer_id,
-        map_source_axis_coordinates_to_target_axis,
     )
     created += coord_created
     skipped += coord_skipped
@@ -2328,7 +2322,6 @@ def rotate_glyph_designspace(
     source_low_value,
     source_high_value,
     target_axis_value,
-    map_source_axis_coordinates_to_target_axis=False,
 ):
     sampling_source_glyph = None
     try:
@@ -2343,7 +2336,6 @@ def rotate_glyph_designspace(
             source_low_value,
             source_high_value,
             target_axis_value,
-            map_source_axis_coordinates_to_target_axis,
         )
     finally:
         if sampling_source_glyph is not None:

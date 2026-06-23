@@ -1,4 +1,4 @@
-#MenuTitle: Check math bold upright completeness
+#MenuTitle: Check math bold completeness
 # -*- coding: utf-8 -*-
 
 """
