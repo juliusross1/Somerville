@@ -1758,6 +1758,9 @@ pos = -231;
 {
 over = 30;
 pos = 608;
+},
+{
+pos = 265;
 }
 );
 name = "Needlepoint SemiCondensed Upright";
@@ -2083,6 +2086,9 @@ pos = -231;
 {
 over = 30;
 pos = 608;
+},
+{
+pos = 265;
 }
 );
 name = "Needlepoint SemiExpanded Upright";
@@ -2413,6 +2419,9 @@ pos = -231;
 {
 over = 30;
 pos = 608;
+},
+{
+pos = 265;
 }
 );
 name = "Needlepoint Black SemiCondensed Upright";
@@ -2749,6 +2758,9 @@ pos = -231;
 {
 over = 30;
 pos = 608;
+},
+{
+pos = 265;
 }
 );
 name = "Needlepoint Black SemiExpanded Upright";
@@ -3081,6 +3093,9 @@ pos = -231;
 {
 over = 30;
 pos = 608;
+},
+{
+pos = 265;
 }
 );
 name = "Agate SemiCondensed Upright";
@@ -3420,6 +3435,9 @@ pos = -231;
 {
 over = 30;
 pos = 608;
+},
+{
+pos = 265;
 }
 );
 name = "Agate SemiExpanded Upright";
@@ -3761,6 +3779,9 @@ pos = -231;
 {
 over = 30;
 pos = 608;
+},
+{
+pos = 265;
 }
 );
 name = "Agate Black SemiCondensed Upright";
@@ -4105,6 +4126,9 @@ pos = -231;
 {
 over = 30;
 pos = 608;
+},
+{
+pos = 265;
 }
 );
 name = "Agate Black SemiExpanded Upright";
@@ -4346,6 +4370,7 @@ Location = 5;
 );
 }
 );
+exports = 0;
 name = "Mayfair Variable";
 type = variable;
 },
@@ -9028,7 +9053,7 @@ axesValues = (
 400,
 600,
 460,
-340
+460
 );
 customParameters = (
 {
@@ -10143,6 +10168,7 @@ Location = 460;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.12053;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02507;
@@ -11221,6 +11247,7 @@ Location = 564;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.10762;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02238;
@@ -29351,8 +29378,8 @@ gbreve.smcp = -25;
 j.smcp.cv01 = -24;
 ninesuperior = -97;
 northEastArrow.case = -101;
-one.original = -15;
 one = -6;
+one.original = -15;
 quotedbl = -130;
 quotedblleft.smcp = -103;
 registered = -112;
@@ -29360,8 +29387,8 @@ rightArrow.case = -45;
 rightArrow.smcp = -36;
 ringhalfleft = -121;
 ringhalfright = -121;
-seven.original = -65;
 seven = -75;
+seven.original = -65;
 threesuperior = -67;
 trademark = -164;
 w.smcp = -110;
@@ -30374,8 +30401,8 @@ AE = -63;
 H = 0;
 Z = 0;
 ampersand = -49;
-four.original = -86;
 four = -71;
+four.original = -86;
 icircumflex = 29;
 itilde = 19;
 less = -132;
@@ -30608,8 +30635,8 @@ emacron = -31;
 endash = -44;
 equal.lf = -97;
 five.original = -82;
-four.original = -139;
 four = -86;
+four.original = -139;
 greater = -97;
 iacute = 0;
 iacute_j.loclNLD = 0;
@@ -30654,8 +30681,8 @@ at = -75;
 eacute = -56;
 eopen = -54;
 five.original = -78;
-four.original = -116;
 four = -70;
+four.original = -116;
 greater = -94;
 less = -89;
 nine.original = -61;
@@ -30684,8 +30711,8 @@ endash = -82;
 eopen = -88;
 equal.lf = -132;
 five.original = -97;
-four.original = -103;
 four = -127;
+four.original = -103;
 greater = -122;
 less = -149;
 less.lf = -119;
@@ -31516,13 +31543,13 @@ V = -79;
 W = -75;
 Y = -86;
 five.original = -31;
-one.original = -40;
 one = -48;
+one.original = -40;
 parenleft = -69;
 parenright = -80;
 three.original = -27;
-zero.original = -46;
 zero = -30;
+zero.original = -46;
 };
 colon.figures = {
 five.original = -59;
@@ -31560,12 +31587,12 @@ zero.zero.original = -148;
 comma = {
 eight.original = -13;
 emdash = -132;
-five.original = 22;
 five = 0;
+five.original = 22;
 five.smcp = 0;
 four.original = 23;
-nine.original = 0;
 nine = -20;
+nine.original = 0;
 quotedbl = -132;
 quotedblleft = -132;
 quotedblright = -132;
@@ -31574,36 +31601,36 @@ quoteleft = -132;
 quoteright = -132;
 quoteright.smcp = -132;
 quotesingle = -114;
-seven.original = -32;
 seven = -60;
+seven.original = -32;
 seven.smcp = -58;
-six.original = -22;
 six = -4;
-three.original = 10;
+six.original = -22;
 three = 0;
+three.original = 10;
 three.smcp = 0;
-two.original = 0;
 two = 0;
-zero.original = -15;
+two.original = 0;
 zero = -11;
+zero.original = -15;
 zero.zero = -11;
 };
 comma.tf.ss14 = {
-eight.original = -131;
 eight = -128;
+eight.original = -131;
 eight.smcp = -124;
 emdash = -277;
-five.original = -104;
 five = -112;
+five.original = -104;
 five.smcp = -111;
-four.original = -101;
 four = -149;
+four.original = -101;
 four.smcp = -138;
-nine.original = -137;
 nine = -142;
+nine.original = -137;
 nine.smcp = -142;
-one.original = -140;
 one = -132;
+one.original = -140;
 one.smcp = -132;
 parenright.tf.ss14 = -188;
 quotedbl = -198;
@@ -31612,23 +31639,23 @@ quotedblright = -220;
 quotedblright.smcp = -220;
 quoteright = -132;
 quotesingle = -114;
-seven.original = -191;
 seven = -198;
+seven.original = -191;
 seven.smcp = -198;
-six.original = -162;
 six = -154;
+six.original = -162;
 six.smcp = -150;
-three.original = -112;
 three = -115;
+three.original = -112;
 three.smcp = -114;
-two.original = -125;
 two = -115;
+two.original = -125;
 two.smcp = -116;
-zero.original = -159;
 zero = -165;
-zero.zero = -165;
+zero.original = -159;
 zero.smcp = -157;
 zero.smcp.zero = -157;
+zero.zero = -165;
 zero.zero.original = -151;
 };
 d = {
@@ -31761,8 +31788,8 @@ comma.tf.ss14 = -166;
 d = -117;
 endash = -166;
 five.original = -107;
-four.original = -166;
 four = -148;
+four.original = -166;
 hyphen = -141;
 hyphentwo = -166;
 nine.original = -113;
@@ -31810,13 +31837,13 @@ period.tf.ss14 = -134;
 "u-cy.smcp" = -10;
 };
 dollar = {
-eight.original = 38;
 eight = 38;
+eight.original = 38;
 five = 20;
-one.original = -28;
 one = 0;
-six.original = 17;
+one.original = -28;
 six = 21;
+six.original = 17;
 three = 12;
 two = 0;
 };
@@ -31929,12 +31956,6 @@ ehookabove = {
 comma.tf.ss14 = -133;
 period.tf.ss14 = -137;
 };
-eight.original = {
-bracketright.tf.ss14 = -110;
-colon.figures = -47;
-colon.figures.tf.ss14 = -117;
-degree = -28;
-};
 eight = {
 colon.tf.ss14 = -131;
 comma.tf.ss14 = -131;
@@ -31964,6 +31985,12 @@ six = 25;
 three = 0;
 two = 0;
 zero = 20;
+};
+eight.original = {
+bracketright.tf.ss14 = -110;
+colon.figures = -47;
+colon.figures.tf.ss14 = -117;
+degree = -28;
 };
 eight.smcp = {
 comma.tf.ss14 = -127;
@@ -32433,19 +32460,19 @@ quotesingle = -28;
 saltillo = -49;
 thorn = -3;
 };
-five.original = {
-bracketright.tf.ss14 = -119;
-colon.figures = -44;
-colon.figures.tf.ss14 = -115;
-degree = -62;
-ordmasculine = -39;
-};
 five = {
 degree = -42;
 eight = 24;
 hyphen.case = 49;
 hyphen.smcp = 55;
 percent.lf = -24;
+};
+five.original = {
+bracketright.tf.ss14 = -119;
+colon.figures = -44;
+colon.figures.tf.ss14 = -115;
+degree = -62;
+ordmasculine = -39;
 };
 five.smcp = {
 comma.tf.ss14 = -126;
@@ -32470,14 +32497,6 @@ thorn = 2;
 florin = {
 e = -56;
 o = -54;
-};
-four.original = {
-bracketright.tf.ss14 = -112;
-colon.figures = -50;
-colon.figures.tf.ss14 = -110;
-degree = -107;
-ordfeminine = -57;
-ordmasculine = -61;
 };
 four = {
 colon.tf.ss14 = -155;
@@ -32506,6 +32525,14 @@ plus.lf = -105;
 semicolon.tf.ss14 = -147;
 seven = -13;
 three = 2;
+};
+four.original = {
+bracketright.tf.ss14 = -112;
+colon.figures = -50;
+colon.figures.tf.ss14 = -110;
+degree = -107;
+ordfeminine = -57;
+ordmasculine = -61;
 };
 four.smcp = {
 comma.tf.ss14 = -119;
@@ -33654,13 +33681,6 @@ z.smcp = 0;
 nhookleft.smcp.cv01 = {
 u.smcp = -51;
 };
-nine.original = {
-bracketright.tf.ss14 = -123;
-colon.figures = -51;
-colon.figures.tf.ss14 = -128;
-degree = -126;
-ordmasculine = -48;
-};
 nine = {
 colon.figures.lf = -43;
 colon.tf.ss14 = -128;
@@ -33689,6 +33709,13 @@ six = 0;
 slash = 0;
 three = 0;
 zero = 14;
+};
+nine.original = {
+bracketright.tf.ss14 = -123;
+colon.figures = -51;
+colon.figures.tf.ss14 = -128;
+degree = -126;
+ordmasculine = -48;
 };
 nine.smcp = {
 comma = -33;
@@ -33731,8 +33758,8 @@ egrave = -34;
 five.original = -69;
 four.original = -87;
 nine.original = -51;
-one.original = -58;
 one = -45;
+one.original = -58;
 q = -49;
 three.original = -47;
 two.original = -42;
@@ -33890,19 +33917,6 @@ parenright = 0;
 omacron = {
 parenright = -66;
 };
-one.original = {
-bracketright = -55;
-bracketright.tf.ss14 = -135;
-colon.figures = -69;
-colon.figures.tf.ss14 = -159;
-degree = -92;
-equal = -121;
-one.original = 0;
-ordfeminine = -42;
-ordmasculine = -50;
-parenleft = -70;
-zero.zero.original = -27;
-};
 one = {
 bracketright.tf.ss14 = -98;
 colon.figures.lf = -60;
@@ -33940,6 +33954,19 @@ seven = 0;
 six = 0;
 two = 0;
 zero = 0;
+};
+one.original = {
+bracketright = -55;
+bracketright.tf.ss14 = -135;
+colon.figures = -69;
+colon.figures.tf.ss14 = -159;
+degree = -92;
+equal = -121;
+one.original = 0;
+ordfeminine = -42;
+ordmasculine = -50;
+parenleft = -70;
+zero.zero.original = -27;
 };
 one.smcp = {
 colon.figures.smcp = -65;
@@ -34356,8 +34383,8 @@ Ldot = -60;
 l = -56;
 ldot = -56;
 m = -56;
-one.original = -89;
 one = -87;
+one.original = -89;
 parenright = -126;
 s = -49;
 };
@@ -34811,13 +34838,6 @@ parenright = -47;
 semicolon.tf.ss14 = {
 parenright.tf.ss14 = -188;
 };
-seven.original = {
-bracketright.tf.ss14 = -92;
-colon.figures = -46;
-colon.figures.tf.ss14 = -108;
-degree = -37;
-zero.zero.original = -10;
-};
 seven = {
 colon.figures.lf = -59;
 degree = 15;
@@ -34831,6 +34851,13 @@ northEastArrow.smcp = -104;
 plus.lf = -130;
 upArrow.case = -51;
 upArrow.smcp = -65;
+};
+seven.original = {
+bracketright.tf.ss14 = -92;
+colon.figures = -46;
+colon.figures.tf.ss14 = -108;
+degree = -37;
+zero.zero.original = -10;
 };
 seven.smcp = {
 a.smcp = -73;
@@ -34892,14 +34919,6 @@ period.tf.ss14 = -120;
 "ustraight-cy.smcp" = -113;
 "yeru-cy.smcp" = 0;
 };
-six.original = {
-bracketright.tf.ss14 = -122;
-colon.figures = -56;
-colon.figures.tf.ss14 = -129;
-degree = -30;
-endash = 0;
-six.original = 0;
-};
 six = {
 bracketright.tf.ss14 = -116;
 colon = -46;
@@ -34926,6 +34945,14 @@ period = -20;
 period.tf.ss14 = -149;
 semicolon.tf.ss14 = -141;
 zero = 0;
+};
+six.original = {
+bracketright.tf.ss14 = -122;
+colon.figures = -56;
+colon.figures.tf.ss14 = -129;
+degree = -30;
+endash = 0;
+six.original = 0;
 };
 six.smcp = {
 colon.tf.ss14 = -139;
@@ -35130,13 +35157,6 @@ y.smcp = -73;
 yacute.smcp = -73;
 ymacron.smcp = -73;
 };
-three.original = {
-bracketright.tf.ss14 = -101;
-colon.figures = -42;
-colon.figures.tf.ss14 = -127;
-degree = -103;
-ordmasculine = -33;
-};
 three = {
 colon.tf.ss14 = -131;
 comma.tf.ss14 = -130;
@@ -35164,6 +35184,13 @@ six = 23;
 three = 0;
 two = 0;
 zero = 17;
+};
+three.original = {
+bracketright.tf.ss14 = -101;
+colon.figures = -42;
+colon.figures.tf.ss14 = -127;
+degree = -103;
+ordmasculine = -33;
 };
 three.smcp = {
 colon.tf.ss14 = -127;
@@ -35251,14 +35278,6 @@ quotedblright.smcp = -140;
 quoteright.smcp = -132;
 "u-cy.smcp" = -29;
 };
-two.original = {
-bracketright.tf.ss14 = -127;
-colon.figures = -44;
-colon.figures.tf.ss14 = -122;
-degree = -105;
-ordfeminine = -34;
-ordmasculine = -41;
-};
 two = {
 colon.figures.lf = -40;
 degree = -30;
@@ -35272,6 +35291,14 @@ northEastArrow.case = -83;
 northEastArrow.smcp = -66;
 percent.lf = 0;
 plus.lf = -114;
+};
+two.original = {
+bracketright.tf.ss14 = -127;
+colon.figures = -44;
+colon.figures.tf.ss14 = -122;
+degree = -105;
+ordfeminine = -34;
+ordmasculine = -41;
 };
 two.smcp = {
 comma = 0;
@@ -35898,17 +35925,6 @@ period.tf.ss14 = -141;
 "ustraight-cy.smcp" = -37;
 "ya-cy.smcp" = 10;
 };
-zero.original = {
-baht = -34;
-bracketright = -62;
-bracketright.tf.ss14 = -154;
-colon.figures = -58;
-colon.figures.tf.ss14 = -135;
-degree = -128;
-multiply = -42;
-ordmasculine = -49;
-question = -81;
-};
 zero = {
 bracketright.tf.ss14 = -117;
 colon.figures.lf = -47;
@@ -35920,6 +35936,17 @@ hyphentwo.case = -44;
 hyphentwo.smcp = -44;
 percent.lf = 0;
 plus.lf = -74;
+};
+zero.original = {
+baht = -34;
+bracketright = -62;
+bracketright.tf.ss14 = -154;
+colon.figures = -58;
+colon.figures.tf.ss14 = -135;
+degree = -128;
+multiply = -42;
+ordmasculine = -49;
+question = -81;
 };
 zero.smcp = {
 colon.tf.ss14 = -135;
@@ -48134,8 +48161,8 @@ gbreve.smcp = -26;
 j.smcp.cv01 = 0;
 ninesuperior = -101;
 northEastArrow.case = -133;
-one.original = 0;
 one = 0;
+one.original = 0;
 quotedbl = -81;
 quotedblleft.smcp = -44;
 registered = -114;
@@ -48143,8 +48170,8 @@ rightArrow.case = -47;
 rightArrow.smcp = -2;
 ringhalfleft = -145;
 ringhalfright = -145;
-seven.original = -65;
 seven = -81;
+seven.original = -65;
 threesuperior = -75;
 trademark = -183;
 w.smcp = -137;
@@ -49157,8 +49184,8 @@ AE = -65;
 H = 0;
 Z = 0;
 ampersand = -13;
-four.original = -92;
 four = -69;
+four.original = -92;
 icircumflex = 46;
 itilde = 20;
 less = -142;
@@ -49391,8 +49418,8 @@ emacron = -20;
 endash = -43;
 equal.lf = -112;
 five.original = -88;
-four.original = -159;
 four = -96;
+four.original = -159;
 greater = -110;
 iacute = -5;
 iacute_j.loclNLD = -3;
@@ -49437,8 +49464,8 @@ at = -87;
 eacute = -65;
 eopen = -53;
 five.original = -86;
-four.original = -131;
 four = -69;
+four.original = -131;
 greater = -106;
 less = -103;
 nine.original = -62;
@@ -49467,8 +49494,8 @@ endash = -93;
 eopen = -112;
 equal.lf = -151;
 five.original = -126;
-four.original = -116;
 four = -154;
+four.original = -116;
 greater = -146;
 less = -173;
 less.lf = -138;
@@ -50299,13 +50326,13 @@ V = -88;
 W = -82;
 Y = -117;
 five.original = -39;
-one.original = -42;
 one = -45;
+one.original = -42;
 parenleft = -88;
 parenright = -106;
 three.original = -41;
-zero.original = -60;
 zero = -26;
+zero.original = -60;
 };
 colon.figures = {
 five.original = -70;
@@ -50343,12 +50370,12 @@ zero.zero.original = -177;
 comma = {
 eight.original = 0;
 emdash = -111;
-five.original = 8;
 five = 0;
+five.original = 8;
 five.smcp = 0;
 four.original = 6;
-nine.original = 0;
 nine = -34;
+nine.original = 0;
 quotedbl = -157;
 quotedblleft = -157;
 quotedblright = -157;
@@ -50357,36 +50384,36 @@ quoteleft = -157;
 quoteright = -157;
 quoteright.smcp = -157;
 quotesingle = -133;
-seven.original = -55;
 seven = -92;
+seven.original = -55;
 seven.smcp = -93;
-six.original = -35;
 six = -29;
-three.original = 0;
+six.original = -35;
 three = 0;
+three.original = 0;
 three.smcp = 0;
-two.original = 0;
 two = 0;
-zero.original = -32;
+two.original = 0;
 zero = -31;
+zero.original = -32;
 zero.zero = -31;
 };
 comma.tf.ss14 = {
-eight.original = -154;
 eight = -149;
+eight.original = -154;
 eight.smcp = -149;
 emdash = -270;
-five.original = -128;
 five = -132;
+five.original = -128;
 five.smcp = -131;
-four.original = -126;
 four = -154;
+four.original = -126;
 four.smcp = -172;
-nine.original = -181;
 nine = -181;
+nine.original = -181;
 nine.smcp = -180;
-one.original = -161;
 one = -155;
+one.original = -161;
 one.smcp = -155;
 parenright.tf.ss14 = -216;
 quotedbl = -227;
@@ -50395,23 +50422,23 @@ quotedblright = -259;
 quotedblright.smcp = -259;
 quoteright = -157;
 quotesingle = -133;
-seven.original = -238;
 seven = -240;
+seven.original = -238;
 seven.smcp = -241;
-six.original = -187;
 six = -182;
+six.original = -187;
 six.smcp = -177;
-three.original = -129;
 three = -132;
+three.original = -129;
 three.smcp = -132;
-two.original = -155;
 two = -145;
+two.original = -155;
 two.smcp = -146;
-zero.original = -184;
 zero = -191;
-zero.zero = -191;
+zero.original = -184;
 zero.smcp = -183;
 zero.smcp.zero = -183;
+zero.zero = -191;
 zero.zero.original = -178;
 };
 d = {
@@ -50544,8 +50571,8 @@ comma.tf.ss14 = -196;
 d = -128;
 endash = -168;
 five.original = -122;
-four.original = -196;
 four = -157;
+four.original = -196;
 hyphen = -109;
 hyphentwo = -196;
 nine.original = -115;
@@ -50593,13 +50620,13 @@ period.tf.ss14 = -157;
 "u-cy.smcp" = 0;
 };
 dollar = {
-eight.original = 89;
 eight = 80;
+eight.original = 89;
 five = 29;
-one.original = -17;
 one = 24;
-six.original = 65;
+one.original = -17;
 six = 65;
+six.original = 65;
 three = 18;
 two = 15;
 };
@@ -50712,12 +50739,6 @@ ehookabove = {
 comma.tf.ss14 = -167;
 period.tf.ss14 = -170;
 };
-eight.original = {
-bracketright.tf.ss14 = -153;
-colon.figures = -59;
-colon.figures.tf.ss14 = -147;
-degree = -39;
-};
 eight = {
 colon.tf.ss14 = -154;
 comma.tf.ss14 = -154;
@@ -50747,6 +50768,12 @@ six = 0;
 three = 2;
 two = 0;
 zero = 0;
+};
+eight.original = {
+bracketright.tf.ss14 = -153;
+colon.figures = -59;
+colon.figures.tf.ss14 = -147;
+degree = -39;
 };
 eight.smcp = {
 comma.tf.ss14 = -150;
@@ -51216,19 +51243,19 @@ quotesingle = 23;
 saltillo = -67;
 thorn = 14;
 };
-five.original = {
-bracketright.tf.ss14 = -157;
-colon.figures = -60;
-colon.figures.tf.ss14 = -142;
-degree = -60;
-ordmasculine = -40;
-};
 five = {
 degree = -48;
 eight = 9;
 hyphen.case = 61;
 hyphen.smcp = 66;
 percent.lf = -28;
+};
+five.original = {
+bracketright.tf.ss14 = -157;
+colon.figures = -60;
+colon.figures.tf.ss14 = -142;
+degree = -60;
+ordmasculine = -40;
 };
 five.smcp = {
 comma.tf.ss14 = -148;
@@ -51253,14 +51280,6 @@ thorn = 18;
 florin = {
 e = -55;
 o = -55;
-};
-four.original = {
-bracketright.tf.ss14 = -156;
-colon.figures = -58;
-colon.figures.tf.ss14 = -142;
-degree = -124;
-ordfeminine = -72;
-ordmasculine = -75;
 };
 four = {
 colon.tf.ss14 = -166;
@@ -51289,6 +51308,14 @@ plus.lf = -81;
 semicolon.tf.ss14 = -162;
 seven = -49;
 three = 0;
+};
+four.original = {
+bracketright.tf.ss14 = -156;
+colon.figures = -58;
+colon.figures.tf.ss14 = -142;
+degree = -124;
+ordfeminine = -72;
+ordmasculine = -75;
 };
 four.smcp = {
 comma.tf.ss14 = -147;
@@ -52437,13 +52464,6 @@ z.smcp = -13;
 nhookleft.smcp.cv01 = {
 u.smcp = -81;
 };
-nine.original = {
-bracketright.tf.ss14 = -168;
-colon.figures = -68;
-colon.figures.tf.ss14 = -155;
-degree = -133;
-ordmasculine = -56;
-};
 nine = {
 colon.figures.lf = -69;
 colon.tf.ss14 = -147;
@@ -52472,6 +52492,13 @@ six = 0;
 slash = -36;
 three = 0;
 zero = 8;
+};
+nine.original = {
+bracketright.tf.ss14 = -168;
+colon.figures = -68;
+colon.figures.tf.ss14 = -155;
+degree = -133;
+ordmasculine = -56;
 };
 nine.smcp = {
 comma = -41;
@@ -52514,8 +52541,8 @@ egrave = -45;
 five.original = -69;
 four.original = -86;
 nine.original = -50;
-one.original = -29;
 one = -47;
+one.original = -29;
 q = -46;
 three.original = -44;
 two.original = -44;
@@ -52673,19 +52700,6 @@ parenright = 12;
 omacron = {
 parenright = -89;
 };
-one.original = {
-bracketright = -66;
-bracketright.tf.ss14 = -155;
-colon.figures = -84;
-colon.figures.tf.ss14 = -176;
-degree = -101;
-equal = -109;
-one.original = 0;
-ordfeminine = -58;
-ordmasculine = -59;
-parenleft = -87;
-zero.zero.original = -31;
-};
 one = {
 bracketright.tf.ss14 = -136;
 colon.figures.lf = -78;
@@ -52723,6 +52737,19 @@ seven = -22;
 six = 0;
 two = 0;
 zero = 0;
+};
+one.original = {
+bracketright = -66;
+bracketright.tf.ss14 = -155;
+colon.figures = -84;
+colon.figures.tf.ss14 = -176;
+degree = -101;
+equal = -109;
+one.original = 0;
+ordfeminine = -58;
+ordmasculine = -59;
+parenleft = -87;
+zero.zero.original = -31;
 };
 one.smcp = {
 colon.figures.smcp = -84;
@@ -53139,8 +53166,8 @@ Ldot = -69;
 l = -58;
 ldot = -58;
 m = -57;
-one.original = -103;
 one = -100;
+one.original = -103;
 parenright = -149;
 s = -51;
 };
@@ -53594,13 +53621,6 @@ parenright = -60;
 semicolon.tf.ss14 = {
 parenright.tf.ss14 = -216;
 };
-seven.original = {
-bracketright.tf.ss14 = -147;
-colon.figures = -52;
-colon.figures.tf.ss14 = -131;
-degree = -22;
-zero.zero.original = 0;
-};
 seven = {
 colon.figures.lf = -65;
 degree = 27;
@@ -53614,6 +53634,13 @@ northEastArrow.smcp = -108;
 plus.lf = -133;
 upArrow.case = -54;
 upArrow.smcp = -65;
+};
+seven.original = {
+bracketright.tf.ss14 = -147;
+colon.figures = -52;
+colon.figures.tf.ss14 = -131;
+degree = -22;
+zero.zero.original = 0;
 };
 seven.smcp = {
 a.smcp = -90;
@@ -53675,14 +53702,6 @@ period.tf.ss14 = -141;
 "ustraight-cy.smcp" = -147;
 "yeru-cy.smcp" = 0;
 };
-six.original = {
-bracketright.tf.ss14 = -175;
-colon.figures = -73;
-colon.figures.tf.ss14 = -159;
-degree = -49;
-endash = 0;
-six.original = 0;
-};
 six = {
 bracketright.tf.ss14 = -168;
 colon = -56;
@@ -53709,6 +53728,14 @@ period = -18;
 period.tf.ss14 = -173;
 semicolon.tf.ss14 = -166;
 zero = 0;
+};
+six.original = {
+bracketright.tf.ss14 = -175;
+colon.figures = -73;
+colon.figures.tf.ss14 = -159;
+degree = -49;
+endash = 0;
+six.original = 0;
 };
 six.smcp = {
 colon.tf.ss14 = -167;
@@ -53913,13 +53940,6 @@ y.smcp = -84;
 yacute.smcp = -84;
 ymacron.smcp = -84;
 };
-three.original = {
-bracketright.tf.ss14 = -151;
-colon.figures = -61;
-colon.figures.tf.ss14 = -158;
-degree = -106;
-ordmasculine = -43;
-};
 three = {
 colon.tf.ss14 = -154;
 comma.tf.ss14 = -154;
@@ -53947,6 +53967,13 @@ six = 0;
 three = 2;
 two = 0;
 zero = 0;
+};
+three.original = {
+bracketright.tf.ss14 = -151;
+colon.figures = -61;
+colon.figures.tf.ss14 = -158;
+degree = -106;
+ordmasculine = -43;
 };
 three.smcp = {
 colon.tf.ss14 = -151;
@@ -54034,14 +54061,6 @@ quotedblright.smcp = -153;
 quoteright.smcp = -153;
 "u-cy.smcp" = -21;
 };
-two.original = {
-bracketright.tf.ss14 = -153;
-colon.figures = -70;
-colon.figures.tf.ss14 = -149;
-degree = -108;
-ordfeminine = -49;
-ordmasculine = -49;
-};
 two = {
 colon.figures.lf = -63;
 degree = -37;
@@ -54055,6 +54074,14 @@ northEastArrow.case = -80;
 northEastArrow.smcp = -92;
 percent.lf = 0;
 plus.lf = -122;
+};
+two.original = {
+bracketright.tf.ss14 = -153;
+colon.figures = -70;
+colon.figures.tf.ss14 = -149;
+degree = -108;
+ordfeminine = -49;
+ordmasculine = -49;
 };
 two.smcp = {
 comma = 0;
@@ -54681,17 +54708,6 @@ period.tf.ss14 = -164;
 "ustraight-cy.smcp" = -37;
 "ya-cy.smcp" = 16;
 };
-zero.original = {
-baht = -20;
-bracketright = -58;
-bracketright.tf.ss14 = -195;
-colon.figures = -75;
-colon.figures.tf.ss14 = -166;
-degree = -136;
-multiply = -49;
-ordmasculine = -55;
-question = -105;
-};
 zero = {
 bracketright.tf.ss14 = -152;
 colon.figures.lf = -73;
@@ -54703,6 +54719,17 @@ hyphentwo.case = -50;
 hyphentwo.smcp = -51;
 percent.lf = 0;
 plus.lf = -50;
+};
+zero.original = {
+baht = -20;
+bracketright = -58;
+bracketright.tf.ss14 = -195;
+colon.figures = -75;
+colon.figures.tf.ss14 = -166;
+degree = -136;
+multiply = -49;
+ordmasculine = -55;
+question = -105;
 };
 zero.smcp = {
 colon.tf.ss14 = -159;
@@ -66917,8 +66944,8 @@ gbreve.smcp = -32;
 j.smcp.cv01 = 0;
 ninesuperior = -154;
 northEastArrow.case = -158;
-one.original = 0;
 one = 0;
+one.original = 0;
 quotedbl = -196;
 quotedblleft.smcp = -135;
 registered = -173;
@@ -66926,8 +66953,8 @@ rightArrow.case = -61;
 rightArrow.smcp = -44;
 ringhalfleft = -132;
 ringhalfright = -132;
-seven.original = -68;
 seven = -46;
+seven.original = -68;
 threesuperior = -115;
 trademark = -195;
 w.smcp = -121;
@@ -67940,8 +67967,8 @@ AE = -10;
 H = 0;
 Z = 12;
 ampersand = -27;
-four.original = -99;
 four = -45;
+four.original = -99;
 icircumflex = 46;
 itilde = 46;
 less = -167;
@@ -68174,8 +68201,8 @@ emacron = -50;
 endash = -82;
 equal.lf = -300;
 five.original = -78;
-four.original = -149;
 four = -96;
+four.original = -149;
 greater = -149;
 iacute = -20;
 iacute_j.loclNLD = -18;
@@ -68220,8 +68247,8 @@ at = -84;
 eacute = -57;
 eopen = -108;
 five.original = -80;
-four.original = -160;
 four = -86;
+four.original = -160;
 greater = -149;
 less = -166;
 nine.original = -81;
@@ -68250,8 +68277,8 @@ endash = -98;
 eopen = -109;
 equal.lf = -277;
 five.original = -59;
-four.original = -91;
 four = -68;
+four.original = -91;
 greater = -134;
 less = -162;
 less.lf = -153;
@@ -69082,13 +69109,13 @@ V = -82;
 W = -79;
 Y = -82;
 five.original = 0;
-one.original = 0;
 one = 0;
+one.original = 0;
 parenleft = -63;
 parenright = -117;
 three.original = 0;
-zero.original = -34;
 zero = 0;
+zero.original = -34;
 };
 colon.figures = {
 five.original = -48;
@@ -69126,12 +69153,12 @@ zero.zero.original = -176;
 comma = {
 eight.original = 0;
 emdash = -140;
-five.original = 20;
 five = 8;
+five.original = 20;
 five.smcp = 12;
 four.original = 30;
-nine.original = -3;
 nine = 0;
+nine.original = -3;
 quotedbl = -140;
 quotedblleft = -140;
 quotedblright = -140;
@@ -69140,36 +69167,36 @@ quoteleft = -140;
 quoteright = -140;
 quoteright.smcp = -140;
 quotesingle = -131;
-seven.original = -32;
 seven = -81;
+seven.original = -32;
 seven.smcp = -65;
-six.original = -21;
 six = -5;
-three.original = 21;
+six.original = -21;
 three = 6;
+three.original = 21;
 three.smcp = 11;
-two.original = 19;
 two = 14;
-zero.original = -16;
+two.original = 19;
 zero = -20;
+zero.original = -16;
 zero.zero = -20;
 };
 comma.tf.ss14 = {
-eight.original = -162;
 eight = -144;
+eight.original = -162;
 eight.smcp = -139;
 emdash = -307;
-five.original = -141;
 five = -135;
+five.original = -141;
 five.smcp = -131;
-four.original = -133;
 four = -158;
+four.original = -133;
 four.smcp = -177;
-nine.original = -183;
 nine = -177;
+nine.original = -183;
 nine.smcp = -177;
-one.original = -165;
 one = -159;
+one.original = -165;
 one.smcp = -160;
 parenright.tf.ss14 = -217;
 quotedbl = -243;
@@ -69178,23 +69205,23 @@ quotedblright = -259;
 quotedblright.smcp = -259;
 quoteright = -140;
 quotesingle = -131;
-seven.original = -222;
 seven = -226;
+seven.original = -222;
 seven.smcp = -225;
-six.original = -196;
 six = -186;
+six.original = -196;
 six.smcp = -181;
-three.original = -140;
 three = -137;
+three.original = -140;
 three.smcp = -133;
-two.original = -143;
 two = -134;
+two.original = -143;
 two.smcp = -139;
-zero.original = -194;
 zero = -194;
-zero.zero = -194;
+zero.original = -194;
 zero.smcp = -188;
 zero.smcp.zero = -188;
+zero.zero = -194;
 zero.zero.original = -183;
 };
 d = {
@@ -69327,8 +69354,8 @@ comma.tf.ss14 = -153;
 d = -151;
 endash = -153;
 five.original = -153;
-four.original = -153;
 four = -153;
+four.original = -153;
 hyphen = -153;
 hyphentwo = -153;
 nine.original = -153;
@@ -69376,13 +69403,13 @@ period.tf.ss14 = -160;
 "u-cy.smcp" = -24;
 };
 dollar = {
-eight.original = 112;
 eight = 112;
+eight.original = 112;
 five = 56;
-one.original = -9;
 one = 34;
-six.original = 40;
+one.original = -9;
 six = 32;
+six.original = 40;
 three = 41;
 two = 20;
 };
@@ -69495,12 +69522,6 @@ ehookabove = {
 comma.tf.ss14 = -168;
 period.tf.ss14 = -168;
 };
-eight.original = {
-bracketright.tf.ss14 = -55;
-colon.figures = -29;
-colon.figures.tf.ss14 = -139;
-degree = -34;
-};
 eight = {
 colon.tf.ss14 = -146;
 comma.tf.ss14 = -149;
@@ -69530,6 +69551,12 @@ six = 24;
 three = 41;
 two = 20;
 zero = 24;
+};
+eight.original = {
+bracketright.tf.ss14 = -55;
+colon.figures = -29;
+colon.figures.tf.ss14 = -139;
+degree = -34;
 };
 eight.smcp = {
 comma.tf.ss14 = -143;
@@ -69999,19 +70026,19 @@ quotesingle = 0;
 saltillo = -57;
 thorn = 2;
 };
-five.original = {
-bracketright.tf.ss14 = -79;
-colon.figures = -31;
-colon.figures.tf.ss14 = -156;
-degree = -59;
-ordmasculine = -23;
-};
 five = {
 degree = -20;
 eight = 45;
 hyphen.case = 47;
 hyphen.smcp = 40;
 percent.lf = 0;
+};
+five.original = {
+bracketright.tf.ss14 = -79;
+colon.figures = -31;
+colon.figures.tf.ss14 = -156;
+degree = -59;
+ordmasculine = -23;
 };
 five.smcp = {
 comma.tf.ss14 = -149;
@@ -70036,14 +70063,6 @@ thorn = 0;
 florin = {
 e = -107;
 o = -109;
-};
-four.original = {
-bracketright.tf.ss14 = -87;
-colon.figures = -29;
-colon.figures.tf.ss14 = -142;
-degree = -153;
-ordfeminine = -82;
-ordmasculine = -77;
 };
 four = {
 colon.tf.ss14 = -156;
@@ -70072,6 +70091,14 @@ plus.lf = -139;
 semicolon.tf.ss14 = -158;
 seven = 0;
 three = 7;
+};
+four.original = {
+bracketright.tf.ss14 = -87;
+colon.figures = -29;
+colon.figures.tf.ss14 = -142;
+degree = -153;
+ordfeminine = -82;
+ordmasculine = -77;
 };
 four.smcp = {
 comma.tf.ss14 = -134;
@@ -71220,13 +71247,6 @@ z.smcp = 0;
 nhookleft.smcp.cv01 = {
 u.smcp = -39;
 };
-nine.original = {
-bracketright.tf.ss14 = -97;
-colon.figures = -41;
-colon.figures.tf.ss14 = -166;
-degree = -153;
-ordmasculine = -61;
-};
 nine = {
 colon.figures.lf = -24;
 colon.tf.ss14 = -149;
@@ -71255,6 +71275,13 @@ six = 0;
 slash = -21;
 three = 20;
 zero = 0;
+};
+nine.original = {
+bracketright.tf.ss14 = -97;
+colon.figures = -41;
+colon.figures.tf.ss14 = -166;
+degree = -153;
+ordmasculine = -61;
 };
 nine.smcp = {
 comma = -25;
@@ -71297,8 +71324,8 @@ egrave = -42;
 five.original = -69;
 four.original = -159;
 nine.original = -108;
-one.original = -76;
 one = -8;
+one.original = -76;
 q = -93;
 three.original = -67;
 two.original = -82;
@@ -71456,19 +71483,6 @@ parenright = 25;
 omacron = {
 parenright = -70;
 };
-one.original = {
-bracketright = -28;
-bracketright.tf.ss14 = -158;
-colon.figures = -71;
-colon.figures.tf.ss14 = -188;
-degree = -110;
-equal = -89;
-one.original = 0;
-ordfeminine = -45;
-ordmasculine = -44;
-parenleft = -85;
-zero.zero.original = -30;
-};
 one = {
 bracketright.tf.ss14 = -48;
 colon.figures.lf = -33;
@@ -71506,6 +71520,19 @@ seven = 0;
 six = 0;
 two = 21;
 zero = 0;
+};
+one.original = {
+bracketright = -28;
+bracketright.tf.ss14 = -158;
+colon.figures = -71;
+colon.figures.tf.ss14 = -188;
+degree = -110;
+equal = -89;
+one.original = 0;
+ordfeminine = -45;
+ordmasculine = -44;
+parenleft = -85;
+zero.zero.original = -30;
 };
 one.smcp = {
 colon.figures.smcp = -47;
@@ -71922,8 +71949,8 @@ Ldot = -40;
 l = -33;
 ldot = -33;
 m = -33;
-one.original = -48;
 one = -42;
+one.original = -48;
 parenright = -141;
 s = -16;
 };
@@ -72377,13 +72404,6 @@ parenright = -67;
 semicolon.tf.ss14 = {
 parenright.tf.ss14 = -216;
 };
-seven.original = {
-bracketright.tf.ss14 = -63;
-colon.figures = -31;
-colon.figures.tf.ss14 = -122;
-degree = -51;
-zero.zero.original = -19;
-};
 seven = {
 colon.figures.lf = -29;
 degree = 12;
@@ -72397,6 +72417,13 @@ northEastArrow.smcp = -157;
 plus.lf = -175;
 upArrow.case = -46;
 upArrow.smcp = -57;
+};
+seven.original = {
+bracketright.tf.ss14 = -63;
+colon.figures = -31;
+colon.figures.tf.ss14 = -122;
+degree = -51;
+zero.zero.original = -19;
 };
 seven.smcp = {
 a.smcp = -62;
@@ -72458,14 +72485,6 @@ period.tf.ss14 = -155;
 "ustraight-cy.smcp" = -109;
 "yeru-cy.smcp" = -2;
 };
-six.original = {
-bracketright.tf.ss14 = -74;
-colon.figures = -48;
-colon.figures.tf.ss14 = -163;
-degree = -36;
-endash = 0;
-six.original = 0;
-};
 six = {
 bracketright.tf.ss14 = -61;
 colon = -20;
@@ -72492,6 +72511,14 @@ period = 0;
 period.tf.ss14 = -176;
 semicolon.tf.ss14 = -168;
 zero = 11;
+};
+six.original = {
+bracketright.tf.ss14 = -74;
+colon.figures = -48;
+colon.figures.tf.ss14 = -163;
+degree = -36;
+endash = 0;
+six.original = 0;
 };
 six.smcp = {
 colon.tf.ss14 = -168;
@@ -72696,13 +72723,6 @@ y.smcp = -82;
 yacute.smcp = -82;
 ymacron.smcp = -82;
 };
-three.original = {
-bracketright.tf.ss14 = -76;
-colon.figures = -31;
-colon.figures.tf.ss14 = -173;
-degree = -153;
-ordmasculine = -32;
-};
 three = {
 colon.tf.ss14 = -148;
 comma.tf.ss14 = -152;
@@ -72730,6 +72750,13 @@ six = 23;
 three = 39;
 two = 20;
 zero = 24;
+};
+three.original = {
+bracketright.tf.ss14 = -76;
+colon.figures = -31;
+colon.figures.tf.ss14 = -173;
+degree = -153;
+ordmasculine = -32;
 };
 three.smcp = {
 colon.tf.ss14 = -142;
@@ -72817,14 +72844,6 @@ quotedblright.smcp = -188;
 quoteright.smcp = -140;
 "u-cy.smcp" = -11;
 };
-two.original = {
-bracketright.tf.ss14 = -146;
-colon.figures = -29;
-colon.figures.tf.ss14 = -147;
-degree = -153;
-ordfeminine = -33;
-ordmasculine = -39;
-};
 two = {
 colon.figures.lf = 0;
 degree = -31;
@@ -72838,6 +72857,14 @@ northEastArrow.case = -97;
 northEastArrow.smcp = -74;
 percent.lf = 0;
 plus.lf = -156;
+};
+two.original = {
+bracketright.tf.ss14 = -146;
+colon.figures = -29;
+colon.figures.tf.ss14 = -147;
+degree = -153;
+ordfeminine = -33;
+ordmasculine = -39;
 };
 two.smcp = {
 comma = 7;
@@ -73464,17 +73491,6 @@ period.tf.ss14 = -153;
 "ustraight-cy.smcp" = -22;
 "ya-cy.smcp" = 18;
 };
-zero.original = {
-baht = -31;
-bracketright = -36;
-bracketright.tf.ss14 = -173;
-colon.figures = -52;
-colon.figures.tf.ss14 = -174;
-degree = -153;
-multiply = -56;
-ordmasculine = -58;
-question = -123;
-};
 zero = {
 bracketright.tf.ss14 = -61;
 colon.figures.lf = -23;
@@ -73486,6 +73502,17 @@ hyphentwo.case = -23;
 hyphentwo.smcp = -25;
 percent.lf = 0;
 plus.lf = -70;
+};
+zero.original = {
+baht = -31;
+bracketright = -36;
+bracketright.tf.ss14 = -173;
+colon.figures = -52;
+colon.figures.tf.ss14 = -174;
+degree = -153;
+multiply = -56;
+ordmasculine = -58;
+question = -123;
 };
 zero.smcp = {
 colon.tf.ss14 = -163;
@@ -85700,8 +85727,8 @@ gbreve.smcp = -27;
 j.smcp.cv01 = 0;
 ninesuperior = -149;
 northEastArrow.case = -182;
-one.original = 0;
 one = 11;
+one.original = 0;
 quotedbl = -180;
 quotedblleft.smcp = -94;
 registered = -142;
@@ -85709,8 +85736,8 @@ rightArrow.case = -60;
 rightArrow.smcp = -24;
 ringhalfleft = -161;
 ringhalfright = -161;
-seven.original = -66;
 seven = -79;
+seven.original = -66;
 threesuperior = -98;
 trademark = -209;
 w.smcp = -175;
@@ -86723,8 +86750,8 @@ AE = -82;
 H = 0;
 Z = 0;
 ampersand = -35;
-four.original = -133;
 four = -95;
+four.original = -133;
 icircumflex = 41;
 itilde = 37;
 less = -147;
@@ -86957,8 +86984,8 @@ emacron = -42;
 endash = -65;
 equal.lf = -288;
 five.original = -123;
-four.original = -198;
 four = -143;
+four.original = -198;
 greater = -152;
 iacute = -46;
 iacute_j.loclNLD = -46;
@@ -87003,8 +87030,8 @@ at = -136;
 eacute = -90;
 eopen = -73;
 five.original = -119;
-four.original = -181;
 four = -128;
+four.original = -181;
 greater = -151;
 less = -146;
 nine.original = -97;
@@ -87033,8 +87060,8 @@ endash = -109;
 eopen = -110;
 equal.lf = -299;
 five.original = -128;
-four.original = -131;
 four = -136;
+four.original = -131;
 greater = -171;
 less = -187;
 less.lf = -149;
@@ -87865,13 +87892,13 @@ V = -90;
 W = -83;
 Y = -91;
 five.original = -20;
-one.original = -29;
 one = -21;
+one.original = -29;
 parenleft = -79;
 parenright = -139;
 three.original = 0;
-zero.original = -47;
 zero = -15;
+zero.original = -47;
 };
 colon.figures = {
 five.original = -50;
@@ -87909,12 +87936,12 @@ zero.zero.original = -174;
 comma = {
 eight.original = 0;
 emdash = -169;
-five.original = 14;
 five = 3;
+five.original = 14;
 five.smcp = 7;
 four.original = 44;
-nine.original = 0;
 nine = 0;
+nine.original = 0;
 quotedbl = -169;
 quotedblleft = -169;
 quotedblright = -169;
@@ -87923,36 +87950,36 @@ quoteleft = -169;
 quoteright = -169;
 quoteright.smcp = -169;
 quotesingle = -164;
-seven.original = -49;
 seven = -62;
+seven.original = -49;
 seven.smcp = -64;
-six.original = -26;
 six = -2;
-three.original = 15;
+six.original = -26;
 three = 0;
+three.original = 15;
 three.smcp = 5;
-two.original = 22;
 two = 22;
-zero.original = -28;
+two.original = 22;
 zero = -14;
+zero.original = -28;
 zero.zero = -14;
 };
 comma.tf.ss14 = {
-eight.original = -168;
 eight = -145;
+eight.original = -168;
 eight.smcp = -142;
 emdash = -357;
-five.original = -141;
 five = -129;
+five.original = -141;
 five.smcp = -127;
-four.original = -149;
 four = -174;
+four.original = -149;
 four.smcp = -182;
-nine.original = -201;
 nine = -191;
+nine.original = -201;
 nine.smcp = -188;
-one.original = -197;
 one = -177;
+one.original = -197;
 one.smcp = -177;
 parenright.tf.ss14 = -252;
 quotedbl = -283;
@@ -87961,23 +87988,23 @@ quotedblright = -296;
 quotedblright.smcp = -296;
 quoteright = -169;
 quotesingle = -164;
-seven.original = -242;
 seven = -248;
+seven.original = -242;
 seven.smcp = -247;
-six.original = -205;
 six = -194;
+six.original = -205;
 six.smcp = -187;
-three.original = -140;
 three = -130;
+three.original = -140;
 three.smcp = -128;
-two.original = -169;
 two = -138;
+two.original = -169;
 two.smcp = -139;
-zero.original = -203;
 zero = -203;
-zero.zero = -203;
+zero.original = -203;
 zero.smcp = -196;
 zero.smcp.zero = -196;
+zero.zero = -203;
 zero.zero.original = -190;
 };
 d = {
@@ -88110,8 +88137,8 @@ comma.tf.ss14 = -148;
 d = -148;
 endash = -148;
 five.original = -148;
-four.original = -148;
 four = -148;
+four.original = -148;
 hyphen = -112;
 hyphentwo = -148;
 nine.original = -148;
@@ -88159,13 +88186,13 @@ period.tf.ss14 = -165;
 "u-cy.smcp" = -31;
 };
 dollar = {
-eight.original = 19;
 eight = 27;
+eight.original = 19;
 five = 23;
-one.original = -25;
 one = -2;
-six.original = 7;
+one.original = -25;
 six = 15;
+six.original = 7;
 three = 20;
 two = 0;
 };
@@ -88278,12 +88305,6 @@ ehookabove = {
 comma.tf.ss14 = -170;
 period.tf.ss14 = -170;
 };
-eight.original = {
-bracketright.tf.ss14 = -161;
-colon.figures = -37;
-colon.figures.tf.ss14 = -150;
-degree = -23;
-};
 eight = {
 colon.tf.ss14 = -143;
 comma.tf.ss14 = -158;
@@ -88313,6 +88334,12 @@ six = 0;
 three = 25;
 two = 0;
 zero = 0;
+};
+eight.original = {
+bracketright.tf.ss14 = -161;
+colon.figures = -37;
+colon.figures.tf.ss14 = -150;
+degree = -23;
 };
 eight.smcp = {
 comma.tf.ss14 = -152;
@@ -88782,19 +88809,19 @@ quotesingle = 0;
 saltillo = -68;
 thorn = -9;
 };
-five.original = {
-bracketright.tf.ss14 = -162;
-colon.figures = -35;
-colon.figures.tf.ss14 = -156;
-degree = -56;
-ordmasculine = -42;
-};
 five = {
 degree = 0;
 eight = 21;
 hyphen.case = 82;
 hyphen.smcp = 82;
 percent.lf = -25;
+};
+five.original = {
+bracketright.tf.ss14 = -162;
+colon.figures = -35;
+colon.figures.tf.ss14 = -156;
+degree = -56;
+ordmasculine = -42;
 };
 five.smcp = {
 comma.tf.ss14 = -149;
@@ -88819,14 +88846,6 @@ thorn = -10;
 florin = {
 e = -97;
 o = -97;
-};
-four.original = {
-bracketright.tf.ss14 = -173;
-colon.figures = -52;
-colon.figures.tf.ss14 = -157;
-degree = -148;
-ordfeminine = -112;
-ordmasculine = -111;
 };
 four = {
 colon.tf.ss14 = -155;
@@ -88855,6 +88874,14 @@ plus.lf = -123;
 semicolon.tf.ss14 = -155;
 seven = 0;
 three = 15;
+};
+four.original = {
+bracketright.tf.ss14 = -173;
+colon.figures = -52;
+colon.figures.tf.ss14 = -157;
+degree = -148;
+ordfeminine = -112;
+ordmasculine = -111;
 };
 four.smcp = {
 comma.tf.ss14 = -156;
@@ -90003,13 +90030,6 @@ z.smcp = -23;
 nhookleft.smcp.cv01 = {
 u.smcp = -74;
 };
-nine.original = {
-bracketright.tf.ss14 = -178;
-colon.figures = -49;
-colon.figures.tf.ss14 = -173;
-degree = -148;
-ordmasculine = -90;
-};
 nine = {
 colon.figures.lf = -25;
 colon.tf.ss14 = -145;
@@ -90038,6 +90058,13 @@ six = 0;
 slash = -45;
 three = 0;
 zero = 11;
+};
+nine.original = {
+bracketright.tf.ss14 = -178;
+colon.figures = -49;
+colon.figures.tf.ss14 = -173;
+degree = -148;
+ordmasculine = -90;
 };
 nine.smcp = {
 comma = -13;
@@ -90080,8 +90107,8 @@ egrave = -88;
 five.original = -134;
 four.original = -157;
 nine.original = -116;
-one.original = -135;
 one = -72;
+one.original = -135;
 q = -98;
 three.original = -88;
 two.original = -81;
@@ -90239,19 +90266,6 @@ parenright = -55;
 omacron = {
 parenright = -150;
 };
-one.original = {
-bracketright = -54;
-bracketright.tf.ss14 = -198;
-colon.figures = -82;
-colon.figures.tf.ss14 = -200;
-degree = -122;
-equal = -138;
-one.original = 0;
-ordfeminine = -77;
-ordmasculine = -77;
-parenleft = -96;
-zero.zero.original = -36;
-};
 one = {
 bracketright.tf.ss14 = -176;
 colon.figures.lf = -46;
@@ -90289,6 +90303,19 @@ seven = -4;
 six = 0;
 two = 0;
 zero = 0;
+};
+one.original = {
+bracketright = -54;
+bracketright.tf.ss14 = -198;
+colon.figures = -82;
+colon.figures.tf.ss14 = -200;
+degree = -122;
+equal = -138;
+one.original = 0;
+ordfeminine = -77;
+ordmasculine = -77;
+parenleft = -96;
+zero.zero.original = -36;
 };
 one.smcp = {
 colon.figures.smcp = -60;
@@ -90705,8 +90732,8 @@ Ldot = -64;
 l = -58;
 ldot = -58;
 m = -69;
-one.original = -95;
 one = -73;
+one.original = -95;
 parenright = -173;
 s = -49;
 };
@@ -91160,13 +91187,6 @@ parenright = -85;
 semicolon.tf.ss14 = {
 parenright.tf.ss14 = -252;
 };
-seven.original = {
-bracketright.tf.ss14 = -155;
-colon.figures = -56;
-colon.figures.tf.ss14 = -145;
-degree = -38;
-zero.zero.original = -20;
-};
 seven = {
 colon.figures.lf = -35;
 degree = 29;
@@ -91180,6 +91200,13 @@ northEastArrow.smcp = -137;
 plus.lf = -168;
 upArrow.case = -88;
 upArrow.smcp = -105;
+};
+seven.original = {
+bracketright.tf.ss14 = -155;
+colon.figures = -56;
+colon.figures.tf.ss14 = -145;
+degree = -38;
+zero.zero.original = -20;
 };
 seven.smcp = {
 a.smcp = -104;
@@ -91241,14 +91268,6 @@ period.tf.ss14 = -178;
 "ustraight-cy.smcp" = -173;
 "yeru-cy.smcp" = 0;
 };
-six.original = {
-bracketright.tf.ss14 = -180;
-colon.figures = -56;
-colon.figures.tf.ss14 = -171;
-degree = -42;
-endash = 0;
-six.original = 0;
-};
 six = {
 bracketright.tf.ss14 = -160;
 colon = -28;
@@ -91275,6 +91294,14 @@ period = 0;
 period.tf.ss14 = -189;
 semicolon.tf.ss14 = -173;
 zero = 0;
+};
+six.original = {
+bracketright.tf.ss14 = -180;
+colon.figures = -56;
+colon.figures.tf.ss14 = -171;
+degree = -42;
+endash = 0;
+six.original = 0;
 };
 six.smcp = {
 colon.tf.ss14 = -163;
@@ -91479,13 +91506,6 @@ y.smcp = -84;
 yacute.smcp = -80;
 ymacron.smcp = -84;
 };
-three.original = {
-bracketright.tf.ss14 = -161;
-colon.figures = -40;
-colon.figures.tf.ss14 = -177;
-degree = -148;
-ordmasculine = -65;
-};
 three = {
 colon.tf.ss14 = -142;
 comma.tf.ss14 = -156;
@@ -91513,6 +91533,13 @@ six = 0;
 three = 26;
 two = 0;
 zero = 0;
+};
+three.original = {
+bracketright.tf.ss14 = -161;
+colon.figures = -40;
+colon.figures.tf.ss14 = -177;
+degree = -148;
+ordmasculine = -65;
 };
 three.smcp = {
 colon.tf.ss14 = -134;
@@ -91600,14 +91627,6 @@ quotedblright.smcp = -200;
 quoteright.smcp = -169;
 "u-cy.smcp" = -43;
 };
-two.original = {
-bracketright.tf.ss14 = -170;
-colon.figures = -32;
-colon.figures.tf.ss14 = -155;
-degree = -148;
-ordfeminine = -60;
-ordmasculine = -70;
-};
 two = {
 colon.figures.lf = 0;
 degree = -26;
@@ -91621,6 +91640,14 @@ northEastArrow.case = -71;
 northEastArrow.smcp = -75;
 percent.lf = 0;
 plus.lf = -123;
+};
+two.original = {
+bracketright.tf.ss14 = -170;
+colon.figures = -32;
+colon.figures.tf.ss14 = -155;
+degree = -148;
+ordfeminine = -60;
+ordmasculine = -70;
 };
 two.smcp = {
 comma = 0;
@@ -92247,17 +92274,6 @@ period.tf.ss14 = -168;
 "ustraight-cy.smcp" = -28;
 "ya-cy.smcp" = 26;
 };
-zero.original = {
-baht = -33;
-bracketright = -36;
-bracketright.tf.ss14 = -191;
-colon.figures = -56;
-colon.figures.tf.ss14 = -184;
-degree = -148;
-multiply = -42;
-ordmasculine = -89;
-question = -143;
-};
 zero = {
 bracketright.tf.ss14 = -158;
 colon.figures.lf = -28;
@@ -92269,6 +92285,17 @@ hyphentwo.case = -46;
 hyphentwo.smcp = -50;
 percent.lf = -12;
 plus.lf = -70;
+};
+zero.original = {
+baht = -33;
+bracketright = -36;
+bracketright.tf.ss14 = -191;
+colon.figures = -56;
+colon.figures.tf.ss14 = -184;
+degree = -148;
+multiply = -42;
+ordmasculine = -89;
+question = -143;
 };
 zero.smcp = {
 colon.tf.ss14 = -162;
@@ -104483,8 +104510,8 @@ gbreve.smcp = -38;
 j.smcp.cv01 = -111;
 ninesuperior = -142;
 northEastArrow.case = -140;
-one.original = -48;
 one = -31;
+one.original = -48;
 quotedbl = -104;
 quotedblleft.smcp = -89;
 registered = -132;
@@ -104492,8 +104519,8 @@ rightArrow.case = -72;
 rightArrow.smcp = -52;
 ringhalfleft = -151;
 ringhalfright = -151;
-seven.original = -72;
 seven = -66;
+seven.original = -72;
 threesuperior = -121;
 trademark = -202;
 w.smcp = -147;
@@ -105507,8 +105534,8 @@ AE = -17;
 H = 0;
 Z = 32;
 ampersand = -19;
-four.original = -61;
 four = -23;
+four.original = -61;
 icircumflex = 29;
 itilde = 51;
 less = -152;
@@ -105741,8 +105768,8 @@ emacron = -36;
 endash = -51;
 equal.lf = -100;
 five.original = -99;
-four.original = -135;
 four = -63;
+four.original = -135;
 greater = -109;
 iacute = -34;
 iacute_j.loclNLD = -34;
@@ -105787,8 +105814,8 @@ at = -115;
 eacute = -98;
 eopen = -100;
 five.original = -100;
-four.original = -120;
 four = -60;
+four.original = -120;
 greater = -105;
 less = -169;
 nine.original = -99;
@@ -105817,8 +105844,8 @@ endash = -77;
 eopen = -124;
 equal.lf = -143;
 five.original = -108;
-four.original = -113;
 four = -104;
+four.original = -113;
 greater = -127;
 less = -224;
 less.lf = -177;
@@ -106649,13 +106676,13 @@ V = -123;
 W = -120;
 Y = -122;
 five.original = -3;
-one.original = 0;
 one = -51;
+one.original = 0;
 parenleft = -37;
 parenright = -101;
 three.original = 0;
-zero.original = -18;
 zero = 0;
+zero.original = -18;
 };
 colon.figures = {
 five.original = -49;
@@ -106693,12 +106720,12 @@ zero.zero.original = -154;
 comma = {
 eight.original = 9;
 emdash = -163;
-five.original = 50;
 five = 40;
+five.original = 50;
 five.smcp = 43;
 four.original = 33;
-nine.original = 0;
 nine = -8;
+nine.original = 0;
 quotedbl = -163;
 quotedblleft = -163;
 quotedblright = -163;
@@ -106707,36 +106734,36 @@ quoteleft = -163;
 quoteright = -163;
 quoteright.smcp = -163;
 quotesingle = -94;
-seven.original = -13;
 seven = -47;
+seven.original = -13;
 seven.smcp = -47;
-six.original = -13;
 six = -14;
-three.original = 49;
+six.original = -13;
 three = 40;
+three.original = 49;
 three.smcp = 40;
-two.original = 0;
 two = 0;
-zero.original = -11;
+two.original = 0;
 zero = -21;
+zero.original = -11;
 zero.zero = -21;
 };
 comma.tf.ss14 = {
-eight.original = -133;
 eight = -135;
+eight.original = -133;
 eight.smcp = -131;
 emdash = -303;
-five.original = -101;
 five = -115;
+five.original = -101;
 five.smcp = -114;
-four.original = -102;
 four = -183;
+four.original = -102;
 four.smcp = -192;
-nine.original = -141;
 nine = -157;
+nine.original = -141;
 nine.smcp = -156;
-one.original = -160;
 one = -160;
+one.original = -160;
 one.smcp = -160;
 parenright.tf.ss14 = -219;
 quotedbl = -178;
@@ -106745,23 +106772,23 @@ quotedblright = -290;
 quotedblright.smcp = -290;
 quoteright = -163;
 quotesingle = -94;
-seven.original = -197;
 seven = -219;
+seven.original = -197;
 seven.smcp = -219;
-six.original = -162;
 six = -164;
+six.original = -162;
 six.smcp = -157;
-three.original = -101;
 three = -115;
+three.original = -101;
 three.smcp = -115;
-two.original = -151;
 two = -135;
+two.original = -151;
 two.smcp = -142;
-zero.original = -159;
 zero = -175;
-zero.zero = -175;
+zero.original = -159;
 zero.smcp = -166;
 zero.smcp.zero = -166;
+zero.zero = -175;
 zero.zero.original = -159;
 };
 d = {
@@ -106894,8 +106921,8 @@ comma.tf.ss14 = -166;
 d = -139;
 endash = -166;
 five.original = -111;
-four.original = -166;
 four = -90;
+four.original = -166;
 hyphen = -166;
 hyphentwo = -166;
 nine.original = -134;
@@ -106943,13 +106970,13 @@ period.tf.ss14 = -143;
 "u-cy.smcp" = -14;
 };
 dollar = {
-eight.original = 36;
 eight = 32;
+eight.original = 36;
 five = 32;
-one.original = -11;
 one = 0;
-six.original = 27;
+one.original = -11;
 six = 26;
+six.original = 27;
 three = 40;
 two = 16;
 };
@@ -107062,12 +107089,6 @@ ehookabove = {
 comma.tf.ss14 = -158;
 period.tf.ss14 = -166;
 };
-eight.original = {
-bracketright.tf.ss14 = -133;
-colon.figures = -35;
-colon.figures.tf.ss14 = -116;
-degree = 0;
-};
 eight = {
 colon.tf.ss14 = -137;
 comma.tf.ss14 = -139;
@@ -107097,6 +107118,12 @@ six = 18;
 three = 24;
 two = 9;
 zero = 15;
+};
+eight.original = {
+bracketright.tf.ss14 = -133;
+colon.figures = -35;
+colon.figures.tf.ss14 = -116;
+degree = 0;
 };
 eight.smcp = {
 comma.tf.ss14 = -137;
@@ -107566,19 +107593,19 @@ quotesingle = 0;
 saltillo = -94;
 thorn = -61;
 };
-five.original = {
-bracketright.tf.ss14 = -112;
-colon.figures = -33;
-colon.figures.tf.ss14 = -115;
-degree = -87;
-ordmasculine = -47;
-};
 five = {
 degree = -19;
 eight = 37;
 hyphen.case = 16;
 hyphen.smcp = 22;
 percent.lf = -38;
+};
+five.original = {
+bracketright.tf.ss14 = -112;
+colon.figures = -33;
+colon.figures.tf.ss14 = -115;
+degree = -87;
+ordmasculine = -47;
 };
 five.smcp = {
 comma.tf.ss14 = -131;
@@ -107603,14 +107630,6 @@ thorn = -55;
 florin = {
 e = -105;
 o = -105;
-};
-four.original = {
-bracketright.tf.ss14 = -138;
-colon.figures = -56;
-colon.figures.tf.ss14 = -145;
-degree = -123;
-ordfeminine = -59;
-ordmasculine = -63;
 };
 four = {
 colon.tf.ss14 = -136;
@@ -107639,6 +107658,14 @@ plus.lf = -57;
 semicolon.tf.ss14 = -124;
 seven = 0;
 three = 27;
+};
+four.original = {
+bracketright.tf.ss14 = -138;
+colon.figures = -56;
+colon.figures.tf.ss14 = -145;
+degree = -123;
+ordfeminine = -59;
+ordmasculine = -63;
 };
 four.smcp = {
 comma.tf.ss14 = -125;
@@ -108787,13 +108814,6 @@ z.smcp = -30;
 nhookleft.smcp.cv01 = {
 u.smcp = -131;
 };
-nine.original = {
-bracketright.tf.ss14 = -144;
-colon.figures = -26;
-colon.figures.tf.ss14 = -137;
-degree = -148;
-ordmasculine = -62;
-};
 nine = {
 colon.figures.lf = -28;
 colon.tf.ss14 = -133;
@@ -108822,6 +108842,13 @@ six = 0;
 slash = -21;
 three = 7;
 zero = 20;
+};
+nine.original = {
+bracketright.tf.ss14 = -144;
+colon.figures = -26;
+colon.figures.tf.ss14 = -137;
+degree = -148;
+ordmasculine = -62;
 };
 nine.smcp = {
 comma = -27;
@@ -108864,8 +108891,8 @@ egrave = -6;
 five.original = 0;
 four.original = -28;
 nine.original = -8;
-one.original = -16;
 one = 0;
+one.original = -16;
 q = -12;
 three.original = 0;
 two.original = -3;
@@ -109023,19 +109050,6 @@ parenright = 0;
 omacron = {
 parenright = -51;
 };
-one.original = {
-bracketright = 0;
-bracketright.tf.ss14 = -169;
-colon.figures = -82;
-colon.figures.tf.ss14 = -178;
-degree = -124;
-equal = -72;
-one.original = 0;
-ordfeminine = -73;
-ordmasculine = -78;
-parenleft = -50;
-zero.zero.original = -24;
-};
 one = {
 bracketright.tf.ss14 = -136;
 colon.figures.lf = -75;
@@ -109073,6 +109087,19 @@ seven = 0;
 six = 0;
 two = 0;
 zero = 0;
+};
+one.original = {
+bracketright = 0;
+bracketright.tf.ss14 = -169;
+colon.figures = -82;
+colon.figures.tf.ss14 = -178;
+degree = -124;
+equal = -72;
+one.original = 0;
+ordfeminine = -73;
+ordmasculine = -78;
+parenleft = -50;
+zero.zero.original = -24;
 };
 one.smcp = {
 colon.figures.smcp = -80;
@@ -109489,8 +109516,8 @@ Ldot = -127;
 l = -97;
 ldot = -97;
 m = -82;
-one.original = -93;
 one = -121;
+one.original = -93;
 parenright = -149;
 s = -56;
 };
@@ -109944,13 +109971,6 @@ parenright = -18;
 semicolon.tf.ss14 = {
 parenright.tf.ss14 = -219;
 };
-seven.original = {
-bracketright.tf.ss14 = -145;
-colon.figures = -37;
-colon.figures.tf.ss14 = -135;
-degree = -75;
-zero.zero.original = 0;
-};
 seven = {
 colon.figures.lf = -54;
 degree = 9;
@@ -109964,6 +109984,13 @@ northEastArrow.smcp = -123;
 plus.lf = -104;
 upArrow.case = -42;
 upArrow.smcp = -63;
+};
+seven.original = {
+bracketright.tf.ss14 = -145;
+colon.figures = -37;
+colon.figures.tf.ss14 = -135;
+degree = -75;
+zero.zero.original = 0;
 };
 seven.smcp = {
 a.smcp = -112;
@@ -110025,14 +110052,6 @@ period.tf.ss14 = -119;
 "ustraight-cy.smcp" = -96;
 "yeru-cy.smcp" = -25;
 };
-six.original = {
-bracketright.tf.ss14 = -141;
-colon.figures = -37;
-colon.figures.tf.ss14 = -131;
-degree = 0;
-endash = 0;
-six.original = 0;
-};
 six = {
 bracketright.tf.ss14 = -147;
 colon = -23;
@@ -110059,6 +110078,14 @@ period = -13;
 period.tf.ss14 = -157;
 semicolon.tf.ss14 = -143;
 zero = 15;
+};
+six.original = {
+bracketright.tf.ss14 = -141;
+colon.figures = -37;
+colon.figures.tf.ss14 = -131;
+degree = 0;
+endash = 0;
+six.original = 0;
 };
 six.smcp = {
 colon.tf.ss14 = -147;
@@ -110263,13 +110290,6 @@ y.smcp = -86;
 yacute.smcp = -86;
 ymacron.smcp = -86;
 };
-three.original = {
-bracketright.tf.ss14 = -118;
-colon.figures = -29;
-colon.figures.tf.ss14 = -142;
-degree = -124;
-ordmasculine = -50;
-};
 three = {
 colon.tf.ss14 = -132;
 comma.tf.ss14 = -139;
@@ -110297,6 +110317,13 @@ six = 27;
 three = 34;
 two = 26;
 zero = 22;
+};
+three.original = {
+bracketright.tf.ss14 = -118;
+colon.figures = -29;
+colon.figures.tf.ss14 = -142;
+degree = -124;
+ordmasculine = -50;
 };
 three.smcp = {
 colon.tf.ss14 = -122;
@@ -110385,14 +110412,6 @@ quotedblright.smcp = -181;
 quoteright.smcp = -163;
 "u-cy.smcp" = -50;
 };
-two.original = {
-bracketright.tf.ss14 = -135;
-colon.figures = -27;
-colon.figures.tf.ss14 = -125;
-degree = -122;
-ordfeminine = -42;
-ordmasculine = -50;
-};
 two = {
 colon.figures.lf = -28;
 degree = 0;
@@ -110406,6 +110425,14 @@ northEastArrow.case = -53;
 northEastArrow.smcp = -66;
 percent.lf = 0;
 plus.lf = -61;
+};
+two.original = {
+bracketright.tf.ss14 = -135;
+colon.figures = -27;
+colon.figures.tf.ss14 = -125;
+degree = -122;
+ordfeminine = -42;
+ordmasculine = -50;
 };
 two.smcp = {
 comma = 30;
@@ -111032,17 +111059,6 @@ period.tf.ss14 = -151;
 "ustraight-cy.smcp" = -28;
 "ya-cy.smcp" = 0;
 };
-zero.original = {
-baht = -67;
-bracketright = 0;
-bracketright.tf.ss14 = -174;
-colon.figures = -33;
-colon.figures.tf.ss14 = -144;
-degree = -152;
-multiply = 13;
-ordmasculine = -61;
-question = -41;
-};
 zero = {
 bracketright.tf.ss14 = -140;
 colon.figures.lf = -30;
@@ -111054,6 +111070,17 @@ hyphentwo.case = -85;
 hyphentwo.smcp = -83;
 percent.lf = -20;
 plus.lf = -23;
+};
+zero.original = {
+baht = -67;
+bracketright = 0;
+bracketright.tf.ss14 = -174;
+colon.figures = -33;
+colon.figures.tf.ss14 = -144;
+degree = -152;
+multiply = 13;
+ordmasculine = -61;
+question = -41;
 };
 zero.smcp = {
 colon.tf.ss14 = -134;
@@ -123268,8 +123295,8 @@ gbreve.smcp = -48;
 j.smcp.cv01 = -26;
 ninesuperior = -149;
 northEastArrow.case = -141;
-one.original = -19;
 one = -30;
+one.original = -19;
 quotedbl = -143;
 quotedblleft.smcp = -120;
 registered = -110;
@@ -123277,8 +123304,8 @@ rightArrow.case = 0;
 rightArrow.smcp = 0;
 ringhalfleft = -187;
 ringhalfright = -187;
-seven.original = -72;
 seven = -84;
+seven.original = -72;
 threesuperior = -120;
 trademark = -193;
 w.smcp = -121;
@@ -124292,8 +124319,8 @@ AE = -19;
 H = 0;
 Z = 33;
 ampersand = 0;
-four.original = -36;
 four = -5;
+four.original = -36;
 icircumflex = 50;
 itilde = 54;
 less = -111;
@@ -124526,8 +124553,8 @@ emacron = -35;
 endash = -138;
 equal.lf = -100;
 five.original = -89;
-four.original = -143;
 four = -75;
+four.original = -143;
 greater = -68;
 iacute = -3;
 iacute_j.loclNLD = -3;
@@ -124572,8 +124599,8 @@ at = -62;
 eacute = -56;
 eopen = -49;
 five.original = -36;
-four.original = -93;
 four = -56;
+four.original = -93;
 greater = -33;
 less = -107;
 nine.original = -47;
@@ -124602,8 +124629,8 @@ endash = -166;
 eopen = -80;
 equal.lf = -110;
 five.original = -67;
-four.original = -93;
 four = -82;
+four.original = -93;
 greater = -63;
 less = -180;
 less.lf = -133;
@@ -125434,13 +125461,13 @@ V = -94;
 W = -49;
 Y = -92;
 five.original = -12;
-one.original = 0;
 one = -37;
+one.original = 0;
 parenleft = -55;
 parenright = -79;
 three.original = 0;
-zero.original = -25;
 zero = -9;
+zero.original = -25;
 };
 colon.figures = {
 five.original = -48;
@@ -125478,12 +125505,12 @@ zero.zero.original = -138;
 comma = {
 eight.original = 18;
 emdash = -99;
-five.original = 69;
 five = 56;
+five.original = 69;
 five.smcp = 40;
 four.original = 61;
-nine.original = 43;
 nine = 0;
+nine.original = 43;
 quotedbl = -192;
 quotedblleft = -192;
 quotedblright = -192;
@@ -125492,36 +125519,36 @@ quoteleft = -192;
 quoteright = -192;
 quoteright.smcp = -192;
 quotesingle = -119;
-seven.original = -23;
 seven = -73;
+seven.original = -23;
 seven.smcp = -65;
-six.original = -5;
 six = 0;
-three.original = 69;
+six.original = -5;
 three = 49;
+three.original = 69;
 three.smcp = 35;
-two.original = 5;
 two = 9;
-zero.original = 1;
+two.original = 5;
 zero = -10;
+zero.original = 1;
 zero.zero = -10;
 };
 comma.tf.ss14 = {
-eight.original = -157;
 eight = -147;
+eight.original = -157;
 eight.smcp = -144;
 emdash = -259;
-five.original = -113;
 five = -122;
+five.original = -113;
 five.smcp = -122;
-four.original = -102;
 four = -176;
+four.original = -102;
 four.smcp = -182;
-nine.original = -148;
 nine = -166;
+nine.original = -148;
 nine.smcp = -165;
-one.original = -159;
 one = -150;
+one.original = -159;
 one.smcp = -150;
 parenright.tf.ss14 = -231;
 quotedbl = -213;
@@ -125530,23 +125557,23 @@ quotedblright = -336;
 quotedblright.smcp = -336;
 quoteright = -192;
 quotesingle = -119;
-seven.original = -201;
 seven = -227;
+seven.original = -201;
 seven.smcp = -223;
-six.original = -170;
 six = -160;
+six.original = -170;
 six.smcp = -156;
-three.original = -115;
 three = -124;
+three.original = -115;
 three.smcp = -123;
-two.original = -155;
 two = -141;
+two.original = -155;
 two.smcp = -143;
-zero.original = -168;
 zero = -168;
-zero.zero = -168;
+zero.original = -168;
 zero.smcp = -163;
 zero.smcp.zero = -163;
+zero.zero = -168;
 zero.zero.original = -157;
 };
 d = {
@@ -125679,8 +125706,8 @@ comma.tf.ss14 = -202;
 d = -129;
 endash = -202;
 five.original = -109;
-four.original = -202;
 four = -85;
+four.original = -202;
 hyphen = -202;
 hyphentwo = -202;
 nine.original = -102;
@@ -125728,13 +125755,13 @@ period.tf.ss14 = -165;
 "u-cy.smcp" = 0;
 };
 dollar = {
-eight.original = 23;
 eight = 34;
+eight.original = 23;
 five = 5;
-one.original = -31;
 one = -14;
-six.original = 17;
+one.original = -31;
 six = 23;
+six.original = 17;
 three = 5;
 two = -11;
 };
@@ -125847,12 +125874,6 @@ ehookabove = {
 comma.tf.ss14 = -180;
 period.tf.ss14 = -189;
 };
-eight.original = {
-bracketright.tf.ss14 = -163;
-colon.figures = -47;
-colon.figures.tf.ss14 = -135;
-degree = 0;
-};
 eight = {
 colon.tf.ss14 = -139;
 comma.tf.ss14 = -151;
@@ -125882,6 +125903,12 @@ six = 0;
 three = 10;
 two = -9;
 zero = 0;
+};
+eight.original = {
+bracketright.tf.ss14 = -163;
+colon.figures = -47;
+colon.figures.tf.ss14 = -135;
+degree = 0;
 };
 eight.smcp = {
 comma.tf.ss14 = -147;
@@ -126351,19 +126378,19 @@ quotesingle = -50;
 saltillo = -106;
 thorn = -96;
 };
-five.original = {
-bracketright.tf.ss14 = -132;
-colon.figures = -37;
-colon.figures.tf.ss14 = -129;
-degree = -66;
-ordmasculine = -40;
-};
 five = {
 degree = 0;
 eight = 14;
 hyphen.case = -37;
 hyphen.smcp = -30;
 percent.lf = -31;
+};
+five.original = {
+bracketright.tf.ss14 = -132;
+colon.figures = -37;
+colon.figures.tf.ss14 = -129;
+degree = -66;
+ordmasculine = -40;
 };
 five.smcp = {
 comma.tf.ss14 = -132;
@@ -126388,14 +126415,6 @@ thorn = -96;
 florin = {
 e = -84;
 o = -83;
-};
-four.original = {
-bracketright.tf.ss14 = -169;
-colon.figures = -51;
-colon.figures.tf.ss14 = -149;
-degree = -132;
-ordfeminine = -56;
-ordmasculine = -68;
 };
 four = {
 colon.tf.ss14 = -122;
@@ -126424,6 +126443,14 @@ plus.lf = 0;
 semicolon.tf.ss14 = -110;
 seven = -40;
 three = 29;
+};
+four.original = {
+bracketright.tf.ss14 = -169;
+colon.figures = -51;
+colon.figures.tf.ss14 = -149;
+degree = -132;
+ordfeminine = -56;
+ordmasculine = -68;
 };
 four.smcp = {
 comma.tf.ss14 = -104;
@@ -127572,13 +127599,6 @@ z.smcp = -40;
 nhookleft.smcp.cv01 = {
 u.smcp = -159;
 };
-nine.original = {
-bracketright.tf.ss14 = -146;
-colon.figures = -30;
-colon.figures.tf.ss14 = -142;
-degree = -128;
-ordmasculine = -45;
-};
 nine = {
 colon.figures.lf = -38;
 colon.tf.ss14 = -126;
@@ -127607,6 +127627,13 @@ six = 0;
 slash = -33;
 three = -4;
 zero = 2;
+};
+nine.original = {
+bracketright.tf.ss14 = -146;
+colon.figures = -30;
+colon.figures.tf.ss14 = -142;
+degree = -128;
+ordmasculine = -45;
 };
 nine.smcp = {
 comma = -30;
@@ -127649,8 +127676,8 @@ egrave = -26;
 five.original = -30;
 four.original = -37;
 nine.original = -24;
-one.original = 0;
 one = 0;
+one.original = 0;
 q = -38;
 three.original = -19;
 two.original = -26;
@@ -127808,19 +127835,6 @@ parenright = 0;
 omacron = {
 parenright = -39;
 };
-one.original = {
-bracketright = -38;
-bracketright.tf.ss14 = -173;
-colon.figures = -70;
-colon.figures.tf.ss14 = -170;
-degree = -126;
-equal = -50;
-one.original = 0;
-ordfeminine = -82;
-ordmasculine = -91;
-parenleft = -62;
-zero.zero.original = 0;
-};
 one = {
 bracketright.tf.ss14 = -161;
 colon.figures.lf = -61;
@@ -127858,6 +127872,19 @@ seven = -47;
 six = 0;
 two = 12;
 zero = 0;
+};
+one.original = {
+bracketright = -38;
+bracketright.tf.ss14 = -173;
+colon.figures = -70;
+colon.figures.tf.ss14 = -170;
+degree = -126;
+equal = -50;
+one.original = 0;
+ordfeminine = -82;
+ordmasculine = -91;
+parenleft = -62;
+zero.zero.original = 0;
 };
 one.smcp = {
 colon.figures.smcp = -45;
@@ -128274,8 +128301,8 @@ Ldot = -113;
 l = -89;
 ldot = -89;
 m = -74;
-one.original = -81;
 one = -124;
+one.original = -81;
 parenright = -177;
 s = -39;
 };
@@ -128729,13 +128756,6 @@ parenright = -19;
 semicolon.tf.ss14 = {
 parenright.tf.ss14 = -223;
 };
-seven.original = {
-bracketright.tf.ss14 = -157;
-colon.figures = -36;
-colon.figures.tf.ss14 = -122;
-degree = -9;
-zero.zero.original = 0;
-};
 seven = {
 colon.figures.lf = -38;
 degree = 88;
@@ -128749,6 +128769,13 @@ northEastArrow.smcp = -75;
 plus.lf = -76;
 upArrow.case = -27;
 upArrow.smcp = -44;
+};
+seven.original = {
+bracketright.tf.ss14 = -157;
+colon.figures = -36;
+colon.figures.tf.ss14 = -122;
+degree = -9;
+zero.zero.original = 0;
 };
 seven.smcp = {
 a.smcp = -109;
@@ -128810,14 +128837,6 @@ period.tf.ss14 = -136;
 "ustraight-cy.smcp" = -104;
 "yeru-cy.smcp" = -23;
 };
-six.original = {
-bracketright.tf.ss14 = -146;
-colon.figures = -36;
-colon.figures.tf.ss14 = -134;
-degree = 14;
-endash = 0;
-six.original = 0;
-};
 six = {
 bracketright.tf.ss14 = -142;
 colon = -22;
@@ -128844,6 +128863,14 @@ period = 0;
 period.tf.ss14 = -164;
 semicolon.tf.ss14 = -127;
 zero = 0;
+};
+six.original = {
+bracketright.tf.ss14 = -146;
+colon.figures = -36;
+colon.figures.tf.ss14 = -134;
+degree = 14;
+endash = 0;
+six.original = 0;
 };
 six.smcp = {
 colon.tf.ss14 = -135;
@@ -129048,13 +129075,6 @@ y.smcp = -74;
 yacute.smcp = -74;
 ymacron.smcp = -74;
 };
-three.original = {
-bracketright.tf.ss14 = -148;
-colon.figures = -46;
-colon.figures.tf.ss14 = -151;
-degree = -108;
-ordmasculine = -40;
-};
 three = {
 colon.tf.ss14 = -135;
 comma.tf.ss14 = -151;
@@ -129082,6 +129102,13 @@ six = 0;
 three = 12;
 two = -7;
 zero = 0;
+};
+three.original = {
+bracketright.tf.ss14 = -148;
+colon.figures = -46;
+colon.figures.tf.ss14 = -151;
+degree = -108;
+ordmasculine = -40;
 };
 three.smcp = {
 colon.tf.ss14 = -130;
@@ -129170,14 +129197,6 @@ quotedblright.smcp = -179;
 quoteright.smcp = -179;
 "u-cy.smcp" = -35;
 };
-two.original = {
-bracketright.tf.ss14 = -138;
-colon.figures = -31;
-colon.figures.tf.ss14 = -123;
-degree = -101;
-ordfeminine = -21;
-ordmasculine = -37;
-};
 two = {
 colon.figures.lf = -21;
 degree = 3;
@@ -129191,6 +129210,14 @@ northEastArrow.case = -36;
 northEastArrow.smcp = -31;
 percent.lf = -24;
 plus.lf = -6;
+};
+two.original = {
+bracketright.tf.ss14 = -138;
+colon.figures = -31;
+colon.figures.tf.ss14 = -123;
+degree = -101;
+ordfeminine = -21;
+ordmasculine = -37;
 };
 two.smcp = {
 comma = 56;
@@ -129817,17 +129844,6 @@ period.tf.ss14 = -167;
 "ustraight-cy.smcp" = -21;
 "ya-cy.smcp" = 0;
 };
-zero.original = {
-baht = -39;
-bracketright = -47;
-bracketright.tf.ss14 = -168;
-colon.figures = -37;
-colon.figures.tf.ss14 = -147;
-degree = -129;
-multiply = 5;
-ordmasculine = -42;
-question = -46;
-};
 zero = {
 bracketright.tf.ss14 = -154;
 colon.figures.lf = -41;
@@ -129839,6 +129855,17 @@ hyphentwo.case = -57;
 hyphentwo.smcp = -57;
 percent.lf = -21;
 plus.lf = 0;
+};
+zero.original = {
+baht = -39;
+bracketright = -47;
+bracketright.tf.ss14 = -168;
+colon.figures = -37;
+colon.figures.tf.ss14 = -147;
+degree = -129;
+multiply = 5;
+ordmasculine = -42;
+question = -46;
 };
 zero.smcp = {
 colon.tf.ss14 = -128;
@@ -142053,8 +142080,8 @@ gbreve.smcp = -37;
 j.smcp.cv01 = -55;
 ninesuperior = -158;
 northEastArrow.case = -153;
-one.original = -27;
 one = -24;
+one.original = -27;
 quotedbl = -150;
 quotedblleft.smcp = -88;
 registered = -163;
@@ -142062,8 +142089,8 @@ rightArrow.case = -84;
 rightArrow.smcp = -69;
 ringhalfleft = -128;
 ringhalfright = -128;
-seven.original = -63;
 seven = -80;
+seven.original = -63;
 threesuperior = -115;
 trademark = -197;
 w.smcp = -159;
@@ -143077,8 +143104,8 @@ AE = -51;
 H = 0;
 Z = 0;
 ampersand = -54;
-four.original = -54;
 four = -48;
+four.original = -54;
 icircumflex = 15;
 itilde = 28;
 less = -171;
@@ -143311,8 +143338,8 @@ emacron = -13;
 endash = -74;
 equal.lf = -121;
 five.original = -118;
-four.original = -156;
 four = -69;
+four.original = -156;
 greater = -107;
 iacute = -29;
 iacute_j.loclNLD = -29;
@@ -143357,8 +143384,8 @@ at = -112;
 eacute = -68;
 eopen = -72;
 five.original = -111;
-four.original = -138;
 four = -66;
+four.original = -138;
 greater = -103;
 less = -180;
 nine.original = -107;
@@ -143387,8 +143414,8 @@ endash = -105;
 eopen = -93;
 equal.lf = -151;
 five.original = -94;
-four.original = -94;
 four = -102;
+four.original = -94;
 greater = -114;
 less = -209;
 less.lf = -188;
@@ -144219,13 +144246,13 @@ V = -97;
 W = -96;
 Y = -99;
 five.original = -20;
-one.original = -21;
 one = -23;
+one.original = -21;
 parenleft = -68;
 parenright = -113;
 three.original = -8;
-zero.original = -33;
 zero = -16;
+zero.original = -33;
 };
 colon.figures = {
 five.original = -40;
@@ -144263,12 +144290,12 @@ zero.zero.original = -151;
 comma = {
 eight.original = 0;
 emdash = -153;
-five.original = 40;
 five = 17;
+five.original = 40;
 five.smcp = 20;
 four.original = 42;
-nine.original = 0;
 nine = -2;
+nine.original = 0;
 quotedbl = -153;
 quotedblleft = -153;
 quotedblright = -153;
@@ -144277,36 +144304,36 @@ quoteleft = -153;
 quoteright = -153;
 quoteright.smcp = -153;
 quotesingle = -131;
-seven.original = -33;
 seven = -45;
+seven.original = -33;
 seven.smcp = -44;
-six.original = -16;
 six = 0;
-three.original = 40;
+six.original = -16;
 three = 13;
+three.original = 40;
 three.smcp = 16;
-two.original = 40;
 two = 20;
-zero.original = -3;
+two.original = 40;
 zero = -8;
+zero.original = -3;
 zero.zero = -8;
 };
 comma.tf.ss14 = {
-eight.original = -159;
 eight = -126;
+eight.original = -159;
 eight.smcp = -121;
 emdash = -311;
-five.original = -127;
 five = -116;
+five.original = -127;
 five.smcp = -114;
-four.original = -114;
 four = -189;
+four.original = -114;
 four.smcp = -174;
-nine.original = -172;
 nine = -164;
+nine.original = -172;
 nine.smcp = -163;
-one.original = -165;
 one = -139;
+one.original = -165;
 one.smcp = -139;
 parenright.tf.ss14 = -218;
 quotedbl = -252;
@@ -144315,23 +144342,23 @@ quotedblright = -290;
 quotedblright.smcp = -290;
 quoteright = -153;
 quotesingle = -131;
-seven.original = -211;
 seven = -211;
+seven.original = -211;
 seven.smcp = -212;
-six.original = -192;
 six = -171;
+six.original = -192;
 six.smcp = -166;
-three.original = -127;
 three = -118;
+three.original = -127;
 three.smcp = -116;
-two.original = -137;
 two = -117;
+two.original = -137;
 two.smcp = -117;
-zero.original = -191;
 zero = -182;
-zero.zero = -182;
+zero.original = -191;
 zero.smcp = -176;
 zero.smcp.zero = -176;
+zero.zero = -182;
 zero.zero.original = -169;
 };
 d = {
@@ -144464,8 +144491,8 @@ comma.tf.ss14 = -184;
 d = -164;
 endash = -184;
 five.original = -170;
-four.original = -184;
 four = -109;
+four.original = -184;
 hyphen = -184;
 hyphentwo = -184;
 nine.original = -183;
@@ -144513,13 +144540,13 @@ period.tf.ss14 = -147;
 "u-cy.smcp" = -72;
 };
 dollar = {
-eight.original = 28;
 eight = 30;
+eight.original = 28;
 five = 15;
-one.original = -25;
 one = 0;
-six.original = 15;
+one.original = -25;
 six = 13;
+six.original = 15;
 three = 16;
 two = 0;
 };
@@ -144632,12 +144659,6 @@ ehookabove = {
 comma.tf.ss14 = -163;
 period.tf.ss14 = -169;
 };
-eight.original = {
-bracketright.tf.ss14 = -124;
-colon.figures = -29;
-colon.figures.tf.ss14 = -139;
-degree = -44;
-};
 eight = {
 colon.tf.ss14 = -126;
 comma.tf.ss14 = -131;
@@ -144667,6 +144688,12 @@ six = 9;
 three = 19;
 two = 0;
 zero = 5;
+};
+eight.original = {
+bracketright.tf.ss14 = -124;
+colon.figures = -29;
+colon.figures.tf.ss14 = -139;
+degree = -44;
 };
 eight.smcp = {
 comma.tf.ss14 = -127;
@@ -145137,19 +145164,19 @@ quotesingle = -24;
 saltillo = -99;
 thorn = -32;
 };
-five.original = {
-bracketright.tf.ss14 = -131;
-colon.figures = -28;
-colon.figures.tf.ss14 = -142;
-degree = -76;
-ordmasculine = -31;
-};
 five = {
 degree = -26;
 eight = 16;
 hyphen.case = 39;
 hyphen.smcp = 35;
 percent.lf = -62;
+};
+five.original = {
+bracketright.tf.ss14 = -131;
+colon.figures = -28;
+colon.figures.tf.ss14 = -142;
+degree = -76;
+ordmasculine = -31;
 };
 five.smcp = {
 comma.tf.ss14 = -130;
@@ -145182,14 +145209,6 @@ angstrom.smcp = -73;
 florin.smcp.cv01 = {
 angstrom.smcp = -115;
 };
-four.original = {
-bracketright.tf.ss14 = -150;
-colon.figures = -46;
-colon.figures.tf.ss14 = -163;
-degree = -169;
-ordfeminine = -91;
-ordmasculine = -89;
-};
 four = {
 colon.tf.ss14 = -124;
 comma.tf.ss14 = -126;
@@ -145217,6 +145236,14 @@ plus.lf = -62;
 semicolon.tf.ss14 = -115;
 seven = -27;
 three = 13;
+};
+four.original = {
+bracketright.tf.ss14 = -150;
+colon.figures = -46;
+colon.figures.tf.ss14 = -163;
+degree = -169;
+ordfeminine = -91;
+ordmasculine = -89;
 };
 four.smcp = {
 comma.tf.ss14 = -115;
@@ -146365,13 +146392,6 @@ z.smcp = -15;
 nhookleft.smcp.cv01 = {
 u.smcp = -88;
 };
-nine.original = {
-bracketright.tf.ss14 = -160;
-colon.figures = -43;
-colon.figures.tf.ss14 = -164;
-degree = -184;
-ordmasculine = -79;
-};
 nine = {
 colon.figures.lf = -30;
 colon.tf.ss14 = -129;
@@ -146400,6 +146420,13 @@ six = 0;
 slash = -59;
 three = -6;
 zero = 2;
+};
+nine.original = {
+bracketright.tf.ss14 = -160;
+colon.figures = -43;
+colon.figures.tf.ss14 = -164;
+degree = -184;
+ordmasculine = -79;
 };
 nine.smcp = {
 comma = -23;
@@ -146442,8 +146469,8 @@ egrave = -37;
 five.original = -71;
 four.original = -75;
 nine.original = -61;
-one.original = -64;
 one = -36;
+one.original = -64;
 q = -36;
 three.original = -77;
 two.original = -57;
@@ -146601,19 +146628,6 @@ parenright = -30;
 omacron = {
 parenright = -73;
 };
-one.original = {
-bracketright = 0;
-bracketright.tf.ss14 = -160;
-colon.figures = -60;
-colon.figures.tf.ss14 = -179;
-degree = -125;
-equal = -79;
-one.original = 0;
-ordfeminine = -69;
-ordmasculine = -67;
-parenleft = -66;
-zero.zero.original = -31;
-};
 one = {
 bracketright.tf.ss14 = -112;
 colon.figures.lf = -59;
@@ -146651,6 +146665,19 @@ seven = -20;
 six = 0;
 two = 0;
 zero = 0;
+};
+one.original = {
+bracketright = 0;
+bracketright.tf.ss14 = -160;
+colon.figures = -60;
+colon.figures.tf.ss14 = -179;
+degree = -125;
+equal = -79;
+one.original = 0;
+ordfeminine = -69;
+ordmasculine = -67;
+parenleft = -66;
+zero.zero.original = -31;
 };
 one.smcp = {
 colon.figures.smcp = -52;
@@ -147067,8 +147094,8 @@ Ldot = -74;
 l = -72;
 ldot = -72;
 m = -71;
-one.original = -81;
 one = -76;
+one.original = -81;
 parenright = -151;
 s = -45;
 };
@@ -147529,13 +147556,6 @@ parenright = -51;
 semicolon.tf.ss14 = {
 parenright.tf.ss14 = -217;
 };
-seven.original = {
-bracketright.tf.ss14 = -162;
-colon.figures = -57;
-colon.figures.tf.ss14 = -168;
-degree = -98;
-zero.zero.original = -25;
-};
 seven = {
 colon.figures.lf = -63;
 degree = 0;
@@ -147549,6 +147569,13 @@ northEastArrow.smcp = -158;
 plus.lf = -133;
 upArrow.case = -80;
 upArrow.smcp = -97;
+};
+seven.original = {
+bracketright.tf.ss14 = -162;
+colon.figures = -57;
+colon.figures.tf.ss14 = -168;
+degree = -98;
+zero.zero.original = -25;
 };
 seven.smcp = {
 a.smcp = -126;
@@ -147610,14 +147637,6 @@ period.tf.ss14 = -152;
 "ustraight-cy.smcp" = -125;
 "yeru-cy.smcp" = -23;
 };
-six.original = {
-bracketright.tf.ss14 = -136;
-colon.figures = -47;
-colon.figures.tf.ss14 = -156;
-degree = -46;
-endash = 0;
-six.original = 0;
-};
 six = {
 bracketright.tf.ss14 = -121;
 colon = -24;
@@ -147644,6 +147663,14 @@ period = -4;
 period.tf.ss14 = -165;
 semicolon.tf.ss14 = -143;
 zero = 0;
+};
+six.original = {
+bracketright.tf.ss14 = -136;
+colon.figures = -47;
+colon.figures.tf.ss14 = -156;
+degree = -46;
+endash = 0;
+six.original = 0;
 };
 six.smcp = {
 colon.tf.ss14 = -139;
@@ -147848,13 +147875,6 @@ y.smcp = -113;
 yacute.smcp = -113;
 ymacron.smcp = -113;
 };
-three.original = {
-bracketright.tf.ss14 = -128;
-colon.figures = -33;
-colon.figures.tf.ss14 = -169;
-degree = -167;
-ordmasculine = -51;
-};
 three = {
 colon.tf.ss14 = -124;
 comma.tf.ss14 = -132;
@@ -147882,6 +147902,13 @@ six = 10;
 three = 27;
 two = 7;
 zero = 5;
+};
+three.original = {
+bracketright.tf.ss14 = -128;
+colon.figures = -33;
+colon.figures.tf.ss14 = -169;
+degree = -167;
+ordmasculine = -51;
 };
 three.smcp = {
 colon.tf.ss14 = -114;
@@ -147970,14 +147997,6 @@ quotedblright.smcp = -198;
 quoteright.smcp = -153;
 "u-cy.smcp" = -40;
 };
-two.original = {
-bracketright.tf.ss14 = -143;
-colon.figures = -27;
-colon.figures.tf.ss14 = -154;
-degree = -157;
-ordfeminine = -46;
-ordmasculine = -55;
-};
 two = {
 colon.figures.lf = -13;
 degree = -38;
@@ -147991,6 +148010,14 @@ northEastArrow.case = -83;
 northEastArrow.smcp = -76;
 percent.lf = -41;
 plus.lf = -89;
+};
+two.original = {
+bracketright.tf.ss14 = -143;
+colon.figures = -27;
+colon.figures.tf.ss14 = -154;
+degree = -157;
+ordfeminine = -46;
+ordmasculine = -55;
 };
 two.smcp = {
 comma = 0;
@@ -148617,17 +148644,6 @@ period.tf.ss14 = -167;
 "ustraight-cy.smcp" = -39;
 "ya-cy.smcp" = 8;
 };
-zero.original = {
-baht = -47;
-bracketright = -20;
-bracketright.tf.ss14 = -172;
-colon.figures = -53;
-colon.figures.tf.ss14 = -172;
-degree = -184;
-multiply = -20;
-ordmasculine = -79;
-question = -122;
-};
 zero = {
 bracketright.tf.ss14 = -124;
 colon.figures.lf = -34;
@@ -148639,6 +148655,17 @@ hyphentwo.case = -39;
 hyphentwo.smcp = -39;
 percent.lf = -46;
 plus.lf = -53;
+};
+zero.original = {
+baht = -47;
+bracketright = -20;
+bracketright.tf.ss14 = -172;
+colon.figures = -53;
+colon.figures.tf.ss14 = -172;
+degree = -184;
+multiply = -20;
+ordmasculine = -79;
+question = -122;
 };
 zero.smcp = {
 colon.tf.ss14 = -139;
@@ -160853,8 +160880,8 @@ gbreve.smcp = -48;
 j.smcp.cv01 = -74;
 ninesuperior = -209;
 northEastArrow.case = -205;
-one.original = -53;
 one = -54;
+one.original = -53;
 quotedbl = -207;
 quotedblleft.smcp = -144;
 registered = -189;
@@ -160862,8 +160889,8 @@ rightArrow.case = -63;
 rightArrow.smcp = -20;
 ringhalfleft = -162;
 ringhalfright = -162;
-seven.original = -96;
 seven = -104;
+seven.original = -96;
 threesuperior = -166;
 trademark = -256;
 w.smcp = -215;
@@ -161877,8 +161904,8 @@ AE = -79;
 H = 0;
 Z = 0;
 ampersand = -55;
-four.original = -68;
 four = -47;
+four.original = -68;
 icircumflex = 27;
 itilde = 41;
 less = -191;
@@ -162111,8 +162138,8 @@ emacron = -49;
 endash = -118;
 equal.lf = -126;
 five.original = -154;
-four.original = -202;
 four = -116;
+four.original = -202;
 greater = -136;
 iacute = -46;
 iacute_j.loclNLD = -46;
@@ -162157,8 +162184,8 @@ at = -165;
 eacute = -123;
 eopen = -118;
 five.original = -150;
-four.original = -183;
 four = -115;
+four.original = -183;
 greater = -132;
 less = -207;
 nine.original = -132;
@@ -162187,8 +162214,8 @@ endash = -136;
 eopen = -126;
 equal.lf = -154;
 five.original = -118;
-four.original = -109;
 four = -133;
+four.original = -109;
 greater = -135;
 less = -237;
 less.lf = -196;
@@ -163020,13 +163047,13 @@ V = -118;
 W = -128;
 Y = -145;
 five.original = -19;
-one.original = -22;
 one = -45;
+one.original = -22;
 parenleft = -27;
 parenright = -139;
 three.original = 0;
-zero.original = -37;
 zero = -13;
+zero.original = -37;
 };
 colon.figures = {
 five.original = -56;
@@ -163064,12 +163091,12 @@ zero.zero.original = -190;
 comma = {
 eight.original = 7;
 emdash = -112;
-five.original = 70;
 five = 25;
+five.original = 70;
 five.smcp = 29;
 four.original = 67;
-nine.original = 14;
 nine = -2;
+nine.original = 14;
 quotedbl = -188;
 quotedblleft = -188;
 quotedblright = -188;
@@ -163078,36 +163105,36 @@ quoteleft = -188;
 quoteright = -188;
 quoteright.smcp = -188;
 quotesingle = -149;
-seven.original = 0;
 seven = -67;
+seven.original = 0;
 seven.smcp = -47;
-six.original = -28;
 six = -16;
-three.original = 58;
+six.original = -28;
 three = 20;
+three.original = 58;
 three.smcp = 24;
-two.original = 15;
 two = 18;
-zero.original = -23;
+two.original = 15;
 zero = -26;
+zero.original = -23;
 zero.zero = -26;
 };
 comma.tf.ss14 = {
-eight.original = -189;
 eight = -175;
+eight.original = -189;
 eight.smcp = -172;
 emdash = -303;
-five.original = -161;
 five = -161;
+five.original = -161;
 five.smcp = -160;
-four.original = -137;
 four = -225;
+four.original = -137;
 four.smcp = -220;
-nine.original = -204;
 nine = -211;
+nine.original = -204;
 nine.smcp = -209;
-one.original = -212;
 one = -204;
+one.original = -212;
 one.smcp = -205;
 parenright.tf.ss14 = -267;
 quotedbl = -284;
@@ -163116,23 +163143,23 @@ quotedblright = -340;
 quotedblright.smcp = -340;
 quoteright = -188;
 quotesingle = -149;
-seven.original = -252;
 seven = -275;
+seven.original = -252;
 seven.smcp = -273;
-six.original = -228;
 six = -215;
+six.original = -228;
 six.smcp = -209;
-three.original = -163;
 three = -163;
+three.original = -163;
 three.smcp = -162;
-two.original = -185;
 two = -166;
+two.original = -185;
 two.smcp = -169;
-zero.original = -224;
 zero = -223;
-zero.zero = -223;
+zero.original = -224;
 zero.smcp = -215;
 zero.smcp.zero = -215;
+zero.zero = -223;
 zero.zero.original = -211;
 };
 d = {
@@ -163265,8 +163292,8 @@ comma.tf.ss14 = -228;
 d = -193;
 endash = -171;
 five.original = -176;
-four.original = -228;
 four = -145;
+four.original = -228;
 hyphen = -118;
 hyphentwo = -228;
 nine.original = -197;
@@ -163314,13 +163341,13 @@ period.tf.ss14 = -185;
 "u-cy.smcp" = -63;
 };
 dollar = {
-eight.original = 25;
 eight = 19;
+eight.original = 25;
 five = 23;
-one.original = -31;
 one = -15;
-six.original = 4;
+one.original = -31;
 six = 4;
+six.original = 4;
 three = 29;
 two = 16;
 };
@@ -163433,12 +163460,6 @@ ehookabove = {
 comma.tf.ss14 = -200;
 period.tf.ss14 = -206;
 };
-eight.original = {
-bracketright.tf.ss14 = -204;
-colon.figures = -38;
-colon.figures.tf.ss14 = -172;
-degree = -49;
-};
 eight = {
 colon.tf.ss14 = -176;
 comma.tf.ss14 = -181;
@@ -163468,6 +163489,12 @@ six = 0;
 three = 11;
 two = 0;
 zero = 0;
+};
+eight.original = {
+bracketright.tf.ss14 = -204;
+colon.figures = -38;
+colon.figures.tf.ss14 = -172;
+degree = -49;
 };
 eight.smcp = {
 comma.tf.ss14 = -177;
@@ -163938,19 +163965,19 @@ quotesingle = -26;
 saltillo = -102;
 thorn = -44;
 };
-five.original = {
-bracketright.tf.ss14 = -176;
-colon.figures = -41;
-colon.figures.tf.ss14 = -178;
-degree = -87;
-ordmasculine = -43;
-};
 five = {
 degree = -40;
 eight = 15;
 hyphen.case = 12;
 hyphen.smcp = 29;
 percent.lf = -60;
+};
+five.original = {
+bracketright.tf.ss14 = -176;
+colon.figures = -41;
+colon.figures.tf.ss14 = -178;
+degree = -87;
+ordmasculine = -43;
 };
 five.smcp = {
 comma.tf.ss14 = -177;
@@ -163983,14 +164010,6 @@ angstrom.smcp = 0;
 florin.smcp.cv01 = {
 angstrom.smcp = 0;
 };
-four.original = {
-bracketright.tf.ss14 = -195;
-colon.figures = -50;
-colon.figures.tf.ss14 = -195;
-degree = -188;
-ordfeminine = -105;
-ordmasculine = -114;
-};
 four = {
 colon.tf.ss14 = -171;
 comma.tf.ss14 = -180;
@@ -164018,6 +164037,14 @@ plus.lf = -60;
 semicolon.tf.ss14 = -165;
 seven = -43;
 three = 0;
+};
+four.original = {
+bracketright.tf.ss14 = -195;
+colon.figures = -50;
+colon.figures.tf.ss14 = -195;
+degree = -188;
+ordfeminine = -105;
+ordmasculine = -114;
 };
 four.smcp = {
 comma.tf.ss14 = -170;
@@ -165166,13 +165193,6 @@ z.smcp = -22;
 nhookleft.smcp.cv01 = {
 u.smcp = -148;
 };
-nine.original = {
-bracketright.tf.ss14 = -208;
-colon.figures = -45;
-colon.figures.tf.ss14 = -195;
-degree = -210;
-ordmasculine = -98;
-};
 nine = {
 colon.figures.lf = -31;
 colon.tf.ss14 = -177;
@@ -165201,6 +165221,13 @@ six = 0;
 slash = -70;
 three = -2;
 zero = 2;
+};
+nine.original = {
+bracketright.tf.ss14 = -208;
+colon.figures = -45;
+colon.figures.tf.ss14 = -195;
+degree = -210;
+ordmasculine = -98;
 };
 nine.smcp = {
 comma = -27;
@@ -165243,8 +165270,8 @@ egrave = -41;
 five.original = -70;
 four.original = -80;
 nine.original = -62;
-one.original = -88;
 one = -44;
+one.original = -88;
 q = -48;
 three.original = -66;
 two.original = -51;
@@ -165402,19 +165429,6 @@ parenright = -43;
 omacron = {
 parenright = -97;
 };
-one.original = {
-bracketright = 19;
-bracketright.tf.ss14 = -211;
-colon.figures = -58;
-colon.figures.tf.ss14 = -210;
-degree = -144;
-equal = -66;
-one.original = 0;
-ordfeminine = -83;
-ordmasculine = -82;
-parenleft = -19;
-zero.zero.original = -29;
-};
 one = {
 bracketright.tf.ss14 = -201;
 colon.figures.lf = -44;
@@ -165452,6 +165466,19 @@ seven = -22;
 six = -19;
 two = 0;
 zero = -31;
+};
+one.original = {
+bracketright = 19;
+bracketright.tf.ss14 = -211;
+colon.figures = -58;
+colon.figures.tf.ss14 = -210;
+degree = -144;
+equal = -66;
+one.original = 0;
+ordfeminine = -83;
+ordmasculine = -82;
+parenleft = -19;
+zero.zero.original = -29;
 };
 one.smcp = {
 colon.figures.smcp = -46;
@@ -165868,8 +165895,8 @@ Ldot = -100;
 l = -79;
 ldot = -79;
 m = -69;
-one.original = -103;
 one = -118;
+one.original = -103;
 parenright = -184;
 s = -50;
 };
@@ -166334,13 +166361,6 @@ parenright = -59;
 semicolon.tf.ss14 = {
 parenright.tf.ss14 = -266;
 };
-seven.original = {
-bracketright.tf.ss14 = -203;
-colon.figures = -53;
-colon.figures.tf.ss14 = -194;
-degree = -86;
-zero.zero.original = -31;
-};
 seven = {
 colon.figures.lf = -57;
 degree = 0;
@@ -166354,6 +166374,13 @@ northEastArrow.smcp = -153;
 plus.lf = -131;
 upArrow.case = -93;
 upArrow.smcp = -115;
+};
+seven.original = {
+bracketright.tf.ss14 = -203;
+colon.figures = -53;
+colon.figures.tf.ss14 = -194;
+degree = -86;
+zero.zero.original = -31;
 };
 seven.smcp = {
 a.smcp = -176;
@@ -166415,14 +166442,6 @@ period.tf.ss14 = -188;
 "ustraight-cy.smcp" = -175;
 "yeru-cy.smcp" = -41;
 };
-six.original = {
-bracketright.tf.ss14 = -214;
-colon.figures = -53;
-colon.figures.tf.ss14 = -186;
-degree = -52;
-endash = 0;
-six.original = 0;
-};
 six = {
 bracketright.tf.ss14 = -204;
 colon = -22;
@@ -166449,6 +166468,14 @@ period = -4;
 period.tf.ss14 = -206;
 semicolon.tf.ss14 = -181;
 zero = -4;
+};
+six.original = {
+bracketright.tf.ss14 = -214;
+colon.figures = -53;
+colon.figures.tf.ss14 = -186;
+degree = -52;
+endash = 0;
+six.original = 0;
 };
 six.smcp = {
 colon.tf.ss14 = -182;
@@ -166653,13 +166680,6 @@ y.smcp = -131;
 yacute.smcp = -131;
 ymacron.smcp = -131;
 };
-three.original = {
-bracketright.tf.ss14 = -179;
-colon.figures = -41;
-colon.figures.tf.ss14 = -201;
-degree = -187;
-ordmasculine = -76;
-};
 three = {
 colon.tf.ss14 = -170;
 comma.tf.ss14 = -181;
@@ -166687,6 +166707,13 @@ six = 0;
 three = 24;
 two = 9;
 zero = 0;
+};
+three.original = {
+bracketright.tf.ss14 = -179;
+colon.figures = -41;
+colon.figures.tf.ss14 = -201;
+degree = -187;
+ordmasculine = -76;
 };
 three.smcp = {
 colon.tf.ss14 = -160;
@@ -166777,14 +166804,6 @@ quotedblright.smcp = -229;
 quoteright.smcp = -188;
 "u-cy.smcp" = -53;
 };
-two.original = {
-bracketright.tf.ss14 = -190;
-colon.figures = -29;
-colon.figures.tf.ss14 = -181;
-degree = -178;
-ordfeminine = -58;
-ordmasculine = -71;
-};
 two = {
 colon.figures.lf = -14;
 degree = -48;
@@ -166798,6 +166817,14 @@ northEastArrow.case = -75;
 northEastArrow.smcp = -82;
 percent.lf = -26;
 plus.lf = -56;
+};
+two.original = {
+bracketright.tf.ss14 = -190;
+colon.figures = -29;
+colon.figures.tf.ss14 = -181;
+degree = -178;
+ordfeminine = -58;
+ordmasculine = -71;
 };
 two.smcp = {
 comma = 16;
@@ -167424,17 +167451,6 @@ period.tf.ss14 = -199;
 "ustraight-cy.smcp" = -65;
 "ya-cy.smcp" = 8;
 };
-zero.original = {
-baht = -49;
-bracketright = 0;
-bracketright.tf.ss14 = -218;
-colon.figures = -52;
-colon.figures.tf.ss14 = -200;
-degree = -209;
-multiply = -3;
-ordmasculine = -92;
-question = -131;
-};
 zero = {
 bracketright.tf.ss14 = -208;
 colon.figures.lf = -33;
@@ -167446,6 +167462,17 @@ hyphentwo.case = -49;
 hyphentwo.smcp = -49;
 percent.lf = -36;
 plus.lf = -44;
+};
+zero.original = {
+baht = -49;
+bracketright = 0;
+bracketright.tf.ss14 = -218;
+colon.figures = -52;
+colon.figures.tf.ss14 = -200;
+degree = -209;
+multiply = -3;
+ordmasculine = -92;
+question = -131;
 };
 zero.smcp = {
 colon.tf.ss14 = -179;
@@ -167534,6 +167561,9 @@ type = descender;
 filter = "case == 3";
 name = Smallcaps;
 type = "x-height";
+},
+{
+name = "Math Axis";
 }
 );
 note = "There is a small bug in the way that the rotation script deals with capital K.  For this one it does not matter too much but I want to pin it down.";

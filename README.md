@@ -208,11 +208,17 @@ These can be taken in pretty much any order
 
 **Components**
 
+**Brackets**
+- ideally my script sets the smart component layers as well
+- ideally my script will adjust the math variants as well
+
 **Integrals**
 
 **Large Operators**
 
 **Arrows**
+
+
 
 *Playfair Math Todo*
 Minus at various widths (need to fix this one up)

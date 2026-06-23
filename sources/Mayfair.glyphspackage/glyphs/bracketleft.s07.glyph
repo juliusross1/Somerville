@@ -1,6 +1,5 @@
 {
-glyphname = bracketleft;
-kernRight = KO_bracketleft;
+glyphname = bracketleft.s07;
 layers = (
 {
 guides = (
@@ -11,6 +10,9 @@ pos = (459,772);
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
+piece = {
+height = 42;
+};
 ref = _smart.bracketleft;
 }
 );
@@ -22,27 +24,16 @@ guides = (
 pos = (459,772);
 }
 );
-layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
+piece = {
+height = 42;
+};
 ref = _smart.bracketleft;
 }
 );
-width = 298;
-},
-{
-guides = (
-{
-pos = (458,772);
-}
-);
-layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-shapes = (
-{
-ref = _smart.bracketleft;
-}
-);
-width = 396;
+width = 386;
 },
 {
 guides = (
@@ -53,6 +44,9 @@ pos = (459,772);
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
+piece = {
+height = 42;
+};
 ref = _smart.bracketleft;
 }
 );
@@ -67,6 +61,9 @@ pos = (459,772);
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
+piece = {
+height = 42;
+};
 ref = _smart.bracketleft;
 }
 );
@@ -78,13 +75,33 @@ guides = (
 pos = (459,772);
 }
 );
-layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
+piece = {
+height = 42;
+};
 ref = _smart.bracketleft;
 }
 );
-width = 386;
+width = 298;
+},
+{
+guides = (
+{
+pos = (458,772);
+}
+);
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+piece = {
+height = 42;
+};
+ref = _smart.bracketleft;
+}
+);
+width = 396;
 },
 {
 guides = (
@@ -95,6 +112,9 @@ pos = (459,772);
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
+piece = {
+height = 42;
+};
 ref = _smart.bracketleft;
 }
 );
@@ -109,37 +129,13 @@ pos = (459,772);
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
+piece = {
+height = 42;
+};
 ref = _smart.bracketleft;
 }
 );
 width = 409;
 }
 );
-unicode = 91;
-userData = {
-KernOnSpecialSpacing = {
-L = parenthesis;
-R = parenthesis;
-};
-com.nagwa.MATHPlugin.variants = {
-vVariants = (
-bracketleft,
-bracketleft.s01,
-bracketleft.s02,
-bracketleft.s03,
-bracketleft.s04,
-bracketleft.s05,
-bracketleft.s06,
-bracketleft.s07,
-bracketleft.s08,
-bracketleft.s09,
-bracketleft.s10
-);
-};
-com.playfairmath.smartComponentVariants = {
-N = 10;
-axis = height;
-step = 6;
-};
-};
 }
