@@ -242,10 +242,8 @@ Note: the script record the step and n for each glyph, but ideally you want to u
 
 *Mayfair Todo*
 Math Constants and test docs
-Put back i and j dotless bold and bolditalic
 Minus at various widths (need to fix this one up)
 Circle and sizing
-Fix bottom anchor on p,q
 Redo the existing + divide, = and many others :-(
 Finish summation glyph
 Do the product glyph at sizes
@@ -279,3 +277,12 @@ Todo: Checker Script
 Height of fences
 Missing bolds
 Missing or inconsisent vVariants or hVariants
+
+Private glyphs
+idotlessbold-math
+idotlessbolditaluc-math
+jdotlessbold-math
+jdotlessbolditaluc-math
+K operator for continued fractions
+Double Struck upper case Greek
+Fourier
