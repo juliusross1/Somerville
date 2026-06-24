@@ -5,11 +5,16 @@ import uuid
 import re
 
 import vanilla
-from GlyphsApp import Glyphs, GSGlyph
+from GlyphsApp import Glyphs, GSGlyph, GSGlyphReference
 
 
-SCRIPT_VERSION = "2026-06-24 11:57 CDT multi-smart-components"
+SCRIPT_VERSION = "2026-06-24 12:34 CDT glyph-reference-math-variants"
 SETTINGS_USER_DATA_KEY = "com.opentypemathtools.smartComponentVariants"
+MATH_PLUGIN_VARIANTS_USER_DATA_KEY = "com.nagwa.MATHPlugin.variants"
+MATH_PLUGIN_VARIANT_KEYS = dict(
+    height="vVariants",
+    width="hVariants",
+)
 SMART_AXIS_NAMES = ("height", "width")
 DEFAULT_VARIANT_COUNT = 1
 DEFAULT_STEP = 1
@@ -254,6 +259,10 @@ def variant_name(source_name, number):
     return "%s.s%02i" % (source_name, number)
 
 
+def variant_names(source_name, variant_count):
+    return [source_name] + [variant_name(source_name, number) for number in range(1, variant_count + 1)]
+
+
 def copy_glyph_metadata(source_glyph, target_glyph):
     for attribute_name in ("category", "subCategory", "script", "leftMetricsKey", "rightMetricsKey", "widthMetricsKey"):
         try:
@@ -437,6 +446,49 @@ def store_settings_on_glyph(glyph, variant_count, step, smart_axis_name_value):
     return settings
 
 
+def glyph_reference_for_name(font, glyph_name):
+    glyph = glyph_for_name(font, glyph_name)
+    if glyph is None:
+        return None
+    try:
+        return GSGlyphReference(glyph)
+    except Exception:
+        return None
+
+
+def store_math_plugin_variants_on_glyph(font, glyph, variant_count, smart_axis_name_value):
+    smart_axis_name_value = normalized_axis_name(smart_axis_name_value)
+    variant_key = MATH_PLUGIN_VARIANT_KEYS[smart_axis_name_value]
+    names = variant_names(glyph.name, variant_count)
+    references = []
+
+    for name in names:
+        reference = glyph_reference_for_name(font, name)
+        if reference is None:
+            print_warning("%s: could not create GSGlyphReference for %s." % (glyph.name, name))
+            return variant_key, names, False
+        references.append(reference)
+
+    existing_value = None
+    try:
+        existing_value = glyph.userData[MATH_PLUGIN_VARIANTS_USER_DATA_KEY]
+    except Exception:
+        pass
+
+    try:
+        math_plugin_variants = dict(existing_value or {})
+    except Exception:
+        math_plugin_variants = {}
+
+    math_plugin_variants[variant_key] = references
+    try:
+        glyph.userData[MATH_PLUGIN_VARIANTS_USER_DATA_KEY] = math_plugin_variants
+    except Exception:
+        print_warning("%s: could not store MATH plugin variants in glyph userData." % glyph.name)
+        return variant_key, names, False
+    return variant_key, names, True
+
+
 def clean_number(value):
     value = float(value)
     if value.is_integer():
@@ -505,10 +557,22 @@ def run(source_glyph, variant_count, step, smart_axis_name_value):
                     smart_components_skipped,
                     smart_axis_name_value,
                 ))
+
+        variant_key, math_plugin_variant_names, stored_math_plugin_variants = store_math_plugin_variants_on_glyph(
+            font,
+            source_glyph,
+            variant_count,
+            smart_axis_name_value,
+        )
     finally:
         font.enableUpdateInterface()
 
     print("")
+    if stored_math_plugin_variants:
+        print("Stored MATH plugin %s as GSGlyphReference list: %s" % (
+            variant_key,
+            ", ".join(math_plugin_variant_names),
+        ))
     print("Done. Created %i glyph(s); updated %i existing glyph(s)." % (created, refreshed))
 
 

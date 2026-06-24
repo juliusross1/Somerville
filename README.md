@@ -187,7 +187,7 @@ Create an axis called STYA and one called STYB. These can be hidden axes. Create
 
  Add the feature ssty and have it autogenerate
 
- ** there was a bug here since I did not create all the axes first; need to change this README and change the populate bold script as well **
+ ** there was a bug here since I did not create all the axes first; need to change this README and change the populate bold script as well to take into account of the STYA and STYB axes correctly **
 
  **need testing document here**
 
@@ -208,12 +208,14 @@ These can be taken in pretty much any order
 
 **Components**
 
-**Brackets**
-- ideally my script will adjust the math variants as well
+**Fences**
 
-a. Make sure all the brackets are exactly the same height (brace, bracket, bar, parenthesis ...)
+a. Make sure all the brackets are *exactly* the same height (brace, bracket, bar, parenthesis ...)
 
-a1. Make a smart component from the left bracket
+a2. Making the bracket with three "pieces" namely a top, stem and bottom is useful so you can reuse that to make the bar and the ceiling and floor.
+
+To make larger sizes of left bracket
+a. Make a smart component from the left bracket
 
 b. Use the create high layers script
 
@@ -225,6 +227,8 @@ e. Use script to create the variants
 
 f. adjust the right ones to use the smart component and repeat step e for the right.
 
+There is also a script to flip vertically.  It would be good to be able to flip horizontally on all masters as once
+
 Note: the script record the step and n for each glyph, but ideally you want to use these same values for all of the braces for pairing reasons.
 
 **Integrals**
@@ -234,22 +238,26 @@ Note: the script record the step and n for each glyph, but ideally you want to u
 **Arrows**
 
 
-
 *Mayfair Todo*
-Check precisely the heights of the fences (one of the masters seems to be out by a tiny bit)
-
 Minus at various widths (need to fix this one up)
 Redo the existing + divide, = and many others :-(
+    Finish summation glyph
+    Do the product glyph at sizes
 Circle and sizing
 
 Adjust the math constants
 Math constants and create testing documents
-Times at size
+Times at size?
 Integral and sizing and split into three pieces
 
 Double integrals
-Sum and sizing
 Contour integral
 Other display operators?
 other simple math symbols and anchors (redo the current ones with anchors)
 
+
+
+Todo: Checker Script
+Height of fences
+Missing bolds
+Missing or inconsisent vVariants or hVariants
