@@ -1,5 +1,5 @@
 {
-glyphname = tripleVerticalBarDelimiter;
+glyphname = tripleVerticalBarDelimiter.s10;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -7,14 +7,23 @@ partSelection = {
 };
 shapes = (
 {
+piece = {
+height = 100;
+};
 ref = _smart.bar;
 },
 {
 alignment = -1;
+piece = {
+height = 100;
+};
 pos = (190,0);
 ref = _smart.bar;
 },
 {
+piece = {
+height = 100;
+};
 pos = (380,-2);
 ref = _smart.bar;
 }
@@ -27,14 +36,23 @@ partSelection = {
 };
 shapes = (
 {
+piece = {
+height = 100;
+};
 ref = _smart.bar;
 },
 {
 alignment = -1;
+piece = {
+height = 100;
+};
 pos = (190,0);
 ref = _smart.bar;
 },
 {
+piece = {
+height = 100;
+};
 pos = (380,0);
 ref = _smart.bar;
 }
@@ -47,14 +65,23 @@ partSelection = {
 };
 shapes = (
 {
+piece = {
+height = 100;
+};
 ref = _smart.bar;
 },
 {
 alignment = -1;
+piece = {
+height = 100;
+};
 pos = (280,0);
 ref = _smart.bar;
 },
 {
+piece = {
+height = 100;
+};
 pos = (560,0);
 ref = _smart.bar;
 }
@@ -67,14 +94,23 @@ partSelection = {
 };
 shapes = (
 {
+piece = {
+height = 100;
+};
 ref = _smart.bar;
 },
 {
 alignment = -1;
+piece = {
+height = 100;
+};
 pos = (280,0);
 ref = _smart.bar;
 },
 {
+piece = {
+height = 100;
+};
 pos = (560,0);
 ref = _smart.bar;
 }
@@ -87,14 +123,23 @@ partSelection = {
 };
 shapes = (
 {
+piece = {
+height = 100;
+};
 ref = _smart.bar;
 },
 {
 alignment = -1;
+piece = {
+height = 100;
+};
 pos = (190,0);
 ref = _smart.bar;
 },
 {
+piece = {
+height = 100;
+};
 pos = (380,0);
 ref = _smart.bar;
 }
@@ -107,14 +152,23 @@ partSelection = {
 };
 shapes = (
 {
+piece = {
+height = 100;
+};
 ref = _smart.bar;
 },
 {
 alignment = -1;
+piece = {
+height = 100;
+};
 pos = (190,0);
 ref = _smart.bar;
 },
 {
+piece = {
+height = 100;
+};
 pos = (380,0);
 ref = _smart.bar;
 }
@@ -127,14 +181,23 @@ partSelection = {
 };
 shapes = (
 {
+piece = {
+height = 100;
+};
 ref = _smart.bar;
 },
 {
 alignment = -1;
+piece = {
+height = 100;
+};
 pos = (280,0);
 ref = _smart.bar;
 },
 {
+piece = {
+height = 100;
+};
 pos = (560,0);
 ref = _smart.bar;
 }
@@ -147,14 +210,23 @@ partSelection = {
 };
 shapes = (
 {
+piece = {
+height = 100;
+};
 ref = _smart.bar;
 },
 {
 alignment = -1;
+piece = {
+height = 100;
+};
 pos = (280,0);
 ref = _smart.bar;
 },
 {
+piece = {
+height = 100;
+};
 pos = (560,0);
 ref = _smart.bar;
 }
@@ -163,27 +235,4 @@ width = 940;
 }
 );
 metricRight = "=100";
-unicode = 10624;
-userData = {
-com.nagwa.MATHPlugin.variants = {
-vVariants = (
-tripleVerticalBarDelimiter,
-tripleVerticalBarDelimiter.s01,
-tripleVerticalBarDelimiter.s02,
-tripleVerticalBarDelimiter.s03,
-tripleVerticalBarDelimiter.s04,
-tripleVerticalBarDelimiter.s05,
-tripleVerticalBarDelimiter.s06,
-tripleVerticalBarDelimiter.s07,
-tripleVerticalBarDelimiter.s08,
-tripleVerticalBarDelimiter.s09,
-tripleVerticalBarDelimiter.s10
-);
-};
-com.opentypemathtools.smartComponentVariants = {
-N = 10;
-axis = height;
-step = 10;
-};
-};
 }

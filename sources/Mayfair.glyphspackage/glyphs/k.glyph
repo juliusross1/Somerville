@@ -4,6 +4,12 @@ kernLeft = KO_l;
 kernRight = KO_k;
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (289,785);
+}
+);
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
@@ -20,6 +26,12 @@ ref = "_LC-k-legs";
 width = 579;
 },
 {
+anchors = (
+{
+name = top;
+pos = (370,785);
+}
+);
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
@@ -36,6 +48,12 @@ ref = "_LC-k-legs";
 width = 740;
 },
 {
+anchors = (
+{
+name = top;
+pos = (445,785);
+}
+);
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
@@ -52,6 +70,12 @@ ref = "_LC-k-legs";
 width = 890;
 },
 {
+anchors = (
+{
+name = top;
+pos = (306,782);
+}
+);
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
@@ -68,6 +92,12 @@ ref = "_LC-k-legs";
 width = 612;
 },
 {
+anchors = (
+{
+name = top;
+pos = (360,782);
+}
+);
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
@@ -84,6 +114,12 @@ ref = "_LC-k-legs";
 width = 720;
 },
 {
+anchors = (
+{
+name = top;
+pos = (330,785);
+}
+);
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
@@ -100,6 +136,12 @@ ref = "_LC-k-legs";
 width = 660;
 },
 {
+anchors = (
+{
+name = top;
+pos = (346,782);
+}
+);
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
@@ -117,6 +159,12 @@ ref = "_LC-k-legs";
 width = 692;
 },
 {
+anchors = (
+{
+name = top;
+pos = (418,782);
+}
+);
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
@@ -141,7 +189,7 @@ pos = (429,0);
 },
 {
 name = top;
-pos = (426,758);
+pos = (415,782);
 }
 );
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -250,7 +298,7 @@ pos = (369,0);
 },
 {
 name = top;
-pos = (370,758);
+pos = (344,782);
 }
 );
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -359,7 +407,7 @@ pos = (420,0);
 },
 {
 name = top;
-pos = (408,758);
+pos = (440,785);
 }
 );
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -468,7 +516,7 @@ pos = (353,0);
 },
 {
 name = top;
-pos = (344,758);
+pos = (366,785);
 }
 );
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -577,7 +625,7 @@ pos = (388,0);
 },
 {
 name = top;
-pos = (385,758);
+pos = (357,782);
 }
 );
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -686,7 +734,7 @@ pos = (339,0);
 },
 {
 name = top;
-pos = (340,758);
+pos = (304,782);
 }
 );
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -795,7 +843,7 @@ pos = (326,0);
 },
 {
 name = top;
-pos = (315,758);
+pos = (325,785);
 }
 );
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -904,7 +952,7 @@ pos = (283,0);
 },
 {
 name = top;
-pos = (274,758);
+pos = (286,785);
 }
 );
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";

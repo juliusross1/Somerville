@@ -10,10 +10,16 @@ from GlyphsApp import Glyphs, GSAnchor
 ANCHORS = ("top", "bottom")
 MATHEMATICAL_ALPHABETS_PLIST = "CustomFilter Mathematics Alphabets.plist"
 LEGACY_MATHEMATICAL_ALPHABETS_PLIST = "CustomFilter Mathematical Alphabets.plist"
+EXCLUDED_MATH_BOLD_MARKERS = ("bold-math", "bolditalic-math")
 
 
 def is_anchor_layer(layer):
     return layer.isMasterLayer or layer.isSpecialLayer
+
+
+def is_excluded_math_bold_name(glyph_name):
+    glyph_name = str(glyph_name or "")
+    return any(marker in glyph_name for marker in EXCLUDED_MATH_BOLD_MARKERS)
 
 
 def script_directory():
@@ -73,8 +79,13 @@ def mathematical_glyphs_in_font(font, glyph_names):
     glyphs = []
     missing_count = 0
     nonexporting_count = 0
+    math_bold_count = 0
 
     for glyph_name in glyph_names:
+        if is_excluded_math_bold_name(glyph_name):
+            math_bold_count += 1
+            continue
+
         glyph = font.glyphs[glyph_name]
         if glyph is None:
             missing_count += 1
@@ -84,7 +95,7 @@ def mathematical_glyphs_in_font(font, glyph_names):
             continue
         glyphs.append(glyph)
 
-    return glyphs, missing_count, nonexporting_count
+    return glyphs, missing_count, nonexporting_count, math_bold_count
 
 
 def master_for_layer(font, layer):
@@ -194,7 +205,7 @@ def missing_anchor_report(font):
     if not mathematical_names:
         return None
 
-    mathematical_glyphs, missing_count, nonexporting_count = mathematical_glyphs_in_font(font, mathematical_names)
+    mathematical_glyphs, missing_count, nonexporting_count, math_bold_count = mathematical_glyphs_in_font(font, mathematical_names)
     missing_by_anchor = {anchor_name: [] for anchor_name in ANCHORS}
     checked_count = 0
 
@@ -210,6 +221,7 @@ def missing_anchor_report(font):
         "checked_count": checked_count,
         "missing_count": missing_count,
         "nonexporting_count": nonexporting_count,
+        "math_bold_count": math_bold_count,
     }
 
 
@@ -220,6 +232,7 @@ def print_report(font, report):
     print("Mathematical alphabet glyphs checked: %i" % report["checked_count"])
     print("Mathematical alphabet glyphs missing from font: %i" % report["missing_count"])
     print("Non-exporting mathematical alphabet glyphs skipped: %i" % report["nonexporting_count"])
+    print("Bold-math and bolditalic-math glyphs skipped: %i" % report["math_bold_count"])
     print("")
     print_missing_anchor_report("These glyphs do not have a top anchor", missing_by_anchor["top"])
     print("")
