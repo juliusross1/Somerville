@@ -239,6 +239,9 @@ Note: the script record the step and n for each glyph, but ideally you want to u
 
 
 *Mayfair Todo*
+Fix bottom anchor on p,q
+Test ss11 feature at other fonts
+
 Minus at various widths (need to fix this one up)
 Redo the existing + divide, = and many others :-(
     Finish summation glyph

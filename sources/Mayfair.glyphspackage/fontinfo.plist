@@ -1560,6 +1560,7 @@ code = "@LatinBoldMath = [
     Ybold-math Zbold-math
 ];
 
+#Note: ybolditalic-math is missing!
 @LatinBoldItalicMath = [
     abolditalic-math bbolditalic-math cbolditalic-math dbolditalic-math
     ebolditalic-math fbolditalic-math gbolditalic-math hbolditalic-math
@@ -1567,7 +1568,8 @@ code = "@LatinBoldMath = [
     mbolditalic-math nbolditalic-math obolditalic-math pbolditalic-math
     qbolditalic-math rbolditalic-math sbolditalic-math tbolditalic-math
     ubolditalic-math vbolditalic-math wbolditalic-math xbolditalic-math
-    ybolditalic-math zbolditalic-math
+	#ybolditalic-math
+ 	zbolditalic-math
 
     Abolditalic-math Bbolditalic-math Cbolditalic-math Dbolditalic-math
     Ebolditalic-math Fbolditalic-math Gbolditalic-math Hbolditalic-math
@@ -1585,8 +1587,8 @@ code = "@LatinBoldMath = [
 
 lookup AddMathUnderline {
     sub @AllMathUnderlineTargets by @AllMathUnderlineTargets macronbelowcomb;
-} AddMathUnderline;";
-disabled = 1;
+} AddMathUnderline;
+";
 labels = (
 {
 language = dflt;

@@ -11,6 +11,18 @@ ANCHORS = ("top", "bottom")
 MATHEMATICAL_ALPHABETS_PLIST = "CustomFilter Mathematics Alphabets.plist"
 LEGACY_MATHEMATICAL_ALPHABETS_PLIST = "CustomFilter Mathematical Alphabets.plist"
 EXCLUDED_MATH_BOLD_MARKERS = ("bold-math", "bolditalic-math")
+NUMERAL_GLYPH_NAMES = (
+    "zero",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+)
 
 
 def is_anchor_layer(layer):
@@ -71,7 +83,17 @@ def load_mathematical_alphabet_names():
             seen.add(glyph_name)
             glyph_names.append(glyph_name)
 
-    print("Loaded %i mathematical alphabet glyph names from %s." % (len(glyph_names), os.path.basename(plist_path)))
+    mathematical_count = len(glyph_names)
+    numeral_count = 0
+    for glyph_name in NUMERAL_GLYPH_NAMES:
+        if glyph_name in seen:
+            continue
+        seen.add(glyph_name)
+        glyph_names.append(glyph_name)
+        numeral_count += 1
+
+    print("Loaded %i mathematical alphabet glyph names from %s." % (mathematical_count, os.path.basename(plist_path)))
+    print("Added %i numeral glyph names for anchor checking." % numeral_count)
     return glyph_names
 
 
@@ -227,11 +249,11 @@ def missing_anchor_report(font):
 
 def print_report(font, report):
     missing_by_anchor = report["missing_by_anchor"]
-    print("Mathematical Alphabet Anchor Report for %s" % (font.familyName or "Untitled"))
+    print("Mathematical Letter and Numeral Anchor Report for %s" % (font.familyName or "Untitled"))
     print("")
-    print("Mathematical alphabet glyphs checked: %i" % report["checked_count"])
-    print("Mathematical alphabet glyphs missing from font: %i" % report["missing_count"])
-    print("Non-exporting mathematical alphabet glyphs skipped: %i" % report["nonexporting_count"])
+    print("Glyphs checked: %i" % report["checked_count"])
+    print("Glyph names missing from font: %i" % report["missing_count"])
+    print("Non-exporting glyphs skipped: %i" % report["nonexporting_count"])
     print("Bold-math and bolditalic-math glyphs skipped: %i" % report["math_bold_count"])
     print("")
     print_missing_anchor_report("These glyphs do not have a top anchor", missing_by_anchor["top"])
