@@ -80,5 +80,25 @@ KernOnSpecialSpacing = {
 L = NoKerning;
 R = NoKerning;
 };
+com.nagwa.MATHPlugin.variants = {
+vVariants = (
+bar,
+bar.s01,
+bar.s02,
+bar.s03,
+bar.s04,
+bar.s05,
+bar.s06,
+bar.s07,
+bar.s08,
+bar.s09,
+bar.s10
+);
+};
+com.opentypemathtools.smartComponentVariants = {
+N = 10;
+axis = height;
+step = 10;
+};
 };
 }

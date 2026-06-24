@@ -101,4 +101,26 @@ width = 409;
 metricLeft = "=leftFloor";
 metricRight = "=leftFloor";
 unicode = 8968;
+userData = {
+com.nagwa.MATHPlugin.variants = {
+vVariants = (
+leftCeiling,
+leftCeiling.s01,
+leftCeiling.s02,
+leftCeiling.s03,
+leftCeiling.s04,
+leftCeiling.s05,
+leftCeiling.s06,
+leftCeiling.s07,
+leftCeiling.s08,
+leftCeiling.s09,
+leftCeiling.s10
+);
+};
+com.opentypemathtools.smartComponentVariants = {
+N = 10;
+axis = height;
+step = 10;
+};
+};
 }

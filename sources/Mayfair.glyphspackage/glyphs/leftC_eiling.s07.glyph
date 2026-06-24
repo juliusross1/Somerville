@@ -1,13 +1,17 @@
 {
-glyphname = rightFloor;
+glyphname = leftCeiling.s07;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
-pos = (336,0);
+alignment = -1;
+piece = {
+height = 70;
+};
+pos = (0,591);
 ref = _smart.leftFloor;
-scale = (-1,1);
+scale = (1,-1);
 }
 );
 width = 336;
@@ -16,9 +20,13 @@ width = 336;
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
-pos = (386,0);
+alignment = -1;
+piece = {
+height = 70;
+};
+pos = (0,591);
 ref = _smart.leftFloor;
-scale = (-1,1);
+scale = (1,-1);
 }
 );
 width = 386;
@@ -27,9 +35,13 @@ width = 386;
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
-pos = (350,0);
+alignment = -1;
+piece = {
+height = 70;
+};
+pos = (0,591);
 ref = _smart.leftFloor;
-scale = (-1,1);
+scale = (1,-1);
 }
 );
 width = 350;
@@ -38,9 +50,13 @@ width = 350;
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
-pos = (404,0);
+alignment = -1;
+piece = {
+height = 70;
+};
+pos = (0,601);
 ref = _smart.leftFloor;
-scale = (-1,1);
+scale = (1,-1);
 }
 );
 width = 404;
@@ -49,9 +65,13 @@ width = 404;
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
-pos = (298,0);
+alignment = -1;
+piece = {
+height = 70;
+};
+pos = (0,592);
 ref = _smart.leftFloor;
-scale = (-1,1);
+scale = (1,-1);
 }
 );
 width = 298;
@@ -60,9 +80,13 @@ width = 298;
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
-pos = (396,0);
+alignment = -1;
+piece = {
+height = 70;
+};
+pos = (0,591);
 ref = _smart.leftFloor;
-scale = (-1,1);
+scale = (1,-1);
 }
 );
 width = 396;
@@ -71,9 +95,13 @@ width = 396;
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
-pos = (329,0);
+alignment = -1;
+piece = {
+height = 70;
+};
+pos = (0,591);
 ref = _smart.leftFloor;
-scale = (-1,1);
+scale = (1,-1);
 }
 );
 width = 329;
@@ -82,35 +110,18 @@ width = 329;
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
-pos = (409,0);
+alignment = -1;
+piece = {
+height = 70;
+};
+pos = (0,591);
 ref = _smart.leftFloor;
-scale = (-1,1);
+scale = (1,-1);
 }
 );
 width = 409;
 }
 );
-unicode = 8971;
-userData = {
-com.nagwa.MATHPlugin.variants = {
-vVariants = (
-rightFloor,
-rightFloor.s01,
-rightFloor.s02,
-rightFloor.s03,
-rightFloor.s04,
-rightFloor.s05,
-rightFloor.s06,
-rightFloor.s07,
-rightFloor.s08,
-rightFloor.s09,
-rightFloor.s10
-);
-};
-com.opentypemathtools.smartComponentVariants = {
-N = 10;
-axis = height;
-step = 10;
-};
-};
+metricLeft = "=leftFloor";
+metricRight = "=leftFloor";
 }
