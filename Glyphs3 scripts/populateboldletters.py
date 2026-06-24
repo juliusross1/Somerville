@@ -10,7 +10,8 @@ the currently selected target glyphs from those blocks or all available target
 glyphs from those blocks in the open font. It can optionally open a tab with
 the glyphs it modified.
 
-For each target glyph, the script derives the source glyph name, then asks
+For each target glyph, the script derives the source glyph name, keeping
+matching variant suffixes such as .ssNN, .cvNN, and .zero, then asks
 designspace_axis_rotation.rotate_glyph_designspace() to interpolate the source
 glyph into the target while moving the effect of the source axis onto the
 target axis.
@@ -41,8 +42,13 @@ ROTATION_TARGET_AXIS_TAG = "MGHT"
 ROTATION_SOURCE_LOW_VALUE = 360
 ROTATION_SOURCE_HIGH_VALUE = 900
 ROTATION_TARGET_VALUE = 900
-SCRIPT_VERSION = "2026-06-22 23:01 CDT exact-max-rule-sampling"
-ALTERNATE_SUFFIX_PATTERN = re.compile(r"\.(ss|cv)\d+$")
+SCRIPT_VERSION = "2026-06-24 09:41 CDT zero-suffix-variants"
+ALTERNATE_SUFFIX_PATTERN = re.compile(r"(\.(?:ss|cv)\d+|\.zero)$")
+ALTERNATE_SUFFIX_SORT_ORDER = {
+    "ss": 0,
+    "cv": 1,
+    "zero": 2,
+}
 SOURCE_GLYPH_NAME_OVERRIDES = {
     "hbolditalic-math": "planckconstant",
 }
@@ -180,14 +186,18 @@ def split_alternate_suffix(glyph_name):
 def alternate_sort_key(glyph_name):
     base_name, suffix = split_alternate_suffix(glyph_name)
     if not suffix:
-        return (glyph_name, "", -1)
-    kind = suffix[1:3]
-    number = int(suffix[3:])
-    return (base_name, kind, number)
+        return (glyph_name, -1, -1, "")
+    if suffix == ".zero":
+        kind = "zero"
+        number = 0
+    else:
+        kind = suffix[1:3]
+        number = int(suffix[3:])
+    return (base_name, ALTERNATE_SUFFIX_SORT_ORDER.get(kind, 99), number, suffix)
 
 
 def alternate_names_for_base(base_name, all_glyph_names):
-    alternate_pattern = re.compile(r"^%s(\.(?:ss|cv)\d+)$" % re.escape(base_name))
+    alternate_pattern = re.compile(r"^%s(\.(?:(?:ss|cv)\d+|zero))$" % re.escape(base_name))
     return sorted(
         [glyph_name for glyph_name in all_glyph_names if alternate_pattern.match(glyph_name)],
         key=alternate_sort_key,

@@ -1,4 +1,4 @@
-#MenuTitle: Backup of Populate bold layers
+#Backup of Populate bold layers
 # -*- coding: utf-8 -*-
 
 """
