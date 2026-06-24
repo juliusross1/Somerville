@@ -1761,6 +1761,12 @@ pos = 608;
 },
 {
 pos = 265;
+},
+{
+pos = -191;
+},
+{
+pos = -3191;
 }
 );
 name = "Needlepoint SemiCondensed Upright";
@@ -1882,7 +1888,7 @@ FractionDenomDisplayStyleGapMin = 3;
 FractionDenominatorDisplayStyleShiftDown = 708;
 FractionDenominatorGapMin = 1;
 FractionDenominatorShiftDown = 472;
-FractionNumDisplayStyleGapMin = 3;
+FractionNumDisplayStyleGapMin = 100;
 FractionNumeratorDisplayStyleShiftUp = 768;
 FractionNumeratorGapMin = 1;
 FractionNumeratorShiftUp = 512;
@@ -2089,6 +2095,12 @@ pos = 608;
 },
 {
 pos = 265;
+},
+{
+pos = -191;
+},
+{
+pos = -3191;
 }
 );
 name = "Needlepoint SemiExpanded Upright";
@@ -2422,6 +2434,12 @@ pos = 608;
 },
 {
 pos = 265;
+},
+{
+pos = -191;
+},
+{
+pos = -3191;
 }
 );
 name = "Needlepoint Black SemiCondensed Upright";
@@ -2761,6 +2779,12 @@ pos = 608;
 },
 {
 pos = 265;
+},
+{
+pos = -191;
+},
+{
+pos = -3191;
 }
 );
 name = "Needlepoint Black SemiExpanded Upright";
@@ -3096,6 +3120,12 @@ pos = 608;
 },
 {
 pos = 265;
+},
+{
+pos = -191;
+},
+{
+pos = -3191;
 }
 );
 name = "Agate SemiCondensed Upright";
@@ -3210,8 +3240,8 @@ AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1506;
 DisplayOperatorMinHeight = 1500;
 FlattenedAccentBaseHeight = 708;
-FractionDenomDisplayStyleGapMin = 240;
-FractionDenominatorDisplayStyleShiftDown = 708;
+FractionDenomDisplayStyleGapMin = 440;
+FractionDenominatorDisplayStyleShiftDown = 1008;
 FractionDenominatorGapMin = 80;
 FractionDenominatorShiftDown = 472;
 FractionNumDisplayStyleGapMin = 240;
@@ -3438,6 +3468,12 @@ pos = 608;
 },
 {
 pos = 265;
+},
+{
+pos = -191;
+},
+{
+pos = -3191;
 }
 );
 name = "Agate SemiExpanded Upright";
@@ -3752,6 +3788,10 @@ pos = (-262,260);
 {
 locked = 1;
 pos = (-37,976);
+},
+{
+angle = 55.1591;
+pos = (283,70);
 }
 );
 iconName = Bold_SemiCondensed;
@@ -3782,6 +3822,12 @@ pos = 608;
 },
 {
 pos = 265;
+},
+{
+pos = -191;
+},
+{
+pos = -3191;
 }
 );
 name = "Agate Black SemiCondensed Upright";
@@ -4129,6 +4175,12 @@ pos = 608;
 },
 {
 pos = 265;
+},
+{
+pos = -191;
+},
+{
+pos = -3191;
 }
 );
 name = "Agate Black SemiExpanded Upright";
@@ -4414,7 +4466,6 @@ Location = 5;
 );
 }
 );
-exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 1;
 };
@@ -8682,7 +8733,6 @@ Location = 340;
 );
 }
 );
-exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.54393;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.45607;
@@ -9090,6 +9140,7 @@ name = Filter;
 value = "RemoveOverlap; include: A,A.ssty1, A.ssty2";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.1399;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.0291;
@@ -16238,7 +16289,6 @@ Location = 1122;
 );
 }
 );
-exports = 0;
 instanceInterpolations = {
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 1;
 };
@@ -167564,6 +167614,12 @@ type = "x-height";
 },
 {
 name = "Math Axis";
+},
+{
+name = "Fence lower";
+},
+{
+name = "Fence lower extreme";
 }
 );
 note = "There is a small bug in the way that the rotation script deals with capital K.  For this one it does not matter too much but I want to pin it down.";

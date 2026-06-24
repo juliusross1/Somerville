@@ -7,6 +7,9 @@ import vanilla
 from GlyphsApp import Glyphs
 
 
+SCRIPT_VERSION = "2026-06-24 09:02 CDT no-macro-window"
+IGNORED_AXIS_VALUES = (0,)
+
 AXIS_GROUPS = (
     ("weights", "Weight", ("Weight",)),
     ("widths", "Width", ("Width",)),
@@ -22,7 +25,7 @@ DEFAULT_AXIS_VALUE_NAMES = {
         550: "SemiBold",
         600: "SemiBold",
         650: "Bold",
-        700: "Bold",
+        700: "ExtraBold",
         750: "ExtraBold",
         800: "ExtraBold",
         900: "Black",
@@ -166,6 +169,13 @@ def value_key(value):
     return number_value(value)
 
 
+def is_ignored_axis_value(value):
+    try:
+        return number_value(value) in IGNORED_AXIS_VALUES
+    except Exception:
+        return False
+
+
 def value_label(value):
     numeric_value = number_value(value)
     if isinstance(numeric_value, float) and numeric_value.is_integer():
@@ -297,6 +307,9 @@ def collect_font_data(font):
             except Exception:
                 complete = False
                 break
+            if is_ignored_axis_value(axes[key]):
+                complete = False
+                break
 
         if not complete:
             continue
@@ -322,6 +335,7 @@ def infer_axis_value_names(instance_records):
             (known_name, normalized_name(known_name))
             for known_name in known_names
         ]
+        normalized_known_names.sort(key=lambda item: len(item[1]), reverse=True)
 
         axis_values = sorted(set(axes[key] for instance, axes in instance_records))
         for axis_value in axis_values:
@@ -335,6 +349,7 @@ def infer_axis_value_names(instance_records):
                 for known_name, normalized_known_name in normalized_known_names:
                     if normalized_known_name and normalized_known_name in normalized_instance_name:
                         scores[known_name] += 1
+                        break
 
             best_name = None
             best_score = 0
@@ -350,12 +365,24 @@ def infer_axis_value_names(instance_records):
     return inferred_names
 
 
+def active_axis_values(instance_records):
+    selected = dict((key, set()) for key, title, names in AXIS_GROUPS)
+
+    for instance, axes in instance_records:
+        if not read_instance_active(instance):
+            continue
+        for key, title, names in AXIS_GROUPS:
+            selected[key].add(axes[key])
+
+    return selected
+
+
 class InstanceActiveStatusWindow(object):
     def __init__(self):
         self.font = Glyphs.font
         Glyphs.clearLog()
-        Glyphs.showMacroWindow()
         print("Set Instance Active Status")
+        print("Script version: %s" % SCRIPT_VERSION)
         print("")
 
         if self.font is None:
@@ -373,6 +400,7 @@ class InstanceActiveStatusWindow(object):
             return
 
         self.axis_value_names = infer_axis_value_names(self.instance_records)
+        self.initial_selected_values = active_axis_values(self.instance_records)
         self.checkboxes = {}
         column_width = 190
         margin = 15
@@ -414,7 +442,7 @@ class InstanceActiveStatusWindow(object):
                 checkbox = vanilla.CheckBox(
                     (left, margin + heading_height + row_index * row_height, column_width - 10, 20),
                     axis_value_label(key, axis_value, self.axis_value_names),
-                    value=True,
+                    value=axis_value in self.initial_selected_values[key],
                 )
                 self.w.__setattr__("%s_%i" % (key, row_index), checkbox)
                 self.checkboxes[key].append((axis_value, checkbox))
@@ -463,8 +491,8 @@ class InstanceActiveStatusWindow(object):
 
     def apply_callback(self, sender):
         Glyphs.clearLog()
-        Glyphs.showMacroWindow()
         print("Set Instance Active Status")
+        print("Script version: %s" % SCRIPT_VERSION)
         print("")
 
         selected = self.selected_values()
@@ -525,7 +553,6 @@ except Exception as error:
     import traceback
 
     Glyphs.clearLog()
-    Glyphs.showMacroWindow()
     print("Set Instance Active Status")
     print("")
     print("Could not open UI: %s" % error)

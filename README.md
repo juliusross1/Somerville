@@ -209,7 +209,6 @@ These can be taken in pretty much any order
 **Components**
 
 **Brackets**
-- ideally my script sets the smart component layers as well
 - ideally my script will adjust the math variants as well
 
 a. Make sure all the brackets are exactly the same height (brace, bracket, bar, parenthesis ...)
@@ -236,7 +235,7 @@ Note: the script record the step and n for each glyph, but ideally you want to u
 
 
 
-*Playfair Math Todo*
+*Mayfair Todo*
 Minus at various widths (need to fix this one up)
 Brackets and sizing
 Redo the existing + divide, = and many others :-(
