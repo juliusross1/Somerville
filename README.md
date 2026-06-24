@@ -236,8 +236,9 @@ Note: the script record the step and n for each glyph, but ideally you want to u
 
 
 *Mayfair Todo*
+Check precisely the heights of the fences (one of the masters seems to be out by a tiny bit)
+
 Minus at various widths (need to fix this one up)
-Brackets and sizing
 Redo the existing + divide, = and many others :-(
 Circle and sizing
 

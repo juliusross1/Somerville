@@ -8,7 +8,7 @@ import vanilla
 from GlyphsApp import Glyphs, GSGlyph
 
 
-SCRIPT_VERSION = "2026-06-23 15:05 CDT opentypemathtools-userdata-key"
+SCRIPT_VERSION = "2026-06-24 11:57 CDT multi-smart-components"
 SETTINGS_USER_DATA_KEY = "com.opentypemathtools.smartComponentVariants"
 SMART_AXIS_NAMES = ("height", "width")
 DEFAULT_VARIANT_COUNT = 1
@@ -181,18 +181,26 @@ def smart_axis_id_for_name(glyph, wanted_name):
     return None
 
 
+def smart_axis_id_for_component(font, component, smart_axis_name_value):
+    glyph = component_glyph(font, component)
+    if glyph is None:
+        return None
+    return smart_axis_id_for_name(glyph, smart_axis_name_value)
+
+
 def validate_source_glyph(font, glyph, smart_axis_name_value):
     component_names = set()
-    first_component = None
     layer_count = 0
+    component_count = 0
+    component_axis_ids = {}
 
     for layer in glyph.layers:
         components = layer_components(layer)
         paths = layer_paths(layer)
         layer_label = layer_name(layer) or layer_id(layer) or "<unnamed layer>"
 
-        if len(components) != 1 or paths:
-            print_warning("%s/%s: expected exactly one component and no paths; found %i component(s), %i path(s)" % (
+        if not components or paths:
+            print_warning("%s/%s: expected one or more components and no paths; found %i component(s), %i path(s)" % (
                 glyph.name,
                 layer_label,
                 len(components),
@@ -200,50 +208,45 @@ def validate_source_glyph(font, glyph, smart_axis_name_value):
             ))
             return None
 
-        name = component_name(components[0])
-        if name is None:
-            print_warning("%s/%s: could not read the component name" % (glyph.name, layer_label))
-            return None
+        for component in components:
+            name = component_name(component)
+            if name is None:
+                print_warning("%s/%s: could not read a component name" % (glyph.name, layer_label))
+                return None
 
-        if first_component is None:
-            first_component = components[0]
-        component_names.add(name)
+            base_component_glyph = component_glyph(font, component)
+            if smart_axes_count(base_component_glyph) == 0:
+                print_warning("%s/%s uses %s, but that component glyph has no smart component axes." % (
+                    glyph.name,
+                    layer_label,
+                    name,
+                ))
+                return None
+
+            smart_axis_id = smart_axis_id_for_name(base_component_glyph, smart_axis_name_value)
+            if smart_axis_id is None:
+                print_warning("%s/%s uses %s, but that component glyph has no smart axis named %s." % (
+                    glyph.name,
+                    layer_label,
+                    name,
+                    smart_axis_name_value,
+                ))
+                return None
+
+            component_names.add(name)
+            component_axis_ids[name] = smart_axis_id
+            component_count += 1
         layer_count += 1
 
     if not component_names:
         print_warning("%s has no component layers." % glyph.name)
         return None
 
-    if len(component_names) != 1:
-        print_warning("%s uses more than one component glyph: %s" % (
-            glyph.name,
-            ", ".join(sorted(component_names)),
-        ))
-        return None
-
-    base_component_glyph = component_glyph(font, first_component)
-    if smart_axes_count(base_component_glyph) == 0:
-        component_name_value = sorted(component_names)[0]
-        print_warning("%s uses %s, but that component glyph has no smart component axes." % (
-            glyph.name,
-            component_name_value,
-        ))
-        return None
-
-    smart_axis_id = smart_axis_id_for_name(base_component_glyph, smart_axis_name_value)
-    if smart_axis_id is None:
-        print_warning("%s uses %s, but that component glyph has no smart axis named %s." % (
-            glyph.name,
-            sorted(component_names)[0],
-            smart_axis_name_value,
-        ))
-        return None
-
     return dict(
-        component_name=sorted(component_names)[0],
+        component_names=sorted(component_names),
         layer_count=layer_count,
-        smart_axes_count=smart_axes_count(base_component_glyph),
-        smart_axis_id=smart_axis_id,
+        component_count=component_count,
+        component_axis_ids=component_axis_ids,
     )
 
 
@@ -315,38 +318,50 @@ def set_component_smart_value(component, axis_id_value, value):
         return False
 
 
-def set_layer_component_smart_value(layer, smart_axis_id, smart_axis_value):
+def set_layer_component_smart_value(font, layer, smart_axis_name_value, smart_axis_value):
     changed = 0
+    skipped = 0
     for component in layer_components(layer):
+        smart_axis_id = smart_axis_id_for_component(font, component, smart_axis_name_value)
+        if smart_axis_id is None:
+            skipped += 1
+            continue
         if set_component_smart_value(component, smart_axis_id, smart_axis_value):
             changed += 1
-    return changed
+        else:
+            skipped += 1
+    return changed, skipped
 
 
-def populate_variant_from_source(font, source_glyph, target_glyph, smart_axis_id, smart_axis_value):
+def populate_variant_from_source(font, source_glyph, target_glyph, smart_axis_name_value, smart_axis_value):
     remove_non_master_layers(target_glyph)
 
     copied_master_layers = 0
     copied_special_layers = 0
     smart_components_set = 0
+    smart_components_skipped = 0
     for source_layer in source_glyph.layers:
         if is_master_layer(source_layer):
             source_layer_id = layer_id(source_layer)
             new_layer = copied_layer(source_layer)
             new_layer.layerId = source_layer_id
             set_associated_master_id(new_layer, source_layer_id)
-            smart_components_set += set_layer_component_smart_value(new_layer, smart_axis_id, smart_axis_value)
+            changed, skipped = set_layer_component_smart_value(font, new_layer, smart_axis_name_value, smart_axis_value)
+            smart_components_set += changed
+            smart_components_skipped += skipped
             target_glyph.layers[source_layer_id] = new_layer
             copied_master_layers += 1
             continue
 
         new_layer = copied_layer(source_layer)
-        smart_components_set += set_layer_component_smart_value(new_layer, smart_axis_id, smart_axis_value)
+        changed, skipped = set_layer_component_smart_value(font, new_layer, smart_axis_name_value, smart_axis_value)
+        smart_components_set += changed
+        smart_components_skipped += skipped
         target_glyph.layers.append(new_layer)
         copied_special_layers += 1
 
     copy_glyph_metadata(source_glyph, target_glyph)
-    return copied_master_layers, copied_special_layers, smart_components_set
+    return copied_master_layers, copied_special_layers, smart_components_set, smart_components_skipped
 
 
 def parse_variant_count(text):
@@ -447,9 +462,9 @@ def run(source_glyph, variant_count, step, smart_axis_name_value):
     store_settings_on_glyph(source_glyph, variant_count, step, smart_axis_name_value)
 
     print("Source glyph: %s" % source_glyph.name)
-    print("Component glyph: %s" % validation["component_name"])
+    print("Component glyphs: %s" % ", ".join(validation["component_names"]))
     print("Source layers checked: %i" % validation["layer_count"])
-    print("Smart component axes: %i" % validation["smart_axes_count"])
+    print("Smart components checked: %i" % validation["component_count"])
     print("Smart axis: %s" % smart_axis_name_value)
     print("Variants requested: %i" % variant_count)
     print("Step: %s" % clean_number(step))
@@ -464,11 +479,11 @@ def run(source_glyph, variant_count, step, smart_axis_name_value):
             target_name = variant_name(source_glyph.name, number)
             smart_axis_value = clean_number(number * step)
             target_glyph, did_create = get_or_create_glyph(font, target_name, source_glyph)
-            master_count, special_count, smart_components_set = populate_variant_from_source(
+            master_count, special_count, smart_components_set, smart_components_skipped = populate_variant_from_source(
                 font,
                 source_glyph,
                 target_glyph,
-                validation["smart_axis_id"],
+                smart_axis_name_value,
                 smart_axis_value,
             )
             if did_create:
@@ -484,6 +499,12 @@ def run(source_glyph, variant_count, step, smart_axis_name_value):
                 smart_axis_value,
                 smart_components_set,
             ))
+            if smart_components_skipped:
+                print_warning("%s: skipped %i component(s) whose %s value could not be set." % (
+                    target_name,
+                    smart_components_skipped,
+                    smart_axis_name_value,
+                ))
     finally:
         font.enableUpdateInterface()
 
