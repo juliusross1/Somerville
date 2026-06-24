@@ -96,8 +96,8 @@ Test file: accenthorizontal.tex.
 
 
 
-** Step 10: Add bottom anchors **
-Not strictly necessary; only used for the bold variants described in Step XX.
+** Step 10: Add underline anchors **
+Not strictly necessary; only used for the bold variants described in Step XX.  **script needed to reuse existing bottom anchors**
 
 ** Step 11: Add top anchors**
 Not strictly necessary, but useful in the next step that uses "top" to determine the math.ta position.   The script Report Letter Glyphs Missing Top or Bottom Anchors will notifiy you of which letters are missing such anchors.  There is a mekkablue script that will add them at default positions, but they may then need manual adjusting.
@@ -126,7 +126,7 @@ The boldmath.html page will help you check if the bold has been created correctl
 *Step 12b Optional*
  Note that the above setup means that if Weight is 900 then the boldmath is the same as the non-bold, and if Weight is close to 900 then there is little distinction.  There is no easy way around this.  
  
- One option is to not create instances at these higher weights.  Another is to add a small "underline" to all the bold-math characters at high weight.  This is easily done by ensuring that all the bold and bolditalics have a bottom anchor and then pasting the below feature into say ss10 or similar (you might want this turned on automatically at higher weights, it is a judgement call).  Adjust the below to include other bold letters as needed.  Manually adjustment of the bottom anchor may be needed for some letters as appropriate.  I do not think this bottom anchor is used for anything else in mathematics.
+ One option is to not create instances at these higher weights.  Another is to add a small "underline" to all the bold-math characters at high weight.  This is easily done by ensuring that all the bold and bolditalics have a bottom/underline anchor and then pasting the below feature into say ss10 or similar (you might want this turned on automatically at higher weights, it is a judgement call).  Adjust the below to include other bold letters as needed.  Manually adjustment of the bottom/underline anchor may be needed for some letters as appropriate.  (The reason it is useful to use underline rather than bottom is that components of glyphs may have their own bottom anchors that are not the ones that you want; this is a minor thin)
 
 ```
  @LatinBoldMath = [
@@ -174,6 +174,8 @@ lookup AddMathUnderline {
     sub @AllMathUnderlineTargets by @AllMathUnderlineTargets macronbelowcomb;
 } AddMathUnderline;
 '''
+
+You can change macronbelowcomb to another glyph that has a _bottom anchor; make sure this glyph is category Mark and Nonspacing
 
 ** Step 13: Optical Sizing **
 
@@ -239,25 +241,38 @@ Note: the script record the step and n for each glyph, but ideally you want to u
 
 
 *Mayfair Todo*
-Fix bottom anchor on p,q
-Test ss11 feature at other fonts
-
+Math Constants and test docs
+Put back i and j dotless bold and bolditalic
 Minus at various widths (need to fix this one up)
-Redo the existing + divide, = and many others :-(
-    Finish summation glyph
-    Do the product glyph at sizes
 Circle and sizing
+Fix bottom anchor on p,q
+Redo the existing + divide, = and many others :-(
+Finish summation glyph
+Do the product glyph at sizes
+bracket, floor, ceiling need to be more visible
+parentheses
+radicals
+ellipses
+relations
+spacing/italic correction
 
-Adjust the math constants
-Math constants and create testing documents
+
+Test ss11 feature at other fonts
+italic tau
+epsilon?
+union, subset, ....
+arrows
 Times at size?
 Integral and sizing and split into three pieces
-
 Double integrals
 Contour integral
-Other display operators?
 other simple math symbols and anchors (redo the current ones with anchors)
-
+Greek lower
+Greek upper
+Extendibles
+Stackers
+Other accents
+Other fences
 
 
 Todo: Checker Script

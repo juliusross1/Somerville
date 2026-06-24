@@ -1,6 +1,7 @@
 {
+category = Mark;
 color = 5;
-glyphname = underscore;
+glyphname = underlinebold;
 layers = (
 {
 anchors = (
@@ -26,7 +27,7 @@ width = 591;
 anchors = (
 {
 name = _bottom;
-pos = (308,20);
+pos = (308,120);
 },
 {
 name = math.ta;
@@ -169,7 +170,7 @@ width = 808;
 );
 metricLeft = hyphen;
 metricRight = hyphen;
-unicode = 95;
+subCategory = Nonspacing;
 userData = {
 KernOnSpecialSpacing = {
 L = NoKerning;

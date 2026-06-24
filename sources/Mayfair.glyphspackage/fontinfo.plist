@@ -1586,7 +1586,7 @@ code = "@LatinBoldMath = [
 ];
 
 lookup AddMathUnderline {
-    sub @AllMathUnderlineTargets by @AllMathUnderlineTargets macronbelowcomb;
+    sub @AllMathUnderlineTargets by @AllMathUnderlineTargets underlinebold;
 } AddMathUnderline;
 ";
 labels = (
