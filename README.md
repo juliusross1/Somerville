@@ -242,29 +242,26 @@ Note: the script record the step and n for each glyph, but ideally you want to u
 
 *Mayfair Todo*
 Math Constants and test docs
+Finish summation glyph
+parentheses
+Do the product glyph at sizes
+
 Minus at various widths (need to fix this one up)
 Circle and sizing
 Redo the existing + divide, = and many others :-(
-Finish summation glyph
-Do the product glyph at sizes
 bracket, floor, ceiling need to be more visible
-parentheses
 radicals
-ellipses
 relations
 spacing/italic correction
-
+Integrals
+Union, Subset, \in
+other simple math symbols and anchors (systematic system)
 
 Test ss11 feature at other fonts
 italic tau
 epsilon?
-union, subset, ....
 arrows
-Times at size?
-Integral and sizing and split into three pieces
-Double integrals
-Contour integral
-other simple math symbols and anchors (redo the current ones with anchors)
+
 Greek lower
 Greek upper
 Extendibles
