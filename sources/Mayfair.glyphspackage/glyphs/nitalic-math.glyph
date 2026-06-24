@@ -2,6 +2,12 @@
 glyphname = "nitalic-math";
 layers = (
 {
+anchors = (
+{
+name = math.ta;
+pos = (406.518,740);
+}
+);
 background = {
 anchors = (
 {
@@ -139,6 +145,12 @@ ref = "_LC-baseline-outstroke-italic";
 width = 599;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (424.518,740);
+}
+);
 background = {
 anchors = (
 {
@@ -282,6 +294,12 @@ ref = "_LC-baseline-outstroke-italic";
 width = 709;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (423.374,735);
+}
+);
 background = {
 anchors = (
 {
@@ -423,6 +441,12 @@ ref = "_LC-baseline-outstroke-italic";
 width = 658;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (483.374,734);
+}
+);
 background = {
 anchors = (
 {
@@ -563,6 +587,12 @@ ref = "_LC-baseline-outstroke-italic";
 width = 807;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (452.518,740);
+}
+);
 background = {
 anchors = (
 {
@@ -711,6 +741,12 @@ ref = "_LC-baseline-outstroke-italic";
 width = 733;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (495.518,740);
+}
+);
 background = {
 anchors = (
 {
@@ -851,6 +887,12 @@ ref = "_LC-baseline-outstroke-italic";
 width = 850;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (499.374,734);
+}
+);
 background = {
 anchors = (
 {
@@ -999,6 +1041,12 @@ ref = "_LC-baseline-outstroke-italic";
 width = 827;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (563.374,734);
+}
+);
 background = {
 anchors = (
 {
@@ -1152,6 +1200,10 @@ anchors = (
 {
 name = bottom;
 pos = (257,0);
+},
+{
+name = math.ta;
+pos = (404.518,740);
 },
 {
 name = top;
@@ -1390,6 +1442,10 @@ name = bottom;
 pos = (257,0);
 },
 {
+name = math.ta;
+pos = (404.518,740);
+},
+{
 name = top;
 pos = (352,514);
 }
@@ -1624,6 +1680,10 @@ anchors = (
 {
 name = bottom;
 pos = (257,0);
+},
+{
+name = math.ta;
+pos = (404.518,740);
 },
 {
 name = top;
@@ -1862,6 +1922,10 @@ name = bottom;
 pos = (290,0);
 },
 {
+name = math.ta;
+pos = (418.374,735);
+},
+{
 name = top;
 pos = (368,519);
 }
@@ -2068,6 +2132,10 @@ anchors = (
 {
 name = bottom;
 pos = (257,0);
+},
+{
+name = math.ta;
+pos = (404.518,740);
 },
 {
 name = top;
@@ -2306,6 +2374,10 @@ name = bottom;
 pos = (285,0);
 },
 {
+name = math.ta;
+pos = (408.518,740);
+},
+{
 name = top;
 pos = (356,514);
 }
@@ -2522,6 +2594,10 @@ name = bottom;
 pos = (334,0);
 },
 {
+name = math.ta;
+pos = (460.518,740);
+},
+{
 name = top;
 pos = (408,514);
 }
@@ -2728,6 +2804,10 @@ anchors = (
 {
 name = bottom;
 pos = (325,0);
+},
+{
+name = math.ta;
+pos = (448.518,740);
 },
 {
 name = top;
@@ -2944,6 +3024,10 @@ anchors = (
 {
 name = bottom;
 pos = (257,0);
+},
+{
+name = math.ta;
+pos = (402.374,735);
 },
 {
 name = top;
@@ -3182,6 +3266,10 @@ name = bottom;
 pos = (285,0);
 },
 {
+name = math.ta;
+pos = (406.374,735);
+},
+{
 name = top;
 pos = (356,514);
 }
@@ -3396,6 +3484,10 @@ anchors = (
 {
 name = bottom;
 pos = (325,0);
+},
+{
+name = math.ta;
+pos = (446.374,735);
 },
 {
 name = top;
@@ -3614,6 +3706,10 @@ name = bottom;
 pos = (290,0);
 },
 {
+name = math.ta;
+pos = (418.374,735);
+},
+{
 name = top;
 pos = (368,519);
 }
@@ -3820,6 +3916,10 @@ anchors = (
 {
 name = bottom;
 pos = (257,0);
+},
+{
+name = math.ta;
+pos = (402.374,735);
 },
 {
 name = top;
@@ -4058,6 +4158,10 @@ name = bottom;
 pos = (285,0);
 },
 {
+name = math.ta;
+pos = (406.374,735);
+},
+{
 name = top;
 pos = (356,514);
 }
@@ -4272,6 +4376,10 @@ anchors = (
 {
 name = bottom;
 pos = (325,0);
+},
+{
+name = math.ta;
+pos = (446.374,735);
 },
 {
 name = top;

@@ -2,6 +2,12 @@
 glyphname = "Kitalic-math";
 layers = (
 {
+anchors = (
+{
+name = math.ta;
+pos = (498.518,932);
+}
+);
 background = {
 anchors = (
 {
@@ -170,6 +176,12 @@ ref = "_UC-K-wing-italic";
 width = 711;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (557.518,932);
+}
+);
 background = {
 anchors = (
 {
@@ -335,6 +347,12 @@ ref = "_UC-K-wing-italic";
 width = 832;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (545.374,924);
+}
+);
 background = {
 anchors = (
 {
@@ -508,6 +526,12 @@ ref = "_UC-K-wing-italic";
 width = 808;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (618.374,924);
+}
+);
 background = {
 anchors = (
 {
@@ -681,6 +705,12 @@ ref = "_UC-K-wing-italic";
 width = 974;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (569.518,932);
+}
+);
 background = {
 anchors = (
 {
@@ -856,6 +886,12 @@ ref = "_UC-K-wing-italic";
 width = 802;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (662.518,932);
+}
+);
 background = {
 anchors = (
 {
@@ -1015,6 +1051,12 @@ ref = "_UC-K-wing-italic";
 width = 947;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (596.374,924);
+}
+);
 background = {
 anchors = (
 {
@@ -1206,6 +1248,12 @@ ref = "_UC-K-wing-italic";
 width = 899;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (694.374,924);
+}
+);
 background = {
 anchors = (
 {
@@ -1393,6 +1441,10 @@ anchors = (
 {
 name = bottom;
 pos = (291,0);
+},
+{
+name = math.ta;
+pos = (501.518,932);
 },
 {
 name = top;
@@ -1665,6 +1717,10 @@ anchors = (
 {
 name = bottom;
 pos = (380,0);
+},
+{
+name = math.ta;
+pos = (570.518,932);
 },
 {
 name = top;
@@ -1947,6 +2003,10 @@ name = bottom;
 pos = (456,0);
 },
 {
+name = math.ta;
+pos = (659.518,932);
+},
+{
 name = top;
 pos = (607,708);
 },
@@ -2209,6 +2269,10 @@ anchors = (
 {
 name = bottom;
 pos = (406,0);
+},
+{
+name = math.ta;
+pos = (594.374,924);
 },
 {
 name = top;
@@ -2497,6 +2561,10 @@ anchors = (
 {
 name = bottom;
 pos = (519,0);
+},
+{
+name = math.ta;
+pos = (700.374,924);
 },
 {
 name = top;

@@ -2,6 +2,12 @@
 glyphname = "kitalic-math";
 layers = (
 {
+anchors = (
+{
+name = math.ta;
+pos = (427.518,1005);
+}
+);
 background = {
 anchors = (
 {
@@ -113,6 +119,12 @@ ref = "_part.k-legs";
 width = 537;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (469.518,1005);
+}
+);
 background = {
 anchors = (
 {
@@ -224,6 +236,12 @@ ref = "_part.k-legs";
 width = 653;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (485.374,997);
+}
+);
 background = {
 anchors = (
 {
@@ -335,6 +353,12 @@ ref = "_part.k-legs";
 width = 593;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (537.374,997);
+}
+);
 background = {
 anchors = (
 {
@@ -446,6 +470,12 @@ ref = "_part.k-legs";
 width = 734;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (469.518,1005);
+}
+);
 background = {
 anchors = (
 {
@@ -571,6 +601,12 @@ ref = "_part.k-legs";
 width = 639;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (511.518,1005);
+}
+);
 background = {
 anchors = (
 {
@@ -688,6 +724,12 @@ ref = "_part.k-legs";
 width = 740;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (556.374,997);
+}
+);
 background = {
 anchors = (
 {
@@ -813,6 +855,12 @@ ref = "_part.k-legs";
 width = 735;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (611.374,997);
+}
+);
 background = {
 anchors = (
 {
@@ -942,6 +990,10 @@ anchors = (
 {
 name = bottom;
 pos = (189,0);
+},
+{
+name = math.ta;
+pos = (428.518,1005);
 },
 {
 name = top;
@@ -1118,6 +1170,10 @@ name = bottom;
 pos = (228,0);
 },
 {
+name = math.ta;
+pos = (486.374,997);
+},
+{
 name = top;
 pos = (436,773);
 }
@@ -1292,6 +1348,10 @@ name = bottom;
 pos = (293,0);
 },
 {
+name = math.ta;
+pos = (538.374,997);
+},
+{
 name = top;
 pos = (488,773);
 }
@@ -1464,6 +1524,10 @@ anchors = (
 {
 name = bottom;
 pos = (230,0);
+},
+{
+name = math.ta;
+pos = (469.518,1005);
 },
 {
 name = top;
@@ -1654,6 +1718,10 @@ name = bottom;
 pos = (282,0);
 },
 {
+name = math.ta;
+pos = (511.518,1005);
+},
+{
 name = top;
 pos = (459,773);
 }
@@ -1832,6 +1900,10 @@ anchors = (
 {
 name = bottom;
 pos = (319,0);
+},
+{
+name = math.ta;
+pos = (556.374,997);
 },
 {
 name = top;
@@ -2020,6 +2092,10 @@ anchors = (
 {
 name = bottom;
 pos = (384,0);
+},
+{
+name = math.ta;
+pos = (611.374,997);
 },
 {
 name = top;

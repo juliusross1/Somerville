@@ -4,6 +4,12 @@ kernLeft = KO_H;
 kernRight = KO_K;
 layers = (
 {
+anchors = (
+{
+name = math.ta;
+pos = (353,904);
+}
+);
 background = {
 anchors = (
 {
@@ -136,6 +142,12 @@ ref = "_UC-K-wing";
 width = 723;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (422,904);
+}
+);
 background = {
 anchors = (
 {
@@ -293,6 +305,12 @@ ref = "_UC-K-wing";
 width = 842;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (508,904);
+}
+);
 background = {
 anchors = (
 {
@@ -450,6 +468,12 @@ ref = "_UC-K-wing";
 width = 1025;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (432,896);
+}
+);
 background = {
 anchors = (
 {
@@ -588,6 +612,12 @@ ref = "_UC-K-wing";
 width = 795;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (480,896);
+}
+);
 background = {
 anchors = (
 {
@@ -726,6 +756,12 @@ ref = "_UC-K-wing";
 width = 904;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (406,904);
+}
+);
 background = {
 anchors = (
 {
@@ -879,6 +915,12 @@ ref = "_UC-K-wing";
 width = 795;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (422,896);
+}
+);
 background = {
 anchors = (
 {
@@ -1030,6 +1072,12 @@ ref = "_UC-K-wing";
 width = 801;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (524,896);
+}
+);
 background = {
 anchors = (
 {
@@ -1197,6 +1245,10 @@ pos = (535,0);
 {
 name = center;
 pos = (563,356);
+},
+{
+name = math.ta;
+pos = (524,896);
 },
 {
 name = stroke;
@@ -1445,6 +1497,10 @@ name = center;
 pos = (448,356);
 },
 {
+name = math.ta;
+pos = (422,896);
+},
+{
 name = stroke;
 pos = (231,520);
 },
@@ -1689,6 +1745,10 @@ pos = (539,0);
 {
 name = center;
 pos = (569,356);
+},
+{
+name = math.ta;
+pos = (508,904);
 },
 {
 name = stroke;
@@ -1943,6 +2003,10 @@ name = center;
 pos = (464,356);
 },
 {
+name = math.ta;
+pos = (422,904);
+},
+{
 name = stroke;
 pos = (256,520);
 },
@@ -2195,6 +2259,10 @@ name = center;
 pos = (487,354);
 },
 {
+name = math.ta;
+pos = (451,896);
+},
+{
 name = stroke;
 pos = (231,520);
 },
@@ -2441,6 +2509,10 @@ name = center;
 pos = (418,354);
 },
 {
+name = math.ta;
+pos = (392,896);
+},
+{
 name = stroke;
 pos = (201,520);
 },
@@ -2685,6 +2757,10 @@ pos = (409,0);
 {
 name = center;
 pos = (444,361);
+},
+{
+name = math.ta;
+pos = (390,904);
 },
 {
 name = stroke;
@@ -2937,6 +3013,10 @@ pos = (344,0);
 {
 name = center;
 pos = (385,361);
+},
+{
+name = math.ta;
+pos = (333,904);
 },
 {
 name = stroke;

@@ -4,6 +4,12 @@ kernLeft = KO_l;
 kernRight = KO_n;
 layers = (
 {
+anchors = (
+{
+name = math.ta;
+pos = (306,981);
+}
+);
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
@@ -36,6 +42,12 @@ ref = "_part.LC-baseline-stroke";
 width = 612;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (377,981);
+}
+);
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
@@ -70,6 +82,12 @@ ref = "_part.LC-baseline-stroke";
 width = 758;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (464,981);
+}
+);
 guides = (
 {
 pos = (392,290);
@@ -108,6 +126,12 @@ ref = "_part.LC-baseline-stroke";
 width = 928;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (318,970);
+}
+);
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
@@ -140,6 +164,12 @@ ref = "_part.LC-baseline-stroke";
 width = 644;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (379,970);
+}
+);
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
@@ -172,6 +202,12 @@ ref = "_part.LC-baseline-stroke";
 width = 771;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (364,981);
+}
+);
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
@@ -204,6 +240,12 @@ ref = "_part.LC-baseline-stroke";
 width = 727;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (347,970);
+}
+);
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
@@ -238,6 +280,12 @@ ref = "_part.LC-baseline-stroke";
 width = 720;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (425,970);
+}
+);
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
@@ -271,6 +319,12 @@ ref = "_part.LC-baseline-stroke";
 width = 879;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (306,981);
+}
+);
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 attr = {
 axisRules = (
@@ -322,6 +376,12 @@ ref = "_part.LC-baseline-right-outserif";
 width = 612;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (364,981);
+}
+);
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 attr = {
 axisRules = (
@@ -373,6 +433,12 @@ ref = "_part.LC-baseline-right-outserif";
 width = 727;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (318,970);
+}
+);
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
 attr = {
 axisRules = (
@@ -424,6 +490,12 @@ ref = "_part.LC-baseline-right-outserif";
 width = 644;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (379,970);
+}
+);
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 attr = {
 axisRules = (
@@ -475,6 +547,12 @@ ref = "_part.LC-baseline-right-outserif";
 width = 771;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (377,981);
+}
+);
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 attr = {
 axisRules = (
@@ -528,6 +606,12 @@ ref = "_part.LC-baseline-right-outserif";
 width = 758;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (464,981);
+}
+);
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 attr = {
 axisRules = (
@@ -585,6 +669,12 @@ ref = "_part.LC-baseline-right-outserif";
 width = 928;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (347,970);
+}
+);
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 attr = {
 axisRules = (
@@ -637,6 +727,12 @@ ref = "_part.LC-baseline-right-outserif";
 width = 720;
 },
 {
+anchors = (
+{
+name = math.ta;
+pos = (425,970);
+}
+);
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 attr = {
 axisRules = (
