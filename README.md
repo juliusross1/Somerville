@@ -240,13 +240,13 @@ Note: the script record the step and n for each glyph, but ideally you want to u
 **Arrows**
 
 
-*Mayfair Todo*
-Math Constants and test docs
+*Mayfair Todo (16)*
+Script or system to insert the constants into the glyphs file
 Finish summation glyph
-parentheses
-Do the product glyph at sizes
-
-Minus at various widths (need to fix this one up)
+Parentheses
+Center the bar, bracket, brace etc.
+Do the product glyph at display sizes
+Minus at various widths
 Circle and sizing
 Redo the existing + divide, = and many others :-(
 bracket, floor, ceiling need to be more visible
@@ -256,7 +256,9 @@ spacing/italic correction
 Integrals
 Union, Subset, \in
 other simple math symbols and anchors (systematic system)
+Arrows
 
+Math Constants and test docs
 Test ss11 feature at other fonts
 italic tau
 epsilon?
