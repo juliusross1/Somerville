@@ -245,6 +245,7 @@ Note: the script record the step and n for each glyph, but ideally you want to u
 Script or system to insert the constants into the glyphs file
 Finish summation glyph
 Parentheses
+Upper and lower limits on summation in mathml core (or is this a stale font issue?)
 bracket, floor, ceiling need to be more visible
 Center the bar, bracket, brace etc.
 Do the product glyph at display sizes
