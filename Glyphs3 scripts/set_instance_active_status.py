@@ -7,7 +7,7 @@ import vanilla
 from GlyphsApp import Glyphs
 
 
-SCRIPT_VERSION = "2026-06-24 09:02 CDT no-macro-window"
+SCRIPT_VERSION = "2026-06-26 13:44 CDT live-checkboxes"
 IGNORED_AXIS_VALUES = (0,)
 
 AXIS_GROUPS = (
@@ -402,6 +402,7 @@ class InstanceActiveStatusWindow(object):
         self.axis_value_names = infer_axis_value_names(self.instance_records)
         self.initial_selected_values = active_axis_values(self.instance_records)
         self.checkboxes = {}
+        self.updating_checkboxes = False
         column_width = 190
         margin = 15
         row_height = 24
@@ -443,6 +444,7 @@ class InstanceActiveStatusWindow(object):
                     (left, margin + heading_height + row_index * row_height, column_width - 10, 20),
                     axis_value_label(key, axis_value, self.axis_value_names),
                     value=axis_value in self.initial_selected_values[key],
+                    callback=self.checkbox_callback,
                 )
                 self.w.__setattr__("%s_%i" % (key, row_index), checkbox)
                 self.checkboxes[key].append((axis_value, checkbox))
@@ -458,26 +460,44 @@ class InstanceActiveStatusWindow(object):
             "-",
             callback=self.select_none_callback,
         )
-        self.w.applyButton = vanilla.Button(
-            (margin + 72, button_top, -margin, button_height),
-            "Set active instances",
-            callback=self.apply_callback,
-        )
         self.w.open()
         self.w.makeKey()
         print("UI opened.")
 
-    def set_column_checked(self, key, checked):
-        for axis_value, checkbox in self.checkboxes.get(key, []):
-            checkbox.set(checked)
+    def set_column_checked(self, key, checked, apply_changes=True):
+        previous_updating_checkboxes = self.updating_checkboxes
+        self.updating_checkboxes = True
+        try:
+            for axis_value, checkbox in self.checkboxes.get(key, []):
+                checkbox.set(checked)
+        finally:
+            self.updating_checkboxes = previous_updating_checkboxes
+
+        if apply_changes:
+            self.apply_current_selection()
 
     def select_all_callback(self, sender):
-        for key, title, names in AXIS_GROUPS:
-            self.set_column_checked(key, True)
+        self.updating_checkboxes = True
+        try:
+            for key, title, names in AXIS_GROUPS:
+                self.set_column_checked(key, True, apply_changes=False)
+        finally:
+            self.updating_checkboxes = False
+        self.apply_current_selection()
 
     def select_none_callback(self, sender):
-        for key, title, names in AXIS_GROUPS:
-            self.set_column_checked(key, False)
+        self.updating_checkboxes = True
+        try:
+            for key, title, names in AXIS_GROUPS:
+                self.set_column_checked(key, False, apply_changes=False)
+        finally:
+            self.updating_checkboxes = False
+        self.apply_current_selection()
+
+    def checkbox_callback(self, sender):
+        if self.updating_checkboxes:
+            return
+        self.apply_current_selection()
 
     def selected_values(self):
         selected = {}
@@ -489,10 +509,11 @@ class InstanceActiveStatusWindow(object):
             )
         return selected
 
-    def apply_callback(self, sender):
+    def apply_current_selection(self):
         Glyphs.clearLog()
         print("Set Instance Active Status")
         print("Script version: %s" % SCRIPT_VERSION)
+        print("Live checkbox update")
         print("")
 
         selected = self.selected_values()

@@ -1,5 +1,5 @@
 {
-.appVersion = "3528";
+.appVersion = "3529";
 .formatVersion = 3;
 axes = (
 {
@@ -1600,8 +1600,57 @@ tag = ss11;
 {
 automatic = 1;
 code = "sub A from [A.ssty1 A.ssty2];
+sub B from [B.ssty1 B.ssty2];
+sub C from [C.ssty1 C.ssty2];
+sub D from [D.ssty1 D.ssty2];
+sub E from [E.ssty1 E.ssty2];
+sub F from [F.ssty1 F.ssty2];
+sub G from [G.ssty1 G.ssty2];
+sub H from [H.ssty1 H.ssty2];
+sub I from [I.ssty1 I.ssty2];
+sub J from [J.ssty1 J.ssty2];
+sub K from [K.ssty1 K.ssty2];
+sub L from [L.ssty1 L.ssty2];
+sub M from [M.ssty1 M.ssty2];
+sub N from [N.ssty1 N.ssty2];
+sub O from [O.ssty1 O.ssty2];
+sub P from [P.ssty1 P.ssty2];
+sub Q from [Q.ssty1 Q.ssty2];
+sub R from [R.ssty1 R.ssty2];
+sub S from [S.ssty1 S.ssty2];
+sub T from [T.ssty1 T.ssty2];
+sub U from [U.ssty1 U.ssty2];
+sub V from [V.ssty1 V.ssty2];
+sub W from [W.ssty1 W.ssty2];
+sub X from [X.ssty1 X.ssty2];
+sub Y from [Y.ssty1 Y.ssty2];
+sub Z from [Z.ssty1 Z.ssty2];
+sub a from [a.ssty1 a.ssty2];
+sub b from [b.ssty1 b.ssty2];
+sub c from [c.ssty1 c.ssty2];
+sub d from [d.ssty1 d.ssty2];
+sub e from [e.ssty1 e.ssty2];
+sub f from [f.ssty1 f.ssty2];
+sub g from [g.ssty1 g.ssty2];
 sub h from [h.ssty1 h.ssty2];
+sub i from [i.ssty1 i.ssty2];
+sub j from [j.ssty1 j.ssty2];
 sub k from [k.ssty1 k.ssty2];
+sub l from [l.ssty1 l.ssty2];
+sub m from [m.ssty1 m.ssty2];
+sub n from [n.ssty1 n.ssty2];
+sub o from [o.ssty1 o.ssty2];
+sub p from [p.ssty1 p.ssty2];
+sub q from [q.ssty1 q.ssty2];
+sub r from [r.ssty1 r.ssty2];
+sub s from [s.ssty1 s.ssty2];
+sub t from [t.ssty1 t.ssty2];
+sub u from [u.ssty1 u.ssty2];
+sub v from [v.ssty1 v.ssty2];
+sub w from [w.ssty1 w.ssty2];
+sub x from [x.ssty1 x.ssty2];
+sub y from [y.ssty1 y.ssty2];
+sub z from [z.ssty1 z.ssty2];
 ";
 tag = ssty;
 }
@@ -1771,6 +1820,14 @@ pos = -191;
 },
 {
 pos = -3191;
+},
+{
+pos = 3782;
+},
+{
+pos = 771;
+},
+{
 }
 );
 name = "Needlepoint SemiCondensed Upright";
@@ -1883,22 +1940,22 @@ KernOnUserSetAutopairs = (
 "qhooktail.smcp r.smcp"
 );
 com.nagwa.MATHPlugin.constants = {
-AccentBaseHeight = 542;
+AccentBaseHeight = 550;
 AxisHeight = 266;
 DelimitedSubFormulaMinHeight = 1503;
 DisplayOperatorMinHeight = 1500;
 FlattenedAccentBaseHeight = 708;
-FractionDenomDisplayStyleGapMin = 3;
-FractionDenominatorDisplayStyleShiftDown = 708;
-FractionDenominatorGapMin = 1;
-FractionDenominatorShiftDown = 472;
+FractionDenomDisplayStyleGapMin = 120;
+FractionDenominatorDisplayStyleShiftDown = 606;
+FractionDenominatorGapMin = 100;
+FractionDenominatorShiftDown = 455;
 FractionNumDisplayStyleGapMin = 100;
-FractionNumeratorDisplayStyleShiftUp = 768;
-FractionNumeratorGapMin = 1;
-FractionNumeratorShiftUp = 512;
-FractionRuleThickness = 1;
-LowerLimitBaselineDropMin = 578;
-LowerLimitGapMin = 2;
+FractionNumeratorDisplayStyleShiftUp = 415;
+FractionNumeratorGapMin = 55;
+FractionNumeratorShiftUp = 420;
+FractionRuleThickness = 2;
+LowerLimitBaselineDropMin = 700;
+LowerLimitGapMin = 60;
 MathLeading = 0;
 MinConnectorOverlap = 62;
 OverbarExtraAscender = 1;
@@ -1911,15 +1968,17 @@ RadicalKernAfterDegree = -689;
 RadicalKernBeforeDegree = 344;
 RadicalRuleThickness = 1;
 RadicalVerticalGap = 1;
-ScriptPercentScaleDown = 80;
-ScriptScriptPercentScaleDown = 60;
+ScriptPercentScaleDown = 75;
+ScriptScriptPercentScaleDown = 55;
+SkewedFractionHorizontalGap = 0;
+SkewedFractionVerticalGap = 0;
 SpaceAfterScript = 52;
-StackBottomDisplayStyleShiftDown = 708;
-StackBottomShiftDown = 472;
-StackDisplayStyleGapMin = 7;
-StackGapMin = 3;
-StackTopDisplayStyleShiftUp = 768;
-StackTopShiftUp = 512;
+StackBottomDisplayStyleShiftDown = 606;
+StackBottomShiftDown = 255;
+StackDisplayStyleGapMin = 100;
+StackGapMin = 80;
+StackTopDisplayStyleShiftUp = 415;
+StackTopShiftUp = 420;
 StretchStackBottomShiftDown = 578;
 StretchStackGapAboveMin = 2;
 StretchStackGapBelowMin = 2;
@@ -1936,8 +1995,8 @@ SuperscriptShiftUpCramped = 329;
 UnderbarExtraDescender = 1;
 UnderbarRuleThickness = 1;
 UnderbarVerticalGap = 3;
-UpperLimitBaselineRiseMin = 173;
-UpperLimitGapMin = 2;
+UpperLimitBaselineRiseMin = 60;
+UpperLimitGapMin = 160;
 };
 };
 },
@@ -2105,6 +2164,14 @@ pos = -191;
 },
 {
 pos = -3191;
+},
+{
+pos = 3782;
+},
+{
+pos = 771;
+},
+{
 }
 );
 name = "Needlepoint SemiExpanded Upright";
@@ -2205,22 +2272,22 @@ KernOnUserSetAutopairs = (
 "qhooktail.smcp r.smcp"
 );
 com.nagwa.MATHPlugin.constants = {
-AccentBaseHeight = 542;
+AccentBaseHeight = 550;
 AxisHeight = 266;
 DelimitedSubFormulaMinHeight = 1503;
 DisplayOperatorMinHeight = 1500;
 FlattenedAccentBaseHeight = 708;
-FractionDenomDisplayStyleGapMin = 3;
-FractionDenominatorDisplayStyleShiftDown = 708;
-FractionDenominatorGapMin = 1;
-FractionDenominatorShiftDown = 472;
-FractionNumDisplayStyleGapMin = 3;
-FractionNumeratorDisplayStyleShiftUp = 768;
-FractionNumeratorGapMin = 1;
-FractionNumeratorShiftUp = 512;
-FractionRuleThickness = 1;
-LowerLimitBaselineDropMin = 578;
-LowerLimitGapMin = 2;
+FractionDenomDisplayStyleGapMin = 120;
+FractionDenominatorDisplayStyleShiftDown = 606;
+FractionDenominatorGapMin = 100;
+FractionDenominatorShiftDown = 455;
+FractionNumDisplayStyleGapMin = 100;
+FractionNumeratorDisplayStyleShiftUp = 415;
+FractionNumeratorGapMin = 55;
+FractionNumeratorShiftUp = 420;
+FractionRuleThickness = 2;
+LowerLimitBaselineDropMin = 700;
+LowerLimitGapMin = 60;
 MathLeading = 0;
 MinConnectorOverlap = 62;
 OverbarExtraAscender = 1;
@@ -2233,15 +2300,17 @@ RadicalKernAfterDegree = -689;
 RadicalKernBeforeDegree = 344;
 RadicalRuleThickness = 1;
 RadicalVerticalGap = 1;
-ScriptPercentScaleDown = 80;
-ScriptScriptPercentScaleDown = 60;
+ScriptPercentScaleDown = 75;
+ScriptScriptPercentScaleDown = 55;
+SkewedFractionHorizontalGap = 0;
+SkewedFractionVerticalGap = 0;
 SpaceAfterScript = 52;
-StackBottomDisplayStyleShiftDown = 708;
-StackBottomShiftDown = 472;
-StackDisplayStyleGapMin = 7;
-StackGapMin = 3;
-StackTopDisplayStyleShiftUp = 768;
-StackTopShiftUp = 512;
+StackBottomDisplayStyleShiftDown = 606;
+StackBottomShiftDown = 255;
+StackDisplayStyleGapMin = 100;
+StackGapMin = 80;
+StackTopDisplayStyleShiftUp = 415;
+StackTopShiftUp = 420;
 StretchStackBottomShiftDown = 578;
 StretchStackGapAboveMin = 2;
 StretchStackGapBelowMin = 2;
@@ -2258,8 +2327,8 @@ SuperscriptShiftUpCramped = 329;
 UnderbarExtraDescender = 1;
 UnderbarRuleThickness = 1;
 UnderbarVerticalGap = 3;
-UpperLimitBaselineRiseMin = 173;
-UpperLimitGapMin = 2;
+UpperLimitBaselineRiseMin = 60;
+UpperLimitGapMin = 160;
 };
 };
 },
@@ -2444,6 +2513,14 @@ pos = -191;
 },
 {
 pos = -3191;
+},
+{
+pos = 3782;
+},
+{
+pos = 771;
+},
+{
 }
 );
 name = "Needlepoint Black SemiCondensed Upright";
@@ -2540,21 +2617,22 @@ KernOnUserSetAutopairs = (
 "qhooktail.smcp r.smcp"
 );
 com.nagwa.MATHPlugin.constants = {
-AccentBaseHeight = 550;
+AccentBaseHeight = 548;
 AxisHeight = 266;
 DelimitedSubFormulaMinHeight = 1503;
+DisplayOperatorMinHeight = 1500;
 FlattenedAccentBaseHeight = 708;
-FractionDenomDisplayStyleGapMin = 3;
-FractionDenominatorDisplayStyleShiftDown = 708;
-FractionDenominatorGapMin = 1;
-FractionDenominatorShiftDown = 472;
-FractionNumDisplayStyleGapMin = 3;
-FractionNumeratorDisplayStyleShiftUp = 780;
+FractionDenomDisplayStyleGapMin = 117;
+FractionDenominatorDisplayStyleShiftDown = 608;
+FractionDenominatorGapMin = 100;
+FractionDenominatorShiftDown = 453;
+FractionNumDisplayStyleGapMin = 100;
+FractionNumeratorDisplayStyleShiftUp = 413;
 FractionNumeratorGapMin = 1;
-FractionNumeratorShiftUp = 520;
-FractionRuleThickness = 1;
-LowerLimitBaselineDropMin = 578;
-LowerLimitGapMin = 2;
+FractionNumeratorShiftUp = 420;
+FractionRuleThickness = 2;
+LowerLimitBaselineDropMin = 700;
+LowerLimitGapMin = 60;
 MathLeading = 0;
 MinConnectorOverlap = 62;
 OverbarExtraAscender = 1;
@@ -2567,15 +2645,17 @@ RadicalKernAfterDegree = -689;
 RadicalKernBeforeDegree = 344;
 RadicalRuleThickness = 1;
 RadicalVerticalGap = 1;
-ScriptPercentScaleDown = 80;
-ScriptScriptPercentScaleDown = 60;
+ScriptPercentScaleDown = 75;
+ScriptScriptPercentScaleDown = 55;
+SkewedFractionHorizontalGap = 0;
+SkewedFractionVerticalGap = 0;
 SpaceAfterScript = 52;
-StackBottomDisplayStyleShiftDown = 708;
-StackBottomShiftDown = 472;
-StackDisplayStyleGapMin = 7;
-StackGapMin = 3;
-StackTopDisplayStyleShiftUp = 780;
-StackTopShiftUp = 520;
+StackBottomDisplayStyleShiftDown = 604;
+StackBottomShiftDown = 255;
+StackDisplayStyleGapMin = 97;
+StackGapMin = 80;
+StackTopDisplayStyleShiftUp = 415;
+StackTopShiftUp = 420;
 StretchStackBottomShiftDown = 578;
 StretchStackGapAboveMin = 2;
 StretchStackGapBelowMin = 2;
@@ -2592,8 +2672,8 @@ SuperscriptShiftUpCramped = 329;
 UnderbarExtraDescender = 1;
 UnderbarRuleThickness = 1;
 UnderbarVerticalGap = 3;
-UpperLimitBaselineRiseMin = 173;
-UpperLimitGapMin = 2;
+UpperLimitBaselineRiseMin = 60;
+UpperLimitGapMin = 160;
 };
 };
 },
@@ -2789,6 +2869,14 @@ pos = -191;
 },
 {
 pos = -3191;
+},
+{
+pos = 3782;
+},
+{
+pos = 771;
+},
+{
 }
 );
 name = "Needlepoint Black SemiExpanded Upright";
@@ -2887,22 +2975,22 @@ KernOnUserSetAutopairs = (
 "qhooktail.smcp r.smcp"
 );
 com.nagwa.MATHPlugin.constants = {
-AccentBaseHeight = 550;
+AccentBaseHeight = 548;
 AxisHeight = 266;
 DelimitedSubFormulaMinHeight = 1503;
 DisplayOperatorMinHeight = 1500;
 FlattenedAccentBaseHeight = 708;
-FractionDenomDisplayStyleGapMin = 3;
-FractionDenominatorDisplayStyleShiftDown = 708;
-FractionDenominatorGapMin = 1;
-FractionDenominatorShiftDown = 472;
-FractionNumDisplayStyleGapMin = 3;
-FractionNumeratorDisplayStyleShiftUp = 780;
+FractionDenomDisplayStyleGapMin = 117;
+FractionDenominatorDisplayStyleShiftDown = 608;
+FractionDenominatorGapMin = 100;
+FractionDenominatorShiftDown = 453;
+FractionNumDisplayStyleGapMin = 100;
+FractionNumeratorDisplayStyleShiftUp = 413;
 FractionNumeratorGapMin = 1;
-FractionNumeratorShiftUp = 520;
-FractionRuleThickness = 1;
-LowerLimitBaselineDropMin = 578;
-LowerLimitGapMin = 2;
+FractionNumeratorShiftUp = 420;
+FractionRuleThickness = 2;
+LowerLimitBaselineDropMin = 700;
+LowerLimitGapMin = 60;
 MathLeading = 0;
 MinConnectorOverlap = 62;
 OverbarExtraAscender = 1;
@@ -2915,15 +3003,17 @@ RadicalKernAfterDegree = -689;
 RadicalKernBeforeDegree = 344;
 RadicalRuleThickness = 1;
 RadicalVerticalGap = 1;
-ScriptPercentScaleDown = 80;
-ScriptScriptPercentScaleDown = 60;
+ScriptPercentScaleDown = 75;
+ScriptScriptPercentScaleDown = 55;
+SkewedFractionHorizontalGap = 0;
+SkewedFractionVerticalGap = 0;
 SpaceAfterScript = 52;
-StackBottomDisplayStyleShiftDown = 708;
-StackBottomShiftDown = 472;
-StackDisplayStyleGapMin = 7;
-StackGapMin = 3;
-StackTopDisplayStyleShiftUp = 780;
-StackTopShiftUp = 520;
+StackBottomDisplayStyleShiftDown = 604;
+StackBottomShiftDown = 255;
+StackDisplayStyleGapMin = 97;
+StackGapMin = 80;
+StackTopDisplayStyleShiftUp = 415;
+StackTopShiftUp = 420;
 StretchStackBottomShiftDown = 578;
 StretchStackGapAboveMin = 2;
 StretchStackGapBelowMin = 2;
@@ -2940,8 +3030,8 @@ SuperscriptShiftUpCramped = 329;
 UnderbarExtraDescender = 1;
 UnderbarRuleThickness = 1;
 UnderbarVerticalGap = 3;
-UpperLimitBaselineRiseMin = 173;
-UpperLimitGapMin = 2;
+UpperLimitBaselineRiseMin = 60;
+UpperLimitGapMin = 160;
 };
 };
 },
@@ -3130,6 +3220,13 @@ pos = -191;
 },
 {
 pos = -3191;
+},
+{
+},
+{
+},
+{
+pos = 3782;
 }
 );
 name = "Agate SemiCondensed Upright";
@@ -3239,22 +3336,22 @@ KernOnUserSetAutopairs = (
 "qhooktail.smcp r.smcp"
 );
 com.nagwa.MATHPlugin.constants = {
-AccentBaseHeight = 542;
+AccentBaseHeight = 550;
 AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1506;
 DisplayOperatorMinHeight = 1500;
 FlattenedAccentBaseHeight = 708;
-FractionDenomDisplayStyleGapMin = 440;
-FractionDenominatorDisplayStyleShiftDown = 1008;
-FractionDenominatorGapMin = 80;
-FractionDenominatorShiftDown = 472;
-FractionNumDisplayStyleGapMin = 240;
-FractionNumeratorDisplayStyleShiftUp = 768;
-FractionNumeratorGapMin = 80;
+FractionDenomDisplayStyleGapMin = 120;
+FractionDenominatorDisplayStyleShiftDown = 608;
+FractionDenominatorGapMin = 100;
+FractionDenominatorShiftDown = 455;
+FractionNumDisplayStyleGapMin = 100;
+FractionNumeratorDisplayStyleShiftUp = 415;
+FractionNumeratorGapMin = 55;
 FractionNumeratorShiftUp = 512;
 FractionRuleThickness = 80;
-LowerLimitBaselineDropMin = 580;
-LowerLimitGapMin = 160;
+LowerLimitBaselineDropMin = 700;
+LowerLimitGapMin = 60;
 MathLeading = 0;
 MinConnectorOverlap = 62;
 OverbarExtraAscender = 80;
@@ -3267,15 +3364,17 @@ RadicalKernAfterDegree = -689;
 RadicalKernBeforeDegree = 344;
 RadicalRuleThickness = 80;
 RadicalVerticalGap = 100;
-ScriptPercentScaleDown = 80;
-ScriptScriptPercentScaleDown = 60;
+ScriptPercentScaleDown = 75;
+ScriptScriptPercentScaleDown = 55;
+SkewedFractionHorizontalGap = 0;
+SkewedFractionVerticalGap = 0;
 SpaceAfterScript = 52;
-StackBottomDisplayStyleShiftDown = 708;
-StackBottomShiftDown = 472;
-StackDisplayStyleGapMin = 560;
-StackGapMin = 240;
-StackTopDisplayStyleShiftUp = 768;
-StackTopShiftUp = 512;
+StackBottomDisplayStyleShiftDown = 606;
+StackBottomShiftDown = 255;
+StackDisplayStyleGapMin = 100;
+StackGapMin = 80;
+StackTopDisplayStyleShiftUp = 415;
+StackTopShiftUp = 420;
 StretchStackBottomShiftDown = 580;
 StretchStackGapAboveMin = 160;
 StretchStackGapBelowMin = 160;
@@ -3292,7 +3391,7 @@ SuperscriptShiftUpCramped = 329;
 UnderbarExtraDescender = 80;
 UnderbarRuleThickness = 80;
 UnderbarVerticalGap = 240;
-UpperLimitBaselineRiseMin = 173;
+UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
@@ -3478,6 +3577,13 @@ pos = -191;
 },
 {
 pos = -3191;
+},
+{
+},
+{
+},
+{
+pos = 3782;
 }
 );
 name = "Agate SemiExpanded Upright";
@@ -3585,22 +3691,22 @@ KernOnUserSetAutopairs = (
 "qhooktail.smcp r.smcp"
 );
 com.nagwa.MATHPlugin.constants = {
-AccentBaseHeight = 542;
+AccentBaseHeight = 550;
 AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1506;
 DisplayOperatorMinHeight = 1500;
 FlattenedAccentBaseHeight = 708;
-FractionDenomDisplayStyleGapMin = 240;
-FractionDenominatorDisplayStyleShiftDown = 708;
-FractionDenominatorGapMin = 80;
-FractionDenominatorShiftDown = 472;
-FractionNumDisplayStyleGapMin = 240;
-FractionNumeratorDisplayStyleShiftUp = 768;
-FractionNumeratorGapMin = 80;
+FractionDenomDisplayStyleGapMin = 120;
+FractionDenominatorDisplayStyleShiftDown = 608;
+FractionDenominatorGapMin = 100;
+FractionDenominatorShiftDown = 455;
+FractionNumDisplayStyleGapMin = 100;
+FractionNumeratorDisplayStyleShiftUp = 415;
+FractionNumeratorGapMin = 55;
 FractionNumeratorShiftUp = 512;
 FractionRuleThickness = 80;
-LowerLimitBaselineDropMin = 580;
-LowerLimitGapMin = 160;
+LowerLimitBaselineDropMin = 700;
+LowerLimitGapMin = 60;
 MathLeading = 0;
 MinConnectorOverlap = 62;
 OverbarExtraAscender = 80;
@@ -3613,15 +3719,17 @@ RadicalKernAfterDegree = -689;
 RadicalKernBeforeDegree = 344;
 RadicalRuleThickness = 80;
 RadicalVerticalGap = 100;
-ScriptPercentScaleDown = 80;
-ScriptScriptPercentScaleDown = 60;
+ScriptPercentScaleDown = 75;
+ScriptScriptPercentScaleDown = 55;
+SkewedFractionHorizontalGap = 0;
+SkewedFractionVerticalGap = 0;
 SpaceAfterScript = 52;
-StackBottomDisplayStyleShiftDown = 708;
-StackBottomShiftDown = 472;
-StackDisplayStyleGapMin = 560;
-StackGapMin = 240;
-StackTopDisplayStyleShiftUp = 768;
-StackTopShiftUp = 512;
+StackBottomDisplayStyleShiftDown = 606;
+StackBottomShiftDown = 255;
+StackDisplayStyleGapMin = 100;
+StackGapMin = 80;
+StackTopDisplayStyleShiftUp = 415;
+StackTopShiftUp = 420;
 StretchStackBottomShiftDown = 580;
 StretchStackGapAboveMin = 160;
 StretchStackGapBelowMin = 160;
@@ -3638,7 +3746,7 @@ SuperscriptShiftUpCramped = 329;
 UnderbarExtraDescender = 80;
 UnderbarRuleThickness = 80;
 UnderbarVerticalGap = 240;
-UpperLimitBaselineRiseMin = 173;
+UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
@@ -3832,6 +3940,13 @@ pos = -191;
 },
 {
 pos = -3191;
+},
+{
+},
+{
+},
+{
+pos = 3782;
 }
 );
 name = "Agate Black SemiCondensed Upright";
@@ -3947,17 +4062,17 @@ AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1506;
 DisplayOperatorMinHeight = 1500;
 FlattenedAccentBaseHeight = 708;
-FractionDenomDisplayStyleGapMin = 240;
-FractionDenominatorDisplayStyleShiftDown = 708;
-FractionDenominatorGapMin = 80;
-FractionDenominatorShiftDown = 472;
-FractionNumDisplayStyleGapMin = 240;
-FractionNumeratorDisplayStyleShiftUp = 780;
-FractionNumeratorGapMin = 80;
+FractionDenomDisplayStyleGapMin = 120;
+FractionDenominatorDisplayStyleShiftDown = 608;
+FractionDenominatorGapMin = 100;
+FractionDenominatorShiftDown = 455;
+FractionNumDisplayStyleGapMin = 100;
+FractionNumeratorDisplayStyleShiftUp = 415;
+FractionNumeratorGapMin = 55;
 FractionNumeratorShiftUp = 520;
 FractionRuleThickness = 80;
-LowerLimitBaselineDropMin = 580;
-LowerLimitGapMin = 160;
+LowerLimitBaselineDropMin = 700;
+LowerLimitGapMin = 60;
 MathLeading = 0;
 MinConnectorOverlap = 62;
 OverbarExtraAscender = 80;
@@ -3970,15 +4085,17 @@ RadicalKernAfterDegree = -689;
 RadicalKernBeforeDegree = 344;
 RadicalRuleThickness = 80;
 RadicalVerticalGap = 100;
-ScriptPercentScaleDown = 80;
-ScriptScriptPercentScaleDown = 60;
+ScriptPercentScaleDown = 75;
+ScriptScriptPercentScaleDown = 55;
+SkewedFractionHorizontalGap = 0;
+SkewedFractionVerticalGap = 0;
 SpaceAfterScript = 52;
-StackBottomDisplayStyleShiftDown = 708;
-StackBottomShiftDown = 472;
-StackDisplayStyleGapMin = 560;
-StackGapMin = 240;
-StackTopDisplayStyleShiftUp = 780;
-StackTopShiftUp = 520;
+StackBottomDisplayStyleShiftDown = 606;
+StackBottomShiftDown = 255;
+StackDisplayStyleGapMin = 100;
+StackGapMin = 80;
+StackTopDisplayStyleShiftUp = 415;
+StackTopShiftUp = 420;
 StretchStackBottomShiftDown = 580;
 StretchStackGapAboveMin = 160;
 StretchStackGapBelowMin = 160;
@@ -3995,7 +4112,7 @@ SuperscriptShiftUpCramped = 329;
 UnderbarExtraDescender = 80;
 UnderbarRuleThickness = 80;
 UnderbarVerticalGap = 240;
-UpperLimitBaselineRiseMin = 173;
+UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
@@ -4185,6 +4302,13 @@ pos = -191;
 },
 {
 pos = -3191;
+},
+{
+},
+{
+},
+{
+pos = 3782;
 }
 );
 name = "Agate Black SemiExpanded Upright";
@@ -4309,17 +4433,17 @@ AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1506;
 DisplayOperatorMinHeight = 1500;
 FlattenedAccentBaseHeight = 708;
-FractionDenomDisplayStyleGapMin = 240;
-FractionDenominatorDisplayStyleShiftDown = 708;
-FractionDenominatorGapMin = 80;
-FractionDenominatorShiftDown = 472;
-FractionNumDisplayStyleGapMin = 240;
-FractionNumeratorDisplayStyleShiftUp = 780;
-FractionNumeratorGapMin = 80;
+FractionDenomDisplayStyleGapMin = 120;
+FractionDenominatorDisplayStyleShiftDown = 608;
+FractionDenominatorGapMin = 100;
+FractionDenominatorShiftDown = 455;
+FractionNumDisplayStyleGapMin = 100;
+FractionNumeratorDisplayStyleShiftUp = 415;
+FractionNumeratorGapMin = 55;
 FractionNumeratorShiftUp = 520;
 FractionRuleThickness = 80;
-LowerLimitBaselineDropMin = 580;
-LowerLimitGapMin = 160;
+LowerLimitBaselineDropMin = 700;
+LowerLimitGapMin = 60;
 MathLeading = 0;
 MinConnectorOverlap = 62;
 OverbarExtraAscender = 80;
@@ -4332,15 +4456,17 @@ RadicalKernAfterDegree = -689;
 RadicalKernBeforeDegree = 344;
 RadicalRuleThickness = 80;
 RadicalVerticalGap = 100;
-ScriptPercentScaleDown = 80;
-ScriptScriptPercentScaleDown = 60;
+ScriptPercentScaleDown = 75;
+ScriptScriptPercentScaleDown = 55;
+SkewedFractionHorizontalGap = 0;
+SkewedFractionVerticalGap = 0;
 SpaceAfterScript = 52;
-StackBottomDisplayStyleShiftDown = 708;
-StackBottomShiftDown = 472;
-StackDisplayStyleGapMin = 560;
-StackGapMin = 240;
-StackTopDisplayStyleShiftUp = 780;
-StackTopShiftUp = 520;
+StackBottomDisplayStyleShiftDown = 606;
+StackBottomShiftDown = 255;
+StackDisplayStyleGapMin = 100;
+StackGapMin = 80;
+StackTopDisplayStyleShiftUp = 415;
+StackTopShiftUp = 420;
 StretchStackBottomShiftDown = 580;
 StretchStackGapAboveMin = 160;
 StretchStackGapBelowMin = 160;
@@ -4357,7 +4483,7 @@ SuperscriptShiftUpCramped = 329;
 UnderbarExtraDescender = 80;
 UnderbarRuleThickness = 80;
 UnderbarVerticalGap = 240;
-UpperLimitBaselineRiseMin = 173;
+UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
@@ -4470,7 +4596,6 @@ Location = 5;
 );
 }
 );
-exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 1;
 };
@@ -16295,6 +16420,7 @@ Location = 1122;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 1;
 };
@@ -167626,6 +167752,15 @@ name = "Fence lower";
 },
 {
 name = "Fence lower extreme";
+},
+{
+name = "Fence higher extreme";
+},
+{
+name = "Fence higher";
+},
+{
+name = "Fence Higher Extreme";
 }
 );
 note = "There is a small bug in the way that the rotation script deals with capital K.  For this one it does not matter too much but I want to pin it down.";

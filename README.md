@@ -219,7 +219,7 @@ a2. Making the bracket with three "pieces" namely a top, stem and bottom is usef
 To make larger sizes of left bracket
 a. Make a smart component from the left bracket
 
-b. Use the create high layers script
+b. On the smart component use the create high layers script
 
 c. Adjust the high layers all by exactly the same amount. Also adjust the high layers on the other fences, also by exactly the same amount
 
@@ -227,7 +227,7 @@ d. (Optional): Add metrics
 
 e. Use script to create the variants
 
-f. adjust the right ones to use the smart component and repeat step e for the right.
+f. take the right parenthesis.  Clear all masters.  Add the _smart.leftparenthesis components.  Flip it vertically on all masters.
 
 There is also a script to flip vertically.  It would be good to be able to flip horizontally on all masters as once
 
@@ -240,16 +240,17 @@ Note: the script record the step and n for each glyph, but ideally you want to u
 **Arrows**
 
 
+
 *Mayfair Todo (16)*
 Script or system to insert the constants into the glyphs file
 Finish summation glyph
 Parentheses
+bracket, floor, ceiling need to be more visible
 Center the bar, bracket, brace etc.
 Do the product glyph at display sizes
 Minus at various widths
 Circle and sizing
 Redo the existing + divide, = and many others :-(
-bracket, floor, ceiling need to be more visible
 radicals
 relations
 spacing/italic correction
