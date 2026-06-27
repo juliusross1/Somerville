@@ -233,7 +233,19 @@ There is also a script to flip vertically.  It would be good to be able to flip 
 
 Note: the script record the step and n for each glyph, but ideally you want to use these same values for all of the braces for pairing reasons.
 
+Test document: 
+mathfonttester
+varianttester??
+
 **Integrals**
+
+Design or use your existing integral
+1. Cut it into 5 pieces.  The script cut at y-value can help.  You want a middle piece so you can swap it out later for other kinds of integrals, and the two vertical pieces can be extenders.
+
+2. Add high layers using the script
+
+3. Design the high layers. For an integral horizontal stem This could be easy if you only need to stretch the extenders.  For a slanted one you will need to design more.
+
 
 **Large Operators**
 
@@ -243,10 +255,10 @@ Note: the script record the step and n for each glyph, but ideally you want to u
 
 *Mayfair Todo (16)*
 Script or system to insert the constants into the glyphs file
+Integrals
 Finish summation glyph
 Upper and lower limits on summation in mathml core (or is this a stale font issue?)
-bracket, floor, ceiling need to be more visible
-Center the bar, bracket, brace etc.
+Center the bar, bracket, brace etc (these might be OK)
 Do the product glyph at display sizes
 Minus at various widths
 Circle and sizing
@@ -254,7 +266,6 @@ Redo the existing + divide, = and many others :-(
 radicals
 relations
 spacing/italic correction
-Integrals
 Union, Subset, \in
 other simple math symbols and anchors (systematic system)
 Arrows

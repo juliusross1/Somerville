@@ -82,9 +82,46 @@
 			<string>rightwhitesquarebracket-math</string>
 			<string>leftflattenedparenthesis-math</string>
 			<string>rightflattenedparenthesis-math</string>
-					</array>
+		</array>
 		<key>name</key>
 		<string>Math Delimiters</string>
+	</dict>
+	<dict>
+		<key>list</key>
+		<array>
+			<string>integral</string>
+			<string>dblIntegral</string>
+			<string>tripleIntegral</string>
+			<string>contourIntegral</string>
+			<string>surfaceIntegral</string>
+			<string>volumeIntegral</string>
+			<string>clockwiseIntegral</string>
+			<string>clockwiseContourIntegral</string>
+			<string>anticlockwiseContourIntegral</string>
+			<string>integraltp</string>
+			<string>integralbt</string>
+			<string>integralextension</string>
+			<string>summationWithIntegral</string>
+			<string>quadrupleIntegral</string>
+			<string>finitePartIntegral</string>
+			<string>doubleStrokeIntegral</string>
+			<string>averageSlashIntegral</string>
+			<string>circulationFunction</string>
+			<string>anticlockwiseIntegral</string>
+			<string>rectangularLineIntegral</string>
+			<string>semicircularLineIntegral</string>
+			<string>nopoleLineIntegral</string>
+			<string>pointIntegral</string>
+			<string>quaternionIntegral</string>
+			<string>leftarrowHookIntegral</string>
+			<string>timesIntegral</string>
+			<string>intersectionIntegral</string>
+			<string>integralWithUnion</string>
+			<string>integralWithOverbar</string>
+			<string>integralWithUnderbar</string>
+		</array>
+		<key>name</key>
+		<string>Math Integrals</string>
 	</dict>
 </array>
 </plist>
