@@ -18,7 +18,7 @@ shapes = (
 ref = _smart.integral;
 }
 );
-width = 0;
+width = 562;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -91,13 +91,23 @@ integral.s06,
 integral.s07,
 integral.s08,
 integral.s09,
-integral.s10
+integral.s10,
+integral.s11,
+integral.s12,
+integral.s13,
+integral.s14,
+integral.s15,
+integral.s16,
+integral.s17,
+integral.s18,
+integral.s19,
+integral.s20
 );
 };
 com.opentypemathtools.smartComponentVariants = {
-N = 10;
+N = 20;
 axis = height;
-step = 10;
+step = 5;
 };
 };
 }
