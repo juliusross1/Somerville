@@ -242,32 +242,35 @@ varianttester??
 Design or use your existing integral
 1. Cut it into 5 pieces.  The script cut at y-value can help.  You want a middle piece so you can swap it out later for other kinds of integrals, and the two vertical pieces can be extenders.
 
-2. Add high layers using the script
+2. Add high layers using the script.
 
-3. Design the high layers. For an integral horizontal stem This could be easy if you only need to stretch the extenders.  For a slanted one you will need to design more.
+3. Design the high layers. For an integral horizontal stem This could be easy if you only need to stretch the extenders.  For a slanted one you will need to design more.   I adjusted the height of the integrals to match the height of the largest size of the large operators.
 
+4. Add a center anchor, top and bottom.  Make the center align with the math-axis on all layers. 
 
 **Large Operators**
 
 **Arrows**
 
 
-
 *Mayfair Todo (16)*
 Script or system to insert the constants into the glyphs file
-Integrals
 Finish summation glyph
 Upper and lower limits on summation in mathml core (or is this a stale font issue?)
+
+Go back to the sizing of \sum and \int
+
 Center the bar, bracket, brace etc (these might be OK)
 Do the product glyph at display sizes
 Minus at various widths
 Circle and sizing
+More Integrals
 Redo the existing + divide, = and many others :-(
 radicals
 relations
 spacing/italic correction
 Union, Subset, \in
-other simple math symbols and anchors (systematic system)
+**other simple math symbols and anchors (systematic system)**
 Arrows
 
 Math Constants and test docs
@@ -275,6 +278,8 @@ Test ss11 feature at other fonts
 italic tau
 epsilon?
 arrows
+
+Change the anchors on the marks to they are in Glyphsdata.xml
 
 Greek lower
 Greek upper
