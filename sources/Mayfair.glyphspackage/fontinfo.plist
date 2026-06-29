@@ -1833,7 +1833,7 @@ pos = 771;
 pos = 3704;
 },
 {
-pos = -3233;
+pos = -3174;
 }
 );
 name = "Needlepoint SemiCondensed Upright";
@@ -1847,6 +1847,9 @@ stemValues = (
 100
 );
 userData = {
+GSOffsetHorizontal = 12;
+GSOffsetProportional = 1;
+GSOffsetVertical = 10;
 KernOnIndependentPairs = (
 "o i",
 "e quotedblleft",
@@ -2183,7 +2186,7 @@ pos = 771;
 pos = 3704;
 },
 {
-pos = -3233;
+pos = -3174;
 }
 );
 name = "Needlepoint SemiExpanded Upright";
@@ -2538,7 +2541,7 @@ pos = 771;
 pos = 3704;
 },
 {
-pos = -3233;
+pos = -3174;
 }
 );
 name = "Needlepoint Black SemiCondensed Upright";
@@ -2552,6 +2555,9 @@ stemValues = (
 200
 );
 userData = {
+GSOffsetHorizontal = -50;
+GSOffsetProportional = 1;
+GSOffsetVertical = 10;
 KernOnIndependentPairs = (
 "yi-cy.narrow yi-cy.narrow",
 "f a",
@@ -2900,7 +2906,7 @@ pos = 771;
 pos = 3704;
 },
 {
-pos = -3233;
+pos = -3174;
 }
 );
 name = "Needlepoint Black SemiExpanded Upright";
@@ -3256,7 +3262,7 @@ pos = 3782;
 pos = 3704;
 },
 {
-pos = -3233;
+pos = -3174;
 }
 );
 name = "Agate SemiCondensed Upright";
@@ -3270,6 +3276,9 @@ stemValues = (
 100
 );
 userData = {
+GSOffsetHorizontal = -10;
+GSOffsetProportional = 1;
+GSOffsetVertical = 10;
 KernOnIndependentPairs = (
 "n o",
 "yi-cy.narrow yi-cy.narrow",
@@ -3619,7 +3628,7 @@ pos = 3782;
 pos = 3704;
 },
 {
-pos = -3233;
+pos = -3174;
 }
 );
 name = "Agate SemiExpanded Upright";
@@ -3988,7 +3997,7 @@ pos = 3782;
 pos = 3704;
 },
 {
-pos = -3233;
+pos = -3174;
 }
 );
 name = "Agate Black SemiCondensed Upright";
@@ -4356,7 +4365,7 @@ pos = 3782;
 pos = 3704;
 },
 {
-pos = -3233;
+pos = -3174;
 }
 );
 name = "Agate Black SemiExpanded Upright";
@@ -4642,6 +4651,10 @@ Axis = ssty2;
 Location = 5;
 }
 );
+},
+{
+name = Filter;
+value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
 instanceInterpolations = {
@@ -4937,6 +4950,7 @@ Location = 5;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 1;
 };
@@ -5331,6 +5345,7 @@ Location = 5;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 1;
 };
@@ -5624,6 +5639,7 @@ Location = 5;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 1;
 };
@@ -8906,9 +8922,12 @@ Axis = ssty2;
 Location = 340;
 }
 );
+},
+{
+name = Filter;
+value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.54393;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.45607;
@@ -16758,6 +16777,7 @@ Location = 1122;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "F497C50F-30EB-4580-9148-0005B36D0333" = 1;
 };
@@ -17152,6 +17172,7 @@ Location = 1122;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 1;
 };
@@ -17445,6 +17466,7 @@ Location = 1122;
 );
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 1;
 };
@@ -34307,7 +34329,6 @@ numbersign = -53;
 parenleft = -103;
 pi = -73;
 plus.lf = -184;
-plusminus = -112;
 plusminus.lf = -144;
 quotedblbase = -32;
 radical = -114;
@@ -34371,7 +34392,6 @@ nine = -100;
 parenleft.tf.ss14 = -170;
 pi = -118;
 plus.lf = -240;
-plusminus = -144;
 plusminus.lf = -184;
 question = -71;
 quotedblbase = -89;
@@ -34645,37 +34665,6 @@ pi = 0;
 quotesingle = -19;
 slash = -28;
 };
-plus = {
-b = -82;
-comma = -127;
-comma.tf.ss14 = -252;
-"de-cy" = -151;
-eight.original = -75;
-five.original = -86;
-four.original = -120;
-nine.original = -76;
-one.original = -132;
-one.smcp = -122;
-p = -85;
-parenright = -178;
-parenright.tf.ss14 = -225;
-period = -126;
-period.tf.ss14 = -255;
-plus = -92;
-quotedbl = -197;
-quotedblright = -213;
-seven.original = -110;
-seven.smcp = -168;
-six.original = -68;
-slash = -100;
-three.original = -98;
-three.smcp = -105;
-two.original = -95;
-two.smcp = -166;
-v = -108;
-y = -108;
-zero.original = -70;
-};
 plus.lf = {
 b = -104;
 comma = -132;
@@ -34693,11 +34682,6 @@ seven = -171;
 slash = -130;
 three = -132;
 two = -170;
-};
-plusminus = {
-one.original = -117;
-two.original = -101;
-zero.original = -57;
 };
 q = {
 trademark = -70;
@@ -53090,7 +53074,6 @@ numbersign = -50;
 parenleft = -116;
 pi = -100;
 plus.lf = -193;
-plusminus = -78;
 plusminus.lf = -134;
 quotedblbase = 0;
 radical = -140;
@@ -53154,7 +53137,6 @@ nine = -145;
 parenleft.tf.ss14 = -189;
 pi = -139;
 plus.lf = -275;
-plusminus = -122;
 plusminus.lf = -141;
 question = -91;
 quotedblbase = -69;
@@ -53428,37 +53410,6 @@ pi = 0;
 quotesingle = 0;
 slash = -25;
 };
-plus = {
-b = -87;
-comma = -102;
-comma.tf.ss14 = -256;
-"de-cy" = -155;
-eight.original = -58;
-five.original = -70;
-four.original = -113;
-nine.original = -59;
-one.original = -138;
-one.smcp = -133;
-p = -87;
-parenright = -193;
-parenright.tf.ss14 = -268;
-period = -101;
-period.tf.ss14 = -259;
-plus = -110;
-quotedbl = -132;
-quotedblright = -148;
-seven.original = -84;
-seven.smcp = -181;
-six.original = -58;
-slash = -107;
-three.original = -73;
-three.smcp = -80;
-two.original = -70;
-two.smcp = -159;
-v = -109;
-y = -107;
-zero.original = -57;
-};
 plus.lf = {
 b = -81;
 comma = -157;
@@ -53476,11 +53427,6 @@ seven = -162;
 slash = -138;
 three = -142;
 two = -162;
-};
-plusminus = {
-one.original = -87;
-two.original = -70;
-zero.original = -57;
 };
 q = {
 trademark = -83;
@@ -71873,7 +71819,6 @@ numbersign = -38;
 parenleft = -85;
 pi = -95;
 plus.lf = -197;
-plusminus = -124;
 plusminus.lf = -153;
 quotedblbase = -80;
 radical = -98;
@@ -71937,7 +71882,6 @@ nine = -74;
 parenleft.tf.ss14 = -131;
 pi = -119;
 plus.lf = -271;
-plusminus = -137;
 plusminus.lf = -219;
 question = -85;
 quotedblbase = -114;
@@ -72211,37 +72155,6 @@ pi = 0;
 quotesingle = -20;
 slash = -46;
 };
-plus = {
-b = -107;
-comma = -140;
-comma.tf.ss14 = -285;
-"de-cy" = -197;
-eight.original = -92;
-five.original = -137;
-four.original = -177;
-nine.original = -94;
-one.original = -133;
-one.smcp = -120;
-p = -110;
-parenright = -207;
-parenright.tf.ss14 = -266;
-period = -141;
-period.tf.ss14 = -285;
-plus = -113;
-quotedbl = -226;
-quotedblright = -240;
-seven.original = -169;
-seven.smcp = -190;
-six.original = -94;
-slash = -161;
-three.original = -167;
-three.smcp = -162;
-two.original = -151;
-two.smcp = -189;
-v = -167;
-y = -166;
-zero.original = -95;
-};
 plus.lf = {
 b = -122;
 comma = -140;
@@ -72259,11 +72172,6 @@ seven = -192;
 slash = -166;
 three = -164;
 two = -197;
-};
-plusminus = {
-one.original = -109;
-two.original = -107;
-zero.original = -86;
 };
 q = {
 trademark = -75;
@@ -90656,7 +90564,6 @@ numbersign = -150;
 parenleft = -167;
 pi = -100;
 plus.lf = -222;
-plusminus = -156;
 plusminus.lf = -177;
 quotedblbase = -49;
 radical = -193;
@@ -90720,7 +90627,6 @@ nine = -160;
 parenleft.tf.ss14 = -236;
 pi = -141;
 plus.lf = -302;
-plusminus = -144;
 plusminus.lf = -226;
 question = -157;
 quotedblbase = -106;
@@ -90994,37 +90900,6 @@ pi = 0;
 quotesingle = -13;
 slash = -36;
 };
-plus = {
-b = -121;
-comma = -136;
-comma.tf.ss14 = -299;
-"de-cy" = -217;
-eight.original = -99;
-five.original = -139;
-four.original = -185;
-nine.original = -94;
-one.original = -158;
-one.smcp = -137;
-p = -123;
-parenright = -240;
-parenright.tf.ss14 = -313;
-period = -137;
-period.tf.ss14 = -299;
-plus = -81;
-quotedbl = -201;
-quotedblright = -211;
-seven.original = -165;
-seven.smcp = -172;
-six.original = -92;
-slash = -165;
-three.original = -167;
-three.smcp = -136;
-two.original = -161;
-two.smcp = -172;
-v = -176;
-y = -171;
-zero.original = -91;
-};
 plus.lf = {
 b = -125;
 comma = -159;
@@ -91042,11 +90917,6 @@ seven = -149;
 slash = -184;
 three = -142;
 two = -166;
-};
-plusminus = {
-one.original = -158;
-two.original = -151;
-zero.original = -91;
 };
 q = {
 trademark = -120;
@@ -109440,7 +109310,6 @@ numbersign = -45;
 parenleft = -46;
 pi = -75;
 plus.lf = -182;
-plusminus = -58;
 plusminus.lf = -104;
 quotedblbase = 0;
 radical = -128;
@@ -109504,7 +109373,6 @@ nine = -130;
 parenleft.tf.ss14 = -200;
 pi = -143;
 plus.lf = -260;
-plusminus = -131;
 plusminus.lf = -131;
 question = -70;
 quotedblbase = -65;
@@ -109778,37 +109646,6 @@ pi = 27;
 quotesingle = 33;
 slash = 0;
 };
-plus = {
-b = -131;
-comma = -79;
-comma.tf.ss14 = -250;
-"de-cy" = -133;
-eight.original = -61;
-five.original = -61;
-four.original = -65;
-nine.original = -63;
-one.original = -115;
-one.smcp = -131;
-p = -115;
-parenright = -184;
-parenright.tf.ss14 = -250;
-period = -79;
-period.tf.ss14 = -256;
-plus = -62;
-quotedbl = -82;
-quotedblright = -158;
-seven.original = -73;
-seven.smcp = -127;
-six.original = -52;
-slash = -88;
-three.original = -86;
-three.smcp = -90;
-two.original = -89;
-two.smcp = -136;
-v = -113;
-y = -112;
-zero.original = -60;
-};
 plus.lf = {
 b = -125;
 comma = -163;
@@ -109826,11 +109663,6 @@ seven = -110;
 slash = -116;
 three = -86;
 two = -115;
-};
-plusminus = {
-one.original = -88;
-two.original = -57;
-zero.original = -54;
 };
 q = {
 trademark = -134;
@@ -128225,7 +128057,6 @@ numbersign = -50;
 parenleft = -97;
 pi = -71;
 plus.lf = -133;
-plusminus = -7;
 plusminus.lf = -58;
 quotedblbase = 0;
 radical = -146;
@@ -128289,7 +128120,6 @@ nine = -128;
 parenleft.tf.ss14 = -207;
 pi = -161;
 plus.lf = -223;
-plusminus = -114;
 plusminus.lf = -105;
 question = -58;
 quotedblbase = -81;
@@ -128563,37 +128393,6 @@ pi = 0;
 quotesingle = 15;
 slash = -8;
 };
-plus = {
-b = -106;
-comma = -49;
-comma.tf.ss14 = -226;
-"de-cy" = -84;
-eight.original = -26;
-five.original = -40;
-four.original = -3;
-nine.original = -18;
-one.original = -83;
-one.smcp = -105;
-p = -66;
-parenright = -159;
-parenright.tf.ss14 = -233;
-period = -66;
-period.tf.ss14 = -234;
-plus = 0;
-quotedbl = -73;
-quotedblright = -116;
-seven.original = -24;
-seven.smcp = -78;
-six.original = 0;
-slash = -61;
-three.original = -22;
-three.smcp = -16;
-two.original = -27;
-two.smcp = -68;
-v = -73;
-y = -72;
-zero.original = 0;
-};
 plus.lf = {
 b = -93;
 comma = -89;
@@ -128611,11 +128410,6 @@ seven = -55;
 slash = -73;
 three = -53;
 two = -76;
-};
-plusminus = {
-one.original = -61;
-two.original = -21;
-zero.original = 0;
 };
 q = {
 trademark = -132;
@@ -147018,7 +146812,6 @@ numbersign = -96;
 parenleft = -117;
 pi = -86;
 plus.lf = -166;
-plusminus = -71;
 plusminus.lf = -98;
 quotedblbase = -26;
 radical = -127;
@@ -147082,7 +146875,6 @@ nine = -124;
 parenleft.tf.ss14 = -212;
 pi = -118;
 plus.lf = -238;
-plusminus = -124;
 plusminus.lf = -115;
 question = -120;
 quotedblbase = -84;
@@ -147356,37 +147148,6 @@ pi = 0;
 quotesingle = -13;
 slash = -47;
 };
-plus = {
-b = -86;
-comma = -97;
-comma.tf.ss14 = -255;
-"de-cy" = -167;
-eight.original = -57;
-five.original = -77;
-four.original = -71;
-nine.original = -64;
-one.original = -111;
-one.smcp = -90;
-p = -86;
-parenright = -188;
-parenright.tf.ss14 = -249;
-period = -94;
-period.tf.ss14 = -260;
-plus = -63;
-quotedbl = -175;
-quotedblright = -196;
-seven.original = -83;
-seven.smcp = -133;
-six.original = -60;
-slash = -110;
-three.original = -94;
-three.smcp = -82;
-two.original = -68;
-two.smcp = -121;
-v = -160;
-y = -160;
-zero.original = -60;
-};
 plus.lf = {
 b = -81;
 comma = -146;
@@ -147404,11 +147165,6 @@ seven = -115;
 slash = -114;
 three = -107;
 two = -124;
-};
-plusminus = {
-one.original = -100;
-two.original = -55;
-zero.original = -59;
 };
 q = {
 trademark = -125;
@@ -165819,7 +165575,6 @@ numbersign = -50;
 parenleft = -101;
 pi = -74;
 plus.lf = -121;
-plusminus = -45;
 plusminus.lf = -81;
 quotedblbase = -16;
 radical = -109;
@@ -165883,7 +165638,6 @@ nine = -173;
 parenleft.tf.ss14 = -255;
 pi = -186;
 plus.lf = -275;
-plusminus = -131;
 plusminus.lf = -133;
 question = -139;
 quotedblbase = -121;
@@ -166157,37 +165911,6 @@ pi = 5;
 quotesingle = -24;
 slash = -51;
 };
-plus = {
-b = -91;
-comma = -66;
-comma.tf.ss14 = -275;
-"de-cy" = -162;
-eight.original = -59;
-five.original = -78;
-four.original = -63;
-nine.original = -55;
-one.original = -123;
-one.smcp = -126;
-p = -92;
-parenright = -218;
-parenright.tf.ss14 = -283;
-period = -65;
-period.tf.ss14 = -278;
-plus = -58;
-quotedbl = -175;
-quotedblright = -201;
-seven.original = -67;
-seven.smcp = -128;
-six.original = -53;
-slash = -122;
-three.original = -91;
-three.smcp = -75;
-two.original = -71;
-two.smcp = -101;
-v = -130;
-y = -129;
-zero.original = -54;
-};
 plus.lf = {
 b = -75;
 comma = -107;
@@ -166205,11 +165928,6 @@ seven = -90;
 slash = -143;
 three = -84;
 two = -101;
-};
-plusminus = {
-one.original = -120;
-two.original = -39;
-zero.original = -50;
 };
 q = {
 trademark = -147;

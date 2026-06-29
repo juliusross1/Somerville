@@ -4,6 +4,15 @@ glyphname = question;
 kernLeft = KO_question;
 layers = (
 {
+anchors = (
+{
+name = entry;
+pos = (459,0);
+},
+{
+name = exit;
+}
+);
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
@@ -18,6 +27,15 @@ ref = period;
 width = 459;
 },
 {
+anchors = (
+{
+name = entry;
+pos = (459,0);
+},
+{
+name = exit;
+}
+);
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
@@ -32,6 +50,15 @@ ref = period;
 width = 459;
 },
 {
+anchors = (
+{
+name = entry;
+pos = (570,0);
+},
+{
+name = exit;
+}
+);
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
@@ -46,6 +73,15 @@ ref = period;
 width = 570;
 },
 {
+anchors = (
+{
+name = entry;
+pos = (540,0);
+},
+{
+name = exit;
+}
+);
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
@@ -60,6 +96,15 @@ ref = period;
 width = 540;
 },
 {
+anchors = (
+{
+name = entry;
+pos = (628,0);
+},
+{
+name = exit;
+}
+);
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
@@ -74,6 +119,15 @@ ref = period;
 width = 628;
 },
 {
+anchors = (
+{
+name = entry;
+pos = (545,0);
+},
+{
+name = exit;
+}
+);
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
@@ -88,6 +142,15 @@ ref = period;
 width = 545;
 },
 {
+anchors = (
+{
+name = entry;
+pos = (540,0);
+},
+{
+name = exit;
+}
+);
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
@@ -102,6 +165,15 @@ ref = period;
 width = 540;
 },
 {
+anchors = (
+{
+name = entry;
+pos = (659,0);
+},
+{
+name = exit;
+}
+);
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {

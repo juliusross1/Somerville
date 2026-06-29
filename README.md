@@ -255,10 +255,8 @@ Design or use your existing integral
 
 *Mayfair Todo (16)*
 Script or system to insert the constants into the glyphs file
-Finish summation glyph
 Upper and lower limits on summation in mathml core (or is this a stale font issue?)
 
-Go back to the sizing of \sum and \int
 
 Center the bar, bracket, brace etc (these might be OK)
 Do the product glyph at display sizes
@@ -266,6 +264,8 @@ Minus at various widths
 Circle and sizing
 More Integrals
 Redo the existing + divide, = and many others :-(
+Go back to the sizing of \sum and \int
+
 radicals
 relations
 spacing/italic correction
