@@ -239,6 +239,17 @@ Make _smart.oplus as a smart component with height using _smart.plus and _smart.
 Use _smart.oplus to make oplus and nAryOplus
 Make vertical size variants from nAryOplus
 
+** For contourIntegral **
+create _smart.contourIntegral
+Add _smart.integral Add _smart.circle
+Script for High layers
+Adjust sizing of the components as desired as well as the scaling (both can be adjusted!)
+Create contourIntegral
+Add _smart.contourIntegral
+Script: Create size variants
+Think about the sidebearings as these are not right from these components!
+Think about math.ic (I want this inherited from the component I think so need to adjust the script)
+
 **Fences**
 
 a. Make sure all the brackets are *exactly* the same height (brace, bracket, bar, parenthesis ...)
@@ -261,6 +272,9 @@ f. take the right parenthesis.  Clear all masters.  Add the _smart.leftparenthes
 There is also a script to flip vertically.  It would be good to be able to flip horizontally on all masters as once
 
 Note: the script record the step and n for each glyph, but ideally you want to use these same values for all of the braces for pairing reasons.
+
+Notes: doublebar and triplebar need slightly narrower bars (scaling) else they look too heavy
+Notes: Spacing in the expanded between the bars looks good and is done in the base glyph.
 
 Test document: 
 mathfonttester
