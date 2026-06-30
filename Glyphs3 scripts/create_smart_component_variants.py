@@ -8,7 +8,7 @@ import vanilla
 from GlyphsApp import Glyphs, GSGlyph, GSGlyphReference
 
 
-SCRIPT_VERSION = "2026-06-24 12:34 CDT glyph-reference-math-variants"
+SCRIPT_VERSION = "2026-06-29 13:05 CDT base-smart-value-step-variants"
 SETTINGS_USER_DATA_KEY = "com.opentypemathtools.smartComponentVariants"
 MATH_PLUGIN_VARIANTS_USER_DATA_KEY = "com.nagwa.MATHPlugin.variants"
 MATH_PLUGIN_VARIANT_KEYS = dict(
@@ -173,7 +173,7 @@ def smart_axis_name(axis):
     return ""
 
 
-def smart_axis_id_for_name(glyph, wanted_name):
+def smart_axis_for_name(glyph, wanted_name):
     if glyph is None:
         return None
     try:
@@ -182,7 +182,14 @@ def smart_axis_id_for_name(glyph, wanted_name):
         axes = []
     for axis in axes:
         if smart_axis_name(axis) == wanted_name:
-            return axis_identifier(axis)
+            return axis
+    return None
+
+
+def smart_axis_id_for_name(glyph, wanted_name):
+    axis = smart_axis_for_name(glyph, wanted_name)
+    if axis is not None:
+        return axis_identifier(axis)
     return None
 
 
@@ -193,11 +200,64 @@ def smart_axis_id_for_component(font, component, smart_axis_name_value):
     return smart_axis_id_for_name(glyph, smart_axis_name_value)
 
 
+def numeric_value(value):
+    try:
+        return float(value)
+    except Exception:
+        return None
+
+
+def smart_axis_default_value(axis):
+    for attribute_name in ("bottomValue", "topValue"):
+        value = numeric_value(safe_call(getattr(axis, attribute_name, None)))
+        if value is not None:
+            return value
+    return None
+
+
+def component_smart_axis_value(font, component, smart_axis_name_value):
+    glyph = component_glyph(font, component)
+    axis = smart_axis_for_name(glyph, smart_axis_name_value)
+    smart_axis_id = axis_identifier(axis) if axis is not None else None
+    if smart_axis_id is None:
+        return None
+
+    try:
+        values = dict(component.smartComponentValues or {})
+    except Exception:
+        values = {}
+
+    for key in (smart_axis_id, smart_axis_name_value):
+        if key in values:
+            value = numeric_value(values[key])
+            if value is not None:
+                return value
+
+    return smart_axis_default_value(axis)
+
+
+def format_number_list(values):
+    cleaned = []
+    for value in values:
+        cleaned.append(clean_number(value))
+    return ", ".join([str(value) for value in cleaned])
+
+
+def y_value_summary(values):
+    unique_values = sorted(set([clean_number(value) for value in values]))
+    if not unique_values:
+        return "unavailable"
+    if len(unique_values) == 1:
+        return str(unique_values[0])
+    return "mixed (%s)" % format_number_list(unique_values)
+
+
 def validate_source_glyph(font, glyph, smart_axis_name_value):
     component_names = set()
     layer_count = 0
     component_count = 0
     component_axis_ids = {}
+    base_smart_axis_values = []
 
     for layer in glyph.layers:
         components = layer_components(layer)
@@ -238,8 +298,19 @@ def validate_source_glyph(font, glyph, smart_axis_name_value):
                 ))
                 return None
 
+            base_value = component_smart_axis_value(font, component, smart_axis_name_value)
+            if base_value is None:
+                print_warning("%s/%s uses %s, but its current %s value could not be read." % (
+                    glyph.name,
+                    layer_label,
+                    name,
+                    smart_axis_name_value,
+                ))
+                return None
+
             component_names.add(name)
             component_axis_ids[name] = smart_axis_id
+            base_smart_axis_values.append(base_value)
             component_count += 1
         layer_count += 1
 
@@ -252,6 +323,7 @@ def validate_source_glyph(font, glyph, smart_axis_name_value):
         layer_count=layer_count,
         component_count=component_count,
         component_axis_ids=component_axis_ids,
+        base_smart_axis_values=base_smart_axis_values,
     )
 
 
@@ -327,7 +399,7 @@ def set_component_smart_value(component, axis_id_value, value):
         return False
 
 
-def set_layer_component_smart_value(font, layer, smart_axis_name_value, smart_axis_value):
+def set_layer_component_smart_value(font, layer, smart_axis_name_value, smart_axis_increment):
     changed = 0
     skipped = 0
     for component in layer_components(layer):
@@ -335,6 +407,11 @@ def set_layer_component_smart_value(font, layer, smart_axis_name_value, smart_ax
         if smart_axis_id is None:
             skipped += 1
             continue
+        base_value = component_smart_axis_value(font, component, smart_axis_name_value)
+        if base_value is None:
+            skipped += 1
+            continue
+        smart_axis_value = clean_number(base_value + smart_axis_increment)
         if set_component_smart_value(component, smart_axis_id, smart_axis_value):
             changed += 1
         else:
@@ -342,7 +419,7 @@ def set_layer_component_smart_value(font, layer, smart_axis_name_value, smart_ax
     return changed, skipped
 
 
-def populate_variant_from_source(font, source_glyph, target_glyph, smart_axis_name_value, smart_axis_value):
+def populate_variant_from_source(font, source_glyph, target_glyph, smart_axis_name_value, smart_axis_increment):
     remove_non_master_layers(target_glyph)
 
     copied_master_layers = 0
@@ -355,7 +432,7 @@ def populate_variant_from_source(font, source_glyph, target_glyph, smart_axis_na
             new_layer = copied_layer(source_layer)
             new_layer.layerId = source_layer_id
             set_associated_master_id(new_layer, source_layer_id)
-            changed, skipped = set_layer_component_smart_value(font, new_layer, smart_axis_name_value, smart_axis_value)
+            changed, skipped = set_layer_component_smart_value(font, new_layer, smart_axis_name_value, smart_axis_increment)
             smart_components_set += changed
             smart_components_skipped += skipped
             target_glyph.layers[source_layer_id] = new_layer
@@ -363,7 +440,7 @@ def populate_variant_from_source(font, source_glyph, target_glyph, smart_axis_na
             continue
 
         new_layer = copied_layer(source_layer)
-        changed, skipped = set_layer_component_smart_value(font, new_layer, smart_axis_name_value, smart_axis_value)
+        changed, skipped = set_layer_component_smart_value(font, new_layer, smart_axis_name_value, smart_axis_increment)
         smart_components_set += changed
         smart_components_skipped += skipped
         target_glyph.layers.append(new_layer)
@@ -518,8 +595,13 @@ def run(source_glyph, variant_count, step, smart_axis_name_value):
     print("Source layers checked: %i" % validation["layer_count"])
     print("Smart components checked: %i" % validation["component_count"])
     print("Smart axis: %s" % smart_axis_name_value)
+    print("Y (%s value on selected glyph): %s" % (
+        smart_axis_name_value,
+        y_value_summary(validation["base_smart_axis_values"]),
+    ))
     print("Variants requested: %i" % variant_count)
     print("Step: %s" % clean_number(step))
+    print("Formula: .sM %s = Y + M * step" % smart_axis_name_value)
     print("Stored settings userData key: %s" % SETTINGS_USER_DATA_KEY)
     print("")
 
@@ -529,14 +611,14 @@ def run(source_glyph, variant_count, step, smart_axis_name_value):
     try:
         for number in range(1, variant_count + 1):
             target_name = variant_name(source_glyph.name, number)
-            smart_axis_value = clean_number(number * step)
+            smart_axis_increment = number * step
             target_glyph, did_create = get_or_create_glyph(font, target_name, source_glyph)
             master_count, special_count, smart_components_set, smart_components_skipped = populate_variant_from_source(
                 font,
                 source_glyph,
                 target_glyph,
                 smart_axis_name_value,
-                smart_axis_value,
+                smart_axis_increment,
             )
             if did_create:
                 created += 1
@@ -548,7 +630,7 @@ def run(source_glyph, variant_count, step, smart_axis_name_value):
                 master_count,
                 special_count,
                 smart_axis_name_value,
-                smart_axis_value,
+                "Y + %s" % clean_number(smart_axis_increment),
                 smart_components_set,
             ))
             if smart_components_skipped:
@@ -574,6 +656,11 @@ def run(source_glyph, variant_count, step, smart_axis_name_value):
             ", ".join(math_plugin_variant_names),
         ))
     print("Done. Created %i glyph(s); updated %i existing glyph(s)." % (created, refreshed))
+    return dict(
+        y_value_summary=y_value_summary(validation["base_smart_axis_values"]),
+        created=created,
+        refreshed=refreshed,
+    )
 
 
 class SmartComponentVariantsWindow(object):
@@ -583,7 +670,7 @@ class SmartComponentVariantsWindow(object):
         self.settings = settings_from_glyph(self.source_glyph)
 
         title = "Smart Component Variants"
-        self.w = vanilla.FloatingWindow((320, 194), title)
+        self.w = vanilla.FloatingWindow((320, 224), title)
         source_label = self.source_glyph.name if self.source_glyph is not None else "No glyph selected"
         self.w.sourceLabel = vanilla.TextBox((15, 16, -15, 18), "Source: %s" % source_label)
         self.w.countLabel = vanilla.TextBox((15, 48, 35, 18), "N")
@@ -593,7 +680,8 @@ class SmartComponentVariantsWindow(object):
         self.w.axisLabel = vanilla.TextBox((15, 82, 45, 18), "Axis")
         self.w.axis = vanilla.PopUpButton((55, 78, 230, 24), list(SMART_AXIS_NAMES))
         self.w.axis.set(list(SMART_AXIS_NAMES).index(self.settings["axis"]))
-        self.w.runButton = vanilla.Button((15, 152, -15, 26), "Create/update variants", callback=self.run_callback)
+        self.w.yLabel = vanilla.TextBox((15, 116, -15, 36), "Y: run to read selected glyph")
+        self.w.runButton = vanilla.Button((15, 182, -15, 26), "Create/update variants", callback=self.run_callback)
         self.w.open()
         self.w.makeKey()
         print("UI opened.")
@@ -632,7 +720,12 @@ class SmartComponentVariantsWindow(object):
 
         axis_index = self.w.axis.get()
         smart_axis_name_value = SMART_AXIS_NAMES[axis_index]
-        run(source_glyph, variant_count, step, smart_axis_name_value)
+        result = run(source_glyph, variant_count, step, smart_axis_name_value)
+        if result is not None:
+            self.w.yLabel.set("Y (%s): %s" % (
+                smart_axis_name_value,
+                result["y_value_summary"],
+            ))
 
 
 try:

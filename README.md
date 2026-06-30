@@ -209,6 +209,35 @@ Later you may want a metric for the height of big operators, and for the height 
 These can be taken in pretty much any order
 
 **Components**
+_smart.circle (height)
+
+_smart.plus (height, Todo: small width for small sizes?).  Is this a component or a glyph?
+
+_smart.times (can be _smart.plus rotated by 45).  Is this a component or a glyph?
+
+
+
+
+**Big Operators**
+
+
+
+****For bigdot***
+Create _smart.operator.circled
+Add _smart.circle component.  Then add bullet component
+Then run Script -> Create High Layers
+Adjust height on the high layers.  The smallest one should be the size you want for the inline; the highest is the one for the largest display operator (so the non high layers got 5 for the circle and the high layers got 85) and the percentage scaling (both directions) for the bullet operator
+
+Create operator.circled
+Add _smart.circle component
+Set to the desired height (likely 0)
+Run variant script.
+
+***For oplus:***
+
+Make _smart.oplus as a smart component with height using _smart.plus and _smart.circle.  Adjust the heights of _smart.plus and _smart.circle as appropriate
+Use _smart.oplus to make oplus and nAryOplus
+Make vertical size variants from nAryOplus
 
 **Fences**
 
@@ -248,7 +277,6 @@ Design or use your existing integral
 
 4. Add a center anchor, top and bottom.  Make the center align with the math-axis on all layers. 
 
-**Large Operators**
 
 **Arrows**
 
@@ -257,14 +285,15 @@ Design or use your existing integral
 Script or system to insert the constants into the glyphs file
 Upper and lower limits on summation in mathml core (or is this a stale font issue?)
 
+Finish bigoplus (expanded as well and at small sizes, and fix unicode issue)
+Bigotimes and bigodot
+Multiple integrals using #entry and #exit anchors
+Contour integrals (use circle component)
+Do the product glyph at display sizes
+Do the large operator K
 
 Center the bar, bracket, brace etc (these might be OK)
-Do the product glyph at display sizes
 Minus at various widths
-Circle and sizing
-More Integrals
-Redo the existing + divide, = and many others :-(
-Go back to the sizing of \sum and \int
 
 radicals
 relations
