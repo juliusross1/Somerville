@@ -7,7 +7,7 @@ import vanilla
 from GlyphsApp import Glyphs
 
 
-SCRIPT_VERSION = "2026-06-26 13:44 CDT live-checkboxes"
+SCRIPT_VERSION = "2026-06-30 10:35 CDT explicit-apply"
 IGNORED_AXIS_VALUES = (0,)
 
 AXIS_GROUPS = (
@@ -403,6 +403,7 @@ class InstanceActiveStatusWindow(object):
         self.initial_selected_values = active_axis_values(self.instance_records)
         self.checkboxes = {}
         self.updating_checkboxes = False
+        self.has_pending_changes = False
         column_width = 190
         margin = 15
         row_height = 24
@@ -410,9 +411,10 @@ class InstanceActiveStatusWindow(object):
         header_button_width = 24
         header_button_gap = 4
         button_height = 28
+        status_height = 20
         max_rows = max(len(self.values[key]) for key, title, names in AXIS_GROUPS)
         window_width = margin * 2 + column_width * len(AXIS_GROUPS)
-        window_height = margin * 3 + heading_height + row_height * max_rows + button_height
+        window_height = margin * 4 + heading_height + row_height * max_rows + status_height + button_height
 
         self.w = vanilla.FloatingWindow((window_width, window_height), "Set Instance Active Status")
 
@@ -449,6 +451,12 @@ class InstanceActiveStatusWindow(object):
                 self.w.__setattr__("%s_%i" % (key, row_index), checkbox)
                 self.checkboxes[key].append((axis_value, checkbox))
 
+        status_top = window_height - margin * 2 - button_height - status_height
+        self.w.statusLabel = vanilla.TextBox(
+            (margin, status_top, -margin, status_height),
+            "Ready",
+        )
+
         button_top = window_height - margin - button_height
         self.w.allButton = vanilla.Button(
             (margin, button_top, 28, button_height),
@@ -460,11 +468,26 @@ class InstanceActiveStatusWindow(object):
             "-",
             callback=self.select_none_callback,
         )
+        self.w.applyButton = vanilla.Button(
+            (margin + 74, button_top, -margin, button_height),
+            "Set active instances",
+            callback=self.apply_callback,
+        )
         self.w.open()
         self.w.makeKey()
         print("UI opened.")
 
-    def set_column_checked(self, key, checked, apply_changes=True):
+    def set_status(self, text):
+        try:
+            self.w.statusLabel.set(text)
+        except Exception:
+            pass
+
+    def mark_pending_changes(self):
+        self.has_pending_changes = True
+        self.set_status("Selection changed. Click Set active instances.")
+
+    def set_column_checked(self, key, checked, mark_pending=True):
         previous_updating_checkboxes = self.updating_checkboxes
         self.updating_checkboxes = True
         try:
@@ -473,31 +496,36 @@ class InstanceActiveStatusWindow(object):
         finally:
             self.updating_checkboxes = previous_updating_checkboxes
 
-        if apply_changes:
-            self.apply_current_selection()
+        if mark_pending:
+            self.mark_pending_changes()
 
     def select_all_callback(self, sender):
         self.updating_checkboxes = True
         try:
             for key, title, names in AXIS_GROUPS:
-                self.set_column_checked(key, True, apply_changes=False)
+                self.set_column_checked(key, True, mark_pending=False)
         finally:
             self.updating_checkboxes = False
-        self.apply_current_selection()
+        self.mark_pending_changes()
 
     def select_none_callback(self, sender):
         self.updating_checkboxes = True
         try:
             for key, title, names in AXIS_GROUPS:
-                self.set_column_checked(key, False, apply_changes=False)
+                self.set_column_checked(key, False, mark_pending=False)
         finally:
             self.updating_checkboxes = False
-        self.apply_current_selection()
+        self.mark_pending_changes()
 
     def checkbox_callback(self, sender):
         if self.updating_checkboxes:
             return
+        self.mark_pending_changes()
+
+    def apply_callback(self, sender):
         self.apply_current_selection()
+        self.has_pending_changes = False
+        self.set_status("Applied.")
 
     def selected_values(self):
         selected = {}
@@ -513,7 +541,7 @@ class InstanceActiveStatusWindow(object):
         Glyphs.clearLog()
         print("Set Instance Active Status")
         print("Script version: %s" % SCRIPT_VERSION)
-        print("Live checkbox update")
+        print("Explicit apply")
         print("")
 
         selected = self.selected_values()

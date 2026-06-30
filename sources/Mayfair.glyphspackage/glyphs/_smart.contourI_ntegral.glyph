@@ -71,9 +71,9 @@ ref = _smart.integral;
 },
 {
 piece = {
-height = 1.2;
+height = 1.4;
 };
-pos = (23,-260);
+pos = (8,-260);
 ref = _smart.circle;
 scale = (2,2);
 }
@@ -455,26 +455,26 @@ userData = {
 com.nagwa.MATHPlugin.variants = {
 vVariants = (
 _smart.contourIntegral,
-_smart.contourIntegral.s01,
-_smart.contourIntegral.s02,
-_smart.contourIntegral.s03,
-_smart.contourIntegral.s04,
-_smart.contourIntegral.s05,
-_smart.contourIntegral.s06,
-_smart.contourIntegral.s07,
-_smart.contourIntegral.s08,
-_smart.contourIntegral.s09,
-_smart.contourIntegral.s10,
-_smart.contourIntegral.s11,
-_smart.contourIntegral.s12,
-_smart.contourIntegral.s13,
-_smart.contourIntegral.s14,
-_smart.contourIntegral.s15,
-_smart.contourIntegral.s16,
-_smart.contourIntegral.s17,
-_smart.contourIntegral.s18,
-_smart.contourIntegral.s19,
-_smart.contourIntegral.s20
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+""
 );
 };
 com.opentypemathtools.smartComponentVariants = {

@@ -211,6 +211,8 @@ These can be taken in pretty much any order
 **Components**
 _smart.circle (height)
 
+Could I create a testing document for this glyph?
+
 _smart.plus (height, Todo: small width for small sizes?).  Is this a component or a glyph?
 
 _smart.times (can be _smart.plus rotated by 45).  Is this a component or a glyph?
@@ -296,15 +298,20 @@ Design or use your existing integral
 
 
 *Mayfair Todo (16)*
+Finish bigodot and bigoplus
+Backup to git
+
+Get a fresh Mathplugin, git and work my changes back into that (AAAH)
+= Math.ic inheritance
+= Running command on export
+Contour integrals (use circle component)
+Multiple integrals using #entry and #exit anchors
+
+Math constants:
 Script or system to insert the constants into the glyphs file
 Upper and lower limits on summation in mathml core (or is this a stale font issue?)
 
-Finish bigoplus (expanded as well and at small sizes, and fix unicode issue)
-Bigotimes and bigodot
-Multiple integrals using #entry and #exit anchors
-Contour integrals (use circle component)
 Do the product glyph at display sizes
-Do the large operator K
 
 Center the bar, bracket, brace etc (these might be OK)
 Minus at various widths
@@ -313,6 +320,8 @@ radicals
 relations
 spacing/italic correction
 Union, Subset, \in
+Do the large operator K
+
 **other simple math symbols and anchors (systematic system)**
 Arrows
 
@@ -320,22 +329,22 @@ Math Constants and test docs
 Test ss11 feature at other fonts
 italic tau
 epsilon?
-arrows
+
 
 Change the anchors on the marks to they are in Glyphsdata.xml
 
 Greek lower
 Greek upper
-Extendibles
+Extendibles?
 Stackers
 Other accents
 Other fences
 
 
 Todo: Checker Script
-Height of fences
-Missing bolds
-Missing or inconsisent vVariants or hVariants
+== Height of fences
+== Missing bolds
+== Missing or inconsisent vVariants or hVariants
 
 Private glyphs
 idotlessbold-math
@@ -344,4 +353,6 @@ jdotlessbold-math
 jdotlessbolditaluc-math
 K operator for continued fractions
 Double Struck upper case Greek
+Missing display nary operators
+Easter Egg
 Fourier
