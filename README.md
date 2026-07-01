@@ -299,30 +299,28 @@ Design or use your existing integral
 
 *Mayfair Todo (16)*
 Finish bigodot and bigoplus
-Backup to git
-Single Integral (math.ic and serifs; agate and black all needed!)
-Math.ic on contour integral (inheritance)
-Finish contour integrals 
+Math.ic on contour integral (check inheritance)
+Finish contour integrals
 Multiple integrals using #entry and #exit anchors; check math.ic system
 Do the product glyph at display sizes
 radicals
 
-
 Script or system to insert the math constants into the glyphs file
 Upper and lower limits on summation in mathml core (or is this a stale font issue?)
 Center the bar, bracket, brace etc (these might be OK)
-Minus at various widths
+Minus at various widths (do I actually need this)
 relations
+Look back at serifs on integral in semiexpanded
 spacing/italic correction
 Union, Subset, \in
 Do the large operator K
-**other simple math symbols and anchors (systematic system)**
-Arrows
-
+Other simple math symbols and anchors (systematic system)
+Simple arrows
 Math Constants and test docs
+Email Hans about here maybe?
+
 Test ss11 feature at other fonts
 italic tau
-Email Hans about here maybe?
 epsilon?
 
 
