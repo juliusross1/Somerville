@@ -34,8 +34,6 @@
     <integer>20</integer>
     <key>variantStep</key>
     <integer>5</integer>
-    <key>overwrite</key>
-    <true/>
     <key>color</key>
     <string>orange</string>
   </dict>
@@ -53,8 +51,6 @@
         <string>${smartGlyph}</string>
         <key>export</key>
         <false/>
-        <key>overwrite</key>
-        <string>${overwrite}</string>
         <key>color</key>
         <string>${color}</string>
       </dict>
@@ -132,8 +128,6 @@
         <string>${exportGlyph}</string>
         <key>export</key>
         <true/>
-        <key>overwrite</key>
-        <string>${overwrite}</string>
         <key>color</key>
         <string>${color}</string>
       </dict>

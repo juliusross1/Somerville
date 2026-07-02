@@ -1,4 +1,5 @@
 {
+color = 1;
 export = 0;
 glyphname = _smart.plus.circled;
 layers = (
@@ -15,19 +16,19 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 5;
+height = 0;
 };
 ref = _smart.circle;
 },
 {
 piece = {
-height = 0.86;
+height = 0;
 };
-pos = (-49,-1);
+pos = (-238,-1);
 ref = _smart.plus;
 }
 );
-width = 547;
+width = 170;
 },
 {
 attr = {
@@ -42,12 +43,14 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 5;
+height = 0;
 };
 ref = _smart.circle;
 },
 {
-pos = (-13,-1);
+piece = {
+height = 0;
+};
 ref = _smart.plus;
 }
 );
@@ -66,12 +69,14 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 5;
+height = 0;
 };
 ref = _smart.circle;
 },
 {
-pos = (-32,-1);
+piece = {
+height = 0;
+};
 ref = _smart.plus;
 }
 );
@@ -90,12 +95,14 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 5;
+height = 0;
 };
 ref = _smart.circle;
 },
 {
-pos = (24,-1);
+piece = {
+height = 0;
+};
 ref = _smart.plus;
 }
 );
@@ -114,16 +121,19 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 5;
+height = 0;
 };
 ref = _smart.circle;
 },
 {
-pos = (-10,0);
+piece = {
+height = 0;
+};
+pos = (-210,0);
 ref = _smart.plus;
 }
 );
-width = 625;
+width = 226;
 },
 {
 attr = {
@@ -138,12 +148,14 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 5;
+height = 0;
 };
 ref = _smart.circle;
 },
 {
-pos = (59,0);
+piece = {
+height = 0;
+};
 ref = _smart.plus;
 }
 );
@@ -162,12 +174,14 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 5;
+height = 0;
 };
 ref = _smart.circle;
 },
 {
-pos = (3,-3);
+piece = {
+height = 0;
+};
 ref = _smart.plus;
 }
 );
@@ -186,26 +200,29 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 5;
+height = 0;
 };
 ref = _smart.circle;
 },
 {
-pos = (33,-3);
+piece = {
+height = 0;
+};
+pos = (-190,-3);
 ref = _smart.plus;
 }
 );
-width = 691;
+width = 246;
 },
 {
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 attr = {
 partSelection = {
-"7604925C-D6A5-43B1-A020-70F3484BA822" = 1;
+"5E575464-16E1-427C-BCDB-7161BBBF376E" = 1;
 height = 2;
 };
 };
-layerId = "9FF3E4EC-860E-4000-BF02-13F40E435828";
+layerId = "D10444C8-2376-4ED2-9F0D-A915B7353580";
 name = "Needlepoint SemiCondensed Upright High";
 partSelection = {
 height = 2;
@@ -231,11 +248,11 @@ width = 7713;
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 attr = {
 partSelection = {
-"7604925C-D6A5-43B1-A020-70F3484BA822" = 1;
+"5E575464-16E1-427C-BCDB-7161BBBF376E" = 1;
 height = 2;
 };
 };
-layerId = "B22D78A4-3597-486D-AA5A-AC31B101522D";
+layerId = "E92C7AD4-67F4-49CD-8FDD-67D73718525C";
 name = "Needlepoint SemiExpanded Upright High";
 partSelection = {
 height = 2;
@@ -248,6 +265,9 @@ height = 100;
 ref = _smart.circle;
 },
 {
+piece = {
+height = 100;
+};
 pos = (4018,-1);
 ref = _smart.plus;
 }
@@ -258,11 +278,11 @@ width = 8713;
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
 attr = {
 partSelection = {
-"7604925C-D6A5-43B1-A020-70F3484BA822" = 1;
+"5E575464-16E1-427C-BCDB-7161BBBF376E" = 1;
 height = 2;
 };
 };
-layerId = "45C5B957-4E12-435D-B837-A5971E8BB333";
+layerId = "F842AE53-0C18-4EAA-A22E-3FF838C54776";
 name = "Needlepoint Black SemiCondensed Upright High";
 partSelection = {
 height = 2;
@@ -276,7 +296,7 @@ ref = _smart.circle;
 },
 {
 piece = {
-height = 97.40572;
+height = 100;
 };
 pos = (3573,-1);
 ref = _smart.plus;
@@ -288,11 +308,11 @@ width = 7793;
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 attr = {
 partSelection = {
-"7604925C-D6A5-43B1-A020-70F3484BA822" = 1;
+"5E575464-16E1-427C-BCDB-7161BBBF376E" = 1;
 height = 2;
 };
 };
-layerId = "01B784E4-3909-4B6C-B7C2-F0E69E3C444D";
+layerId = "DF178B6E-2E5D-4A19-B23D-DCFD019C2C84";
 name = "Needlepoint Black SemiExpanded Upright High";
 partSelection = {
 height = 2;
@@ -305,6 +325,9 @@ height = 100;
 ref = _smart.circle;
 },
 {
+piece = {
+height = 100;
+};
 pos = (4217,-1);
 ref = _smart.plus;
 }
@@ -315,11 +338,11 @@ width = 9061;
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 attr = {
 partSelection = {
-"7604925C-D6A5-43B1-A020-70F3484BA822" = 1;
+"5E575464-16E1-427C-BCDB-7161BBBF376E" = 1;
 height = 2;
 };
 };
-layerId = "ABC76983-1E49-49D9-88CB-B568DE037BC5";
+layerId = "C1702460-D5E1-490A-87D3-CFB4E79D7711";
 name = "Agate SemiCondensed Upright High";
 partSelection = {
 height = 2;
@@ -327,29 +350,29 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 86.38253;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
 piece = {
-height = 84.425;
+height = 100;
 };
-pos = (35,0);
+pos = (-12,0);
 ref = _smart.plus;
 }
 );
-width = 7124;
+width = 8211;
 },
 {
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 attr = {
 partSelection = {
-"7604925C-D6A5-43B1-A020-70F3484BA822" = 1;
+"5E575464-16E1-427C-BCDB-7161BBBF376E" = 1;
 height = 2;
 };
 };
-layerId = "F5E11267-2544-4154-942F-75E45FC330CA";
+layerId = "E370243D-4462-49E6-B12D-73D54C6A46C3";
 name = "Agate SemiExpanded Upright High";
 partSelection = {
 height = 2;
@@ -362,6 +385,9 @@ height = 100;
 ref = _smart.circle;
 },
 {
+piece = {
+height = 100;
+};
 pos = (4232,0);
 ref = _smart.plus;
 }
@@ -372,11 +398,11 @@ width = 9111;
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 attr = {
 partSelection = {
-"7604925C-D6A5-43B1-A020-70F3484BA822" = 1;
+"5E575464-16E1-427C-BCDB-7161BBBF376E" = 1;
 height = 2;
 };
 };
-layerId = "FF9357CE-6565-40D8-8096-221047CC119E";
+layerId = "81261760-0420-4AA1-908C-BCB04C30A4FB";
 name = "Agate Black SemiCondensed Upright High";
 partSelection = {
 height = 2;
@@ -390,9 +416,9 @@ ref = _smart.circle;
 },
 {
 piece = {
-height = 86;
+height = 100;
 };
-pos = (591,0);
+pos = (58,0);
 ref = _smart.plus;
 }
 );
@@ -402,11 +428,11 @@ width = 8351;
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 attr = {
 partSelection = {
-"7604925C-D6A5-43B1-A020-70F3484BA822" = 1;
+"5E575464-16E1-427C-BCDB-7161BBBF376E" = 1;
 height = 2;
 };
 };
-layerId = "67C52356-D570-4B95-9869-0756A3773855";
+layerId = "350A9612-0F2D-487C-9FCF-FA2C858A8B0F";
 name = "Agate Black SemiExpanded Upright High";
 partSelection = {
 height = 2;
@@ -419,6 +445,9 @@ height = 100;
 ref = _smart.circle;
 },
 {
+piece = {
+height = 100;
+};
 pos = (4262,0);
 ref = _smart.plus;
 }

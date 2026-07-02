@@ -727,8 +727,7 @@ def action_create_glyph(font, verbose=False, glyph=None, export=True, overwrite=
             set_glyph_color(existing, color)
             log("Overwrote existing glyph %s." % glyph, verbose)
             return existing
-        log("Glyph %s already exists." % glyph, verbose)
-        return existing
+        raise RuntimeError("Glyph %s already exists. Enable 'Overwrite glyphs' to replace it." % glyph)
     new_glyph = GSGlyph(glyph)
     new_glyph.export = bool(export)
     set_glyph_color(new_glyph, color)
@@ -844,7 +843,7 @@ def action_set_component_axis_low_high(font, verbose=False, glyph=None, axis="he
     return changed
 
 
-def action_create_smart_component_variants(font, verbose=False, glyph=None, N=1, step=1, axis="height", color=None, **_kwargs):
+def action_create_smart_component_variants(font, verbose=False, glyph=None, N=1, step=1, axis="height", color=None, overwrite=False, **_kwargs):
     source_glyph = glyph_for_name(font, glyph)
     if source_glyph is None:
         raise RuntimeError("Missing glyph: %s" % glyph)
@@ -863,6 +862,8 @@ def action_create_smart_component_variants(font, verbose=False, glyph=None, N=1,
             font.glyphs.append(target_glyph)
             did_create = True
         else:
+            if not overwrite:
+                raise RuntimeError("Glyph %s already exists. Enable 'Overwrite glyphs' to replace it." % target_name)
             set_glyph_color(target_glyph, color)
         populate_variant_from_source(font, source_glyph, target_glyph, axis, number * step)
         if did_create:
@@ -889,16 +890,18 @@ ACTION_REGISTRY = {
 }
 
 
-def run_action(font, action, verbose=False):
+def run_action(font, action, verbose=False, overwrite_glyphs=False):
     function_name = action.get("function")
     function = ACTION_REGISTRY.get(function_name)
     if function is None:
         raise RuntimeError("Unknown recipe function: %s" % function_name)
     arguments = dict(action.get("arguments", {}))
+    if function_name in ("createGlyph", "createSmartComponentVariants"):
+        arguments["overwrite"] = bool(overwrite_glyphs)
     return function(font, verbose=verbose, **arguments)
 
 
-def run_recipe(recipe_file=DEFAULT_RECIPE_FILE, verbose=VERBOSE):
+def run_recipe(recipe_file=DEFAULT_RECIPE_FILE, verbose=VERBOSE, overwrite_glyphs=False):
     font = Glyphs.font
     if font is None:
         raise RuntimeError("No font open.")
@@ -909,12 +912,13 @@ def run_recipe(recipe_file=DEFAULT_RECIPE_FILE, verbose=VERBOSE):
     log("Template: %s" % template_path_value, verbose)
     log("Name: %s" % recipe.get("name", template.get("name", "<unnamed>")), verbose)
     log("Actions: %i" % len(actions), verbose)
+    log("Overwrite glyphs: %s" % ("yes" if overwrite_glyphs else "no"), verbose)
     log("", verbose)
     font.disableUpdateInterface()
     try:
         for index, action in enumerate(actions, 1):
             log("%i. %s" % (index, action.get("function")), verbose)
-            run_action(font, action, verbose=verbose)
+            run_action(font, action, verbose=verbose, overwrite_glyphs=overwrite_glyphs)
     finally:
         font.enableUpdateInterface()
     log("", verbose)

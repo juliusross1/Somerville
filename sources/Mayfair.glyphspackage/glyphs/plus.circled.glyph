@@ -1,4 +1,5 @@
 {
+color = 1;
 glyphname = plus.circled;
 layers = (
 {
@@ -8,7 +9,7 @@ shapes = (
 ref = _smart.plus.circled;
 }
 );
-width = 547;
+width = 170;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -17,7 +18,7 @@ shapes = (
 ref = _smart.plus.circled;
 }
 );
-width = 650;
+width = 600;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -26,7 +27,7 @@ shapes = (
 ref = _smart.plus.circled;
 }
 );
-width = 563;
+width = 600;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -35,7 +36,7 @@ shapes = (
 ref = _smart.plus.circled;
 }
 );
-width = 673;
+width = 600;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -44,7 +45,7 @@ shapes = (
 ref = _smart.plus.circled;
 }
 );
-width = 625;
+width = 226;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -53,7 +54,7 @@ shapes = (
 ref = _smart.plus.circled;
 }
 );
-width = 763;
+width = 600;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -62,7 +63,7 @@ shapes = (
 ref = _smart.plus.circled;
 }
 );
-width = 633;
+width = 600;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -71,10 +72,10 @@ shapes = (
 ref = _smart.plus.circled;
 }
 );
-width = 691;
+width = 246;
 }
 );
-unicode = (8853,10753);
+unicode = 8853;
 userData = {
 com.nagwa.MATHPlugin.variants = {
 vVariants = (
@@ -100,11 +101,6 @@ plus.circled.s18,
 plus.circled.s19,
 plus.circled.s20
 );
-};
-com.opentypemathtools.smartComponentVariants = {
-N = 20;
-axis = height;
-step = 5;
 };
 };
 }

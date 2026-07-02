@@ -320,6 +320,9 @@ Recipes needed
 *Mayfair Todo (16)*
 
 === Bigoplus, bigotimes, times
+
+Need to think about how we have "intermediate" things that we do not overwrite as they require human input
+
 === Do the product glyph
 === radicals (including spacing)
 

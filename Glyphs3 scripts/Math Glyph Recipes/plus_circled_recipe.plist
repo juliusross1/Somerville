@@ -10,7 +10,7 @@
   <string>macro</string>
 
   <key>name</key>
-  <string>Build dblIntegral</string>
+  <string>Build plus.circled</string>
 
   <key>template</key>
   <string>math_glyphs_template.plist</string>
@@ -21,13 +21,13 @@
   <key>parameters</key>
   <dict>
     <key>smartGlyph</key>
-    <string>_smart.dblIntegral</string>
+    <string>_smart.plus.circled</string>
     <key>exportGlyph</key>
-    <string>dblIntegral</string>
+    <string>plus.circled</string>
     <key>baseSmartGlyphs</key>
     <array>
-      <string>_smart.integral</string>
-      <string>_smart.integral</string>
+      <string>_smart.circle</string>
+      <string>_smart.plus</string>
     </array>
     <key>variantN</key>
     <integer>20</integer>

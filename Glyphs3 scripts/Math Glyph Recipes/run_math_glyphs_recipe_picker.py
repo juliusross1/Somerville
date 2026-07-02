@@ -88,9 +88,14 @@ class MathGlyphsRecipePicker(object):
             doubleClickCallback=self.run_callback,
         )
         self.w.verbose = vanilla.CheckBox(
-            (12, -62, 180, 22),
+            (12, -62, 155, 22),
             "Verbose Macro log",
             value=True,
+        )
+        self.w.overwrite = vanilla.CheckBox(
+            (174, -62, 140, 22),
+            "Overwrite glyphs",
+            value=False,
         )
         self.w.refreshButton = vanilla.Button(
             (-236, -64, 104, 26),
@@ -139,23 +144,23 @@ class MathGlyphsRecipePicker(object):
             return
         verbose = verbosity_enabled(self.w.verbose)
         if not row.get("runnable"):
-            if verbose:
-                Glyphs.showMacroWindow()
+            Glyphs.showMacroWindow()
             print_warning("%s is not a runnable recipe." % row.get("file"))
             return
+        overwrite_glyphs = bool(self.w.overwrite.get())
 
         if verbose:
             show_macro_window_for_verbose_run()
             print("Run Math Glyphs Recipe Picker")
             print("Script version: %s" % SCRIPT_VERSION)
             print("Selected recipe: %s" % row.get("file"))
+            print("Overwrite glyphs: %s" % ("yes" if overwrite_glyphs else "no"))
             print("")
 
         try:
-            run_recipe(row["file"], verbose=verbose)
+            run_recipe(row["file"], verbose=verbose, overwrite_glyphs=overwrite_glyphs)
         except Exception as error:
-            if verbose:
-                Glyphs.showMacroWindow()
+            Glyphs.showMacroWindow()
             print_warning(error)
             print(traceback.format_exc())
 
