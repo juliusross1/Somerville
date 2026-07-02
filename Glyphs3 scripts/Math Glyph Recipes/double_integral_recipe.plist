@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>formatVersion</key>
+  <integer>1</integer>
+
+  <key>kind</key>
+  <string>macro</string>
+
+  <key>name</key>
+  <string>Build doubleIntegral</string>
+
+  <key>template</key>
+  <string>math_glyphs_template.plist</string>
+
+  <key>templateName</key>
+  <string>mathGlyphs</string>
+
+  <key>parameters</key>
+  <dict>
+    <key>smartGlyph</key>
+    <string>_smart.dblIntegral</string>
+    <key>exportGlyph</key>
+    <string>dblIntegral</string>
+    <key>baseSmartGlyphs</key>
+    <array>
+      <string>_smart.integral</string>
+      <string>_smart.integral</string>
+    </array>
+    <key>variantN</key>
+    <integer>20</integer>
+    <key>variantStep</key>
+    <integer>5</integer>
+  </dict>
+</dict>
+</plist>

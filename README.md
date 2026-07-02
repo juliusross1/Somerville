@@ -309,23 +309,30 @@ Things to check: exit/entry for semicondensed and semiexpanded; math.ic should i
 **Arrows**
 
 
+
+======
+Recipes needed
+= Go back to do contourIntegral recipe
+= Summation recipe
+= Bigdot recipe
+= Bigotimes recipe
+
 *Mayfair Todo (16)*
 
-=== Write a script to do triple and quad integrals (should work for other BIG operators as long as the system is consistent)
-=== Bigoplus
+=== Bigoplus, bigotimes, times
+=== Do the product glyph
 === radicals (including spacing)
-=== Do the product glyph at display sizes
 
-Return to finish off the contour integrals (the weight of the circle at low heights is an issue)
 
-Spacing:
+=== Spacing:
 Script or system to insert the math constants into the glyphs file.  Go through all the math constants again with testing documents
 Upper and lower limits on summation in mathml core (or is this a stale font issue?)
+===Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
+===Center the bar, bracket, brace etc (these might be OK)
+===relations
+===Look back at serifs on integral in semiexpanded agate
+=== Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
 
-Simple arrows
-Center the bar, bracket, brace etc (these might be OK)
-relations
-Look back at serifs on integral in semiexpanded
 spacing/italic correction
 Union, Subset, \in
 Other simple math symbols using anchors (e.g. relations) (systematic system)

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>formatVersion</key>
+  <integer>1</integer>
+
+  <key>kind</key>
+  <string>recipe</string>
+
+  <key>name</key>
+  <string>Build product</string>
+
+  <key>actions</key>
+  <array>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>product</string>
+        <key>export</key>
+        <true/>
+        <key>overwrite</key>
+        <true/>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponent</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>product</string>
+        <key>component</key>
+        <string>_smart.product</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createSmartComponentVariants</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>product</string>
+        <key>N</key>
+        <integer>20</integer>
+        <key>step</key>
+        <integer>5</integer>
+      </dict>
+    </dict>
+  </array>
+</dict>
+</plist>
