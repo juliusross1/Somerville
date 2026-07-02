@@ -318,18 +318,13 @@ Recipes needed
 = Go back to do contourIntegral recipe
 = Summation recipe
 = Bigdot recipe
-= Bigotimes recipe
+= Bigplus recipe
 
 *Mayfair Todo (16)*
 
 === Bigoplus, bigotimes, times
-
-Need to think about how we have "intermediate" things that we do not overwrite as they require human input
-
-=== Do the product glyph
+== Recipe for coproduct
 === radicals (including spacing)
-
-
 === Spacing:
 Script or system to insert the math constants into the glyphs file.  Go through all the math constants again with testing documents
 Upper and lower limits on summation in mathml core (or is this a stale font issue?)

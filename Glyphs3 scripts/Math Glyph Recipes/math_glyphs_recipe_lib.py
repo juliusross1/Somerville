@@ -133,6 +133,14 @@ def layer_id(layer):
     return str(value) if value is not None else None
 
 
+def layer_width(layer):
+    value = safe_call(getattr(layer, "width", None))
+    try:
+        return float(value)
+    except Exception:
+        return None
+
+
 def is_master_layer(layer):
     return bool(safe_call(getattr(layer, "isMasterLayer", False), False))
 
@@ -246,6 +254,88 @@ def layer_components(layer):
         return []
 
 
+def matching_layer(source_glyph, target_layer):
+    target_layer_id = layer_id(target_layer)
+    if target_layer_id is not None:
+        try:
+            source_layer = source_glyph.layers[target_layer_id]
+            if source_layer is not None:
+                return source_layer
+        except Exception:
+            pass
+
+    target_name = layer_name(target_layer)
+    target_master_id = associated_master_id(target_layer)
+    for source_layer in source_glyph.layers:
+        if layer_name(source_layer) != target_name:
+            continue
+        if associated_master_id(source_layer) == target_master_id:
+            return source_layer
+    for source_layer in source_glyph.layers:
+        if layer_name(source_layer) == target_name:
+            return source_layer
+    return None
+
+
+def set_layer_metric(layer, attribute_name, value):
+    if value is None:
+        return False
+    try:
+        setattr(layer, attribute_name, value)
+        return True
+    except Exception:
+        pass
+    method = getattr(layer, "set%s_" % attribute_name, None)
+    if method is not None:
+        try:
+            method(value)
+            return True
+        except Exception:
+            pass
+    return False
+
+
+def set_layer_metrics_key(layer, attribute_name, key_value):
+    try:
+        setattr(layer, attribute_name, key_value)
+        return True
+    except Exception:
+        pass
+    method = getattr(layer, "set%s_" % attribute_name, None)
+    if method is not None:
+        try:
+            method(key_value)
+            return True
+        except Exception:
+            pass
+    return False
+
+
+def copy_layer_metrics(source_layer, target_layer, source_glyph_name=None):
+    changed = 0
+    width = layer_width(source_layer)
+    if width is not None and set_layer_metric(target_layer, "width", width):
+        changed += 1
+
+    if source_glyph_name:
+        key_value = "=%s" % source_glyph_name
+        for attribute_name in ("leftMetricsKey", "rightMetricsKey"):
+            if set_layer_metrics_key(target_layer, attribute_name, key_value):
+                changed += 1
+    else:
+        for attribute_name in ("leftMetricsKey", "rightMetricsKey", "widthMetricsKey"):
+            try:
+                setattr(target_layer, attribute_name, getattr(source_layer, attribute_name))
+            except Exception:
+                pass
+
+    width_key = safe_call(getattr(source_layer, "widthMetricsKey", None))
+    if width_key and set_layer_metrics_key(target_layer, "widthMetricsKey", width_key):
+        changed += 1
+
+    return changed
+
+
 def append_component_to_layer(layer, component_name):
     component = make_component(component_name)
     try:
@@ -275,6 +365,126 @@ def component_name(component):
             if value:
                 return str(value)
     return None
+
+
+def transform_values(component):
+    transform = safe_call(getattr(component, "transform", None))
+    if transform is not None:
+        try:
+            return (
+                float(transform.m11),
+                float(transform.m12),
+                float(transform.m21),
+                float(transform.m22),
+                float(transform.tX),
+                float(transform.tY),
+            )
+        except Exception:
+            pass
+        try:
+            values = list(transform)
+            if len(values) >= 6:
+                return tuple(float(value) for value in values[:6])
+        except Exception:
+            pass
+    return (1.0, 0.0, 0.0, 1.0, 0.0, 0.0)
+
+
+def disable_component_alignment(component):
+    method = getattr(component, "setDisableAlignment_", None)
+    if method is not None:
+        try:
+            method(True)
+            return True
+        except Exception:
+            pass
+
+    try:
+        component.automaticAlignment = False
+        return True
+    except Exception:
+        pass
+
+    try:
+        component.disableAlignment = True
+        return True
+    except Exception:
+        pass
+
+    try:
+        component.alignment = -1
+        return True
+    except Exception:
+        return False
+
+
+def set_component_transform(component, values):
+    for method_name in ("setTransform_",):
+        method = getattr(component, method_name, None)
+        if method is None:
+            continue
+        try:
+            method(values)
+            return True
+        except Exception:
+            pass
+    try:
+        component.transform = values
+        return True
+    except Exception:
+        return False
+
+
+def bounds_y_values(obj):
+    bounds = safe_call(getattr(obj, "bounds", None))
+    if bounds is None:
+        return None, None, None
+    try:
+        min_y = float(bounds.origin.y)
+        height = float(bounds.size.height)
+        return min_y, min_y + height, min_y + (height / 2.0)
+    except Exception:
+        pass
+    try:
+        origin = bounds[0]
+        size = bounds[1]
+        min_y = float(origin[1])
+        height = float(size[1])
+        return min_y, min_y + height, min_y + (height / 2.0)
+    except Exception:
+        return None, None, None
+
+
+def translate_component_y(component, dy):
+    if abs(float(dy)) <= 0.000001:
+        return True
+    a, b, c, d, tx, ty = transform_values(component)
+    if set_component_transform(component, (a, b, c, d, tx, ty + float(dy))):
+        return True
+
+    position = safe_call(getattr(component, "position", None))
+    if position is not None:
+        try:
+            position.y = float(position.y) + float(dy)
+            component.position = position
+            return True
+        except Exception:
+            pass
+    return False
+
+
+def flip_component_across_horizontal_center(component):
+    old_min_y, old_max_y, center_y = bounds_y_values(component)
+    if center_y is None:
+        return False
+    a, b, c, d, tx, ty = transform_values(component)
+    if not set_component_transform(component, (a, -b, c, -d, tx, (2.0 * center_y) - ty)):
+        return False
+
+    new_min_y, new_max_y, new_center_y = bounds_y_values(component)
+    if old_min_y is None or new_min_y is None:
+        return True
+    return translate_component_y(component, old_min_y - new_min_y)
 
 
 def component_glyph(font, component):
@@ -767,6 +977,58 @@ def action_add_components(font, verbose=False, glyph=None, components=None, **_k
     return changed
 
 
+def action_flip_components(font, verbose=False, glyph=None, components=None, **_kwargs):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+    wanted_components = set(components or [])
+    changed = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        for component in layer_components(layer):
+            if wanted_components and component_name(component) not in wanted_components:
+                continue
+            disable_component_alignment(component)
+            if flip_component_across_horizontal_center(component):
+                changed += 1
+            else:
+                skipped += 1
+    log("%s: flipped %i component(s)%s." % (
+        glyph,
+        changed,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
+def action_copy_layer_metrics(font, verbose=False, glyph=None, sourceGlyph=None, **_kwargs):
+    target_glyph = glyph_for_name(font, glyph)
+    source_glyph = glyph_for_name(font, sourceGlyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if source_glyph is None:
+        raise RuntimeError("Missing source glyph: %s" % sourceGlyph)
+
+    changed_layers = 0
+    skipped_layers = 0
+    for target_layer in target_glyph.layers:
+        source_layer = matching_layer(source_glyph, target_layer)
+        if source_layer is None:
+            skipped_layers += 1
+            continue
+        copy_layer_metrics(source_layer, target_layer, sourceGlyph)
+        changed_layers += 1
+    log("%s: copied metrics from %s to %i layer(s)%s." % (
+        glyph,
+        sourceGlyph,
+        changed_layers,
+        "; skipped %i" % skipped_layers if skipped_layers else "",
+    ), verbose)
+    return changed_layers
+
+
 def action_create_high_layers(font, verbose=False, glyph=None, axis="height", lowValue=0, highValue=100, **_kwargs):
     target_glyph = glyph_for_name(font, glyph)
     if target_glyph is None:
@@ -884,6 +1146,8 @@ ACTION_REGISTRY = {
     "createGlyph": action_create_glyph,
     "addComponent": action_add_component,
     "addComponents": action_add_components,
+    "flipComponents": action_flip_components,
+    "copyLayerMetrics": action_copy_layer_metrics,
     "createHighLayers": action_create_high_layers,
     "setComponentAxisLowHigh": action_set_component_axis_low_high,
     "createSmartComponentVariants": action_create_smart_component_variants,

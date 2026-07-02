@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>formatVersion</key>
+  <integer>1</integer>
+
+  <key>kind</key>
+  <string>recipe</string>
+
+  <key>name</key>
+  <string>Build coproduct</string>
+
+  <key>parameters</key>
+  <dict>
+    <key>axis</key>
+    <string>height</string>
+    <key>lowValue</key>
+    <real>0</real>
+    <key>highValue</key>
+    <real>100</real>
+    <key>variantN</key>
+    <integer>20</integer>
+    <key>variantStep</key>
+    <integer>5</integer>
+    <key>color</key>
+    <string>orange</string>
+  </dict>
+
+  <key>actions</key>
+  <array>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.coproduct</string>
+        <key>export</key>
+        <false/>
+        <key>color</key>
+        <string>${color}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponent</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.coproduct</string>
+        <key>component</key>
+        <string>_smart.product</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>flipComponents</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.coproduct</string>
+        <key>components</key>
+        <array>
+          <string>_smart.product</string>
+        </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createHighLayers</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.coproduct</string>
+        <key>axis</key>
+        <string>${axis}</string>
+        <key>lowValue</key>
+        <string>${lowValue}</string>
+        <key>highValue</key>
+        <string>${highValue}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setComponentAxisLowHigh</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.coproduct</string>
+        <key>axis</key>
+        <string>${axis}</string>
+        <key>lowValue</key>
+        <string>${lowValue}</string>
+        <key>highValue</key>
+        <string>${highValue}</string>
+        <key>componentFilter</key>
+        <dict>
+          <key>components</key>
+          <array>
+            <string>_smart.product</string>
+          </array>
+        </dict>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>copyLayerMetrics</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.coproduct</string>
+        <key>sourceGlyph</key>
+        <string>_smart.product</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>coproduct</string>
+        <key>export</key>
+        <true/>
+        <key>color</key>
+        <string>${color}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponent</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>coproduct</string>
+        <key>component</key>
+        <string>_smart.coproduct</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createSmartComponentVariants</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>coproduct</string>
+        <key>N</key>
+        <string>${variantN}</string>
+        <key>step</key>
+        <string>${variantStep}</string>
+        <key>axis</key>
+        <string>${axis}</string>
+        <key>color</key>
+        <string>${color}</string>
+      </dict>
+    </dict>
+  </array>
+</dict>
+</plist>
