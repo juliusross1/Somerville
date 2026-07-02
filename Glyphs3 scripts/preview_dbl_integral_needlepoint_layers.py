@@ -17,7 +17,7 @@ from Foundation import NSTimer
 from GlyphsApp import Glyphs, GSLayer
 
 
-SCRIPT_VERSION = "2026-07-02 10:42 CDT pause-preview-during-export"
+SCRIPT_VERSION = "2026-07-02 11:58 CDT component-center-anchor-alignment"
 BOX_MASTER_NAMES = (
     "Needlepoint SemiCondensed Upright",
     "Needlepoint SemiExpanded Upright",
@@ -973,18 +973,48 @@ def values_with_translation(values, tx, ty):
     return (m11, m12, m21, m22, tx, ty)
 
 
-def values_aligned_to_entry(values, entry_point, target_point):
-    if entry_point is None or target_point is None:
+def values_aligned_to_anchor(values, source_point, target_point):
+    if source_point is None or target_point is None:
         return values
 
     m11, m12, m21, m22, _tx, _ty = values
-    entry_x, entry_y = entry_point
+    source_x, source_y = source_point
     target_x, target_y = target_point
     return values_with_translation(
         values,
-        target_x - (m11 * entry_x + m21 * entry_y),
-        target_y - (m12 * entry_x + m22 * entry_y),
+        target_x - (m11 * source_x + m21 * source_y),
+        target_y - (m12 * source_x + m22 * source_y),
     )
+
+
+def values_aligned_to_entry(values, entry_point, target_point):
+    return values_aligned_to_anchor(values, entry_point, target_point)
+
+
+def component_anchor_position(component, component_layer, applied_smart_values, anchor_name):
+    for smart_axis_name_value, smart_axis_value in applied_smart_values.items():
+        position = smart_anchor_position(component, smart_axis_name_value, smart_axis_value, anchor_name)
+        if position is not None:
+            return position
+    return anchor_position(component_layer, anchor_name)
+
+
+def values_aligned_to_previous_component_anchor(values, component, component_layer, applied_smart_values, previous_anchors):
+    for source_name, target_name in (("_center", "center"),):
+        target_point = previous_anchors.get(target_name)
+        if target_point is None:
+            continue
+        source_point = component_anchor_position(component, component_layer, applied_smart_values, source_name)
+        if source_point is not None:
+            return values_aligned_to_anchor(values, source_point, target_point)
+    return values
+
+
+def remember_component_anchors(component, component_layer, applied_smart_values, transform_values, previous_anchors):
+    for anchor_name_value in ("center", "#exit"):
+        position = component_anchor_position(component, component_layer, applied_smart_values, anchor_name_value)
+        if position is not None:
+            previous_anchors[anchor_name_value] = transformed_point(transform_values, position)
 
 
 def component_source_layer(component):
@@ -1020,6 +1050,7 @@ def layer_component_path(layer, seen, draw_smart_values=None):
     path = NSBezierPath.bezierPath()
     appended = False
     previous_exit = None
+    previous_anchors = {}
 
     try:
         components = list(layer.components)
@@ -1037,14 +1068,18 @@ def layer_component_path(layer, seen, draw_smart_values=None):
         component_layer = component_source_layer(component)
         original_transform_values = component_transform_values(component)
         transform_values = original_transform_values
-        entry_point = None
-        for smart_axis_name_value, smart_axis_value in applied_smart_values.items():
-            entry_point = smart_anchor_position(component, smart_axis_name_value, smart_axis_value, "#entry")
-            if entry_point is not None:
-                break
-        if entry_point is None:
-            entry_point = anchor_position(component_layer, "#entry")
-        transform_values = values_aligned_to_entry(transform_values, entry_point, previous_exit)
+        centered_transform_values = values_aligned_to_previous_component_anchor(
+            transform_values,
+            component,
+            component_layer,
+            applied_smart_values,
+            previous_anchors,
+        )
+        if centered_transform_values != transform_values:
+            transform_values = centered_transform_values
+        else:
+            entry_point = component_anchor_position(component, component_layer, applied_smart_values, "#entry")
+            transform_values = values_aligned_to_entry(transform_values, entry_point, previous_exit)
 
         path_value = None
         if applied_smart_values:
@@ -1068,13 +1103,14 @@ def layer_component_path(layer, seen, draw_smart_values=None):
                 if append_path(path, path_value):
                     appended = True
 
-        exit_point = None
-        for smart_axis_name_value, smart_axis_value in applied_smart_values.items():
-            exit_point = smart_anchor_position(component, smart_axis_name_value, smart_axis_value, "#exit")
-            if exit_point is not None:
-                break
-        if exit_point is None:
-            exit_point = anchor_position(component_layer, "#exit")
+        remember_component_anchors(
+            component,
+            component_layer,
+            applied_smart_values,
+            transform_values,
+            previous_anchors,
+        )
+        exit_point = component_anchor_position(component, component_layer, applied_smart_values, "#exit")
         previous_exit = transformed_point(transform_values, exit_point)
 
     return path if appended else None

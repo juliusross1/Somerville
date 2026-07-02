@@ -311,13 +311,12 @@ Things to check: exit/entry for semicondensed and semiexpanded; math.ic should i
 
 *Mayfair Todo (16)*
 
-=== Finish bigodot and bigoplus
-
-=== Need a plugin that helps me adjust the scale and/smart component value for all layers in a given glyph at once
-=== Finish contour integrals
+=== Write a script to do triple and quad integrals (should work for other BIG operators as long as the system is consistent)
+=== Bigoplus
 === radicals (including spacing)
 === Do the product glyph at display sizes
-=== Write a script to do triple and quad integrals (should work for other BIG operators as long as the system is consistent)
+
+Return to finish off the contour integrals (the weight of the circle at low heights is an issue)
 
 Spacing:
 Script or system to insert the math constants into the glyphs file.  Go through all the math constants again with testing documents
@@ -325,7 +324,6 @@ Upper and lower limits on summation in mathml core (or is this a stale font issu
 
 Simple arrows
 Center the bar, bracket, brace etc (these might be OK)
-Minus at various widths (do I actually need this)
 relations
 Look back at serifs on integral in semiexpanded
 spacing/italic correction
