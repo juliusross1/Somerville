@@ -303,7 +303,10 @@ create dblIntegral and add _smart.dblIntegral as a component
 create the height variants from the script
 Things to check: exit/entry for semicondensed and semiexpanded; math.ic should inherit.  Test against integral and tripleintegral
 
-
+** for product **
+Usual build process (no need to describe)
+Stems slightly thicker at height
+**todo: return to the serifs at high**
 
 
 **Arrows**
@@ -335,7 +338,7 @@ Upper and lower limits on summation in mathml core (or is this a stale font issu
 ===relations
 ===Look back at serifs on integral in semiexpanded agate
 === Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
-
+=== Look back at weight of summation
 spacing/italic correction
 Union, Subset, \in
 Other simple math symbols using anchors (e.g. relations) (systematic system)
@@ -344,7 +347,7 @@ Email Hans about here maybe?
 italic tau
 epsilon?
 
-
+Product serifs at high
 Change the anchors on the marks to they are in Glyphsdata.xml
 Do the large operator K
 Greek lower
