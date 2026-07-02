@@ -252,6 +252,7 @@ Script: Create size variants
 Think about the sidebearings as these are not right from these components!
 Think about math.ic (I want this inherited from the component I think so need to adjust the script)
 
+
 **Fences**
 
 a. Make sure all the brackets are *exactly* the same height (brace, bracket, bar, parenthesis ...)
@@ -293,39 +294,51 @@ Design or use your existing integral
 
 4. Add a center anchor, top and bottom.  Make the center align with the math-axis on all layers. 
 
+** for double integral**
+create _smart.dblIntegral
+add _smart.integral twice
+adjust the #exit and #entry for _smart.integral as needed
+make higher layers for _smart.dblIntegral.   Adjust the heights 0 for the small, 100 for the max
+create dblIntegral and add _smart.dblIntegral as a component
+create the height variants from the script
+Things to check: exit/entry for semicondensed and semiexpanded; math.ic should inherit.  Test against integral and tripleintegral
+
+
+
 
 **Arrows**
 
 
 *Mayfair Todo (16)*
+radicals (including spacing)
 Finish bigodot and bigoplus
-Math.ic on contour integral (check inheritance)
 Finish contour integrals
-Multiple integrals using #entry and #exit anchors; check math.ic system
 Do the product glyph at display sizes
-radicals
+=== I need my own "preview" plugin that will display the same glyph at different fonts in the grid and possibly also at different smart values (similarly for a grid).  Need to think about the UI for this.  May also want some "context"
 
-Script or system to insert the math constants into the glyphs file
+=== Need a plugin that helps me adjust the width/height/smart component value for all layers in a given glyph at once
+
+Spacing:
+Script or system to insert the math constants into the glyphs file.  Go through all the math constants again with testing documents
 Upper and lower limits on summation in mathml core (or is this a stale font issue?)
+
+Simple arrows
 Center the bar, bracket, brace etc (these might be OK)
 Minus at various widths (do I actually need this)
 relations
 Look back at serifs on integral in semiexpanded
 spacing/italic correction
 Union, Subset, \in
-Do the large operator K
-Other simple math symbols and anchors (systematic system)
-Simple arrows
-Math Constants and test docs
-Email Hans about here maybe?
-
+Write a script to do triple and quad integrals (should work for other BIG operators as long as the system is consistent)
+Other simple math symbols using anchors (e.g. relations) (systematic system)
 Test ss11 feature at other fonts
+Email Hans about here maybe?
 italic tau
 epsilon?
 
 
 Change the anchors on the marks to they are in Glyphsdata.xml
-
+Do the large operator K
 Greek lower
 Greek upper
 Extendibles?
