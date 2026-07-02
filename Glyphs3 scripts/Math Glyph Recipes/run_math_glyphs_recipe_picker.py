@@ -5,6 +5,7 @@ import os
 import plistlib
 import sys
 import traceback
+from importlib import reload
 
 import vanilla
 from GlyphsApp import Glyphs
@@ -15,6 +16,10 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 RUNNABLE_RECIPE_KINDS = ("macro", "recipe")
+
+import math_glyphs_recipe_lib  # noqa: E402
+
+math_glyphs_recipe_lib = reload(math_glyphs_recipe_lib)
 
 from math_glyphs_recipe_lib import print_warning, run_recipe  # noqa: E402
 

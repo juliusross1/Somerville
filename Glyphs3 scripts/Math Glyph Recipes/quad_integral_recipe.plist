@@ -10,7 +10,7 @@
   <string>macro</string>
 
   <key>name</key>
-  <string>Build quadIntegral</string>
+  <string>Build quadrupleIntegral</string>
 
   <key>template</key>
   <string>math_glyphs_template.plist</string>
@@ -21,9 +21,9 @@
   <key>parameters</key>
   <dict>
     <key>smartGlyph</key>
-    <string>_smart.quadIntegral</string>
+    <string>_smart.quadrupleIntegral</string>
     <key>exportGlyph</key>
-    <string>quadIntegral</string>
+    <string>quadrupleIntegral</string>
     <key>baseSmartGlyphs</key>
     <array>
       <string>_smart.integral</string>
@@ -35,6 +35,10 @@
     <integer>20</integer>
     <key>variantStep</key>
     <integer>5</integer>
+    <key>overwrite</key>
+    <true/>
+    <key>color</key>
+    <string>orange</string>
   </dict>
 </dict>
 </plist>

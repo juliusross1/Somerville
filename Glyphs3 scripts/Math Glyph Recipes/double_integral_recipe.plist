@@ -10,7 +10,7 @@
   <string>macro</string>
 
   <key>name</key>
-  <string>Build doubleIntegral</string>
+  <string>Build dblIntegral</string>
 
   <key>template</key>
   <string>math_glyphs_template.plist</string>
@@ -33,6 +33,10 @@
     <integer>20</integer>
     <key>variantStep</key>
     <integer>5</integer>
+    <key>overwrite</key>
+    <true/>
+    <key>color</key>
+    <string>orange</string>
   </dict>
 </dict>
 </plist>

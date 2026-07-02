@@ -1,5 +1,5 @@
 {
-color = 4;
+color = 1;
 glyphname = integral;
 layers = (
 {
@@ -12,22 +12,13 @@ ref = _smart.integral;
 width = 446;
 },
 {
-layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
 ref = _smart.integral;
 }
 );
-width = 592;
-},
-{
-layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-shapes = (
-{
-ref = _smart.integral;
-}
-);
-width = 694;
+width = 614;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -48,13 +39,22 @@ ref = _smart.integral;
 width = 710;
 },
 {
-layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
 ref = _smart.integral;
 }
 );
-width = 614;
+width = 592;
+},
+{
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+ref = _smart.integral;
+}
+);
+width = 694;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -77,8 +77,6 @@ width = 828;
 );
 unicode = 8747;
 userData = {
-KernOnSpecialSpacing = {
-};
 com.nagwa.MATHPlugin.variants = {
 vVariants = (
 integral,
@@ -103,11 +101,6 @@ integral.s18,
 integral.s19,
 integral.s20
 );
-};
-com.opentypemathtools.smartComponentVariants = {
-N = 20;
-axis = height;
-step = 5;
 };
 };
 }

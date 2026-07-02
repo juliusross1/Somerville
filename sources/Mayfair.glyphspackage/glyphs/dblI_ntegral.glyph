@@ -33,9 +33,6 @@ width = 1128;
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
-piece = {
-height = 0;
-};
 ref = _smart.dblIntegral;
 }
 );
@@ -104,11 +101,6 @@ dblIntegral.s18,
 dblIntegral.s19,
 dblIntegral.s20
 );
-};
-com.opentypemathtools.smartComponentVariants = {
-N = 20;
-axis = height;
-step = 5;
 };
 };
 }

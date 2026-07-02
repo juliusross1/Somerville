@@ -36,6 +36,8 @@
     <integer>5</integer>
     <key>overwrite</key>
     <true/>
+    <key>color</key>
+    <string>orange</string>
   </dict>
 
   <key>actions</key>
@@ -53,6 +55,8 @@
         <false/>
         <key>overwrite</key>
         <string>${overwrite}</string>
+        <key>color</key>
+        <string>${color}</string>
       </dict>
     </dict>
 
@@ -130,6 +134,8 @@
         <true/>
         <key>overwrite</key>
         <string>${overwrite}</string>
+        <key>color</key>
+        <string>${color}</string>
       </dict>
     </dict>
 
@@ -164,6 +170,8 @@
         <string>${variantStep}</string>
         <key>axis</key>
         <string>${axis}</string>
+        <key>color</key>
+        <string>${color}</string>
       </dict>
     </dict>
   </array>

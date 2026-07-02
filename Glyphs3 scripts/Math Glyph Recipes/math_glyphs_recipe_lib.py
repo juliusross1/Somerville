@@ -28,6 +28,21 @@ MATH_PLUGIN_VARIANT_KEYS = dict(
     height="vVariants",
     width="hVariants",
 )
+GLYPHS_COLOR_INDEXES = dict(
+    red=0,
+    orange=1,
+    brown=2,
+    yellow=3,
+    lightgreen=4,
+    darkgreen=5,
+    lightblue=6,
+    darkblue=7,
+    purple=8,
+    magenta=9,
+    lightgray=10,
+    darkgray=11,
+    none=None,
+)
 
 
 def script_directory():
@@ -73,6 +88,40 @@ def numeric_value(value):
         return float(value)
     except Exception:
         return None
+
+
+def color_value(value):
+    if value is None:
+        return None
+    if isinstance(value, str):
+        cleaned = value.strip().lower().replace(" ", "").replace("_", "").replace("-", "")
+        if not cleaned:
+            return None
+        if cleaned in GLYPHS_COLOR_INDEXES:
+            return GLYPHS_COLOR_INDEXES[cleaned]
+    try:
+        return int(value)
+    except Exception:
+        return value
+
+
+def set_glyph_color(glyph, color=None):
+    color = color_value(color)
+    if color is None:
+        return False
+    try:
+        glyph.color = color
+        return True
+    except Exception:
+        pass
+    method = getattr(glyph, "setColor_", None)
+    if method is not None:
+        try:
+            method(color)
+            return True
+        except Exception:
+            pass
+    return False
 
 
 def layer_name(layer):
@@ -121,19 +170,56 @@ def remove_layer(glyph, layer):
     return False
 
 
-def clear_glyph(glyph):
-    for layer in glyph.layers:
+def clear_proxy(proxy):
+    if proxy is None:
+        return False
+    try:
+        proxy.clear()
+        return True
+    except Exception:
+        pass
+    changed = False
+    while True:
         try:
-            del layer.components[:]
+            if not len(proxy):
+                return changed
         except Exception:
-            try:
-                layer.components = []
-            except Exception:
-                pass
+            return changed
         try:
-            del layer.paths[:]
+            proxy.remove(proxy[-1])
+            changed = True
+            continue
         except Exception:
             pass
+        try:
+            del proxy[-1]
+            changed = True
+            continue
+        except Exception:
+            return changed
+
+
+def clear_glyph(glyph):
+    for layer in reversed(list(glyph.layers)):
+        if is_master_layer(layer):
+            continue
+        remove_layer(glyph, layer)
+
+    for layer in glyph.layers:
+        for proxy_name in ("shapes", "components", "paths", "anchors", "hints"):
+            clear_proxy(getattr(layer, proxy_name, None))
+
+    for attribute_name in ("smartComponentAxes", "stems"):
+        try:
+            setattr(glyph, attribute_name, [])
+        except Exception:
+            pass
+
+    try:
+        if MATH_PLUGIN_VARIANTS_USER_DATA_KEY in glyph.userData:
+            del glyph.userData[MATH_PLUGIN_VARIANTS_USER_DATA_KEY]
+    except Exception:
+        pass
 
 
 def make_component(component_name):
@@ -632,18 +718,20 @@ def expanded_actions_from_recipe(recipe_file):
     return recipe, recipe, parameters, actions, recipe_path_value, recipe_path_value
 
 
-def action_create_glyph(font, verbose=False, glyph=None, export=True, overwrite=False, **_kwargs):
+def action_create_glyph(font, verbose=False, glyph=None, export=True, overwrite=False, color=None, **_kwargs):
     existing = glyph_for_name(font, glyph)
     if existing is not None:
         if overwrite:
             clear_glyph(existing)
             existing.export = bool(export)
-            log("Updated glyph %s (cleared existing glyph)." % glyph, verbose)
+            set_glyph_color(existing, color)
+            log("Overwrote existing glyph %s." % glyph, verbose)
             return existing
         log("Glyph %s already exists." % glyph, verbose)
         return existing
     new_glyph = GSGlyph(glyph)
     new_glyph.export = bool(export)
+    set_glyph_color(new_glyph, color)
     font.glyphs.append(new_glyph)
     log("Created glyph %s export=%s." % (glyph, bool(export)), verbose)
     return new_glyph
@@ -756,7 +844,7 @@ def action_set_component_axis_low_high(font, verbose=False, glyph=None, axis="he
     return changed
 
 
-def action_create_smart_component_variants(font, verbose=False, glyph=None, N=1, step=1, axis="height", **_kwargs):
+def action_create_smart_component_variants(font, verbose=False, glyph=None, N=1, step=1, axis="height", color=None, **_kwargs):
     source_glyph = glyph_for_name(font, glyph)
     if source_glyph is None:
         raise RuntimeError("Missing glyph: %s" % glyph)
@@ -771,8 +859,11 @@ def action_create_smart_component_variants(font, verbose=False, glyph=None, N=1,
         if target_glyph is None:
             target_glyph = GSGlyph(target_name)
             copy_glyph_metadata(source_glyph, target_glyph)
+            set_glyph_color(target_glyph, color)
             font.glyphs.append(target_glyph)
             did_create = True
+        else:
+            set_glyph_color(target_glyph, color)
         populate_variant_from_source(font, source_glyph, target_glyph, axis, number * step)
         if did_create:
             created += 1

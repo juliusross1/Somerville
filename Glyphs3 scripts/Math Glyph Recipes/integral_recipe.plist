@@ -10,7 +10,7 @@
   <string>recipe</string>
 
   <key>name</key>
-  <string>Build product</string>
+  <string>Build integral</string>
 
   <key>parameters</key>
   <dict>
@@ -28,7 +28,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>product</string>
+        <string>integral</string>
         <key>export</key>
         <true/>
         <key>overwrite</key>
@@ -46,9 +46,9 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>product</string>
+        <string>integral</string>
         <key>component</key>
-        <string>_smart.product</string>
+        <string>_smart.integral</string>
       </dict>
     </dict>
 
@@ -60,7 +60,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>product</string>
+        <string>integral</string>
         <key>N</key>
         <integer>20</integer>
         <key>step</key>
