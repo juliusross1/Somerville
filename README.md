@@ -310,13 +310,14 @@ Things to check: exit/entry for semicondensed and semiexpanded; math.ic should i
 
 
 *Mayfair Todo (16)*
-radicals (including spacing)
-Finish bigodot and bigoplus
-Finish contour integrals
-Do the product glyph at display sizes
-=== I need my own "preview" plugin that will display the same glyph at different fonts in the grid and possibly also at different smart values (similarly for a grid).  Need to think about the UI for this.  May also want some "context"
 
-=== Need a plugin that helps me adjust the width/height/smart component value for all layers in a given glyph at once
+=== Finish bigodot and bigoplus
+
+=== Need a plugin that helps me adjust the scale and/smart component value for all layers in a given glyph at once
+=== Finish contour integrals
+=== radicals (including spacing)
+=== Do the product glyph at display sizes
+=== Write a script to do triple and quad integrals (should work for other BIG operators as long as the system is consistent)
 
 Spacing:
 Script or system to insert the math constants into the glyphs file.  Go through all the math constants again with testing documents
@@ -329,7 +330,6 @@ relations
 Look back at serifs on integral in semiexpanded
 spacing/italic correction
 Union, Subset, \in
-Write a script to do triple and quad integrals (should work for other BIG operators as long as the system is consistent)
 Other simple math symbols using anchors (e.g. relations) (systematic system)
 Test ss11 feature at other fonts
 Email Hans about here maybe?

@@ -5,6 +5,7 @@ import uuid
 
 import vanilla
 from AppKit import (
+    NSApp,
     NSAffineTransform,
     NSBezierPath,
     NSColor,
@@ -16,7 +17,7 @@ from Foundation import NSTimer
 from GlyphsApp import Glyphs, GSLayer
 
 
-SCRIPT_VERSION = "2026-07-01 22:18 CDT edited-layer-height-aware-marker"
+SCRIPT_VERSION = "2026-07-02 10:42 CDT pause-preview-during-export"
 BOX_MASTER_NAMES = (
     "Needlepoint SemiCondensed Upright",
     "Needlepoint SemiExpanded Upright",
@@ -36,6 +37,13 @@ REDRAW_INTERVAL = 0.85
 FIXED_DESIGN_WIDTH = 1800.0
 FIXED_DESIGN_HEIGHT = 7200.0
 DEFAULT_GLYPH_SCALE = 0.92
+EXPORT_STATE_ATTRIBUTE_NAMES = (
+    "exporting",
+    "isExporting",
+    "exportInProgress",
+    "isExportInProgress",
+    "isExporting_",
+)
 
 
 def print_warning(message):
@@ -49,6 +57,85 @@ def safe_call(value, default=None):
         except Exception:
             return default
     return value
+
+
+def truthy_export_value(value):
+    value = safe_call(value)
+    if value is None:
+        return False
+    if isinstance(value, str):
+        return value.strip().lower() in ("1", "true", "yes", "exporting")
+    try:
+        return bool(value)
+    except Exception:
+        return False
+
+
+def object_reports_exporting(obj):
+    if obj is None:
+        return False
+    for attribute_name in EXPORT_STATE_ATTRIBUTE_NAMES:
+        try:
+            value = getattr(obj, attribute_name)
+        except Exception:
+            continue
+        if truthy_export_value(value):
+            return True
+    return False
+
+
+def glyphs_document(font):
+    for source in (font, Glyphs):
+        if source is None:
+            continue
+        for attribute_name in ("parent", "document", "currentDocument"):
+            try:
+                value = getattr(source, attribute_name)
+            except Exception:
+                continue
+            value = safe_call(value)
+            if value is not None:
+                return value
+    return None
+
+
+def visible_window_title(window):
+    if window is None:
+        return ""
+    try:
+        if not bool(window.isVisible()):
+            return ""
+    except Exception:
+        pass
+    try:
+        return str(window.title() or "")
+    except Exception:
+        return ""
+
+
+def glyphs_export_in_progress(font, preview_window=None):
+    for obj in (Glyphs, font, glyphs_document(font)):
+        if object_reports_exporting(obj):
+            return True
+
+    try:
+        modal_window = NSApp.modalWindow()
+    except Exception:
+        modal_window = None
+    if modal_window is not None and modal_window is not preview_window:
+        return True
+
+    try:
+        windows = list(NSApp.windows() or [])
+    except Exception:
+        windows = []
+    for window in windows:
+        if window is preview_window:
+            continue
+        title = visible_window_title(window).lower()
+        if "export" in title or "progress" in title:
+            return True
+    return False
 
 
 def master_name(master):
@@ -1094,6 +1181,7 @@ class DblIntegralNeedlepointPreview(object):
         self.glyph_scale = DEFAULT_GLYPH_SCALE
         self.needs_redraw = False
         self.is_updating = False
+        self.export_pause_announced = False
         self.info_window = None
 
         self.image_width = 80
@@ -1607,11 +1695,30 @@ class DblIntegralNeedlepointPreview(object):
     def update_images(self):
         if self.is_updating:
             return
+        if self.export_is_active():
+            self.note_export_pause()
+            return
+        self.export_pause_announced = False
         self.is_updating = True
         try:
             self.update_images_inner()
         finally:
             self.is_updating = False
+
+    def preview_ns_window(self):
+        try:
+            return self.w.getNSWindow()
+        except Exception:
+            return None
+
+    def export_is_active(self):
+        return glyphs_export_in_progress(self.font, self.preview_ns_window())
+
+    def note_export_pause(self):
+        if self.export_pause_announced:
+            return
+        self.export_pause_announced = True
+        self.set_status("Paused during export.")
 
     def update_images_inner(self):
         glyph = self.glyph
@@ -1697,6 +1804,10 @@ class DblIntegralNeedlepointPreview(object):
             except Exception:
                 pass
             return
+        if self.export_is_active():
+            self.note_export_pause()
+            return
+        self.export_pause_announced = False
         self.update_images()
 
 
