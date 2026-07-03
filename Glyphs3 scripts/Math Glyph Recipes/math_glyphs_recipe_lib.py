@@ -45,6 +45,10 @@ GLYPHS_COLOR_INDEXES = dict(
 )
 
 
+class RecipeStopped(Exception):
+    pass
+
+
 def script_directory():
     try:
         return os.path.dirname(os.path.abspath(__file__))
@@ -117,6 +121,12 @@ def color_value(value):
         return int(value)
     except Exception:
         return value
+
+
+def boolean_value(value):
+    if isinstance(value, str):
+        return value.strip().lower() in ("1", "true", "yes", "on")
+    return bool(value)
 
 
 def set_glyph_color(glyph, color=None):
@@ -219,6 +229,44 @@ def clear_proxy(proxy):
             continue
         except Exception:
             return changed
+
+
+def proxy_has_items(proxy):
+    if proxy is None:
+        return False
+    try:
+        return len(proxy) > 0
+    except Exception:
+        pass
+    try:
+        for _item in proxy:
+            return True
+    except Exception:
+        pass
+    return False
+
+
+def layer_has_paths_components_or_anchors(layer):
+    for proxy_name in ("paths", "components", "anchors"):
+        if proxy_has_items(getattr(layer, proxy_name, None)):
+            return True
+
+    for shape in safe_call(getattr(layer, "shapes", None), []) or []:
+        try:
+            if shape.__class__.__name__ in ("GSPath", "GSComponent"):
+                return True
+        except Exception:
+            return True
+    return False
+
+
+def glyph_is_empty(glyph):
+    if glyph is None:
+        return True
+    for layer in glyph.layers:
+        if layer_has_paths_components_or_anchors(layer):
+            return False
+    return True
 
 
 def clear_glyph(glyph):
@@ -511,6 +559,197 @@ def component_glyph(font, component):
     if name is None:
         return None
     return glyph_for_name(font, name)
+
+
+def point_xy(point):
+    if point is None:
+        return None
+    x_value = safe_call(getattr(point, "x", None))
+    y_value = safe_call(getattr(point, "y", None))
+    if x_value is None or y_value is None:
+        try:
+            values = list(point)
+            x_value = values[0]
+            y_value = values[1]
+        except Exception:
+            return None
+    try:
+        return float(x_value), float(y_value)
+    except Exception:
+        return None
+
+
+def anchor_xy(anchor):
+    if anchor is None:
+        return None
+    position = safe_call(getattr(anchor, "position", None))
+    xy = point_xy(position)
+    if xy is not None:
+        return xy
+    return point_xy(anchor)
+
+
+def anchor_name(anchor):
+    value = safe_call(getattr(anchor, "name", None))
+    return str(value) if value is not None else None
+
+
+def layer_anchor(layer, names):
+    anchors = safe_call(getattr(layer, "anchors", None))
+    if anchors is None:
+        return None
+
+    for name in names:
+        try:
+            anchor = anchors[name]
+            if anchor is not None:
+                return anchor
+        except Exception:
+            pass
+
+    try:
+        anchor_list = list(anchors)
+    except Exception:
+        return None
+    wanted = set(names)
+    for anchor in anchor_list:
+        if anchor_name(anchor) in wanted:
+            return anchor
+    return None
+
+
+def layer_anchor_list(layer):
+    anchors = safe_call(getattr(layer, "anchors", None))
+    if anchors is None:
+        return []
+    try:
+        return list(anchors)
+    except Exception:
+        return []
+
+
+def transformed_anchor_records(component, records):
+    result = []
+    for name, xy in records:
+        result.append((name, transformed_point(component, xy)))
+    return result
+
+
+def effective_layer_anchor_records(font, layer, reference_layer=None, visited=None):
+    if visited is None:
+        visited = set()
+
+    parent = safe_call(getattr(layer, "parent", None))
+    parent_name = safe_call(getattr(parent, "name", None)) if parent is not None else None
+    current_key = (str(parent_name or ""), str(layer_id(layer) or id(layer)))
+    if current_key in visited:
+        return []
+    visited.add(current_key)
+
+    records = []
+    for anchor in layer_anchor_list(layer):
+        name = anchor_name(anchor)
+        xy = anchor_xy(anchor)
+        if name and xy is not None:
+            records.append((name, xy))
+
+    for component in layer_components(layer):
+        glyph = component_glyph(font, component)
+        if glyph is None:
+            continue
+        component_layer = matching_layer(glyph, reference_layer or layer)
+        if component_layer is None:
+            continue
+        component_records = effective_layer_anchor_records(
+            font,
+            component_layer,
+            reference_layer or layer,
+            set(visited),
+        )
+        records.extend(transformed_anchor_records(component, component_records))
+    return records
+
+
+def effective_layer_anchor_xy(font, layer, names):
+    wanted = set(names or [])
+    for name, xy in effective_layer_anchor_records(font, layer):
+        if name in wanted:
+            return xy
+    return None
+
+
+def first_matching_anchor_pair(font, previous_layer, next_layer, preferred_names=None):
+    if isinstance(preferred_names, str):
+        preferred_names = [preferred_names]
+
+    previous_records = dict(effective_layer_anchor_records(font, previous_layer))
+    next_records = dict(effective_layer_anchor_records(font, next_layer))
+    for name in preferred_names or []:
+        if not name:
+            continue
+        previous_xy = previous_records.get(name)
+        next_xy = next_records.get("_%s" % name)
+        if previous_xy is not None and next_xy is not None:
+            return previous_xy, next_xy
+
+    for name, previous_xy in previous_records.items():
+        if not name or name.startswith("_"):
+            continue
+        next_xy = next_records.get("_%s" % name)
+        if next_xy is not None:
+            return previous_xy, next_xy
+    return None, None
+
+
+def component_source_layer(font, component, target_layer):
+    glyph = component_glyph(font, component)
+    if glyph is None:
+        return None
+    source_layer = matching_layer(glyph, target_layer)
+    if source_layer is not None:
+        return source_layer
+    try:
+        return glyph.layers[0]
+    except Exception:
+        return None
+
+
+def transformed_point(component, xy):
+    x_value, y_value = xy
+    a, b, c, d, tx, ty = transform_values(component)
+    return (
+        (a * x_value) + (c * y_value) + tx,
+        (b * x_value) + (d * y_value) + ty,
+    )
+
+
+def move_component_local_point_to(component, local_xy, target_xy):
+    current_x, current_y = transformed_point(component, local_xy)
+    target_x, target_y = target_xy
+    dx = target_x - current_x
+    dy = target_y - current_y
+    a, b, c, d, tx, ty = transform_values(component)
+    return set_component_transform(component, (a, b, c, d, tx + dx, ty + dy))
+
+
+def ordered_components_for_sequence(layer, names=None):
+    components = layer_components(layer)
+    if isinstance(names, str):
+        names = [names]
+    if not names:
+        return components
+
+    result = []
+    start_index = 0
+    for expected_name in names:
+        for index in range(start_index, len(components)):
+            component = components[index]
+            if component_name(component) != expected_name:
+                continue
+            result.append(component)
+            start_index = index + 1
+            break
+    return result
 
 
 def copied_value(value):
@@ -954,7 +1193,13 @@ def action_create_glyph(font, verbose=False, glyph=None, export=True, overwrite=
             set_glyph_color(existing, color)
             log("Overwrote existing glyph %s." % glyph, verbose)
             return existing
-        raise RuntimeError("Glyph %s already exists. Enable 'Overwrite glyphs' to replace it." % glyph)
+        if glyph_is_empty(existing):
+            clear_glyph(existing)
+            existing.export = bool(export)
+            set_glyph_color(existing, color)
+            log("Using existing empty glyph %s." % glyph, verbose)
+            return existing
+        raise RecipeStopped("Glyph %s already exists. Enable 'Overwrite glyphs' to replace it." % glyph)
     new_glyph = GSGlyph(glyph)
     new_glyph.export = bool(export)
     set_glyph_color(new_glyph, color)
@@ -990,6 +1235,110 @@ def action_add_components(font, verbose=False, glyph=None, components=None, **_k
         glyph,
         len(components or []),
         changed,
+    ), verbose)
+    return changed
+
+
+def action_disable_component_alignment(font, verbose=False, glyph=None, components=None, enabled=True, **_kwargs):
+    if not boolean_value(enabled):
+        log("%s: automatic alignment left enabled." % glyph, verbose)
+        return 0
+
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+    wanted_components = set(components or [])
+    changed = 0
+    for layer in target_glyph.layers:
+        for component in layer_components(layer):
+            if wanted_components and component_name(component) not in wanted_components:
+                continue
+            if disable_component_alignment(component):
+                changed += 1
+    log("%s: disabled automatic alignment on %i component(s)%s." % (
+        glyph,
+        changed,
+        " matching %s" % ", ".join(components) if components else "",
+    ), verbose)
+    return changed
+
+
+def action_align_component_sequence_anchors(
+    font,
+    verbose=False,
+    glyph=None,
+    components=None,
+    enabled=False,
+    autoMatching=True,
+    matchingAnchors=None,
+    exitAnchors=None,
+    entryAnchors=None,
+    **_kwargs
+):
+    use_named_exit_entry = boolean_value(enabled)
+    use_auto_matching = boolean_value(autoMatching)
+    if not use_named_exit_entry and not use_auto_matching:
+        log("%s: anchor alignment skipped." % glyph, verbose)
+        return 0
+
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+    if isinstance(exitAnchors, str):
+        exitAnchors = [exitAnchors]
+    if isinstance(entryAnchors, str):
+        entryAnchors = [entryAnchors]
+    exitAnchors = exitAnchors or ["#exit", "exit"]
+    entryAnchors = entryAnchors or ["#entry", "entry"]
+
+    changed = 0
+    skipped = 0
+    auto_matched = 0
+    for layer in target_glyph.layers:
+        sequence = ordered_components_for_sequence(layer, components)
+        if len(sequence) < 2:
+            skipped += 1
+            continue
+
+        for previous_component, next_component in zip(sequence[:-1], sequence[1:]):
+            previous_layer = component_source_layer(font, previous_component, layer)
+            next_layer = component_source_layer(font, next_component, layer)
+            if previous_layer is None or next_layer is None:
+                skipped += 1
+                continue
+
+            exit_xy = None
+            entry_xy = None
+            if use_named_exit_entry:
+                exit_xy = effective_layer_anchor_xy(font, previous_layer, exitAnchors)
+                entry_xy = effective_layer_anchor_xy(font, next_layer, entryAnchors)
+            if (exit_xy is None or entry_xy is None) and use_auto_matching:
+                exit_xy, entry_xy = first_matching_anchor_pair(
+                    font,
+                    previous_layer,
+                    next_layer,
+                    matchingAnchors,
+                )
+                if exit_xy is not None and entry_xy is not None:
+                    auto_matched += 1
+            if exit_xy is None or entry_xy is None:
+                skipped += 1
+                continue
+
+            exit_target_xy = transformed_point(previous_component, exit_xy)
+            if move_component_local_point_to(next_component, entry_xy, exit_target_xy):
+                changed += 1
+            else:
+                skipped += 1
+
+    log("%s: aligned %i component pair(s) by anchors%s." % (
+        glyph,
+        changed,
+        "; auto-matched %i; skipped %i" % (auto_matched, skipped) if auto_matched or skipped else "",
     ), verbose)
     return changed
 
@@ -1044,6 +1393,85 @@ def action_copy_layer_metrics(font, verbose=False, glyph=None, sourceGlyph=None,
         "; skipped %i" % skipped_layers if skipped_layers else "",
     ), verbose)
     return changed_layers
+
+
+def action_set_side_metrics_from_component_sequence(
+    font,
+    verbose=False,
+    glyph=None,
+    components=None,
+    leftGlyph=None,
+    rightGlyph=None,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+    if not components:
+        raise RuntimeError("%s: no components supplied for side metrics." % glyph)
+
+    leftGlyph = leftGlyph or components[0]
+    rightGlyph = rightGlyph or components[-1]
+    left_key = "=%s" % leftGlyph
+    right_key = "=%s" % rightGlyph
+    layer_count = 0
+    changed = 0
+    for layer in target_glyph.layers:
+        layer_count += 1
+        if set_layer_metrics_key(layer, "leftMetricsKey", left_key):
+            changed += 1
+        if set_layer_metrics_key(layer, "rightMetricsKey", right_key):
+            changed += 1
+    log("%s: set LSB key %s and RSB key %s on %i layer(s)." % (
+        glyph,
+        left_key,
+        right_key,
+        layer_count,
+    ), verbose)
+    return changed
+
+
+def sync_layer_metrics(layer):
+    for method_name in ("syncMetrics", "updateMetrics", "updateMetrics_"):
+        method = getattr(layer, method_name, None)
+        if method is None:
+            continue
+        try:
+            method()
+            return True
+        except TypeError:
+            try:
+                method(None)
+                return True
+            except Exception:
+                pass
+        except Exception:
+            pass
+    return False
+
+
+def action_update_metrics(font, verbose=False, glyph=None, mastersOnly=True, **_kwargs):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+
+    changed = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        if boolean_value(mastersOnly) and not is_master_layer(layer):
+            continue
+        if sync_layer_metrics(layer):
+            changed += 1
+        else:
+            skipped += 1
+    log("%s: updated metrics on %i layer(s)%s." % (
+        glyph,
+        changed,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
 
 
 def action_create_high_layers(font, verbose=False, glyph=None, axis="height", lowValue=0, highValue=100, **_kwargs):
@@ -1179,8 +1607,9 @@ def action_create_smart_component_variants(font, verbose=False, glyph=None, valu
             font.glyphs.append(target_glyph)
             did_create = True
         else:
-            if not overwrite:
-                raise RuntimeError("Glyph %s already exists. Enable 'Overwrite glyphs' to replace it." % target_name)
+            if not overwrite and not glyph_is_empty(target_glyph):
+                raise RecipeStopped("Glyph %s already exists. Enable 'Overwrite glyphs' to replace it." % target_name)
+            clear_glyph(target_glyph)
             set_glyph_color(target_glyph, color)
         populate_variant_from_source(font, source_glyph, target_glyph, axis, value - base_value)
         if did_create:
@@ -1202,8 +1631,12 @@ ACTION_REGISTRY = {
     "createGlyph": action_create_glyph,
     "addComponent": action_add_component,
     "addComponents": action_add_components,
+    "disableComponentAlignment": action_disable_component_alignment,
+    "alignComponentSequenceAnchors": action_align_component_sequence_anchors,
     "flipComponents": action_flip_components,
     "copyLayerMetrics": action_copy_layer_metrics,
+    "setSideMetricsFromComponentSequence": action_set_side_metrics_from_component_sequence,
+    "updateMetrics": action_update_metrics,
     "createHighLayers": action_create_high_layers,
     "setComponentAxisLowHigh": action_set_component_axis_low_high,
     "setComponentAxisValue": action_set_component_axis_value,

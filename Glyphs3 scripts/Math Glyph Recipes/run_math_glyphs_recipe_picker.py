@@ -8,6 +8,7 @@ import traceback
 from importlib import reload
 
 import vanilla
+from AppKit import NSAttributedString, NSColor, NSForegroundColorAttributeName
 from GlyphsApp import Glyphs
 
 
@@ -21,7 +22,7 @@ import math_glyphs_recipe_lib  # noqa: E402
 
 math_glyphs_recipe_lib = reload(math_glyphs_recipe_lib)
 
-from math_glyphs_recipe_lib import print_warning, run_recipe  # noqa: E402
+from math_glyphs_recipe_lib import RecipeStopped, print_warning, run_recipe  # noqa: E402
 
 
 def verbosity_enabled(control):
@@ -36,9 +37,138 @@ def show_macro_window_for_verbose_run():
 def recipe_files():
     files = []
     for file_name in sorted(os.listdir(SCRIPT_DIR)):
-        if file_name.endswith(".plist"):
+        if not file_name.endswith(".plist"):
+            continue
+        path = os.path.join(SCRIPT_DIR, file_name)
+        try:
+            with open(path, "rb") as handle:
+                plist = plistlib.load(handle)
+        except Exception:
+            files.append(file_name)
+            continue
+        if str(plist.get("kind", "")) in RUNNABLE_RECIPE_KINDS:
             files.append(file_name)
     return files
+
+
+def unique_names(names):
+    seen = set()
+    result = []
+    for name in names:
+        if not name or name in seen:
+            continue
+        seen.add(name)
+        result.append(name)
+    return result
+
+
+def variant_export_names(arguments):
+    base_name = arguments.get("glyph")
+    if not base_name:
+        return []
+
+    values = math_glyphs_recipe_lib.number_list(arguments.get("values"))
+    if values is None:
+        try:
+            variant_count = int(arguments.get("N", 1))
+        except Exception:
+            variant_count = 1
+    else:
+        variant_count = max(0, len(values) - 1)
+
+    try:
+        start_number = int(arguments.get("startNumber", 1))
+    except Exception:
+        start_number = 1
+
+    return [
+        math_glyphs_recipe_lib.variant_name(base_name, number)
+        for number in range(start_number, start_number + variant_count)
+    ]
+
+
+def color_named(name):
+    if name == "red":
+        method_names = ("systemRedColor", "redColor")
+    elif name == "green":
+        method_names = ("systemGreenColor", "greenColor")
+    elif name == "orange":
+        method_names = ("systemOrangeColor", "orangeColor")
+    else:
+        method_names = ("labelColor", "blackColor")
+    for method_name in method_names:
+        method = getattr(NSColor, method_name, None)
+        if method is None:
+            continue
+        try:
+            return method()
+        except Exception:
+            pass
+    return NSColor.blackColor()
+
+
+def colored_text(text, color_name=None):
+    if not color_name:
+        return text
+    return NSAttributedString.alloc().initWithString_attributes_(
+        text,
+        {NSForegroundColorAttributeName: color_named(color_name)},
+    )
+
+
+def colored_export_status(text, state):
+    if state == "missing":
+        return colored_text(text, "red")
+    if state == "exists":
+        return colored_text(text, "green")
+    if state == "partial":
+        return colored_text(text, "orange")
+    return text
+
+
+def exported_glyph_names(file_name):
+    try:
+        _recipe, _template, _parameters, actions, _recipe_path, _template_path = (
+            math_glyphs_recipe_lib.expanded_actions_from_recipe(file_name)
+        )
+    except Exception:
+        return []
+
+    names = []
+    for action in actions:
+        if action.get("type") != "call":
+            continue
+        function_name = action.get("function")
+        arguments = dict(action.get("arguments", {}))
+        if function_name == "createGlyph":
+            glyph_name = arguments.get("glyph")
+            if glyph_name and math_glyphs_recipe_lib.boolean_value(arguments.get("export", True)):
+                names.append(glyph_name)
+        elif function_name == "createSmartComponentVariants":
+            names.extend(variant_export_names(arguments))
+    return unique_names(names)
+
+
+def export_existence_status(file_name, runnable):
+    font = Glyphs.font
+    if font is None:
+        return "no font", "neutral"
+
+    names = exported_glyph_names(file_name)
+    if not names:
+        return "none", "neutral"
+
+    existing = 0
+    for name in names:
+        glyph = math_glyphs_recipe_lib.glyph_for_name(font, name)
+        if glyph is not None and not math_glyphs_recipe_lib.glyph_is_empty(glyph):
+            existing += 1
+
+    if existing == 0:
+        return ("missing" if len(names) == 1 else "missing 0/%i" % len(names)), "missing"
+    if existing == len(names):
+        return ("exists" if len(names) == 1 else "exists %i/%i" % (existing, len(names))), "exists"
+    return "partial %i/%i" % (existing, len(names)), "partial"
 
 
 def load_recipe_summary(file_name):
@@ -50,20 +180,21 @@ def load_recipe_summary(file_name):
         return dict(
             file=file_name,
             name="<error>",
-            kind="<error>",
             runnable=False,
             status=str(error),
+            exports="error",
         )
 
     kind = str(plist.get("kind", ""))
     name = str(plist.get("name", file_name))
     runnable = kind in RUNNABLE_RECIPE_KINDS
+    export_status, export_state = export_existence_status(file_name, runnable)
     return dict(
         file=file_name,
         name=name,
-        kind=kind or "<unknown>",
         runnable=runnable,
-        status="ready" if runnable else "not runnable",
+        status="ready",
+        exports=colored_export_status(export_status, export_state),
     )
 
 
@@ -79,9 +210,9 @@ class MathGlyphsRecipePicker(object):
             (12, 12, -12, -82),
             [],
             columnDescriptions=[
-                dict(title="Recipe", key="name", width=190),
-                dict(title="File", key="file", width=230),
-                dict(title="Kind", key="kind", width=80),
+                dict(title="Recipe", key="name", width=225),
+                dict(title="File", key="file", width=235),
+                dict(title="Exports", key="exports", width=95),
                 dict(title="Status", key="status"),
             ],
             selectionCallback=self.selection_callback,
@@ -119,15 +250,21 @@ class MathGlyphsRecipePicker(object):
             return None
         return self.rows[index]
 
-    def refresh(self):
+    def refresh(self, selected_file=None):
+        if selected_file is None:
+            row = self.selected_row()
+            if row:
+                selected_file = row.get("file")
         self.rows = [load_recipe_summary(file_name) for file_name in recipe_files()]
         self.w.recipeList.set(self.rows)
         if self.rows:
             first_runnable = 0
             for index, row in enumerate(self.rows):
-                if row.get("runnable"):
+                if selected_file and row.get("file") == selected_file:
                     first_runnable = index
                     break
+                if row.get("runnable"):
+                    first_runnable = index
             self.w.recipeList.setSelection([first_runnable])
         self.selection_callback(None)
 
@@ -159,10 +296,15 @@ class MathGlyphsRecipePicker(object):
 
         try:
             run_recipe(row["file"], verbose=verbose, overwrite_glyphs=overwrite_glyphs)
+        except RecipeStopped as stopped:
+            Glyphs.showMacroWindow()
+            print_warning(stopped)
         except Exception as error:
             Glyphs.showMacroWindow()
             print_warning(error)
             print(traceback.format_exc())
+        finally:
+            self.refresh(selected_file=row.get("file"))
 
 
 _mathGlyphsRecipePicker = MathGlyphsRecipePicker()

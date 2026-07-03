@@ -240,10 +240,10 @@ Set to the desired height (likely 0)
 Run variant script.
 
 ***For oplus:***
-
-Make _smart.oplus as a smart component with height using _smart.plus and _smart.circle.  Adjust the heights of _smart.plus and _smart.circle as appropriate
-Use _smart.oplus to make oplus and nAryOplus
-Make vertical size variants from nAryOplus
+Decompose oplus after running script to make the plus lighter by changing the "scale"
+%%Make _smart.oplus as a smart component with height %using _smart.plus and _smart.circle.  Adjust %theheights of _smart.plus and _smart.circle as %appropriate
+%Use _smart.oplus to make oplus and nAryOplus
+%Make vertical size variants from nAryOplus
 
 ** For contourIntegral **
 create _smart.contourIntegral
@@ -327,21 +327,21 @@ Recipes needed
 
 *Mayfair Todo (16)*
 === Command line export
-=== Bigoplus, bigotimes, times
-Think about the recipe here as for these ones we have inline at different unicode points whereas for \sum\prod we do not
-=== radicals (including spacing)
 === Spacing:
 Script or system to insert the math constants into the glyphs file.  Go through all the math constants again with testing documents
 Upper and lower limits on summation in mathml core (or is this a stale font issue?)
+=== Create test documents for the glyphs so far (brackets, sum, otimes, etc) so I can see how good this is looking
+== Union, Subset, \in
+
+=== radicals (including spacing)
 ===Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
+=== bigotimes, times
 ===Center the bar, bracket, brace etc (these might be OK)
 ===relations
 ===Look back at serifs on integral in semiexpanded agate
 === Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
 === Look back at weight of summation
 spacing/italic correction
-go back and adjust plus for widths (want it even at normal which is a bit of a pain to calculate!?!?)
-Union, Subset, \in
 Other simple math symbols using anchors (e.g. relations) (systematic system)
 Test ss11 feature at other fonts
 Email Hans about here maybe?

@@ -4,6 +4,20 @@ kernLeft = KO_plus;
 kernRight = KO_plus;
 layers = (
 {
+anchors = (
+{
+name = _bottom;
+pos = (266,471);
+},
+{
+name = bottom;
+pos = (266,60);
+},
+{
+name = top;
+pos = (266,471);
+}
+);
 guides = (
 {
 pos = (479,265);
@@ -14,16 +28,30 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 1.2;
-width = 0.9;
+height = 3.4;
+width = 3.2;
 };
 pos = (73,0);
 ref = _smart.plus;
 }
 );
-width = 591;
+width = 532;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (308,509);
+},
+{
+name = bottom;
+pos = (308,21);
+},
+{
+name = top;
+pos = (308,509);
+}
+);
 guides = (
 {
 pos = (292,305);
@@ -34,16 +62,30 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 1.2;
-width = 1.2;
+height = 3.4;
+width = 3.2;
 };
 pos = (73,0);
 ref = _smart.plus;
 }
 );
-width = 601;
+width = 616;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (332,509);
+},
+{
+name = bottom;
+pos = (332,21);
+},
+{
+name = top;
+pos = (332,509);
+}
+);
 guides = (
 {
 pos = (479,265);
@@ -54,16 +96,30 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 1.2;
-width = 1.2;
+height = 3.4;
+width = 3.6;
 };
 pos = (73,0);
 ref = _smart.plus;
 }
 );
-width = 601;
+width = 664;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (256,471);
+},
+{
+name = bottom;
+pos = (256,60);
+},
+{
+name = top;
+pos = (256,471);
+}
+);
 guides = (
 {
 pos = (449,265);
@@ -74,16 +130,30 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 1.2;
-width = 0.9;
+height = 3.4;
+width = 3.2;
 };
 pos = (63,0);
 ref = _smart.plus;
 }
 );
-width = 571;
+width = 512;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (280,471);
+},
+{
+name = bottom;
+pos = (280,60);
+},
+{
+name = top;
+pos = (280,471);
+}
+);
 guides = (
 {
 pos = (449,265);
@@ -94,16 +164,30 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 1.2;
-width = 1.5;
+height = 3.4;
+width = 3.6;
 };
 pos = (63,0);
 ref = _smart.plus;
 }
 );
-width = 571;
+width = 560;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (305,471);
+},
+{
+name = bottom;
+pos = (305,60);
+},
+{
+name = top;
+pos = (305,471);
+}
+);
 guides = (
 {
 pos = (524,265);
@@ -114,16 +198,30 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 1.2;
-width = 1.5;
+height = 3.4;
+width = 3.6;
 };
 pos = (88,0);
 ref = _smart.plus;
 }
 );
-width = 621;
+width = 610;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (298,509);
+},
+{
+name = bottom;
+pos = (298,21);
+},
+{
+name = top;
+pos = (298,509);
+}
+);
 guides = (
 {
 pos = (449,265);
@@ -134,16 +232,30 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 1.2;
-width = 1.2;
+height = 3.4;
+width = 3.2;
 };
 pos = (63,0);
 ref = _smart.plus;
 }
 );
-width = 581;
+width = 596;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (322,509);
+},
+{
+name = bottom;
+pos = (322,21);
+},
+{
+name = top;
+pos = (322,509);
+}
+);
 guides = (
 {
 pos = (323,265);
@@ -154,14 +266,14 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 1.2;
-width = 1.2;
+height = 3.4;
+width = 3.6;
 };
 pos = (63,0);
 ref = _smart.plus;
 }
 );
-width = 581;
+width = 644;
 }
 );
 metricLeft = "=minus";

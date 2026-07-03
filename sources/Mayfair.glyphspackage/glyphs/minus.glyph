@@ -5,6 +5,24 @@ kernLeft = KO_minus;
 kernRight = KO_minus;
 layers = (
 {
+anchors = (
+{
+name = _bottom;
+pos = (323,366);
+},
+{
+name = _center;
+pos = (323,265);
+},
+{
+name = _top;
+pos = (323,165);
+},
+{
+name = bottom;
+pos = (323,265);
+}
+);
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
@@ -20,6 +38,24 @@ nodes = (
 width = 647;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (323,405);
+},
+{
+name = _center;
+pos = (323,265);
+},
+{
+name = _top;
+pos = (323,125);
+},
+{
+name = bottom;
+pos = (323,225);
+}
+);
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
@@ -35,6 +71,24 @@ nodes = (
 width = 647;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (323,405);
+},
+{
+name = _center;
+pos = (323,265);
+},
+{
+name = _top;
+pos = (323,125);
+},
+{
+name = bottom;
+pos = (323,225);
+}
+);
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
@@ -50,6 +104,24 @@ nodes = (
 width = 647;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (313,366);
+},
+{
+name = _center;
+pos = (313,265);
+},
+{
+name = _top;
+pos = (313,165);
+},
+{
+name = bottom;
+pos = (313,265);
+}
+);
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
@@ -65,6 +137,24 @@ nodes = (
 width = 627;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (313,366);
+},
+{
+name = _center;
+pos = (313,265);
+},
+{
+name = _top;
+pos = (313,165);
+},
+{
+name = bottom;
+pos = (313,265);
+}
+);
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
@@ -80,6 +170,24 @@ nodes = (
 width = 627;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (338,366);
+},
+{
+name = _center;
+pos = (338,265);
+},
+{
+name = _top;
+pos = (338,165);
+},
+{
+name = bottom;
+pos = (338,265);
+}
+);
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
@@ -95,6 +203,24 @@ nodes = (
 width = 677;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (313,405);
+},
+{
+name = _center;
+pos = (313,265);
+},
+{
+name = _top;
+pos = (313,125);
+},
+{
+name = bottom;
+pos = (313,225);
+}
+);
 guides = (
 {
 pos = (260,265);
@@ -115,6 +241,24 @@ nodes = (
 width = 627;
 },
 {
+anchors = (
+{
+name = _bottom;
+pos = (313,405);
+},
+{
+name = _center;
+pos = (313,265);
+},
+{
+name = _top;
+pos = (313,125);
+},
+{
+name = bottom;
+pos = (313,225);
+}
+);
 guides = (
 {
 pos = (260,265);
