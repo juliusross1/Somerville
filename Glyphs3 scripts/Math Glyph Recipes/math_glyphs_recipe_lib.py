@@ -16,7 +16,7 @@ from GlyphsApp import (
 )
 
 
-SCRIPT_VERSION = "2026-07-03 13:05 CDT midpoint-axis-userdata"
+SCRIPT_VERSION = "2026-07-03 13:40 CDT explicit-component-pair-anchors"
 DEFAULT_RECIPE_FILE = "triple_integral_recipe.plist"
 VERBOSE = True
 VARIABLE_PATTERN = re.compile(r"\$\{([^}]+)\}")
@@ -112,6 +112,17 @@ def number_list(values):
         if number is None:
             continue
         result.append(clean_number(number))
+    return result
+
+
+def unique_strings(values):
+    seen = set()
+    result = []
+    for value in values or []:
+        if not value or value in seen:
+            continue
+        seen.add(value)
+        result.append(value)
     return result
 
 
@@ -1568,6 +1579,71 @@ def action_align_component_midpoint_to_math_axis(
     return changed
 
 
+def action_align_component_pairs_by_anchors(
+    font,
+    verbose=False,
+    glyph=None,
+    components=None,
+    pairs=None,
+    **_kwargs
+):
+    if not pairs:
+        log("%s: explicit component pair alignment skipped." % glyph, verbose)
+        return 0
+
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+
+    changed = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        sequence = ordered_components_for_sequence(layer, components)
+        for pair in pairs:
+            try:
+                component_indexes = list(pair.get("componentIndexes", []))
+                base_index = int(component_indexes[0])
+                mark_index = int(component_indexes[1])
+            except Exception:
+                skipped += 1
+                continue
+            if base_index >= len(sequence) or mark_index >= len(sequence):
+                skipped += 1
+                continue
+
+            base_component = sequence[base_index]
+            mark_component = sequence[mark_index]
+            base_layer = component_source_layer(font, base_component, layer)
+            mark_layer = component_source_layer(font, mark_component, layer)
+            if base_layer is None or mark_layer is None:
+                skipped += 1
+                continue
+
+            base_anchor = pair.get("baseAnchor")
+            mark_anchor = pair.get("markAnchor")
+            base_xy = effective_layer_anchor_xy(font, base_layer, [base_anchor])
+            mark_xy = effective_layer_anchor_xy(font, mark_layer, [mark_anchor])
+            if base_xy is None or mark_xy is None:
+                skipped += 1
+                continue
+
+            disable_component_alignment(mark_component)
+            target_xy = transformed_point(base_component, base_xy)
+            if move_component_local_point_to(mark_component, mark_xy, target_xy):
+                changed += 1
+            else:
+                skipped += 1
+
+    log("%s: aligned %i explicit component pair(s) by anchors%s." % (
+        glyph,
+        changed,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
 def action_flip_components(font, verbose=False, glyph=None, components=None, **_kwargs):
     target_glyph = glyph_for_name(font, glyph)
     if target_glyph is None:
@@ -1859,6 +1935,7 @@ ACTION_REGISTRY = {
     "disableComponentAlignment": action_disable_component_alignment,
     "alignComponentSequenceAnchors": action_align_component_sequence_anchors,
     "alignComponentMidpointToMathAxis": action_align_component_midpoint_to_math_axis,
+    "alignComponentPairsByAnchors": action_align_component_pairs_by_anchors,
     "flipComponents": action_flip_components,
     "copyLayerMetrics": action_copy_layer_metrics,
     "setSideMetricsFromComponentSequence": action_set_side_metrics_from_component_sequence,
@@ -1881,6 +1958,40 @@ def run_action(font, action, verbose=False, overwrite_glyphs=False):
     return function(font, verbose=verbose, **arguments)
 
 
+def glyph_names_touched_by_action(action):
+    if action.get("type") != "call":
+        return []
+
+    function_name = action.get("function")
+    arguments = dict(action.get("arguments", {}))
+    if function_name == "createGlyph":
+        glyph_name = arguments.get("glyph")
+        return [glyph_name] if glyph_name else []
+
+    if function_name == "createSmartComponentVariants":
+        glyph_name = arguments.get("glyph")
+        if not glyph_name:
+            return []
+        values = number_list(arguments.get("values"))
+        if values is None:
+            try:
+                variant_count = int(arguments.get("N", 1))
+            except Exception:
+                variant_count = 1
+        else:
+            variant_count = max(0, len(values) - 1)
+        try:
+            start_number = int(arguments.get("startNumber", 1))
+        except Exception:
+            start_number = 1
+        return [
+            variant_name(glyph_name, number)
+            for number in range(start_number, start_number + variant_count)
+        ]
+
+    return []
+
+
 def run_recipe(recipe_file=DEFAULT_RECIPE_FILE, verbose=VERBOSE, overwrite_glyphs=False):
     font = Glyphs.font
     if font is None:
@@ -1894,12 +2005,15 @@ def run_recipe(recipe_file=DEFAULT_RECIPE_FILE, verbose=VERBOSE, overwrite_glyph
     log("Actions: %i" % len(actions), verbose)
     log("Overwrite glyphs: %s" % ("yes" if overwrite_glyphs else "no"), verbose)
     log("", verbose)
+    touched_glyphs = []
     font.disableUpdateInterface()
     try:
         for index, action in enumerate(actions, 1):
             log("%i. %s" % (index, action.get("function")), verbose)
             run_action(font, action, verbose=verbose, overwrite_glyphs=overwrite_glyphs)
+            touched_glyphs.extend(glyph_names_touched_by_action(action))
     finally:
         font.enableUpdateInterface()
     log("", verbose)
     log("Done.", verbose)
+    return dict(glyphs=unique_strings(touched_glyphs))

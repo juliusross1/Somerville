@@ -12,7 +12,7 @@ from AppKit import NSAttributedString, NSColor, NSForegroundColorAttributeName
 from GlyphsApp import Glyphs
 
 
-SCRIPT_VERSION = "2026-07-02 12:35 CDT initial"
+SCRIPT_VERSION = "2026-07-03 13:20 CDT open-created-tab"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
@@ -32,6 +32,23 @@ def verbosity_enabled(control):
 def show_macro_window_for_verbose_run():
     Glyphs.clearLog()
     Glyphs.showMacroWindow()
+
+
+def open_tab_for_glyphs(font, glyph_names):
+    glyph_names = [name for name in glyph_names or [] if name]
+    if not glyph_names:
+        return False
+    tab_text = "".join("/%s" % name for name in glyph_names)
+    try:
+        font.newTab(tab_text)
+        return True
+    except Exception:
+        pass
+    try:
+        Glyphs.font.newTab(tab_text)
+        return True
+    except Exception:
+        return False
 
 
 def recipe_files():
@@ -228,6 +245,11 @@ class MathGlyphsRecipePicker(object):
             "Overwrite glyphs",
             value=False,
         )
+        self.w.openTab = vanilla.CheckBox(
+            (318, -62, 84, 22),
+            "Open tab",
+            value=False,
+        )
         self.w.refreshButton = vanilla.Button(
             (-236, -64, 104, 26),
             "Refresh",
@@ -285,6 +307,7 @@ class MathGlyphsRecipePicker(object):
             print_warning("%s is not a runnable recipe." % row.get("file"))
             return
         overwrite_glyphs = bool(self.w.overwrite.get())
+        open_tab = bool(self.w.openTab.get())
 
         if verbose:
             show_macro_window_for_verbose_run()
@@ -292,10 +315,15 @@ class MathGlyphsRecipePicker(object):
             print("Script version: %s" % SCRIPT_VERSION)
             print("Selected recipe: %s" % row.get("file"))
             print("Overwrite glyphs: %s" % ("yes" if overwrite_glyphs else "no"))
+            print("Open tab: %s" % ("yes" if open_tab else "no"))
             print("")
 
         try:
-            run_recipe(row["file"], verbose=verbose, overwrite_glyphs=overwrite_glyphs)
+            result = run_recipe(row["file"], verbose=verbose, overwrite_glyphs=overwrite_glyphs)
+            if open_tab:
+                glyph_names = (result or {}).get("glyphs", [])
+                if not open_tab_for_glyphs(Glyphs.font, glyph_names) and verbose:
+                    print_warning("Could not open a tab for created glyphs.")
         except RecipeStopped as stopped:
             Glyphs.showMacroWindow()
             print_warning(stopped)

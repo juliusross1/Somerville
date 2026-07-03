@@ -39,6 +39,8 @@
     <array/>
     <key>centerMidpointAnchor</key>
     <string>center</string>
+    <key>componentPairAlignments</key>
+    <array/>
     <key>leftMetricsGlyph</key>
     <string></string>
     <key>rightMetricsGlyph</key>
@@ -138,6 +140,22 @@
         <string>${alignCenterMidpointToMathAxis}</string>
         <key>anchorName</key>
         <string>${centerMidpointAnchor}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>alignComponentPairsByAnchors</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>${exportGlyph}</string>
+        <key>components</key>
+        <string>${components}</string>
+        <key>pairs</key>
+        <string>${componentPairAlignments}</string>
       </dict>
     </dict>
 
