@@ -41,6 +41,8 @@
     <string>center</string>
     <key>componentPairAlignments</key>
     <array/>
+    <key>componentPairDisableAlignment</key>
+    <true/>
     <key>leftMetricsGlyph</key>
     <string></string>
     <key>rightMetricsGlyph</key>
@@ -156,6 +158,8 @@
         <string>${components}</string>
         <key>pairs</key>
         <string>${componentPairAlignments}</string>
+        <key>disableAlignment</key>
+        <string>${componentPairDisableAlignment}</string>
       </dict>
     </dict>
 

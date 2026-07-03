@@ -16,7 +16,7 @@ from GlyphsApp import (
 )
 
 
-SCRIPT_VERSION = "2026-07-03 13:40 CDT explicit-component-pair-anchors"
+SCRIPT_VERSION = "2026-07-03 13:55 CDT pair-alignment-disable-option"
 DEFAULT_RECIPE_FILE = "triple_integral_recipe.plist"
 VERBOSE = True
 VARIABLE_PATTERN = re.compile(r"\$\{([^}]+)\}")
@@ -1585,6 +1585,7 @@ def action_align_component_pairs_by_anchors(
     glyph=None,
     components=None,
     pairs=None,
+    disableAlignment=True,
     **_kwargs
 ):
     if not pairs:
@@ -1629,7 +1630,8 @@ def action_align_component_pairs_by_anchors(
                 skipped += 1
                 continue
 
-            disable_component_alignment(mark_component)
+            if boolean_value(disableAlignment):
+                disable_component_alignment(mark_component)
             target_xy = transformed_point(base_component, base_xy)
             if move_component_local_point_to(mark_component, mark_xy, target_xy):
                 changed += 1
