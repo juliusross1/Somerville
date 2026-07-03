@@ -90,6 +90,20 @@ def numeric_value(value):
         return None
 
 
+def number_list(values):
+    if values is None:
+        return None
+    if isinstance(values, str):
+        values = [item.strip() for item in values.split(",")]
+    result = []
+    for value in values:
+        number = numeric_value(value)
+        if number is None:
+            continue
+        result.append(clean_number(number))
+    return result
+
+
 def color_value(value):
     if value is None:
         return None
@@ -1105,15 +1119,21 @@ def action_set_component_axis_low_high(font, verbose=False, glyph=None, axis="he
     return changed
 
 
-def action_create_smart_component_variants(font, verbose=False, glyph=None, N=1, step=1, axis="height", color=None, overwrite=False, **_kwargs):
+def action_create_smart_component_variants(font, verbose=False, glyph=None, values=None, N=None, step=None, axis="height", color=None, overwrite=False, **_kwargs):
     source_glyph = glyph_for_name(font, glyph)
     if source_glyph is None:
         raise RuntimeError("Missing glyph: %s" % glyph)
-    variant_count = int(N)
-    step = float(step)
+    variant_values = number_list(values)
+    if variant_values is None:
+        variant_count = int(N if N is not None else 1)
+        step = float(step if step is not None else 1)
+        variant_values = [0] + [clean_number(number * step) for number in range(1, variant_count + 1)]
+    if not variant_values:
+        raise RuntimeError("%s: createSmartComponentVariants needs at least one value." % glyph)
+    variant_count = max(0, len(variant_values) - 1)
     created = 0
     refreshed = 0
-    for number in range(1, variant_count + 1):
+    for number, value in enumerate(variant_values[1:], 1):
         target_name = variant_name(source_glyph.name, number)
         target_glyph = glyph_for_name(font, target_name)
         did_create = False
@@ -1127,16 +1147,17 @@ def action_create_smart_component_variants(font, verbose=False, glyph=None, N=1,
             if not overwrite:
                 raise RuntimeError("Glyph %s already exists. Enable 'Overwrite glyphs' to replace it." % target_name)
             set_glyph_color(target_glyph, color)
-        populate_variant_from_source(font, source_glyph, target_glyph, axis, number * step)
+        populate_variant_from_source(font, source_glyph, target_glyph, axis, value)
         if did_create:
             created += 1
         else:
             refreshed += 1
     stored_variants = store_math_plugin_variants_on_glyph(font, source_glyph, variant_count, axis)
-    log("%s: created %i variant glyph(s), updated %i existing; stored MATH plugin variants=%s." % (
+    log("%s: created %i variant glyph(s), updated %i existing; values=%s; stored MATH plugin variants=%s." % (
         glyph,
         created,
         refreshed,
+        ",".join(str(value) for value in variant_values),
         stored_variants,
     ), verbose)
     return dict(created=created, refreshed=refreshed)

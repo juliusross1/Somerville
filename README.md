@@ -321,9 +321,9 @@ Recipes needed
 = Bigplus recipe
 
 *Mayfair Todo (16)*
-
+=== Command line export
 === Bigoplus, bigotimes, times
-== Recipe for coproduct
+Think about the recipe here as for these ones we have inline at different unicode points whereas for \sum\prod we do not
 === radicals (including spacing)
 === Spacing:
 Script or system to insert the math constants into the glyphs file.  Go through all the math constants again with testing documents

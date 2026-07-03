@@ -90,7 +90,7 @@ class MathGlyphsRecipePicker(object):
         self.w.verbose = vanilla.CheckBox(
             (12, -62, 155, 22),
             "Verbose Macro log",
-            value=True,
+            value=False,
         )
         self.w.overwrite = vanilla.CheckBox(
             (174, -62, 140, 22),

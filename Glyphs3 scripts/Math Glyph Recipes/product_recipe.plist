@@ -16,6 +16,30 @@
   <dict>
     <key>color</key>
     <string>orange</string>
+    <key>variantValues</key>
+    <array>
+      <integer>0</integer>
+      <integer>5</integer>
+      <integer>10</integer>
+      <integer>15</integer>
+      <integer>20</integer>
+      <integer>25</integer>
+      <integer>30</integer>
+      <integer>35</integer>
+      <integer>40</integer>
+      <integer>45</integer>
+      <integer>50</integer>
+      <integer>55</integer>
+      <integer>60</integer>
+      <integer>65</integer>
+      <integer>70</integer>
+      <integer>75</integer>
+      <integer>80</integer>
+      <integer>85</integer>
+      <integer>90</integer>
+      <integer>95</integer>
+      <integer>100</integer>
+    </array>
   </dict>
 
   <key>actions</key>
@@ -59,10 +83,8 @@
       <dict>
         <key>glyph</key>
         <string>product</string>
-        <key>N</key>
-        <integer>20</integer>
-        <key>step</key>
-        <integer>5</integer>
+        <key>values</key>
+        <string>${variantValues}</string>
         <key>color</key>
         <string>${color}</string>
       </dict>
