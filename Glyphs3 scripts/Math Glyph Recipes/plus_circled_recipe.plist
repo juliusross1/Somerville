@@ -7,31 +7,21 @@
   <integer>1</integer>
 
   <key>kind</key>
-  <string>macro</string>
+  <string>recipe</string>
 
   <key>name</key>
-  <string>Build plus.circled</string>
-
-  <key>template</key>
-  <string>math_glyphs_template.plist</string>
-
-  <key>templateName</key>
-  <string>mathGlyphs</string>
+  <string>Build circled plus operators</string>
 
   <key>parameters</key>
   <dict>
-    <key>smartGlyph</key>
-    <string>_smart.plus.circled</string>
-    <key>exportGlyph</key>
-    <string>plus.circled</string>
-    <key>baseSmartGlyphs</key>
+    <key>axis</key>
+    <string>height</string>
+    <key>lowValue</key>
+    <real>0</real>
+    <key>highValue</key>
+    <real>100</real>
+    <key>nAryVariantValues</key>
     <array>
-      <string>_smart.circle</string>
-      <string>_smart.plus</string>
-    </array>
-    <key>variantValues</key>
-    <array>
-      <integer>0</integer>
       <integer>5</integer>
       <integer>10</integer>
       <integer>15</integer>
@@ -56,5 +46,211 @@
     <key>color</key>
     <string>orange</string>
   </dict>
+
+  <key>actions</key>
+  <array>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.plus.circled</string>
+        <key>export</key>
+        <false/>
+        <key>color</key>
+        <string>${color}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponents</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.plus.circled</string>
+        <key>components</key>
+        <array>
+          <string>_smart.circle</string>
+          <string>_smart.plus</string>
+        </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createHighLayers</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.plus.circled</string>
+        <key>axis</key>
+        <string>${axis}</string>
+        <key>lowValue</key>
+        <string>${lowValue}</string>
+        <key>highValue</key>
+        <string>${highValue}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setComponentAxisLowHigh</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.plus.circled</string>
+        <key>axis</key>
+        <string>${axis}</string>
+        <key>lowValue</key>
+        <string>${lowValue}</string>
+        <key>highValue</key>
+        <string>${highValue}</string>
+        <key>componentFilter</key>
+        <dict>
+          <key>components</key>
+          <array>
+            <string>_smart.circle</string>
+            <string>_smart.plus</string>
+          </array>
+        </dict>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>plus.circled</string>
+        <key>export</key>
+        <true/>
+        <key>color</key>
+        <string>${color}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponent</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>plus.circled</string>
+        <key>component</key>
+        <string>_smart.plus.circled</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setComponentAxisValue</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>plus.circled</string>
+        <key>axis</key>
+        <string>${axis}</string>
+        <key>value</key>
+        <integer>0</integer>
+        <key>componentFilter</key>
+        <dict>
+          <key>components</key>
+          <array>
+            <string>_smart.plus.circled</string>
+          </array>
+        </dict>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>nAryCircledPlusOperator</string>
+        <key>export</key>
+        <true/>
+        <key>color</key>
+        <string>${color}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponent</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>nAryCircledPlusOperator</string>
+        <key>component</key>
+        <string>_smart.plus.circled</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setComponentAxisValue</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>nAryCircledPlusOperator</string>
+        <key>axis</key>
+        <string>${axis}</string>
+        <key>value</key>
+        <integer>5</integer>
+        <key>componentFilter</key>
+        <dict>
+          <key>components</key>
+          <array>
+            <string>_smart.plus.circled</string>
+          </array>
+        </dict>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createSmartComponentVariants</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>nAryCircledPlusOperator</string>
+        <key>values</key>
+        <string>${nAryVariantValues}</string>
+        <key>startNumber</key>
+        <integer>2</integer>
+        <key>axis</key>
+        <string>${axis}</string>
+        <key>color</key>
+        <string>${color}</string>
+      </dict>
+    </dict>
+  </array>
 </dict>
 </plist>

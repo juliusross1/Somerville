@@ -211,6 +211,10 @@ These can be taken in pretty much any order
 **Components**
 _smart.circle (height)
 
+_smart.plus
+(height,width)
+****DO THIS AGAIN!**** Make the width and the height at max the same.  Make the smallest one 0 length.
+
 Could I create a testing document for this glyph?
 
 _smart.plus (height, Todo: small width for small sizes?).  Is this a component or a glyph?
@@ -308,6 +312,7 @@ Usual build process (no need to describe)
 Stems slightly thicker at height
 **todo: return to the serifs at high**
 
+** for plus**
 
 **Arrows**
 
@@ -335,6 +340,7 @@ Upper and lower limits on summation in mathml core (or is this a stale font issu
 === Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
 === Look back at weight of summation
 spacing/italic correction
+go back and adjust plus for widths (want it even at normal which is a bit of a pain to calculate!?!?)
 Union, Subset, \in
 Other simple math symbols using anchors (e.g. relations) (systematic system)
 Test ss11 feature at other fonts

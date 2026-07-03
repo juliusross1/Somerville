@@ -787,8 +787,11 @@ def variant_name(source_name, number):
     return "%s.s%02i" % (source_name, number)
 
 
-def variant_names(source_name, variant_count):
-    return [source_name] + [variant_name(source_name, number) for number in range(1, variant_count + 1)]
+def variant_names(source_name, variant_count, start_number=1):
+    return [source_name] + [
+        variant_name(source_name, number)
+        for number in range(int(start_number), int(start_number) + int(variant_count))
+    ]
 
 
 def glyph_reference_for_name(font, glyph_name):
@@ -801,12 +804,12 @@ def glyph_reference_for_name(font, glyph_name):
         return None
 
 
-def store_math_plugin_variants_on_glyph(font, glyph, variant_count, axis_name_value):
+def store_math_plugin_variants_on_glyph(font, glyph, variant_count, axis_name_value, start_number=1):
     variant_key = MATH_PLUGIN_VARIANT_KEYS.get(axis_name_value)
     if variant_key is None:
         return False
     references = []
-    for name in variant_names(glyph.name, variant_count):
+    for name in variant_names(glyph.name, variant_count, start_number):
         reference = glyph_reference_for_name(font, name)
         if reference is None:
             return False
@@ -1119,7 +1122,35 @@ def action_set_component_axis_low_high(font, verbose=False, glyph=None, axis="he
     return changed
 
 
-def action_create_smart_component_variants(font, verbose=False, glyph=None, values=None, N=None, step=None, axis="height", color=None, overwrite=False, **_kwargs):
+def action_set_component_axis_value(font, verbose=False, glyph=None, axis="height", value=0, componentFilter=None, **_kwargs):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    changed = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        for component in layer_components(layer):
+            if not component_matches_filter(component, componentFilter):
+                continue
+            axis_id = smart_axis_id_for_component(font, component, axis)
+            if axis_id is None:
+                skipped += 1
+                continue
+            if set_component_smart_value(component, axis_id, value):
+                changed += 1
+            else:
+                skipped += 1
+    log("%s: set %s=%s on %i component(s)%s." % (
+        glyph,
+        axis,
+        value,
+        changed,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
+def action_create_smart_component_variants(font, verbose=False, glyph=None, values=None, N=None, step=None, axis="height", color=None, overwrite=False, startNumber=1, **_kwargs):
     source_glyph = glyph_for_name(font, glyph)
     if source_glyph is None:
         raise RuntimeError("Missing glyph: %s" % glyph)
@@ -1130,10 +1161,14 @@ def action_create_smart_component_variants(font, verbose=False, glyph=None, valu
         variant_values = [0] + [clean_number(number * step) for number in range(1, variant_count + 1)]
     if not variant_values:
         raise RuntimeError("%s: createSmartComponentVariants needs at least one value." % glyph)
+    base_value = variant_values[0]
     variant_count = max(0, len(variant_values) - 1)
     created = 0
     refreshed = 0
-    for number, value in enumerate(variant_values[1:], 1):
+    for number, value in zip(
+        range(int(startNumber), int(startNumber) + variant_count),
+        variant_values[1:],
+    ):
         target_name = variant_name(source_glyph.name, number)
         target_glyph = glyph_for_name(font, target_name)
         did_create = False
@@ -1147,12 +1182,12 @@ def action_create_smart_component_variants(font, verbose=False, glyph=None, valu
             if not overwrite:
                 raise RuntimeError("Glyph %s already exists. Enable 'Overwrite glyphs' to replace it." % target_name)
             set_glyph_color(target_glyph, color)
-        populate_variant_from_source(font, source_glyph, target_glyph, axis, value)
+        populate_variant_from_source(font, source_glyph, target_glyph, axis, value - base_value)
         if did_create:
             created += 1
         else:
             refreshed += 1
-    stored_variants = store_math_plugin_variants_on_glyph(font, source_glyph, variant_count, axis)
+    stored_variants = store_math_plugin_variants_on_glyph(font, source_glyph, variant_count, axis, startNumber)
     log("%s: created %i variant glyph(s), updated %i existing; values=%s; stored MATH plugin variants=%s." % (
         glyph,
         created,
@@ -1171,6 +1206,7 @@ ACTION_REGISTRY = {
     "copyLayerMetrics": action_copy_layer_metrics,
     "createHighLayers": action_create_high_layers,
     "setComponentAxisLowHigh": action_set_component_axis_low_high,
+    "setComponentAxisValue": action_set_component_axis_value,
     "createSmartComponentVariants": action_create_smart_component_variants,
 }
 

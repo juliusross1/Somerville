@@ -1,102 +1,129 @@
 {
 color = 1;
-glyphname = plus.circled.s08;
+glyphname = nAryCircledPlusOperator;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
 piece = {
-height = 40;
+height = 5;
 };
 ref = _smart.plus.circled;
 }
 );
-width = 3413;
+width = 905;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
 piece = {
-height = 40;
+height = 5;
 };
 ref = _smart.plus.circled;
 }
 );
-width = 3875;
+width = 1053;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
 piece = {
-height = 40;
+height = 5;
 };
 ref = _smart.plus.circled;
 }
 );
-width = 3455;
+width = 925;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
 piece = {
-height = 40;
+height = 5;
 };
 ref = _smart.plus.circled;
 }
 );
-width = 3764;
+width = 1092;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
 piece = {
-height = 40;
+height = 5;
 };
 ref = _smart.plus.circled;
 }
 );
-width = 3420;
+width = 1004;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
 piece = {
-height = 40;
+height = 5;
 };
 ref = _smart.plus.circled;
 }
 );
-width = 4102;
+width = 1180;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
 piece = {
-height = 40;
+height = 5;
 };
 ref = _smart.plus.circled;
 }
 );
-width = 3477;
+width = 1019;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 piece = {
-height = 40;
+height = 5;
 };
 ref = _smart.plus.circled;
 }
 );
-width = 3808;
+width = 1114;
 }
 );
+unicode = 10753;
+userData = {
+com.nagwa.MATHPlugin.variants = {
+vVariants = (
+nAryCircledPlusOperator,
+nAryCircledPlusOperator.s02,
+nAryCircledPlusOperator.s03,
+nAryCircledPlusOperator.s04,
+nAryCircledPlusOperator.s05,
+nAryCircledPlusOperator.s06,
+nAryCircledPlusOperator.s07,
+nAryCircledPlusOperator.s08,
+nAryCircledPlusOperator.s09,
+nAryCircledPlusOperator.s10,
+nAryCircledPlusOperator.s11,
+nAryCircledPlusOperator.s12,
+nAryCircledPlusOperator.s13,
+nAryCircledPlusOperator.s14,
+nAryCircledPlusOperator.s15,
+nAryCircledPlusOperator.s16,
+nAryCircledPlusOperator.s17,
+nAryCircledPlusOperator.s18,
+nAryCircledPlusOperator.s19,
+nAryCircledPlusOperator.s20
+);
+};
+};
 }
