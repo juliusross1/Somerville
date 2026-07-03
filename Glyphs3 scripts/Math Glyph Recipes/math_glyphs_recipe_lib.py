@@ -16,7 +16,7 @@ from GlyphsApp import (
 )
 
 
-SCRIPT_VERSION = "2026-07-02 12:18 CDT initial"
+SCRIPT_VERSION = "2026-07-03 13:05 CDT midpoint-axis-userdata"
 DEFAULT_RECIPE_FILE = "triple_integral_recipe.plist"
 VERBOSE = True
 VARIABLE_PATTERN = re.compile(r"\$\{([^}]+)\}")
@@ -24,6 +24,7 @@ WHOLE_VARIABLE_PATTERN = re.compile(r"^\$\{([^}]+)\}$")
 SMART_MASTER_SELECTION_VALUE = 1
 SMART_HIGH_SELECTION_VALUE = 2
 MATH_PLUGIN_VARIANTS_USER_DATA_KEY = "com.nagwa.MATHPlugin.variants"
+MATH_PLUGIN_CONSTANTS_PARAMETER = "com.nagwa.MATHPlugin.constants"
 MATH_PLUGIN_VARIANT_KEYS = dict(
     height="vVariants",
     width="hVariants",
@@ -85,6 +86,12 @@ def clean_number(value):
     if value.is_integer():
         return int(value)
     return value
+
+
+def format_xy(xy):
+    if xy is None:
+        return "none"
+    return "(%.3f, %.3f)" % (xy[0], xy[1])
 
 
 def numeric_value(value):
@@ -172,6 +179,117 @@ def is_master_layer(layer):
 def associated_master_id(layer):
     value = safe_call(getattr(layer, "associatedMasterId", None))
     return str(value) if value is not None else None
+
+
+def master_for_layer(font, layer):
+    layer_id_value = layer_id(layer)
+    if layer_id_value:
+        try:
+            master = font.masters[layer_id_value]
+            if master is not None:
+                return master
+        except Exception:
+            pass
+
+    associated_master_id_value = associated_master_id(layer)
+    if associated_master_id_value:
+        try:
+            master = font.masters[associated_master_id_value]
+            if master is not None:
+                return master
+        except Exception:
+            pass
+
+    return safe_call(getattr(font, "selectedFontMaster", None))
+
+
+def custom_parameter_value(owner, parameter_name):
+    parameters = getattr(owner, "customParameters", None)
+    if not parameters:
+        return None
+
+    try:
+        value = parameters[parameter_name]
+        if value is not None:
+            return value
+    except Exception:
+        pass
+
+    for parameter in parameters:
+        name = safe_call(getattr(parameter, "name", None))
+        if name == parameter_name:
+            return safe_call(getattr(parameter, "value", None))
+    return None
+
+
+def user_data_value(owner, key):
+    user_data = getattr(owner, "userData", None)
+    if not user_data:
+        return None
+
+    try:
+        value = user_data[key]
+        if value is not None:
+            return value
+    except Exception:
+        pass
+
+    for method_name in ("objectForKey_", "valueForKey_"):
+        method = getattr(user_data, method_name, None)
+        if method is None:
+            continue
+        try:
+            value = method(key)
+        except Exception:
+            continue
+        if value is not None:
+            return value
+    return None
+
+
+def math_constant_value(font, master, constant_name):
+    for owner in (master, font):
+        if owner is None:
+            continue
+        for constants in (
+            custom_parameter_value(owner, MATH_PLUGIN_CONSTANTS_PARAMETER),
+            user_data_value(owner, MATH_PLUGIN_CONSTANTS_PARAMETER),
+        ):
+            try:
+                if constants and constant_name in constants:
+                    return constants[constant_name]
+            except Exception:
+                pass
+
+            for method_name in ("objectForKey_", "valueForKey_"):
+                method = getattr(constants, method_name, None)
+                if method is None:
+                    continue
+                try:
+                    value = method(constant_name)
+                except Exception:
+                    continue
+                if value is not None:
+                    return value
+    return None
+
+
+def metric_value(master, attribute_name, fallback=0):
+    value = safe_call(getattr(master, attribute_name, None)) if master is not None else None
+    if value is None:
+        return fallback
+    return value
+
+
+def math_axis_for_layer(font, layer):
+    master = master_for_layer(font, layer)
+    axis_height = math_constant_value(font, master, "AxisHeight")
+    if axis_height is None:
+        axis_height = metric_value(master, "xHeight", 0)
+    try:
+        return float(axis_height)
+    except Exception:
+        return 0.0
 
 
 def glyph_for_name(font, glyph_name):
@@ -728,6 +846,11 @@ def move_component_local_point_to(component, local_xy, target_xy):
     target_x, target_y = target_xy
     dx = target_x - current_x
     dy = target_y - current_y
+    a, b, c, d, tx, ty = transform_values(component)
+    return set_component_transform(component, (a, b, c, d, tx + dx, ty + dy))
+
+
+def move_component_by(component, dx=0, dy=0):
     a, b, c, d, tx, ty = transform_values(component)
     return set_component_transform(component, (a, b, c, d, tx + dx, ty + dy))
 
@@ -1343,6 +1466,108 @@ def action_align_component_sequence_anchors(
     return changed
 
 
+def action_align_component_midpoint_to_math_axis(
+    font,
+    verbose=False,
+    glyph=None,
+    components=None,
+    enabled=False,
+    anchorName="center",
+    disableAlignment=True,
+    **_kwargs
+):
+    if not boolean_value(enabled):
+        log("%s: center midpoint math-axis alignment skipped." % glyph, verbose)
+        return 0
+
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+    if len(components or []) != 2:
+        raise RuntimeError("%s: midpoint math-axis alignment needs exactly two components." % glyph)
+
+    changed = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        layer_label = layer_name(layer) or layer_id(layer) or "<unnamed layer>"
+        sequence = ordered_components_for_sequence(layer, components)
+        if len(sequence) != 2:
+            log("%s/%s: midpoint skipped, found %i matching component(s), expected 2." % (
+                glyph,
+                layer_label,
+                len(sequence),
+            ), verbose)
+            skipped += 1
+            continue
+
+        anchor_positions = []
+        debug_records = []
+        for component in sequence:
+            component_label = component_name(component) or "<unnamed component>"
+            source_layer = component_source_layer(font, component, layer)
+            if source_layer is None:
+                debug_records.append("%s: missing source layer" % component_label)
+                break
+            local_xy = effective_layer_anchor_xy(font, source_layer, [anchorName])
+            if local_xy is None:
+                debug_records.append("%s/%s: missing anchor %s" % (
+                    component_label,
+                    layer_name(source_layer) or layer_id(source_layer) or "<unnamed source layer>",
+                    anchorName,
+                ))
+                break
+            transformed_xy = transformed_point(component, local_xy)
+            anchor_positions.append(transformed_xy)
+            debug_records.append("%s/%s: local %s -> placed %s" % (
+                component_label,
+                layer_name(source_layer) or layer_id(source_layer) or "<unnamed source layer>",
+                format_xy(local_xy),
+                format_xy(transformed_xy),
+            ))
+        if len(anchor_positions) != 2:
+            log("%s/%s: midpoint skipped; %s." % (
+                glyph,
+                layer_label,
+                "; ".join(debug_records) if debug_records else "no anchor records",
+            ), verbose)
+            skipped += 1
+            continue
+
+        midpoint_y = (anchor_positions[0][1] + anchor_positions[1][1]) / 2.0
+        math_axis = math_axis_for_layer(font, layer)
+        dy = math_axis - midpoint_y
+        log("%s/%s: %s; midpointY %.3f, mathAxis %.3f, dy %.3f." % (
+            glyph,
+            layer_label,
+            "; ".join(debug_records),
+            midpoint_y,
+            math_axis,
+            dy,
+        ), verbose)
+        if abs(dy) < 0.0001:
+            continue
+
+        moved = 0
+        for component in sequence:
+            if boolean_value(disableAlignment):
+                disable_component_alignment(component)
+            if move_component_by(component, dy=dy):
+                moved += 1
+        if moved:
+            changed += moved
+        else:
+            skipped += 1
+
+    log("%s: moved %i component(s) to center midpoint on math axis%s." % (
+        glyph,
+        changed,
+        "; skipped %i layer(s)" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
 def action_flip_components(font, verbose=False, glyph=None, components=None, **_kwargs):
     target_glyph = glyph_for_name(font, glyph)
     if target_glyph is None:
@@ -1633,6 +1858,7 @@ ACTION_REGISTRY = {
     "addComponents": action_add_components,
     "disableComponentAlignment": action_disable_component_alignment,
     "alignComponentSequenceAnchors": action_align_component_sequence_anchors,
+    "alignComponentMidpointToMathAxis": action_align_component_midpoint_to_math_axis,
     "flipComponents": action_flip_components,
     "copyLayerMetrics": action_copy_layer_metrics,
     "setSideMetricsFromComponentSequence": action_set_side_metrics_from_component_sequence,

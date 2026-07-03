@@ -25,10 +25,20 @@
     <string>orange</string>
     <key>disableAutomaticAlignment</key>
     <true/>
+    <key>disableAutomaticAlignmentComponents</key>
+    <array/>
     <key>alignAnchors</key>
     <false/>
+    <key>autoMatchingAnchors</key>
+    <true/>
     <key>matchingAnchors</key>
     <array/>
+    <key>alignCenterMidpointToMathAxis</key>
+    <false/>
+    <key>centerMidpointComponents</key>
+    <array/>
+    <key>centerMidpointAnchor</key>
+    <string>center</string>
     <key>leftMetricsGlyph</key>
     <string></string>
     <key>rightMetricsGlyph</key>
@@ -78,6 +88,8 @@
         <string>${exportGlyph}</string>
         <key>enabled</key>
         <string>${disableAutomaticAlignment}</string>
+        <key>components</key>
+        <string>${disableAutomaticAlignmentComponents}</string>
       </dict>
     </dict>
 
@@ -95,7 +107,7 @@
         <key>enabled</key>
         <string>${alignAnchors}</string>
         <key>autoMatching</key>
-        <true/>
+        <string>${autoMatchingAnchors}</string>
         <key>matchingAnchors</key>
         <string>${matchingAnchors}</string>
         <key>exitAnchors</key>
@@ -108,6 +120,24 @@
           <string>#entry</string>
           <string>entry</string>
         </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>alignComponentMidpointToMathAxis</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>${exportGlyph}</string>
+        <key>components</key>
+        <string>${centerMidpointComponents}</string>
+        <key>enabled</key>
+        <string>${alignCenterMidpointToMathAxis}</string>
+        <key>anchorName</key>
+        <string>${centerMidpointAnchor}</string>
       </dict>
     </dict>
 
