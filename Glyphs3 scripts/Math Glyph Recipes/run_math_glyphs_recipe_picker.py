@@ -12,7 +12,7 @@ from AppKit import NSAttributedString, NSColor, NSForegroundColorAttributeName
 from GlyphsApp import Glyphs
 
 
-SCRIPT_VERSION = "2026-07-03 13:20 CDT open-created-tab"
+SCRIPT_VERSION = "2026-07-03 15:05 CDT filter-existing-exports"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
@@ -212,6 +212,7 @@ def load_recipe_summary(file_name):
         runnable=runnable,
         status="ready",
         exports=colored_export_status(export_status, export_state),
+        exportState=export_state,
     )
 
 
@@ -219,12 +220,12 @@ class MathGlyphsRecipePicker(object):
     def __init__(self):
         self.rows = []
         self.w = vanilla.FloatingWindow(
-            (640, 360),
+            (720, 390),
             "Math Glyph Recipes",
             minSize=(520, 260),
         )
         self.w.recipeList = vanilla.List(
-            (12, 12, -12, -82),
+            (12, 12, -12, -112),
             [],
             columnDescriptions=[
                 dict(title="Recipe", key="name", width=225),
@@ -236,19 +237,25 @@ class MathGlyphsRecipePicker(object):
             doubleClickCallback=self.run_callback,
         )
         self.w.verbose = vanilla.CheckBox(
-            (12, -62, 155, 22),
+            (12, -92, 155, 22),
             "Verbose Macro log",
             value=False,
         )
         self.w.overwrite = vanilla.CheckBox(
-            (174, -62, 140, 22),
+            (174, -92, 140, 22),
             "Overwrite glyphs",
             value=False,
         )
         self.w.openTab = vanilla.CheckBox(
-            (318, -62, 84, 22),
+            (318, -92, 84, 22),
             "Open tab",
             value=False,
+        )
+        self.w.showExisting = vanilla.CheckBox(
+            (410, -92, 178, 22),
+            "Show existing exports",
+            value=True,
+            callback=self.refresh_callback,
         )
         self.w.refreshButton = vanilla.Button(
             (-236, -64, 104, 26),
@@ -277,7 +284,10 @@ class MathGlyphsRecipePicker(object):
             row = self.selected_row()
             if row:
                 selected_file = row.get("file")
-        self.rows = [load_recipe_summary(file_name) for file_name in recipe_files()]
+        rows = [load_recipe_summary(file_name) for file_name in recipe_files()]
+        if not bool(self.w.showExisting.get()):
+            rows = [row for row in rows if row.get("exportState") != "exists"]
+        self.rows = rows
         self.w.recipeList.set(self.rows)
         if self.rows:
             first_runnable = 0

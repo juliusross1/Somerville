@@ -113,9 +113,89 @@
           <key>components</key>
           <array>
             <string>_smart.integral</string>
+          </array>
+        </dict>
+      </dict>
+    </dict>
+    <!--
+      Smart-component gotcha: _smart.circle also has a height axis, but in
+      contourIntegral it must stay on the low-height shape on every layer.
+      Only _smart.integral gets low/high height values. If _smart.circle is
+      allowed to use its own High layer, Glyphs draws the huge circle and its
+      _center anchor is thousands of units away.
+    -->
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setComponentAxisValue</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.contourIntegral</string>
+        <key>axis</key>
+        <string>${axis}</string>
+        <key>value</key>
+        <string>${lowValue}</string>
+        <key>componentFilter</key>
+        <dict>
+          <key>components</key>
+          <array>
             <string>_smart.circle</string>
           </array>
         </dict>
+      </dict>
+    </dict>
+    <!--
+      Scale the pinned low-height circle before anchor alignment. On High
+      layers, the mark anchor lookup below must use _smart.circle's associated
+      master layer, not _smart.circle's High layer, or the placement jumps far
+      off-center.
+    -->
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setComponentScaleByLayerName</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.contourIntegral</string>
+        <key>componentFilter</key>
+        <dict>
+          <key>components</key>
+          <array>
+            <string>_smart.circle</string>
+          </array>
+        </dict>
+        <key>rules</key>
+        <array>
+          <dict>
+            <key>contains</key>
+            <array>
+              <string>Agate</string>
+              <string>Black</string>
+            </array>
+            <key>scale</key>
+            <real>1.8</real>
+          </dict>
+          <dict>
+            <key>contains</key>
+            <array>
+              <string>Agate</string>
+            </array>
+            <key>scale</key>
+            <real>1.5</real>
+          </dict>
+          <dict>
+            <key>contains</key>
+            <array>
+              <string>Needlepoint</string>
+            </array>
+            <key>scale</key>
+            <integer>3</integer>
+          </dict>
+        </array>
       </dict>
     </dict>
     <dict>
@@ -144,6 +224,8 @@
             <string>center</string>
             <key>markAnchor</key>
             <string>_center</string>
+            <key>markUseAssociatedMasterLayer</key>
+            <true/>
           </dict>
         </array>
         <key>disableAlignment</key>

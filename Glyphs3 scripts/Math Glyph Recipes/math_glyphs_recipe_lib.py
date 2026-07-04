@@ -16,7 +16,7 @@ from GlyphsApp import (
 )
 
 
-SCRIPT_VERSION = "2026-07-03 14:10 CDT width-sequence-placement"
+SCRIPT_VERSION = "2026-07-03 14:48 CDT pair-anchor-master-source"
 DEFAULT_RECIPE_FILE = "triple_integral_recipe.plist"
 VERBOSE = True
 VARIABLE_PATTERN = re.compile(r"\$\{([^}]+)\}")
@@ -626,6 +626,27 @@ def set_component_transform(component, values):
         return False
 
 
+def set_component_scale(component, x_scale, y_scale):
+    x_scale = clean_number(x_scale)
+    y_scale = clean_number(y_scale)
+    setter = getattr(component, "setScale_", None)
+    for value in ((x_scale, y_scale),):
+        if setter is not None:
+            try:
+                setter(value)
+                return True
+            except Exception:
+                pass
+        try:
+            component.scale = value
+            return True
+        except Exception:
+            pass
+
+    a, b, c, d, tx, ty = transform_values(component)
+    return set_component_transform(component, (float(x_scale), b, c, float(y_scale), tx, ty))
+
+
 def bounds_y_values(obj):
     bounds = safe_call(getattr(obj, "bounds", None))
     if bounds is None:
@@ -841,6 +862,21 @@ def component_source_layer(font, component, target_layer):
         return glyph.layers[0]
     except Exception:
         return None
+
+
+def component_source_master_layer(font, component, target_layer):
+    glyph = component_glyph(font, component)
+    if glyph is None:
+        return None
+    master_id = associated_master_id(target_layer) or layer_id(target_layer)
+    if master_id:
+        try:
+            source_layer = glyph.layers[master_id]
+            if source_layer is not None:
+                return source_layer
+        except Exception:
+            pass
+    return component_source_layer(font, component, target_layer)
 
 
 def transformed_point(component, xy):
@@ -1663,8 +1699,10 @@ def action_align_component_pairs_by_anchors(
 
             base_component = sequence[base_index]
             mark_component = sequence[mark_index]
-            base_layer = component_source_layer(font, base_component, layer)
-            mark_layer = component_source_layer(font, mark_component, layer)
+            base_source = component_source_master_layer if boolean_value(pair.get("baseUseAssociatedMasterLayer")) else component_source_layer
+            mark_source = component_source_master_layer if boolean_value(pair.get("markUseAssociatedMasterLayer")) else component_source_layer
+            base_layer = base_source(font, base_component, layer)
+            mark_layer = mark_source(font, mark_component, layer)
             if base_layer is None or mark_layer is None:
                 skipped += 1
                 continue
@@ -1928,6 +1966,68 @@ def action_set_component_axis_value(font, verbose=False, glyph=None, axis="heigh
     return changed
 
 
+def layer_matches_name_rule(layer_label, rule):
+    contains = rule.get("contains")
+    if isinstance(contains, str):
+        contains = [contains]
+    if contains:
+        lowered = layer_label.lower()
+        for item in contains:
+            if str(item).lower() not in lowered:
+                return False
+    return True
+
+
+def scale_pair_from_rule(rule):
+    if "scale" in rule:
+        value = rule.get("scale")
+        return value, value
+    if "xScale" in rule or "yScale" in rule:
+        x_value = rule.get("xScale", rule.get("yScale", 1))
+        y_value = rule.get("yScale", x_value)
+        return x_value, y_value
+    return None
+
+
+def action_set_component_scale_by_layer_name(font, verbose=False, glyph=None, componentFilter=None, rules=None, defaultScale=None, **_kwargs):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if not rules and defaultScale is None:
+        log("%s: component scale by layer name skipped." % glyph, verbose)
+        return 0
+
+    changed = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        label = layer_name(layer) or ""
+        scale_pair = None
+        for rule in rules or []:
+            if layer_matches_name_rule(label, rule):
+                scale_pair = scale_pair_from_rule(rule)
+                break
+        if scale_pair is None and defaultScale is not None:
+            scale_pair = (defaultScale, defaultScale)
+        if scale_pair is None:
+            skipped += 1
+            continue
+
+        for component in layer_components(layer):
+            if not component_matches_filter(component, componentFilter):
+                continue
+            if set_component_scale(component, scale_pair[0], scale_pair[1]):
+                changed += 1
+            else:
+                skipped += 1
+
+    log("%s: set component scale on %i component(s)%s." % (
+        glyph,
+        changed,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
 def action_create_smart_component_variants(font, verbose=False, glyph=None, values=None, N=None, step=None, axis="height", color=None, overwrite=False, startNumber=1, **_kwargs):
     source_glyph = glyph_for_name(font, glyph)
     if source_glyph is None:
@@ -1993,6 +2093,7 @@ ACTION_REGISTRY = {
     "createHighLayers": action_create_high_layers,
     "setComponentAxisLowHigh": action_set_component_axis_low_high,
     "setComponentAxisValue": action_set_component_axis_value,
+    "setComponentScaleByLayerName": action_set_component_scale_by_layer_name,
     "createSmartComponentVariants": action_create_smart_component_variants,
 }
 

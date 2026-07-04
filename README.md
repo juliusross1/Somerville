@@ -75,6 +75,12 @@ SuperscriptShiftUp (and others) will either use the superscriptYOffset custom pa
 
 You should expect to go back to these constants as you develop your font.
 
+**note** The SuperscriptShiftUpCramped seems to bhave differently in mathml in chrome than lualatex.   In chrome there seems to be some minimum value that is being taken here that is not present in lualatex
+
+SuperscriptBaselineDropMax is not behaving in mathmlcore in the same was as the help file suggests it should be
+
+
+
 ** Step 7: Import Italics **
 If you have italics in another font then you will want to import those glyphs into the math font.  The script "Import Italics" will attempt to help you with this.  If your font has them, import also idotless and jdotless from your italics font.
 There is a case here to consider, namely if the source glyph has bracket or alternate layers.
@@ -320,20 +326,32 @@ Stems slightly thicker at height
 
 ======
 Recipes needed
-= Go back to do contourIntegral recipe
-= Summation recipe
+= ??? Equals from minus??
+= ??? dot then minus and minus then dot as an intermediate for the colon equals (is there a better way?)
+= Fences Recipes
 = Bigdot recipe
 = Bigplus recipe
 
 *Mayfair Todo (16)*
+=== radicals (including spacing)
 === Command line export
 === Spacing:
-Script or system to insert the math constants into the glyphs file.  Go through all the math constants again with testing documents
-Upper and lower limits on summation in mathml core (or is this a stale font issue?)
+Radicals
+
+skewedFractionHorizontalGap, skewedFractionVerticalGap
+
+Go through the help file again and compare his recommendations with my choices
+
+Script or system to insert the math constants into the glyphs file.  
+Check these all at wide and then insert those
+
+== Get the frationrule and overbar/underbar rule size fixed in css
+
+== Get a better lualatex test file for the math constants
+
 === Create test documents for the glyphs so far (brackets, sum, otimes, etc) so I can see how good this is looking
 == Union, Subset, \in
 
-=== radicals (including spacing)
 ===Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
 ===bigotimes, times
 ===Center the bar, bracket, brace etc (these might be OK)
