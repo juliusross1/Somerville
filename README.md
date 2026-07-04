@@ -335,14 +335,13 @@ Upper and lower limits on summation in mathml core (or is this a stale font issu
 
 === radicals (including spacing)
 ===Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
-=== bigotimes, times
+===bigotimes, times
 ===Center the bar, bracket, brace etc (these might be OK)
 ===relations
 ===Look back at serifs on integral in semiexpanded agate
 === Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
 === Look back at weight of summation
 spacing/italic correction
-Other simple math symbols using anchors (e.g. relations) (systematic system)
 Test ss11 feature at other fonts
 Email Hans about here maybe?
 italic tau

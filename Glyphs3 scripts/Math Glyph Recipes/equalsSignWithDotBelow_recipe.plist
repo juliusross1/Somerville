@@ -10,7 +10,7 @@
   <string>macro</string>
 
   <key>name</key>
-  <string>colonequals</string>
+  <string>equalsSignWithDotBelow</string>
 
   <key>template</key>
   <string>component_sequence_template.plist</string>
@@ -21,14 +21,24 @@
   <key>parameters</key>
   <dict>
     <key>exportGlyph</key>
-    <string>colonequals</string>
+    <string>equalsSignWithDotBelow</string>
     <key>components</key>
     <array>
-      <string>colon</string>
       <string>equal</string>
+      <string>mathdot</string>
     </array>
-    <key>alignAnchors</key>
-    <true/>
+    <key>disableAutomaticAlignmentComponents</key>
+    <array>
+      <string>mathdot</string>
+    </array>
+    <key>matchingAnchors</key>
+    <array>
+      <string>bottom</string>
+    </array>
+    <key>leftMetricsGlyph</key>
+    <string>equal</string>
+    <key>rightMetricsGlyph</key>
+    <string>equal</string>
     <key>color</key>
     <string>orange</string>
   </dict>

@@ -16,7 +16,7 @@ from GlyphsApp import (
 )
 
 
-SCRIPT_VERSION = "2026-07-03 13:55 CDT pair-alignment-disable-option"
+SCRIPT_VERSION = "2026-07-03 14:10 CDT width-sequence-placement"
 DEFAULT_RECIPE_FILE = "triple_integral_recipe.plist"
 VERBOSE = True
 VARIABLE_PATTERN = re.compile(r"\$\{([^}]+)\}")
@@ -1399,6 +1399,53 @@ def action_disable_component_alignment(font, verbose=False, glyph=None, componen
     return changed
 
 
+def action_place_component_sequence_by_widths(
+    font,
+    verbose=False,
+    glyph=None,
+    components=None,
+    enabled=False,
+    **_kwargs
+):
+    if not boolean_value(enabled):
+        log("%s: width-based component placement skipped." % glyph, verbose)
+        return 0
+
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+
+    changed = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        sequence = ordered_components_for_sequence(layer, components)
+        if len(sequence) != len(components or []):
+            skipped += 1
+            continue
+
+        x_offset = 0.0
+        for component in sequence:
+            a, b, c, d, _tx, ty = transform_values(component)
+            if set_component_transform(component, (a, b, c, d, x_offset, ty)):
+                changed += 1
+            source_layer = component_source_layer(font, component, layer)
+            width = layer_width(source_layer) if source_layer is not None else None
+            if width is None:
+                skipped += 1
+                width = 0.0
+            x_offset += width
+        set_layer_metric(layer, "width", x_offset)
+
+    log("%s: placed %i component(s) by source widths%s." % (
+        glyph,
+        changed,
+        "; skipped %i layer(s)/width(s)" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
 def action_align_component_sequence_anchors(
     font,
     verbose=False,
@@ -1935,6 +1982,7 @@ ACTION_REGISTRY = {
     "addComponent": action_add_component,
     "addComponents": action_add_components,
     "disableComponentAlignment": action_disable_component_alignment,
+    "placeComponentSequenceByWidths": action_place_component_sequence_by_widths,
     "alignComponentSequenceAnchors": action_align_component_sequence_anchors,
     "alignComponentMidpointToMathAxis": action_align_component_midpoint_to_math_axis,
     "alignComponentPairsByAnchors": action_align_component_pairs_by_anchors,

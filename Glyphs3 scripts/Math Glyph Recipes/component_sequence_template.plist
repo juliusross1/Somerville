@@ -27,6 +27,8 @@
     <true/>
     <key>disableAutomaticAlignmentComponents</key>
     <array/>
+    <key>placeComponentsByWidths</key>
+    <false/>
     <key>alignAnchors</key>
     <false/>
     <key>autoMatchingAnchors</key>
@@ -94,6 +96,22 @@
         <string>${disableAutomaticAlignment}</string>
         <key>components</key>
         <string>${disableAutomaticAlignmentComponents}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>placeComponentSequenceByWidths</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>${exportGlyph}</string>
+        <key>components</key>
+        <string>${components}</string>
+        <key>enabled</key>
+        <string>${placeComponentsByWidths}</string>
       </dict>
     </dict>
 

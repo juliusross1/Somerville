@@ -10,7 +10,7 @@
   <string>macro</string>
 
   <key>name</key>
-  <string>equalscolon</string>
+  <string>threeConsecutiveEqualsSigns</string>
 
   <key>template</key>
   <string>component_sequence_template.plist</string>
@@ -21,14 +21,21 @@
   <key>parameters</key>
   <dict>
     <key>exportGlyph</key>
-    <string>equalscolon</string>
+    <string>threeConsecutiveEqualsSigns</string>
     <key>components</key>
     <array>
       <string>equal</string>
-      <string>colon</string>
+      <string>equal</string>
+      <string>equal</string>
     </array>
-    <key>alignAnchors</key>
+    <key>placeComponentsByWidths</key>
     <true/>
+    <key>alignAnchors</key>
+    <false/>
+    <key>leftMetricsGlyph</key>
+    <string>equal</string>
+    <key>rightMetricsGlyph</key>
+    <string>equal</string>
     <key>color</key>
     <string>orange</string>
   </dict>
