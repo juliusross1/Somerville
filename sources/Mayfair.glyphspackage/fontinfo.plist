@@ -1922,7 +1922,7 @@ RadicalDisplayStyleVerticalGap = 100;
 RadicalExtraAscender = 100;
 RadicalKernAfterDegree = -350;
 RadicalKernBeforeDegree = 50;
-RadicalRuleThickness = 2;
+RadicalRuleThickness = 1;
 RadicalVerticalGap = 100;
 ScriptPercentScaleDown = 75;
 ScriptScriptPercentScaleDown = 55;
@@ -2260,7 +2260,7 @@ RadicalDisplayStyleVerticalGap = 100;
 RadicalExtraAscender = 100;
 RadicalKernAfterDegree = -350;
 RadicalKernBeforeDegree = 50;
-RadicalRuleThickness = 2;
+RadicalRuleThickness = 1;
 RadicalVerticalGap = 100;
 ScriptPercentScaleDown = 75;
 ScriptScriptPercentScaleDown = 55;
@@ -2293,6 +2293,7 @@ UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -2614,7 +2615,7 @@ RadicalDisplayStyleVerticalGap = 97;
 RadicalExtraAscender = 100;
 RadicalKernAfterDegree = -350;
 RadicalKernBeforeDegree = 50;
-RadicalRuleThickness = 2;
+RadicalRuleThickness = 1;
 RadicalVerticalGap = 100;
 ScriptPercentScaleDown = 75;
 ScriptScriptPercentScaleDown = 55;
@@ -2978,7 +2979,7 @@ RadicalDisplayStyleVerticalGap = 97;
 RadicalExtraAscender = 100;
 RadicalKernAfterDegree = -350;
 RadicalKernBeforeDegree = 50;
-RadicalRuleThickness = 2;
+RadicalRuleThickness = 1;
 RadicalVerticalGap = 100;
 ScriptPercentScaleDown = 75;
 ScriptScriptPercentScaleDown = 55;
@@ -4609,6 +4610,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 1;
 };
@@ -4660,6 +4662,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.07407;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.92593;
@@ -4711,6 +4714,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.21296;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.78704;
@@ -4763,6 +4767,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.35185;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.64815;
@@ -4815,6 +4820,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.53704;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.46296;
@@ -4869,6 +4875,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.72222;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.27778;
@@ -4921,6 +4928,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 1;
 };
@@ -4972,6 +4980,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.27778;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.72222;
@@ -5023,6 +5032,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.2572;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.0535;
@@ -5075,6 +5085,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.21862;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.15381;
@@ -5128,6 +5139,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18004;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25412;
@@ -5181,6 +5193,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.1286;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.38786;
@@ -5236,6 +5249,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.07716;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.5216;
@@ -5289,6 +5303,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.72222;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.27778;
@@ -5340,6 +5355,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 1;
 };
@@ -5391,6 +5407,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.92593;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.07407;
@@ -5442,6 +5459,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.78704;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.21296;
@@ -5494,6 +5512,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.64815;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.35185;
@@ -5546,6 +5565,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.46296;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.53704;
@@ -5600,6 +5620,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.27778;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.72222;
@@ -5652,6 +5673,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 1;
 };
@@ -5703,6 +5725,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.83682;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.16318;
@@ -5755,6 +5778,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.06199;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.77483;
@@ -5808,6 +5832,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.17821;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.65861;
@@ -5862,6 +5887,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.29444;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.54238;
@@ -5916,6 +5942,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.4494;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.38742;
@@ -5972,6 +5999,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.60437;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.23245;
@@ -6026,6 +6054,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.83682;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.16318;
@@ -6078,6 +6107,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.23245;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.04533;
@@ -6131,6 +6161,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.21523;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.04477;
@@ -6187,6 +6218,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18295;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.12871;
@@ -6244,6 +6276,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.15066;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.21265;
@@ -6301,6 +6334,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.10762;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.32457;
@@ -6360,6 +6394,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06457;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.43649;
@@ -6417,6 +6452,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.60437;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.04533;
@@ -6470,6 +6506,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.83682;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.16318;
@@ -6522,6 +6559,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.77483;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.15109;
@@ -6575,6 +6613,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.65861;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.12843;
@@ -6629,6 +6668,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.54238;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.10576;
@@ -6683,6 +6723,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.38742;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.07555;
@@ -6739,6 +6780,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.23245;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.04533;
@@ -6793,6 +6835,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.16318;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.83682;
@@ -6845,6 +6888,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.73222;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.26778;
@@ -6897,6 +6941,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.05424;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.67798;
@@ -6950,6 +6995,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.15594;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.57628;
@@ -7004,6 +7050,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25763;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.47459;
@@ -7058,6 +7105,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.39323;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.33899;
@@ -7114,6 +7162,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.52882;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.20339;
@@ -7168,6 +7217,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.73222;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.26778;
@@ -7220,6 +7270,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.20339;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.07438;
@@ -7273,6 +7324,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18833;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03917;
@@ -7329,6 +7381,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.16008;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.11262;
@@ -7386,6 +7439,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.13183;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.18607;
@@ -7443,6 +7497,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09416;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.284;
@@ -7502,6 +7557,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.0565;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.38193;
@@ -7559,6 +7615,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.52882;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.07438;
@@ -7612,6 +7669,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.73222;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.26778;
@@ -7664,6 +7722,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.67798;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.24795;
@@ -7717,6 +7776,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.57628;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.21075;
@@ -7771,6 +7831,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.47459;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.17356;
@@ -7825,6 +7886,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.33899;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.12397;
@@ -7881,6 +7943,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.20339;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.07438;
@@ -7935,6 +7998,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.26778;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.73222;
@@ -7987,6 +8051,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.66946;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.33054;
@@ -8039,6 +8104,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.04959;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.61987;
@@ -8092,6 +8158,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.14257;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.52689;
@@ -8146,6 +8213,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.23555;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.43391;
@@ -8200,6 +8268,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.35952;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.30993;
@@ -8256,6 +8325,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.4835;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.18596;
@@ -8310,6 +8380,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.66946;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.33054;
@@ -8362,6 +8433,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18596;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.09182;
@@ -8415,6 +8487,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.17219;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03581;
@@ -8471,6 +8544,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.14636;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.10297;
@@ -8528,6 +8602,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.12053;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.17012;
@@ -8585,6 +8660,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.08609;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25966;
@@ -8644,6 +8720,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.05166;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.34919;
@@ -8701,6 +8778,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.4835;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.09182;
@@ -8754,6 +8832,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.66946;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.33054;
@@ -8806,6 +8885,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.61987;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.30606;
@@ -8859,6 +8939,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.52689;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.26015;
@@ -8913,6 +8994,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.43391;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.21424;
@@ -8967,6 +9049,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.30993;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.15303;
@@ -9023,6 +9106,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18596;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.09182;
@@ -9077,6 +9161,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.33054;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.66946;
@@ -9133,6 +9218,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.54393;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.45607;
@@ -9185,6 +9271,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.04029;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.50364;
@@ -9238,6 +9325,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.11584;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.4281;
@@ -9292,6 +9380,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.19138;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.35255;
@@ -9346,6 +9435,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.29211;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.25182;
@@ -9402,6 +9492,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.39284;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.15109;
@@ -9456,6 +9547,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.54393;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.45607;
@@ -9508,6 +9600,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.15109;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.12669;
@@ -9565,6 +9658,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.1399;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.0291;
@@ -9621,6 +9715,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11892;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.08366;
@@ -9678,6 +9773,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09793;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.13822;
@@ -9735,6 +9831,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06995;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.21097;
@@ -9794,6 +9891,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04197;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.28372;
@@ -9851,6 +9949,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.39284;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.12669;
@@ -9904,6 +10003,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.54393;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.45607;
@@ -9956,6 +10056,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.50364;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.42228;
@@ -10009,6 +10110,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.4281;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.35894;
@@ -10063,6 +10165,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.35255;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.2956;
@@ -10117,6 +10220,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.25182;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.21114;
@@ -10173,6 +10277,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.15109;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.12669;
@@ -10227,6 +10332,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.45607;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.54393;
@@ -10279,6 +10385,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.46862;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.53138;
@@ -10331,6 +10438,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03471;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.43391;
@@ -10384,6 +10492,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.0998;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.36882;
@@ -10438,6 +10547,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.16488;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.30373;
@@ -10492,6 +10602,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25167;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.21695;
@@ -10548,6 +10659,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.33845;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.13017;
@@ -10602,6 +10714,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.46862;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.53138;
@@ -10654,6 +10767,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.13017;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.14761;
@@ -10707,6 +10821,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.12053;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02507;
@@ -10763,6 +10878,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.10245;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.07208;
@@ -10820,6 +10936,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.08437;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.11908;
@@ -10877,6 +10994,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06026;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.18176;
@@ -10936,6 +11054,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03616;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.24443;
@@ -10993,6 +11112,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.33845;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.14761;
@@ -11046,6 +11166,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.46862;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.53138;
@@ -11098,6 +11219,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.43391;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.49202;
@@ -11151,6 +11273,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.36882;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.41822;
@@ -11205,6 +11328,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.30373;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.34441;
@@ -11259,6 +11383,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.21695;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.24601;
@@ -11315,6 +11440,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.13017;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.14761;
@@ -11369,6 +11495,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.53138;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.46862;
@@ -11421,6 +11548,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.41841;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.58159;
@@ -11473,6 +11601,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03099;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.38742;
@@ -11526,6 +11655,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.08911;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.3293;
@@ -11580,6 +11710,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.14722;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.27119;
@@ -11634,6 +11765,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.2247;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.19371;
@@ -11690,6 +11822,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.30219;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.11623;
@@ -11744,6 +11877,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.41841;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.58159;
@@ -11796,6 +11930,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11623;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.16155;
@@ -11849,6 +11984,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.10762;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02238;
@@ -11905,6 +12041,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09147;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.06435;
@@ -11962,6 +12099,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.07533;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.10632;
@@ -12019,6 +12157,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.05381;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.16228;
@@ -12078,6 +12217,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03228;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.21824;
@@ -12135,6 +12275,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.30219;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.16155;
@@ -12188,6 +12329,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.41841;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.58159;
@@ -12240,6 +12382,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.38742;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.53851;
@@ -12293,6 +12436,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.3293;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.45773;
@@ -12347,6 +12491,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.27119;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.37696;
@@ -12401,6 +12546,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.19371;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.26925;
@@ -12457,6 +12603,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11623;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.16155;
@@ -12511,6 +12658,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.58159;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.41841;
@@ -12563,6 +12711,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.33473;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.66527;
@@ -12615,6 +12764,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02479;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.30993;
@@ -12668,6 +12818,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.07128;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.26344;
@@ -12722,6 +12873,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.11777;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.21695;
@@ -12776,6 +12928,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.17976;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.15497;
@@ -12832,6 +12985,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.24175;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.09298;
@@ -12886,6 +13040,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.33473;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.66527;
@@ -12938,6 +13093,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09298;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.1848;
@@ -12991,6 +13147,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.08609;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.01791;
@@ -13047,6 +13204,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.07318;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.05148;
@@ -13104,6 +13262,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06026;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.08506;
@@ -13161,6 +13320,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04305;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.12983;
@@ -13220,6 +13380,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.02583;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.1746;
@@ -13277,6 +13438,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.24175;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.1848;
@@ -13330,6 +13492,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.33473;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.66527;
@@ -13382,6 +13545,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.30993;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.61599;
@@ -13435,6 +13599,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.26344;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.52359;
@@ -13489,6 +13654,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.21695;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.43119;
@@ -13543,6 +13709,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.15497;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.308;
@@ -13599,6 +13766,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09298;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.1848;
@@ -13653,6 +13821,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.66527;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.33473;
@@ -13705,6 +13874,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.25105;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.74895;
@@ -13757,6 +13927,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.0186;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.23245;
@@ -13810,6 +13981,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.05346;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.19758;
@@ -13864,6 +14036,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.08833;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.16272;
@@ -13918,6 +14091,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.13482;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.11623;
@@ -13974,6 +14148,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.18131;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.06974;
@@ -14028,6 +14203,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25105;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.74895;
@@ -14080,6 +14256,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06974;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.20804;
@@ -14133,6 +14310,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06457;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.01343;
@@ -14189,6 +14367,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.05488;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03861;
@@ -14246,6 +14425,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.0452;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.06379;
@@ -14303,6 +14483,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03228;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.09737;
@@ -14362,6 +14543,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.01937;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.13095;
@@ -14419,6 +14601,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.18131;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.20804;
@@ -14472,6 +14655,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.25105;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.74895;
@@ -14524,6 +14708,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.23245;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.69348;
@@ -14577,6 +14762,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.19758;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.58945;
@@ -14631,6 +14817,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.16272;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.48543;
@@ -14685,6 +14872,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11623;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.34674;
@@ -14741,6 +14929,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06974;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.20804;
@@ -14795,6 +14984,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.74895;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.25105;
@@ -14847,6 +15037,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.1841;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.8159;
@@ -14899,6 +15090,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.01364;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.17046;
@@ -14952,6 +15144,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03921;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.14489;
@@ -15006,6 +15199,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.06478;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.11932;
@@ -15060,6 +15254,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.09887;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.08523;
@@ -15116,6 +15311,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.13296;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.05114;
@@ -15170,6 +15366,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.1841;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.8159;
@@ -15222,6 +15419,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.05114;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.22664;
@@ -15275,6 +15473,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04735;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.00985;
@@ -15331,6 +15530,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04025;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02832;
@@ -15388,6 +15588,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03315;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.04678;
@@ -15445,6 +15646,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.02368;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.07141;
@@ -15504,6 +15706,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.01421;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.09603;
@@ -15561,6 +15764,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.13296;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.22664;
@@ -15614,6 +15818,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.1841;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.8159;
@@ -15666,6 +15871,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.17046;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.75546;
@@ -15719,6 +15925,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.14489;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.64214;
@@ -15773,6 +15980,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11932;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.52882;
@@ -15827,6 +16035,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.08523;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.37773;
@@ -15883,6 +16092,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.05114;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.22664;
@@ -15937,6 +16147,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.8159;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.1841;
@@ -15989,6 +16200,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.15063;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.84937;
@@ -16041,6 +16253,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.01116;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.13947;
@@ -16094,6 +16307,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03208;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.11855;
@@ -16148,6 +16362,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.053;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.09763;
@@ -16202,6 +16417,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.08089;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.06974;
@@ -16258,6 +16474,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.10879;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.04184;
@@ -16312,6 +16529,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.15063;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.84937;
@@ -16364,6 +16582,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04184;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.23594;
@@ -16417,6 +16636,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03874;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.00806;
@@ -16473,6 +16693,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03293;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02317;
@@ -16530,6 +16751,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.02712;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03828;
@@ -16587,6 +16809,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.01937;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.05842;
@@ -16646,6 +16869,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.01162;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.07857;
@@ -16703,6 +16927,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.10879;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.23594;
@@ -16756,6 +16981,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.15063;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.84937;
@@ -16808,6 +17034,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.13947;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.78646;
@@ -16861,6 +17088,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11855;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.66849;
@@ -16915,6 +17143,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09763;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.55052;
@@ -16969,6 +17198,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06974;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.39323;
@@ -17025,6 +17255,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04184;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.23594;
@@ -17079,6 +17310,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.84937;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.15063;
@@ -17182,6 +17414,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.92593;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.07407;
@@ -17233,6 +17466,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.78704;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.21296;
@@ -17285,6 +17519,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.64815;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.35185;
@@ -17337,6 +17572,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.46296;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.53704;
@@ -17391,6 +17627,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.27778;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.72222;
@@ -17443,6 +17680,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "F497C50F-30EB-4580-9148-0005B36D0333" = 1;
 };
@@ -17494,6 +17732,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.27778;
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.72222;
@@ -17545,6 +17784,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.2572;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.02058;
@@ -17597,6 +17837,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.21862;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.05916;
@@ -17650,6 +17891,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.18004;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.09774;
@@ -17703,6 +17945,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.1286;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.14918;
@@ -17758,6 +18001,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.07716;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.20062;
@@ -17811,6 +18055,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.27778;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.72222;
@@ -17862,6 +18107,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 1;
 };
@@ -17913,6 +18159,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.92593;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.07407;
@@ -17964,6 +18211,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.78704;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.21296;
@@ -18016,6 +18264,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.64815;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.35185;
@@ -18068,6 +18317,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.46296;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.53704;
@@ -18122,6 +18372,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.27778;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.72222;
@@ -18174,6 +18425,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 1;
 };
