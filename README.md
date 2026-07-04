@@ -333,17 +333,15 @@ Recipes needed
 = Bigplus recipe
 
 *Mayfair Todo (16)*
+
+Check these all at wide and then insert those
+
 === radicals (including spacing)
 === Command line export
-=== Spacing:
-Radicals
 
-skewedFractionHorizontalGap, skewedFractionVerticalGap
 
-Go through the help file again and compare his recommendations with my choices
 
-Script or system to insert the math constants into the glyphs file.  
-Check these all at wide and then insert those
+
 
 == Get the frationrule and overbar/underbar rule size fixed in css
 
@@ -351,6 +349,8 @@ Check these all at wide and then insert those
 
 === Create test documents for the glyphs so far (brackets, sum, otimes, etc) so I can see how good this is looking
 == Union, Subset, \in
+
+==Go through the help file again and compare his recommendations with my choices
 
 ===Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
 ===bigotimes, times
