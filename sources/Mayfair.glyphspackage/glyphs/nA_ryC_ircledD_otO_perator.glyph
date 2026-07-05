@@ -14,10 +14,13 @@ width = 547;
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
+piece = {
+height = 5;
+};
 ref = _smart.operator.circled;
 }
 );
-width = 650;
+width = 1011;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -98,11 +101,15 @@ nAryCircledDotOperator.s12,
 nAryCircledDotOperator.s13,
 nAryCircledDotOperator.s14,
 nAryCircledDotOperator.s15,
-nAryCircledDotOperator.s16
+nAryCircledDotOperator.s16,
+nAryCircledDotOperator.s17,
+nAryCircledDotOperator.s18,
+nAryCircledDotOperator.s19,
+nAryCircledDotOperator.s20
 );
 };
 com.opentypemathtools.smartComponentVariants = {
-N = 16;
+N = 20;
 axis = height;
 step = 5;
 };

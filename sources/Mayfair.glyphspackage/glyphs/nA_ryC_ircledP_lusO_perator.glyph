@@ -1,14 +1,10 @@
 {
-color = 0;
 glyphname = nAryCircledPlusOperator;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.plus.circled;
 }
 );
@@ -24,15 +20,12 @@ height = 5;
 ref = _smart.plus.circled;
 }
 );
-width = 650;
+width = 1053;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.plus.circled;
 }
 );
@@ -42,9 +35,6 @@ width = 563;
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.plus.circled;
 }
 );
@@ -54,9 +44,6 @@ width = 673;
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.plus.circled;
 }
 );
@@ -66,9 +53,6 @@ width = 625;
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.plus.circled;
 }
 );
@@ -78,9 +62,6 @@ width = 763;
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.plus.circled;
 }
 );
@@ -90,9 +71,6 @@ width = 633;
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.plus.circled;
 }
 );
@@ -104,6 +82,7 @@ userData = {
 com.nagwa.MATHPlugin.variants = {
 vVariants = (
 nAryCircledPlusOperator,
+nAryCircledPlusOperator.s01,
 nAryCircledPlusOperator.s02,
 nAryCircledPlusOperator.s03,
 nAryCircledPlusOperator.s04,
@@ -124,6 +103,11 @@ nAryCircledPlusOperator.s18,
 nAryCircledPlusOperator.s19,
 nAryCircledPlusOperator.s20
 );
+};
+com.opentypemathtools.smartComponentVariants = {
+N = 20;
+axis = height;
+step = 5;
 };
 };
 }

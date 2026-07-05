@@ -16,12 +16,20 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 0;
+height = 5;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 41.02024;
+Width = 32.6906;
+};
+pos = (76,-1);
+ref = _smart.plus;
 }
 );
-width = 170;
+width = 547;
 },
 {
 attr = {
@@ -36,12 +44,20 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 0;
+height = 5;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 40.75244;
+Width = 40.51234;
+};
+pos = (81,-1);
+ref = _smart.plus;
 }
 );
-width = 226;
+width = 650;
 },
 {
 attr = {
@@ -56,12 +72,20 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 0;
+height = 5;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 43.10727;
+Width = 35.18395;
+};
+pos = (60,-1);
+ref = _smart.plus;
 }
 );
-width = 182;
+width = 563;
 },
 {
 attr = {
@@ -76,12 +100,20 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 0;
+height = 5;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 43.1;
+Width = 40.36458;
+};
+pos = (85,-1);
+ref = _smart.plus;
 }
 );
-width = 232;
+width = 673;
 },
 {
 attr = {
@@ -96,12 +128,20 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 0;
+height = 5;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 43.33813;
+Width = 40.7155;
+};
+pos = (30,-1);
+ref = _smart.plus;
 }
 );
-width = 226;
+width = 625;
 },
 {
 attr = {
@@ -116,12 +156,20 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 0;
+height = 5;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 41.168;
+Width = 42.62707;
+};
+pos = (88,-3);
+ref = _smart.plus;
 }
 );
-width = 324;
+width = 763;
 },
 {
 attr = {
@@ -136,12 +184,20 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 0;
+height = 5;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 40.68779;
+Width = 40.16142;
+};
+pos = (18,0);
+ref = _smart.plus;
 }
 );
-width = 227;
+width = 633;
 },
 {
 attr = {
@@ -156,12 +212,20 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 0;
+height = 5;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 40.96484;
+Width = 42.99645;
+};
+pos = (30,-3);
+ref = _smart.plus;
 }
 );
-width = 246;
+width = 691;
 },
 {
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -182,6 +246,14 @@ piece = {
 height = 100;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 668.68903;
+Width = 594.83966;
+};
+pos = (286,0);
+ref = _smart.plus;
 }
 );
 width = 7713;
@@ -205,6 +277,14 @@ piece = {
 height = 100;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 662.0401;
+Width = 678.40387;
+};
+pos = (285,0);
+ref = _smart.plus;
 }
 );
 width = 8713;
@@ -228,6 +308,14 @@ piece = {
 height = 100;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 691.83105;
+Width = 623.18079;
+};
+pos = (153,0);
+ref = _smart.plus;
 }
 );
 width = 7793;
@@ -251,6 +339,14 @@ piece = {
 height = 100;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 685.41296;
+Width = 700.74249;
+};
+pos = (322,0);
+ref = _smart.plus;
 }
 );
 width = 9061;
@@ -274,6 +370,14 @@ piece = {
 height = 100;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 659.62988;
+Width = 633.88373;
+};
+pos = (286,0);
+ref = _smart.plus;
 }
 );
 width = 8211;
@@ -297,6 +401,14 @@ piece = {
 height = 100;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 655.98218;
+Width = 684.36023;
+};
+pos = (436,-28);
+ref = _smart.plus;
 }
 );
 width = 9111;
@@ -320,6 +432,14 @@ piece = {
 height = 100;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 656.50854;
+Width = 634.89954;
+};
+pos = (343,1);
+ref = _smart.plus;
 }
 );
 width = 8351;
@@ -343,6 +463,14 @@ piece = {
 height = 100;
 };
 ref = _smart.circle;
+},
+{
+piece = {
+Height = 673.36176;
+Width = 693.68719;
+};
+pos = (394,1);
+ref = _smart.plus;
 }
 );
 width = 9151;
