@@ -333,9 +333,10 @@ Recipes needed
 = Bigplus recipe
 
 *Mayfair Todo (16)*
-=== Rules need to be thicker at higher weights
+=== Make minus/plus use _smart.minus/_smart.plus
 === Fix up circle (color and wider version?)
-=== bigoplus,bigotimes
+=== bigoplus,bigotimes,times
+=== Fix the radical so that it meets the new rule size at Black!
 === Look back at weight of summation
 === ssty
 === Command line export
@@ -346,16 +347,19 @@ Recipes needed
 == Get the frationrule and overbar/underbar rule size fixed in css
 == Get a better lualatex test file for the math constants
 == Go through the help file again and compare his recommendations with my choices
+===Have some "constants" in the recipes
+===Have a system of spotting 'stale' recipes
 ===Center the bar, bracket, brace etc (these might be OK)
 ===relations recipes
-===sym glyph
+===sym glyph so can do many more relations
 ===Look back at serifs on integral in semiexpanded agate
+===Product serifs at high
 spacing/italic correction
 Test ss11 feature at other fonts
 Email Hans about here maybe?
 italic tau
 epsilon?
-Product serifs at high
+
 
 Change the anchors on the marks to they are in Glyphsdata.xml
 Do the large operator K
