@@ -329,14 +329,20 @@ Recipes needed
 = ??? Equals from minus??
 = ??? dot then minus and minus then dot as an intermediate for the colon equals (is there a better way?)
 = Fences Recipes
-= Bigdot recipe
-= Bigplus recipe
+= _smart.circledoperator and _smart.oplus from components
+= Bigdot recipe (I did this manually from smart_circledoperator)
+= Bigplus recipe (I did this manually from smart_oplus)
+
 
 *Mayfair Todo (16)*
-=== Make minus/plus use _smart.minus/_smart.plus
-=== Fix up circle (color and wider version?)
-=== bigoplus,bigotimes,times
+
+= TODO for bigoplus,bigotimes,times
+=== Finish up _smart.circle at agate
+=== Look over three big operators at agate again :-(
+=== Finish up _smart.circle at needlepoint
+=== Look over three big operators at needlepoint, and regular (and try different font sizes)
 === Fix the radical so that it meets the new rule size at Black!
+
 === Look back at weight of summation
 === ssty
 === Command line export
