@@ -337,8 +337,7 @@ Recipes needed
 *Mayfair Todo (16)*
 
 = TODO for bigoplus,bigotimes,times
-=== Learn how to change font size in Context to compare needlepoint and agate
-=== Finish up _smart.circle at needlepoint
+=== Finish up _smart.circle at needlepoint black
 === Look over three big operators at needlepoint, and regular 
 === Do the sidebearings of _smart.circle
 ===== !!! Make some notes on what you did here !!!
