@@ -52,11 +52,11 @@ piece = {
 Height = 40.75244;
 Width = 40.51234;
 };
-pos = (81,0);
+pos = (86,0);
 ref = _smart.plus;
 }
 );
-width = 650;
+width = 664;
 },
 {
 attr = {
@@ -121,7 +121,6 @@ partSelection = {
 height = 1;
 };
 };
-color = 5;
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 partSelection = {
 height = 1;
@@ -139,7 +138,7 @@ Height = 43.91991;
 Width = 43.49512;
 thin = 40;
 };
-pos = (13,0);
+pos = (21,0);
 ref = _smart.plus;
 }
 );
@@ -151,7 +150,6 @@ partSelection = {
 height = 1;
 };
 };
-color = 5;
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 partSelection = {
 height = 1;
@@ -164,13 +162,12 @@ height = 5;
 ref = _smart.circle;
 },
 {
-alignment = -1;
 piece = {
 Height = 43.31044;
 Width = 47.13357;
 thin = 35;
 };
-pos = (64,0);
+pos = (68,0);
 ref = _smart.plus;
 }
 );
@@ -199,7 +196,7 @@ Height = 40.68779;
 Width = 40.16142;
 thin = 60;
 };
-pos = (18,0);
+pos = (35,0);
 ref = _smart.plus;
 }
 );
@@ -223,13 +220,12 @@ height = 5;
 ref = _smart.circle;
 },
 {
-alignment = -1;
 piece = {
-Height = 40.96484;
-Width = 42.99645;
+Height = 42.93182;
+Width = 46.95811;
 thin = 60;
 };
-pos = (30,-3);
+pos = (31,-3);
 ref = _smart.plus;
 }
 );
@@ -291,11 +287,11 @@ piece = {
 Height = 601.3316;
 Width = 615.7746;
 };
-pos = (237,0);
+pos = (248,0);
 ref = _smart.plus;
 }
 );
-width = 7864;
+width = 7977;
 },
 {
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -367,7 +363,6 @@ partSelection = {
 height = 2;
 };
 };
-color = 5;
 layerId = "E3D56838-FD5F-4EAD-A7E4-E136C5615BC2";
 name = "Agate SemiCondensed Upright High";
 partSelection = {
@@ -399,7 +394,6 @@ partSelection = {
 height = 2;
 };
 };
-color = 5;
 layerId = "6C92468D-8492-48DB-8711-40E855AABEF2";
 name = "Agate SemiExpanded Upright High";
 partSelection = {
@@ -477,9 +471,9 @@ ref = _smart.circle;
 {
 piece = {
 Height = 600.46356;
-Width = 622.71906;
+Width = 651.30023;
 };
-pos = (371,0);
+pos = (201,0);
 ref = _smart.plus;
 }
 );

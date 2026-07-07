@@ -337,32 +337,38 @@ Recipes needed
 *Mayfair Todo (16)*
 
 = TODO for bigoplus,bigotimes,times
-=== Finish up _smart.circle at agate
-=== Look over three big operators at agate again :-(
+=== Learn how to change font size in Context to compare needlepoint and agate
 === Finish up _smart.circle at needlepoint
-=== Look over three big operators at needlepoint, and regular (and try different font sizes)
+=== Look over three big operators at needlepoint, and regular 
+=== Do the sidebearings of _smart.circle
+===== !!! Make some notes on what you did here !!!
 === Fix the radical so that it meets the new rule size at Black!
-
 === Look back at weight of summation
-=== ssty
-=== Command line export
 === Union, Subset, \in
-=== Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
 === Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
 
+=== ssty
+=== Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
+===Center the bar, bracket, brace etc (these might be OK)
+===relations recipes
+===Product serifs at high
+===Look back at serifs on integral in semiexpanded agate
+===sym glyph so can do many more relations
+
+spacing/italic correction
+Test ss11 feature at other fonts
+
+Email Hans about here maybe?
+
+----------------------------------------------
+Testing stuff
 == Get the frationrule and overbar/underbar rule size fixed in css
 == Get a better lualatex test file for the math constants
 == Go through the help file again and compare his recommendations with my choices
 ===Have some "constants" in the recipes
 ===Have a system of spotting 'stale' recipes
-===Center the bar, bracket, brace etc (these might be OK)
-===relations recipes
-===sym glyph so can do many more relations
-===Look back at serifs on integral in semiexpanded agate
-===Product serifs at high
-spacing/italic correction
-Test ss11 feature at other fonts
-Email Hans about here maybe?
+
+
 italic tau
 epsilon?
 
