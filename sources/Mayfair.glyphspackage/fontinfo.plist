@@ -2293,7 +2293,6 @@ UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -4498,7 +4497,6 @@ UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
-visible = 1;
 }
 );
 instances = (
@@ -4611,7 +4609,6 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 1;
 };
@@ -4768,7 +4765,6 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.35185;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.64815;
@@ -4929,7 +4925,6 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 1;
 };
@@ -4981,7 +4976,6 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.27778;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.72222;
@@ -5140,7 +5134,6 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18004;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25412;
@@ -5304,7 +5297,6 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.72222;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.27778;
@@ -5356,7 +5348,6 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 1;
 };
@@ -5513,7 +5504,6 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.64815;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.35185;
@@ -5674,7 +5664,6 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 1;
 };
@@ -10166,6 +10155,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.35255;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.2956;
@@ -10332,6 +10322,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.45607;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.54393;
@@ -14816,6 +14807,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.16272;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.48543;
@@ -14982,6 +14974,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.74895;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.25105;
@@ -15977,6 +15970,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11932;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.52882;
@@ -16143,6 +16137,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.8159;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.1841;
@@ -17138,6 +17133,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09763;
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.55052;
@@ -17304,6 +17300,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.84937;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.15063;
@@ -18258,6 +18255,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.64815;
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.35185;
@@ -18418,6 +18416,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "41FE8A15-28AA-4FFF-A503-D6748EB37864" = 1;
 };

@@ -1,138 +1,206 @@
-**Playfair Math**
+# Mayfair
 
-This records the steps taken to create a math font to pair with Playfair. The hope is that these notes may also help with other font pairings in the future.  Not all the steps need to be done in the order they appear here.
+The purpose of this document is to record the steps that were taken to create a mathematics font to pair with Playfair [https://github.com/clauseggers/Playfair] designed by Claus Eggers Sørensen. Rather than being considered a "manual," it should be viewed somewhere between an opinion piece and a diary, written in the hope that such a record is of help to others who may want to do something similar. Certainly many of the steps here could be done differently, or better, and a different font may require different steps or different choices.
 
-My preference is to start with a text font and remove unwanted things.  The other route would be to start with a blank font and import the pieces that you need.
+The document proceeds step-by-step. Not all of these steps necessarily need to be taken in this order, but some thought has gone into what makes more sense as an earlier step than a later step. Moreover, some of the test documents that accompany this process were made under the assumption that earlier steps have been completed.
 
-*Step 1: Select a font to pair*
+## Software Choice
 
-Things to consider include glyph coverage, existing italic and bold styles, and possible optical sizing. Existing mathematical glyphs, such as plus and minus, may also be helpful. Check the font license to make sure you can reuse it, and confirm that there is not already an existing math-font pairing available.  Go to Font->Name and change the name if appropriate.
+The following software was used during this process:
 
-Give your font its new name.
+For designing the font:
 
-*Step 2*
-Change the languages to
+- Glyphs 3 https://glyphsapp.com/
+
+And these are the Glyphs plugins:
+
+- OpenType Math (essential)
+- Show Stem Thickness
+- LightTable
+- mekkablue scripts
+
+## Script Writing
+
+Alongside this process are various Glyphs3 scripts.  Some were hand written, and some written by ChatGPT 5.5.
+
+## Testing Documents
+
+Part of this process was to create some reusable and consistent testing documents for a mathematics font, about which we will say more below.  For testing the following softwares were used
+
+- ConTeXt
+- Skim pdf reader
+- Various web browsers
+
+### Automatic ConTeXt generation
+?What to say here?
+
+## References
+- [Building OpenType Math Fonts](https://github.com/notofonts/math/blob/main/documentation/building-math-fonts/index.md)
+
+
+## Getting Started
+
+### Step 1: Select a Font to Pair
+
+I chose Playfair as it is a beautiful open-source font that is distinct from the existing mathematics fonts available. It has three variable axes (weight, width, optical size) and I wanted to use this as an excuse to explore optical sizing.   It also has both upright and italics, the latter being useful since mathematics expects italic latin letters.  Playfair is  a very "precise font" (with the horizontal strokes going down to 1 unit at maximal optical sizing). Also available were some basic mathematics glyphs (plus, minus, divide, integral, radical) available.
+
+My preference is to start with an existing font file and remove pieces rather than starting with a blank project and importing things. The reason is that this way I find myself stumbling across aspects of the existing font that I might not otherwise notice.
+
+So make a copy of the `.glyphs` or `.glyphspackage` and change Font -> Info -> Family Name. Add a new author name if appropriate. If there is a variable instance in Font -> Info -> Exports, you may want to change that name as well.
+
+### Step 2
+
+Change Font Info -> Features -> LanguageSystems to:
+
 ```
 languagesystem DFLT dflt;
 languagesystem math dflt;
 ```
 
-*Step 3: Remove non-mathematics letters from the font*
-Remove ligatures, these are not used in a mathematics font.
+### Step 3: Remove Non-Mathematics Letters from the Font
 
-The main uppercase and lowercase latin letters for a Math font are A-Z and a-z.  Accented versions of these should be removed.  One way to do this is to select all letters and make them non-exporting.  Then Filter -> Mathematics -> Latin and select those ones and make them exporting.
+Many glyphs in a text font have no place in a mathematics font. You can either remove these glyphs entirely or set them to non-exporting (I prefer the latter, at least initially). The main Latin uppercase and lowercase letters for a math font are A-Z and a-z, and all accented versions of these should be removed or set to non-exporting. One way to do this is to select all letters and make them non-exporting. Then use Filter -> Mathematics -> Latin, select those glyphs, and make them exporting.
 
-Check the .ssXX and .cvYY alternates of such letters as you probably want to keep those to match the text font
+Check the `.ssXX` and `.cvYY` alternates of such letters, as you want to keep those in the mathematics font to match the text font.
 
-I also disabled all the .lf and .tf glyphs as these are not used in math (is that correct? look again at unicode-math for the features it supports)
+I also replaced the Playfair figures with the lining figures (`.lf`) versions, as they are more useful for a mathematics font. The original figures, as well as the tabular figures, were removed.
 
-I also replaced the Playfair figures with the .lf versions as I think that is more useful in mathematics.
+### Step 4: Math Constants Table
 
-*Step 4: Remove or disable features*
-Many font features do not make sense in a math font and can be removed or made non-active.  The following can be safely removed/made inactive:
+Glyphs has a MathOpenType plugin created by Khaled Hosny https://github.com/Nagwa-Limited-Community/Glyphs-MATH-Plugin and it is also available in the Plugins directory from Glyphs 3. I made some small changes for a version that can be found *here*.
 
-Maybe keep
-Uppercase/lowercase
+Go to Edit -> Edit Math Constants. The three-dot menu has a drop-down item for "Guess all Masters." It will make reasonable guesses for nearly all the constants.
 
-Remove
-All other classes
-ccmp
-locl
-subs
-sups
-numr
-dnom
-frac
-afrc
-kern
-mark
-mkmk
-sinf
-orfn
-lnum
-pnum
-tnum
-onum
-c2sc
-case
-smcp
-dlig
-liga
+The RuleThickness will take values from the minus glyph or underscore glyph. DisplayOperatorMinHeight will take a guess based on the integral glyph (if available). SuperscriptShiftUp (and others) will either use the `superscriptYOffset` custom parameter, or information from `zero.sups` if the `sups` feature has been set up in the font.
 
+You should expect to return to these constants as the font develops. Getting the FractionRuleThickness right is particularly important early in development, as many other aspects of the font stem from this quantity.
 
-*Step 5: Export Instances*
+### Step 5: Remove or Disable Features
 
-Export instances at each master coordinate. It is also useful to export several intermediate instances (see next step).
+Many font features do not make sense in a math font and can be removed or made inactive. The following can be safely removed or made inactive.  Others may need "updating" before the font can be exported if you have removed glyphs.
 
-*Step 6: Math Constants Table*
-Install the Math OpenType plugin (version made by JR link). Go to Edit -> Edit Math Constants. The three-dot menu has a drop-down item for "Guess all Masters". It will make reasonable guesses for many constants. 
+For Mayfair the following features were removed or disabled:
 
-One exception may be DisplayOperatorMinHeight, which you can edit yourself or leave as zero and return to later. **Todo: have this make gusses for thse and the skewedfraction constants*
+- ccmp
+- locl
+- subs
+- sups
+- numr
+- dnom
+- frac
+- afrc
+- kern
+- mark
+- mkmk
+- sinf
+- orfn
+- lnum
+- pnum
+- tnum
+- onum
+- c2sc
+- case
+- smcp
+- dlig
+- liga
 
-The rulethickness will take values from the minus glyph or underscore glyph
-DisplayOperatorMinHeight will take a guess based on the integral glyph (if available)
-SuperscriptShiftUp (and others) will either use the superscriptYOffset custom paramter, or information from zero.sups if the sups feature has been setup in the font.
+Moreover I removed nearly all the classes as they were no longer in use (I kept Uppercase and Lowercase, but I am not sure they are used anywhere for a math font or if they really make sense):
 
-You should expect to go back to these constants as you develop your font.
+### Step 5: Import Italics
 
-**note** The SuperscriptShiftUpCramped seems to bhave differently in mathml in chrome than lualatex.   In chrome there seems to be some minimum value that is being taken here that is not present in lualatex
+Playfair has an italics font, which was used to import various math-italic glyphs. Thankfully they had the same master setup as the upright which made importing easier.  At this stage we should also import `idotless` and `jdotless` from the italics font. For this process we have the script "Import Italics"
 
-SuperscriptBaselineDropMax is not behaving in mathmlcore in the same was as the help file suggests it should be
+#### Note to self:
+
+Think about what happens here with italics that have brackets or alternate layers; this might need further testing in the script.
 
 
+### Step 6: Export Instances
 
-** Step 7: Import Italics **
-If you have italics in another font then you will want to import those glyphs into the math font.  The script "Import Italics" will attempt to help you with this.  If your font has them, import also idotless and jdotless from your italics font.
-There is a case here to consider, namely if the source glyph has bracket or alternate layers.
+Export instances at each master. It is also useful to export several intermediate instances (see next step).
 
-** Step 9: Dotless **
-Add the dtls feature
-Here is mine at this stage
-``sub i by idotless;
+### Step 7: Adjust the Math Constants
+
+#### Note
+
+Discuss the Math Constants tool.
+
+The SuperscriptShiftUpCramped seems to behave differently in MathML in Chrome than in LuaLaTeX. In Chrome there seems to be some minimum value that is being taken here that is not present in LuaLaTeX.
+
+SuperscriptBaselineDropMax is not behaving in MathML Core in the same way as the help file suggests it should.
+
+### Step 8: Dotless
+
+Add the `dtls` feature in Font Info -> Features.
+
+The Mayfair font had this for the `dtls` feature at this stage:
+
+```
+sub i by idotless;
 sub j by jdotless;
 sub iitalic-math by idotlessitalic-math;
-sub jitalic-math by jdotlessitalic-math;``
+sub jitalic-math by jdotlessitalic-math;
+```
 
-** Step 8: Accents **
-The filter will show you the accents.  Many typesetting system use the non-combining accents, but I imagine it does not do any harm to leave the combining onese in as well.
+### Step 9: Accents
 
-The Glyphs3 script "Add math.ta Anchors for Combining Marks" will add math.ta anchors (it will guess the position based on either availability of _top or _bottom anchors, else pick the midpoint).   You can run this script again when further accents are created.
+Many mathematics typesetting systems use the non-combining accents, but I imagine it does not do any harm to leave the combining ones in as well (that is, those that end in `.comb`).
 
-Test file: accenthorizontal.tex.
+Mathematics accents benefit from having a `math.ta` anchor. The script "Add math.ta Anchors for Combining Marks" will add `math.ta` anchors (it will guess the position based on either the availability of `_top` or `_bottom` anchors, or else pick the midpoint). You can run this script again if and when further accents are created.
 
+#### Test File
 
+`accenthorizontal.tex`.
 
-** Step 10: Add underline anchors **
-Not strictly necessary; only used for the bold variants described in Step XX.  **script needed to reuse existing bottom anchors**
+### Step 10: Add Underline Anchors
 
-** Step 11: Add top anchors**
-Not strictly necessary, but useful in the next step that uses "top" to determine the math.ta position.   The script Report Letter Glyphs Missing Top or Bottom Anchors will notifiy you of which letters are missing such anchors.  There is a mekkablue script that will add them at default positions, but they may then need manual adjusting.
+Not strictly necessary; only used for the bold variants described in Step XX.
 
-** Step 12: Add math.ta anchors to letters**
-The script "Add math.ta Anchors for Letters" will help you add math.ta anchors to your letters.  *note italic correction*.  It is a good idea if all your letters already have a "top" created for this.
-Note: This script will create the math.ta anchors at cap-height (the y-position of this anchor is not used).  The y position of the math.ta anchor is not used by the math engine; the script places it somewhere reasonable.  
+#### Note
 
-You may still need to adjust some of these by hand.  Test document: blah.
+A script is needed to reuse existing bottom anchors.
 
-** Step 12: Bold **
-Add an axis called "Math Weight" with code MGHT.    Have the axis mapping be the same as that of the Weight axis.
+### Step 11: Add Top Anchors
 
-Add a virtual master for the Math Weight axis (so for Playfair this had position Weight = minimum (360); opsz = minimum (5); Width = minimum (94); Math Weight = maximum (540))
+Not strictly necessary, but useful in the next step that uses "top" to determine the `math.ta` position. The script "Report Letter Glyphs Missing Top or Bottom Anchors" will report which letters are missing such anchors. There is a mekkablue script that will add them at default positions, but they may then need manual adjusting.
 
-Create your mathbold letters as needed from the filter on the left.    Run the script Create or adjust math bold letters (you can apply this to just the selected bold-math glyphs or all the boldmath glyphs).  Now do the same for bolditalic-math glyphs.
+### Step 12: Add math.ta Anchors to Letters
 
-Consider using the check_math_bold_upright_completeness to see for any missing bold and bolditalics.  You may want to use this script again as you build more letters.
+Letters benefit from having a `math.ta` anchor (otherwise typesetting systems will typically put accents at the midpoint of the bounding box). Note that the y-position of any `math.ta` anchor is never used, so they can be placed anywhere.
 
-Now adjust your instances to give them a suitable MGHT value.  For Playfair MGHT is set to min(WGHT + 200,900).   The script set_math_weight_on_static instances does this.
+The script "Add math.ta Anchors for Letters" will help you add `math.ta` anchors to your letters. The script asks for italic correction that can be obtained from Font -> Info of the italic font; this is used only to help better guess the position of the anchors for the italic letters. Once run, these anchors may need manual adjusting.
 
-The boldmath.html page will help you check if the bold has been created correctly.  The red and the black *should* be identical, but there appears to be some minor (hopefully unnoticable) differences.
+#### Test Documents
 
-**need also a latex test here**
+### Step 12: Bold
 
-*Step 12b Optional*
- Note that the above setup means that if Weight is 900 then the boldmath is the same as the non-bold, and if Weight is close to 900 then there is little distinction.  There is no easy way around this.  
- 
- One option is to not create instances at these higher weights.  Another is to add a small "underline" to all the bold-math characters at high weight.  This is easily done by ensuring that all the bold and bolditalics have a bottom/underline anchor and then pasting the below feature into say ss10 or similar (you might want this turned on automatically at higher weights, it is a judgement call).  Adjust the below to include other bold letters as needed.  Manually adjustment of the bottom/underline anchor may be needed for some letters as appropriate.  (The reason it is useful to use underline rather than bottom is that components of glyphs may have their own bottom anchors that are not the ones that you want; this is a minor thin)
+There are various ways in which one can use the weight axis in an efficient way to obtain the mathematics bold letters. This is the one that I used also in Pennstander that I think works well and gives good flexibility. If and when new OpenType features become supported for mathematics fonts, there may be a more efficient way to do this.
+
+In Font Info, add an axis called "Math Weight" with code `MGHT`. Have the axis mapping be the same as that of the Weight axis.
+
+Add a virtual master for the Math Weight axis (so for Mayfair this had position Weight = minimum (360); opsz = minimum (5); Width = minimum (94); Math Weight = maximum (900)).
+
+Create your math bold letters as needed (you can use the Custom Filter). The script "Create or adjust math bold letters" will allow you to create just the selected bold-math glyphs or all the bold-math glyphs. Now do the same for bolditalic-math glyphs.
+
+What this does: Suppose you are asking the script to create the glyph `Abold-math`. It copies masters from the `A` glyph in such a way as to "collapse" the weight axis so that varying the weight has no effect, and instead transforms it to the math weight axis (so that at the highest math weight this glyph is bold). This is some kind of "rotation" in design space, and I am surprised I could not find it already done somewhere. The script has to take care with brace/bracket layers and the final version worked for this font.
+
+You can also consider using the script "check_math_bold_upright_completeness" to check for any missing bold and bold italics. You may want to use this script again as you build more letters.
+
+Now adjust your instances to give them a suitable `MGHT` value. For Mayfair `MGHT` is set to `min(WGHT + 200,900)`. The script `set_math_weight_on_static` instances does this.
+
+#### Test Documents
+
+The `boldmath.html` page will help you check if the bold has been created correctly. The red and the black *should* be identical; the tiny differences, I expect, are some kind of rounding errors.
+
+#### Note
+
+A LaTeX test is also needed here.
+
+### Step 12b: Optional
+
+The above way of managing the bold letters means that if Weight is 900 then the only natural choice of Math Weight is also 900 and then the regular and bold letters will look identical (and even if Weight is close to 900 they will be nearly identical). I do not see an easy way around this.
+
+One option is to not create instances at these higher weights. Another is to add a small "underline" to all the bold-math characters at high weight. This is easily done by ensuring that all the bold and bold italics have a bottom/underline anchor and then pasting the feature below into, say, `ss10` or similar (you might want this turned on automatically at higher weights; it is a judgement call). Adjust the below to include other bold letters as needed. Manual adjustment of the bottom/underline anchor may be needed for some letters as appropriate. (The reason it is useful to use underline rather than bottom is that components of glyphs may have their own bottom anchors that are not the ones that you want.)
 
 ```
  @LatinBoldMath = [
@@ -179,40 +247,53 @@ The boldmath.html page will help you check if the bold has been created correctl
 lookup AddMathUnderline {
     sub @AllMathUnderlineTargets by @AllMathUnderlineTargets macronbelowcomb;
 } AddMathUnderline;
-'''
+```
 
-You can change macronbelowcomb to another glyph that has a _bottom anchor; make sure this glyph is category Mark and Nonspacing
+You can change `macronbelowcomb` to another glyph that has a `_bottom` anchor; make sure this glyph is category Mark and Nonspacing.
 
-** Step 13: Optical Sizing **
+### Step 13: Optical Sizing
 
-Playfair has an opz axes so optical sizing is easily done. 
+Mayfair has optical sizing as an axis already. But there is an additional optical sizing for the superscripts and subscripts that applies just for mathematics. Thankfully we can use the optical sizing axis for this additional optical sizing. If the font does not have optical sizing, you might be able to do something similar with the weight axis (but the script below would need changing).
 
-Create an axis called STYA and one called STYB. These can be hidden axes. Create virtual masters.  Since they are hidden you do not really need an axis table for these.
+Create one new axis called `STYA` and one called `STYB`. These can eventually be hidden axes, but you might want to keep them unhidden during development. Create virtual masters for each of them. The first was created at `wght=360`, `opsz=5`, `wdth=94`, `MGHT=360`, `STYA=1200`, `STYB=5`, and the second at `wght=360`, `opsz=5`, `wdth=94`, `MGHT=360`, `STYA=5`, `STYB=1200`.
 
- Add glyphs A.ssty1 A.ssty2 B.ssty1 B.ssty2 etc.  Select these and run the script populate_ssty.py.  
-
- You can repeat this step for other glyphs that you want optical sizing for, either now or later.
-
- Add the feature ssty and have it autogenerate
-
- ** there was a bug here since I did not create all the axes first; need to change this README and change the populate bold script as well to take into account of the STYA and STYB axes correctly **
-
- **need testing document here**
-
-Next you need to edit your instances for this.  If the scriptsize is 70%/50% then if your instance is designed for 10pt you want to set the STYA and STYB values so that the .ssty1/ssty glyphs are designed at 7pt/5pt.
-
-**need testing documents here**
-
-*Step 13: Add Math Axis Metric*
-It is useful to have a Math Axis metric.  You can select multiple masters to create this all at once.  It should be at the midheight of the minus glyph.  
-
-Later you may want a metric for the height of big operators, and for the height and depth of the (largest) bracket/fence, and for the height/depth of the (largest) integral operator.
+Since these axes are hidden you do not need an axis mapping table for these.
 
 
+Add glyphs `A.ssty1`, `A.ssty2`, `B.ssty1`, `B.ssty2`, etc. Select these and run the script "populate_ssty.py."
+
+You can repeat this step for other glyphs that you want optical sizing for, either now or later.
+
+Add the feature Font Info -> `ssty` and have it autogenerate.
+
+#### Note
+
+There was a bug here since I did not create all the axes first; need to change this README and change the populate bold script as well to take into account of the `STYA` and `STYB` axes correctly.
+
+#### Test Documents
+
+A testing document is needed here.
+
+Next you need to edit your instances for this. If the script size is 70%/50%, then if your instance is designed for 10pt you want to set the `STYA` and `STYB` values so that the `.ssty1`/`.ssty2` glyphs are designed at 7pt/5pt. This took a little effort, and I need to go back to it.
+
+#### Test Documents
+
+A testing document is needed here.
+
+### Step 14: Add Math Axis Metric
+
+It is useful to have a Math Axis metric. Font Info -> Masters. You can select multiple masters to create this all at once. It should be the same as that of the MathConstant Math Axis.
+
+Other metrics can also be useful. Mayfair has them for the big operators, the height and depth of the largest bracket/fence, and the height/depth of the largest integrals.
 
 
-*Step 13: Add Glyphs!*
-These can be taken in pretty much any order
+### Step 14: Add Glyphs
+
+These can be done in pretty much any order. We will discuss various design choices made for Mayfair and some of the scripts we developed for these in the sections below.
+
+
+*Glyphs*
+
 
 **Components**
 _smart.circle (height)
@@ -226,18 +307,54 @@ Things to check: that the plus touches the circle perfectly
 
 Could I create a testing document for this glyph?
 
-
-
 _smart.times (can be _smart.plus rotated by 45).  Is this a component or a glyph?
 Design choices: the plus was thinner at small sizes; the smallest one (plus.circle) even more so done with scaling
 Things to check: that the times touches the circle perfectly
 
 
+**Integrals**
+
+Design or use your existing integral
+1. Cut it into 5 pieces.  The script cut at y-value can help.  You want a middle piece so you can swap it out later for other kinds of integrals, and the two vertical pieces can be extenders.
+
+2. Add high layers using the script.
+
+3. Design the high layers. For an integral horizontal stem This could be easy if you only need to stretch the extenders.  For a slanted one you will need to design more.   I adjusted the height of the integrals to match the height of the largest size of the large operators.
+
+4. Add a center anchor, top and bottom.  Make the center align with the math-axis on all layers. 
+
+** for double integral**
+create _smart.dblIntegral
+add _smart.integral twice
+adjust the #exit and #entry for _smart.integral as needed
+make higher layers for _smart.dblIntegral.   Adjust the heights 0 for the small, 100 for the max
+create dblIntegral and add _smart.dblIntegral as a component
+create the height variants from the script
+Things to check: exit/entry for semicondensed and semiexpanded; math.ic should inherit.  Test against integral and tripleintegral
+
+
+***For contourIntegral***
+create _smart.contourIntegral
+Add _smart.integral Add _smart.circle
+Script for High layers
+Adjust sizing of the components as desired as well as the scaling (both can be adjusted!)
+Create contourIntegral
+Add _smart.contourIntegral
+Script: Create size variants
+Think about the sidebearings as these are not right from these components!
+Think about math.ic (I want this inherited from the component I think so need to adjust the script)
 
 
 
 **Big Operators**
 
+
+** for product **
+Usual build process (no need to describe)
+Stems slightly thicker at height
+**todo: return to the serifs at high**
+
+** for plus**
 
 
 ****For bigdot***
@@ -258,16 +375,6 @@ Decompose oplus after running script to make the plus lighter by changing the "s
 %Use _smart.oplus to make oplus and nAryOplus
 %Make vertical size variants from nAryOplus
 
-** For contourIntegral **
-create _smart.contourIntegral
-Add _smart.integral Add _smart.circle
-Script for High layers
-Adjust sizing of the components as desired as well as the scaling (both can be adjusted!)
-Create contourIntegral
-Add _smart.contourIntegral
-Script: Create size variants
-Think about the sidebearings as these are not right from these components!
-Think about math.ic (I want this inherited from the component I think so need to adjust the script)
 
 
 **Fences**
@@ -300,36 +407,8 @@ Test document:
 mathfonttester
 varianttester??
 
-**Integrals**
-
-Design or use your existing integral
-1. Cut it into 5 pieces.  The script cut at y-value can help.  You want a middle piece so you can swap it out later for other kinds of integrals, and the two vertical pieces can be extenders.
-
-2. Add high layers using the script.
-
-3. Design the high layers. For an integral horizontal stem This could be easy if you only need to stretch the extenders.  For a slanted one you will need to design more.   I adjusted the height of the integrals to match the height of the largest size of the large operators.
-
-4. Add a center anchor, top and bottom.  Make the center align with the math-axis on all layers. 
-
-** for double integral**
-create _smart.dblIntegral
-add _smart.integral twice
-adjust the #exit and #entry for _smart.integral as needed
-make higher layers for _smart.dblIntegral.   Adjust the heights 0 for the small, 100 for the max
-create dblIntegral and add _smart.dblIntegral as a component
-create the height variants from the script
-Things to check: exit/entry for semicondensed and semiexpanded; math.ic should inherit.  Test against integral and tripleintegral
-
-** for product **
-Usual build process (no need to describe)
-Stems slightly thicker at height
-**todo: return to the serifs at high**
-
-** for plus**
 
 **Arrows**
-
-
 
 ======
 Recipes needed
@@ -344,19 +423,16 @@ Recipes needed
 *Mayfair Todo (16)*
 
 = TODO for bigoplus,bigotimes,times
-=== Do the sidebearings of _smart.circle
-===== !!! Make some notes on what you did here !!!
 === Create times as sizes
-=== Fix the radical so that it meets the new rule size at Black!
 === Look back at weight of summation
 === Union, Subset, \in
 === Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
-
 === ssty
 == Return to bigodot, bigoplus, bigotimes
 === Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
 ===Center the bar, bracket, brace etc (these might be OK)
-===relations recipes
+===relations recipes (in fact need to revisit the entire recipe system)
+===may need to think more about sidebearings of _smart.circle as I just did this roughly.
 ===Product serifs at high
 ===Look back at serifs on integral in semiexpanded agate
 ===sym glyph so can do many more relations
