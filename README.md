@@ -74,11 +74,11 @@ I also replaced the Playfair figures with the lining figures (`.lf`) versions, a
 
 ### Step 4: Math Constants Table
 
-Glyphs has a (MathOpenType plugin)[https://github.com/Nagwa-Limited-Community/Glyphs-MATH-Plugin] created by Khaled Hosny and it is also available in the Plugins directory from Glyphs 3. I made some small changes for a version that can be found *here*.
+Glyphs has a [MathOpenType plugin](https://github.com/Nagwa-Limited-Community/Glyphs-MATH-Plugin) created by Khaled Hosny and it is also available in the Plugins directory from Glyphs 3. I made some small changes for a version that can be found *here*.
 
 Go to Edit -> Edit Math Constants. The three-dot menu has a drop-down item for "Guess all Masters." It will make reasonable guesses for nearly all the constants.
 
-The RuleThickness will take values from the minus glyph or underscore glyph. DisplayOperatorMinHeight will take a guess based on the integral glyph (if available). SuperscriptShiftUp (and others) will either use the `superscriptYOffset` custom parameter, or information from `zero.sups` if the `sups` feature has been set up in the font.
+The RuleThickness will take values from the minus glyph or underscore glyph. DisplayOperatorMinHeight will take a guess based on the integral glyph (if available). SuperscriptShiftUp (and others) will either use the `superscriptYOffset` custom parameter, or information from the ``sups`` feature has been set up in the font.
 
 You should expect to return to these constants as the font develops. Getting the FractionRuleThickness right is particularly important early in development, as many other aspects of the font stem from this quantity.
 
@@ -86,7 +86,7 @@ You should expect to return to these constants as the font develops. Getting the
 
 Many font features do not make sense in a math font and can be removed or made inactive. The following can be safely removed or made inactive.  Others may need "updating" before the font can be exported if you have removed glyphs.
 
-For Mayfair the following features were removed or disabled:
+For Mayfair the following features were removed or disabled (Font Info->Features)
 
 - ccmp
 - locl
@@ -115,7 +115,7 @@ Moreover I removed nearly all the classes as they were no longer in use (I kept 
 
 ### Step 5: Import Italics
 
-Playfair has an italics font, which was used to import various math-italic glyphs. Thankfully they had the same master setup as the upright which made importing easier.  At this stage we should also import `idotless` and `jdotless` from the italics font. For this process we have the script "Import Italics"
+Playfair has an italics font, which was used to import various math-italic glyphs. Thankfully they had the same master setup as the upright which made importing easier.  At this stage we should also import `idotless` and `jdotless` from the italics font. For this process we have the script ``Mayfair Scripts->setup->Import Math Italic Glyphs From Source``
 
 #### Note to self:
 
@@ -124,11 +124,11 @@ Think about what happens here with italics that have brackets or alternate layer
 
 ### Step 6: Export Instances
 
-Export instances at each master. It is also useful to export several intermediate instances (see next step).
+Export instances at each master. It is also useful to export several intermediate instances (these can be useful in the next step).
 
 ### Step 7: Adjust the Math Constants
 
-#### Note
+#### Note: This section needs finishing
 
 Discuss the Math Constants tool.
 
@@ -140,7 +140,7 @@ SuperscriptBaselineDropMax is not behaving in MathML Core in the same way as the
 
 Add the `dtls` feature in Font Info -> Features.
 
-The Mayfair font had this for the `dtls` feature at this stage:
+Mayfair had this for the `dtls` feature at this stage:
 
 ```
 sub i by idotless;
@@ -149,51 +149,64 @@ sub iitalic-math by idotlessitalic-math;
 sub jitalic-math by jdotlessitalic-math;
 ```
 
+More dotless features can be added as the font developts.
+
 ### Step 9: Accents
 
-Many mathematics typesetting systems use the non-combining accents, but I imagine it does not do any harm to leave the combining ones in as well (that is, those that end in `.comb`).
+Many mathematics typesetting systems use the combining accents (that is, those that end in `.comb`)., but I imagine it does not do any harm to leave the non-combining ones in as well 
 
-Mathematics accents benefit from having a `math.ta` anchor. The script "Add math.ta Anchors for Combining Marks" will add `math.ta` anchors (it will guess the position based on either the availability of `_top` or `_bottom` anchors, or else pick the midpoint). You can run this script again if and when further accents are created.
+Mathematics accents benefit from having a `math.ta` anchor. Use ``Mayfair Scripts -> setup -> Insert math.ta Anchors for Math Accents``. It will add `math.ta` to an internal list of.anchors (it will guess the position based on either the availability of `_top` or `_bottom` anchors, or else pick the midpoint). You can run this script again if and when further accents are created.
 
 #### Test File
 
 `accenthorizontal.tex`.
 
-### Step 10: Add Underline Anchors
-
-Not strictly necessary; only used for the bold variants described in Step XX.
-
 #### Note
 
-A script is needed to reuse existing bottom anchors.
+### Step 10: Add Top Anchors
 
-### Step 11: Add Top Anchors
+Not strictly necessary, but useful in the next step that uses "top" to determine the `math.ta` position. The script ``Mayfair Scripts->report->Report Mathematical Letters Missing Top or Bottom Anchors``  will report which letters are missing such anchors. There is a mekkablue script that will add them at default positions, but they may then need manual adjusting.
 
-Not strictly necessary, but useful in the next step that uses "top" to determine the `math.ta` position. The script "Report Letter Glyphs Missing Top or Bottom Anchors" will report which letters are missing such anchors. There is a mekkablue script that will add them at default positions, but they may then need manual adjusting.
-
-### Step 12: Add math.ta Anchors to Letters
+### Step 11: Add math.ta Anchors to Letters
 
 Letters benefit from having a `math.ta` anchor (otherwise typesetting systems will typically put accents at the midpoint of the bounding box). Note that the y-position of any `math.ta` anchor is never used, so they can be placed anywhere.
 
-The script "Add math.ta Anchors for Letters" will help you add `math.ta` anchors to your letters. The script asks for italic correction that can be obtained from Font -> Info of the italic font; this is used only to help better guess the position of the anchors for the italic letters. Once run, these anchors may need manual adjusting.
+The script ``Mayfair Scripts->setup->Insert or adjust math.ta Anchors for Mathematical Letters`` will help you add `math.ta` anchors to your letters. The script asks for italic correction that can be obtained from Font -> Info of the italic font; this is used only to help better guess the position of the anchors for the italic letters. Once run, these anchors may need manual adjusting.
 
 #### Test Documents
 
-### Step 12: Bold
+### Step 12: Add Axes
 
+#### Bold 
 There are various ways in which one can use the weight axis in an efficient way to obtain the mathematics bold letters. This is the one that I used also in Pennstander that I think works well and gives good flexibility. If and when new OpenType features become supported for mathematics fonts, there may be a more efficient way to do this.
 
-In Font Info, add an axis called "Math Weight" with code `MGHT`. Have the axis mapping be the same as that of the Weight axis.
+In Font Info, add an axis called "Math Weight" with code `MGHT`.   Since Playfair has a math axis mapping I made the math weight follow this same mapping.
 
-Add a virtual master for the Math Weight axis (so for Mayfair this had position Weight = minimum (360); opsz = minimum (5); Width = minimum (94); Math Weight = maximum (900)).
+#### Optical Sizing
+Mayfair has optical sizing as an axis already. But there is an additional optical sizing for the superscripts and subscripts that applies just for mathematics. Thankfully we can use the optical sizing axis for this additional optical sizing. If the font does not have optical sizing, you might be able to do something similar with the weight axis (but the script below would need changing).
 
-Create your math bold letters as needed (you can use the Custom Filter). The script "Create or adjust math bold letters" will allow you to create just the selected bold-math glyphs or all the bold-math glyphs. Now do the same for bolditalic-math glyphs.
+Create one new axis called `STYA` and one called `STYB`. These can eventually be hidden axes, but you might want to keep them unhidden during development.
 
-What this does: Suppose you are asking the script to create the glyph `Abold-math`. It copies masters from the `A` glyph in such a way as to "collapse" the weight axis so that varying the weight has no effect, and instead transforms it to the math weight axis (so that at the highest math weight this glyph is bold). This is some kind of "rotation" in design space, and I am surprised I could not find it already done somewhere. The script has to take care with brace/bracket layers and the final version worked for this font.
+Since these axes are hidden you do not need an axis mapping table for these.
 
-You can also consider using the script "check_math_bold_upright_completeness" to check for any missing bold and bold italics. You may want to use this script again as you build more letters.
+#### Bold virtual masters
 
-Now adjust your instances to give them a suitable `MGHT` value. For Mayfair `MGHT` is set to `min(WGHT + 200,900)`. The script `set_math_weight_on_static` instances does this.
+Then add a virtual master for the Math Weight axis (so for Mayfair this had position Weight = minimum (360); opsz = minimum (5);SSYA=5, SSTYB=5, Width = minimum (94); Math Weight = maximum (900)).
+
+#### STYA and STYB virtual masters
+
+ Create virtual masters for each of them. The first was created at `wght=360`, `opsz=5`, `wdth=94`, `MGHT=360`, `STYA=1200`, `STYB=5`, and the second at `wght=360`, `opsz=5`, `wdth=94`, `MGHT=360`, `STYA=5`, `STYB=1200`.
+
+
+### Step 12: Bold
+
+Create your math bold letters as needed (you can use the Custom Filter). The script ``Mayfair Scripts->setup->Create bold letters``  will allow you to create just the selected bold-math glyphs or all the bold-math glyphs. Now do the same for bolditalic-math glyphs.
+
+Here is what this script is doing:  Suppose you are asking it to create the glyph `Abold-math`. It copies masters (and bracket layers if present) from the `A` glyph in such a way as to "collapse" the weight axis so that varying the weight has no effect at all.  Moreover it copies these layers so that the math weight axis does have an effect (so that at the highest math weight this glyph is bold). This is a kind of "rotation" in design space, and I am surprised I could not find it already in use.  
+
+You can also consider using the script ``Mayfair scripts->reports-> Report math bold completeness`` to check for any missing bold and bold italics. You may want to use this script again as you build more letters.
+
+Now adjust your instances to give them a suitable `MGHT` value.  The script ``Mayfair ->Script-> Set Math Weight on Static Instances`` did this for all the instances.  The UI of this script asks for the maximum weight (for Mayfair it is 900) and the adjustment for bold (chosen to be 200).  Then the MWGT is set to `min(WGHT + 200,900)` for each of the instances.   
 
 #### Test Documents
 
@@ -203,7 +216,7 @@ The `boldmath.html` page will help you check if the bold has been created correc
 
 A LaTeX test is also needed here.
 
-### Step 12b: Optional
+### Step 12b: Bold letters at high weight (very optional)
 
 The above way of managing the bold letters means that if Weight is 900 then the only natural choice of Math Weight is also 900 and then the regular and bold letters will look identical (and even if Weight is close to 900 they will be nearly identical). I do not see an easy way around this.
 
@@ -260,28 +273,23 @@ You can change `macronbelowcomb` to another glyph that has a `_bottom` anchor; m
 
 ### Step 13: Optical Sizing
 
-Mayfair has optical sizing as an axis already. But there is an additional optical sizing for the superscripts and subscripts that applies just for mathematics. Thankfully we can use the optical sizing axis for this additional optical sizing. If the font does not have optical sizing, you might be able to do something similar with the weight axis (but the script below would need changing).
+Add glyphs `A.ssty1`, `A.ssty2`, `B.ssty1`, `B.ssty2`, etc. Select these and run the script ``Mayfair Scripts->setup->Create SSTY glyphs''.
 
-Create one new axis called `STYA` and one called `STYB`. These can eventually be hidden axes, but you might want to keep them unhidden during development. Create virtual masters for each of them. The first was created at `wght=360`, `opsz=5`, `wdth=94`, `MGHT=360`, `STYA=1200`, `STYB=5`, and the second at `wght=360`, `opsz=5`, `wdth=94`, `MGHT=360`, `STYA=5`, `STYB=1200`.
+You can repeat this step for other glyphs that you want optical sizing for, either now or later.  Many existing math fonts have ssty variants for the letters and main mathematics glyphs (e.g. plus, minus). 
 
-Since these axes are hidden you do not need an axis mapping table for these.
+ It is a design choice how many such glyphs to include, but this script allows the possibility to have ssty variants for all mathematics glyphs.   My observation is that with this system you may as well have any ssty variants for glyphs that are "light" enough for it to be noticable (e.g. whitesquare does benefit from an ssty, where as blacksquare does not).
 
-
-Add glyphs `A.ssty1`, `A.ssty2`, `B.ssty1`, `B.ssty2`, etc. Select these and run the script "populate_ssty.py."
-
-You can repeat this step for other glyphs that you want optical sizing for, either now or later.
+One thing to think about is how math variants and math extendibles act with .ssty.  This is not done automatically by the script so unusualy behaviour may happen if you add ssty variants for such glyphs (e.g. integrals, bigoplus etc).   One wonders if ssty for these are really necessary (e.g. should we ever have ``\[ 2^{\bigoplus_{i=1}^n a_i}]) \]" ?
 
 Add the feature Font Info -> `ssty` and have it autogenerate.
 
+Next you need to edit your instances for this. If the script size is 70%/50%, then if your instance is designed for 10pt you want to set the `STYA` and `STYB` values so that the `.ssty1`/`.ssty2` glyphs are designed at 7pt/5pt. This took a little effort, and I need to go back to it.
+
+*** Test document***
+
 #### Note
 
-There was a bug here since I did not create all the axes first; need to change this README and change the populate bold script as well to take into account of the `STYA` and `STYB` axes correctly.
-
-#### Test Documents
-
-A testing document is needed here.
-
-Next you need to edit your instances for this. If the script size is 70%/50%, then if your instance is designed for 10pt you want to set the `STYA` and `STYB` values so that the `.ssty1`/`.ssty2` glyphs are designed at 7pt/5pt. This took a little effort, and I need to go back to it.
+***** Important FIXME needed ******* There is an annoying a bug here since I did not create all the axes first; I need to change the ``populate bold script`` to property take into account the `STYA` and `STYB` axes correctly.
 
 #### Test Documents
 
