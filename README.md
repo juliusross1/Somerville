@@ -216,16 +216,22 @@ These can be taken in pretty much any order
 
 **Components**
 _smart.circle (height)
+Really this was silly and what we had were 2 ellipses centered for each master.  There were some further constraints, for instance if you want it to be a circle at width=100 (which is annoying linear alegebra; maybe a bracket layer here is more sensible).   This was tricky and I am still not sure I got it right
+Things to check: center position; anchors align with the center; symmetry
 
 _smart.plus
 (height,width)
-****DO THIS AGAIN!**** Make the width and the height at max the same.  Make the smallest one 0 length.
+Design choices: the plus was thinner at small sizes; the smallest one (plus.circle) even more so done with scaling.  Not you cannot scale and change the smart axis else you do not get linear interpolation (it is quadratic)
+Things to check: that the plus touches the circle perfectly
 
 Could I create a testing document for this glyph?
 
-_smart.plus (height, Todo: small width for small sizes?).  Is this a component or a glyph?
+
 
 _smart.times (can be _smart.plus rotated by 45).  Is this a component or a glyph?
+Design choices: the plus was thinner at small sizes; the smallest one (plus.circle) even more so done with scaling
+Things to check: that the times touches the circle perfectly
+
 
 
 
@@ -239,6 +245,7 @@ Create _smart.operator.circled
 Add _smart.circle component.  Then add bullet component
 Then run Script -> Create High Layers
 Adjust height on the high layers.  The smallest one should be the size you want for the inline; the highest is the one for the largest display operator (so the non high layers got 5 for the circle and the high layers got 85) and the percentage scaling (both directions) for the bullet operator
+Design choices: The dot in the middile is smaller at small sizes.  Even smaller for the smallest one.   Elongated slightly at expanded else it hides the expandion of the outer circle.
 
 Create operator.circled
 Add _smart.circle component
