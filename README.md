@@ -36,7 +36,14 @@ Part of this process was to create some reusable and consistent testing document
 
 ## References
 - [Building OpenType Math Fonts](https://github.com/notofonts/math/blob/main/documentation/building-math-fonts/index.md)
+- unicode math and unicode-math symbols
 
+More advanced/technical
+- ConTeXt documentation
+- Appendix G
+- Appendix G Illustrated
+- MathML specification
+- Microsoft document about Cambria
 
 ## Getting Started
 
@@ -48,7 +55,7 @@ My preference is to start with an existing font file and remove pieces rather th
 
 So make a copy of the `.glyphs` or `.glyphspackage` and change Font -> Info -> Family Name. Add a new author name if appropriate. If there is a variable instance in Font -> Info -> Exports, you may want to change that name as well.
 
-### Step 2
+### Step 2: Change Language System
 
 Change Font Info -> Features -> LanguageSystems to:
 
@@ -67,7 +74,7 @@ I also replaced the Playfair figures with the lining figures (`.lf`) versions, a
 
 ### Step 4: Math Constants Table
 
-Glyphs has a MathOpenType plugin created by Khaled Hosny https://github.com/Nagwa-Limited-Community/Glyphs-MATH-Plugin and it is also available in the Plugins directory from Glyphs 3. I made some small changes for a version that can be found *here*.
+Glyphs has a (MathOpenType plugin)[https://github.com/Nagwa-Limited-Community/Glyphs-MATH-Plugin] created by Khaled Hosny and it is also available in the Plugins directory from Glyphs 3. I made some small changes for a version that can be found *here*.
 
 Go to Edit -> Edit Math Constants. The three-dot menu has a drop-down item for "Guess all Masters." It will make reasonable guesses for nearly all the constants.
 
