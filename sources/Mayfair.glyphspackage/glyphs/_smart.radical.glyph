@@ -8,7 +8,6 @@ partSelection = {
 height = 1;
 };
 };
-color = 5;
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 partSelection = {
 height = 1;
@@ -25,10 +24,10 @@ nodes = (
 (594,846,o),
 (615,854,cs),
 (626,858,o),
-(633,862,o),
-(648,862,c),
+(633,860,o),
+(648,860,c),
+(688,860,l),
 (688,862,l),
-(688,863,l),
 (648,863,l),
 (609,863,o),
 (570,863,o),
@@ -65,7 +64,6 @@ partSelection = {
 height = 1;
 };
 };
-color = 5;
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 partSelection = {
 height = 1;
@@ -122,7 +120,6 @@ partSelection = {
 height = 1;
 };
 };
-color = 5;
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 partSelection = {
 height = 1;
@@ -179,7 +176,6 @@ partSelection = {
 height = 1;
 };
 };
-color = 5;
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 partSelection = {
 height = 1;
@@ -236,7 +232,6 @@ partSelection = {
 height = 1;
 };
 };
-color = 5;
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 partSelection = {
 height = 1;
@@ -293,7 +288,6 @@ partSelection = {
 height = 1;
 };
 };
-color = 5;
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 partSelection = {
 height = 1;
@@ -310,9 +304,9 @@ nodes = (
 (688,853,o),
 (717,858,cs),
 (734,861,o),
-(818,863,o),
-(871,863,c),
-(879,863,l),
+(818,862,o),
+(871,862,c),
+(879,862,l),
 (879,864,l),
 (871,864,l),
 (852,864,o),
@@ -350,7 +344,6 @@ partSelection = {
 height = 1;
 };
 };
-color = 5;
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 partSelection = {
 height = 1;
@@ -465,7 +458,6 @@ partSelection = {
 height = 2;
 };
 };
-color = 5;
 guides = (
 {
 angle = 120.8432;
@@ -491,10 +483,10 @@ nodes = (
 (3218,3698,o),
 (3225,3702,o),
 (3240,3702,c),
-(3280,3702,l),
+(3280,3701,l),
 (3280,3703,l),
-(3240,3703,l),
-(3201,3703,o),
+(3240,3702,l),
+(3201,3702,o),
 (3062,3703,o),
 (3048,3704,c),
 (3048,3703,l),
@@ -531,7 +523,6 @@ partSelection = {
 height = 2;
 };
 };
-color = 5;
 layerId = "D9EB675E-082A-4B94-A5B9-DC0FE24F46E1";
 name = "Needlepoint SemiExpanded Upright High";
 partSelection = {
@@ -551,7 +542,7 @@ nodes = (
 (3888,3698,o),
 (3895,3702,o),
 (3910,3702,c),
-(3950,3702,l),
+(3950,3701,l),
 (3950,3703,l),
 (3910,3703,l),
 (3871,3703,o),
@@ -591,7 +582,6 @@ partSelection = {
 height = 2;
 };
 };
-color = 5;
 layerId = "C83B5A86-88F3-4DAE-8D43-F7812071F1BC";
 name = "Needlepoint Black SemiCondensed Upright High";
 partSelection = {
@@ -609,8 +599,8 @@ nodes = (
 (3055,3680,o),
 (3089,3685,cs),
 (3109,3688,o),
-(3143,3687,o),
-(3177,3687,c),
+(3143,3689,o),
+(3177,3689,c),
 (3209,3689,l),
 (3209,3709,l),
 (3177,3709,l),
@@ -651,7 +641,6 @@ partSelection = {
 height = 2;
 };
 };
-color = 5;
 layerId = "B8F6A3D4-D6BF-4129-84B4-70A2DDBC64EB";
 name = "Needlepoint Black SemiExpanded Upright High";
 partSelection = {
@@ -711,7 +700,6 @@ partSelection = {
 height = 2;
 };
 };
-color = 5;
 layerId = "0D69B19B-9AE5-439B-9B7F-202E01613C3F";
 name = "Agate SemiCondensed Upright High";
 partSelection = {
@@ -771,7 +759,6 @@ partSelection = {
 height = 2;
 };
 };
-color = 5;
 layerId = "CCC3AB57-9537-459D-B0D9-231E64F13442";
 name = "Agate SemiExpanded Upright High";
 partSelection = {
@@ -831,7 +818,6 @@ partSelection = {
 height = 2;
 };
 };
-color = 5;
 layerId = "AE42F530-04C1-40BD-99C0-A328FF73FFD6";
 name = "Agate Black SemiCondensed Upright High";
 partSelection = {

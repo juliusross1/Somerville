@@ -344,16 +344,16 @@ Recipes needed
 *Mayfair Todo (16)*
 
 = TODO for bigoplus,bigotimes,times
-=== Finish up _smart.circle at needlepoint black
-=== Look over three big operators at needlepoint, and regular 
 === Do the sidebearings of _smart.circle
 ===== !!! Make some notes on what you did here !!!
+=== Create times as sizes
 === Fix the radical so that it meets the new rule size at Black!
 === Look back at weight of summation
 === Union, Subset, \in
 === Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
 
 === ssty
+== Return to bigodot, bigoplus, bigotimes
 === Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
 ===Center the bar, bracket, brace etc (these might be OK)
 ===relations recipes
