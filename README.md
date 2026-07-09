@@ -442,13 +442,15 @@ Recipes needed
 
 
 *Mayfair Todo (16)*
-=== Web browser testing system (experiment).  For some reason my glyph preview grid was not helpful as this did not put the glyphs in context!
+=== Post export scripting done better
+=== Fix up underlines height and different widths for wider letters
+=== ssty
 === Create times as sizes;  fix this mess
 === Look back at weight of summation (started)
 == Return to bigodot, bigoplus, bigotimes
 === Union, Subset, \in
 === Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
-=== ssty
+
 === Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
 ===Center the bar, bracket, brace etc (these might be OK)
 ===relations recipes (in fact need to revisit the entire recipe system)
