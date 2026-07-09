@@ -150,6 +150,7 @@ shapes = (
 alignment = -1;
 angle = 47;
 piece = {
+thin = 10;
 width = 5;
 };
 pos = (237,129);
@@ -159,6 +160,7 @@ ref = _smart.minus;
 alignment = -1;
 angle = -47;
 piece = {
+thin = 10;
 width = 5;
 };
 pos = (-151,130);
@@ -433,6 +435,7 @@ shapes = (
 alignment = -1;
 angle = 47;
 piece = {
+thin = 0;
 width = 1200;
 };
 pos = (4315,84);
@@ -442,6 +445,7 @@ ref = _smart.minus;
 alignment = -1;
 angle = -47;
 piece = {
+thin = 0;
 width = 1200;
 };
 pos = (3927,84);

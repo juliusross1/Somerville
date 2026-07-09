@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>formatVersion</key>
+  <integer>1</integer>
+
+  <key>kind</key>
+  <string>macro</string>
+
+  <key>name</key>
+  <string>ringinequalto</string>
+
+  <key>template</key>
+  <string>component_sequence_template.plist</string>
+
+  <key>templateName</key>
+  <string>componentSequence</string>
+
+  <key>parameters</key>
+  <dict>
+    <key>exportGlyph</key>
+    <string>ringinequalto</string>
+    <key>components</key>
+    <array>
+      <string>equal</string>
+      <string>_smart.circle</string>
+    </array>
+    <key>disableAutomaticAlignment</key>
+    <false/>
+    <key>autoMatchingAnchors</key>
+    <false/>
+    <key>componentPairDisableAlignment</key>
+    <false/>
+    <key>componentPairAlignments</key>
+    <array>
+      <dict>
+        <key>componentIndexes</key>
+        <array>
+          <integer>0</integer>
+          <integer>1</integer>
+        </array>
+        <key>baseAnchor</key>
+        <string>center</string>
+        <key>markAnchor</key>
+        <string>_center</string>
+      </dict>
+    </array>
+    <key>leftMetricsGlyph</key>
+    <string>equal</string>
+    <key>rightMetricsGlyph</key>
+    <string>equal</string>
+    <key>color</key>
+    <string>orange</string>
+  </dict>
+</dict>
+</plist>
