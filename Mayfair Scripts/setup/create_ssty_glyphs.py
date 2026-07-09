@@ -171,8 +171,8 @@ def process_target_glyph(font, glyph):
         glyph,
         ROTATION_SOURCE_AXIS_TAG,
         target_axis_tag,
-        ROTATION_SOURCE_BASE_VALUE,
         ROTATION_SOURCE_SMALL_VALUE,
+        ROTATION_SOURCE_BASE_VALUE,
         ROTATION_TARGET_VALUE,
         map_source_axis_coordinates_to_target_axis=True,
         forced_destination_axis_values=sibling_axis_defaults_for_ssty_glyph(glyph.name),
@@ -206,9 +206,9 @@ def run_for_glyphs(font, glyphs, open_tab=False):
     print("Active SSTY intermediate axis value: %s" % ROTATION_TARGET_VALUE)
     print("Master layers use %s=%s; SSTY layers use %s=%s." % (
         ROTATION_SOURCE_AXIS_TAG,
-        ROTATION_SOURCE_BASE_VALUE,
-        ROTATION_SOURCE_AXIS_TAG,
         ROTATION_SOURCE_SMALL_VALUE,
+        ROTATION_SOURCE_AXIS_TAG,
+        ROTATION_SOURCE_BASE_VALUE,
     ))
     print("Source coordinate layers keep their %s coordinate on the SSTY target axis." % ROTATION_SOURCE_AXIS_TAG)
     print("")

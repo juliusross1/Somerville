@@ -442,9 +442,9 @@ Recipes needed
 
 
 *Mayfair Todo (16)*
+=== ssty for bold-math and bolditalic-math (need script additions)
 === Post export scripting done better
 === Fix up underlines height and different widths for wider letters
-=== ssty
 === Create times as sizes;  fix this mess
 === Look back at weight of summation (started)
 == Return to bigodot, bigoplus, bigotimes
