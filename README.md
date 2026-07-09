@@ -391,6 +391,12 @@ Decompose oplus after running script to make the plus lighter by changing the "s
 %Make vertical size variants from nAryOplus
 
 
+** For bigtimes
+I got into a bit of a mess here because we can change many things
+_smart.times (scale, thinness at base for each non-thin master)
+nAryTimes: thinness for each master
+Then the variants copy the nAryTimes values
+!!!Need to think about this before proceeding!!!!
 
 **Fences**
 
@@ -436,19 +442,18 @@ Recipes needed
 
 
 *Mayfair Todo (16)*
-
-= TODO for bigoplus,bigotimes,times
-=== Create times as sizes
-=== Look back at weight of summation
+=== Web browser testing system (experiment).  For some reason my glyph preview grid was not helpful as this did not put the glyphs in context!
+=== Create times as sizes;  fix this mess
+=== Look back at weight of summation (started)
+== Return to bigodot, bigoplus, bigotimes
 === Union, Subset, \in
 === Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
 === ssty
-== Return to bigodot, bigoplus, bigotimes
 === Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
 ===Center the bar, bracket, brace etc (these might be OK)
 ===relations recipes (in fact need to revisit the entire recipe system)
-===may need to think more about sidebearings of _smart.circle as I just did this roughly.
-===Product serifs at high
+===may need to think more about sidebearings of _smart.circle as I just did this roughly
+===Product glyph serifs at high
 ===Look back at serifs on integral in semiexpanded agate
 ===sym glyph so can do many more relations
 

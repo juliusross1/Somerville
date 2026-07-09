@@ -194,13 +194,14 @@ STYA = {
 6 = 200;
 7 = 325;
 8 = 400;
-11 = 700;
-12 = 550;
-16 = 640;
-19 = 860;
-27 = 1020;
-32 = 800;
-48 = 900;
+11 = 550;
+12 = 640;
+16 = 700;
+19 = 800;
+27 = 860;
+32 = 900;
+48 = 999;
+96 = 1020;
 1200 = 1200;
 };
 STYB = {
@@ -223,9 +224,9 @@ opsz = {
 1200 = 1200;
 };
 wdth = {
-87.5 = 95;
+88 = 95;
 100 = 100;
-112.5 = 114;
+114 = 114;
 };
 wght = {
 300 = 360;
@@ -244,7 +245,7 @@ value = rlig;
 },
 {
 name = "Use case marks for double marks";
-value = 0;
+value = 1;
 },
 {
 name = "Virtual Master";
@@ -255,7 +256,7 @@ Location = 5;
 },
 {
 Axis = Width;
-Location = 94;
+Location = 95;
 },
 {
 Axis = Weight;
@@ -264,6 +265,14 @@ Location = 360;
 {
 Axis = "Math Weight";
 Location = 900;
+},
+{
+Axis = ssty1;
+Location = 1200;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 },
@@ -276,7 +285,7 @@ Location = 5;
 },
 {
 Axis = Width;
-Location = 94;
+Location = 95;
 },
 {
 Axis = Weight;
@@ -289,6 +298,10 @@ Location = 360;
 {
 Axis = ssty1;
 Location = 1200;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 },
@@ -301,7 +314,7 @@ Location = 5;
 },
 {
 Axis = Width;
-Location = 94;
+Location = 95;
 },
 {
 Axis = Weight;
@@ -1599,6 +1612,12 @@ automatic = 1;
 code = "sub pitalic-math by pitalic-math.ss01;
 sub pbolditalic-math by pbolditalic-math.ss01;
 ";
+labels = (
+{
+language = dflt;
+value = "";
+}
+);
 tag = ss01;
 }
 );
@@ -1654,6 +1673,7 @@ name = typoLineGap;
 value = 0;
 },
 {
+disabled = 1;
 name = "Axis Location";
 value = (
 {
@@ -1667,6 +1687,18 @@ Location = 88;
 {
 Axis = Weight;
 Location = 360;
+},
+{
+Axis = "Math Weight";
+Location = 360;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -2007,6 +2039,7 @@ name = typoLineGap;
 value = 0;
 },
 {
+disabled = 1;
 name = "Axis Location";
 value = (
 {
@@ -2020,6 +2053,18 @@ Location = 113;
 {
 Axis = Weight;
 Location = 360;
+},
+{
+Axis = "Math Weight";
+Location = 360;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -2366,6 +2411,7 @@ size = 30;
 );
 },
 {
+disabled = 1;
 name = "Axis Location";
 value = (
 {
@@ -2379,6 +2425,18 @@ Location = 88;
 {
 Axis = Weight;
 Location = 900;
+},
+{
+Axis = "Math Weight";
+Location = 360;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -2720,6 +2778,7 @@ size = 30;
 );
 },
 {
+disabled = 1;
 name = "Axis Location";
 value = (
 {
@@ -2733,6 +2792,18 @@ Location = 113;
 {
 Axis = Weight;
 Location = 900;
+},
+{
+Axis = "Math Weight";
+Location = 360;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -3080,6 +3151,7 @@ size = 40;
 );
 },
 {
+disabled = 1;
 name = "Axis Location";
 value = (
 {
@@ -3093,6 +3165,18 @@ Location = 88;
 {
 Axis = Weight;
 Location = 360;
+},
+{
+Axis = "Math Weight";
+Location = 360;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -3450,6 +3534,7 @@ size = 40;
 );
 },
 {
+disabled = 1;
 name = "Axis Location";
 value = (
 {
@@ -3463,6 +3548,18 @@ Location = 113;
 {
 Axis = Weight;
 Location = 360;
+},
+{
+Axis = "Math Weight";
+Location = 360;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -3815,6 +3912,7 @@ size = 30;
 );
 },
 {
+disabled = 1;
 name = "Axis Location";
 value = (
 {
@@ -3828,6 +3926,18 @@ Location = 88;
 {
 Axis = Weight;
 Location = 900;
+},
+{
+Axis = "Math Weight";
+Location = 360;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4190,6 +4300,7 @@ size = 30;
 );
 },
 {
+disabled = 1;
 name = "Axis Location";
 value = (
 {
@@ -4203,6 +4314,18 @@ Location = 113;
 {
 Axis = Weight;
 Location = 900;
+},
+{
+Axis = "Math Weight";
+Location = 360;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
 }
 );
 }
@@ -4547,19 +4670,6 @@ bar10.afrc
 {
 name = Filter;
 value = "RemoveOverlap; include:bar2.afrc,bar3.afrc,bar4.afrc,bar5.afrc,bar6.afrc,bar7.afrc,bar8.afrc,bar9.afrc,bar10.afrc";
-},
-{
-name = "Axis Location";
-value = (
-{
-Axis = ssty1;
-Location = 5;
-},
-{
-Axis = ssty2;
-Location = 5;
-}
-);
 }
 );
 name = "Mayfair Variable";
@@ -4609,6 +4719,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 1;
 };
@@ -4765,6 +4876,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.35185;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.64815;
@@ -4925,6 +5037,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 1;
 };
@@ -4976,6 +5089,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.27778;
 "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.72222;
@@ -5134,6 +5248,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18004;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25412;
@@ -5297,6 +5412,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.72222;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.27778;
@@ -5348,6 +5464,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 1;
 };
@@ -5504,6 +5621,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.64815;
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.35185;
@@ -5664,6 +5782,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "58AEE805-6805-4A0B-A273-5ABBCB55D365" = 1;
 };
@@ -9648,7 +9767,6 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.1399;
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.0291;
