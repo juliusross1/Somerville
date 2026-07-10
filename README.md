@@ -442,18 +442,21 @@ Recipes needed
 
 
 *Mayfair Todo (16)*
-=== ssty for bold-math and bolditalic-math (need script additions)
+=== ssty for bold-math and bolditalic-math (need script additions).  Also the script is not creating the layers so the italic-math need fixing up.
 === Post export scripting done better
 === Fix up underlines height and different widths for wider letters
-=== Create times as sizes;  fix this mess
+=== Create times at sizes;  fix this mess
 === Look back at weight of summation (started)
 == Return to bigodot, bigoplus, bigotimes
+== Adjust the bold underlines (most are pretty good though) and have this automatic for the higher weights
+
 === Union, Subset, \in
 === Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
 
 === Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
 ===Center the bar, bracket, brace etc (these might be OK)
 ===relations recipes (in fact need to revisit the entire recipe system)
+=== rethink ssty1 and ssty2 values for instances
 ===may need to think more about sidebearings of _smart.circle as I just did this roughly
 ===Product glyph serifs at high
 ===Look back at serifs on integral in semiexpanded agate

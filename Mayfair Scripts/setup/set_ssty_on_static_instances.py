@@ -11,25 +11,22 @@ SOURCE_AXIS_TAG = "opsz"
 STYA_AXIS_TAG = "STYA"
 STYB_AXIS_TAG = "STYB"
 AXIS_LOCATION_PARAMETER_NAME = "Axis Location"
-STYA_FACTOR = 0.8
-STYB_FACTOR = 0.6
-SSTY_AXIS_MIN_VALUE = 5
-SCRIPT_VERSION = "2026-06-23 13:17 CDT rounded-ssty-axis-values"
+SCRIPT_VERSION = "2026-07-09 10:33 CDT json-ssty-design-map"
 
-POINTS = [
-    (5, 5),
-    (200, 6),
-    (325, 7),
-    (400, 8),
-    (550, 12),
-    (640, 16),
-    (700, 21),
-    (800, 32),
-    (860, 41),
-    (900, 38),
-    (980, 72),
-    (1020, 96),
-    (1200, 1200),
+SSTY_DESIGN_MAP = [
+    {"opsz_external": 5, "opsz_design": 5, "ssty1_external": 5, "ssty1_design": 5, "ssty2_external": 5, "ssty2_design": 5},
+    {"opsz_external": 6, "opsz_design": 200, "ssty1_external": 5, "ssty1_design": 5, "ssty2_external": 5, "ssty2_design": 5},
+    {"opsz_external": 7, "opsz_design": 325, "ssty1_external": 5.25, "ssty1_design": 53, "ssty2_external": 5, "ssty2_design": 5},
+    {"opsz_external": 8, "opsz_design": 400, "ssty1_external": 6.0, "ssty1_design": 197, "ssty2_external": 5, "ssty2_design": 5},
+    {"opsz_external": 12, "opsz_design": 550, "ssty1_external": 9.0, "ssty1_design": 450, "ssty2_external": 7.2, "ssty2_design": 342},
+    {"opsz_external": 16, "opsz_design": 640, "ssty1_external": 12.0, "ssty1_design": 640, "ssty2_external": 9.6, "ssty2_design": 481},
+    {"opsz_external": 21, "opsz_design": 700, "ssty1_external": 15.75, "ssty1_design": 696, "ssty2_external": 12.6, "ssty2_design": 649},
+    {"opsz_external": 32, "opsz_design": 800, "ssty1_external": 24.0, "ssty1_design": 837, "ssty2_external": 19.2, "ssty2_design": 802},
+    {"opsz_external": 41, "opsz_design": 860, "ssty1_external": 30.75, "ssty1_design": 890, "ssty2_external": 24.6, "ssty2_design": 842},
+    {"opsz_external": 48, "opsz_design": 900, "ssty1_external": 36.0, "ssty1_design": 925, "ssty2_external": 28.8, "ssty2_design": 874},
+    {"opsz_external": 72, "opsz_design": 980, "ssty1_external": 54.0, "ssty1_design": 1002, "ssty2_external": 43.2, "ssty2_design": 969},
+    {"opsz_external": 96, "opsz_design": 1020, "ssty1_external": 72.0, "ssty1_design": 1009, "ssty2_external": 57.6, "ssty2_design": 1003},
+    {"opsz_external": 1200, "opsz_design": 1200, "ssty1_external": 900.0, "ssty1_design": 1151, "ssty2_external": 720.0, "ssty2_design": 1122},
 ]
 
 
@@ -117,61 +114,23 @@ def cleaned_number(value):
     return round(value, 6)
 
 
-def piecewise_value(x):
-    x = float(x)
-    for index in range(len(POINTS) - 1):
-        x1, y1 = POINTS[index]
-        x2, y2 = POINTS[index + 1]
-
-        if x1 <= x <= x2:
-            t = (x - x1) / (x2 - x1)
-            return y1 + t * (y2 - y1)
-
-    raise ValueError("x is outside the given range.")
+def matching_ssty_design_row(opz_value):
+    opz_design = cleaned_number(number_value(opz_value))
+    for row in SSTY_DESIGN_MAP:
+        if cleaned_number(row["opsz_design"]) == opz_design:
+            return row
+    raise ValueError("no SSTY design-map row for %s=%s" % (SOURCE_AXIS_TAG, opz_design))
 
 
-def inverse_piecewise(y_target):
-    y_target = float(y_target)
-    for index in range(len(POINTS) - 1):
-        x1, y1 = POINTS[index]
-        x2, y2 = POINTS[index + 1]
-
-        if min(y1, y2) <= y_target <= max(y1, y2):
-            t = (y_target - y1) / (y2 - y1)
-            return x1 + t * (x2 - x1)
-
-    raise ValueError("target y is outside the given range.")
-
-
-def inverse_piecewise_clamped(y_target):
-    y_target = float(y_target)
-    y_values = [point[1] for point in POINTS]
-    if y_target <= min(y_values):
-        return POINTS[y_values.index(min(y_values))][0]
-    if y_target >= max(y_values):
-        return POINTS[y_values.index(max(y_values))][0]
-    return inverse_piecewise(y_target)
-
-
-def rounded_ssty_axis_value(value):
-    value = max(SSTY_AXIS_MIN_VALUE, value)
-    return int(value + 0.5)
-
-
-def calculated_ssty_values(opz_value):
-    x = number_value(opz_value)
-    y = piecewise_value(x)
-    stya_target_y = STYA_FACTOR * y
-    styb_target_y = STYB_FACTOR * y
-    stya_value = rounded_ssty_axis_value(inverse_piecewise_clamped(stya_target_y))
-    styb_value = rounded_ssty_axis_value(inverse_piecewise_clamped(styb_target_y))
+def ssty_values_for_opz(opz_value):
+    row = matching_ssty_design_row(opz_value)
     return dict(
-        x=cleaned_number(x),
-        y=cleaned_number(y),
-        stya_target_y=cleaned_number(stya_target_y),
-        styb_target_y=cleaned_number(styb_target_y),
-        stya=cleaned_number(stya_value),
-        styb=cleaned_number(styb_value),
+        opsz_design=cleaned_number(row["opsz_design"]),
+        opsz_external=cleaned_number(row["opsz_external"]),
+        stya=cleaned_number(row["ssty1_design"]),
+        styb=cleaned_number(row["ssty2_design"]),
+        stya_external=cleaned_number(row["ssty1_external"]),
+        styb_external=cleaned_number(row["ssty2_external"]),
     )
 
 
@@ -335,8 +294,7 @@ Glyphs.clearLog()
 Glyphs.showMacroWindow()
 print("Set SSTY on Static Instances")
 print("Script version: %s" % SCRIPT_VERSION)
-print("STYA factor: %s" % STYA_FACTOR)
-print("STYB factor: %s" % STYB_FACTOR)
+print("SSTY design-map rows: %s" % len(SSTY_DESIGN_MAP))
 print("")
 
 if font is None:
@@ -362,7 +320,7 @@ else:
                 continue
 
             try:
-                values = calculated_ssty_values(opz_value)
+                values = ssty_values_for_opz(opz_value)
             except Exception as error:
                 skipped_count += 1
                 print("Skipping %s: %s" % (instance.name, error))
@@ -395,20 +353,18 @@ else:
                 pass
 
             updated_count += 1
-            print("%s: %s=%s -> y=%s; %s=%s (%s*y=%s, read back %s); %s=%s (%s*y=%s, read back %s)" % (
+            print("%s: %s design=%s external=%s; %s=%s (ssty1 external=%s, read back %s); %s=%s (ssty2 external=%s, read back %s)" % (
                 instance.name,
                 SOURCE_AXIS_TAG,
-                values["x"],
-                values["y"],
+                values["opsz_design"],
+                values["opsz_external"],
                 stya_axis["name"],
                 values["stya"],
-                STYA_FACTOR,
-                values["stya_target_y"],
+                values["stya_external"],
                 read_back_stya,
                 styb_axis["name"],
                 values["styb"],
-                STYB_FACTOR,
-                values["styb_target_y"],
+                values["styb_external"],
                 read_back_styb,
             ))
 
