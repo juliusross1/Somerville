@@ -222,6 +222,7 @@ The above way of managing the bold letters means that if Weight is 900 then the 
 
 One option is to not create instances at these higher weights. Another is to add a small "underline" to all the bold-math characters at high weight. This is easily done by ensuring that all the bold and bold italics have a bottom/underline anchor and then pasting the feature below into, say, `ss10` or similar (you might want this turned on automatically at higher weights; it is a judgement call). Adjust the below to include other bold letters as needed. Manual adjustment of the bottom/underline anchor may be needed for some letters as appropriate. (The reason it is useful to use underline rather than bottom is that components of glyphs may have their own bottom anchors that are not the ones that you want.)
 
+A simple version of this would be the following
 ```
  @LatinBoldMath = [
     abold-math bbold-math cbold-math dbold-math
@@ -270,6 +271,10 @@ lookup AddMathUnderline {
 ```
 
 You can change `macronbelowcomb` to another glyph that has a `_bottom` anchor; make sure this glyph is category Mark and Nonspacing.
+
+
+A more complicated one is this one that has different widths for different letters.  Even that is not perfect.  **FIXME**
+
 
 ### Step 13: Optical Sizing
 
@@ -442,12 +447,11 @@ Recipes needed
 
 
 *Mayfair Todo (16)*
+== Look at weight of inline integral
 === Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
-=== Post export scripting done better
 === Create times at sizes;  fix this mess
 === Look back at weight of summation (started)
 == Return to bigodot, bigoplus, bigotimes
-== Adjust the bold underlines (most are pretty good though) and have this automatic for the higher weights
 === ssty for bold-math and bolditalic-math (need script additions).  Also the script is not creating the layers so the italic-math need fixing up.
 === Union, Subset, \in
 === Commutative diagrams with metafun
