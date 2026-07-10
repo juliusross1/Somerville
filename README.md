@@ -442,42 +442,42 @@ Recipes needed
 
 
 *Mayfair Todo (16)*
-=== ssty for bold-math and bolditalic-math (need script additions).  Also the script is not creating the layers so the italic-math need fixing up.
+=== Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
 === Post export scripting done better
-=== Fix up underlines height and different widths for wider letters
 === Create times at sizes;  fix this mess
 === Look back at weight of summation (started)
 == Return to bigodot, bigoplus, bigotimes
 == Adjust the bold underlines (most are pretty good though) and have this automatic for the higher weights
-
+=== ssty for bold-math and bolditalic-math (need script additions).  Also the script is not creating the layers so the italic-math need fixing up.
 === Union, Subset, \in
-=== Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
-
+=== Commutative diagrams with metafun
 === Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
 ===Center the bar, bracket, brace etc (these might be OK)
 ===relations recipes (in fact need to revisit the entire recipe system)
+===Other accents
 === rethink ssty1 and ssty2 values for instances
 ===may need to think more about sidebearings of _smart.circle as I just did this roughly
 ===Product glyph serifs at high
 ===Look back at serifs on integral in semiexpanded agate
 ===sym glyph so can do many more relations
+=== bold underlines need to adjust for expanded (so test first at semicondensed)
+===spacing/italic correction
 
-spacing/italic correction
-Test ss11 feature at other fonts
+
+=== Testing tool to also support looking at instances
+===? Testing tool to record so have some kind of "save" button
 
 Email Hans about here maybe?
 
 ----------------------------------------------
 Testing stuff
-== Get the frationrule and overbar/underbar rule size fixed in css
 == Get a better lualatex test file for the math constants
 == Go through the help file again and compare his recommendations with my choices
 ===Have some "constants" in the recipes
 ===Have a system of spotting 'stale' recipes
-
-
 italic tau
 epsilon?
+
 
 
 Change the anchors on the marks to they are in Glyphsdata.xml
@@ -486,7 +486,6 @@ Greek lower
 Greek upper
 Extendibles?
 Stackers
-Other accents
 Other fences
 
 
