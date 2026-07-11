@@ -47,11 +47,11 @@ ref = _smart.integral;
 },
 {
 piece = {
-height = 0.5;
+height = 0;
 };
-pos = (-64,-525);
+pos = (-62,-578);
 ref = _smart.circle;
-scale = (3,3);
+scale = (3.6,3.2);
 }
 );
 width = 614;
@@ -231,13 +231,14 @@ ref = _smart.integral;
 },
 {
 piece = {
-height = 2;
+height = 0.79396;
 };
-pos = (-209,-525);
+pos = (-104,-604);
 ref = _smart.circle;
-scale = (3,3);
+scale = (3.3,3.3);
 }
 );
+visible = 1;
 width = 506;
 },
 {
@@ -262,11 +263,11 @@ ref = _smart.integral;
 },
 {
 piece = {
-height = 2;
+height = 0.7367;
 };
-pos = (-168,-525);
+pos = (-46,-525);
 ref = _smart.circle;
-scale = (3,3);
+scale = (3.3,3);
 }
 );
 width = 964;
@@ -362,7 +363,6 @@ ref = _smart.circle;
 scale = (1.7,1.7);
 }
 );
-visible = 1;
 width = 592;
 },
 {
@@ -394,7 +394,6 @@ ref = _smart.circle;
 scale = (1.5,1.4);
 }
 );
-visible = 1;
 width = 714;
 },
 {
@@ -419,11 +418,11 @@ ref = _smart.integral;
 },
 {
 piece = {
-height = 2.2;
+height = 1.5545;
 };
-pos = (-34,-207);
+pos = (-5,-233);
 ref = _smart.circle;
-scale = (1.8,1.8);
+scale = (1.9,1.9);
 }
 );
 width = 634;
@@ -450,11 +449,11 @@ ref = _smart.integral;
 },
 {
 piece = {
-height = 2.2;
+height = 1.68101;
 };
-pos = (-15,-202);
+pos = (-12,-228);
 ref = _smart.circle;
-scale = (1.8,1.8);
+scale = (2,1.9);
 }
 );
 width = 898;
