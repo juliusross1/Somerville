@@ -368,7 +368,7 @@ Script: Create size variants
 Think about the sidebearings as these are not right from these components!
 Think about math.ic (I want this inherited from the component I think so need to adjust the script)
 
-Note: The circle needs to be a little larger at high sizes to compensate optically
+Design comments: The circle needs to be a little larger at high sizes to compensate optically.  With the way things are I can adjust "scale" which also changes the thickness and then "height" to change the size.  The semiexpanded ones are the same height as the semicondensed (as are the letters)  I did a lot of adjusting by hand; not sure if that means that my _smart.circle is not designed correctly.
 
 
 
@@ -453,31 +453,41 @@ Recipes needed
 
 
 *Mayfair Todo (16)*
-== Look at weight of inline integral
-=== Look back to finish off the contour integrals (the weight of the circle at low heights is an issue)
+===  Get testing tool to allow for more complicated snippets, that have inline and display mathematics
+===  Then design thoughtful tests for all the integrals, and all the big operators
+=== Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
 === Create times at sizes;  fix this mess
 === Look back at weight of summation (started)
-== Return to bigodot, bigoplus, bigotimes
+=== Return to bigodot, bigoplus, bigotimes
 === ssty for bold-math and bolditalic-math (need script additions).  Also the script is not creating the layers so the italic-math need fixing up.
 === Union, Subset, \in
-=== Commutative diagrams with metafun
-=== Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
-===Center the bar, bracket, brace etc (these might be OK)
-===relations recipes (in fact need to revisit the entire recipe system)
-===Other accents
+=== Center the bar, bracket, brace etc (these might be OK)
+=== relations recipes (in fact need to revisit the entire recipe system)
+=== Other accents
 === rethink ssty1 and ssty2 values for instances
 ===may need to think more about sidebearings of _smart.circle as I just did this roughly
-===Product glyph serifs at high
-===Look back at serifs on integral in semiexpanded agate
-===sym glyph so can do many more relations
-=== bold underlines need to adjust for expanded (so test first at semicondensed)
-===spacing/italic correction
-
-
+=== Product glyph serifs at high
+=== Look back at serifs on integral in semiexpanded agate
+=== sym glyph so can do many more relations
+=== bold underlines
+=== primes
+=== spacing/italic correction
 === Testing tool to also support looking at instances
 ===? Testing tool to record so have some kind of "save" button
+=== Latex system in my testing tool====
+=== slash at sizes
+Email people about here maybe?
 
-Email Hans about here maybe?
+
+=== over/underbraces
+=== extended plus,minus, equv etc
+=== italic correction on large parenthesis
+=== more fences
+=== corner kerns
+=== extended integral serifs
+=== \mathbb R,N,Z
+=== list the most useful missing glyphs
+=== wideaccenta
 
 ----------------------------------------------
 Testing stuff
@@ -514,3 +524,23 @@ Double Struck upper case Greek
 Missing display nary operators
 Easter Egg
 Fourier
+
+
+======= Future testing areas
+======= Showcases
+======= Integrals
+======= Radicals
+======= Big Operators
+======= BIG Operators
+======= Fences
+======= Alphabets
+======= Fractions
+======= Accents
+======= Arrows
+======= Individual operators
+======= Individual relations
+======= Individual relations
+======= Super and subscripts
+======= etc. etc.
+======= Stress tests (from other places)
+
