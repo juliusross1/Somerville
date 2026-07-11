@@ -489,14 +489,14 @@ automatic = 1;
 code = "feature zero;
 feature ssty;
 feature ss01;
+feature ss02;
 feature ss05;
 feature ss06;
 feature ss07;
-feature ss02;
 feature ss12;
 feature ss13;
 feature dtls;
-feature ss88;
+feature ss11;
 ";
 tag = aalt;
 },
@@ -1520,6 +1520,13 @@ tag = ss01;
 },
 {
 automatic = 1;
+code = "sub Eitalic-math by Eitalic-math.ss02;
+sub Ebolditalic-math by Ebolditalic-math.ss02;
+";
+tag = ss02;
+},
+{
+automatic = 1;
 code = "sub g by g.ss05;
 sub gbold-math by gbold-math.ss05;
 sub gitalic-math by gitalic-math.ss05;
@@ -1577,13 +1584,6 @@ value = "Tabular punctuation";
 }
 );
 tag = ss14;
-},
-{
-automatic = 1;
-code = "sub Eitalic-math by Eitalic-math.ss02;
-sub Ebolditalic-math by Ebolditalic-math.ss02;
-";
-tag = ss02;
 },
 {
 automatic = 1;
@@ -2100,7 +2100,6 @@ UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
-visible = 1;
 },
 {
 axesValues = (

@@ -343,6 +343,10 @@ Design or use your existing integral
 
 4. Add a center anchor, top and bottom.  Make the center align with the math-axis on all layers. 
 
+5. (Optional) Make the top and serif their own components (there is a Glyph3 bug here and if you do that you need to reset the smart settings for the components)
+
+6. The high integrals need to be a little wider to compensate optically
+
 ** for double integral**
 create _smart.dblIntegral
 add _smart.integral twice
@@ -363,6 +367,8 @@ Add _smart.contourIntegral
 Script: Create size variants
 Think about the sidebearings as these are not right from these components!
 Think about math.ic (I want this inherited from the component I think so need to adjust the script)
+
+Note: The circle needs to be a little larger at high sizes to compensate optically
 
 
 
