@@ -455,7 +455,7 @@ Recipes needed
 *Mayfair Todo (16)*
 ===  Get testing tool to allow for more complicated snippets, that have inline and display mathematics
 ===  Then design thoughtful tests for all the integrals, and all the big operators
-=== Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way)
+=== Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way).  Automatic alignment is a PITA here
 === Create times at sizes;  fix this mess
 === Look back at weight of summation (started)
 === Return to bigodot, bigoplus, bigotimes

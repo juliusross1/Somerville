@@ -1,5 +1,5 @@
 {
-glyphname = arrow.head;
+glyphname = doublearrow.head;
 layers = (
 {
 anchors = (
@@ -34,9 +34,13 @@ piece = {
 width = 60;
 };
 ref = arrow.mid;
+},
+{
+pos = (120,0);
+ref = arrow.head;
 }
 );
-width = 299;
+width = 419;
 },
 {
 anchors = (
@@ -71,9 +75,13 @@ piece = {
 width = 60;
 };
 ref = arrow.mid;
+},
+{
+pos = (199,0);
+ref = arrow.head;
 }
 );
-width = 346;
+width = 545;
 },
 {
 anchors = (
@@ -108,9 +116,13 @@ piece = {
 width = 60;
 };
 ref = arrow.mid;
+},
+{
+pos = (200,0);
+ref = arrow.head;
 }
 );
-width = 338;
+width = 538;
 },
 {
 anchors = (
@@ -145,9 +157,13 @@ piece = {
 width = 60;
 };
 ref = arrow.mid;
+},
+{
+pos = (130,0);
+ref = arrow.head;
 }
 );
-width = 299;
+width = 429;
 },
 {
 anchors = (
@@ -182,9 +198,13 @@ piece = {
 width = 60;
 };
 ref = arrow.mid;
+},
+{
+pos = (130,0);
+ref = arrow.head;
 }
 );
-width = 327;
+width = 457;
 },
 {
 anchors = (
@@ -219,9 +239,13 @@ piece = {
 width = 60;
 };
 ref = arrow.mid;
+},
+{
+pos = (130,0);
+ref = arrow.head;
 }
 );
-width = 350;
+width = 480;
 },
 {
 anchors = (
@@ -256,9 +280,13 @@ piece = {
 width = 60;
 };
 ref = arrow.mid;
+},
+{
+pos = (200,0);
+ref = arrow.head;
 }
 );
-width = 346;
+width = 546;
 },
 {
 anchors = (
@@ -293,9 +321,14 @@ piece = {
 width = 60;
 };
 ref = arrow.mid;
+},
+{
+pos = (200,0);
+ref = arrow.head;
 }
 );
-width = 338;
+width = 538;
 }
 );
+metricRight = "=arrow.head";
 }
