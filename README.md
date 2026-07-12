@@ -455,7 +455,22 @@ Recipes needed
 *Mayfair Todo (16)*
 ===  Get testing tool to allow for more complicated snippets, that have inline and display mathematics
 ===  Then design thoughtful tests for all the integrals, and all the big operators
-=== Simple arrows (single, double, harpoon, doubletail, barfrom and long variants in a systematic way).  Automatic alignment is a PITA here
+===== Arrows listleftright
+Testing pages
+doubleRight
+frombar
+harpoon
+leftoverright
+doubleright
+minus
+equals
+congruent
+injection
+== Go back and deal with the relative widths of the different arrows
+Then
+Long versions
+Marked versions
+
 === Create times at sizes;  fix this mess
 === Look back at weight of summation (started)
 === Return to bigodot, bigoplus, bigotimes

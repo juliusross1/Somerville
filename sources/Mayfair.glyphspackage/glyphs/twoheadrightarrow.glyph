@@ -1,6 +1,6 @@
 {
 color = 6;
-glyphname = rightArrow;
+glyphname = twoheadrightarrow;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -17,7 +17,7 @@ ref = arrow.mid;
 },
 {
 pos = (589,0);
-ref = arrow.head;
+ref = doublearrow.head;
 }
 );
 userData = {
@@ -36,7 +36,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+doublearrow.head,
 0,
 30,
 0
@@ -44,7 +44,7 @@ arrow.head,
 );
 };
 };
-width = 888;
+width = 1008;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -61,7 +61,7 @@ ref = arrow.mid;
 },
 {
 pos = (549,0);
-ref = arrow.head;
+ref = doublearrow.head;
 }
 );
 userData = {
@@ -80,7 +80,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+doublearrow.head,
 0,
 30,
 0
@@ -88,7 +88,7 @@ arrow.head,
 );
 };
 };
-width = 873;
+width = 1072;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -105,7 +105,7 @@ ref = arrow.mid;
 },
 {
 pos = (772,0);
-ref = arrow.head;
+ref = doublearrow.head;
 }
 );
 userData = {
@@ -124,7 +124,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+doublearrow.head,
 0,
 30,
 0
@@ -132,7 +132,7 @@ arrow.head,
 );
 };
 };
-width = 1110;
+width = 1310;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -149,7 +149,7 @@ ref = arrow.mid;
 },
 {
 pos = (589,0);
-ref = arrow.head;
+ref = doublearrow.head;
 }
 );
 userData = {
@@ -168,7 +168,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+doublearrow.head,
 0,
 30,
 0
@@ -176,7 +176,7 @@ arrow.head,
 );
 };
 };
-width = 888;
+width = 1018;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -193,7 +193,7 @@ ref = arrow.mid;
 },
 {
 pos = (813,0);
-ref = arrow.head;
+ref = doublearrow.head;
 }
 );
 userData = {
@@ -212,7 +212,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+doublearrow.head,
 0,
 30,
 0
@@ -220,7 +220,7 @@ arrow.head,
 );
 };
 };
-width = 1163;
+width = 1293;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -237,7 +237,7 @@ ref = arrow.mid;
 },
 {
 pos = (813,0);
-ref = arrow.head;
+ref = doublearrow.head;
 }
 );
 userData = {
@@ -256,7 +256,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+doublearrow.head,
 0,
 30,
 0
@@ -264,7 +264,7 @@ arrow.head,
 );
 };
 };
-width = 1163;
+width = 1293;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -281,7 +281,7 @@ ref = arrow.mid;
 },
 {
 pos = (554,0);
-ref = arrow.head;
+ref = doublearrow.head;
 }
 );
 userData = {
@@ -300,7 +300,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+doublearrow.head,
 0,
 30,
 0
@@ -308,7 +308,7 @@ arrow.head,
 );
 };
 };
-width = 878;
+width = 1078;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -325,7 +325,7 @@ ref = arrow.mid;
 },
 {
 pos = (782,0);
-ref = arrow.head;
+ref = doublearrow.head;
 }
 );
 userData = {
@@ -344,7 +344,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+doublearrow.head,
 0,
 30,
 0
@@ -352,12 +352,12 @@ arrow.head,
 );
 };
 };
-width = 1120;
+width = 1320;
 }
 );
 metricLeft = leftRightArrow;
 metricRight = leftRightArrow;
-unicode = 8594;
+unicode = 8608;
 userData = {
 KernOnSpecialSpacing = {
 L = NoKerning;
