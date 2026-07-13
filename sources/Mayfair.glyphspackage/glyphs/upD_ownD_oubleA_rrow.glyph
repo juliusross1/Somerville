@@ -1,6 +1,6 @@
 {
 color = 1;
-glyphname = downArrow;
+glyphname = upDownDoubleArrow;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -9,40 +9,26 @@ metricRight = "=upArrow";
 shapes = (
 {
 alignment = -1;
-angle = -90;
-pos = (22,738);
-ref = rightArrow;
+angle = 90;
+pos = (552,-319);
+ref = leftRightDoubleArrow;
 }
 );
 width = 574;
 },
 {
-layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 metricLeft = "=upArrow";
 metricRight = "=upArrow";
 shapes = (
 {
 alignment = -1;
-angle = -90;
-pos = (29,737);
-ref = rightArrow;
+angle = 90;
+pos = (589,-379);
+ref = leftRightDoubleArrow;
 }
 );
-width = 588;
-},
-{
-layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-metricLeft = "=upArrow";
-metricRight = "=upArrow";
-shapes = (
-{
-alignment = -1;
-angle = -90;
-pos = (81,859);
-ref = rightArrow;
-}
-);
-width = 693;
+width = 648;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -51,9 +37,9 @@ metricRight = "=upArrow";
 shapes = (
 {
 alignment = -1;
-angle = -90;
-pos = (22,738);
-ref = rightArrow;
+angle = 90;
+pos = (552,-318);
+ref = leftRightDoubleArrow;
 }
 );
 width = 574;
@@ -65,26 +51,40 @@ metricRight = "=upArrow";
 shapes = (
 {
 alignment = -1;
-angle = -90;
-pos = (61,866);
-ref = rightArrow;
+angle = 90;
+pos = (590,-381);
+ref = leftRightDoubleArrow;
 }
 );
 width = 651;
 },
 {
-layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 metricLeft = "=upArrow";
 metricRight = "=upArrow";
 shapes = (
 {
 alignment = -1;
-angle = -90;
-pos = (59,866);
-ref = rightArrow;
+angle = 90;
+pos = (552,-342);
+ref = leftRightDoubleArrow;
 }
 );
-width = 648;
+width = 574;
+},
+{
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+metricLeft = "=upArrow";
+metricRight = "=upArrow";
+shapes = (
+{
+alignment = -1;
+angle = 90;
+pos = (605,-372);
+ref = leftRightDoubleArrow;
+}
+);
+width = 679;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -93,12 +93,12 @@ metricRight = "=upArrow";
 shapes = (
 {
 alignment = -1;
-angle = -90;
-pos = (49,740);
-ref = rightArrow;
+angle = 90;
+pos = (552,-341);
+ref = leftRightDoubleArrow;
 }
 );
-width = 628;
+width = 574;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -107,21 +107,13 @@ metricRight = "=upArrow";
 shapes = (
 {
 alignment = -1;
-angle = -90;
-pos = (102,858);
-ref = rightArrow;
+angle = 90;
+pos = (605,-370);
+ref = leftRightDoubleArrow;
 }
 );
-width = 734;
+width = 679;
 }
 );
-metricLeft = upArrow;
-metricRight = upArrow;
-unicode = 8595;
-userData = {
-KernOnSpecialSpacing = {
-L = NoKerning;
-R = NoKerning;
-};
-};
+unicode = 8661;
 }
