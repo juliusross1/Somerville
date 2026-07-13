@@ -2109,6 +2109,66 @@ def action_set_component_axis_value(font, verbose=False, glyph=None, axis="heigh
     return changed
 
 
+def first_matching_component(layer, component_filter=None):
+    for component in layer_components(layer):
+        if component_matches_filter(component, component_filter):
+            return component
+    return None
+
+
+def action_copy_component_axis_value(
+    font,
+    verbose=False,
+    glyph=None,
+    sourceGlyph=None,
+    axis="height",
+    sourceComponentFilter=None,
+    componentFilter=None,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    source_glyph = glyph_for_name(font, sourceGlyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if source_glyph is None:
+        raise RuntimeError("Missing source glyph: %s" % sourceGlyph)
+
+    changed = 0
+    skipped = 0
+    for target_layer in target_glyph.layers:
+        source_layer = matching_layer(source_glyph, target_layer)
+        if source_layer is None:
+            skipped += 1
+            continue
+        source_component = first_matching_component(source_layer, sourceComponentFilter)
+        if source_component is None:
+            skipped += 1
+            continue
+        value = component_axis_value(font, source_component, axis)
+        if value is None:
+            skipped += 1
+            continue
+        for target_component in layer_components(target_layer):
+            if not component_matches_filter(target_component, componentFilter):
+                continue
+            axis_id = smart_axis_id_for_component(font, target_component, axis)
+            if axis_id is None:
+                skipped += 1
+                continue
+            if set_component_smart_value(target_component, axis_id, value):
+                changed += 1
+            else:
+                skipped += 1
+    log("%s: copied %s smart value from %s on %i component(s)%s." % (
+        glyph,
+        axis,
+        sourceGlyph,
+        changed,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
 def math_assembly_entry(entry):
     if isinstance(entry, dict):
         glyph_name = entry.get("glyph") or entry.get("component") or entry.get("name")
@@ -2283,6 +2343,7 @@ ACTION_REGISTRY = {
     "createHighLayers": action_create_high_layers,
     "setComponentAxisLowHigh": action_set_component_axis_low_high,
     "setComponentAxisValue": action_set_component_axis_value,
+    "copyComponentAxisValue": action_copy_component_axis_value,
     "setMathPluginAssembly": action_set_math_plugin_assembly,
     "setComponentScaleByLayerName": action_set_component_scale_by_layer_name,
     "createSmartComponentVariants": action_create_smart_component_variants,
