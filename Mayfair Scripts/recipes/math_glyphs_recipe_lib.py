@@ -10,10 +10,12 @@ import uuid
 from GlyphsApp import (
     Glyphs,
     GSGlyph,
+    GSAnchor,
     GSComponent,
     GSGlyphReference,
     GSSmartComponentAxis,
 )
+from AppKit import NSMakePoint, NSPoint
 
 
 SCRIPT_VERSION = "2026-07-03 14:48 CDT pair-anchor-master-source"
@@ -946,6 +948,103 @@ def effective_layer_anchor_xy(font, layer, names):
     return None
 
 
+def component_bounds_center_xy(component):
+    _min_x, _max_x, center_x = bounds_x_values(component)
+    _min_y, _max_y, center_y = bounds_y_values(component)
+    if center_x is None or center_y is None:
+        return None
+    return center_x, center_y
+
+
+def effective_component_anchor_xy(
+    font,
+    layer,
+    component_names,
+    anchor_names,
+    component_index=None,
+    use_bounds_center=False,
+):
+    components = layer_components(layer)
+    if component_index is not None:
+        try:
+            component = components[int(component_index)]
+        except Exception:
+            return None
+        if boolean_value(use_bounds_center):
+            return component_bounds_center_xy(component)
+        source_layer = component_source_layer(font, component, layer)
+        if source_layer is None:
+            return None
+        anchor = layer_anchor(source_layer, anchor_names)
+        local_xy = anchor_xy(anchor)
+        if local_xy is not None:
+            return transformed_point(component, local_xy)
+        return None
+
+    if isinstance(component_names, str):
+        component_names = [component_names]
+    wanted_components = set(component_names or [])
+    if not wanted_components:
+        return effective_layer_anchor_xy(font, layer, anchor_names)
+
+    for component in components:
+        if component_name(component) not in wanted_components:
+            continue
+        if boolean_value(use_bounds_center):
+            return component_bounds_center_xy(component)
+        source_layer = component_source_layer(font, component, layer)
+        if source_layer is None:
+            continue
+        anchor = layer_anchor(source_layer, anchor_names)
+        local_xy = anchor_xy(anchor)
+        if local_xy is not None:
+            return transformed_point(component, local_xy)
+    return None
+
+
+def make_point(x_value, y_value):
+    x_value = float(x_value)
+    y_value = float(y_value)
+    try:
+        return NSMakePoint(x_value, y_value)
+    except Exception:
+        return NSPoint(x_value, y_value)
+
+
+def set_layer_anchor(layer, name, xy):
+    if not name or xy is None:
+        return False
+    anchors = safe_call(getattr(layer, "anchors", None))
+    if anchors is None:
+        return False
+    point = make_point(xy[0], xy[1])
+
+    try:
+        anchor = anchors[name]
+        if anchor is not None:
+            anchor.position = point
+            return True
+    except Exception:
+        pass
+
+    try:
+        anchor = GSAnchor(str(name), point)
+    except Exception:
+        anchor = GSAnchor(str(name))
+        anchor.position = point
+
+    try:
+        anchors.append(anchor)
+        return True
+    except Exception:
+        pass
+    try:
+        layer.anchors.append(anchor)
+        return True
+    except Exception:
+        return False
+
+
 def first_matching_anchor_pair(font, previous_layer, next_layer, preferred_names=None):
     if isinstance(preferred_names, str):
         preferred_names = [preferred_names]
@@ -1855,6 +1954,79 @@ def action_align_component_midpoint_to_math_axis(
     return changed
 
 
+def action_align_component_anchors_to_math_axis(
+    font,
+    verbose=False,
+    glyph=None,
+    components=None,
+    anchorNames=None,
+    targetAnchorName=None,
+    writeAnchor=False,
+    disableAlignment=True,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+    if isinstance(anchorNames, str):
+        anchorNames = [anchorNames]
+    anchorNames = anchorNames or ["#entry", "#exit"]
+    wanted_components = set(components or [])
+
+    changed = 0
+    anchors_written = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        layer_label = layer_name(layer) or layer_id(layer) or "<unnamed layer>"
+        for component in layer_components(layer):
+            if wanted_components and component_name(component) not in wanted_components:
+                continue
+            source_layer = component_source_layer(font, component, layer)
+            if source_layer is None:
+                skipped += 1
+                continue
+            local_xy = effective_layer_anchor_xy(font, source_layer, anchorNames)
+            if local_xy is None:
+                log("%s/%s: anchor-to-axis skipped; %s missing %s." % (
+                    glyph,
+                    layer_label,
+                    component_name(component) or "<unnamed component>",
+                    ", ".join(anchorNames),
+                ), verbose)
+                skipped += 1
+                continue
+
+            target_xy = transformed_point(component, local_xy)
+            math_axis = math_axis_for_layer(font, layer)
+            dy = math_axis - target_xy[1]
+            if abs(dy) > 0.0001:
+                if boolean_value(disableAlignment):
+                    disable_component_alignment(component)
+                if move_component_by(component, dy=dy):
+                    changed += 1
+                    target_xy = transformed_point(component, local_xy)
+                else:
+                    skipped += 1
+                    continue
+
+            if boolean_value(writeAnchor):
+                anchor_name_to_write = targetAnchorName or anchorNames[0]
+                if set_layer_anchor(layer, anchor_name_to_write, target_xy):
+                    anchors_written += 1
+                else:
+                    skipped += 1
+
+    log("%s: moved %i component(s) so anchors sit on math axis; wrote %i anchor(s)%s." % (
+        glyph,
+        changed,
+        anchors_written,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return dict(changed=changed, anchors=anchors_written, skipped=skipped)
+
+
 def action_align_component_pairs_by_anchors(
     font,
     verbose=False,
@@ -1902,8 +2074,28 @@ def action_align_component_pairs_by_anchors(
 
             base_anchor = pair.get("baseAnchor")
             mark_anchor = pair.get("markAnchor")
-            base_xy = effective_layer_anchor_xy(font, base_layer, [base_anchor])
-            mark_xy = effective_layer_anchor_xy(font, mark_layer, [mark_anchor])
+            base_component_names = pair.get("baseComponent") or pair.get("baseComponents")
+            mark_component_names = pair.get("markComponent") or pair.get("markComponents")
+            base_component_index = pair.get("baseComponentIndex")
+            mark_component_index = pair.get("markComponentIndex")
+            base_use_bounds_center = pair.get("baseUseBoundsCenter")
+            mark_use_bounds_center = pair.get("markUseBoundsCenter")
+            base_xy = effective_component_anchor_xy(
+                font,
+                base_layer,
+                base_component_names,
+                [base_anchor],
+                base_component_index,
+                base_use_bounds_center,
+            )
+            mark_xy = effective_component_anchor_xy(
+                font,
+                mark_layer,
+                mark_component_names,
+                [mark_anchor],
+                mark_component_index,
+                mark_use_bounds_center,
+            )
             if base_xy is None or mark_xy is None:
                 skipped += 1
                 continue
@@ -2556,6 +2748,7 @@ ACTION_REGISTRY = {
     "placeComponentSequenceByWidths": action_place_component_sequence_by_widths,
     "alignComponentSequenceAnchors": action_align_component_sequence_anchors,
     "alignComponentMidpointToMathAxis": action_align_component_midpoint_to_math_axis,
+    "alignComponentAnchorsToMathAxis": action_align_component_anchors_to_math_axis,
     "alignComponentPairsByAnchors": action_align_component_pairs_by_anchors,
     "flipComponents": action_flip_components,
     "flipComponentsAcrossYAxis": action_flip_components_across_y_axis,

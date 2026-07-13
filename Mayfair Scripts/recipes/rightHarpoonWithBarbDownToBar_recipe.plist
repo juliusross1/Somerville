@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>formatVersion</key>
+  <integer>1</integer>
+  <key>kind</key>
+  <string>macro</string>
+  <key>name</key>
+  <string>rightHarpoonWithBarbDownToBar</string>
+  <key>template</key>
+  <string>horizontal_arrow_three_part_template.plist</string>
+  <key>parameters</key>
+  <dict>
+    <key>exportGlyph</key>
+    <string>rightHarpoonWithBarbDownToBar</string>
+    <key>leftPart</key>
+    <string>rightArrow.lft</string>
+    <key>middlePart</key>
+    <string>arrow.mid</string>
+    <key>rightPart</key>
+    <string>rightTabHarpoonDownArrow.rgt</string>
+  </dict>
+</dict>
+</plist>

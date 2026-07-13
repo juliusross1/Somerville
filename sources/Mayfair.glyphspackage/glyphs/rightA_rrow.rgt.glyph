@@ -12,6 +12,9 @@ width = 60;
 ref = arrow.mid;
 },
 {
+piece = {
+height = 0;
+};
 ref = _arrowhead;
 }
 );
@@ -114,15 +117,19 @@ layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 piece = {
-width = 60;
+width = 62.55802;
 };
 ref = arrow.mid;
 },
 {
+piece = {
+height = 0;
+};
+pos = (3,0);
 ref = _arrowhead;
 }
 );
-width = 338;
+width = 341;
 }
 );
 }
