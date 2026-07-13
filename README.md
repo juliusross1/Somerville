@@ -466,9 +466,8 @@ Recipes needed
 *Mayfair Todo (16)*
 ===== Arrows
 (?)More arrow Testing pages
-leftrightarrow
 frombar
-leftrightdoublearrow
+leftrightdoublearrow (get a script to do this one!)
 minus
 equals
 congruent

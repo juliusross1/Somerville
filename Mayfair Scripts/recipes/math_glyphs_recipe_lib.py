@@ -667,6 +667,44 @@ def bounds_y_values(obj):
         return None, None, None
 
 
+def bounds_x_values(obj):
+    bounds = safe_call(getattr(obj, "bounds", None))
+    if bounds is None:
+        return None, None, None
+    try:
+        min_x = float(bounds.origin.x)
+        width = float(bounds.size.width)
+        return min_x, min_x + width, min_x + (width / 2.0)
+    except Exception:
+        pass
+    try:
+        origin = bounds[0]
+        size = bounds[1]
+        min_x = float(origin[0])
+        width = float(size[0])
+        return min_x, min_x + width, min_x + (width / 2.0)
+    except Exception:
+        return None, None, None
+
+
+def translate_component_x(component, dx):
+    if abs(float(dx)) <= 0.000001:
+        return True
+    a, b, c, d, tx, ty = transform_values(component)
+    if set_component_transform(component, (a, b, c, d, tx + float(dx), ty)):
+        return True
+
+    position = safe_call(getattr(component, "position", None))
+    if position is not None:
+        try:
+            position.x = float(position.x) + float(dx)
+            component.position = position
+            return True
+        except Exception:
+            pass
+    return False
+
+
 def translate_component_y(component, dy):
     if abs(float(dy)) <= 0.000001:
         return True
@@ -697,6 +735,20 @@ def flip_component_across_horizontal_center(component):
     if old_min_y is None or new_min_y is None:
         return True
     return translate_component_y(component, old_min_y - new_min_y)
+
+
+def flip_component_across_vertical_center(component):
+    old_min_x, old_max_x, center_x = bounds_x_values(component)
+    if center_x is None:
+        return False
+    a, b, c, d, tx, ty = transform_values(component)
+    if not set_component_transform(component, (-a, b, -c, d, (2.0 * center_x) - tx, ty)):
+        return False
+
+    new_min_x, new_max_x, new_center_x = bounds_x_values(component)
+    if old_min_x is None or new_min_x is None:
+        return True
+    return translate_component_x(component, old_min_x - new_min_x)
 
 
 def component_glyph(font, component):
@@ -1757,6 +1809,32 @@ def action_flip_components(font, verbose=False, glyph=None, components=None, **_
     return changed
 
 
+def action_flip_components_across_y_axis(font, verbose=False, glyph=None, components=None, **_kwargs):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+    wanted_components = set(components or [])
+    changed = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        for component in layer_components(layer):
+            if wanted_components and component_name(component) not in wanted_components:
+                continue
+            disable_component_alignment(component)
+            if flip_component_across_vertical_center(component):
+                changed += 1
+            else:
+                skipped += 1
+    log("%s: flipped %i component(s) across the y-axis%s." % (
+        glyph,
+        changed,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
 def action_copy_layer_metrics(font, verbose=False, glyph=None, sourceGlyph=None, **_kwargs):
     target_glyph = glyph_for_name(font, glyph)
     source_glyph = glyph_for_name(font, sourceGlyph)
@@ -1816,6 +1894,36 @@ def action_set_side_metrics_from_component_sequence(
         glyph,
         left_key,
         right_key,
+        layer_count,
+    ), verbose)
+    return changed
+
+
+def action_set_side_metric_keys(
+    font,
+    verbose=False,
+    glyph=None,
+    leftMetricsKey=None,
+    rightMetricsKey=None,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+
+    layer_count = 0
+    changed = 0
+    for layer in target_glyph.layers:
+        layer_count += 1
+        if leftMetricsKey is not None and set_layer_metrics_key(layer, "leftMetricsKey", leftMetricsKey):
+            changed += 1
+        if rightMetricsKey is not None and set_layer_metrics_key(layer, "rightMetricsKey", rightMetricsKey):
+            changed += 1
+
+    log("%s: set LSB key %s and RSB key %s on %i layer(s)." % (
+        glyph,
+        leftMetricsKey,
+        rightMetricsKey,
         layer_count,
     ), verbose)
     return changed
@@ -2087,8 +2195,10 @@ ACTION_REGISTRY = {
     "alignComponentMidpointToMathAxis": action_align_component_midpoint_to_math_axis,
     "alignComponentPairsByAnchors": action_align_component_pairs_by_anchors,
     "flipComponents": action_flip_components,
+    "flipComponentsAcrossYAxis": action_flip_components_across_y_axis,
     "copyLayerMetrics": action_copy_layer_metrics,
     "setSideMetricsFromComponentSequence": action_set_side_metrics_from_component_sequence,
+    "setSideMetricKeys": action_set_side_metric_keys,
     "updateMetrics": action_update_metrics,
     "createHighLayers": action_create_high_layers,
     "setComponentAxisLowHigh": action_set_component_axis_low_high,
