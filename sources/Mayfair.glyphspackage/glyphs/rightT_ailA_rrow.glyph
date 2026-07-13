@@ -1,4 +1,5 @@
 {
+color = 3;
 glyphname = rightTailArrow;
 layers = (
 {
@@ -15,183 +16,7 @@ pos = (370,0);
 ref = arrow.mid;
 },
 {
-pos = (669,0);
-ref = arrow.head;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-arrow.doubletail,
-0,
-0,
-30
-),
-(
-arrow.mid,
-1,
-30,
-30
-),
-(
-arrow.head,
-0,
-30,
-0
-)
-);
-};
-};
-width = 968;
-},
-{
-layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
-shapes = (
-{
-ref = arrow.doubletail;
-},
-{
-piece = {
-width = 550;
-};
-pos = (436,0);
-ref = arrow.mid;
-},
-{
-pos = (926,0);
-ref = arrow.head;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-arrow.doubletail,
-0,
-0,
-30
-),
-(
-arrow.mid,
-1,
-30,
-30
-),
-(
-arrow.head,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1276;
-},
-{
-layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
-shapes = (
-{
-ref = arrow.doubletail;
-},
-{
-piece = {
-width = 359.12689;
-};
-pos = (363,0);
-ref = arrow.mid;
-},
-{
-pos = (662,0);
-ref = arrow.head;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-arrow.doubletail,
-0,
-0,
-30
-),
-(
-arrow.mid,
-1,
-30,
-30
-),
-(
-arrow.head,
-0,
-30,
-0
-)
-);
-};
-};
-width = 961;
-},
-{
-layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-shapes = (
-{
-ref = arrow.doubletail;
-},
-{
-piece = {
-width = 550;
-};
-pos = (420,0);
-ref = arrow.mid;
-},
-{
-pos = (910,0);
-ref = arrow.head;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-arrow.doubletail,
-0,
-0,
-30
-),
-(
-arrow.mid,
-1,
-30,
-30
-),
-(
-arrow.head,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1260;
-},
-{
-layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
-shapes = (
-{
-ref = arrow.doubletail;
-},
-{
-piece = {
-width = 359.12689;
-};
-pos = (405,0);
-ref = arrow.mid;
-},
-{
-pos = (704,0);
+pos = (729,0);
 ref = arrow.head;
 }
 );
@@ -222,7 +47,7 @@ arrow.head,
 width = 1028;
 },
 {
-layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
 ref = arrow.doubletail;
@@ -231,11 +56,11 @@ ref = arrow.doubletail;
 piece = {
 width = 550;
 };
-pos = (438,0);
+pos = (436,0);
 ref = arrow.mid;
 },
 {
-pos = (928,0);
+pos = (986,0);
 ref = arrow.head;
 }
 );
@@ -263,7 +88,183 @@ arrow.head,
 );
 };
 };
-width = 1266;
+width = 1336;
+},
+{
+layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
+shapes = (
+{
+ref = arrow.doubletail;
+},
+{
+piece = {
+width = 359.12689;
+};
+pos = (363,0);
+ref = arrow.mid;
+},
+{
+pos = (722,0);
+ref = arrow.head;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+arrow.doubletail,
+0,
+0,
+30
+),
+(
+arrow.mid,
+1,
+30,
+30
+),
+(
+arrow.head,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1021;
+},
+{
+layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+shapes = (
+{
+ref = arrow.doubletail;
+},
+{
+piece = {
+width = 550;
+};
+pos = (420,0);
+ref = arrow.mid;
+},
+{
+pos = (970,0);
+ref = arrow.head;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+arrow.doubletail,
+0,
+0,
+30
+),
+(
+arrow.mid,
+1,
+30,
+30
+),
+(
+arrow.head,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1319;
+},
+{
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+shapes = (
+{
+ref = arrow.doubletail;
+},
+{
+piece = {
+width = 359.12689;
+};
+pos = (405,0);
+ref = arrow.mid;
+},
+{
+pos = (764,0);
+ref = arrow.head;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+arrow.doubletail,
+0,
+0,
+30
+),
+(
+arrow.mid,
+1,
+30,
+30
+),
+(
+arrow.head,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1131;
+},
+{
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+ref = arrow.doubletail;
+},
+{
+piece = {
+width = 550;
+};
+pos = (438,0);
+ref = arrow.mid;
+},
+{
+pos = (988,0);
+ref = arrow.head;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+arrow.doubletail,
+0,
+0,
+30
+),
+(
+arrow.mid,
+1,
+30,
+30
+),
+(
+arrow.head,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1326;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -279,7 +280,7 @@ pos = (448,0);
 ref = arrow.mid;
 },
 {
-pos = (733,0);
+pos = (793,0);
 ref = arrow.head;
 }
 );
@@ -307,7 +308,7 @@ arrow.head,
 );
 };
 };
-width = 1057;
+width = 1117;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -323,7 +324,7 @@ pos = (459,0);
 ref = arrow.mid;
 },
 {
-pos = (949,0);
+pos = (1009,0);
 ref = arrow.head;
 }
 );
@@ -351,7 +352,7 @@ arrow.head,
 );
 };
 };
-width = 1287;
+width = 1347;
 }
 );
 unicode = 8611;
