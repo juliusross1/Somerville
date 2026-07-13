@@ -1,12 +1,13 @@
 {
-color = 3;
+color = 0;
 glyphname = rightArrow;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
-ref = arrow.tail;
+alignment = 1;
+ref = rightArrow.lft;
 },
 {
 piece = {
@@ -17,14 +18,14 @@ ref = arrow.mid;
 },
 {
 pos = (649,0);
-ref = arrow.head;
+ref = rightArrow.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-arrow.tail,
+rightArrow.lft,
 0,
 0,
 30
@@ -36,7 +37,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+rightArrow.rgt,
 0,
 30,
 0
@@ -50,7 +51,8 @@ width = 948;
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
-ref = arrow.tail;
+alignment = 1;
+ref = rightArrow.lft;
 },
 {
 piece = {
@@ -61,14 +63,14 @@ ref = arrow.mid;
 },
 {
 pos = (609,0);
-ref = arrow.head;
+ref = rightArrow.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-arrow.tail,
+rightArrow.lft,
 0,
 0,
 30
@@ -80,7 +82,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+rightArrow.rgt,
 0,
 30,
 0
@@ -91,10 +93,22 @@ arrow.head,
 width = 932;
 },
 {
+annotations = (
+{
+pos = (636.029,719.421);
+text = "Fix this so components are all enabled";
+type = Text;
+},
+{
+pos = (481.388,486.965);
+type = Text;
+}
+);
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
-ref = arrow.tail;
+alignment = 1;
+ref = rightArrow.lft;
 },
 {
 piece = {
@@ -105,14 +119,14 @@ ref = arrow.mid;
 },
 {
 pos = (832,0);
-ref = arrow.head;
+ref = rightArrow.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-arrow.tail,
+rightArrow.lft,
 0,
 0,
 30
@@ -124,7 +138,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+rightArrow.rgt,
 0,
 30,
 0
@@ -138,7 +152,8 @@ width = 1170;
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
-ref = arrow.tail;
+alignment = 1;
+ref = rightArrow.lft;
 },
 {
 piece = {
@@ -149,14 +164,14 @@ ref = arrow.mid;
 },
 {
 pos = (649,0);
-ref = arrow.head;
+ref = rightArrow.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-arrow.tail,
+rightArrow.lft,
 0,
 0,
 30
@@ -168,7 +183,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+rightArrow.rgt,
 0,
 30,
 0
@@ -182,7 +197,8 @@ width = 948;
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
-ref = arrow.tail;
+alignment = 1;
+ref = rightArrow.lft;
 },
 {
 piece = {
@@ -193,14 +209,14 @@ ref = arrow.mid;
 },
 {
 pos = (873,0);
-ref = arrow.head;
+ref = rightArrow.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-arrow.tail,
+rightArrow.lft,
 0,
 0,
 30
@@ -212,7 +228,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+rightArrow.rgt,
 0,
 30,
 0
@@ -226,7 +242,8 @@ width = 1237;
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
-ref = arrow.tail;
+alignment = 1;
+ref = rightArrow.lft;
 },
 {
 piece = {
@@ -237,14 +254,14 @@ ref = arrow.mid;
 },
 {
 pos = (873,0);
-ref = arrow.head;
+ref = rightArrow.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-arrow.tail,
+rightArrow.lft,
 0,
 0,
 30
@@ -256,7 +273,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+rightArrow.rgt,
 0,
 30,
 0
@@ -270,7 +287,8 @@ width = 1223;
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
-ref = arrow.tail;
+alignment = 1;
+ref = rightArrow.lft;
 },
 {
 piece = {
@@ -281,14 +299,14 @@ ref = arrow.mid;
 },
 {
 pos = (614,0);
-ref = arrow.head;
+ref = rightArrow.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-arrow.tail,
+rightArrow.lft,
 0,
 0,
 30
@@ -300,7 +318,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+rightArrow.rgt,
 0,
 30,
 0
@@ -314,7 +332,8 @@ width = 938;
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
-ref = arrow.tail;
+alignment = 1;
+ref = rightArrow.lft;
 },
 {
 piece = {
@@ -325,14 +344,14 @@ ref = arrow.mid;
 },
 {
 pos = (842,0);
-ref = arrow.head;
+ref = rightArrow.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-arrow.tail,
+rightArrow.lft,
 0,
 0,
 30
@@ -344,7 +363,7 @@ arrow.mid,
 30
 ),
 (
-arrow.head,
+rightArrow.rgt,
 0,
 30,
 0

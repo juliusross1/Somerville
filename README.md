@@ -456,12 +456,11 @@ Recipes needed
 ===  Get testing tool to allow for more complicated snippets, that have inline and display mathematics
 ===  Then design thoughtful tests for all the integrals, and all the big operators
 ===== Arrows listleftright
-Testing pages
-doubleRight
+More arrow Testing pages
 frombar
-harpoon
+leftrightarrow
+leftrightdoublearrow
 leftoverright
-doubleright
 minus
 equals
 congruent
