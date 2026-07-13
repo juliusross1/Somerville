@@ -22,6 +22,14 @@
     <string>.lft</string>
     <key>rightPartSuffix</key>
     <string>.rgt</string>
+    <key>middleComponent</key>
+    <string>DoubleArrow.mid</string>
+    <key>middleAxis</key>
+    <string>width</string>
+    <key>middleWidth</key>
+    <integer>600</integer>
+    <key>rightAssemblyComponent</key>
+    <string>DoubleArrow.rgt</string>
     <key>color</key>
     <string>orange</string>
   </dict>
@@ -78,15 +86,15 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setSideMetricKeys</string>
+      <string>enableComponentAlignment</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>${leftArrowBase}${rightPartSuffix}</string>
-        <key>leftMetricsKey</key>
-        <string>=|${leftArrowBase}${rightPartSuffix}</string>
-        <key>rightMetricsKey</key>
-        <string>=|${leftArrowBase}${rightPartSuffix}</string>
+        <key>components</key>
+        <array>
+          <string>${rightArrowBase}${leftPartSuffix}</string>
+        </array>
       </dict>
     </dict>
 
@@ -152,15 +160,15 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setSideMetricKeys</string>
+      <string>enableComponentAlignment</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>${leftArrowBase}${leftPartSuffix}</string>
-        <key>leftMetricsKey</key>
-        <string>=|${leftArrowBase}${leftPartSuffix}</string>
-        <key>rightMetricsKey</key>
-        <string>=|${leftArrowBase}${leftPartSuffix}</string>
+        <key>components</key>
+        <array>
+          <string>${rightArrowBase}${rightPartSuffix}</string>
+        </array>
       </dict>
     </dict>
 
@@ -173,6 +181,140 @@
       <dict>
         <key>glyph</key>
         <string>${leftArrowBase}${leftPartSuffix}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>${leftArrowBase}</string>
+        <key>export</key>
+        <true/>
+        <key>color</key>
+        <string>${color}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponents</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>${leftArrowBase}</string>
+        <key>components</key>
+        <array>
+          <string>${leftArrowBase}${leftPartSuffix}</string>
+          <string>${middleComponent}</string>
+          <string>${leftArrowBase}${rightPartSuffix}</string>
+        </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setMathPluginAssembly</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>${leftArrowBase}</string>
+        <key>direction</key>
+        <string>h</string>
+        <key>entries</key>
+        <array>
+          <dict>
+            <key>glyph</key>
+            <string>${leftArrowBase}${leftPartSuffix}</string>
+            <key>extender</key>
+            <integer>0</integer>
+            <key>startConnector</key>
+            <integer>0</integer>
+            <key>endConnector</key>
+            <integer>30</integer>
+          </dict>
+          <dict>
+            <key>glyph</key>
+            <string>${middleComponent}</string>
+            <key>extender</key>
+            <integer>1</integer>
+            <key>startConnector</key>
+            <integer>30</integer>
+            <key>endConnector</key>
+            <integer>30</integer>
+          </dict>
+          <dict>
+            <key>glyph</key>
+            <string>${rightAssemblyComponent}</string>
+            <key>extender</key>
+            <integer>0</integer>
+            <key>startConnector</key>
+            <integer>30</integer>
+            <key>endConnector</key>
+            <integer>0</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setComponentAxisValue</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>${leftArrowBase}</string>
+        <key>axis</key>
+        <string>${middleAxis}</string>
+        <key>value</key>
+        <string>${middleWidth}</string>
+        <key>componentFilter</key>
+        <dict>
+          <key>components</key>
+          <array>
+            <string>${middleComponent}</string>
+          </array>
+        </dict>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>enableComponentAlignment</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>${leftArrowBase}</string>
+        <key>components</key>
+        <array>
+          <string>${leftArrowBase}${leftPartSuffix}</string>
+          <string>${middleComponent}</string>
+          <string>${leftArrowBase}${rightPartSuffix}</string>
+        </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>updateMetrics</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>${leftArrowBase}</string>
       </dict>
     </dict>
   </array>

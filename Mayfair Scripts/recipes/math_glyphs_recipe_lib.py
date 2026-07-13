@@ -609,6 +609,34 @@ def disable_component_alignment(component):
         return False
 
 
+def enable_component_alignment(component):
+    method = getattr(component, "setDisableAlignment_", None)
+    if method is not None:
+        try:
+            method(False)
+            return True
+        except Exception:
+            pass
+
+    try:
+        component.automaticAlignment = True
+        return True
+    except Exception:
+        pass
+
+    try:
+        component.disableAlignment = False
+        return True
+    except Exception:
+        pass
+
+    try:
+        component.alignment = 1
+        return True
+    except Exception:
+        return False
+
+
 def set_component_transform(component, values):
     for method_name in ("setTransform_",):
         method = getattr(component, method_name, None)
@@ -1287,6 +1315,21 @@ def store_math_plugin_variants_on_glyph(font, glyph, variant_count, axis_name_va
         return False
 
 
+def existing_math_plugin_variants(owner):
+    try:
+        return dict(owner.userData[MATH_PLUGIN_VARIANTS_USER_DATA_KEY] or {})
+    except Exception:
+        return {}
+
+
+def set_math_plugin_variants(owner, variants):
+    try:
+        owner.userData[MATH_PLUGIN_VARIANTS_USER_DATA_KEY] = variants
+        return True
+    except Exception:
+        return False
+
+
 def copy_glyph_metadata(source_glyph, target_glyph):
     for attribute_name in ("category", "subCategory", "script", "leftMetricsKey", "rightMetricsKey", "widthMetricsKey"):
         try:
@@ -1480,6 +1523,28 @@ def action_disable_component_alignment(font, verbose=False, glyph=None, componen
             if disable_component_alignment(component):
                 changed += 1
     log("%s: disabled automatic alignment on %i component(s)%s." % (
+        glyph,
+        changed,
+        " matching %s" % ", ".join(components) if components else "",
+    ), verbose)
+    return changed
+
+
+def action_enable_component_alignment(font, verbose=False, glyph=None, components=None, **_kwargs):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+    wanted_components = set(components or [])
+    changed = 0
+    for layer in target_glyph.layers:
+        for component in layer_components(layer):
+            if wanted_components and component_name(component) not in wanted_components:
+                continue
+            if enable_component_alignment(component):
+                changed += 1
+    log("%s: enabled automatic alignment on %i component(s)%s." % (
         glyph,
         changed,
         " matching %s" % ", ".join(components) if components else "",
@@ -1899,36 +1964,6 @@ def action_set_side_metrics_from_component_sequence(
     return changed
 
 
-def action_set_side_metric_keys(
-    font,
-    verbose=False,
-    glyph=None,
-    leftMetricsKey=None,
-    rightMetricsKey=None,
-    **_kwargs
-):
-    target_glyph = glyph_for_name(font, glyph)
-    if target_glyph is None:
-        raise RuntimeError("Missing glyph: %s" % glyph)
-
-    layer_count = 0
-    changed = 0
-    for layer in target_glyph.layers:
-        layer_count += 1
-        if leftMetricsKey is not None and set_layer_metrics_key(layer, "leftMetricsKey", leftMetricsKey):
-            changed += 1
-        if rightMetricsKey is not None and set_layer_metrics_key(layer, "rightMetricsKey", rightMetricsKey):
-            changed += 1
-
-    log("%s: set LSB key %s and RSB key %s on %i layer(s)." % (
-        glyph,
-        leftMetricsKey,
-        rightMetricsKey,
-        layer_count,
-    ), verbose)
-    return changed
-
-
 def sync_layer_metrics(layer):
     for method_name in ("syncMetrics", "updateMetrics", "updateMetrics_"):
         method = getattr(layer, method_name, None)
@@ -2074,6 +2109,51 @@ def action_set_component_axis_value(font, verbose=False, glyph=None, axis="heigh
     return changed
 
 
+def math_assembly_entry(entry):
+    if isinstance(entry, dict):
+        glyph_name = entry.get("glyph") or entry.get("component") or entry.get("name")
+        extender = entry.get("extender", entry.get("extension", entry.get("extend", 0)))
+        start_connector = entry.get("startConnector", entry.get("start", entry.get("startOverlap", 0)))
+        end_connector = entry.get("endConnector", entry.get("end", entry.get("endOverlap", 0)))
+    else:
+        values = list(entry or [])
+        if len(values) != 4:
+            raise RuntimeError("Assembly entries must have four values: glyph, extender, start, end.")
+        glyph_name, extender, start_connector, end_connector = values
+    if not glyph_name:
+        raise RuntimeError("Assembly entry is missing a glyph name.")
+    return [
+        str(glyph_name),
+        int(extender),
+        clean_number(start_connector),
+        clean_number(end_connector),
+    ]
+
+
+def action_set_math_plugin_assembly(font, verbose=False, glyph=None, direction="h", entries=None, **_kwargs):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if not entries:
+        raise RuntimeError("%s: assembly entries are required." % glyph)
+
+    assembly_key = "vAssembly" if str(direction).lower().startswith("v") else "hAssembly"
+    assembly = [math_assembly_entry(entry) for entry in entries]
+    changed = 0
+    for layer in target_glyph.layers:
+        math_plugin_variants = existing_math_plugin_variants(layer)
+        math_plugin_variants[assembly_key] = assembly
+        if set_math_plugin_variants(layer, math_plugin_variants):
+            changed += 1
+    log("%s: stored %s with %i part(s) on %i layer(s)." % (
+        glyph,
+        assembly_key,
+        len(assembly),
+        changed,
+    ), verbose)
+    return changed
+
+
 def layer_matches_name_rule(layer_label, rule):
     contains = rule.get("contains")
     if isinstance(contains, str):
@@ -2190,6 +2270,7 @@ ACTION_REGISTRY = {
     "addComponent": action_add_component,
     "addComponents": action_add_components,
     "disableComponentAlignment": action_disable_component_alignment,
+    "enableComponentAlignment": action_enable_component_alignment,
     "placeComponentSequenceByWidths": action_place_component_sequence_by_widths,
     "alignComponentSequenceAnchors": action_align_component_sequence_anchors,
     "alignComponentMidpointToMathAxis": action_align_component_midpoint_to_math_axis,
@@ -2198,11 +2279,11 @@ ACTION_REGISTRY = {
     "flipComponentsAcrossYAxis": action_flip_components_across_y_axis,
     "copyLayerMetrics": action_copy_layer_metrics,
     "setSideMetricsFromComponentSequence": action_set_side_metrics_from_component_sequence,
-    "setSideMetricKeys": action_set_side_metric_keys,
     "updateMetrics": action_update_metrics,
     "createHighLayers": action_create_high_layers,
     "setComponentAxisLowHigh": action_set_component_axis_low_high,
     "setComponentAxisValue": action_set_component_axis_value,
+    "setMathPluginAssembly": action_set_math_plugin_assembly,
     "setComponentScaleByLayerName": action_set_component_scale_by_layer_name,
     "createSmartComponentVariants": action_create_smart_component_variants,
 }

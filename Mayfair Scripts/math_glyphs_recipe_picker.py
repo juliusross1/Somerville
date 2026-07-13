@@ -14,8 +14,14 @@ from GlyphsApp import Glyphs
 
 SCRIPT_VERSION = "2026-07-03 15:05 CDT filter-existing-exports"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-if SCRIPT_DIR not in sys.path:
-    sys.path.insert(0, SCRIPT_DIR)
+RECIPE_DIR = (
+    os.path.join(SCRIPT_DIR, "recipes")
+    if os.path.isdir(os.path.join(SCRIPT_DIR, "recipes"))
+    else SCRIPT_DIR
+)
+for import_path in (RECIPE_DIR, SCRIPT_DIR):
+    if import_path not in sys.path:
+        sys.path.insert(0, import_path)
 RUNNABLE_RECIPE_KINDS = ("macro", "recipe")
 
 import math_glyphs_recipe_lib  # noqa: E402
@@ -53,10 +59,10 @@ def open_tab_for_glyphs(font, glyph_names):
 
 def recipe_files():
     files = []
-    for file_name in sorted(os.listdir(SCRIPT_DIR)):
+    for file_name in sorted(os.listdir(RECIPE_DIR)):
         if not file_name.endswith(".plist"):
             continue
-        path = os.path.join(SCRIPT_DIR, file_name)
+        path = os.path.join(RECIPE_DIR, file_name)
         try:
             with open(path, "rb") as handle:
                 plist = plistlib.load(handle)
@@ -189,7 +195,7 @@ def export_existence_status(file_name, runnable):
 
 
 def load_recipe_summary(file_name):
-    path = os.path.join(SCRIPT_DIR, file_name)
+    path = os.path.join(RECIPE_DIR, file_name)
     try:
         with open(path, "rb") as handle:
             plist = plistlib.load(handle)
@@ -254,7 +260,7 @@ class MathGlyphsRecipePicker(object):
         self.w.showExisting = vanilla.CheckBox(
             (410, -92, 178, 22),
             "Show existing exports",
-            value=True,
+            value=False,
             callback=self.refresh_callback,
         )
         self.w.refreshButton = vanilla.Button(
