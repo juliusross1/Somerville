@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>formatVersion</key>
+  <integer>1</integer>
+
+  <key>kind</key>
+  <string>recipe</string>
+
+  <key>name</key>
+  <string>leftArrowTail</string>
+
+  <key>actions</key>
+  <array>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftArrowTail</string>
+        <key>export</key>
+        <true/>
+        <key>color</key>
+        <string>orange</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponents</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftArrowTail</string>
+        <key>components</key>
+        <array>
+          <string>arrow.mid</string>
+          <string>leftArrow.rgt</string>
+        </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setComponentAxisValue</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftArrowTail</string>
+        <key>axis</key>
+        <string>width</string>
+        <key>value</key>
+        <integer>600</integer>
+        <key>componentFilter</key>
+        <dict>
+          <key>components</key>
+          <array>
+            <string>arrow.mid</string>
+          </array>
+        </dict>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setMathPluginAssembly</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftArrowTail</string>
+        <key>direction</key>
+        <string>h</string>
+        <key>entries</key>
+        <array>
+          <dict>
+            <key>glyph</key>
+            <string>arrow.mid</string>
+            <key>extender</key>
+            <integer>1</integer>
+            <key>startConnector</key>
+            <integer>30</integer>
+            <key>endConnector</key>
+            <integer>30</integer>
+          </dict>
+          <dict>
+            <key>glyph</key>
+            <string>leftArrow.rgt</string>
+            <key>extender</key>
+            <integer>0</integer>
+            <key>startConnector</key>
+            <integer>30</integer>
+            <key>endConnector</key>
+            <integer>0</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>enableComponentAlignment</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftArrowTail</string>
+        <key>components</key>
+        <array>
+          <string>arrow.mid</string>
+          <string>leftArrow.rgt</string>
+        </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>updateMetrics</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftArrowTail</string>
+      </dict>
+    </dict>
+  </array>
+</dict>
+</plist>

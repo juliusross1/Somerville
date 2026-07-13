@@ -255,11 +255,11 @@ class MathGlyphsRecipePicker(object):
         self.w.openTab = vanilla.CheckBox(
             (318, -92, 84, 22),
             "Open tab",
-            value=False,
+            value=True,
         )
         self.w.showExisting = vanilla.CheckBox(
             (410, -92, 178, 22),
-            "Show existing exports",
+            "Show completed recipes",
             value=False,
             callback=self.refresh_callback,
         )

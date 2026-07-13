@@ -765,6 +765,11 @@ def flip_component_across_horizontal_center(component):
     return translate_component_y(component, old_min_y - new_min_y)
 
 
+def flip_component_across_horizontal_line(component, y_value):
+    a, b, c, d, tx, ty = transform_values(component)
+    return set_component_transform(component, (a, -b, c, -d, tx, (2.0 * float(y_value)) - ty))
+
+
 def flip_component_across_vertical_center(component):
     old_min_x, old_max_x, center_x = bounds_x_values(component)
     if center_x is None:
@@ -1468,17 +1473,55 @@ def expand_value(value, parameters):
     return VARIABLE_PATTERN.sub(replace, value)
 
 
+def normalize_component_filter(component_filter):
+    if isinstance(component_filter, list):
+        return {"components": component_filter}
+    if isinstance(component_filter, str):
+        return {"component": component_filter}
+    return component_filter
+
+
+def normalize_recipe_action(action):
+    if not isinstance(action, dict):
+        return action
+    if action.get("type") == "call" or "function" in action:
+        return action
+    function_name = action.get("action")
+    if not function_name:
+        return action
+    arguments = {
+        key: value
+        for key, value in action.items()
+        if key not in ("action", "type", "function", "arguments")
+    }
+    if "componentFilter" in arguments:
+        arguments["componentFilter"] = normalize_component_filter(arguments.get("componentFilter"))
+    if "sourceComponentFilter" in arguments:
+        arguments["sourceComponentFilter"] = normalize_component_filter(arguments.get("sourceComponentFilter"))
+    if function_name == "setMathPluginAssembly" and "entries" not in arguments and "parts" in arguments:
+        arguments["entries"] = arguments.pop("parts")
+    return {
+        "type": "call",
+        "function": function_name,
+        "arguments": arguments,
+    }
+
+
+def normalize_recipe_actions(actions):
+    return [normalize_recipe_action(action) for action in actions]
+
+
 def expanded_actions_from_recipe(recipe_file):
     recipe, recipe_path_value = load_plist(recipe_file)
     if recipe.get("kind") == "macro":
         template_file = recipe["template"]
         template, template_path_value = load_plist(template_file)
         parameters = merge_parameters(template.get("parameters", {}), recipe.get("parameters", {}))
-        actions = expand_value(template.get("actions", []), parameters)
+        actions = normalize_recipe_actions(expand_value(template.get("actions", []), parameters))
         return recipe, template, parameters, actions, recipe_path_value, template_path_value
 
     parameters = dict(recipe.get("parameters", {}))
-    actions = expand_value(recipe.get("actions", []), parameters)
+    actions = normalize_recipe_actions(expand_value(recipe.get("actions", []), parameters))
     return recipe, recipe, parameters, actions, recipe_path_value, recipe_path_value
 
 
@@ -1928,6 +1971,81 @@ def action_flip_components_across_y_axis(font, verbose=False, glyph=None, compon
     log("%s: flipped %i component(s) across the y-axis%s." % (
         glyph,
         changed,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
+def action_flip_components_across_horizontal_line(
+    font,
+    verbose=False,
+    glyph=None,
+    components=None,
+    y=0,
+    anchorNames=None,
+    checkAnchorY=False,
+    tolerance=0.001,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+    if isinstance(anchorNames, str):
+        anchorNames = [anchorNames]
+    anchorNames = anchorNames or ["#entry"]
+    wanted_components = set(components or [])
+    changed = 0
+    skipped = 0
+    checked = 0
+    for layer in target_glyph.layers:
+        for component in layer_components(layer):
+            if wanted_components and component_name(component) not in wanted_components:
+                continue
+            source_layer = component_source_layer(font, component, layer)
+            before_y = None
+            local_anchor_xy = None
+            if boolean_value(checkAnchorY):
+                if source_layer is None:
+                    raise RuntimeError("%s: component %s has no source layer for anchor check." % (
+                        glyph,
+                        component_name(component) or "<unnamed>",
+                    ))
+                local_anchor_xy = effective_layer_anchor_xy(font, source_layer, anchorNames)
+                if local_anchor_xy is None:
+                    raise RuntimeError("%s: component %s is missing anchor %s." % (
+                        glyph,
+                        component_name(component) or "<unnamed>",
+                        ", ".join(anchorNames),
+                    ))
+                before_y = transformed_point(component, local_anchor_xy)[1]
+
+            disable_component_alignment(component)
+            if flip_component_across_horizontal_line(component, y):
+                changed += 1
+            else:
+                skipped += 1
+                continue
+
+            if boolean_value(checkAnchorY):
+                after_y = transformed_point(component, local_anchor_xy)[1]
+                if abs(after_y - before_y) > float(tolerance):
+                    raise RuntimeError(
+                        "%s: anchor %s y moved from %.3f to %.3f after horizontal flip." % (
+                            glyph,
+                            ", ".join(anchorNames),
+                            before_y,
+                            after_y,
+                        )
+                    )
+                checked += 1
+
+    log("%s: flipped %i component(s) across y=%s%s%s." % (
+        glyph,
+        changed,
+        y,
+        "; checked %i anchor(s)" % checked if checked else "",
         "; skipped %i" % skipped if skipped else "",
     ), verbose)
     return changed
@@ -2441,6 +2559,7 @@ ACTION_REGISTRY = {
     "alignComponentPairsByAnchors": action_align_component_pairs_by_anchors,
     "flipComponents": action_flip_components,
     "flipComponentsAcrossYAxis": action_flip_components_across_y_axis,
+    "flipComponentsAcrossHorizontalLine": action_flip_components_across_horizontal_line,
     "rotateComponents": action_rotate_components,
     "copyLayerMetrics": action_copy_layer_metrics,
     "setSideMetricsFromComponentSequence": action_set_side_metrics_from_component_sequence,
