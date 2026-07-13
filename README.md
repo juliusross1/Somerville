@@ -441,6 +441,17 @@ varianttester??
 
 
 **Arrows**
+I decided to make all the arrows from components consisting of a "tail" "middle" and "head".  The naming convention is arrowname.lft,  arrowname.mid, arrowname.rgt.  Exceptions are made, in particular when reusing components.  The .mid pieces are smart that have a width axis (so that the total width of the arrow can be adjusted).   The left-to-right arrows are considered primary.  #exit/#entry anchors helped.  Putting a short .mid component on the .lft and .rhg is useful for extendibles as some typesetting systems take into account the sidebearings of the components.  with this sytem creating extendibles is immediate (it was decided that all overlaps should be 30 units which was set to be the smallest value of the .mid).
+
+Somewhat painful is to make double arrows, e.g. two right arrows on top of each other as you need to adjust 3 glyphs.  The script **blah** helps with this, but some manual adjustment is needed
+
+Design choice: semiexpanded arrows have expanded heads and tails.  This is consistent with the expansion of text for vertical arrows, but not for horizontal arrows.   But I think we want our vertical arrows to be rotations of the horizontal ones, so there was a compromise to be made here.  Playfair made the same compromise.
+
+Design choice: Not all the arrows have the same base width.  SemiExpanded ones are longer than the semicondensed ones.  This is true for vertical and horizontal.  Again this is not really consistent with the text expansion so need to think about this more perhaps.
+
+Design Choice: Playfair arrows had beautiful double tails.  One of these tails were kept on all arrows, with the double tail kept for double tail.  I imagine somebody will one day ask for a stylstic set without the tails.
+
+Design Choice: Black Micro arrows were made skightly thicker, consistent with our choice on minus,plus (and not consistent with Playfair)
 
 ======
 Recipes needed
@@ -453,17 +464,15 @@ Recipes needed
 
 
 *Mayfair Todo (16)*
-===  Get testing tool to allow for more complicated snippets, that have inline and display mathematics
-===  Then design thoughtful tests for all the integrals, and all the big operators
-===== Arrows listleftright
-More arrow Testing pages
-frombar
+===== Arrows
+(?)More arrow Testing pages
 leftrightarrow
+frombar
 leftrightdoublearrow
-leftoverright
 minus
 equals
 congruent
+leftoverright
 injection
 == Go back and deal with the relative widths of the different arrows
 Then
@@ -473,6 +482,7 @@ Marked versions
 === Create times at sizes;  fix this mess
 === Look back at weight of summation (started)
 === Return to bigodot, bigoplus, bigotimes
+=== primes
 === ssty for bold-math and bolditalic-math (need script additions).  Also the script is not creating the layers so the italic-math need fixing up.
 === Union, Subset, \in
 === Center the bar, bracket, brace etc (these might be OK)
@@ -484,7 +494,6 @@ Marked versions
 === Look back at serifs on integral in semiexpanded agate
 === sym glyph so can do many more relations
 === bold underlines
-=== primes
 === spacing/italic correction
 === Testing tool to also support looking at instances
 ===? Testing tool to record so have some kind of "save" button
