@@ -779,6 +779,39 @@ def flip_component_across_vertical_center(component):
     return translate_component_x(component, old_min_x - new_min_x)
 
 
+def set_component_rotation(component, degrees):
+    degrees = clean_number(degrees)
+    method = getattr(component, "setRotation_", None)
+    if method is not None:
+        try:
+            method(degrees)
+            return True
+        except Exception:
+            pass
+    try:
+        component.rotation = degrees
+        return True
+    except Exception:
+        return False
+
+
+def set_component_rotation_preserving_bbox_center(component, degrees):
+    _min_x, _max_x, old_center_x = bounds_x_values(component)
+    _min_y, _max_y, old_center_y = bounds_y_values(component)
+    if old_center_x is None or old_center_y is None:
+        return False
+    if not set_component_rotation(component, degrees):
+        return False
+
+    _min_x, _max_x, new_center_x = bounds_x_values(component)
+    _min_y, _max_y, new_center_y = bounds_y_values(component)
+    if new_center_x is None or new_center_y is None:
+        return True
+    moved_x = translate_component_x(component, old_center_x - new_center_x)
+    moved_y = translate_component_y(component, old_center_y - new_center_y)
+    return moved_x and moved_y
+
+
 def component_glyph(font, component):
     for attribute_name in ("component", "glyph"):
         glyph = safe_call(getattr(component, attribute_name, None))
@@ -1900,6 +1933,33 @@ def action_flip_components_across_y_axis(font, verbose=False, glyph=None, compon
     return changed
 
 
+def action_rotate_components(font, verbose=False, glyph=None, components=None, degrees=0, **_kwargs):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+    wanted_components = set(components or [])
+    changed = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        for component in layer_components(layer):
+            if wanted_components and component_name(component) not in wanted_components:
+                continue
+            disable_component_alignment(component)
+            if set_component_rotation_preserving_bbox_center(component, degrees):
+                changed += 1
+            else:
+                skipped += 1
+    log("%s: rotated %i component(s) by %s degrees%s." % (
+        glyph,
+        changed,
+        degrees,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
 def action_copy_layer_metrics(font, verbose=False, glyph=None, sourceGlyph=None, **_kwargs):
     target_glyph = glyph_for_name(font, glyph)
     source_glyph = glyph_for_name(font, sourceGlyph)
@@ -1959,6 +2019,50 @@ def action_set_side_metrics_from_component_sequence(
         glyph,
         left_key,
         right_key,
+        layer_count,
+    ), verbose)
+    return changed
+
+
+def action_set_side_bearings(font, verbose=False, glyph=None, left=None, right=None, **_kwargs):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    changed = 0
+    layer_count = 0
+    for layer in target_glyph.layers:
+        layer_count += 1
+        set_layer_metrics_key(layer, "leftMetricsKey", None)
+        set_layer_metrics_key(layer, "rightMetricsKey", None)
+        if left is not None and set_layer_metric(layer, "LSB", clean_number(left)):
+            changed += 1
+        if right is not None and set_layer_metric(layer, "RSB", clean_number(right)):
+            changed += 1
+    log("%s: set LSB=%s and RSB=%s on %i layer(s)." % (
+        glyph,
+        left,
+        right,
+        layer_count,
+    ), verbose)
+    return changed
+
+
+def action_set_side_metric_keys(font, verbose=False, glyph=None, left=None, right=None, **_kwargs):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    changed = 0
+    layer_count = 0
+    for layer in target_glyph.layers:
+        layer_count += 1
+        if left is not None and set_layer_metrics_key(layer, "leftMetricsKey", left):
+            changed += 1
+        if right is not None and set_layer_metrics_key(layer, "rightMetricsKey", right):
+            changed += 1
+    log("%s: set LSB key %s and RSB key %s on %i layer(s)." % (
+        glyph,
+        left,
+        right,
         layer_count,
     ), verbose)
     return changed
@@ -2337,8 +2441,11 @@ ACTION_REGISTRY = {
     "alignComponentPairsByAnchors": action_align_component_pairs_by_anchors,
     "flipComponents": action_flip_components,
     "flipComponentsAcrossYAxis": action_flip_components_across_y_axis,
+    "rotateComponents": action_rotate_components,
     "copyLayerMetrics": action_copy_layer_metrics,
     "setSideMetricsFromComponentSequence": action_set_side_metrics_from_component_sequence,
+    "setSideBearings": action_set_side_bearings,
+    "setSideMetricKeys": action_set_side_metric_keys,
     "updateMetrics": action_update_metrics,
     "createHighLayers": action_create_high_layers,
     "setComponentAxisLowHigh": action_set_component_axis_low_high,
