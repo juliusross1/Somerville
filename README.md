@@ -455,6 +455,8 @@ Design Choice: Black Micro arrows were made skightly thicker, consistent with ou
 
 Design choice: Horizontal arrows align on the math axis Vertical arrows do not need assembly data (but we could easily add it).  They align to the baseline.  Some are all but that is fine.  If need be we can consider shrinking tails for some of them.
 
+Design Choice: Frombar has serifs (or do these have a different name)? from the bar to the arrow stem.  That was not as easy as I had hoped, but thank goodness for components!
+
 
 
 ======
@@ -469,25 +471,24 @@ Recipes needed
 
 *Mayfair Todo (16)*
 ===== Arrows
-(?)More arrow Testing pages
-
-doublestroke
-not
+More/better arrow Testing pages, also in ConTeXt
+Serifs on the frombar (can I reuse something here)
+Fromdoublebar
 minus
 equals
 congruent
-leftoverright (how to do over/under arrows in general?)
-injection
+*leftoverright (how to do over/under arrows in general?)
+*Large arrows on an axis
+injection arrow
 == Go back and deal with the relative widths of the different arrows
 Then
 Long versions
-Marked versions
 
 === Create times at sizes;  fix this mess
 === Look back at weight of summation (started)
 === Return to bigodot, bigoplus, bigotimes
 === primes
-=== ssty for bold-math and bolditalic-math (need script additions).  Also the script is not creating the layers so the italic-math need fixing up.
+=== ssty for bold-math and bolditalic-math (need script additions).  Also the script is not creating the layers so a few of the the italic-math need fixing up.
 === Union, Subset, \in
 === Center the bar, bracket, brace etc (these might be OK)
 === relations recipes (in fact need to revisit the entire recipe system)
@@ -496,16 +497,15 @@ Marked versions
 ===may need to think more about sidebearings of _smart.circle as I just did this roughly
 === Product glyph serifs at high
 === Look back at serifs on integral in semiexpanded agate
+=== Axis for bigger integral serifs?
 === sym glyph so can do many more relations
-=== bold underlines
+=== bold underlines (script?)
 === spacing/italic correction
 === Testing tool to also support looking at instances
 ===? Testing tool to record so have some kind of "save" button
-=== Latex system in my testing tool====
+=== Latex system in my testing tool
 === slash at sizes
 Email people about here maybe?
-
-
 === over/underbraces
 === extended plus,minus, equv etc
 === italic correction on large parenthesis
@@ -514,7 +514,7 @@ Email people about here maybe?
 === extended integral serifs
 === \mathbb R,N,Z
 === list the most useful missing glyphs
-=== wideaccenta
+=== wideaccents
 
 ----------------------------------------------
 Testing stuff
