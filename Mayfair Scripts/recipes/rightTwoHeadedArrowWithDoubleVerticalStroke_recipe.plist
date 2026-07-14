@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>formatVersion</key>
+  <integer>1</integer>
+  <key>kind</key>
+  <string>macro</string>
+  <key>name</key>
+  <string>rightTwoHeadedArrowWithDoubleVerticalStroke</string>
+  <key>template</key>
+  <string>horizontal_arrow_vertical_stroke_template.plist</string>
+  <key>parameters</key>
+  <dict>
+    <key>exportGlyph</key>
+    <string>rightTwoHeadedArrowWithDoubleVerticalStroke</string>
+    <key>leftPart</key>
+    <string>rightArrow.lft</string>
+    <key>strokePart</key>
+    <string>arrowdoublestroke.mid</string>
+    <key>rightPart</key>
+    <string>twoheadrightarrow.rgt</string>
+    <key>middleWidth</key>
+    <integer>600</integer>
+  </dict>
+</dict>
+</plist>
