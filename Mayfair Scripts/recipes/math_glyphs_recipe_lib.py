@@ -305,6 +305,14 @@ def math_axis_for_layer(font, layer):
         return 0.0
 
 
+def descender_for_layer(font, layer):
+    master = master_for_layer(font, layer)
+    try:
+        return float(metric_value(master, "descender", 0))
+    except Exception:
+        return 0.0
+
+
 def glyph_for_name(font, glyph_name):
     try:
         return font.glyphs[glyph_name]
@@ -2027,6 +2035,59 @@ def action_align_component_anchors_to_math_axis(
     return dict(changed=changed, anchors=anchors_written, skipped=skipped)
 
 
+def action_align_component_bottom_to_descender(
+    font,
+    verbose=False,
+    glyph=None,
+    components=None,
+    enabled=True,
+    disableAlignment=True,
+    **_kwargs
+):
+    if not boolean_value(enabled):
+        log("%s: component bottom descender alignment skipped." % glyph, verbose)
+        return 0
+
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if isinstance(components, str):
+        components = [components]
+    wanted_components = set(components or [])
+
+    changed = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        descender = descender_for_layer(font, layer)
+        for component in layer_components(layer):
+            if wanted_components and component_name(component) not in wanted_components:
+                continue
+            min_y, _max_y, _center_y = bounds_y_values(component)
+            if min_y is None:
+                skipped += 1
+                continue
+            dy = descender - min_y
+            if abs(dy) < 0.0001:
+                continue
+            if boolean_value(disableAlignment):
+                disable_component_alignment(component)
+            if move_component_by(component, dy=dy):
+                changed += 1
+            else:
+                skipped += 1
+
+    log("%s: moved %i component(s) so bounds bottoms sit on descender%s." % (
+        glyph,
+        changed,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
+def action_align_component_bottom_to_baseline(*args, **kwargs):
+    return action_align_component_bottom_to_descender(*args, **kwargs)
+
+
 def action_align_component_pairs_by_anchors(
     font,
     verbose=False,
@@ -2749,6 +2810,8 @@ ACTION_REGISTRY = {
     "alignComponentSequenceAnchors": action_align_component_sequence_anchors,
     "alignComponentMidpointToMathAxis": action_align_component_midpoint_to_math_axis,
     "alignComponentAnchorsToMathAxis": action_align_component_anchors_to_math_axis,
+    "alignComponentBottomToBaseline": action_align_component_bottom_to_baseline,
+    "alignComponentBottomToDescender": action_align_component_bottom_to_descender,
     "alignComponentPairsByAnchors": action_align_component_pairs_by_anchors,
     "flipComponents": action_flip_components,
     "flipComponentsAcrossYAxis": action_flip_components_across_y_axis,

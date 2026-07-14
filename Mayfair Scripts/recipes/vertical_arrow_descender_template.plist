@@ -7,10 +7,24 @@
   <integer>1</integer>
 
   <key>kind</key>
-  <string>recipe</string>
+  <string>template</string>
 
   <key>name</key>
-  <string>upTwoHeadedArrow</string>
+  <string>verticalArrowDescender</string>
+
+  <key>parameters</key>
+  <dict>
+    <key>exportGlyph</key>
+    <string>upArrow</string>
+    <key>sourceGlyph</key>
+    <string>rightArrow</string>
+    <key>degrees</key>
+    <integer>90</integer>
+    <key>metricGlyph</key>
+    <string>upArrow</string>
+    <key>color</key>
+    <string>orange</string>
+  </dict>
 
   <key>actions</key>
   <array>
@@ -22,11 +36,11 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
+        <string>${exportGlyph}</string>
         <key>export</key>
         <true/>
         <key>color</key>
-        <string>orange</string>
+        <string>${color}</string>
       </dict>
     </dict>
 
@@ -38,9 +52,9 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
+        <string>${exportGlyph}</string>
         <key>component</key>
-        <string>rightTwoheadedArrow</string>
+        <string>${sourceGlyph}</string>
       </dict>
     </dict>
 
@@ -52,13 +66,13 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
+        <string>${exportGlyph}</string>
         <key>components</key>
         <array>
-          <string>rightTwoheadedArrow</string>
+          <string>${sourceGlyph}</string>
         </array>
         <key>degrees</key>
-        <integer>90</integer>
+        <string>${degrees}</string>
       </dict>
     </dict>
 
@@ -70,10 +84,10 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
+        <string>${exportGlyph}</string>
         <key>components</key>
         <array>
-          <string>rightTwoheadedArrow</string>
+          <string>${sourceGlyph}</string>
         </array>
       </dict>
     </dict>
@@ -86,11 +100,11 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
+        <string>${exportGlyph}</string>
         <key>left</key>
-        <string>upArrow</string>
+        <string>${metricGlyph}</string>
         <key>right</key>
-        <string>upArrow</string>
+        <string>${metricGlyph}</string>
       </dict>
     </dict>
 
@@ -102,7 +116,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
+        <string>${exportGlyph}</string>
       </dict>
     </dict>
   </array>

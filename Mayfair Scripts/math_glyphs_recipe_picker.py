@@ -12,7 +12,7 @@ from AppKit import NSAttributedString, NSColor, NSForegroundColorAttributeName
 from GlyphsApp import Glyphs
 
 
-SCRIPT_VERSION = "2026-07-03 15:05 CDT filter-existing-exports"
+SCRIPT_VERSION = "2026-07-13 12:00 CDT multi-select-run"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 RECIPE_DIR = (
     os.path.join(SCRIPT_DIR, "recipes")
@@ -239,6 +239,7 @@ class MathGlyphsRecipePicker(object):
                 dict(title="Exports", key="exports", width=95),
                 dict(title="Status", key="status"),
             ],
+            allowsMultipleSelection=True,
             selectionCallback=self.selection_callback,
             doubleClickCallback=self.run_callback,
         )
@@ -270,20 +271,22 @@ class MathGlyphsRecipePicker(object):
         )
         self.w.runButton = vanilla.Button(
             (-124, -64, 112, 26),
-            "Run Recipe",
+            "Run Selected",
             callback=self.run_callback,
         )
         self.refresh()
         self.w.open()
 
+    def selected_rows(self):
+        rows = []
+        for index in list(self.w.recipeList.getSelection() or []):
+            if 0 <= index < len(self.rows):
+                rows.append(self.rows[index])
+        return rows
+
     def selected_row(self):
-        selection = list(self.w.recipeList.getSelection() or [])
-        if not selection:
-            return None
-        index = selection[0]
-        if index < 0 or index >= len(self.rows):
-            return None
-        return self.rows[index]
+        rows = self.selected_rows()
+        return rows[0] if rows else None
 
     def refresh(self, selected_file=None):
         if selected_file is None:
@@ -310,17 +313,19 @@ class MathGlyphsRecipePicker(object):
         self.refresh()
 
     def selection_callback(self, sender):
-        row = self.selected_row()
-        self.w.runButton.enable(bool(row and row.get("runnable")))
+        self.w.runButton.enable(any(row.get("runnable") for row in self.selected_rows()))
 
     def run_callback(self, sender):
-        row = self.selected_row()
-        if not row:
+        selected_rows = self.selected_rows()
+        if not selected_rows:
             return
         verbose = verbosity_enabled(self.w.verbose)
-        if not row.get("runnable"):
+        runnable_rows = [row for row in selected_rows if row.get("runnable")]
+        skipped_rows = [row for row in selected_rows if not row.get("runnable")]
+        if not runnable_rows:
             Glyphs.showMacroWindow()
-            print_warning("%s is not a runnable recipe." % row.get("file"))
+            for row in skipped_rows:
+                print_warning("%s is not a runnable recipe." % row.get("file"))
             return
         overwrite_glyphs = bool(self.w.overwrite.get())
         open_tab = bool(self.w.openTab.get())
@@ -329,26 +334,46 @@ class MathGlyphsRecipePicker(object):
             show_macro_window_for_verbose_run()
             print("Run Math Glyphs Recipe Picker")
             print("Script version: %s" % SCRIPT_VERSION)
-            print("Selected recipe: %s" % row.get("file"))
+            print("Selected recipes: %i" % len(runnable_rows))
+            for row in runnable_rows:
+                print("  %s" % row.get("file"))
+            for row in skipped_rows:
+                print_warning("%s is not a runnable recipe; skipping." % row.get("file"))
             print("Overwrite glyphs: %s" % ("yes" if overwrite_glyphs else "no"))
             print("Open tab: %s" % ("yes" if open_tab else "no"))
             print("")
 
-        try:
-            result = run_recipe(row["file"], verbose=verbose, overwrite_glyphs=overwrite_glyphs)
-            if open_tab:
-                glyph_names = (result or {}).get("glyphs", [])
-                if not open_tab_for_glyphs(Glyphs.font, glyph_names) and verbose:
-                    print_warning("Could not open a tab for created glyphs.")
-        except RecipeStopped as stopped:
-            Glyphs.showMacroWindow()
-            print_warning(stopped)
-        except Exception as error:
-            Glyphs.showMacroWindow()
-            print_warning(error)
-            print(traceback.format_exc())
-        finally:
-            self.refresh(selected_file=row.get("file"))
+        touched_glyphs = []
+        completed = 0
+        failed = 0
+        for row in runnable_rows:
+            if verbose:
+                print("Running recipe: %s" % row.get("file"))
+            try:
+                result = run_recipe(row["file"], verbose=verbose, overwrite_glyphs=overwrite_glyphs)
+                touched_glyphs.extend((result or {}).get("glyphs", []))
+                completed += 1
+            except RecipeStopped as stopped:
+                failed += 1
+                Glyphs.showMacroWindow()
+                print_warning("%s: %s" % (row.get("file"), stopped))
+            except Exception as error:
+                failed += 1
+                Glyphs.showMacroWindow()
+                print_warning("%s: %s" % (row.get("file"), error))
+                print(traceback.format_exc())
+
+        glyph_names = unique_names(touched_glyphs)
+        if open_tab and glyph_names:
+            if not open_tab_for_glyphs(Glyphs.font, glyph_names) and verbose:
+                print_warning("Could not open a tab for created glyphs.")
+        if verbose:
+            print("")
+            print("Completed recipes: %i" % completed)
+            if failed:
+                print_warning("Failed recipes: %i" % failed)
+
+        self.refresh(selected_file=runnable_rows[0].get("file"))
 
 
 _mathGlyphsRecipePicker = MathGlyphsRecipePicker()

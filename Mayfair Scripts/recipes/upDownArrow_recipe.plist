@@ -66,6 +66,22 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
+      <string>alignComponentBottomToDescender</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>upDownArrow</string>
+        <key>components</key>
+        <array>
+          <string>leftRightArrow</string>
+        </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
       <string>setSideMetricKeys</string>
       <key>arguments</key>
       <dict>

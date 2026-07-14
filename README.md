@@ -453,6 +453,10 @@ Design Choice: Playfair arrows had beautiful double tails.  One of these tails w
 
 Design Choice: Black Micro arrows were made skightly thicker, consistent with our choice on minus,plus (and not consistent with Playfair)
 
+Design choice: Horizontal arrows align on the math axis Vertical arrows do not need assembly data (but we could easily add it).  They align to the baseline.  Some are all but that is fine.  If need be we can consider shrinking tails for some of them.
+
+
+
 ======
 Recipes needed
 = ??? Equals from minus??
@@ -467,15 +471,12 @@ Recipes needed
 ===== Arrows
 (?)More arrow Testing pages
 
-frombar
-tab
-stroke 
 doublestroke
-
+not
 minus
 equals
 congruent
-leftoverright
+leftoverright (how to do over/under arrows in general?)
 injection
 == Go back and deal with the relative widths of the different arrows
 Then
