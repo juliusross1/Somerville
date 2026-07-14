@@ -22,6 +22,80 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
+        <string>leftFrombarDoubleArrow.rgt</string>
+        <key>export</key>
+        <true/>
+        <key>color</key>
+        <string>orange</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponent</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftFrombarDoubleArrow.rgt</string>
+        <key>component</key>
+        <string>rightFrombarDoubleArrow.lft</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>flipComponentsAcrossYAxis</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftFrombarDoubleArrow.rgt</string>
+        <key>components</key>
+        <array>
+          <string>rightFrombarDoubleArrow.lft</string>
+        </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>enableComponentAlignment</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftFrombarDoubleArrow.rgt</string>
+        <key>components</key>
+        <array>
+          <string>rightFrombarDoubleArrow.lft</string>
+        </array>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>updateMetrics</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftFrombarDoubleArrow.rgt</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
         <string>leftDoubleArrowFromBar</string>
         <key>export</key>
         <true/>
@@ -43,7 +117,7 @@
         <array>
           <string>leftDoubleArrow.lft</string>
           <string>DoubleArrow.mid</string>
-          <string>leftFrombarArrow.rgt</string>
+          <string>leftFrombarDoubleArrow.rgt</string>
         </array>
       </dict>
     </dict>
@@ -106,7 +180,27 @@
           </dict>
           <dict>
             <key>glyph</key>
-            <string>leftFrombarArrow.rgt</string>
+            <string>DoubleArrow.mid</string>
+            <key>extender</key>
+            <integer>0</integer>
+            <key>startConnector</key>
+            <integer>30</integer>
+            <key>endConnector</key>
+            <integer>30</integer>
+          </dict>
+          <dict>
+            <key>glyph</key>
+            <string>DoubleArrow.mid</string>
+            <key>extender</key>
+            <integer>1</integer>
+            <key>startConnector</key>
+            <integer>30</integer>
+            <key>endConnector</key>
+            <integer>30</integer>
+          </dict>
+          <dict>
+            <key>glyph</key>
+            <string>leftFrombarDoubleArrow.rgt</string>
             <key>extender</key>
             <integer>0</integer>
             <key>startConnector</key>
@@ -131,7 +225,7 @@
         <array>
           <string>leftDoubleArrow.lft</string>
           <string>DoubleArrow.mid</string>
-          <string>leftFrombarArrow.rgt</string>
+          <string>leftFrombarDoubleArrow.rgt</string>
         </array>
       </dict>
     </dict>

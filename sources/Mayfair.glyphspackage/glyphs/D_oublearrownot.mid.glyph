@@ -1,6 +1,6 @@
 {
 color = 3;
-glyphname = arrowsnot.mid;
+glyphname = Doublearrownot.mid;
 layers = (
 {
 attr = {
@@ -17,7 +17,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -42,7 +42,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -67,7 +67,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -92,7 +92,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -117,7 +117,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -142,7 +142,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -165,14 +165,16 @@ width = 1;
 shapes = (
 {
 piece = {
-width = 300;
+width = 500;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
+alignment = -1;
 angle = -28;
-pos = (-283,195);
+pos = (-193,145);
 ref = _arrowstroke;
+scale = (1,1.2);
 }
 );
 width = 300;
@@ -192,7 +194,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -220,7 +222,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -248,7 +250,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -276,7 +278,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -304,7 +306,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -332,7 +334,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -360,7 +362,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
@@ -388,12 +390,14 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
+alignment = -1;
 angle = -28;
-pos = (-133,195);
+pos = (-153,141);
 ref = _arrowstroke;
+scale = (1,1.2);
 }
 );
 width = 600;
@@ -416,11 +420,11 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = DoubleArrow.mid;
 },
 {
 angle = -28;
-pos = (124,57);
+pos = (124,58);
 ref = _arrowstroke;
 }
 );

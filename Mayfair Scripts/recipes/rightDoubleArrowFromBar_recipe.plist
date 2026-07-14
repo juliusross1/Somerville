@@ -10,7 +10,7 @@
   <string>recipe</string>
 
   <key>name</key>
-  <string>twoheadleftarrow</string>
+  <string>rightDoubleArrowFromBar</string>
 
   <key>actions</key>
   <array>
@@ -22,81 +22,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>twoheadleftarrow.lft</string>
-        <key>export</key>
-        <true/>
-        <key>color</key>
-        <string>orange</string>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>addComponent</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>twoheadleftarrow.lft</string>
-        <key>component</key>
-        <string>twoheadrightarrow.rgt</string>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>flipComponentsAcrossYAxis</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>twoheadleftarrow.lft</string>
-        <key>components</key>
-        <array>
-          <string>twoheadrightarrow.rgt</string>
-        </array>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>enableComponentAlignment</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>twoheadleftarrow.lft</string>
-        <key>components</key>
-        <array>
-          <string>twoheadrightarrow.rgt</string>
-        </array>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>updateMetrics</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>twoheadleftarrow.lft</string>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>createGlyph</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>twoheadleftarrow</string>
+        <string>rightDoubleArrowFromBar</string>
         <key>export</key>
         <true/>
         <key>color</key>
@@ -112,12 +38,12 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>twoheadleftarrow</string>
+        <string>rightDoubleArrowFromBar</string>
         <key>components</key>
         <array>
-          <string>twoheadleftarrow.lft</string>
-          <string>arrow.mid</string>
-          <string>leftArrow.rgt</string>
+          <string>rightFrombarDoubleArrow.lft</string>
+          <string>DoubleArrow.mid</string>
+          <string>rightDoubleArrow.rgt</string>
         </array>
       </dict>
     </dict>
@@ -130,7 +56,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>twoheadleftarrow</string>
+        <string>rightDoubleArrowFromBar</string>
         <key>axis</key>
         <string>width</string>
         <key>value</key>
@@ -139,7 +65,7 @@
         <dict>
           <key>components</key>
           <array>
-            <string>arrow.mid</string>
+            <string>DoubleArrow.mid</string>
           </array>
         </dict>
       </dict>
@@ -153,14 +79,14 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>twoheadleftarrow</string>
+        <string>rightDoubleArrowFromBar</string>
         <key>direction</key>
         <string>h</string>
         <key>entries</key>
         <array>
           <dict>
             <key>glyph</key>
-            <string>twoheadleftarrow.lft</string>
+            <string>rightFrombarDoubleArrow.lft</string>
             <key>extender</key>
             <integer>0</integer>
             <key>startConnector</key>
@@ -170,7 +96,7 @@
           </dict>
           <dict>
             <key>glyph</key>
-            <string>arrow.mid</string>
+            <string>DoubleArrow.mid</string>
             <key>extender</key>
             <integer>1</integer>
             <key>startConnector</key>
@@ -180,7 +106,27 @@
           </dict>
           <dict>
             <key>glyph</key>
-            <string>leftArrow.rgt</string>
+            <string>DoubleArrow.mid</string>
+            <key>extender</key>
+            <integer>0</integer>
+            <key>startConnector</key>
+            <integer>30</integer>
+            <key>endConnector</key>
+            <integer>30</integer>
+          </dict>
+          <dict>
+            <key>glyph</key>
+            <string>DoubleArrow.mid</string>
+            <key>extender</key>
+            <integer>1</integer>
+            <key>startConnector</key>
+            <integer>30</integer>
+            <key>endConnector</key>
+            <integer>30</integer>
+          </dict>
+          <dict>
+            <key>glyph</key>
+            <string>rightDoubleArrow.rgt</string>
             <key>extender</key>
             <integer>0</integer>
             <key>startConnector</key>
@@ -200,12 +146,12 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>twoheadleftarrow</string>
+        <string>rightDoubleArrowFromBar</string>
         <key>components</key>
         <array>
-          <string>twoheadleftarrow.lft</string>
-          <string>arrow.mid</string>
-          <string>leftArrow.rgt</string>
+          <string>rightFrombarDoubleArrow.lft</string>
+          <string>DoubleArrow.mid</string>
+          <string>rightDoubleArrow.rgt</string>
         </array>
       </dict>
     </dict>
@@ -218,7 +164,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>twoheadleftarrow</string>
+        <string>rightDoubleArrowFromBar</string>
       </dict>
     </dict>
   </array>

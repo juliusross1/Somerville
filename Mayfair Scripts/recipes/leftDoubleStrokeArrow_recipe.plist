@@ -8,19 +8,19 @@
   <key>kind</key>
   <string>macro</string>
   <key>name</key>
-  <string>leftRightDoubleArrowWithStroke</string>
+  <string>leftDoubleStrokeArrow</string>
   <key>template</key>
   <string>horizontal_arrow_vertical_stroke_template.plist</string>
   <key>parameters</key>
   <dict>
     <key>exportGlyph</key>
-    <string>leftRightDoubleArrowWithStroke</string>
+    <string>leftDoubleStrokeArrow</string>
     <key>leftPart</key>
     <string>leftDoubleArrow.lft</string>
     <key>strokePart</key>
-    <string>arrowsnot.mid</string>
+    <string>Doublearrownot.mid</string>
     <key>rightPart</key>
-    <string>rightDoubleArrow.rgt</string>
+    <string>leftDoubleArrow.rgt</string>
     <key>extenderPart</key>
     <string>DoubleArrow.mid</string>
     <key>middleWidth</key>

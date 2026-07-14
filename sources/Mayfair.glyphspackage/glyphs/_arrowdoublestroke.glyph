@@ -8,12 +8,14 @@ layers = (
 anchors = (
 {
 name = _center;
-pos = (121,265);
+pos = (80,265);
 }
 );
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
+alignment = -1;
+pos = (-81,0);
 ref = _arrowtab;
 },
 {
@@ -22,53 +24,57 @@ pos = (-241,0);
 ref = _arrowtab;
 }
 );
-width = 242;
+width = 161;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (171,265);
+pos = (150,265);
 }
 );
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
+alignment = -1;
+pos = (60,0);
 ref = _arrowtab;
 },
 {
 alignment = -1;
-pos = (-141,0);
+pos = (-241,0);
 ref = _arrowtab;
 }
 );
-width = 242;
+width = 302;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (171,265);
+pos = (80,265);
 }
 );
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
+alignment = -1;
+pos = (-81,0);
 ref = _arrowtab;
 },
 {
 alignment = -1;
-pos = (-140,0);
+pos = (-241,0);
 ref = _arrowtab;
 }
 );
-width = 242;
+width = 161;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (51,264);
+pos = (150,264);
 }
 );
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -79,11 +85,11 @@ pos = (-241,0);
 ref = _arrowtab;
 },
 {
-pos = (-139,0);
+pos = (59,0);
 ref = _arrowtab;
 }
 );
-width = 103;
+width = 301;
 },
 {
 anchors = (
@@ -110,7 +116,7 @@ width = 260;
 anchors = (
 {
 name = _center;
-pos = (130,265);
+pos = (170,265);
 }
 );
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -121,52 +127,57 @@ pos = (-276,0);
 ref = _arrowtab;
 },
 {
-pos = (-96,0);
+pos = (-16,0);
 ref = _arrowtab;
 }
 );
-width = 260;
+width = 340;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (166,265);
+pos = (132,265);
 }
 );
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
 alignment = -1;
-pos = (-291,0);
+pos = (-233,0);
 ref = _arrowtab;
+scale = (0.8,1);
 },
 {
-pos = (-75,0);
+pos = (-60,0);
 ref = _arrowtab;
+scale = (0.8,1);
 }
 );
-width = 332;
+width = 266;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (167,265);
+pos = (187,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
+alignment = -1;
 ref = _arrowtab;
+scale = (0.8,1);
 },
 {
 alignment = -1;
-pos = (217,0);
+pos = (257,0);
 ref = _arrowtab;
+scale = (0.8,1);
 }
 );
-width = 334;
+width = 351;
 }
 );
 metricLeft = "=0";
