@@ -13,8 +13,7 @@ ref = rightTailArrow.lft;
 piece = {
 width = 600;
 };
-pos = (315,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 }
 );
 userData = {
@@ -27,7 +26,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -48,8 +47,7 @@ ref = rightTailArrow.lft;
 piece = {
 width = 600;
 };
-pos = (348,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 }
 );
 userData = {
@@ -62,7 +60,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -83,8 +81,7 @@ ref = rightTailArrow.lft;
 piece = {
 width = 600;
 };
-pos = (308,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 }
 );
 userData = {
@@ -97,7 +94,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -118,8 +115,7 @@ ref = rightTailArrow.lft;
 piece = {
 width = 600;
 };
-pos = (332,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 }
 );
 userData = {
@@ -132,7 +128,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -153,8 +149,7 @@ ref = rightTailArrow.lft;
 piece = {
 width = 600;
 };
-pos = (360,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 }
 );
 userData = {
@@ -167,7 +162,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -188,8 +183,7 @@ ref = rightTailArrow.lft;
 piece = {
 width = 600;
 };
-pos = (360,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 }
 );
 userData = {
@@ -202,7 +196,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -223,8 +217,7 @@ ref = rightTailArrow.lft;
 piece = {
 width = 600;
 };
-pos = (417,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 }
 );
 userData = {
@@ -237,7 +230,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -256,10 +249,10 @@ ref = rightTailArrow.lft;
 },
 {
 piece = {
-width = 746.43854;
+width = 600;
 };
 pos = (479,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 }
 );
 userData = {
@@ -272,7 +265,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -280,7 +273,7 @@ arrow.mid,
 );
 };
 };
-width = 1225;
+width = 1079;
 }
 );
 unicode = 10524;

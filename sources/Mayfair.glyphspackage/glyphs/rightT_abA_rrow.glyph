@@ -14,7 +14,7 @@ piece = {
 width = 600;
 };
 pos = (290,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 alignment = 1;
@@ -32,7 +32,7 @@ rightArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -60,7 +60,7 @@ piece = {
 width = 600;
 };
 pos = (323,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 alignment = 1;
@@ -78,7 +78,7 @@ rightArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -106,7 +106,7 @@ piece = {
 width = 600;
 };
 pos = (290,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 alignment = 1;
@@ -124,7 +124,7 @@ rightArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -152,7 +152,7 @@ piece = {
 width = 600;
 };
 pos = (323,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 alignment = 1;
@@ -170,7 +170,7 @@ rightArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -195,14 +195,14 @@ ref = rightArrow.lft;
 },
 {
 piece = {
-width = 350.79962;
+width = 600;
 };
 pos = (250,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 alignment = 1;
-pos = (601,0);
+pos = (850,0);
 ref = rightTabArrow.rgt;
 }
 );
@@ -216,7 +216,7 @@ rightArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -230,7 +230,7 @@ rightTabArrow.rgt,
 );
 };
 };
-width = 1004;
+width = 1253;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -244,7 +244,7 @@ piece = {
 width = 600;
 };
 pos = (282,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 alignment = 1;
@@ -262,7 +262,7 @@ rightArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -290,7 +290,7 @@ piece = {
 width = 600;
 };
 pos = (269,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 alignment = 1;
@@ -308,7 +308,7 @@ rightArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -336,7 +336,7 @@ piece = {
 width = 600;
 };
 pos = (292,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 alignment = 1;
@@ -354,7 +354,7 @@ rightArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30

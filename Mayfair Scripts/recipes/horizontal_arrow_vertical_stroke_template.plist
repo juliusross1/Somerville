@@ -19,17 +19,19 @@
     <key>leftPart</key>
     <string>rightArrow.lft</string>
     <key>strokePart</key>
-    <string>arrowstroke.mid</string>
+    <string>ArrowVerticalStroke.mid</string>
     <key>rightPart</key>
     <string>rightArrow.rgt</string>
     <key>extenderPart</key>
-    <string>arrow.mid</string>
+    <string>Arrow.mid</string>
     <key>middleWidth</key>
     <integer>600</integer>
     <key>middleAxisAction</key>
     <string>setComponentAxisValue</string>
     <key>axisSourceGlyph</key>
-    <string>arrow.mid</string>
+    <string>Arrow.mid</string>
+    <key>middleAxisAnchor</key>
+    <string>width_1</string>
     <key>color</key>
     <string>orange</string>
   </dict>
@@ -86,7 +88,7 @@
         <key>sourceGlyph</key>
         <string>${axisSourceGlyph}</string>
         <key>anchor</key>
-        <string>width_1</string>
+        <string>${middleAxisAnchor}</string>
         <key>componentFilter</key>
         <dict>
           <key>components</key>

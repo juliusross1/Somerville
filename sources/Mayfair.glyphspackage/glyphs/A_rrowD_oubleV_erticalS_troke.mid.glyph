@@ -1,6 +1,6 @@
 {
 color = 3;
-glyphname = arrowstroke.mid;
+glyphname = ArrowDoubleVerticalStroke.mid;
 layers = (
 {
 attr = {
@@ -17,11 +17,11 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (-91,0);
-ref = _arrowstroke;
+pos = (70,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -41,11 +41,10 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (-91,0);
-ref = _arrowstroke;
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -65,11 +64,11 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (-91,0);
-ref = _arrowstroke;
+pos = (70,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -89,11 +88,11 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (-91,1);
-ref = _arrowstroke;
+pos = (0,1);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -113,11 +112,11 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (-180,0);
-ref = _arrowstroke;
+pos = (20,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -137,11 +136,11 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (-166,0);
-ref = _arrowstroke;
+pos = (-20,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -161,11 +160,11 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (103,0);
-ref = _arrowstroke;
+pos = (17,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -183,16 +182,16 @@ width = 1;
 shapes = (
 {
 piece = {
-width = 300;
+width = 557.20856;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (103,0);
-ref = _arrowstroke;
+pos = (92,-1);
+ref = _arrowdoublestroke;
 }
 );
-width = 300;
+width = 557;
 },
 {
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -212,11 +211,11 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (59,0);
-ref = _arrowstroke;
+pos = (220,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -239,11 +238,11 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (59,0);
-ref = _arrowstroke;
+pos = (150,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -266,11 +265,11 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (59,0);
-ref = _arrowstroke;
+pos = (220,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -293,11 +292,11 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (59,1);
-ref = _arrowstroke;
+pos = (150,1);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -320,11 +319,11 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (-30,0);
-ref = _arrowstroke;
+pos = (170,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -347,11 +346,11 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (-16,0);
-ref = _arrowstroke;
+pos = (130,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -374,11 +373,11 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (253,0);
-ref = _arrowstroke;
+pos = (167,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -401,11 +400,11 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (253,-1);
-ref = _arrowstroke;
+pos = (113,-1);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;

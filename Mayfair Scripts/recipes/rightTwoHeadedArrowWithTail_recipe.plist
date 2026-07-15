@@ -42,7 +42,7 @@
         <key>components</key>
         <array>
           <string>rightTailArrow.lft</string>
-          <string>arrow.mid</string>
+          <string>Arrow.mid</string>
           <string>twoheadrightarrow.rgt</string>
         </array>
       </dict>
@@ -52,20 +52,22 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setComponentAxisValue</string>
+      <string>setComponentAxisFromWideLayerAnchor</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>rightTwoHeadedArrowWithTail</string>
         <key>axis</key>
         <string>width</string>
-        <key>value</key>
-        <integer>600</integer>
+        <key>sourceGlyph</key>
+        <string>Arrow.mid</string>
+        <key>anchor</key>
+        <string>width_3</string>
         <key>componentFilter</key>
         <dict>
           <key>components</key>
           <array>
-            <string>arrow.mid</string>
+            <string>Arrow.mid</string>
           </array>
         </dict>
       </dict>
@@ -96,7 +98,7 @@
           </dict>
           <dict>
             <key>glyph</key>
-            <string>arrow.mid</string>
+            <string>Arrow.mid</string>
             <key>extender</key>
             <integer>1</integer>
             <key>startConnector</key>
@@ -130,7 +132,7 @@
         <key>components</key>
         <array>
           <string>rightTailArrow.lft</string>
-          <string>arrow.mid</string>
+          <string>Arrow.mid</string>
           <string>twoheadrightarrow.rgt</string>
         </array>
       </dict>

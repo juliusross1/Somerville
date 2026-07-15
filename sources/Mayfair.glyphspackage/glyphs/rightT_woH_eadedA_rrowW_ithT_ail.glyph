@@ -14,7 +14,7 @@ piece = {
 width = 600;
 };
 pos = (315,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (928,0);
@@ -31,7 +31,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -59,7 +59,7 @@ piece = {
 width = 600;
 };
 pos = (348,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (971,0);
@@ -76,7 +76,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -104,7 +104,7 @@ piece = {
 width = 600;
 };
 pos = (308,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (921,0);
@@ -121,7 +121,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -149,7 +149,7 @@ piece = {
 width = 600;
 };
 pos = (332,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (945,1);
@@ -166,7 +166,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -194,7 +194,7 @@ piece = {
 width = 600;
 };
 pos = (360,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (974,0);
@@ -211,7 +211,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -239,7 +239,7 @@ piece = {
 width = 600;
 };
 pos = (360,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (990,0);
@@ -256,7 +256,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -284,7 +284,7 @@ piece = {
 width = 600;
 };
 pos = (417,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (1030,0);
@@ -301,7 +301,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -326,13 +326,13 @@ ref = rightTailArrow.lft;
 },
 {
 piece = {
-width = 326.44949;
+width = 600;
 };
 pos = (479,0);
-ref = arrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (805,0);
+pos = (1079,0);
 ref = twoheadrightarrow.rgt;
 }
 );
@@ -346,7 +346,7 @@ rightTailArrow.lft,
 30
 ),
 (
-arrow.mid,
+Arrow.mid,
 1,
 30,
 30
@@ -360,7 +360,7 @@ twoheadrightarrow.rgt,
 );
 };
 };
-width = 1345;
+width = 1619;
 }
 );
 production = rightTwoHeadedArrowWithTail;

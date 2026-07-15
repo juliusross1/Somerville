@@ -1,6 +1,6 @@
 {
 color = 3;
-glyphname = Doublearrowstroke.mid;
+glyphname = ArrowVerticalStroke.mid;
 layers = (
 {
 attr = {
@@ -17,7 +17,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (-91,0);
@@ -41,7 +41,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (-91,0);
@@ -65,7 +65,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (-91,0);
@@ -89,7 +89,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (-91,1);
@@ -113,7 +113,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (-180,0);
@@ -137,7 +137,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (-166,0);
@@ -161,7 +161,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (103,0);
@@ -185,7 +185,7 @@ shapes = (
 piece = {
 width = 300;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (103,0);
@@ -212,7 +212,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (59,0);
@@ -239,7 +239,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (59,0);
@@ -266,7 +266,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (59,0);
@@ -293,7 +293,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (59,1);
@@ -320,7 +320,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (-30,0);
@@ -347,7 +347,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (-16,0);
@@ -374,7 +374,7 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
 pos = (253,0);
@@ -401,10 +401,10 @@ shapes = (
 piece = {
 width = 600;
 };
-ref = DoubleArrow.mid;
+ref = Arrow.mid;
 },
 {
-pos = (253,0);
+pos = (253,-1);
 ref = _arrowstroke;
 }
 );
