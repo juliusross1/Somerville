@@ -471,41 +471,40 @@ Recipes needed
 
 *Mayfair Todo (16)*
 ===== Arrows
-More/better arrow Testing pages, also in ConTeXt
-Serifs on the frombar (can I reuse something here)
-Fromdoublebar
-minus
-equals
-congruent
-*leftoverright (how to do over/under arrows in general?)
-*Large arrows on an axis
-injection arrow
-== Go back and deal with the relative widths of the different arrows
-Then
-Long versions
-
+Go back and deal with the relative widths of the different arrows
+-minus
+-equals
+-congruent
+-leftoverright (how to do over/under arrows in general?)
+-injection arrow
+-Long versions
+=== Import mathml tests/use their css
 === Create times at sizes;  fix this mess
+=== Return to bigodot, bigoplus, bigotimes (+testing pages)
+=== Variable Integral
 === Look back at weight of summation (started)
-=== Return to bigodot, bigoplus, bigotimes
 === primes
-=== ssty for bold-math and bolditalic-math (need script additions).  Also the script is not creating the layers so a few of the the italic-math need fixing up.
 === Union, Subset, \in
+=== Variation of naryoperatorsize
 === Center the bar, bracket, brace etc (these might be OK)
 === relations recipes (in fact need to revisit the entire recipe system)
 === Other accents
+=== ssty for bold-math and bolditalic-math (need script additions).  Also the script is not creating the layers so a few of the the italic-math need fixing up.
 === rethink ssty1 and ssty2 values for instances
-===may need to think more about sidebearings of _smart.circle as I just did this roughly
+=== may need to think more about sidebearings of _smart.circle as I just did this roughly
 === Product glyph serifs at high
-=== Look back at serifs on integral in semiexpanded agate
-=== Axis for bigger integral serifs?
 === sym glyph so can do many more relations
 === bold underlines (script?)
 === spacing/italic correction
-=== Testing tool to also support looking at instances
-===? Testing tool to record so have some kind of "save" button
-=== Latex system in my testing tool
+
 === slash at sizes
 Email people about here maybe?
+
+Longer run
+===? Wider arrows in semiexpanded
+===? Testing tool to also support looking at instances
+===? Latex system in my testing tool
+=== Play with VARC
 === over/underbraces
 === extended plus,minus, equv etc
 === italic correction on large parenthesis
@@ -524,7 +523,6 @@ Testing stuff
 ===Have a system of spotting 'stale' recipes
 italic tau
 epsilon?
-
 
 
 Change the anchors on the marks to they are in Glyphsdata.xml

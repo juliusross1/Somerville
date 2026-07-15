@@ -52,15 +52,17 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setComponentAxisValue</string>
+      <string>setComponentAxisFromWideLayerAnchor</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>rightDoubleVerticalStrokeArrow</string>
         <key>axis</key>
         <string>width</string>
-        <key>value</key>
-        <integer>600</integer>
+        <key>sourceGlyph</key>
+        <string>arrow.mid</string>
+        <key>anchor</key>
+        <string>width_1</string>
         <key>componentFilter</key>
         <dict>
           <key>components</key>

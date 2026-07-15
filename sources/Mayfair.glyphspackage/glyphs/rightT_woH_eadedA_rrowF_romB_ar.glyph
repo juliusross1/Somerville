@@ -17,7 +17,7 @@ pos = (115,0);
 ref = arrow.mid;
 },
 {
-pos = (655,0);
+pos = (728,0);
 ref = twoheadrightarrow.rgt;
 }
 );
@@ -45,7 +45,7 @@ twoheadrightarrow.rgt,
 );
 };
 };
-width = 1074;
+width = 1108;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -62,7 +62,7 @@ pos = (148,0);
 ref = arrow.mid;
 },
 {
-pos = (688,0);
+pos = (771,0);
 ref = twoheadrightarrow.rgt;
 }
 );
@@ -90,7 +90,7 @@ twoheadrightarrow.rgt,
 );
 };
 };
-width = 1168;
+width = 1202;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -104,141 +104,6 @@ piece = {
 width = 600;
 };
 pos = (115,0);
-ref = arrow.mid;
-},
-{
-pos = (655,0);
-ref = twoheadrightarrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-rightFrombarArrow.lft,
-0,
-0,
-30
-),
-(
-arrow.mid,
-1,
-30,
-30
-),
-(
-twoheadrightarrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1084;
-},
-{
-layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-shapes = (
-{
-alignment = 1;
-ref = rightFrombarArrow.lft;
-},
-{
-piece = {
-width = 600;
-};
-pos = (148,0);
-ref = arrow.mid;
-},
-{
-pos = (688,0);
-ref = twoheadrightarrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-rightFrombarArrow.lft,
-0,
-0,
-30
-),
-(
-arrow.mid,
-1,
-30,
-30
-),
-(
-twoheadrightarrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1168;
-},
-{
-layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
-shapes = (
-{
-alignment = 1;
-ref = rightFrombarArrow.lft;
-},
-{
-piece = {
-width = 600;
-};
-pos = (155,0);
-ref = arrow.mid;
-},
-{
-pos = (695,0);
-ref = twoheadrightarrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-rightFrombarArrow.lft,
-0,
-0,
-30
-),
-(
-arrow.mid,
-1,
-30,
-30
-),
-(
-twoheadrightarrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1218;
-},
-{
-layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-shapes = (
-{
-alignment = 1;
-ref = rightFrombarArrow.lft;
-},
-{
-piece = {
-width = 600;
-};
-pos = (188,0);
 ref = arrow.mid;
 },
 {
@@ -270,10 +135,10 @@ twoheadrightarrow.rgt,
 );
 };
 };
-width = 1266;
+width = 1108;
 },
 {
-layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
 alignment = 1;
@@ -283,11 +148,11 @@ ref = rightFrombarArrow.lft;
 piece = {
 width = 600;
 };
-pos = (200,0);
+pos = (148,0);
 ref = arrow.mid;
 },
 {
-pos = (740,0);
+pos = (761,1);
 ref = twoheadrightarrow.rgt;
 }
 );
@@ -315,10 +180,10 @@ twoheadrightarrow.rgt,
 );
 };
 };
-width = 1264;
+width = 1206;
 },
 {
-layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
 alignment = 1;
@@ -328,11 +193,56 @@ ref = rightFrombarArrow.lft;
 piece = {
 width = 600;
 };
-pos = (194,0);
+pos = (155,0);
 ref = arrow.mid;
 },
 {
-pos = (734,0);
+pos = (769,0);
+ref = twoheadrightarrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+arrow.mid,
+1,
+30,
+30
+),
+(
+twoheadrightarrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1222;
+},
+{
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+alignment = 1;
+ref = rightFrombarArrow.lft;
+},
+{
+piece = {
+width = 600;
+};
+pos = (188,0);
+ref = arrow.mid;
+},
+{
+pos = (818,0);
 ref = twoheadrightarrow.rgt;
 }
 );
@@ -361,6 +271,96 @@ twoheadrightarrow.rgt,
 };
 };
 width = 1272;
+},
+{
+layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+shapes = (
+{
+alignment = 1;
+ref = rightFrombarArrow.lft;
+},
+{
+piece = {
+width = 600;
+};
+pos = (200,0);
+ref = arrow.mid;
+},
+{
+pos = (813,0);
+ref = twoheadrightarrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+arrow.mid,
+1,
+30,
+30
+),
+(
+twoheadrightarrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1268;
+},
+{
+layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+shapes = (
+{
+alignment = 1;
+ref = rightFrombarArrow.lft;
+},
+{
+piece = {
+width = 600;
+};
+pos = (194,0);
+ref = arrow.mid;
+},
+{
+pos = (794,0);
+ref = twoheadrightarrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+arrow.mid,
+1,
+30,
+30
+),
+(
+twoheadrightarrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1334;
 }
 );
 unicode = 10501;

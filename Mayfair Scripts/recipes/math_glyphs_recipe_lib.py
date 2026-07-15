@@ -2584,6 +2584,89 @@ def action_set_component_axis_value(font, verbose=False, glyph=None, axis="heigh
     return changed
 
 
+def action_set_component_axis_from_wide_layer_anchor(
+    font,
+    verbose=False,
+    glyph=None,
+    sourceGlyph=None,
+    axis="width",
+    anchor="width_1",
+    componentFilter=None,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    source_glyph = glyph_for_name(font, sourceGlyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if source_glyph is None:
+        raise RuntimeError("Missing source glyph: %s" % sourceGlyph)
+
+    changed = 0
+    for master in font.masters:
+        master_id = str(master.id)
+        wide_layer_name = "%s Wide" % master.name
+        wide_layer = None
+        for layer in source_glyph.layers:
+            if layer_name(layer) != wide_layer_name:
+                continue
+            if associated_master_id(layer) == master_id:
+                wide_layer = layer
+                break
+        if wide_layer is None:
+            raise RuntimeError(
+                "%s: missing layer %s associated with master %s."
+                % (sourceGlyph, wide_layer_name, master.name)
+            )
+
+        source_anchor = layer_anchor(wide_layer, [anchor])
+        source_xy = anchor_xy(source_anchor)
+        if source_xy is None:
+            raise RuntimeError(
+                "%s: layer %s has no usable %s anchor."
+                % (sourceGlyph, wide_layer_name, anchor)
+            )
+        value = source_xy[0]
+
+        try:
+            target_layer = target_glyph.layers[master_id]
+        except Exception:
+            target_layer = None
+        if target_layer is None:
+            raise RuntimeError(
+                "%s: missing master layer for %s." % (glyph, master.name)
+            )
+
+        matching_components = [
+            component
+            for component in layer_components(target_layer)
+            if component_matches_filter(component, componentFilter)
+        ]
+        if not matching_components:
+            raise RuntimeError(
+                "%s: no matching component in master %s." % (glyph, master.name)
+            )
+        for component in matching_components:
+            axis_id = smart_axis_id_for_component(font, component, axis)
+            if axis_id is None:
+                raise RuntimeError(
+                    "%s: component %s has no %s smart axis in master %s."
+                    % (glyph, component_name(component), axis, master.name)
+                )
+            if not set_component_smart_value(component, axis_id, value):
+                raise RuntimeError(
+                    "%s: could not set %s=%s on component %s in master %s."
+                    % (glyph, axis, value, component_name(component), master.name)
+                )
+            changed += 1
+
+    log(
+        "%s: set %s from %s Wide/%s on %i component(s)."
+        % (glyph, axis, sourceGlyph, anchor, changed),
+        verbose,
+    )
+    return changed
+
+
 def first_matching_component(layer, component_filter=None):
     for component in layer_components(layer):
         if component_matches_filter(component, component_filter):
@@ -2825,6 +2908,7 @@ ACTION_REGISTRY = {
     "createHighLayers": action_create_high_layers,
     "setComponentAxisLowHigh": action_set_component_axis_low_high,
     "setComponentAxisValue": action_set_component_axis_value,
+    "setComponentAxisFromWideLayerAnchor": action_set_component_axis_from_wide_layer_anchor,
     "copyComponentAxisValue": action_copy_component_axis_value,
     "setMathPluginAssembly": action_set_math_plugin_assembly,
     "setComponentScaleByLayerName": action_set_component_scale_by_layer_name,

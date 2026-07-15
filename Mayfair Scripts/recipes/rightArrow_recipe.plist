@@ -34,13 +34,15 @@
 		</dict>
 		<dict>
 			<key>action</key>
-			<string>setComponentAxisValue</string>
+			<string>setComponentAxisFromWideLayerAnchor</string>
 			<key>glyph</key>
 			<string>rightArrow</string>
+			<key>sourceGlyph</key>
+			<string>arrow.mid</string>
 			<key>axis</key>
 			<string>width</string>
-			<key>value</key>
-			<integer>600</integer>
+			<key>anchor</key>
+			<string>width_1</string>
 			<key>componentFilter</key>
 			<array>
 				<string>arrow.mid</string>

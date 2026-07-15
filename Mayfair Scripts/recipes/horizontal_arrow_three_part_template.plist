@@ -24,6 +24,8 @@
     <string>rightArrow.rgt</string>
     <key>middleWidth</key>
     <integer>600</integer>
+    <key>middleAxisAction</key>
+    <string>setComponentAxisValue</string>
     <key>color</key>
     <string>orange</string>
   </dict>
@@ -68,7 +70,7 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setComponentAxisValue</string>
+      <string>${middleAxisAction}</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
@@ -77,6 +79,10 @@
         <string>width</string>
         <key>value</key>
         <string>${middleWidth}</string>
+        <key>sourceGlyph</key>
+        <string>${middlePart}</string>
+        <key>anchor</key>
+        <string>width_1</string>
         <key>componentFilter</key>
         <dict>
           <key>components</key>

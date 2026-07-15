@@ -1,6 +1,5 @@
 {
 color = 3;
-export = 0;
 glyphname = _arrowhead;
 layers = (
 {
@@ -8,6 +7,10 @@ anchors = (
 {
 name = "#entry";
 pos = (60,265);
+},
+{
+name = "#exit";
+pos = (141,265);
 },
 {
 name = right;
@@ -53,6 +56,10 @@ name = "#entry";
 pos = (61,265);
 },
 {
+name = "#exit";
+pos = (191,265);
+},
+{
 name = right;
 pos = (291,265);
 }
@@ -94,6 +101,10 @@ anchors = (
 {
 name = "#entry";
 pos = (60,265);
+},
+{
+name = "#exit";
+pos = (176,265);
 },
 {
 name = right;
@@ -139,6 +150,10 @@ name = "#entry";
 pos = (60,265);
 },
 {
+name = "#exit";
+pos = (141,265);
+},
+{
 name = right;
 pos = (241,265);
 }
@@ -180,6 +195,10 @@ anchors = (
 {
 name = "#entry";
 pos = (46,265);
+},
+{
+name = "#exit";
+pos = (127,264);
 },
 {
 name = right;
@@ -225,6 +244,10 @@ name = "#entry";
 pos = (60,265);
 },
 {
+name = "#exit";
+pos = (141,265);
+},
+{
 name = right;
 pos = (241,265);
 }
@@ -266,6 +289,10 @@ anchors = (
 {
 name = "#entry";
 pos = (60,265);
+},
+{
+name = "#exit";
+pos = (191,265);
 },
 {
 name = right;
@@ -311,6 +338,10 @@ name = "#entry";
 pos = (60,265);
 },
 {
+name = "#exit";
+pos = (176,265);
+},
+{
 name = right;
 pos = (276,265);
 }
@@ -354,6 +385,10 @@ name = "#entry";
 pos = (80,265);
 },
 {
+name = "#exit";
+pos = (416,266);
+},
+{
 name = right;
 pos = (416,265);
 }
@@ -389,6 +424,10 @@ anchors = (
 {
 name = "#entry";
 pos = (60,265);
+},
+{
+name = "#exit";
+pos = (141,265);
 },
 {
 name = right;
@@ -437,6 +476,10 @@ name = "#entry";
 pos = (60,265);
 },
 {
+name = "#exit";
+pos = (141,265);
+},
+{
 name = right;
 pos = (241,265);
 }
@@ -481,6 +524,10 @@ anchors = (
 {
 name = "#entry";
 pos = (60,265);
+},
+{
+name = "#exit";
+pos = (141,265);
 },
 {
 name = right;
@@ -529,6 +576,10 @@ name = "#entry";
 pos = (46,265);
 },
 {
+name = "#exit";
+pos = (127,264);
+},
+{
 name = right;
 pos = (227,264);
 }
@@ -573,6 +624,10 @@ anchors = (
 {
 name = "#entry";
 pos = (61,265);
+},
+{
+name = "#exit";
+pos = (191,265);
 },
 {
 name = right;
@@ -621,6 +676,10 @@ name = "#entry";
 pos = (60,265);
 },
 {
+name = "#exit";
+pos = (176,265);
+},
+{
 name = right;
 pos = (276,265);
 }
@@ -667,6 +726,10 @@ name = "#entry";
 pos = (60,265);
 },
 {
+name = "#exit";
+pos = (191,265);
+},
+{
 name = right;
 pos = (291,265);
 }
@@ -711,6 +774,10 @@ anchors = (
 {
 name = "#entry";
 pos = (80,265);
+},
+{
+name = "#exit";
+pos = (316,266);
 },
 {
 name = right;

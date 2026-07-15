@@ -16,7 +16,7 @@ shapes = (
 ref = _arrowtab;
 }
 );
-width = 242;
+width = 1;
 },
 {
 anchors = (
@@ -31,7 +31,7 @@ shapes = (
 ref = _arrowtab;
 }
 );
-width = 242;
+width = 1;
 },
 {
 anchors = (
@@ -46,7 +46,7 @@ shapes = (
 ref = _arrowtab;
 }
 );
-width = 242;
+width = 1;
 },
 {
 anchors = (
@@ -61,7 +61,7 @@ shapes = (
 ref = _arrowtab;
 }
 );
-width = 242;
+width = 1;
 },
 {
 anchors = (
@@ -76,7 +76,7 @@ shapes = (
 ref = _arrowtab;
 }
 );
-width = 370;
+width = 80;
 },
 {
 anchors = (
@@ -91,37 +91,39 @@ shapes = (
 ref = _arrowtab;
 }
 );
-width = 356;
+width = 80;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (349,265);
+pos = (47,265);
 }
 );
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
 ref = _arrowtab;
+scale = (0.8,1);
 }
 );
-width = 407;
+width = 93;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (58,265);
+pos = (47,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 ref = _arrowtab;
+scale = (0.8,1);
 }
 );
-width = 117;
+width = 94;
 }
 );
 metricLeft = "=0";
