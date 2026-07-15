@@ -19,7 +19,7 @@ piece = {
 width = 60;
 };
 pos = (55,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 },
 {
 pos = (56,84);
@@ -50,7 +50,7 @@ piece = {
 width = 80;
 };
 pos = (88,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 },
 {
 pos = (89,85);
@@ -88,7 +88,7 @@ piece = {
 width = 60;
 };
 pos = (55,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 },
 {
 pos = (56,85);
@@ -119,7 +119,7 @@ piece = {
 width = 80;
 };
 pos = (88,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 },
 {
 pos = (89,85);
@@ -150,7 +150,7 @@ piece = {
 width = 60;
 };
 pos = (125,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 },
 {
 pos = (125,80);
@@ -181,7 +181,7 @@ piece = {
 width = 80;
 };
 pos = (158,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 },
 {
 pos = (158,80);
@@ -213,7 +213,7 @@ piece = {
 width = 90;
 };
 pos = (141,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 },
 {
 pos = (141,60);
@@ -233,10 +233,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(165,26,l),
-(165,505,l),
-(68,505,l),
-(68,26,l)
+(155,26,l),
+(155,505,l),
+(58,505,l),
+(58,26,l)
 );
 },
 {
@@ -244,20 +244,20 @@ alignment = -1;
 piece = {
 width = 120;
 };
-pos = (165,0);
-ref = DoubleArrow.mid;
+pos = (155,0);
+ref = _DoubleArrow.mid;
 },
 {
-pos = (165,60);
+pos = (155,60);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (165,470);
+pos = (155,470);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 194;
+width = 184;
 }
 );
 metricLeft = "=rightArrow.lft";

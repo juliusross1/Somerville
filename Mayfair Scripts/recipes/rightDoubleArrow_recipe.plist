@@ -34,20 +34,6 @@
 		</dict>
 		<dict>
 			<key>action</key>
-			<string>setComponentAxisValue</string>
-			<key>glyph</key>
-			<string>rightDoubleArrow</string>
-			<key>axis</key>
-			<string>width</string>
-			<key>value</key>
-			<integer>600</integer>
-			<key>componentFilter</key>
-			<array>
-				<string>DoubleArrow.mid</string>
-			</array>
-		</dict>
-		<dict>
-			<key>action</key>
 			<string>setMathPluginAssembly</string>
 			<key>glyph</key>
 			<string>rightDoubleArrow</string>
@@ -67,7 +53,7 @@
 				</dict>
 				<dict>
 					<key>glyph</key>
-					<string>DoubleArrow.mid</string>
+					<string>_DoubleArrow.mid</string>
 					<key>extender</key>
 					<true/>
 					<key>startConnector</key>

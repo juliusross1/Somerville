@@ -34,22 +34,6 @@
 		</dict>
 		<dict>
 			<key>action</key>
-			<string>setComponentAxisFromWideLayerAnchor</string>
-			<key>glyph</key>
-			<string>rightTwoheadedArrow</string>
-			<key>axis</key>
-			<string>width</string>
-			<key>sourceGlyph</key>
-			<string>Arrow.mid</string>
-			<key>anchor</key>
-			<string>width_2</string>
-			<key>componentFilter</key>
-			<array>
-				<string>Arrow.mid</string>
-			</array>
-		</dict>
-		<dict>
-			<key>action</key>
 			<string>setMathPluginAssembly</string>
 			<key>glyph</key>
 			<string>rightTwoheadedArrow</string>
@@ -69,7 +53,7 @@
 				</dict>
 				<dict>
 					<key>glyph</key>
-					<string>Arrow.mid</string>
+					<string>_Arrow.mid</string>
 					<key>extender</key>
 					<true/>
 					<key>startConnector</key>

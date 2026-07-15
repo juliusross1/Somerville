@@ -73,7 +73,7 @@
           </dict>
           <dict>
             <key>glyph</key>
-            <string>DoubleArrow.mid</string>
+            <string>_DoubleArrow.mid</string>
             <key>extender</key>
             <integer>1</integer>
             <key>startConnector</key>
@@ -92,29 +92,6 @@
             <integer>0</integer>
           </dict>
         </array>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>setComponentAxisValue</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>leftRightDoubleArrow</string>
-        <key>axis</key>
-        <string>width</string>
-        <key>value</key>
-        <integer>600</integer>
-        <key>componentFilter</key>
-        <dict>
-          <key>components</key>
-          <array>
-            <string>DoubleArrow.mid</string>
-          </array>
-        </dict>
       </dict>
     </dict>
 

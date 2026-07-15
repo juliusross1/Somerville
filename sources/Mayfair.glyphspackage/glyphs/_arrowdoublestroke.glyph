@@ -8,6 +8,10 @@ layers = (
 anchors = (
 {
 name = _center;
+pos = (321,265);
+},
+{
+name = _center_1;
 pos = (80,265);
 }
 );
@@ -15,12 +19,11 @@ layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
 alignment = -1;
-pos = (-81,0);
+pos = (160,0);
 ref = _arrowtab;
 },
 {
 alignment = -1;
-pos = (-241,0);
 ref = _arrowtab;
 }
 );
@@ -30,19 +33,22 @@ width = 161;
 anchors = (
 {
 name = _center;
-pos = (150,265);
+pos = (391,265);
+},
+{
+name = _center_1;
+pos = (151,265);
 }
 );
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
 alignment = -1;
-pos = (60,0);
+pos = (301,0);
 ref = _arrowtab;
 },
 {
 alignment = -1;
-pos = (-241,0);
 ref = _arrowtab;
 }
 );
@@ -52,6 +58,10 @@ width = 302;
 anchors = (
 {
 name = _center;
+pos = (321,265);
+},
+{
+name = _center_1;
 pos = (80,265);
 }
 );
@@ -59,12 +69,11 @@ layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
 alignment = -1;
-pos = (-81,0);
+pos = (160,0);
 ref = _arrowtab;
 },
 {
 alignment = -1;
-pos = (-241,0);
 ref = _arrowtab;
 }
 );
@@ -74,6 +83,10 @@ width = 161;
 anchors = (
 {
 name = _center;
+pos = (391,264);
+},
+{
+name = _center_1;
 pos = (150,264);
 }
 );
@@ -81,11 +94,10 @@ layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
 alignment = -1;
-pos = (-241,0);
 ref = _arrowtab;
 },
 {
-pos = (59,0);
+pos = (300,0);
 ref = _arrowtab;
 }
 );
@@ -95,6 +107,10 @@ width = 301;
 anchors = (
 {
 name = _center;
+pos = (420,265);
+},
+{
+name = _center_1;
 pos = (130,265);
 }
 );
@@ -102,11 +118,10 @@ layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
 alignment = -1;
-pos = (-290,0);
 ref = _arrowtab;
 },
 {
-pos = (-110,0);
+pos = (180,0);
 ref = _arrowtab;
 }
 );
@@ -116,6 +131,10 @@ width = 260;
 anchors = (
 {
 name = _center;
+pos = (446,265);
+},
+{
+name = _center_1;
 pos = (170,265);
 }
 );
@@ -123,11 +142,10 @@ layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
 alignment = -1;
-pos = (-276,0);
 ref = _arrowtab;
 },
 {
-pos = (-16,0);
+pos = (260,0);
 ref = _arrowtab;
 }
 );
@@ -138,6 +156,10 @@ anchors = (
 {
 name = _center;
 pos = (133,265);
+},
+{
+name = _center_1;
+pos = (132,265);
 }
 );
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -159,7 +181,11 @@ width = 266;
 anchors = (
 {
 name = _center;
-pos = (187,265);
+pos = (176,265);
+},
+{
+name = _center_1;
+pos = (145,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";

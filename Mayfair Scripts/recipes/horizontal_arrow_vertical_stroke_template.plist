@@ -23,15 +23,7 @@
     <key>rightPart</key>
     <string>rightArrow.rgt</string>
     <key>extenderPart</key>
-    <string>Arrow.mid</string>
-    <key>middleWidth</key>
-    <integer>600</integer>
-    <key>middleAxisAction</key>
-    <string>setComponentAxisValue</string>
-    <key>axisSourceGlyph</key>
-    <string>Arrow.mid</string>
-    <key>middleAxisAnchor</key>
-    <string>width_1</string>
+    <string>_Arrow.mid</string>
     <key>color</key>
     <string>orange</string>
   </dict>
@@ -69,33 +61,6 @@
           <string>${strokePart}</string>
           <string>${rightPart}</string>
         </array>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>${middleAxisAction}</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>${exportGlyph}</string>
-        <key>axis</key>
-        <string>width</string>
-        <key>value</key>
-        <string>${middleWidth}</string>
-        <key>sourceGlyph</key>
-        <string>${axisSourceGlyph}</string>
-        <key>anchor</key>
-        <string>${middleAxisAnchor}</string>
-        <key>componentFilter</key>
-        <dict>
-          <key>components</key>
-          <array>
-            <string>${strokePart}</string>
-          </array>
-        </dict>
       </dict>
     </dict>
 

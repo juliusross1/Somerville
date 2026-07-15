@@ -19,7 +19,7 @@ piece = {
 width = 60;
 };
 pos = (55,0);
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
 pos = (56,0);
@@ -50,7 +50,7 @@ piece = {
 width = 80;
 };
 pos = (88,0);
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
 pos = (89,0);
@@ -62,7 +62,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 148;
+width = 168;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -81,7 +81,7 @@ piece = {
 width = 60;
 };
 pos = (55,0);
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
 pos = (56,0);
@@ -112,7 +112,7 @@ piece = {
 width = 80;
 };
 pos = (88,0);
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
 pos = (89,0);
@@ -124,7 +124,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 148;
+width = 168;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -143,7 +143,7 @@ piece = {
 width = 60;
 };
 pos = (125,0);
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
 pos = (125,0);
@@ -155,7 +155,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 155;
+width = 185;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -174,7 +174,7 @@ piece = {
 width = 80;
 };
 pos = (158,0);
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
 pos = (158,0);
@@ -186,7 +186,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 188;
+width = 238;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -206,7 +206,7 @@ piece = {
 width = 90;
 };
 pos = (141,0);
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
 pos = (141,0);
@@ -218,7 +218,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 200;
+width = 231;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -226,32 +226,33 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(165,26,l),
-(165,505,l),
-(68,505,l),
-(68,26,l)
+(155,26,l),
+(155,505,l),
+(58,505,l),
+(58,26,l)
 );
 },
 {
 alignment = -1;
 piece = {
-width = 120;
+width = 345;
 };
-pos = (165,0);
-ref = Arrow.mid;
+pos = (155,0);
+ref = _Arrow.mid;
 },
 {
-pos = (165,0);
+pos = (155,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (165,530);
+pos = (155,530);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 194;
+width = 500;
 }
 );
 metricLeft = "=rightArrow.lft";
+metricRight = "=0";
 }

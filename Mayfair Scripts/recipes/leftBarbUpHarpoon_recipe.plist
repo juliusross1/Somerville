@@ -134,31 +134,6 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setComponentAxisFromWideLayerAnchor</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>leftBarbUpHarpoon</string>
-        <key>axis</key>
-        <string>width</string>
-        <key>sourceGlyph</key>
-        <string>Arrow.mid</string>
-        <key>anchor</key>
-        <string>width_1</string>
-        <key>componentFilter</key>
-        <dict>
-          <key>components</key>
-          <array>
-            <string>Arrow.mid</string>
-          </array>
-        </dict>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
       <string>setMathPluginAssembly</string>
       <key>arguments</key>
       <dict>
@@ -180,7 +155,7 @@
           </dict>
           <dict>
             <key>glyph</key>
-            <string>Arrow.mid</string>
+            <string>_Arrow.mid</string>
             <key>extender</key>
             <integer>1</integer>
             <key>startConnector</key>

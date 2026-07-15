@@ -48,7 +48,7 @@ nodes = (
 },
 {
 pos = (298,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 }
 );
 width = 328;
@@ -99,7 +99,7 @@ nodes = (
 },
 {
 pos = (212,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 }
 );
 width = 242;
@@ -150,7 +150,7 @@ nodes = (
 },
 {
 pos = (267,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 }
 );
 width = 297;
@@ -201,7 +201,7 @@ nodes = (
 },
 {
 pos = (298,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 }
 );
 width = 332;
@@ -252,7 +252,7 @@ nodes = (
 },
 {
 pos = (382,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 }
 );
 width = 412;
@@ -303,7 +303,7 @@ nodes = (
 },
 {
 pos = (381,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 }
 );
 width = 411;
@@ -354,7 +354,7 @@ nodes = (
 },
 {
 pos = (231,0);
-ref = DoubleArrow.mid;
+ref = _DoubleArrow.mid;
 }
 );
 width = 261;
@@ -363,7 +363,7 @@ width = 261;
 anchors = (
 {
 name = "#exit";
-pos = (256,265);
+pos = (246,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -371,44 +371,44 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(92,412,o),
-(115,351,o),
-(164,326,c),
-(154,314,o),
-(145,292,o),
-(145,265,cs),
-(145,238,o),
-(151,222,o),
-(166,204,c),
-(117,179,o),
-(92,118,o),
-(68,-5,c),
-(156,-5,l),
-(173,84,o),
-(187,143,o),
-(235,144,c),
-(256,144,l),
-(256,215,l),
-(245,221,o),
-(231,233,o),
-(231,265,cs),
-(231,297,o),
-(245,310,o),
-(256,315,c),
-(256,386,l),
-(237,386,l),
-(189,388,o),
-(173,443,o),
-(156,535,c),
-(68,535,l)
+(82,412,o),
+(105,351,o),
+(154,326,c),
+(144,314,o),
+(135,292,o),
+(135,265,cs),
+(135,238,o),
+(141,222,o),
+(156,204,c),
+(107,179,o),
+(82,118,o),
+(58,-5,c),
+(146,-5,l),
+(163,84,o),
+(177,143,o),
+(225,144,c),
+(246,144,l),
+(246,215,l),
+(235,221,o),
+(221,233,o),
+(221,265,cs),
+(221,297,o),
+(235,310,o),
+(246,315,c),
+(246,386,l),
+(227,386,l),
+(179,388,o),
+(163,443,o),
+(146,535,c),
+(58,535,l)
 );
 },
 {
-pos = (256,0);
-ref = DoubleArrow.mid;
+pos = (246,0);
+ref = _DoubleArrow.mid;
 }
 );
-width = 286;
+width = 276;
 }
 );
 metricLeft = "=rightArrow.lft";

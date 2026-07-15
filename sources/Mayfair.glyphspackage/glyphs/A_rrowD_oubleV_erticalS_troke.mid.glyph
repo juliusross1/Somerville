@@ -1,5 +1,5 @@
 {
-color = 3;
+color = 11;
 glyphname = ArrowDoubleVerticalStroke.mid;
 layers = (
 {
@@ -9,18 +9,15 @@ width = 1;
 };
 };
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
-partSelection = {
-width = 1;
-};
 shapes = (
 {
 piece = {
 width = 300;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (70,0);
+pos = (-171,0);
 ref = _arrowdoublestroke;
 }
 );
@@ -33,17 +30,15 @@ width = 1;
 };
 };
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
-partSelection = {
-width = 1;
-};
 shapes = (
 {
 piece = {
 width = 300;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
+pos = (-241,0);
 ref = _arrowdoublestroke;
 }
 );
@@ -56,18 +51,15 @@ width = 1;
 };
 };
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
-partSelection = {
-width = 1;
-};
 shapes = (
 {
 piece = {
 width = 300;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (70,0);
+pos = (-171,0);
 ref = _arrowdoublestroke;
 }
 );
@@ -80,18 +72,15 @@ width = 1;
 };
 };
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-partSelection = {
-width = 1;
-};
 shapes = (
 {
 piece = {
 width = 300;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (0,1);
+pos = (-241,1);
 ref = _arrowdoublestroke;
 }
 );
@@ -104,18 +93,15 @@ width = 1;
 };
 };
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
-partSelection = {
-width = 1;
-};
 shapes = (
 {
 piece = {
 width = 300;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (20,0);
+pos = (-270,0);
 ref = _arrowdoublestroke;
 }
 );
@@ -128,18 +114,15 @@ width = 1;
 };
 };
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-partSelection = {
-width = 1;
-};
 shapes = (
 {
 piece = {
 width = 300;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (-20,0);
+pos = (-296,0);
 ref = _arrowdoublestroke;
 }
 );
@@ -152,15 +135,12 @@ width = 1;
 };
 };
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
-partSelection = {
-width = 1;
-};
 shapes = (
 {
 piece = {
 width = 300;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
 pos = (17,0);
@@ -176,18 +156,15 @@ width = 1;
 };
 };
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
-partSelection = {
-width = 1;
-};
 shapes = (
 {
 piece = {
 width = 557.20856;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (92,-1);
+pos = (103,-1);
 ref = _arrowdoublestroke;
 }
 );
@@ -203,18 +180,15 @@ width = 2;
 };
 layerId = "019FC2DA-F69F-4161-A718-C3A61DC41D5B";
 name = "Needlepoint SemiCondensed Upright Wide";
-partSelection = {
-width = 2;
-};
 shapes = (
 {
 piece = {
 width = 600;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (220,0);
+pos = (-21,0);
 ref = _arrowdoublestroke;
 }
 );
@@ -230,18 +204,15 @@ width = 2;
 };
 layerId = "8D0D6B23-01AB-4B7B-B52A-4BC0E625995D";
 name = "Needlepoint SemiExpanded Upright Wide";
-partSelection = {
-width = 2;
-};
 shapes = (
 {
 piece = {
 width = 600;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (150,0);
+pos = (-91,0);
 ref = _arrowdoublestroke;
 }
 );
@@ -257,18 +228,15 @@ width = 2;
 };
 layerId = "3C18E24E-AD55-4D47-996B-314293EBD7F5";
 name = "Needlepoint Black SemiCondensed Upright Wide";
-partSelection = {
-width = 2;
-};
 shapes = (
 {
 piece = {
 width = 600;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (220,0);
+pos = (-21,0);
 ref = _arrowdoublestroke;
 }
 );
@@ -284,18 +252,15 @@ width = 2;
 };
 layerId = "110B0EE4-C922-4899-BC20-15B1F945E296";
 name = "Needlepoint Black SemiExpanded Upright Wide";
-partSelection = {
-width = 2;
-};
 shapes = (
 {
 piece = {
 width = 600;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (150,1);
+pos = (-91,1);
 ref = _arrowdoublestroke;
 }
 );
@@ -311,18 +276,15 @@ width = 2;
 };
 layerId = "8F151E76-E365-4C37-99DB-B014DC841574";
 name = "Agate SemiCondensed Upright Wide";
-partSelection = {
-width = 2;
-};
 shapes = (
 {
 piece = {
 width = 600;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (170,0);
+pos = (-120,0);
 ref = _arrowdoublestroke;
 }
 );
@@ -338,18 +300,15 @@ width = 2;
 };
 layerId = "7DDD4245-6D66-4D64-B0B6-7A1C2C0B9BB3";
 name = "Agate SemiExpanded Upright Wide";
-partSelection = {
-width = 2;
-};
 shapes = (
 {
 piece = {
 width = 600;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (130,0);
+pos = (-146,0);
 ref = _arrowdoublestroke;
 }
 );
@@ -365,15 +324,12 @@ width = 2;
 };
 layerId = "08D29A55-C153-4CD3-A366-724BA40A0982";
 name = "Agate Black SemiCondensed Upright Wide";
-partSelection = {
-width = 2;
-};
 shapes = (
 {
 piece = {
 width = 600;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
 pos = (167,0);
@@ -392,29 +348,19 @@ width = 2;
 };
 layerId = "06CA009D-0660-4F14-9420-9B29A7D4EBB5";
 name = "Agate Black SemiExpanded Upright Wide";
-partSelection = {
-width = 2;
-};
 shapes = (
 {
 piece = {
 width = 600;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 },
 {
-pos = (113,-1);
+pos = (124,-1);
 ref = _arrowdoublestroke;
 }
 );
 width = 600;
-}
-);
-partsSettings = (
-{
-bottomValue = 300;
-name = width;
-topValue = 600;
 }
 );
 }

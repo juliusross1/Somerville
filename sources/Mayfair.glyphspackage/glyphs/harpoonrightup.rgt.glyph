@@ -1,12 +1,9 @@
 {
+color = 3;
 glyphname = harpoonrightup.rgt;
 layers = (
 {
 anchors = (
-{
-name = "#entry";
-pos = (60,265);
-},
 {
 name = right;
 pos = (241,265);
@@ -32,17 +29,13 @@ nodes = (
 piece = {
 width = 60;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 }
 );
 width = 299;
 },
 {
 anchors = (
-{
-name = "#entry";
-pos = (60,265);
-},
 {
 name = right;
 pos = (304,265);
@@ -68,17 +61,13 @@ nodes = (
 piece = {
 width = 60;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 }
 );
 width = 324;
 },
 {
 anchors = (
-{
-name = "#entry";
-pos = (60,265);
-},
 {
 name = right;
 pos = (307,265);
@@ -104,17 +93,13 @@ nodes = (
 piece = {
 width = 60;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 }
 );
 width = 338;
 },
 {
 anchors = (
-{
-name = "#entry";
-pos = (60,265);
-},
 {
 name = right;
 pos = (241,265);
@@ -140,17 +125,13 @@ nodes = (
 piece = {
 width = 60;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 }
 );
 width = 299;
 },
 {
 anchors = (
-{
-name = "#entry";
-pos = (60,265);
-},
 {
 name = right;
 pos = (241,265);
@@ -176,17 +157,13 @@ nodes = (
 piece = {
 width = 60;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 }
 );
 width = 350;
 },
 {
 anchors = (
-{
-name = "#entry";
-pos = (60,265);
-},
 {
 name = right;
 pos = (241,265);
@@ -212,17 +189,13 @@ nodes = (
 piece = {
 width = 60;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 }
 );
 width = 350;
 },
 {
 anchors = (
-{
-name = "#entry";
-pos = (60,265);
-},
 {
 name = right;
 pos = (334,265);
@@ -248,7 +221,7 @@ nodes = (
 piece = {
 width = 60;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 }
 );
 width = 324;
@@ -256,12 +229,8 @@ width = 324;
 {
 anchors = (
 {
-name = "#entry";
-pos = (60,265);
-},
-{
 name = right;
-pos = (316,265);
+pos = (478,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -269,25 +238,26 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(44,424,o),
-(60,345,o),
-(60,265,c),
-(60,205,l),
-(316,204,l),
-(197,337,o),
-(132,407,o),
-(74,505,c),
-(7,505,l)
+(206,424,o),
+(222,345,o),
+(222,265,c),
+(222,205,l),
+(478,204,l),
+(359,337,o),
+(294,407,o),
+(236,505,c),
+(169,505,l)
 );
 },
 {
 piece = {
-width = 60;
+width = 224;
 };
-ref = Arrow.mid;
+ref = _Arrow.mid;
 }
 );
-width = 338;
+width = 500;
 }
 );
+metricLeft = "=0";
 }

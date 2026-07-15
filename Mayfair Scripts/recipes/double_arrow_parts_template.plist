@@ -24,10 +24,8 @@
     <string>.rgt</string>
     <key>middleComponent</key>
     <string>DoubleArrow.mid</string>
-    <key>middleAxis</key>
-    <string>width</string>
-    <key>middleWidth</key>
-    <integer>600</integer>
+    <key>assemblyMiddleComponent</key>
+    <string>_DoubleArrow.mid</string>
     <key>rightAssemblyComponent</key>
     <string>DoubleArrow.rgt</string>
     <key>color</key>
@@ -243,7 +241,7 @@
           </dict>
           <dict>
             <key>glyph</key>
-            <string>${middleComponent}</string>
+            <string>${assemblyMiddleComponent}</string>
             <key>extender</key>
             <integer>1</integer>
             <key>startConnector</key>
@@ -262,29 +260,6 @@
             <integer>0</integer>
           </dict>
         </array>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>setComponentAxisValue</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>${leftArrowBase}</string>
-        <key>axis</key>
-        <string>${middleAxis}</string>
-        <key>value</key>
-        <string>${middleWidth}</string>
-        <key>componentFilter</key>
-        <dict>
-          <key>components</key>
-          <array>
-            <string>${middleComponent}</string>
-          </array>
-        </dict>
       </dict>
     </dict>
 

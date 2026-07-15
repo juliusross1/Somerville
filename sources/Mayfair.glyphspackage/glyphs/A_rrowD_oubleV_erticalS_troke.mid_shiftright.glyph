@@ -1,6 +1,6 @@
 {
 color = 11;
-glyphname = ArrowStroke.mid;
+glyphname = ArrowDoubleVerticalStroke.mid_shiftright;
 layers = (
 {
 attr = {
@@ -17,9 +17,8 @@ width = 300;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-187,144);
-ref = _arrowstroke;
+pos = (-171,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -39,9 +38,8 @@ width = 300;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-187,144);
-ref = _arrowstroke;
+pos = (-241,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -61,9 +59,8 @@ width = 300;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-187,144);
-ref = _arrowstroke;
+pos = (-171,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -83,9 +80,8 @@ width = 300;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-187,145);
-ref = _arrowstroke;
+pos = (-241,1);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -105,9 +101,8 @@ width = 300;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-266,186);
-ref = _arrowstroke;
+pos = (-270,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -127,9 +122,8 @@ width = 300;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-253,179);
-ref = _arrowstroke;
+pos = (-296,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -149,9 +143,8 @@ width = 300;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-16,53);
-ref = _arrowstroke;
+pos = (17,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 300;
@@ -166,17 +159,17 @@ layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 piece = {
-width = 508.00876;
+width = 557.20856;
 };
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (88,53);
-ref = _arrowstroke;
+anchor = center_1;
+pos = (134,0);
+ref = _arrowdoublestroke;
 }
 );
-width = 508;
+width = 557;
 },
 {
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -196,9 +189,8 @@ width = 600;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-37,144);
-ref = _arrowstroke;
+pos = (-21,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -221,9 +213,8 @@ width = 600;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-37,144);
-ref = _arrowstroke;
+pos = (-91,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -246,9 +237,8 @@ width = 600;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-37,144);
-ref = _arrowstroke;
+pos = (-21,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -271,9 +261,8 @@ width = 600;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-37,145);
-ref = _arrowstroke;
+pos = (-91,1);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -296,9 +285,8 @@ width = 600;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-116,186);
-ref = _arrowstroke;
+pos = (-120,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -321,9 +309,8 @@ width = 600;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (-103,179);
-ref = _arrowstroke;
+pos = (-146,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -346,9 +333,8 @@ width = 600;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (134,53);
-ref = _arrowstroke;
+pos = (167,0);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
@@ -371,9 +357,8 @@ width = 600;
 ref = _Arrow.mid;
 },
 {
-angle = -28;
-pos = (134,52);
-ref = _arrowstroke;
+pos = (113,-1);
+ref = _arrowdoublestroke;
 }
 );
 width = 600;
