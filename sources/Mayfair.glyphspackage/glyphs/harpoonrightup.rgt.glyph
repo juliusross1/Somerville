@@ -5,8 +5,8 @@ layers = (
 {
 anchors = (
 {
-name = right;
-pos = (241,265);
+name = "#exit";
+pos = (120,358);
 }
 );
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -26,9 +26,6 @@ nodes = (
 );
 },
 {
-piece = {
-width = 60;
-};
 ref = _Arrow.mid;
 }
 );
@@ -37,8 +34,8 @@ width = 299;
 {
 anchors = (
 {
-name = right;
-pos = (304,265);
+name = "#exit";
+pos = (152,338);
 }
 );
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -58,19 +55,16 @@ nodes = (
 );
 },
 {
-piece = {
-width = 60;
-};
 ref = _Arrow.mid;
 }
 );
-width = 324;
+width = 337;
 },
 {
 anchors = (
 {
-name = right;
-pos = (307,265);
+name = "#exit";
+pos = (153,365);
 }
 );
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -90,19 +84,17 @@ nodes = (
 );
 },
 {
-piece = {
-width = 60;
-};
 ref = _Arrow.mid;
+scale = (3,1);
 }
 );
-width = 338;
+width = 369;
 },
 {
 anchors = (
 {
-name = right;
-pos = (241,265);
+name = "#exit";
+pos = (120,358);
 }
 );
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -122,9 +114,6 @@ nodes = (
 );
 },
 {
-piece = {
-width = 60;
-};
 ref = _Arrow.mid;
 }
 );
@@ -133,8 +122,8 @@ width = 299;
 {
 anchors = (
 {
-name = right;
-pos = (241,265);
+name = "#exit";
+pos = (120,377);
 }
 );
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -154,19 +143,16 @@ nodes = (
 );
 },
 {
-piece = {
-width = 60;
-};
 ref = _Arrow.mid;
 }
 );
-width = 350;
+width = 364;
 },
 {
 anchors = (
 {
-name = right;
-pos = (241,265);
+name = "#exit";
+pos = (120,377);
 }
 );
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -186,9 +172,6 @@ nodes = (
 );
 },
 {
-piece = {
-width = 60;
-};
 ref = _Arrow.mid;
 }
 );
@@ -197,7 +180,7 @@ width = 350;
 {
 anchors = (
 {
-name = right;
+name = "#exit";
 pos = (334,265);
 }
 );
@@ -218,19 +201,17 @@ nodes = (
 );
 },
 {
-piece = {
-width = 60;
-};
 ref = _Arrow.mid;
+scale = (2.8,1);
 }
 );
-width = 324;
+width = 367;
 },
 {
 anchors = (
 {
-name = right;
-pos = (478,265);
+name = "#exit";
+pos = (438,266);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -238,26 +219,25 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(206,424,o),
-(222,345,o),
-(222,265,c),
-(222,205,l),
-(478,204,l),
-(359,337,o),
-(294,407,o),
-(236,505,c),
-(169,505,l)
+(166,424,o),
+(182,345,o),
+(182,265,c),
+(182,205,l),
+(438,204,l),
+(319,337,o),
+(254,407,o),
+(196,505,c),
+(129,505,l)
 );
 },
 {
-piece = {
-width = 224;
-};
 ref = _Arrow.mid;
+scale = (6.8,1);
 }
 );
 width = 500;
 }
 );
 metricLeft = "=0";
+metricRight = "=_Arrowhead";
 }

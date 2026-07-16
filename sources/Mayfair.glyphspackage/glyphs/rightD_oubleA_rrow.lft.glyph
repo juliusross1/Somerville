@@ -204,7 +204,7 @@ pos = (298,0);
 ref = _DoubleArrow.mid;
 }
 );
-width = 332;
+width = 328;
 },
 {
 anchors = (
@@ -406,10 +406,12 @@ nodes = (
 {
 pos = (246,0);
 ref = _DoubleArrow.mid;
+scale = (8.48,1);
 }
 );
-width = 276;
+width = 500;
 }
 );
 metricLeft = "=rightArrow.lft";
+metricRight = "=0";
 }

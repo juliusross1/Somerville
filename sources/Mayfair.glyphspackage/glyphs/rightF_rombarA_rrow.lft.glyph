@@ -15,9 +15,6 @@ nodes = (
 );
 },
 {
-piece = {
-width = 60;
-};
 pos = (55,0);
 ref = _Arrow.mid;
 },
@@ -31,7 +28,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 115;
+width = 114;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -46,9 +43,6 @@ nodes = (
 );
 },
 {
-piece = {
-width = 80;
-};
 pos = (88,0);
 ref = _Arrow.mid;
 },
@@ -62,7 +56,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 168;
+width = 157;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -77,9 +71,6 @@ nodes = (
 );
 },
 {
-piece = {
-width = 60;
-};
 pos = (55,0);
 ref = _Arrow.mid;
 },
@@ -93,7 +84,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 115;
+width = 114;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -108,9 +99,6 @@ nodes = (
 );
 },
 {
-piece = {
-width = 80;
-};
 pos = (88,0);
 ref = _Arrow.mid;
 },
@@ -124,7 +112,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 168;
+width = 167;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -139,9 +127,6 @@ nodes = (
 );
 },
 {
-piece = {
-width = 60;
-};
 pos = (125,0);
 ref = _Arrow.mid;
 },
@@ -155,7 +140,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 185;
+width = 174;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -170,9 +155,6 @@ nodes = (
 );
 },
 {
-piece = {
-width = 80;
-};
 pos = (158,0);
 ref = _Arrow.mid;
 },
@@ -186,7 +168,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 238;
+width = 217;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -202,11 +184,9 @@ nodes = (
 },
 {
 alignment = -1;
-piece = {
-width = 90;
-};
 pos = (141,0);
 ref = _Arrow.mid;
+scale = (6,1);
 },
 {
 pos = (141,0);
@@ -218,7 +198,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 231;
+width = 321;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -234,11 +214,9 @@ nodes = (
 },
 {
 alignment = -1;
-piece = {
-width = 345;
-};
 pos = (155,0);
 ref = _Arrow.mid;
+scale = (11.51,1);
 },
 {
 pos = (155,0);

@@ -1,5 +1,5 @@
 {
-color = 11;
+color = 1;
 glyphname = DoubleArrowVerticalStroke.mid;
 layers = (
 {
@@ -14,17 +14,15 @@ width = 1;
 };
 shapes = (
 {
-piece = {
-width = 300;
-};
 ref = _DoubleArrow.mid;
+scale = (18,1);
 },
 {
-pos = (4,0);
-ref = _arrowstroke;
+pos = (29,0);
+ref = _ArrowVerticalStroke;
 }
 );
-width = 489;
+width = 540;
 },
 {
 attr = {
@@ -38,17 +36,15 @@ width = 1;
 };
 shapes = (
 {
-piece = {
-width = 300;
-};
 ref = _DoubleArrow.mid;
+scale = (18,1);
 },
 {
-pos = (4,0);
-ref = _arrowstroke;
+pos = (29,0);
+ref = _ArrowVerticalStroke;
 }
 );
-width = 489;
+width = 540;
 },
 {
 attr = {
@@ -62,17 +58,15 @@ width = 1;
 };
 shapes = (
 {
-piece = {
-width = 300;
-};
 ref = _DoubleArrow.mid;
+scale = (18,1);
 },
 {
-pos = (4,0);
-ref = _arrowstroke;
+pos = (29,0);
+ref = _ArrowVerticalStroke;
 }
 );
-width = 489;
+width = 540;
 },
 {
 attr = {
@@ -86,17 +80,15 @@ width = 1;
 };
 shapes = (
 {
-piece = {
-width = 300;
-};
 ref = _DoubleArrow.mid;
+scale = (18,1);
 },
 {
-pos = (4,1);
-ref = _arrowstroke;
+pos = (29,1);
+ref = _ArrowVerticalStroke;
 }
 );
-width = 489;
+width = 540;
 },
 {
 attr = {
@@ -110,17 +102,15 @@ width = 1;
 };
 shapes = (
 {
-piece = {
-width = 300;
-};
 ref = _DoubleArrow.mid;
+scale = (18,1);
 },
 {
-pos = (-85,0);
-ref = _arrowstroke;
+pos = (-60,0);
+ref = _ArrowVerticalStroke;
 }
 );
-width = 489;
+width = 540;
 },
 {
 attr = {
@@ -134,17 +124,15 @@ width = 1;
 };
 shapes = (
 {
-piece = {
-width = 300;
-};
 ref = _DoubleArrow.mid;
+scale = (18,1);
 },
 {
-pos = (-71,0);
-ref = _arrowstroke;
+pos = (-46,0);
+ref = _ArrowVerticalStroke;
 }
 );
-width = 489;
+width = 540;
 },
 {
 attr = {
@@ -158,17 +146,15 @@ width = 1;
 };
 shapes = (
 {
-piece = {
-width = 300;
-};
 ref = _DoubleArrow.mid;
+scale = (18,1);
 },
 {
-pos = (198,0);
-ref = _arrowstroke;
+pos = (223,0);
+ref = _ArrowVerticalStroke;
 }
 );
-width = 489;
+width = 540;
 },
 {
 attr = {
@@ -182,233 +168,15 @@ width = 1;
 };
 shapes = (
 {
-piece = {
-width = 300;
-};
 ref = _DoubleArrow.mid;
+scale = (18,1);
 },
 {
-pos = (198,0);
-ref = _arrowstroke;
+pos = (223,0);
+ref = _ArrowVerticalStroke;
 }
 );
-width = 489;
-},
-{
-associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
-attr = {
-partSelection = {
-"5BC2501D-7B21-4B11-AAFB-0879B1689DA6" = 1;
-width = 2;
-};
-};
-layerId = "019FC2DA-F69F-4161-A718-C3A61DC41D5B";
-name = "Needlepoint SemiCondensed Upright Wide";
-partSelection = {
-width = 2;
-};
-shapes = (
-{
-piece = {
-width = 600;
-};
-ref = _DoubleArrow.mid;
-},
-{
-pos = (259,0);
-ref = _arrowstroke;
-}
-);
-width = 1000;
-},
-{
-associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
-attr = {
-partSelection = {
-"5BC2501D-7B21-4B11-AAFB-0879B1689DA6" = 1;
-width = 2;
-};
-};
-layerId = "8D0D6B23-01AB-4B7B-B52A-4BC0E625995D";
-name = "Needlepoint SemiExpanded Upright Wide";
-partSelection = {
-width = 2;
-};
-shapes = (
-{
-piece = {
-width = 600;
-};
-ref = _DoubleArrow.mid;
-},
-{
-pos = (259,0);
-ref = _arrowstroke;
-}
-);
-width = 1000;
-},
-{
-associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
-attr = {
-partSelection = {
-"5BC2501D-7B21-4B11-AAFB-0879B1689DA6" = 1;
-width = 2;
-};
-};
-layerId = "3C18E24E-AD55-4D47-996B-314293EBD7F5";
-name = "Needlepoint Black SemiCondensed Upright Wide";
-partSelection = {
-width = 2;
-};
-shapes = (
-{
-piece = {
-width = 600;
-};
-ref = _DoubleArrow.mid;
-},
-{
-pos = (259,0);
-ref = _arrowstroke;
-}
-);
-width = 1000;
-},
-{
-associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-attr = {
-partSelection = {
-"5BC2501D-7B21-4B11-AAFB-0879B1689DA6" = 1;
-width = 2;
-};
-};
-layerId = "110B0EE4-C922-4899-BC20-15B1F945E296";
-name = "Needlepoint Black SemiExpanded Upright Wide";
-partSelection = {
-width = 2;
-};
-shapes = (
-{
-piece = {
-width = 600;
-};
-ref = _DoubleArrow.mid;
-},
-{
-pos = (259,1);
-ref = _arrowstroke;
-}
-);
-width = 1000;
-},
-{
-associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
-attr = {
-partSelection = {
-"5BC2501D-7B21-4B11-AAFB-0879B1689DA6" = 1;
-width = 2;
-};
-};
-layerId = "8F151E76-E365-4C37-99DB-B014DC841574";
-name = "Agate SemiCondensed Upright Wide";
-partSelection = {
-width = 2;
-};
-shapes = (
-{
-piece = {
-width = 600;
-};
-ref = _DoubleArrow.mid;
-},
-{
-pos = (170,0);
-ref = _arrowstroke;
-}
-);
-width = 1000;
-},
-{
-associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-attr = {
-partSelection = {
-"5BC2501D-7B21-4B11-AAFB-0879B1689DA6" = 1;
-width = 2;
-};
-};
-layerId = "7DDD4245-6D66-4D64-B0B6-7A1C2C0B9BB3";
-name = "Agate SemiExpanded Upright Wide";
-partSelection = {
-width = 2;
-};
-shapes = (
-{
-piece = {
-width = 600;
-};
-ref = _DoubleArrow.mid;
-},
-{
-pos = (184,0);
-ref = _arrowstroke;
-}
-);
-width = 1000;
-},
-{
-associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
-attr = {
-partSelection = {
-"5BC2501D-7B21-4B11-AAFB-0879B1689DA6" = 1;
-width = 2;
-};
-};
-layerId = "08D29A55-C153-4CD3-A366-724BA40A0982";
-name = "Agate Black SemiCondensed Upright Wide";
-partSelection = {
-width = 2;
-};
-shapes = (
-{
-piece = {
-width = 600;
-};
-ref = _DoubleArrow.mid;
-},
-{
-pos = (453,0);
-ref = _arrowstroke;
-}
-);
-width = 1000;
-},
-{
-associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
-attr = {
-partSelection = {
-"5BC2501D-7B21-4B11-AAFB-0879B1689DA6" = 1;
-width = 2;
-};
-};
-layerId = "06CA009D-0660-4F14-9420-9B29A7D4EBB5";
-name = "Agate Black SemiExpanded Upright Wide";
-partSelection = {
-width = 2;
-};
-shapes = (
-{
-piece = {
-width = 600;
-};
-ref = _DoubleArrow.mid;
-},
-{
-pos = (453,0);
-ref = _arrowstroke;
-}
-);
-width = 1000;
+width = 540;
 }
 );
 partsSettings = (

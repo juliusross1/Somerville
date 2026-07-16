@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>formatVersion</key>
+  <integer>1</integer>
+  <key>kind</key>
+  <string>macro</string>
+  <key>name</key>
+  <string>rightTabArrow.rgt</string>
+  <key>template</key>
+  <string>component_sequence_template.plist</string>
+  <key>templateName</key>
+  <string>componentSequence</string>
+  <key>parameters</key>
+  <dict>
+    <key>exportGlyph</key>
+    <string>rightTabArrow.rgt</string>
+    <key>components</key>
+    <array>
+      <string>rightArrow.rgt</string>
+      <string>_ArrowTab</string>
+    </array>
+    <key>leftMetricsGlyph</key>
+    <string>rightArrow.rgt</string>
+    <key>rightMetricsGlyph</key>
+    <string>rightArrow.rgt</string>
+    <key>color</key>
+    <string>orange</string>
+  </dict>
+</dict>
+</plist>
