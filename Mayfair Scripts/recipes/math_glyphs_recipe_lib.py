@@ -2644,7 +2644,7 @@ def action_copy_component_axis_value(
     return changed
 
 
-def math_assembly_entry(entry):
+def math_assembly_entry(entry, connector_width=None):
     if isinstance(entry, dict):
         glyph_name = entry.get("glyph") or entry.get("component") or entry.get("name")
         extender = entry.get("extender", entry.get("extension", entry.get("extend", 0)))
@@ -2657,11 +2657,18 @@ def math_assembly_entry(entry):
         glyph_name, extender, start_connector, end_connector = values
     if not glyph_name:
         raise RuntimeError("Assembly entry is missing a glyph name.")
+    start_connector = clean_number(start_connector)
+    end_connector = clean_number(end_connector)
+    if connector_width is not None:
+        if start_connector:
+            start_connector = connector_width
+        if end_connector:
+            end_connector = connector_width
     return [
         str(glyph_name),
         int(extender),
-        clean_number(start_connector),
-        clean_number(end_connector),
+        start_connector,
+        end_connector,
     ]
 
 
@@ -2673,9 +2680,28 @@ def action_set_math_plugin_assembly(font, verbose=False, glyph=None, direction="
         raise RuntimeError("%s: assembly entries are required." % glyph)
 
     assembly_key = "vAssembly" if str(direction).lower().startswith("v") else "hAssembly"
-    assembly = [math_assembly_entry(entry) for entry in entries]
+    parsed_entries = [math_assembly_entry(entry) for entry in entries]
+    arrow_mid_is_extender = assembly_key == "hAssembly" and any(
+        entry[0] == "Arrow.mid" and entry[1] for entry in parsed_entries
+    )
+    arrow_mid = glyph_for_name(font, "Arrow.mid") if arrow_mid_is_extender else None
+    if arrow_mid_is_extender and arrow_mid is None:
+        raise RuntimeError("Missing assembly extender glyph: Arrow.mid")
     changed = 0
     for layer in target_glyph.layers:
+        connector_width = None
+        if arrow_mid is not None:
+            arrow_mid_layer = matching_layer(arrow_mid, layer)
+            connector_width = layer_width(arrow_mid_layer)
+            if connector_width is None:
+                raise RuntimeError(
+                    "%s: no matching Arrow.mid width for layer %s"
+                    % (glyph, layer_label(layer))
+                )
+        assembly = [
+            math_assembly_entry(entry, connector_width=connector_width)
+            for entry in entries
+        ]
         math_plugin_variants = existing_math_plugin_variants(layer)
         math_plugin_variants[assembly_key] = assembly
         if set_math_plugin_variants(layer, math_plugin_variants):
