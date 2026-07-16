@@ -42,7 +42,7 @@ nodes = (
 },
 {
 pos = (298,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 }
 );
 width = 328;
@@ -87,7 +87,7 @@ nodes = (
 },
 {
 pos = (212,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 }
 );
 width = 242;
@@ -132,7 +132,7 @@ nodes = (
 },
 {
 pos = (267,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 }
 );
 width = 297;
@@ -177,7 +177,7 @@ nodes = (
 },
 {
 pos = (298,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 }
 );
 width = 328;
@@ -222,7 +222,7 @@ nodes = (
 },
 {
 pos = (382,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 }
 );
 width = 412;
@@ -267,7 +267,7 @@ nodes = (
 },
 {
 pos = (381,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 }
 );
 width = 411;
@@ -312,7 +312,7 @@ nodes = (
 },
 {
 pos = (231,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 }
 );
 width = 261;
@@ -335,30 +335,32 @@ nodes = (
 (107,179,o),
 (82,118,o),
 (58,-5,c),
-(146,-5,l),
-(163,84,o),
-(177,143,o),
-(225,144,c),
-(246,144,l),
-(246,215,l),
-(235,221,o),
-(221,233,o),
-(221,265,cs),
-(221,297,o),
-(235,310,o),
-(246,315,c),
-(246,386,l),
-(227,386,l),
-(179,388,o),
-(163,443,o),
-(146,535,c),
+(166,-5,l),
+(183,84,o),
+(197,143,o),
+(245,144,c),
+(266,144,l),
+(266,215,l),
+(255,221,o),
+(241,233,o),
+(241,265,cs),
+(241,297,o),
+(255,310,o),
+(266,315,c),
+(266,386,l),
+(247,386,l),
+(199,388,o),
+(183,443,o),
+(166,535,c),
 (58,535,l)
 );
 },
 {
-pos = (246,0);
-ref = DoubleArrow_short.mid;
-scale = (8.48,1);
+piece = {
+width = 233.99562;
+};
+pos = (266,0);
+ref = _smart.DoubleArrow.mid;
 }
 );
 width = 500;

@@ -16,7 +16,7 @@ nodes = (
 },
 {
 pos = (55,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 },
 {
 pos = (56,84);
@@ -44,7 +44,7 @@ nodes = (
 },
 {
 pos = (88,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 },
 {
 pos = (89,85);
@@ -79,7 +79,7 @@ nodes = (
 },
 {
 pos = (55,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 },
 {
 pos = (56,85);
@@ -107,7 +107,7 @@ nodes = (
 },
 {
 pos = (88,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 },
 {
 pos = (89,85);
@@ -135,7 +135,7 @@ nodes = (
 },
 {
 pos = (125,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 },
 {
 pos = (125,80);
@@ -163,7 +163,7 @@ nodes = (
 },
 {
 pos = (158,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 },
 {
 pos = (158,80);
@@ -192,7 +192,7 @@ nodes = (
 {
 alignment = -1;
 pos = (141,0);
-ref = DoubleArrow_short.mid;
+ref = _smart.DoubleArrow.mid;
 scale = (5,1);
 },
 {
@@ -213,29 +213,31 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(155,26,l),
-(155,505,l),
+(135,26,l),
+(135,505,l),
 (58,505,l),
 (58,26,l)
 );
 },
 {
 alignment = -1;
-pos = (155,0);
-ref = DoubleArrow_short.mid;
-scale = (11.5,1);
+piece = {
+width = 365;
+};
+pos = (135,0);
+ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (155,60);
+pos = (135,60);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (155,470);
+pos = (135,470);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 500;
+width = 515;
 }
 );
 metricLeft = "=rightArrow.lft";

@@ -5,11 +5,19 @@ layers = (
 {
 anchors = (
 {
-name = center_left;
+name = _left;
+pos = (0,265);
+},
+{
+name = center;
 pos = (250,265);
 },
 {
-name = center_right;
+name = center_left1;
+pos = (250,265);
+},
+{
+name = center_left2;
 pos = (250,265);
 }
 );
@@ -27,11 +35,19 @@ width = 500;
 {
 anchors = (
 {
-name = center_left;
+name = _left;
+pos = (0,265);
+},
+{
+name = center;
 pos = (250,265);
 },
 {
-name = center_right;
+name = center_left1;
+pos = (250,265);
+},
+{
+name = center_left2;
 pos = (250,265);
 }
 );
@@ -49,11 +65,19 @@ width = 500;
 {
 anchors = (
 {
-name = center_left;
+name = _left;
+pos = (0,265);
+},
+{
+name = center;
 pos = (250,265);
 },
 {
-name = center_right;
+name = center_left1;
+pos = (250,265);
+},
+{
+name = center_left2;
 pos = (250,265);
 }
 );
@@ -71,11 +95,19 @@ width = 500;
 {
 anchors = (
 {
-name = center_left;
+name = _left;
+pos = (0,265);
+},
+{
+name = center;
 pos = (250,265);
 },
 {
-name = center_right;
+name = center_left1;
+pos = (250,265);
+},
+{
+name = center_left2;
 pos = (250,265);
 }
 );
@@ -93,11 +125,19 @@ width = 500;
 {
 anchors = (
 {
-name = center_left;
+name = _left;
+pos = (0,265);
+},
+{
+name = center;
 pos = (250,265);
 },
 {
-name = center_right;
+name = center_left1;
+pos = (250,265);
+},
+{
+name = center_left2;
 pos = (250,265);
 }
 );
@@ -115,11 +155,19 @@ width = 500;
 {
 anchors = (
 {
-name = center_left;
+name = _left;
+pos = (0,265);
+},
+{
+name = center;
 pos = (250,265);
 },
 {
-name = center_right;
+name = center_left1;
+pos = (250,265);
+},
+{
+name = center_left2;
 pos = (250,265);
 }
 );
@@ -137,11 +185,19 @@ width = 500;
 {
 anchors = (
 {
-name = center_left;
+name = _left;
+pos = (0,265);
+},
+{
+name = center;
 pos = (250,265);
 },
 {
-name = center_right;
+name = center_left1;
+pos = (250,265);
+},
+{
+name = center_left2;
 pos = (250,265);
 }
 );
@@ -159,12 +215,20 @@ width = 500;
 {
 anchors = (
 {
-name = center_left;
+name = _left;
+pos = (0,265);
+},
+{
+name = center;
 pos = (250,265);
 },
 {
-name = center_right;
-pos = (250,265);
+name = center_left1;
+pos = (230,265);
+},
+{
+name = center_left2;
+pos = (210,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";

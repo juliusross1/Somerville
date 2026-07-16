@@ -9,14 +9,6 @@ anchors = (
 {
 name = _center;
 pos = (321,265);
-},
-{
-name = _center_left;
-pos = (80,265);
-},
-{
-name = _center_right;
-pos = (80,265);
 }
 );
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -38,14 +30,6 @@ anchors = (
 {
 name = _center;
 pos = (391,265);
-},
-{
-name = _center_left;
-pos = (151,265);
-},
-{
-name = _center_right;
-pos = (151,265);
 }
 );
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -67,14 +51,6 @@ anchors = (
 {
 name = _center;
 pos = (321,265);
-},
-{
-name = _center_left;
-pos = (80,265);
-},
-{
-name = _center_right;
-pos = (80,265);
 }
 );
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -96,24 +72,15 @@ anchors = (
 {
 name = _center;
 pos = (391,264);
-},
-{
-name = _center_left;
-pos = (1,264);
-},
-{
-name = _center_right;
-pos = (150,264);
 }
 );
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
-alignment = -1;
 ref = _ArrowTab;
 },
 {
-pos = (1,0);
+alignment = -1;
 ref = _ArrowTab;
 }
 );
@@ -124,24 +91,17 @@ anchors = (
 {
 name = _center;
 pos = (420,265);
-},
-{
-name = _center_left;
-pos = (80,265);
-},
-{
-name = _center_right;
-pos = (130,265);
 }
 );
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
 alignment = -1;
+pos = (200,0);
 ref = _ArrowTab;
 },
 {
-pos = (80,0);
+alignment = -1;
 ref = _ArrowTab;
 }
 );
@@ -151,25 +111,18 @@ width = 260;
 anchors = (
 {
 name = _center;
-pos = (446,265);
-},
-{
-name = _center_left;
-pos = (80,265);
-},
-{
-name = _center_right;
-pos = (170,265);
+pos = (146,265);
 }
 );
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
 alignment = -1;
+pos = (249,0);
 ref = _ArrowTab;
 },
 {
-pos = (80,0);
+alignment = -1;
 ref = _ArrowTab;
 }
 );
@@ -180,25 +133,18 @@ anchors = (
 {
 name = _center;
 pos = (133,265);
-},
-{
-name = _center_left;
-pos = (92,265);
-},
-{
-name = _center_right;
-pos = (132,265);
 }
 );
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
 alignment = -1;
+pos = (173,0);
 ref = _ArrowTab;
 scale = (0.8,1);
 },
 {
-pos = (93,0);
+alignment = -1;
 ref = _ArrowTab;
 scale = (0.8,1);
 }
@@ -210,26 +156,18 @@ anchors = (
 {
 name = _center;
 pos = (175,265);
-},
-{
-name = _center_left;
-pos = (213,265);
-},
-{
-name = _center_right;
-pos = (135,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 alignment = -1;
+pos = (257,0);
 ref = _ArrowTab;
 scale = (0.8,1);
 },
 {
 alignment = -1;
-pos = (257,0);
 ref = _ArrowTab;
 scale = (0.8,1);
 }

@@ -339,9 +339,12 @@
 			<string>uni2979</string>
 			<string>uni297A</string>
 			<string>uni297B</string>
+			<string>uni2B34</string>
+			<string>uni2B3A</string>
+			<string>uni2B3D</string>
 		</array>
 		<key>name</key>
-		<string>Mathematical Arrows</string>
+		<string>Arrows</string>
 	</dict>
 	<dict>
 		<key>list</key>
@@ -490,9 +493,12 @@
 			<string>uni2979</string>
 			<string>uni297A</string>
 			<string>uni297B</string>
+			<string>uni2B34</string>
+			<string>uni2B3A</string>
+			<string>uni2B3D</string>
 		</array>
 		<key>name</key>
-		<string>Mathematical Arrows Horizontal</string>
+		<string>Arrows Horizontal</string>
 	</dict>
 	<dict>
 		<key>list</key>
@@ -589,33 +595,37 @@
 			<string>uni2965</string>
 			<string>uni296E</string>
 			<string>uni296F</string>
+
 		</array>
 		<key>name</key>
-		<string>Mathematical Arrows Vertical and Diagonal</string>
+		<string>Arrows Vertical and Diagonal</string>
 	</dict>
 	<dict>
 		<key>list</key>
 		<array>
-		<string>ArrowHead</string>
-		<string>rightArrow.rgt</string>
-		<string>twoheadrightarrow.rgt</string>
-		<string>harpoonrightup.rgt</string>
-		<string>rightDoubleArrow.rgt</string>
-		<string>_smart.Arrow.mid</string>
-		<string>Arrow.mid</string>
-		<string>DoubleArrow_short.mid</string>
 		<string>rightArrow.lft</string>
 		<string>rightTailArrow.lft</string>
 		<string>rightFrombarArrow.lft</string>
 		<string>rightDoubleArrow.lft</string>
 		<string>rightFrombarDoubleArrow.lft</string>
+		<string>_smart.Arrow.mid</string>
+		<string>_smart.DoubleArrow.mid</string>
+		<string>DoubleArrow.mid</string>
+		<string>Arrow.mid</string>
+		<string>Arrow.end</string>
+		<string>DoubleArrow_short.mid</string>
+		<string>ArrowHead</string>
+		<string>rightArrow.rgt</string>
+		<string>twoheadrightarrow.rgt</string>
+		<string>harpoonrightup.rgt</string>
+		<string>rightDoubleArrow.rgt</string>
 		<string>_ArrowStroke</string>
 		<string>_ArrowVerticalStroke</string>
 		<string>_ArrowDoubleVerticalStroke</string>
 		<string>_ArrowTab</string>
 		</array>
 		<key>name</key>
-		<string>Mathematical Arrow Components Composed</string>
+		<string>Arrow Composed Components</string>
 	</dict>
 	<dict>
 		<key>list</key>
@@ -623,8 +633,6 @@
 		<string>ArrowStroke.mid</string>
 		<string>ArrowVerticalStroke.mid</string>
 		<string>ArrowDoubleVerticalStroke.mid</string>
-		<string>Arrow.mid</string>
-		<string>DoubleArrow.mid</string>
 		<string>DoubleArrowStroke.mid</string>
 		<string>DoubleArrowVerticalStroke.mid</string>
 		<string>leftArrow.lft</string>
@@ -641,9 +649,13 @@
 		<string>leftDoubleArrow.rgt</string>
 		<string>leftFrombarDoubleArrow.rgt</string>
 		<string>twoheadleftarrow.lft</string>
+		<string>ArrowDoubleVerticalStroke.mid_shiftleft1</string>
+		<string>ArrowDoubleVerticalStroke.mid_shiftright1</string>
+		<string>ArrowDoubleVerticalStroke.mid_shiftleft2</string>
+		<string>ArrowDoubleVerticalStroke.mid_shiftright2</string>
 		</array>
 		<key>name</key>
-		<string>Mathematical Arrow Components Generated</string>
+		<string>Arrow Generated Components</string>
 	</dict>
 	<dict>
 		<key>list</key>
