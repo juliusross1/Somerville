@@ -26,7 +26,7 @@ nodes = (
 );
 },
 {
-ref = _Arrow.mid;
+ref = _smart.Arrow.mid;
 }
 );
 width = 299;
@@ -55,7 +55,7 @@ nodes = (
 );
 },
 {
-ref = _Arrow.mid;
+ref = _smart.Arrow.mid;
 }
 );
 width = 337;
@@ -84,7 +84,7 @@ nodes = (
 );
 },
 {
-ref = _Arrow.mid;
+ref = _smart.Arrow.mid;
 scale = (3,1);
 }
 );
@@ -114,7 +114,7 @@ nodes = (
 );
 },
 {
-ref = _Arrow.mid;
+ref = _smart.Arrow.mid;
 }
 );
 width = 299;
@@ -143,7 +143,7 @@ nodes = (
 );
 },
 {
-ref = _Arrow.mid;
+ref = _smart.Arrow.mid;
 }
 );
 width = 364;
@@ -172,7 +172,7 @@ nodes = (
 );
 },
 {
-ref = _Arrow.mid;
+ref = _smart.Arrow.mid;
 }
 );
 width = 350;
@@ -201,7 +201,7 @@ nodes = (
 );
 },
 {
-ref = _Arrow.mid;
+ref = _smart.Arrow.mid;
 scale = (2.8,1);
 }
 );
@@ -231,7 +231,7 @@ nodes = (
 );
 },
 {
-ref = _Arrow.mid;
+ref = _smart.Arrow.mid;
 scale = (6.8,1);
 }
 );
@@ -239,5 +239,5 @@ width = 500;
 }
 );
 metricLeft = "=0";
-metricRight = "=_Arrowhead";
+metricRight = "=ArrowHead";
 }
