@@ -1,4 +1,5 @@
 {
+category = Mark;
 color = 3;
 glyphname = _Arrowhead;
 layers = (
@@ -10,11 +11,11 @@ pos = (60,265);
 },
 {
 name = "#exit";
-pos = (141,265);
+pos = (241,265);
 },
 {
-name = right;
-pos = (241,265);
+name = _upper;
+pos = (0,452);
 }
 );
 attr = {
@@ -57,11 +58,11 @@ pos = (61,265);
 },
 {
 name = "#exit";
-pos = (191,265);
+pos = (291,265);
 },
 {
-name = right;
-pos = (291,265);
+name = _upper;
+pos = (0,452);
 }
 );
 attr = {
@@ -104,11 +105,11 @@ pos = (60,265);
 },
 {
 name = "#exit";
-pos = (176,265);
+pos = (276,265);
 },
 {
-name = right;
-pos = (276,265);
+name = _upper;
+pos = (0,505);
 }
 );
 attr = {
@@ -151,11 +152,11 @@ pos = (60,265);
 },
 {
 name = "#exit";
-pos = (141,265);
+pos = (241,265);
 },
 {
-name = right;
-pos = (241,265);
+name = _upper;
+pos = (0,452);
 }
 );
 attr = {
@@ -198,11 +199,11 @@ pos = (46,265);
 },
 {
 name = "#exit";
-pos = (127,264);
+pos = (227,264);
 },
 {
-name = right;
-pos = (227,264);
+name = _upper;
+pos = (0,490);
 }
 );
 attr = {
@@ -245,11 +246,11 @@ pos = (60,265);
 },
 {
 name = "#exit";
-pos = (141,265);
+pos = (241,265);
 },
 {
-name = right;
-pos = (241,265);
+name = _upper;
+pos = (0,489);
 }
 );
 attr = {
@@ -295,8 +296,8 @@ name = "#exit";
 pos = (291,265);
 },
 {
-name = right;
-pos = (291,265);
+name = _upper;
+pos = (0,452);
 }
 );
 attr = {
@@ -342,8 +343,8 @@ name = "#exit";
 pos = (276,265);
 },
 {
-name = right;
-pos = (276,265);
+name = _upper;
+pos = (0,505);
 }
 );
 attr = {
@@ -382,56 +383,15 @@ width = 338;
 anchors = (
 {
 name = "#entry";
-pos = (80,265);
-},
-{
-name = "#exit";
-pos = (416,266);
-},
-{
-name = right;
-pos = (416,265);
-}
-);
-associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
-layerId = "0D7A9239-8D1D-4982-8AC7-3450231456C3";
-name = "Jul 13, 26 at 15:21";
-shapes = (
-{
-closed = 1;
-nodes = (
-(54,472,o),
-(80,371,o),
-(80,265,cs),
-(80,163,o),
-(56,64,o),
-(0,-40,c),
-(101,-40,l),
-(188,85,o),
-(283,172,o),
-(416,265,c),
-(286,357,o),
-(188,447,o),
-(101,572,c),
-(0,572,l)
-);
-}
-);
-width = 478;
-},
-{
-anchors = (
-{
-name = "#entry";
 pos = (60,265);
 },
 {
 name = "#exit";
-pos = (141,265);
+pos = (241,265);
 },
 {
-name = right;
-pos = (241,265);
+name = _upper;
+pos = (0,452);
 }
 );
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -477,11 +437,11 @@ pos = (60,265);
 },
 {
 name = "#exit";
-pos = (141,265);
+pos = (241,265);
 },
 {
-name = right;
-pos = (241,265);
+name = _upper;
+pos = (0,489);
 }
 );
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -527,11 +487,11 @@ pos = (60,265);
 },
 {
 name = "#exit";
-pos = (141,265);
+pos = (241,265);
 },
 {
-name = right;
-pos = (241,265);
+name = _upper;
+pos = (0,452);
 }
 );
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -577,11 +537,11 @@ pos = (46,265);
 },
 {
 name = "#exit";
-pos = (127,264);
+pos = (227,264);
 },
 {
-name = right;
-pos = (227,264);
+name = _upper;
+pos = (0,490);
 }
 );
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -627,11 +587,11 @@ pos = (61,265);
 },
 {
 name = "#exit";
-pos = (191,265);
+pos = (291,265);
 },
 {
-name = right;
-pos = (291,265);
+name = _upper;
+pos = (0,452);
 }
 );
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -677,11 +637,11 @@ pos = (60,265);
 },
 {
 name = "#exit";
-pos = (176,265);
+pos = (276,265);
 },
 {
-name = right;
-pos = (276,265);
+name = _upper;
+pos = (0,505);
 }
 );
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -727,11 +687,11 @@ pos = (60,265);
 },
 {
 name = "#exit";
-pos = (191,265);
+pos = (291,265);
 },
 {
-name = right;
-pos = (291,265);
+name = _upper;
+pos = (0,452);
 }
 );
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -777,11 +737,11 @@ pos = (80,265);
 },
 {
 name = "#exit";
-pos = (316,266);
+pos = (416,265);
 },
 {
-name = right;
-pos = (416,265);
+name = _upper;
+pos = (0,572);
 }
 );
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -827,4 +787,5 @@ name = height;
 topValue = 100;
 }
 );
+subCategory = Nonspacing;
 }
