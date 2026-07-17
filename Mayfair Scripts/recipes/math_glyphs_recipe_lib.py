@@ -1689,6 +1689,52 @@ def action_add_components(font, verbose=False, glyph=None, components=None, **_k
     return changed
 
 
+def action_set_component_anchor(
+    font,
+    verbose=False,
+    glyph=None,
+    component=None,
+    anchor=None,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if not component:
+        raise RuntimeError("%s: setComponentAnchor requires a component name." % glyph)
+    if not anchor:
+        raise RuntimeError("%s: setComponentAnchor requires an anchor name." % glyph)
+
+    changed = 0
+    missing = 0
+    for layer in target_glyph.layers:
+        matching_components = [
+            item for item in layer_components(layer)
+            if component_name(item) == component
+        ]
+        if not matching_components:
+            missing += 1
+            continue
+        for item in matching_components:
+            try:
+                item.anchor = str(anchor)
+                changed += 1
+            except Exception as error:
+                raise RuntimeError(
+                    "%s: could not set anchor %s on component %s: %s"
+                    % (glyph, anchor, component, error)
+                )
+
+    log("%s: set anchor %s on %i %s component(s)%s." % (
+        glyph,
+        anchor,
+        changed,
+        component,
+        "; missing on %i layer(s)" % missing if missing else "",
+    ), verbose)
+    return changed
+
+
 def action_disable_component_alignment(font, verbose=False, glyph=None, components=None, enabled=True, **_kwargs):
     if not boolean_value(enabled):
         log("%s: automatic alignment left enabled." % glyph, verbose)
@@ -2839,6 +2885,7 @@ ACTION_REGISTRY = {
     "createGlyph": action_create_glyph,
     "addComponent": action_add_component,
     "addComponents": action_add_components,
+    "setComponentAnchor": action_set_component_anchor,
     "disableComponentAlignment": action_disable_component_alignment,
     "enableComponentAlignment": action_enable_component_alignment,
     "placeComponentSequenceByWidths": action_place_component_sequence_by_widths,
