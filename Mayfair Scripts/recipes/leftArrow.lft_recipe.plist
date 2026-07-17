@@ -12,46 +12,65 @@
   <key>actions</key>
   <array>
     <dict>
-      <key>type</key><string>call</string>
-      <key>function</key><string>createGlyph</string>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
       <key>arguments</key>
       <dict>
-        <key>glyph</key><string>leftArrow.lft</string>
-        <key>export</key><true/>
-        <key>color</key><string>orange</string>
+        <key>glyph</key>
+        <string>leftArrow.lft</string>
+        <key>export</key>
+        <true/>
+        <key>color</key>
+        <string>orange</string>
       </dict>
     </dict>
     <dict>
-      <key>type</key><string>call</string>
-      <key>function</key><string>addComponent</string>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponent</string>
       <key>arguments</key>
       <dict>
-        <key>glyph</key><string>leftArrow.lft</string>
-        <key>component</key><string>rightArrow.rgt</string>
+        <key>glyph</key>
+        <string>leftArrow.lft</string>
+        <key>component</key>
+        <string>rightArrow.rgt</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>enableComponentAlignment</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftArrow.lft</string>
+        <key>components</key>
+        <array>
+          <string>rightArrow.rgt</string>
+        </array>
       </dict>
     </dict>
     <dict>
-      <key>type</key><string>call</string>
-      <key>function</key><string>flipComponentsAcrossYAxis</string>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setHorizontalScale</string>
       <key>arguments</key>
       <dict>
-        <key>glyph</key><string>leftArrow.lft</string>
-        <key>components</key><array><string>rightArrow.rgt</string></array>
+        <key>glyph</key>
+        <string>leftArrow.lft</string>
+        <key>components</key>
+        <array>
+          <string>rightArrow.rgt</string>
+        </array>
+        <key>scale</key>
+        <integer>-100</integer>
       </dict>
-    </dict>
-    <dict>
-      <key>type</key><string>call</string>
-      <key>function</key><string>enableComponentAlignment</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key><string>leftArrow.lft</string>
-        <key>components</key><array><string>rightArrow.rgt</string></array>
-      </dict>
-    </dict>
-    <dict>
-      <key>type</key><string>call</string>
-      <key>function</key><string>updateMetrics</string>
-      <key>arguments</key><dict><key>glyph</key><string>leftArrow.lft</string></dict>
     </dict>
   </array>
 </dict>

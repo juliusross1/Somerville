@@ -9,7 +9,7 @@ shapes = (
 ref = _smart.Arrow.mid;
 },
 {
-pos = (13,-358);
+pos = (13,-93);
 ref = harpoonHead;
 }
 );
@@ -19,28 +19,34 @@ width = 312;
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
+piece = {
+width = 223.23793;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (13,-338);
+pos = (163,0);
 ref = harpoonHead;
 }
 );
-width = 350;
+width = 500;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
+piece = {
+width = 63.5;
+};
 ref = _smart.Arrow.mid;
 scale = (3,1);
 },
 {
-pos = (83,-365);
+pos = (131,0);
 ref = harpoonHead;
 }
 );
-width = 452;
+width = 500;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -49,7 +55,7 @@ shapes = (
 ref = _smart.Arrow.mid;
 },
 {
-pos = (13,-358);
+pos = (13,-93);
 ref = harpoonHead;
 }
 );
@@ -62,7 +68,7 @@ shapes = (
 ref = _smart.Arrow.mid;
 },
 {
-pos = (13,-377);
+pos = (13,0);
 ref = harpoonHead;
 }
 );
@@ -75,7 +81,7 @@ shapes = (
 ref = _smart.Arrow.mid;
 },
 {
-pos = (23,-377);
+pos = (23,-112);
 ref = harpoonHead;
 }
 );
@@ -85,28 +91,20 @@ width = 373;
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
+piece = {
+width = 69;
+};
 ref = _smart.Arrow.mid;
 scale = (2.8,1);
 },
 {
-pos = (67,-63);
+pos = (133,0);
 ref = harpoonHead;
 }
 );
-width = 434;
+width = 500;
 },
 {
-annotations = (
-{
-pos = (130.398,753.695);
-text = "This could have a recipe even though it needs manual adjusting";
-type = Text;
-},
-{
-pos = (-316.523,246.383);
-type = Text;
-}
-);
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {

@@ -42,6 +42,7 @@ GLYPHS_COLOR_INDEXES = dict(
     darkblue=7,
     purple=8,
     magenta=9,
+    pink=9,
     lightgray=10,
     darkgray=11,
     none=None,
@@ -683,6 +684,22 @@ def set_component_scale(component, x_scale, y_scale):
 
     a, b, c, d, tx, ty = transform_values(component)
     return set_component_transform(component, (float(x_scale), b, c, float(y_scale), tx, ty))
+
+
+def component_vertical_scale(component):
+    scale = safe_call(getattr(component, "scale", None))
+    if scale is not None:
+        try:
+            return float(scale.y)
+        except Exception:
+            pass
+        try:
+            values = list(scale)
+            if len(values) >= 2:
+                return float(values[1])
+        except Exception:
+            pass
+    return float(transform_values(component)[3])
 
 
 def bounds_y_values(obj):
@@ -2412,8 +2429,13 @@ def action_set_side_metrics_from_component_sequence(
     components=None,
     leftGlyph=None,
     rightGlyph=None,
+    enabled=True,
     **_kwargs
 ):
+    if not boolean_value(enabled):
+        log("%s: side metrics skipped." % glyph, verbose)
+        return 0
+
     target_glyph = glyph_for_name(font, glyph)
     if target_glyph is None:
         raise RuntimeError("Missing glyph: %s" % glyph)
@@ -2506,7 +2528,11 @@ def sync_layer_metrics(layer):
     return False
 
 
-def action_update_metrics(font, verbose=False, glyph=None, mastersOnly=True, **_kwargs):
+def action_update_metrics(font, verbose=False, glyph=None, mastersOnly=True, enabled=True, **_kwargs):
+    if not boolean_value(enabled):
+        log("%s: metrics update skipped." % glyph, verbose)
+        return 0
+
     target_glyph = glyph_for_name(font, glyph)
     if target_glyph is None:
         raise RuntimeError("Missing glyph: %s" % glyph)
@@ -2832,6 +2858,46 @@ def action_set_component_scale_by_layer_name(font, verbose=False, glyph=None, co
     return changed
 
 
+def action_set_horizontal_scale(
+    font,
+    verbose=False,
+    glyph=None,
+    scale=-100,
+    components=None,
+    componentFilter=None,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+
+    if componentFilter is None and components is not None:
+        if isinstance(components, str):
+            components = [components]
+        componentFilter = {"components": components}
+
+    x_scale = float(clean_number(scale)) / 100.0
+    changed = 0
+    skipped = 0
+    for layer in target_glyph.layers:
+        for component in layer_components(layer):
+            if not component_matches_filter(component, componentFilter):
+                continue
+            y_scale = component_vertical_scale(component)
+            if set_component_scale(component, x_scale, y_scale):
+                changed += 1
+            else:
+                skipped += 1
+
+    log("%s: set horizontal scale to %s%% on %i component(s)%s." % (
+        glyph,
+        scale,
+        changed,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
+
+
 def action_create_smart_component_variants(font, verbose=False, glyph=None, values=None, N=None, step=None, axis="height", color=None, overwrite=False, startNumber=1, **_kwargs):
     source_glyph = glyph_for_name(font, glyph)
     if source_glyph is None:
@@ -2910,6 +2976,7 @@ ACTION_REGISTRY = {
     "copyComponentAxisValue": action_copy_component_axis_value,
     "setMathPluginAssembly": action_set_math_plugin_assembly,
     "setComponentScaleByLayerName": action_set_component_scale_by_layer_name,
+    "setHorizontalScale": action_set_horizontal_scale,
     "createSmartComponentVariants": action_create_smart_component_variants,
 }
 

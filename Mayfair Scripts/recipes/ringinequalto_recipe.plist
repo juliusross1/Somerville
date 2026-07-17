@@ -27,8 +27,6 @@
       <string>equal</string>
       <string>_smart.circle</string>
     </array>
-    <key>disableAutomaticAlignment</key>
-    <false/>
     <key>autoMatchingAnchors</key>
     <false/>
     <key>componentPairDisableAlignment</key>
@@ -47,12 +45,12 @@
         <string>_center</string>
       </dict>
     </array>
+    <key>setMetrics</key>
+    <true/>
     <key>leftMetricsGlyph</key>
     <string>equal</string>
     <key>rightMetricsGlyph</key>
     <string>equal</string>
-    <key>color</key>
-    <string>orange</string>
   </dict>
 </dict>
 </plist>

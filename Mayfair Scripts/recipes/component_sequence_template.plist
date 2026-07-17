@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
   "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<!--
+  COMPONENT SEQUENCE TEMPLATE
+
+  This template creates an exported glyph from an ordered sequence of
+  components. A recipe uses it by setting kind to macro, naming this file in
+  its template field, and supplying the parameters listed below.
+
+  The template performs these operations in order:
+
+    1. Create exportGlyph and add components in their listed order.
+    2. Optionally disable Glyphs automatic alignment for selected components.
+    3. Optionally align consecutive components by matching anchors. Explicit
+       alignment uses #exit or exit on one component and #entry or entry on
+       the next. Automatic matching can operate independently.
+    4. Optionally place the midpoint of two named component anchors on the
+       math axis.
+    5. Optionally align explicitly selected component pairs by named anchors.
+    6. Optionally set the left and right metrics keys and update all
+       master-layer metrics.
+
+  Required parameters:
+
+    exportGlyph
+    components
+
+  Optional parameters:
+
+    General:
+
+    color                                   default: orange
+
+    Automatic component alignment:
+
+    disableAutomaticAlignment               default: false
+    disableAutomaticAlignmentComponents     default: empty array
+
+      disableAutomaticAlignmentComponents is used only when
+      disableAutomaticAlignment is true. An empty array then means all
+      components.
+
+    Consecutive-component anchor alignment:
+
+    alignAnchors                            default: false
+    autoMatchingAnchors                     default: true
+    matchingAnchors                         default: empty array
+
+      The alignment action runs when alignAnchors or autoMatchingAnchors is
+      true. matchingAnchors is used only when autoMatchingAnchors is true.
+
+    Math-axis midpoint alignment:
+
+    alignCenterMidpointToMathAxis           default: false
+    centerMidpointComponents                default: empty array
+    centerMidpointAnchor                    default: center
+
+      centerMidpointComponents and centerMidpointAnchor are used only when
+      alignCenterMidpointToMathAxis is true.
+
+    Explicit component-pair alignment:
+
+    componentPairAlignments                 default: empty array
+    componentPairDisableAlignment           default: true
+
+      componentPairDisableAlignment is used only when
+      componentPairAlignments contains one or more pairs.
+
+    Metrics:
+
+    setMetrics                              default: false
+    leftMetricsGlyph                        default: empty string
+    rightMetricsGlyph                       default: empty string
+
+      leftMetricsGlyph and rightMetricsGlyph are used only when setMetrics is
+      true. When either is empty, the first or last component respectively is
+      used as the metrics source.
+
+  A placeholder occupying an entire string preserves the supplied plist type.
+  For example, ${components} expands to an array rather than text.
+-->
 <plist version="1.0">
 <dict>
   <key>formatVersion</key>
@@ -14,21 +94,12 @@
 
   <key>parameters</key>
   <dict>
-    <key>exportGlyph</key>
-    <string>equalscolon</string>
-    <key>components</key>
-    <array>
-      <string>equal</string>
-      <string>colon</string>
-    </array>
     <key>color</key>
     <string>orange</string>
     <key>disableAutomaticAlignment</key>
-    <true/>
+    <false/>
     <key>disableAutomaticAlignmentComponents</key>
     <array/>
-    <key>placeComponentsByWidths</key>
-    <false/>
     <key>alignAnchors</key>
     <false/>
     <key>autoMatchingAnchors</key>
@@ -45,6 +116,8 @@
     <array/>
     <key>componentPairDisableAlignment</key>
     <true/>
+    <key>setMetrics</key>
+    <false/>
     <key>leftMetricsGlyph</key>
     <string></string>
     <key>rightMetricsGlyph</key>
@@ -78,6 +151,8 @@
       <dict>
         <key>glyph</key>
         <string>${exportGlyph}</string>
+        <key>enabled</key>
+        <string>${setMetrics}</string>
         <key>components</key>
         <string>${components}</string>
       </dict>
@@ -96,22 +171,6 @@
         <string>${disableAutomaticAlignment}</string>
         <key>components</key>
         <string>${disableAutomaticAlignmentComponents}</string>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>placeComponentSequenceByWidths</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>${exportGlyph}</string>
-        <key>components</key>
-        <string>${components}</string>
-        <key>enabled</key>
-        <string>${placeComponentsByWidths}</string>
       </dict>
     </dict>
 
@@ -163,6 +222,8 @@
       </dict>
     </dict>
 
+<!-- I am not sure if we will end up using this next one, or if we will
+     use Glyphs automatic Alignment and anchors throughout -->
     <dict>
       <key>type</key>
       <string>call</string>
@@ -208,6 +269,8 @@
       <dict>
         <key>glyph</key>
         <string>${exportGlyph}</string>
+        <key>enabled</key>
+        <string>${setMetrics}</string>
         <key>mastersOnly</key>
         <true/>
       </dict>

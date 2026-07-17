@@ -191,6 +191,9 @@ nodes = (
 },
 {
 alignment = -1;
+piece = {
+width = 71.5;
+};
 pos = (141,0);
 ref = _smart.DoubleArrow.mid;
 scale = (5,1);
@@ -205,7 +208,7 @@ ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 }
 );
-width = 291;
+width = 501;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";

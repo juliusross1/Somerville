@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>formatVersion</key>
+  <integer>1</integer>
+  <key>kind</key>
+  <string>recipe</string>
+  <key>name</key>
+  <string>twoheadrightarrow.rgt</string>
+  <key>actions</key>
+  <array>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>twoheadrightarrow.rgt</string>
+        <key>export</key>
+        <true/>
+        <key>color</key>
+        <string>pink</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponents</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>twoheadrightarrow.rgt</string>
+        <key>components</key>
+        <array>
+          <string>_smart.Arrow.mid</string>
+          <string>ArrowHead</string>
+          <string>_smart.Arrow.mid</string>
+          <string>ArrowHead</string>
+        </array>
+      </dict>
+    </dict>
+  </array>
+</dict>
+</plist>
