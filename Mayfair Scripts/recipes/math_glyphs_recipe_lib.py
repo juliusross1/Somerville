@@ -1624,6 +1624,8 @@ def expanded_actions_from_recipe(recipe_file):
         template_file = recipe["template"]
         template, template_path_value = load_plist(template_file)
         parameters = merge_parameters(template.get("parameters", {}), recipe.get("parameters", {}))
+        if "assemblyStrokePart" not in parameters and "strokePart" in parameters:
+            parameters["assemblyStrokePart"] = parameters["strokePart"]
         actions = normalize_recipe_actions(expand_value(template.get("actions", []), parameters))
         return recipe, template, parameters, actions, recipe_path_value, template_path_value
 
@@ -2681,27 +2683,34 @@ def action_set_math_plugin_assembly(font, verbose=False, glyph=None, direction="
 
     assembly_key = "vAssembly" if str(direction).lower().startswith("v") else "hAssembly"
     parsed_entries = [math_assembly_entry(entry) for entry in entries]
-    arrow_mid_is_extender = assembly_key == "hAssembly" and any(
-        entry[0] == "Arrow.mid" and entry[1] for entry in parsed_entries
-    )
-    arrow_mid = glyph_for_name(font, "Arrow.mid") if arrow_mid_is_extender else None
-    if arrow_mid_is_extender and arrow_mid is None:
-        raise RuntimeError("Missing assembly extender glyph: Arrow.mid")
+    mid_glyphs = {}
+    if assembly_key == "hAssembly":
+        for entry in parsed_entries:
+            part_name = entry[0]
+            if ".mid" not in part_name or part_name in mid_glyphs:
+                continue
+            mid_glyph = glyph_for_name(font, part_name)
+            if mid_glyph is None:
+                raise RuntimeError("Missing assembly middle glyph: %s" % part_name)
+            mid_glyphs[part_name] = mid_glyph
     changed = 0
     for layer in target_glyph.layers:
-        connector_width = None
-        if arrow_mid is not None:
-            arrow_mid_layer = matching_layer(arrow_mid, layer)
-            connector_width = layer_width(arrow_mid_layer)
-            if connector_width is None:
-                raise RuntimeError(
-                    "%s: no matching Arrow.mid width for layer %s"
-                    % (glyph, layer_label(layer))
-                )
-        assembly = [
-            math_assembly_entry(entry, connector_width=connector_width)
-            for entry in entries
-        ]
+        assembly = []
+        for raw_entry, parsed_entry in zip(entries, parsed_entries):
+            part_name = parsed_entry[0]
+            connector_width = None
+            mid_glyph = mid_glyphs.get(part_name)
+            if mid_glyph is not None:
+                mid_layer = matching_layer(mid_glyph, layer)
+                connector_width = layer_width(mid_layer)
+                if connector_width is None:
+                    raise RuntimeError(
+                        "%s: no matching %s width for layer %s"
+                        % (glyph, part_name, layer_label(layer))
+                    )
+            assembly.append(
+                math_assembly_entry(raw_entry, connector_width=connector_width)
+            )
         math_plugin_variants = existing_math_plugin_variants(layer)
         math_plugin_variants[assembly_key] = assembly
         if set_math_plugin_variants(layer, math_plugin_variants):

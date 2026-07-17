@@ -1,5 +1,5 @@
 {
-color = 3;
+color = 9;
 glyphname = Arrow.mid;
 layers = (
 {
@@ -228,7 +228,14 @@ pos = (230,265);
 },
 {
 name = center_left2;
-pos = (161,265);
+pos = (141,265);
+}
+);
+annotations = (
+{
+pos = (317.047,452.5);
+text = "We can probably remove the _left as we are going to do the dual arrows differently";
+type = Text;
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";

@@ -1,5 +1,5 @@
 {
-color = 3;
+color = 9;
 glyphname = harpoonrightup.rgt;
 layers = (
 {
@@ -96,6 +96,17 @@ ref = harpoonHead;
 width = 434;
 },
 {
+annotations = (
+{
+pos = (130.398,753.695);
+text = "This could have a recipe even though it needs manual adjusting";
+type = Text;
+},
+{
+pos = (-316.523,246.383);
+type = Text;
+}
+);
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {

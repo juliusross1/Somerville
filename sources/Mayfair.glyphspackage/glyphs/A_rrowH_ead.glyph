@@ -1,5 +1,5 @@
 {
-category = Mark;
+category = Symbol;
 color = 3;
 glyphname = ArrowHead;
 layers = (
@@ -336,15 +336,21 @@ width = 324;
 anchors = (
 {
 name = "#entry";
-pos = (53,265);
+pos = (83,265);
 },
 {
 name = "#exit";
-pos = (119,265);
+pos = (209,265);
 },
 {
 name = "&exit";
-pos = (276,265);
+pos = (306,265);
+}
+);
+annotations = (
+{
+pos = (281.268,468.68);
+type = Text;
 }
 );
 attr = {
@@ -360,24 +366,24 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(37,424,o),
-(53,345,o),
-(53,265,cs),
-(53,182,o),
-(36,105,o),
-(0,26,c),
-(67,26,l),
-(125,124,o),
-(188,192,o),
-(276,265,c),
-(190,337,o),
-(125,407,o),
-(67,505,c),
-(0,505,l)
+(67,424,o),
+(83,345,o),
+(83,265,cs),
+(83,182,o),
+(66,105,o),
+(30,26,c),
+(97,26,l),
+(155,124,o),
+(218,192,o),
+(306,265,c),
+(220,337,o),
+(155,407,o),
+(97,505,c),
+(30,505,l)
 );
 }
 );
-width = 338;
+width = 358;
 },
 {
 anchors = (
@@ -787,5 +793,5 @@ name = height;
 topValue = 100;
 }
 );
-subCategory = Nonspacing;
+subCategory = Arrow;
 }

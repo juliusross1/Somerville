@@ -1,5 +1,5 @@
 {
-color = 3;
+color = 9;
 glyphname = twoheadrightarrow.rgt;
 layers = (
 {
@@ -175,6 +175,21 @@ ref = ArrowHead;
 width = 639;
 },
 {
+annotations = (
+{
+pos = (200,653);
+text = "This could have a recipe even though it will need manual adjusting";
+type = Text;
+},
+{
+pos = (-363.68,536.859);
+type = Text;
+},
+{
+pos = (-423.617,492.766);
+type = Text;
+}
+);
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
@@ -184,7 +199,7 @@ width = 55.86852;
 ref = _smart.Arrow.mid;
 },
 {
-pos = (3,0);
+pos = (-27,0);
 ref = ArrowHead;
 },
 {
@@ -192,16 +207,16 @@ anchor = "#entry";
 piece = {
 width = 30.98882;
 };
-pos = (122,0);
+pos = (182,0);
 ref = _smart.Arrow.mid;
 scale = (3,1);
 },
 {
-pos = (162,0);
+pos = (192,0);
 ref = ArrowHead;
 }
 );
-width = 500;
+width = 550;
 }
 );
 metricLeft = "=0";

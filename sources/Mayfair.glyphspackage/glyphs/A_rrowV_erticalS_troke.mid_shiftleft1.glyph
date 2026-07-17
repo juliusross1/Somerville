@@ -1,6 +1,6 @@
 {
 color = 1;
-glyphname = ArrowDoubleVerticalStroke.mid_shiftleft2;
+glyphname = ArrowVerticalStroke.mid_shiftleft1;
 layers = (
 {
 attr = {
@@ -15,9 +15,8 @@ ref = Arrow.mid;
 scale = (18,1);
 },
 {
-anchor = center_1;
-pos = (4179,0);
-ref = _ArrowDoubleVerticalStroke;
+pos = (4259,0);
+ref = _ArrowVerticalStroke;
 }
 );
 width = 9000;
@@ -35,9 +34,8 @@ ref = Arrow.mid;
 scale = (18,1);
 },
 {
-anchor = center_1;
-pos = (4109,0);
-ref = _ArrowDoubleVerticalStroke;
+pos = (4259,0);
+ref = _ArrowVerticalStroke;
 }
 );
 width = 9000;
@@ -55,9 +53,8 @@ ref = Arrow.mid;
 scale = (18,1);
 },
 {
-anchor = center_1;
-pos = (4179,0);
-ref = _ArrowDoubleVerticalStroke;
+pos = (4259,0);
+ref = _ArrowVerticalStroke;
 }
 );
 width = 9000;
@@ -75,9 +72,8 @@ ref = Arrow.mid;
 scale = (18,1);
 },
 {
-anchor = center_1;
-pos = (4109,1);
-ref = _ArrowDoubleVerticalStroke;
+pos = (4259,1);
+ref = _ArrowVerticalStroke;
 }
 );
 width = 9000;
@@ -95,9 +91,8 @@ ref = Arrow.mid;
 scale = (18,1);
 },
 {
-anchor = center_1;
-pos = (4080,0);
-ref = _ArrowDoubleVerticalStroke;
+pos = (4170,0);
+ref = _ArrowVerticalStroke;
 }
 );
 width = 9000;
@@ -115,9 +110,8 @@ ref = Arrow.mid;
 scale = (18,1);
 },
 {
-anchor = center_1;
-pos = (4354,0);
-ref = _ArrowDoubleVerticalStroke;
+pos = (4184,0);
+ref = _ArrowVerticalStroke;
 }
 );
 width = 9000;
@@ -135,9 +129,8 @@ ref = Arrow.mid;
 scale = (18,1);
 },
 {
-anchor = center_1;
-pos = (4367,0);
-ref = _ArrowDoubleVerticalStroke;
+pos = (4453,0);
+ref = _ArrowVerticalStroke;
 }
 );
 width = 9000;
@@ -154,9 +147,9 @@ shapes = (
 ref = Arrow.mid;
 },
 {
-anchor = center_left2;
-pos = (-34,0);
-ref = _ArrowDoubleVerticalStroke;
+anchor = center_left1;
+pos = (183,0);
+ref = _ArrowVerticalStroke;
 }
 );
 width = 500;

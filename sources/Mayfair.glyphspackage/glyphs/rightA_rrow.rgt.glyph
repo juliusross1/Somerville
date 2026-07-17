@@ -1,5 +1,5 @@
 {
-color = 3;
+color = 9;
 glyphname = rightArrow.rgt;
 layers = (
 {
@@ -170,11 +170,18 @@ name = _left;
 pos = (0,265);
 }
 );
+annotations = (
+{
+pos = (200,653);
+text = "This could have a recipe even though it will need manual adjusting";
+type = Text;
+}
+);
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 piece = {
-width = 215;
+width = 224.99051;
 };
 ref = _smart.Arrow.mid;
 },
@@ -182,7 +189,7 @@ ref = _smart.Arrow.mid;
 piece = {
 height = 0;
 };
-pos = (162,0);
+pos = (142,0);
 ref = ArrowHead;
 }
 );
