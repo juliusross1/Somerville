@@ -1577,6 +1577,26 @@ def merge_parameters(defaults, overrides):
     return parameters
 
 
+def load_recipe_constants(recipe):
+    constant_files = recipe.get("constants")
+    if not constant_files:
+        return {}
+    if isinstance(constant_files, str):
+        constant_files = [constant_files]
+
+    constants = {}
+    for constant_file in constant_files:
+        constant_plist, constant_path = load_plist(constant_file)
+        values = constant_plist.get("constants")
+        if not isinstance(values, dict):
+            raise RuntimeError(
+                "Recipe constants file %s must contain a constants dictionary."
+                % constant_path
+            )
+        constants.update(values)
+    return constants
+
+
 def expand_value(value, parameters):
     if isinstance(value, dict):
         return {key: expand_value(item, parameters) for key, item in value.items()}
@@ -1637,16 +1657,18 @@ def normalize_recipe_actions(actions):
 
 def expanded_actions_from_recipe(recipe_file):
     recipe, recipe_path_value = load_plist(recipe_file)
+    constants = load_recipe_constants(recipe)
     if recipe.get("kind") == "macro":
         template_file = recipe["template"]
         template, template_path_value = load_plist(template_file)
-        parameters = merge_parameters(template.get("parameters", {}), recipe.get("parameters", {}))
+        parameters = merge_parameters(constants, template.get("parameters", {}))
+        parameters = merge_parameters(parameters, recipe.get("parameters", {}))
         if "assemblyStrokePart" not in parameters and "strokePart" in parameters:
             parameters["assemblyStrokePart"] = parameters["strokePart"]
         actions = normalize_recipe_actions(expand_value(template.get("actions", []), parameters))
         return recipe, template, parameters, actions, recipe_path_value, template_path_value
 
-    parameters = dict(recipe.get("parameters", {}))
+    parameters = merge_parameters(constants, recipe.get("parameters", {}))
     actions = normalize_recipe_actions(expand_value(recipe.get("actions", []), parameters))
     return recipe, recipe, parameters, actions, recipe_path_value, recipe_path_value
 

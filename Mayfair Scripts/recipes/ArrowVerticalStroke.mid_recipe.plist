@@ -6,28 +6,66 @@
   <key>formatVersion</key>
   <integer>1</integer>
   <key>kind</key>
-  <string>macro</string>
+  <string>recipe</string>
   <key>name</key>
   <string>ArrowVerticalStroke.mid</string>
-  <key>template</key>
-  <string>component_sequence_template.plist</string>
-  <key>templateName</key>
-  <string>componentSequence</string>
-  <key>parameters</key>
-  <dict>
-    <key>exportGlyph</key>
-    <string>ArrowVerticalStroke.mid</string>
-    <key>components</key>
-    <array>
-      <string>_smart.Arrow.mid</string>
-      <string>_ArrowVerticalStroke</string>
-    </array>
-    <key>setMetrics</key>
-    <true/>
-    <key>leftMetricsGlyph</key>
-    <string>_smart.Arrow.mid</string>
-    <key>rightMetricsGlyph</key>
-    <string>_smart.Arrow.mid</string>
-  </dict>
+  <key>constants</key>
+  <string>recipe_constants.plist</string>
+  <key>actions</key>
+  <array>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>ArrowVerticalStroke.mid</string>
+        <key>export</key>
+        <true/>
+        <key>color</key>
+        <string>orange</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponents</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>ArrowVerticalStroke.mid</string>
+        <key>components</key>
+        <array>
+          <string>_smart.Arrow.mid</string>
+          <string>_ArrowVerticalStroke</string>
+        </array>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setComponentAxisValue</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>ArrowVerticalStroke.mid</string>
+        <key>axis</key>
+        <string>width</string>
+        <key>value</key>
+        <string>${ArrowMiddleLength}</string>
+        <key>componentFilter</key>
+        <dict>
+          <key>components</key>
+          <array>
+            <string>_smart.Arrow.mid</string>
+          </array>
+        </dict>
+      </dict>
+    </dict>
+  </array>
 </dict>
 </plist>

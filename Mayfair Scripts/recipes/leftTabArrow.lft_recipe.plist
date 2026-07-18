@@ -9,8 +9,11 @@
   <key>kind</key>
   <string>recipe</string>
 
+  <key>constants</key>
+  <string>recipe_constants.plist</string>
+
   <key>name</key>
-  <string>upArrow</string>
+  <string>leftTabArrow.lft</string>
 
   <key>actions</key>
   <array>
@@ -22,7 +25,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upArrow</string>
+        <string>leftTabArrow.lft</string>
         <key>export</key>
         <true/>
         <key>color</key>
@@ -38,9 +41,9 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upArrow</string>
+        <string>leftTabArrow.lft</string>
         <key>component</key>
-        <string>rightArrow</string>
+        <string>rightTabArrow.rgt</string>
       </dict>
     </dict>
 
@@ -48,32 +51,14 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>rotateComponents</string>
+      <string>enableComponentAlignment</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upArrow</string>
+        <string>leftTabArrow.lft</string>
         <key>components</key>
         <array>
-          <string>rightArrow</string>
-        </array>
-        <key>degrees</key>
-        <integer>90</integer>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>alignComponentBottomToDescender</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>upArrow</string>
-        <key>components</key>
-        <array>
-          <string>rightArrow</string>
+          <string>rightTabArrow.rgt</string>
         </array>
       </dict>
     </dict>
@@ -82,15 +67,17 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setSideBearings</string>
+      <string>setHorizontalScale</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upArrow</string>
-        <key>left</key>
-        <integer>100</integer>
-        <key>right</key>
-        <integer>100</integer>
+        <string>leftTabArrow.lft</string>
+        <key>components</key>
+        <array>
+          <string>rightTabArrow.rgt</string>
+        </array>
+        <key>scale</key>
+        <integer>-100</integer>
       </dict>
     </dict>
   </array>

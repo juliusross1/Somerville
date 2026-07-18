@@ -151,8 +151,6 @@
       <dict>
         <key>glyph</key>
         <string>${exportGlyph}</string>
-        <key>enabled</key>
-        <string>${setMetrics}</string>
         <key>components</key>
         <string>${components}</string>
       </dict>
@@ -251,6 +249,8 @@
       <dict>
         <key>glyph</key>
         <string>${exportGlyph}</string>
+        <key>enabled</key>
+        <string>${setMetrics}</string>
         <key>components</key>
         <string>${components}</string>
         <key>leftGlyph</key>

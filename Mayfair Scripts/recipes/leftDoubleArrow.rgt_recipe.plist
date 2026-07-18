@@ -3,9 +3,15 @@
   "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>formatVersion</key><integer>1</integer>
-  <key>kind</key><string>recipe</string>
-  <key>name</key><string>leftDoubleArrow.rgt</string>
+  <key>formatVersion</key>
+  <integer>1</integer>
+  <key>kind</key>
+  <string>recipe</string>
+
+  <key>constants</key>
+  <string>recipe_constants.plist</string>
+  <key>name</key>
+  <string>leftDoubleArrow.rgt</string>
   <key>actions</key>
   <array>
     <dict>

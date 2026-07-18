@@ -6,6 +6,9 @@
 	<string>Right Tail Arrow</string>
 	<key>kind</key>
 	<string>recipe</string>
+
+  <key>constants</key>
+  <string>recipe_constants.plist</string>
 	<key>description</key>
 	<string>Build rightTailArrow from tail, extender, and right arrow parts with a horizontal math assembly.</string>
 	<key>actions</key>

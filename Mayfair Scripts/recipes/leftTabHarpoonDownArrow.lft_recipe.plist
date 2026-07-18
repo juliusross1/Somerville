@@ -5,13 +5,13 @@
 <dict>
   <key>formatVersion</key>
   <integer>1</integer>
-
   <key>kind</key>
   <string>recipe</string>
 
+  <key>constants</key>
+  <string>recipe_constants.plist</string>
   <key>name</key>
-  <string>southWestArrow</string>
-
+  <string>leftTabHarpoonDownArrow.lft</string>
   <key>actions</key>
   <array>
     <dict>
@@ -22,14 +22,13 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>southWestArrow</string>
+        <string>leftTabHarpoonDownArrow.lft</string>
         <key>export</key>
         <true/>
         <key>color</key>
         <string>orange</string>
       </dict>
     </dict>
-
     <dict>
       <key>type</key>
       <string>call</string>
@@ -38,71 +37,41 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>southWestArrow</string>
+        <string>leftTabHarpoonDownArrow.lft</string>
         <key>component</key>
-        <string>rightArrow</string>
+        <string>rightTabHarpoonDownArrow.rgt</string>
       </dict>
     </dict>
-
     <dict>
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>rotateComponents</string>
+      <string>enableComponentAlignment</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>southWestArrow</string>
+        <string>leftTabHarpoonDownArrow.lft</string>
         <key>components</key>
         <array>
-          <string>rightArrow</string>
-        </array>
-        <key>degrees</key>
-        <integer>-135</integer>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>alignComponentBottomToDescender</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>southWestArrow</string>
-        <key>components</key>
-        <array>
-          <string>rightArrow</string>
+          <string>rightTabHarpoonDownArrow.rgt</string>
         </array>
       </dict>
     </dict>
-
     <dict>
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setSideMetricKeys</string>
+      <string>setHorizontalScale</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>southWestArrow</string>
-        <key>left</key>
-        <string>|rightArrow</string>
-        <key>right</key>
-        <string>|rightArrow</string>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>updateMetrics</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>southWestArrow</string>
+        <string>leftTabHarpoonDownArrow.lft</string>
+        <key>components</key>
+        <array>
+          <string>rightTabHarpoonDownArrow.rgt</string>
+        </array>
+        <key>scale</key>
+        <integer>-100</integer>
       </dict>
     </dict>
   </array>

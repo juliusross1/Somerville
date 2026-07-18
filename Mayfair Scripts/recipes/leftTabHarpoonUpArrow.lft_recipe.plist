@@ -5,13 +5,13 @@
 <dict>
   <key>formatVersion</key>
   <integer>1</integer>
-
   <key>kind</key>
   <string>recipe</string>
 
+  <key>constants</key>
+  <string>recipe_constants.plist</string>
   <key>name</key>
-  <string>upTwoHeadedArrow</string>
-
+  <string>leftTabHarpoonUpArrow.lft</string>
   <key>actions</key>
   <array>
     <dict>
@@ -22,14 +22,13 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
+        <string>leftTabHarpoonUpArrow.lft</string>
         <key>export</key>
         <true/>
         <key>color</key>
         <string>orange</string>
       </dict>
     </dict>
-
     <dict>
       <key>type</key>
       <string>call</string>
@@ -38,71 +37,41 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
+        <string>leftTabHarpoonUpArrow.lft</string>
         <key>component</key>
-        <string>rightTwoheadedArrow</string>
+        <string>rightTabHarpoonUpArrow.rgt</string>
       </dict>
     </dict>
-
     <dict>
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>rotateComponents</string>
+      <string>enableComponentAlignment</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
+        <string>leftTabHarpoonUpArrow.lft</string>
         <key>components</key>
         <array>
-          <string>rightTwoheadedArrow</string>
-        </array>
-        <key>degrees</key>
-        <integer>90</integer>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>alignComponentBottomToDescender</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
-        <key>components</key>
-        <array>
-          <string>rightTwoheadedArrow</string>
+          <string>rightTabHarpoonUpArrow.rgt</string>
         </array>
       </dict>
     </dict>
-
     <dict>
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setSideMetricKeys</string>
+      <string>setHorizontalScale</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
-        <key>left</key>
-        <string>upArrow</string>
-        <key>right</key>
-        <string>upArrow</string>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>updateMetrics</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>upTwoHeadedArrow</string>
+        <string>leftTabHarpoonUpArrow.lft</string>
+        <key>components</key>
+        <array>
+          <string>rightTabHarpoonUpArrow.rgt</string>
+        </array>
+        <key>scale</key>
+        <integer>-100</integer>
       </dict>
     </dict>
   </array>

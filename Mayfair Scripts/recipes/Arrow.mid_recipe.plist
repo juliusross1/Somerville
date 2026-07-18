@@ -9,6 +9,8 @@
   <string>recipe</string>
   <key>name</key>
   <string>Arrow.mid</string>
+  <key>constants</key>
+  <string>recipe_constants.plist</string>
   <key>actions</key>
   <array>
     <dict>
@@ -22,8 +24,6 @@
         <string>Arrow.mid</string>
         <key>export</key>
         <true/>
-        <key>color</key>
-        <string>pink</string>
       </dict>
     </dict>
     <dict>
@@ -51,7 +51,7 @@
         <key>axis</key>
         <string>width</string>
         <key>value</key>
-        <integer>500</integer>
+        <string>${ArrowMiddleLength}</string>
         <key>componentFilter</key>
         <dict>
           <key>components</key>

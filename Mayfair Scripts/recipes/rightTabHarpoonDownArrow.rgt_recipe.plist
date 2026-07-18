@@ -5,10 +5,16 @@
 <dict>
   <key>formatVersion</key>
   <integer>1</integer>
+
   <key>kind</key>
   <string>recipe</string>
+
+  <key>constants</key>
+  <string>recipe_constants.plist</string>
+
   <key>name</key>
-  <string>northWestDoubleArrow</string>
+  <string>rightTabHarpoonDownArrow.rgt</string>
+
   <key>actions</key>
   <array>
     <dict>
@@ -19,13 +25,14 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>northWestDoubleArrow</string>
+        <string>rightTabHarpoonDownArrow.rgt</string>
         <key>export</key>
         <true/>
         <key>color</key>
         <string>orange</string>
       </dict>
     </dict>
+
     <dict>
       <key>type</key>
       <string>call</string>
@@ -34,58 +41,60 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>northWestDoubleArrow</string>
+        <string>rightTabHarpoonDownArrow.rgt</string>
         <key>component</key>
-        <string>rightDoubleArrow</string>
+        <string>rightTabHarpoonUpArrow.rgt</string>
       </dict>
     </dict>
+
     <dict>
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>rotateComponents</string>
+      <string>flipComponentsAcrossHorizontalLine</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>northWestDoubleArrow</string>
+        <string>rightTabHarpoonDownArrow.rgt</string>
         <key>components</key>
         <array>
-          <string>rightDoubleArrow</string>
+          <string>rightTabHarpoonUpArrow.rgt</string>
         </array>
-        <key>degrees</key>
-        <integer>135</integer>
+        <key>y</key>
+        <integer>265</integer>
+        <key>anchorNames</key>
+        <array>
+          <string>#entry</string>
+        </array>
+        <key>checkAnchorY</key>
+        <true/>
       </dict>
     </dict>
+
     <dict>
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>alignComponentBottomToDescender</string>
+      <string>alignComponentAnchorsToMathAxis</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>northWestDoubleArrow</string>
+        <string>rightTabHarpoonDownArrow.rgt</string>
         <key>components</key>
         <array>
-          <string>rightDoubleArrow</string>
+          <string>rightTabHarpoonUpArrow.rgt</string>
         </array>
+        <key>anchorNames</key>
+        <array>
+          <string>#entry</string>
+        </array>
+        <key>targetAnchorName</key>
+        <string>#entry</string>
+        <key>writeAnchor</key>
+        <true/>
       </dict>
     </dict>
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>setSideMetricKeys</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>northWestDoubleArrow</string>
-        <key>left</key>
-        <string>|rightDoubleArrow</string>
-        <key>right</key>
-        <string>|rightDoubleArrow</string>
-      </dict>
-    </dict>
+
     <dict>
       <key>type</key>
       <string>call</string>
@@ -94,9 +103,10 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>northWestDoubleArrow</string>
+        <string>rightTabHarpoonDownArrow.rgt</string>
       </dict>
     </dict>
+
   </array>
 </dict>
 </plist>

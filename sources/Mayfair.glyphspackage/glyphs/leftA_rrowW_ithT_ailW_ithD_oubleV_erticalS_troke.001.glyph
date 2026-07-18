@@ -1,6 +1,6 @@
 {
 color = 11;
-glyphname = leftRightStrokeArrow;
+glyphname = leftArrowWithTailWithDoubleVerticalStroke.001;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -11,12 +11,12 @@ ref = leftArrow.lft;
 },
 {
 pos = (269,0);
-ref = ArrowStroke.mid;
+ref = ArrowDoubleVerticalStroke.mid_shiftleft1;
 },
 {
 alignment = 1;
 pos = (769,0);
-ref = rightArrow.rgt;
+ref = leftTailArrow.rgt;
 }
 );
 userData = {
@@ -26,7 +26,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -35,10 +35,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowStroke.mid,
+ArrowDoubleVerticalStroke.mid_shiftleft1,
 0,
-500,
-500
+9000,
+9000
 ),
 (
 Arrow.mid,
@@ -47,15 +47,15 @@ Arrow.mid,
 500
 ),
 (
-rightArrow.rgt,
+leftTailArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
 };
 };
-width = 1038;
+width = 1139;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -66,12 +66,12 @@ ref = leftArrow.lft;
 },
 {
 pos = (320,0);
-ref = ArrowStroke.mid;
+ref = ArrowDoubleVerticalStroke.mid_shiftleft1;
 },
 {
 alignment = 1;
 pos = (820,0);
-ref = rightArrow.rgt;
+ref = leftTailArrow.rgt;
 }
 );
 userData = {
@@ -81,7 +81,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -90,10 +90,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowStroke.mid,
+ArrowDoubleVerticalStroke.mid_shiftleft1,
 0,
-500,
-500
+9000,
+9000
 ),
 (
 Arrow.mid,
@@ -102,15 +102,15 @@ Arrow.mid,
 500
 ),
 (
-rightArrow.rgt,
+leftTailArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
 };
 };
-width = 1140;
+width = 1256;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -121,12 +121,12 @@ ref = leftArrow.lft;
 },
 {
 pos = (269,0);
-ref = ArrowStroke.mid;
+ref = ArrowDoubleVerticalStroke.mid_shiftleft1;
 },
 {
 alignment = 1;
 pos = (769,0);
-ref = rightArrow.rgt;
+ref = leftTailArrow.rgt;
 }
 );
 userData = {
@@ -136,7 +136,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -145,10 +145,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowStroke.mid,
+ArrowDoubleVerticalStroke.mid_shiftleft1,
 0,
-500,
-500
+9000,
+9000
 ),
 (
 Arrow.mid,
@@ -157,15 +157,15 @@ Arrow.mid,
 500
 ),
 (
-rightArrow.rgt,
+leftTailArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
 };
 };
-width = 1038;
+width = 1132;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -176,12 +176,12 @@ ref = leftArrow.lft;
 },
 {
 pos = (334,0);
-ref = ArrowStroke.mid;
+ref = ArrowDoubleVerticalStroke.mid_shiftleft1;
 },
 {
 alignment = 1;
 pos = (834,0);
-ref = rightArrow.rgt;
+ref = leftTailArrow.rgt;
 }
 );
 userData = {
@@ -191,7 +191,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -200,10 +200,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowStroke.mid,
+ArrowDoubleVerticalStroke.mid_shiftleft1,
 0,
-500,
-500
+9000,
+9000
 ),
 (
 Arrow.mid,
@@ -212,15 +212,15 @@ Arrow.mid,
 500
 ),
 (
-rightArrow.rgt,
+leftTailArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
 };
 };
-width = 1168;
+width = 1254;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -231,12 +231,12 @@ ref = leftArrow.lft;
 },
 {
 pos = (500,0);
-ref = ArrowStroke.mid;
+ref = ArrowDoubleVerticalStroke.mid_shiftleft1;
 },
 {
 alignment = 1;
 pos = (1000,0);
-ref = rightArrow.rgt;
+ref = leftTailArrow.rgt;
 }
 );
 userData = {
@@ -246,7 +246,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -255,10 +255,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowStroke.mid,
+ArrowDoubleVerticalStroke.mid_shiftleft1,
 0,
-500,
-500
+9000,
+9000
 ),
 (
 Arrow.mid,
@@ -267,15 +267,15 @@ Arrow.mid,
 500
 ),
 (
-rightArrow.rgt,
+leftTailArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
 };
 };
-width = 1500;
+width = 1405;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -286,12 +286,12 @@ ref = leftArrow.lft;
 },
 {
 pos = (500,0);
-ref = ArrowStroke.mid;
+ref = ArrowDoubleVerticalStroke.mid_shiftleft1;
 },
 {
 alignment = 1;
 pos = (1000,0);
-ref = rightArrow.rgt;
+ref = leftTailArrow.rgt;
 }
 );
 userData = {
@@ -301,7 +301,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -310,10 +310,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowStroke.mid,
+ArrowDoubleVerticalStroke.mid_shiftleft1,
 0,
-500,
-500
+9000,
+9000
 ),
 (
 Arrow.mid,
@@ -322,15 +322,15 @@ Arrow.mid,
 500
 ),
 (
-rightArrow.rgt,
+leftTailArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
 };
 };
-width = 1500;
+width = 1438;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -341,12 +341,12 @@ ref = leftArrow.lft;
 },
 {
 pos = (500,0);
-ref = ArrowStroke.mid;
+ref = ArrowDoubleVerticalStroke.mid_shiftleft1;
 },
 {
 alignment = 1;
 pos = (1000,0);
-ref = rightArrow.rgt;
+ref = leftTailArrow.rgt;
 }
 );
 userData = {
@@ -356,7 +356,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -365,10 +365,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowStroke.mid,
+ArrowDoubleVerticalStroke.mid_shiftleft1,
 0,
-500,
-500
+9000,
+9000
 ),
 (
 Arrow.mid,
@@ -377,15 +377,15 @@ Arrow.mid,
 500
 ),
 (
-rightArrow.rgt,
+leftTailArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
 };
 };
-width = 1500;
+width = 1462;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -396,12 +396,12 @@ ref = leftArrow.lft;
 },
 {
 pos = (500,0);
-ref = ArrowStroke.mid;
+ref = ArrowDoubleVerticalStroke.mid_shiftleft1;
 },
 {
 alignment = 1;
 pos = (1000,0);
-ref = rightArrow.rgt;
+ref = leftTailArrow.rgt;
 }
 );
 userData = {
@@ -411,7 +411,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -420,7 +420,7 @@ Arrow.mid,
 500
 ),
 (
-ArrowStroke.mid,
+ArrowDoubleVerticalStroke.mid_shiftleft1,
 0,
 500,
 500
@@ -432,9 +432,9 @@ Arrow.mid,
 500
 ),
 (
-rightArrow.rgt,
+leftTailArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
@@ -443,5 +443,4 @@ rightArrow.rgt,
 width = 1500;
 }
 );
-unicode = 8622;
 }
