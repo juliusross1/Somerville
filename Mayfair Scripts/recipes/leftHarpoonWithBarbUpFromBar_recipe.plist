@@ -1,29 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>formatVersion</key>
-  <integer>1</integer>
-  <key>kind</key>
-  <string>macro</string>
+	<key>name</key>
+	<string>leftHarpoonWithBarbUpFromBar</string>
+	<key>kind</key>
+	<string>recipe</string>
 
   <key>constants</key>
   <string>recipe_constants.plist</string>
-  <key>name</key>
-  <string>leftHarpoonWithBarbUpFromBar</string>
-  <key>template</key>
-  <string>horizontal_arrow_three_part_template.plist</string>
-  <key>parameters</key>
-  <dict>
-    <key>exportGlyph</key>
-    <string>leftHarpoonWithBarbUpFromBar</string>
-    <key>leftPart</key>
-    <string>harpoonrightup.lft</string>
-    <key>middlePart</key>
-    <string>Arrow.mid</string>
-    <key>rightPart</key>
-    <string>leftFrombarArrow.rgt</string>
-  </dict>
+	<key>description</key>
+	<string>Build leftHarpoonWithBarbUpFromBar from left, extender, and right arrow parts with a horizontal math assembly.</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<string>createGlyph</string>
+			<key>glyph</key>
+			<string>leftHarpoonWithBarbUpFromBar</string>
+			<key>export</key>
+			<true/>
+			<key>color</key>
+			<string>orange</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>addComponents</string>
+			<key>glyph</key>
+			<string>leftHarpoonWithBarbUpFromBar</string>
+			<key>components</key>
+			<array>
+				<string>harpoonrightup.lft</string>
+				<string>Arrow.mid</string>
+				<string>leftFrombarArrow.rgt</string>
+			</array>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>setMathPluginAssembly</string>
+			<key>glyph</key>
+			<string>leftHarpoonWithBarbUpFromBar</string>
+			<key>direction</key>
+			<string>h</string>
+			<key>parts</key>
+			<array>
+				<dict>
+					<key>glyph</key>
+					<string>harpoonrightup.lft</string>
+					<key>extender</key>
+					<false/>
+					<key>startConnector</key>
+					<integer>0</integer>
+					<key>endConnector</key>
+					<string>${ArrowStartandEndConnector}</string>
+				</dict>
+				<dict>
+					<key>glyph</key>
+					<string>Arrow.mid</string>
+					<key>extender</key>
+					<true/>
+					<key>startConnector</key>
+					<string>${ArrowMiddleConnector}</string>
+					<key>endConnector</key>
+					<string>${ArrowMiddleConnector}</string>
+				</dict>
+				<dict>
+					<key>glyph</key>
+					<string>leftFrombarArrow.rgt</string>
+					<key>extender</key>
+					<false/>
+					<key>startConnector</key>
+					<string>${ArrowStartandEndConnector}</string>
+					<key>endConnector</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>enableComponentAlignment</string>
+			<key>glyph</key>
+			<string>leftHarpoonWithBarbUpFromBar</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>updateMetrics</string>
+			<key>glyph</key>
+			<string>leftHarpoonWithBarbUpFromBar</string>
+		</dict>
+	</array>
 </dict>
 </plist>

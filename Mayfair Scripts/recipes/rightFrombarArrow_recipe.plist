@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Right Frombar Arrow</string>
+	<string>rightFrombarArrow</string>
 	<key>kind</key>
 	<string>recipe</string>
 
   <key>constants</key>
   <string>recipe_constants.plist</string>
 	<key>description</key>
-	<string>Build rightFrombarArrow from frombar, extender, and right arrow parts with a horizontal math assembly.</string>
+	<string>Build rightFrombarArrow from left, extender, and right arrow parts with a horizontal math assembly.</string>
 	<key>actions</key>
 	<array>
 		<dict>
@@ -52,7 +52,7 @@
 					<key>startConnector</key>
 					<integer>0</integer>
 					<key>endConnector</key>
-					<integer>30</integer>
+					<string>${ArrowStartandEndConnector}</string>
 				</dict>
 				<dict>
 					<key>glyph</key>
@@ -60,9 +60,9 @@
 					<key>extender</key>
 					<true/>
 					<key>startConnector</key>
-					<integer>30</integer>
+					<string>${ArrowMiddleConnector}</string>
 					<key>endConnector</key>
-					<integer>30</integer>
+					<string>${ArrowMiddleConnector}</string>
 				</dict>
 				<dict>
 					<key>glyph</key>
@@ -70,7 +70,7 @@
 					<key>extender</key>
 					<false/>
 					<key>startConnector</key>
-					<integer>30</integer>
+					<string>${ArrowStartandEndConnector}</string>
 					<key>endConnector</key>
 					<integer>0</integer>
 				</dict>
@@ -81,12 +81,6 @@
 			<string>enableComponentAlignment</string>
 			<key>glyph</key>
 			<string>rightFrombarArrow</string>
-			<key>components</key>
-			<array>
-				<string>rightFrombarArrow.lft</string>
-				<string>Arrow.mid</string>
-				<string>rightArrow.rgt</string>
-			</array>
 		</dict>
 		<dict>
 			<key>action</key>

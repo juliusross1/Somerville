@@ -52,7 +52,7 @@
 					<key>startConnector</key>
 					<integer>0</integer>
 					<key>endConnector</key>
-					<integer>30</integer>
+					<string>${ArrowStartandEndConnector}</string>
 				</dict>
 				<dict>
 					<key>glyph</key>
@@ -60,9 +60,9 @@
 					<key>extender</key>
 					<true/>
 					<key>startConnector</key>
-					<integer>30</integer>
+					<string>${ArrowMiddleConnector}</string>
 					<key>endConnector</key>
-					<integer>30</integer>
+					<string>${ArrowMiddleConnector}</string>
 				</dict>
 				<dict>
 					<key>glyph</key>
@@ -70,7 +70,7 @@
 					<key>extender</key>
 					<false/>
 					<key>startConnector</key>
-					<integer>30</integer>
+					<string>${ArrowStartandEndConnector}</string>
 					<key>endConnector</key>
 					<integer>0</integer>
 				</dict>

@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Right Barb Up Harpoon</string>
+	<string>rightBarbUpHarpoon</string>
 	<key>kind</key>
 	<string>recipe</string>
 
   <key>constants</key>
   <string>recipe_constants.plist</string>
 	<key>description</key>
-	<string>Build rightBarbUpHarpoon from left arrow, extender, and harpoon head parts with a horizontal math assembly.</string>
+	<string>Build rightBarbUpHarpoon from left, extender, and right arrow parts with a horizontal math assembly.</string>
 	<key>actions</key>
 	<array>
 		<dict>
@@ -52,7 +52,7 @@
 					<key>startConnector</key>
 					<integer>0</integer>
 					<key>endConnector</key>
-					<integer>30</integer>
+					<string>${ArrowStartandEndConnector}</string>
 				</dict>
 				<dict>
 					<key>glyph</key>
@@ -60,9 +60,9 @@
 					<key>extender</key>
 					<true/>
 					<key>startConnector</key>
-					<integer>30</integer>
+					<string>${ArrowMiddleConnector}</string>
 					<key>endConnector</key>
-					<integer>30</integer>
+					<string>${ArrowMiddleConnector}</string>
 				</dict>
 				<dict>
 					<key>glyph</key>
@@ -70,7 +70,7 @@
 					<key>extender</key>
 					<false/>
 					<key>startConnector</key>
-					<integer>30</integer>
+					<string>${ArrowStartandEndConnector}</string>
 					<key>endConnector</key>
 					<integer>0</integer>
 				</dict>

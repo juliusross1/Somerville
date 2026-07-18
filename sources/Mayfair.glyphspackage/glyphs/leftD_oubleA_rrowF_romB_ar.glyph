@@ -1,5 +1,4 @@
 {
-color = 1;
 glyphname = leftDoubleArrowFromBar;
 layers = (
 {
@@ -392,7 +391,7 @@ pos = (500,0);
 ref = DoubleArrow.mid;
 },
 {
-pos = (1040,0);
+pos = (1000,0);
 ref = leftFrombarDoubleArrow.rgt;
 }
 );
@@ -432,7 +431,7 @@ leftFrombarDoubleArrow.rgt,
 );
 };
 };
-width = 1540;
+width = 1500;
 }
 );
 unicode = 10502;
