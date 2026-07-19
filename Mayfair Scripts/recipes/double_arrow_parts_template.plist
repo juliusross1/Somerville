@@ -209,8 +209,8 @@
         <string>${leftArrowBase}</string>
         <key>components</key>
         <array>
-          <string>${leftArrowBase}${leftPartSuffix}</string>
           <string>${middleComponent}</string>
+          <string>${leftArrowBase}${leftPartSuffix}</string>
           <string>${leftArrowBase}${rightPartSuffix}</string>
         </array>
       </dict>

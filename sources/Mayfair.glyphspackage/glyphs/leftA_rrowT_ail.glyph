@@ -9,224 +9,6 @@ shapes = (
 ref = Arrow.mid;
 },
 {
-alignment = 1;
-ref = leftArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-Arrow.mid,
-1,
-500,
-500
-),
-(
-leftArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 820;
-},
-{
-layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
-shapes = (
-{
-ref = Arrow.mid;
-},
-{
-alignment = 1;
-ref = leftArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-Arrow.mid,
-1,
-500,
-500
-),
-(
-leftArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 853;
-},
-{
-layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
-shapes = (
-{
-ref = Arrow.mid;
-},
-{
-alignment = 1;
-ref = leftArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-Arrow.mid,
-1,
-500,
-500
-),
-(
-leftArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 820;
-},
-{
-layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-shapes = (
-{
-ref = Arrow.mid;
-},
-{
-alignment = 1;
-ref = leftArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-Arrow.mid,
-1,
-500,
-500
-),
-(
-leftArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 860;
-},
-{
-layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
-shapes = (
-{
-ref = Arrow.mid;
-},
-{
-alignment = 1;
-ref = leftArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-Arrow.mid,
-1,
-500,
-500
-),
-(
-leftArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 780;
-},
-{
-layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-shapes = (
-{
-ref = Arrow.mid;
-},
-{
-alignment = 1;
-ref = leftArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-Arrow.mid,
-1,
-500,
-500
-),
-(
-leftArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 810;
-},
-{
-layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
-shapes = (
-{
-ref = Arrow.mid;
-},
-{
-alignment = 1;
-ref = leftArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-Arrow.mid,
-1,
-500,
-500
-),
-(
-leftArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 798;
-},
-{
-layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
-shapes = (
-{
-ref = Arrow.mid;
-},
-{
-alignment = 1;
 pos = (500,0);
 ref = leftArrow.rgt;
 }
@@ -249,7 +31,224 @@ leftArrow.rgt,
 );
 };
 };
-width = 1000;
+width = 500;
+},
+{
+layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+shapes = (
+{
+ref = Arrow.mid;
+},
+{
+pos = (500,0);
+ref = leftArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+Arrow.mid,
+1,
+500,
+500
+),
+(
+leftArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 500;
+},
+{
+layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
+shapes = (
+{
+ref = Arrow.mid;
+},
+{
+pos = (500,0);
+ref = leftArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+Arrow.mid,
+1,
+500,
+500
+),
+(
+leftArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 500;
+},
+{
+layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+shapes = (
+{
+ref = Arrow.mid;
+},
+{
+pos = (500,1);
+ref = leftArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+Arrow.mid,
+1,
+500,
+500
+),
+(
+leftArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 500;
+},
+{
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+shapes = (
+{
+ref = Arrow.mid;
+},
+{
+pos = (500,0);
+ref = leftArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+Arrow.mid,
+1,
+500,
+500
+),
+(
+leftArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 500;
+},
+{
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+ref = Arrow.mid;
+},
+{
+pos = (500,0);
+ref = leftArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+Arrow.mid,
+1,
+500,
+500
+),
+(
+leftArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 500;
+},
+{
+layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+shapes = (
+{
+ref = Arrow.mid;
+},
+{
+pos = (500,0);
+ref = leftArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+Arrow.mid,
+1,
+500,
+500
+),
+(
+leftArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 500;
+},
+{
+layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+shapes = (
+{
+ref = Arrow.mid;
+},
+{
+pos = (1000,0);
+ref = leftArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+Arrow.mid,
+1,
+1500,
+1500
+),
+(
+leftArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1500;
 }
 );
 unicode = 10521;

@@ -57,8 +57,8 @@
         <string>${exportGlyph}</string>
         <key>components</key>
         <array>
-          <string>${leftPart}</string>
           <string>${strokePart}</string>
+          <string>${leftPart}</string>
           <string>${rightPart}</string>
         </array>
       </dict>

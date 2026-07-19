@@ -9,7 +9,6 @@ shapes = (
 ref = Arrow.mid;
 },
 {
-alignment = 1;
 ref = leftTailArrow.rgt;
 }
 );
@@ -40,7 +39,6 @@ shapes = (
 ref = Arrow.mid;
 },
 {
-alignment = 1;
 ref = leftTailArrow.rgt;
 }
 );
@@ -71,7 +69,6 @@ shapes = (
 ref = Arrow.mid;
 },
 {
-alignment = 1;
 ref = leftTailArrow.rgt;
 }
 );
@@ -102,7 +99,6 @@ shapes = (
 ref = Arrow.mid;
 },
 {
-alignment = 1;
 ref = leftTailArrow.rgt;
 }
 );
@@ -133,7 +129,6 @@ shapes = (
 ref = Arrow.mid;
 },
 {
-alignment = 1;
 ref = leftTailArrow.rgt;
 }
 );
@@ -164,7 +159,6 @@ shapes = (
 ref = Arrow.mid;
 },
 {
-alignment = 1;
 ref = leftTailArrow.rgt;
 }
 );
@@ -195,7 +189,6 @@ shapes = (
 ref = Arrow.mid;
 },
 {
-alignment = 1;
 ref = leftTailArrow.rgt;
 }
 );
@@ -226,8 +219,7 @@ shapes = (
 ref = Arrow.mid;
 },
 {
-alignment = 1;
-pos = (500,0);
+pos = (1000,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -237,8 +229,8 @@ hAssembly = (
 (
 Arrow.mid,
 1,
-500,
-500
+1500,
+1500
 ),
 (
 leftTailArrow.rgt,
@@ -249,7 +241,7 @@ leftTailArrow.rgt,
 );
 };
 };
-width = 1000;
+width = 1500;
 }
 );
 unicode = 10523;

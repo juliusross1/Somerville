@@ -1,8 +1,15 @@
 {
+category = Mark;
 color = 3;
 glyphname = rightFrombarDoubleArrow.lft;
 layers = (
 {
+anchors = (
+{
+name = _left;
+pos = (114,264);
+}
+);
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
@@ -31,6 +38,12 @@ scale = (1,-1);
 width = 114;
 },
 {
+anchors = (
+{
+name = _left;
+pos = (157,265);
+}
+);
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
@@ -59,6 +72,12 @@ scale = (1,-1);
 width = 157;
 },
 {
+anchors = (
+{
+name = _left;
+pos = (114,265);
+}
+);
 annotations = (
 {
 pos = (63.773,564.016);
@@ -94,6 +113,12 @@ scale = (1,-1);
 width = 114;
 },
 {
+anchors = (
+{
+name = _left;
+pos = (167,265);
+}
+);
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
@@ -122,6 +147,12 @@ scale = (1,-1);
 width = 167;
 },
 {
+anchors = (
+{
+name = _left;
+pos = (174,265);
+}
+);
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
@@ -150,6 +181,12 @@ scale = (1,-1);
 width = 174;
 },
 {
+anchors = (
+{
+name = _left;
+pos = (217,265);
+}
+);
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
@@ -178,6 +215,12 @@ scale = (1,-1);
 width = 217;
 },
 {
+anchors = (
+{
+name = _left;
+pos = (501,264);
+}
+);
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
@@ -211,6 +254,12 @@ scale = (1,-1);
 width = 501;
 },
 {
+anchors = (
+{
+name = _left;
+pos = (500,265);
+}
+);
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
@@ -245,4 +294,5 @@ width = 500;
 );
 metricLeft = "=rightArrow.lft";
 metricRight = "=0";
+subCategory = Nonspacing;
 }
