@@ -1697,6 +1697,41 @@ def action_create_glyph(font, verbose=False, glyph=None, export=True, overwrite=
     return new_glyph
 
 
+def action_set_glyph_metadata(
+    font,
+    verbose=False,
+    glyph=None,
+    category=None,
+    subCategory=None,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+
+    changed = []
+    for attribute_name, value in (
+        ("category", category),
+        ("subCategory", subCategory),
+    ):
+        if value is None:
+            continue
+        try:
+            setattr(target_glyph, attribute_name, str(value))
+            changed.append(attribute_name)
+        except Exception as error:
+            raise RuntimeError(
+                "%s: could not set %s to %s: %s"
+                % (glyph, attribute_name, value, error)
+            )
+
+    log("%s: set glyph metadata %s." % (
+        glyph,
+        ", ".join(changed) if changed else "(none)",
+    ), verbose)
+    return len(changed)
+
+
 def action_add_component(font, verbose=False, glyph=None, component=None, **_kwargs):
     target_glyph = glyph_for_name(font, glyph)
     if target_glyph is None:
@@ -2971,6 +3006,7 @@ def action_create_smart_component_variants(font, verbose=False, glyph=None, valu
 
 ACTION_REGISTRY = {
     "createGlyph": action_create_glyph,
+    "setGlyphMetadata": action_set_glyph_metadata,
     "addComponent": action_add_component,
     "addComponents": action_add_components,
     "setComponentAnchor": action_set_component_anchor,
