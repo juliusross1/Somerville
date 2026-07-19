@@ -1,4 +1,5 @@
 {
+color = 1;
 glyphname = leftVerticalStrokeArrow;
 layers = (
 {
@@ -9,12 +10,13 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (269,0);
-ref = ArrowVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (769,0);
 ref = leftArrow.rgt;
 }
 );
@@ -25,7 +27,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -48,7 +50,7 @@ Arrow.mid,
 (
 leftArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
@@ -64,12 +66,13 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (320,0);
-ref = ArrowVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (820,0);
 ref = leftArrow.rgt;
 }
 );
@@ -80,7 +83,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -103,7 +106,7 @@ Arrow.mid,
 (
 leftArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
@@ -119,12 +122,13 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (269,0);
-ref = ArrowVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (769,0);
 ref = leftArrow.rgt;
 }
 );
@@ -135,7 +139,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -158,7 +162,7 @@ Arrow.mid,
 (
 leftArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
@@ -174,12 +178,13 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (334,0);
-ref = ArrowVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (834,0);
 ref = leftArrow.rgt;
 }
 );
@@ -190,7 +195,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -213,7 +218,7 @@ Arrow.mid,
 (
 leftArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
@@ -229,12 +234,13 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (500,0);
-ref = ArrowVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1000,0);
 ref = leftArrow.rgt;
 }
 );
@@ -245,7 +251,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -268,7 +274,7 @@ Arrow.mid,
 (
 leftArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
@@ -284,12 +290,13 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (500,0);
-ref = ArrowVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1000,0);
 ref = leftArrow.rgt;
 }
 );
@@ -300,7 +307,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -323,7 +330,7 @@ Arrow.mid,
 (
 leftArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
@@ -339,12 +346,13 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (500,0);
-ref = ArrowVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1000,0);
 ref = leftArrow.rgt;
 }
 );
@@ -355,7 +363,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -378,7 +386,7 @@ Arrow.mid,
 (
 leftArrow.rgt,
 0,
-500,
+30,
 0
 )
 );
@@ -395,7 +403,11 @@ ref = leftArrow.lft;
 },
 {
 pos = (500,0);
-ref = ArrowVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+pos = (703,0);
+ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
@@ -410,7 +422,7 @@ hAssembly = (
 leftArrow.lft,
 0,
 0,
-500
+30
 ),
 (
 Arrow.mid,
@@ -433,7 +445,7 @@ Arrow.mid,
 (
 leftArrow.rgt,
 0,
-500,
+30,
 0
 )
 );

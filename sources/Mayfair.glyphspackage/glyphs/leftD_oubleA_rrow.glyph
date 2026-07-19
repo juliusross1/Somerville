@@ -1,4 +1,5 @@
 {
+color = 1;
 glyphname = leftDoubleArrow;
 layers = (
 {
@@ -9,12 +10,10 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (269,0);
 ref = DoubleArrow.mid;
 },
 {
 alignment = 1;
-pos = (769,0);
 ref = leftDoubleArrow.rgt;
 }
 );
@@ -30,11 +29,11 @@ leftDoubleArrow.lft,
 (
 DoubleArrow.mid,
 1,
-540,
-540
+500,
+500
 ),
 (
-"",
+leftDoubleArrow.rgt,
 0,
 30,
 0
@@ -52,12 +51,10 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (320,0);
 ref = DoubleArrow.mid;
 },
 {
 alignment = 1;
-pos = (820,0);
 ref = leftDoubleArrow.rgt;
 }
 );
@@ -73,11 +70,11 @@ leftDoubleArrow.lft,
 (
 DoubleArrow.mid,
 1,
-540,
-540
+500,
+500
 ),
 (
-"",
+leftDoubleArrow.rgt,
 0,
 30,
 0
@@ -95,12 +92,10 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (269,0);
 ref = DoubleArrow.mid;
 },
 {
 alignment = 1;
-pos = (769,0);
 ref = leftDoubleArrow.rgt;
 }
 );
@@ -116,11 +111,11 @@ leftDoubleArrow.lft,
 (
 DoubleArrow.mid,
 1,
-540,
-540
+500,
+500
 ),
 (
-"",
+leftDoubleArrow.rgt,
 0,
 30,
 0
@@ -138,12 +133,10 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (334,0);
 ref = DoubleArrow.mid;
 },
 {
 alignment = 1;
-pos = (834,0);
 ref = leftDoubleArrow.rgt;
 }
 );
@@ -159,11 +152,11 @@ leftDoubleArrow.lft,
 (
 DoubleArrow.mid,
 1,
-540,
-540
+500,
+500
 ),
 (
-"",
+leftDoubleArrow.rgt,
 0,
 30,
 0
@@ -181,12 +174,10 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (500,0);
 ref = DoubleArrow.mid;
 },
 {
 alignment = 1;
-pos = (1000,0);
 ref = leftDoubleArrow.rgt;
 }
 );
@@ -202,11 +193,11 @@ leftDoubleArrow.lft,
 (
 DoubleArrow.mid,
 1,
-540,
-540
+500,
+500
 ),
 (
-"",
+leftDoubleArrow.rgt,
 0,
 30,
 0
@@ -224,12 +215,10 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (500,0);
 ref = DoubleArrow.mid;
 },
 {
 alignment = 1;
-pos = (1000,0);
 ref = leftDoubleArrow.rgt;
 }
 );
@@ -245,11 +234,11 @@ leftDoubleArrow.lft,
 (
 DoubleArrow.mid,
 1,
-540,
-540
+500,
+500
 ),
 (
-"",
+leftDoubleArrow.rgt,
 0,
 30,
 0
@@ -267,12 +256,10 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (500,0);
 ref = DoubleArrow.mid;
 },
 {
 alignment = 1;
-pos = (1000,0);
 ref = leftDoubleArrow.rgt;
 }
 );
@@ -288,11 +275,11 @@ leftDoubleArrow.lft,
 (
 DoubleArrow.mid,
 1,
-540,
-540
+500,
+500
 ),
 (
-"",
+leftDoubleArrow.rgt,
 0,
 30,
 0
@@ -331,11 +318,11 @@ leftDoubleArrow.lft,
 (
 DoubleArrow.mid,
 1,
-540,
-540
+500,
+500
 ),
 (
-"",
+leftDoubleArrow.rgt,
 0,
 30,
 0

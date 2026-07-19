@@ -1,4 +1,5 @@
 {
+color = 1;
 glyphname = leftTwoHeadedArrowWithTailWithDoubleVerticalStroke;
 layers = (
 {
@@ -8,12 +9,13 @@ shapes = (
 ref = twoheadleftarrow.lft;
 },
 {
-pos = (480,0);
-ref = ArrowDoubleVerticalStroke.mid_shiftright1;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (980,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -33,10 +35,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowDoubleVerticalStroke.mid_shiftright1,
+ArrowDoubleVerticalStroke.mid,
 0,
-9000,
-9000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -62,12 +64,13 @@ shapes = (
 ref = twoheadleftarrow.lft;
 },
 {
-pos = (531,0);
-ref = ArrowDoubleVerticalStroke.mid_shiftright1;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1031,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -87,10 +90,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowDoubleVerticalStroke.mid_shiftright1,
+ArrowDoubleVerticalStroke.mid,
 0,
-9000,
-9000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -116,12 +119,13 @@ shapes = (
 ref = twoheadleftarrow.lft;
 },
 {
-pos = (480,0);
-ref = ArrowDoubleVerticalStroke.mid_shiftright1;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (980,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -141,10 +145,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowDoubleVerticalStroke.mid_shiftright1,
+ArrowDoubleVerticalStroke.mid,
 0,
-9000,
-9000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -170,12 +174,13 @@ shapes = (
 ref = twoheadleftarrow.lft;
 },
 {
-pos = (545,0);
-ref = ArrowDoubleVerticalStroke.mid_shiftright1;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1045,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -195,10 +200,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowDoubleVerticalStroke.mid_shiftright1,
+ArrowDoubleVerticalStroke.mid,
 0,
-9000,
-9000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -224,12 +229,13 @@ shapes = (
 ref = twoheadleftarrow.lft;
 },
 {
-pos = (500,0);
-ref = ArrowDoubleVerticalStroke.mid_shiftright1;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1000,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -249,10 +255,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowDoubleVerticalStroke.mid_shiftright1,
+ArrowDoubleVerticalStroke.mid,
 0,
-9000,
-9000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -278,12 +284,13 @@ shapes = (
 ref = twoheadleftarrow.lft;
 },
 {
-pos = (500,0);
-ref = ArrowDoubleVerticalStroke.mid_shiftright1;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1000,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -303,10 +310,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowDoubleVerticalStroke.mid_shiftright1,
+ArrowDoubleVerticalStroke.mid,
 0,
-9000,
-9000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -332,12 +339,13 @@ shapes = (
 ref = twoheadleftarrow.lft;
 },
 {
-pos = (500,0);
-ref = ArrowDoubleVerticalStroke.mid_shiftright1;
+ref = Arrow.mid;
+},
+{
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1000,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -357,10 +365,10 @@ Arrow.mid,
 500
 ),
 (
-ArrowDoubleVerticalStroke.mid_shiftright1,
+ArrowDoubleVerticalStroke.mid,
 0,
-9000,
-9000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -387,7 +395,11 @@ ref = twoheadleftarrow.lft;
 },
 {
 pos = (500,0);
-ref = ArrowDoubleVerticalStroke.mid_shiftright1;
+ref = Arrow.mid;
+},
+{
+pos = (575,0);
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
@@ -411,7 +423,7 @@ Arrow.mid,
 500
 ),
 (
-ArrowDoubleVerticalStroke.mid_shiftright1,
+ArrowDoubleVerticalStroke.mid,
 0,
 500,
 500

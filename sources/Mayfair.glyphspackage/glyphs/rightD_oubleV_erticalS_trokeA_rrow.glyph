@@ -1,4 +1,5 @@
 {
+color = 1;
 glyphname = rightDoubleVerticalStrokeArrow;
 layers = (
 {
@@ -10,7 +11,11 @@ ref = rightArrow.lft;
 },
 {
 pos = (320,0);
-ref = ArrowDoubleVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+pos = (249,0);
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
@@ -36,8 +41,8 @@ Arrow.mid,
 (
 ArrowDoubleVerticalStroke.mid,
 0,
-8000,
-8000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -65,7 +70,11 @@ ref = rightArrow.lft;
 },
 {
 pos = (353,0);
-ref = ArrowDoubleVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+pos = (212,0);
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
@@ -91,8 +100,8 @@ Arrow.mid,
 (
 ArrowDoubleVerticalStroke.mid,
 0,
-8000,
-8000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -120,7 +129,11 @@ ref = rightArrow.lft;
 },
 {
 pos = (320,0);
-ref = ArrowDoubleVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+pos = (249,0);
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
@@ -146,8 +159,8 @@ Arrow.mid,
 (
 ArrowDoubleVerticalStroke.mid,
 0,
-8000,
-8000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -175,7 +188,11 @@ ref = rightArrow.lft;
 },
 {
 pos = (360,0);
-ref = ArrowDoubleVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+pos = (219,1);
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
@@ -201,8 +218,8 @@ Arrow.mid,
 (
 ArrowDoubleVerticalStroke.mid,
 0,
-8000,
-8000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -230,7 +247,11 @@ ref = rightArrow.lft;
 },
 {
 pos = (280,0);
-ref = ArrowDoubleVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+pos = (390,0);
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
@@ -256,8 +277,8 @@ Arrow.mid,
 (
 ArrowDoubleVerticalStroke.mid,
 0,
-8000,
-8000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -285,7 +306,11 @@ ref = rightArrow.lft;
 },
 {
 pos = (310,0);
-ref = ArrowDoubleVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+pos = (394,0);
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
@@ -311,8 +336,8 @@ Arrow.mid,
 (
 ArrowDoubleVerticalStroke.mid,
 0,
-8000,
-8000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -340,7 +365,11 @@ ref = rightArrow.lft;
 },
 {
 pos = (298,0);
-ref = ArrowDoubleVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+pos = (415,0);
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
@@ -366,8 +395,8 @@ Arrow.mid,
 (
 ArrowDoubleVerticalStroke.mid,
 0,
-8000,
-8000
+500,
+500
 ),
 (
 Arrow.mid,
@@ -395,7 +424,12 @@ ref = rightArrow.lft;
 },
 {
 pos = (500,0);
-ref = ArrowDoubleVerticalStroke.mid;
+ref = Arrow.mid;
+},
+{
+anchor = stroke_1;
+pos = (575,0);
+ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
