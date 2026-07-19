@@ -9,7 +9,7 @@
   <key>constants</key>
   <string>recipe_constants.plist</string>
   <key>name</key>
-  <string>upDownArrow</string>
+  <string>upBarbLeftharpoon</string>
   <key>actions</key>
   <array>
     <dict>
@@ -20,7 +20,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upDownArrow</string>
+        <string>upBarbLeftharpoon</string>
         <key>export</key>
         <true/>
         <key>color</key>
@@ -35,12 +35,12 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upDownArrow</string>
+        <string>upBarbLeftharpoon</string>
         <key>components</key>
         <array>
           <string>VerticalArrow.mid</string>
-          <string>upArrow.top</string>
-          <string>downArrow.bot</string>
+          <string>upBarbLeftharpoon.top</string>
+          <string>upArrow.bot</string>
         </array>
       </dict>
     </dict>

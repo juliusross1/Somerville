@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>name</key>
-  <string>upArrow.bot</string>
+  <string>downArrow.top</string>
   <key>kind</key>
   <string>recipe</string>
   <key>constants</key>
@@ -14,7 +14,7 @@
       <key>action</key>
       <string>createGlyph</string>
       <key>glyph</key>
-      <string>upArrow.bot</string>
+      <string>downArrow.top</string>
       <key>export</key>
       <true/>
       <key>color</key>
@@ -24,7 +24,7 @@
       <key>action</key>
       <string>setGlyphMetadata</string>
       <key>glyph</key>
-      <string>upArrow.bot</string>
+      <string>downArrow.top</string>
       <key>category</key>
       <string>Mark</string>
       <key>subCategory</key>
@@ -34,18 +34,18 @@
       <key>action</key>
       <string>addComponent</string>
       <key>glyph</key>
-      <string>upArrow.bot</string>
+      <string>downArrow.top</string>
       <key>component</key>
-      <string>rightArrow.lft</string>
+      <string>leftArrow.rgt</string>
     </dict>
     <dict>
       <key>action</key>
       <string>rotateComponents</string>
       <key>glyph</key>
-      <string>upArrow.bot</string>
+      <string>downArrow.top</string>
       <key>components</key>
       <array>
-        <string>rightArrow.lft</string>
+        <string>leftArrow.rgt</string>
       </array>
       <key>degrees</key>
       <integer>90</integer>

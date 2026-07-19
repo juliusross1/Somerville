@@ -9,7 +9,7 @@
   <key>constants</key>
   <string>recipe_constants.plist</string>
   <key>name</key>
-  <string>upDownArrow</string>
+  <string>downFrombarArrow</string>
   <key>actions</key>
   <array>
     <dict>
@@ -20,7 +20,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upDownArrow</string>
+        <string>downFrombarArrow</string>
         <key>export</key>
         <true/>
         <key>color</key>
@@ -35,11 +35,11 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>upDownArrow</string>
+        <string>downFrombarArrow</string>
         <key>components</key>
         <array>
           <string>VerticalArrow.mid</string>
-          <string>upArrow.top</string>
+          <string>downFrombarArrow.top</string>
           <string>downArrow.bot</string>
         </array>
       </dict>
