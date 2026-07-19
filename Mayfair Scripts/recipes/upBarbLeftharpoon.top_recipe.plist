@@ -50,6 +50,24 @@
       <key>degrees</key>
       <integer>90</integer>
     </dict>
+    <dict>
+      <key>action</key>
+      <string>alignComponentBottomToBaselineAndAnchorX</string>
+      <key>glyph</key>
+      <string>upBarbLeftharpoon.top</string>
+      <key>components</key>
+      <array>
+        <string>harpoonrightup.rgt</string>
+      </array>
+      <key>componentAnchor</key>
+      <string>_right</string>
+      <key>referenceGlyph</key>
+      <string>_smart.VerticalArrow.mid</string>
+      <key>referenceAnchor</key>
+      <string>right</string>
+      <key>baseline</key>
+      <integer>0</integer>
+    </dict>
   </array>
 </dict>
 </plist>

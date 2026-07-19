@@ -2210,6 +2210,111 @@ def action_align_component_bottom_to_baseline(*args, **kwargs):
     return action_align_component_bottom_to_descender(*args, **kwargs)
 
 
+def action_align_component_bottom_to_baseline_and_anchor_x(
+    font,
+    verbose=False,
+    glyph=None,
+    components=None,
+    componentAnchor=None,
+    referenceGlyph=None,
+    referenceAnchor=None,
+    baseline=0,
+    disableAlignment=True,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    reference_glyph = glyph_for_name(font, referenceGlyph)
+    if reference_glyph is None:
+        raise RuntimeError("Missing reference glyph: %s" % referenceGlyph)
+    if isinstance(components, str):
+        components = [components]
+    wanted_components = set(components or [])
+    component_anchor_names = (
+        [componentAnchor] if isinstance(componentAnchor, str) else list(componentAnchor or [])
+    )
+    reference_anchor_names = (
+        [referenceAnchor] if isinstance(referenceAnchor, str) else list(referenceAnchor or [])
+    )
+    if not component_anchor_names:
+        raise RuntimeError("%s: componentAnchor is required." % glyph)
+    if not reference_anchor_names:
+        raise RuntimeError("%s: referenceAnchor is required." % glyph)
+
+    changed = 0
+    for layer in target_glyph.layers:
+        layer_label = layer_name(layer) or layer_id(layer) or "<unnamed layer>"
+        reference_layer = matching_layer(reference_glyph, layer)
+        if reference_layer is None:
+            raise RuntimeError(
+                "%s/%s: no matching layer in %s."
+                % (glyph, layer_label, referenceGlyph)
+            )
+        reference_xy = effective_layer_anchor_xy(
+            font, reference_layer, reference_anchor_names
+        )
+        if reference_xy is None:
+            raise RuntimeError(
+                "%s/%s: %s is missing anchor %s."
+                % (glyph, layer_label, referenceGlyph, ", ".join(reference_anchor_names))
+            )
+
+        matched = 0
+        for component in layer_components(layer):
+            if wanted_components and component_name(component) not in wanted_components:
+                continue
+            matched += 1
+            source_layer = component_source_layer(font, component, layer)
+            if source_layer is None:
+                raise RuntimeError(
+                    "%s/%s: component %s has no matching source layer."
+                    % (glyph, layer_label, component_name(component) or "<unnamed>")
+                )
+            local_anchor_xy = effective_layer_anchor_xy(
+                font, source_layer, component_anchor_names
+            )
+            if local_anchor_xy is None:
+                raise RuntimeError(
+                    "%s/%s: component %s is missing effective anchor %s."
+                    % (
+                        glyph,
+                        layer_label,
+                        component_name(component) or "<unnamed>",
+                        ", ".join(component_anchor_names),
+                    )
+                )
+            component_anchor_xy = transformed_point(component, local_anchor_xy)
+            min_y, _max_y, _center_y = bounds_y_values(component)
+            if min_y is None:
+                raise RuntimeError(
+                    "%s/%s: component %s has no bounds."
+                    % (glyph, layer_label, component_name(component) or "<unnamed>")
+                )
+            dx = reference_xy[0] - component_anchor_xy[0]
+            dy = float(baseline) - min_y
+            if boolean_value(disableAlignment):
+                disable_component_alignment(component)
+            if not move_component_by(component, dx=dx, dy=dy):
+                raise RuntimeError(
+                    "%s/%s: could not translate component %s."
+                    % (glyph, layer_label, component_name(component) or "<unnamed>")
+                )
+            changed += 1
+        if matched == 0:
+            raise RuntimeError(
+                "%s/%s: no component matched %s."
+                % (glyph, layer_label, ", ".join(components or []))
+            )
+
+    log(
+        "%s: aligned %i component(s) to baseline %s and %s/%s anchor x."
+        % (glyph, changed, baseline, referenceGlyph, ", ".join(reference_anchor_names)),
+        verbose,
+    )
+    return changed
+
+
 def action_align_component_pairs_by_anchors(
     font,
     verbose=False,
@@ -3017,6 +3122,7 @@ ACTION_REGISTRY = {
     "alignComponentMidpointToMathAxis": action_align_component_midpoint_to_math_axis,
     "alignComponentAnchorsToMathAxis": action_align_component_anchors_to_math_axis,
     "alignComponentBottomToBaseline": action_align_component_bottom_to_baseline,
+    "alignComponentBottomToBaselineAndAnchorX": action_align_component_bottom_to_baseline_and_anchor_x,
     "alignComponentBottomToDescender": action_align_component_bottom_to_descender,
     "alignComponentPairsByAnchors": action_align_component_pairs_by_anchors,
     "flipComponents": action_flip_components,
