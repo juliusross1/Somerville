@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>upBarbLeftharpoon.top</string>
+  <key>kind</key>
+  <string>recipe</string>
+  <key>constants</key>
+  <string>recipe_constants.plist</string>
+  <key>actions</key>
+  <array>
+    <dict>
+      <key>action</key>
+      <string>createGlyph</string>
+      <key>glyph</key>
+      <string>upBarbLeftharpoon.top</string>
+      <key>export</key>
+      <true/>
+      <key>color</key>
+      <string>${GeneratedColor}</string>
+    </dict>
+    <dict>
+      <key>action</key>
+      <string>setGlyphMetadata</string>
+      <key>glyph</key>
+      <string>upBarbLeftharpoon.top</string>
+      <key>category</key>
+      <string>Mark</string>
+      <key>subCategory</key>
+      <string>Nonspacing</string>
+    </dict>
+    <dict>
+      <key>action</key>
+      <string>addComponent</string>
+      <key>glyph</key>
+      <string>upBarbLeftharpoon.top</string>
+      <key>component</key>
+      <string>harpoonrightup.rgt</string>
+    </dict>
+    <dict>
+      <key>action</key>
+      <string>rotateComponents</string>
+      <key>glyph</key>
+      <string>upBarbLeftharpoon.top</string>
+      <key>components</key>
+      <array>
+        <string>harpoonrightup.rgt</string>
+      </array>
+      <key>degrees</key>
+      <integer>90</integer>
+    </dict>
+  </array>
+</dict>
+</plist>
