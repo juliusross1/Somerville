@@ -23,7 +23,7 @@
         <key>glyph</key>
         <string>Arrow.mid</string>
         <key>export</key>
-        <true/>
+        <false/>
       </dict>
     </dict>
     <dict>
@@ -59,6 +59,36 @@
             <string>_smart.Arrow.mid</string>
           </array>
         </dict>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>disableComponentAlignment</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>Arrow.mid</string>
+        <key>components</key>
+        <array>
+          <string>_smart.Arrow.mid</string>
+        </array>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setSideBearings</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>Arrow.mid</string>
+        <key>left</key>
+        <string>${ArrowEndLength}</string>
+        <key>right</key>
+        <string>${ArrowEndLength}</string>
       </dict>
     </dict>
   </array>
