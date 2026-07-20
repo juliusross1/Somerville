@@ -20,11 +20,11 @@ pos = (13,0);
 ref = harpoonHead;
 },
 {
-pos = (312,0);
+pos = (254,0);
 ref = _ArrowTab;
 }
 );
-width = 313;
+width = 312;
 },
 {
 anchors = (
@@ -43,11 +43,11 @@ pos = (23,0);
 ref = harpoonHead;
 },
 {
-pos = (373,0);
+pos = (264,0);
 ref = _ArrowTab;
 }
 );
-width = 374;
+width = 373;
 },
 {
 anchors = (
@@ -66,11 +66,11 @@ pos = (13,0);
 ref = harpoonHead;
 },
 {
-pos = (312,0);
+pos = (254,0);
 ref = _ArrowTab;
 }
 );
-width = 313;
+width = 312;
 },
 {
 anchors = (
@@ -89,11 +89,11 @@ pos = (13,0);
 ref = harpoonHead;
 },
 {
-pos = (377,0);
+pos = (254,1);
 ref = _ArrowTab;
 }
 );
-width = 378;
+width = 377;
 },
 {
 anchors = (
@@ -115,11 +115,11 @@ pos = (116,0);
 ref = harpoonHead;
 },
 {
-pos = (453,0);
+pos = (420,0);
 ref = _ArrowTab;
 }
 );
-width = 533;
+width = 453;
 },
 {
 anchors = (
@@ -141,11 +141,11 @@ pos = (113,0);
 ref = harpoonHead;
 },
 {
-pos = (482,0);
+pos = (420,0);
 ref = _ArrowTab;
 }
 );
-width = 562;
+width = 482;
 },
 {
 anchors = (
@@ -167,11 +167,11 @@ pos = (50,0);
 ref = harpoonHead;
 },
 {
-pos = (417,0);
+pos = (384,0);
 ref = _ArrowTab;
 }
 );
-width = 533;
+width = 417;
 },
 {
 anchors = (
@@ -184,23 +184,23 @@ layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 piece = {
-width = 126.57208;
+width = 66.21133;
 };
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-55,0);
+pos = (-116,0);
 ref = harpoonHead;
 },
 {
-pos = (445,0);
+alignment = -1;
+pos = (321,0);
 ref = _ArrowTab;
 }
 );
-width = 562;
+width = 500;
 }
 );
 metricLeft = "=rightArrow.rgt";
-metricRight = "=rightArrow.rgt";
 subCategory = Spacing;
 }

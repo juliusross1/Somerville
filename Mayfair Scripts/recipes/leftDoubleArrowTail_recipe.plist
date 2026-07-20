@@ -24,6 +24,7 @@
 			<key>glyph</key><string>leftDoubleArrowTail</string>
 			<key>components</key>
 			<array>
+				<string>Arrowend.lft</string>
 				<string>Arrow.mid</string>
 				<string>leftTailArrow.rgt</string>
 			</array>
@@ -35,10 +36,16 @@
 			<key>parts</key>
 			<array>
 				<dict>
+					<key>glyph</key><string>Arrowend.lft</string>
+					<key>extender</key><false/>
+					<key>startConnector</key><integer>30</integer>
+					<key>endConnector</key><integer>30</integer>
+				</dict>
+				<dict>
 					<key>glyph</key><string>Arrow.ext</string>
 					<key>extender</key><true/>
-					<key>startConnector</key><string>${ArrowMiddleConnector}</string>
-					<key>endConnector</key><string>${ArrowMiddleConnector}</string>
+					<key>startConnector</key><integer>450</integer>
+					<key>endConnector</key><integer>450</integer>
 				</dict>
 				<dict>
 					<key>glyph</key><string>leftTailArrow.rgt</string>

@@ -10,51 +10,83 @@
   <key>constants</key>
   <string>recipe_constants.plist</string>
 	<key>description</key>
-	<string>Build rightDoubleArrowTail from existing tail and extender parts with a horizontal math assembly.</string>
+	<string>Build rightArrowDoubleTail from an arrow end and extender with a horizontal math assembly.</string>
 	<key>actions</key>
 	<array>
 		<dict>
-			<key>action</key><string>createGlyph</string>
-			<key>glyph</key><string>rightDoubleArrowTail</string>
-			<key>export</key><true/>
-			<key>color</key><string>${GeneratedColor}</string>
+			<key>action</key>
+			<string>createGlyph</string>
+			<key>glyph</key>
+			<string>rightDoubleArrowTail</string>
+			<key>export</key>
+			<true/>
+			<key>color</key>
+			<string>${GeneratedColor}</string>
 		</dict>
 		<dict>
-			<key>action</key><string>addComponents</string>
-			<key>glyph</key><string>rightDoubleArrowTail</string>
+			<key>action</key>
+			<string>addComponents</string>
+			<key>glyph</key>
+			<string>rightDoubleArrowTail</string>
 			<key>components</key>
 			<array>
-				<string>Arrow.mid</string>
-				<string>rightTailArrow.lft</string>
+				<string>Arrow.mid</string> 
+			<string>rightTailArrow.lft</string>
+	<string>Arrowend.rgt</string>
 			</array>
 		</dict>
 		<dict>
-			<key>action</key><string>setMathPluginAssembly</string>
-			<key>glyph</key><string>rightDoubleArrowTail</string>
-			<key>direction</key><string>h</string>
+			<key>action</key>
+			<string>setMathPluginAssembly</string>
+			<key>glyph</key>
+			<string>rightDoubleArrowTail</string>
+			<key>direction</key>
+			<string>h</string>
 			<key>parts</key>
 			<array>
 				<dict>
-					<key>glyph</key><string>rightTailArrow.lft</string>
-					<key>extender</key><false/>
-					<key>startConnector</key><integer>0</integer>
-					<key>endConnector</key><string>${ArrowStartandEndConnector}</string>
+					<key>glyph</key>
+					<string>rightTailArrow.lft</string>
+					<key>extender</key>
+					<false/>
+					<key>startConnector</key>
+					<integer>0</integer>
+					<key>endConnector</key>
+					<string>${ArrowStartandEndConnector}</string>
 				</dict>
 				<dict>
-					<key>glyph</key><string>Arrow.ext</string>
-					<key>extender</key><true/>
-					<key>startConnector</key><string>${ArrowMiddleConnector}</string>
-					<key>endConnector</key><string>${ArrowMiddleConnector}</string>
+					<key>glyph</key>
+					<string>Arrow.ext</string>
+					<key>extender</key>
+					<true/>
+					<key>startConnector</key>
+					<string>${ArrowMiddleConnector}</string>
+					<key>endConnector</key>
+					<string>${ArrowMiddleConnector}</string>
+				</dict>
+				<dict>
+					<key>glyph</key>
+					<string>Arrowend.rgt</string>
+					<key>extender</key>
+					<true/>
+					<key>startConnector</key>
+					<string>${ArrowMiddleConnector}</string>
+					<key>endConnector</key>
+					<string>${ArrowMiddleConnector}</string>
 				</dict>
 			</array>
 		</dict>
 		<dict>
-			<key>action</key><string>enableComponentAlignment</string>
-			<key>glyph</key><string>rightDoubleArrowTail</string>
+			<key>action</key>
+			<string>enableComponentAlignment</string>
+			<key>glyph</key>
+			<string>rightDoubleArrowTail</string>
 		</dict>
 		<dict>
-			<key>action</key><string>updateMetrics</string>
-			<key>glyph</key><string>rightDoubleArrowTail</string>
+			<key>action</key>
+			<string>updateMetrics</string>
+			<key>glyph</key>
+			<string>rightDoubleArrowTail</string>
 		</dict>
 	</array>
 </dict>

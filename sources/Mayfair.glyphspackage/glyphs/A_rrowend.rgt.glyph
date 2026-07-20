@@ -1,6 +1,6 @@
 {
-color = 1;
-glyphname = Arrow.end;
+color = 3;
+glyphname = Arrowend.rgt;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -90,8 +90,9 @@ width = 500;
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
+alignment = -1;
 piece = {
-width = 500;
+width = 441.49756;
 };
 ref = _smart.Arrow.mid;
 }

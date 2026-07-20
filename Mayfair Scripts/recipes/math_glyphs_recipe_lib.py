@@ -1907,6 +1907,310 @@ def action_set_component_position(
     return changed
 
 
+def action_add_anchor_at_right_edge_component_midpoint(
+    font,
+    verbose=False,
+    glyph=None,
+    anchor=None,
+    componentIndex=None,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if not anchor:
+        raise RuntimeError("%s: anchor is required." % glyph)
+    if componentIndex is None:
+        raise RuntimeError("%s: componentIndex is required." % glyph)
+
+    index = int(clean_number(componentIndex))
+    changed = 0
+    for layer in target_glyph.layers:
+        components = layer_components(layer)
+        try:
+            component = components[index]
+        except Exception:
+            raise RuntimeError(
+                "%s/%s: component index %i does not exist."
+                % (glyph, layer_label(layer), index)
+            )
+
+        _min_y, _max_y, center_y = bounds_y_values(component)
+        if center_y is None:
+            raise RuntimeError(
+                "%s/%s: component index %i has no bounds."
+                % (glyph, layer_label(layer), index)
+            )
+
+        width = layer_width(layer)
+        rsb = safe_call(getattr(layer, "RSB", None))
+        try:
+            right_edge = float(width) - float(rsb)
+        except Exception:
+            raise RuntimeError(
+                "%s/%s: could not calculate right edge from width and RSB."
+                % (glyph, layer_label(layer))
+            )
+
+        if not set_layer_anchor(layer, anchor, (right_edge, center_y)):
+            raise RuntimeError(
+                "%s/%s: could not set anchor %s."
+                % (glyph, layer_label(layer), anchor)
+            )
+        changed += 1
+
+    log(
+        "%s: set anchor %s at the right edge and component index %i bounds midpoint on %i layer(s)."
+        % (glyph, anchor, index, changed),
+        verbose,
+    )
+    return changed
+
+
+def action_add_anchor_at_advance_width_component_midpoint(
+    font,
+    verbose=False,
+    glyph=None,
+    anchor=None,
+    componentIndex=None,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if not anchor:
+        raise RuntimeError("%s: anchor is required." % glyph)
+    if componentIndex is None:
+        raise RuntimeError("%s: componentIndex is required." % glyph)
+
+    index = int(clean_number(componentIndex))
+    changed = 0
+    for layer in target_glyph.layers:
+        components = layer_components(layer)
+        try:
+            component = components[index]
+        except Exception:
+            raise RuntimeError(
+                "%s/%s: component index %i does not exist."
+                % (glyph, layer_label(layer), index)
+            )
+
+        _min_y, _max_y, center_y = bounds_y_values(component)
+        if center_y is None:
+            raise RuntimeError(
+                "%s/%s: component index %i has no bounds."
+                % (glyph, layer_label(layer), index)
+            )
+        width = layer_width(layer)
+        if width is None:
+            raise RuntimeError(
+                "%s/%s: layer has no width."
+                % (glyph, layer_label(layer))
+            )
+
+        if not set_layer_anchor(layer, anchor, (width, center_y)):
+            raise RuntimeError(
+                "%s/%s: could not set anchor %s."
+                % (glyph, layer_label(layer), anchor)
+            )
+        changed += 1
+
+    log(
+        "%s: set anchor %s at the advance-width edge and component index %i bounds midpoint on %i layer(s)."
+        % (glyph, anchor, index, changed),
+        verbose,
+    )
+    return changed
+
+
+def action_add_anchor_at_x_component_midpoint(
+    font,
+    verbose=False,
+    glyph=None,
+    anchor=None,
+    componentIndex=None,
+    x=0,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if not anchor:
+        raise RuntimeError("%s: anchor is required." % glyph)
+    if componentIndex is None:
+        raise RuntimeError("%s: componentIndex is required." % glyph)
+
+    index = int(clean_number(componentIndex))
+    x_value = clean_number(x)
+    changed = 0
+    for layer in target_glyph.layers:
+        components = layer_components(layer)
+        try:
+            component = components[index]
+        except Exception:
+            raise RuntimeError(
+                "%s/%s: component index %i does not exist."
+                % (glyph, layer_label(layer), index)
+            )
+
+        _min_y, _max_y, center_y = bounds_y_values(component)
+        if center_y is None:
+            raise RuntimeError(
+                "%s/%s: component index %i has no bounds."
+                % (glyph, layer_label(layer), index)
+            )
+
+        if not set_layer_anchor(layer, anchor, (x_value, center_y)):
+            raise RuntimeError(
+                "%s/%s: could not set anchor %s."
+                % (glyph, layer_label(layer), anchor)
+            )
+        changed += 1
+
+    log(
+        "%s: set anchor %s at x=%s and component index %i bounds midpoint on %i layer(s)."
+        % (glyph, anchor, x_value, index, changed),
+        verbose,
+    )
+    return changed
+
+
+def action_add_anchor_at_x_shifted_source_bounds_midpoint(
+    font,
+    verbose=False,
+    glyph=None,
+    anchor=None,
+    componentIndex=None,
+    sourceGlyph=None,
+    x=0,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    source_glyph = glyph_for_name(font, sourceGlyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if source_glyph is None:
+        raise RuntimeError("Missing source glyph: %s" % sourceGlyph)
+    if not anchor:
+        raise RuntimeError("%s: anchor is required." % glyph)
+    if componentIndex is None:
+        raise RuntimeError("%s: componentIndex is required." % glyph)
+
+    index = int(clean_number(componentIndex))
+    x_value = clean_number(x)
+    changed = 0
+    for layer in target_glyph.layers:
+        components = layer_components(layer)
+        try:
+            component = components[index]
+        except Exception:
+            raise RuntimeError(
+                "%s/%s: component index %i does not exist."
+                % (glyph, layer_label(layer), index)
+            )
+
+        source_layer = matching_layer(source_glyph, layer)
+        if source_layer is None:
+            raise RuntimeError(
+                "%s/%s: no matching layer in source glyph %s."
+                % (glyph, layer_label(layer), sourceGlyph)
+            )
+        _min_y, _max_y, source_center_y = bounds_y_values(source_layer)
+        if source_center_y is None:
+            raise RuntimeError(
+                "%s/%s: source glyph %s has no bounds."
+                % (glyph, layer_label(layer), sourceGlyph)
+            )
+
+        _a, _b, _c, _d, _tx, component_y = transform_values(component)
+        anchor_y = component_y + source_center_y
+        if not set_layer_anchor(layer, anchor, (x_value, anchor_y)):
+            raise RuntimeError(
+                "%s/%s: could not set anchor %s."
+                % (glyph, layer_label(layer), anchor)
+            )
+        changed += 1
+
+    log(
+        "%s: set anchor %s at x=%s to the midpoint of %s bounds shifted by component index %i on %i layer(s)."
+        % (glyph, anchor, x_value, sourceGlyph, index, changed),
+        verbose,
+    )
+    return changed
+
+
+def action_add_anchor_at_right_edge_shifted_source_bounds_midpoint(
+    font,
+    verbose=False,
+    glyph=None,
+    anchor=None,
+    componentIndex=None,
+    sourceGlyph=None,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    source_glyph = glyph_for_name(font, sourceGlyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if source_glyph is None:
+        raise RuntimeError("Missing source glyph: %s" % sourceGlyph)
+    if not anchor:
+        raise RuntimeError("%s: anchor is required." % glyph)
+    if componentIndex is None:
+        raise RuntimeError("%s: componentIndex is required." % glyph)
+
+    index = int(clean_number(componentIndex))
+    changed = 0
+    for layer in target_glyph.layers:
+        components = layer_components(layer)
+        try:
+            component = components[index]
+        except Exception:
+            raise RuntimeError(
+                "%s/%s: component index %i does not exist."
+                % (glyph, layer_label(layer), index)
+            )
+
+        source_layer = matching_layer(source_glyph, layer)
+        if source_layer is None:
+            raise RuntimeError(
+                "%s/%s: no matching layer in source glyph %s."
+                % (glyph, layer_label(layer), sourceGlyph)
+            )
+        _min_y, _max_y, source_center_y = bounds_y_values(source_layer)
+        if source_center_y is None:
+            raise RuntimeError(
+                "%s/%s: source glyph %s has no bounds."
+                % (glyph, layer_label(layer), sourceGlyph)
+            )
+
+        width = layer_width(layer)
+        rsb = safe_call(getattr(layer, "RSB", None))
+        try:
+            right_edge = float(width) - float(rsb)
+        except Exception:
+            raise RuntimeError(
+                "%s/%s: could not calculate right edge from width and RSB."
+                % (glyph, layer_label(layer))
+            )
+
+        _a, _b, _c, _d, _tx, component_y = transform_values(component)
+        anchor_y = component_y + source_center_y
+        if not set_layer_anchor(layer, anchor, (right_edge, anchor_y)):
+            raise RuntimeError(
+                "%s/%s: could not set anchor %s."
+                % (glyph, layer_label(layer), anchor)
+            )
+        changed += 1
+
+    log(
+        "%s: set anchor %s at the right edge and the midpoint of %s bounds shifted by component index %i on %i layer(s)."
+        % (glyph, anchor, sourceGlyph, index, changed),
+        verbose,
+    )
+    return changed
+
+
 def action_place_component_sequence_by_widths(
     font,
     verbose=False,
@@ -3168,6 +3472,11 @@ ACTION_REGISTRY = {
     "disableComponentAlignment": action_disable_component_alignment,
     "enableComponentAlignment": action_enable_component_alignment,
     "setComponentPosition": action_set_component_position,
+    "addAnchorAtRightEdgeComponentMidpoint": action_add_anchor_at_right_edge_component_midpoint,
+    "addAnchorAtAdvanceWidthComponentMidpoint": action_add_anchor_at_advance_width_component_midpoint,
+    "addAnchorAtXComponentMidpoint": action_add_anchor_at_x_component_midpoint,
+    "addAnchorAtXShiftedSourceBoundsMidpoint": action_add_anchor_at_x_shifted_source_bounds_midpoint,
+    "addAnchorAtRightEdgeShiftedSourceBoundsMidpoint": action_add_anchor_at_right_edge_shifted_source_bounds_midpoint,
     "placeComponentSequenceByWidths": action_place_component_sequence_by_widths,
     "alignComponentSequenceAnchors": action_align_component_sequence_anchors,
     "alignComponentMidpointToMathAxis": action_align_component_midpoint_to_math_axis,

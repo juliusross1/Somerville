@@ -37,47 +37,6 @@
 		</dict>
 		<dict>
 			<key>action</key>
-			<string>setMathPluginAssembly</string>
-			<key>glyph</key>
-			<string>rightLongArrow</string>
-			<key>direction</key>
-			<string>h</string>
-			<key>parts</key>
-			<array>
-				<dict>
-					<key>glyph</key>
-					<string>rightArrow.lft</string>
-					<key>extender</key>
-					<false/>
-					<key>startConnector</key>
-					<integer>0</integer>
-					<key>endConnector</key>
-					<string>${ArrowStartandEndConnector}</string>
-				</dict>
-				<dict>
-					<key>glyph</key>
-					<string>Arrow.ext</string>
-					<key>extender</key>
-					<true/>
-					<key>startConnector</key>
-					<string>${ArrowMiddleConnector}</string>
-					<key>endConnector</key>
-					<string>${ArrowMiddleConnector}</string>
-				</dict>
-				<dict>
-					<key>glyph</key>
-					<string>rightArrow.rgt</string>
-					<key>extender</key>
-					<false/>
-					<key>startConnector</key>
-					<string>${ArrowStartandEndConnector}</string>
-					<key>endConnector</key>
-					<integer>0</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>action</key>
 			<string>enableComponentAlignment</string>
 			<key>glyph</key>
 			<string>rightLongArrow</string>

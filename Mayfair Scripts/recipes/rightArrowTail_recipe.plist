@@ -30,8 +30,9 @@
 			<string>rightArrowTail</string>
 			<key>components</key>
 			<array>
-				<string>Arrow.mid</string>
-				<string>rightArrow.lft</string>
+				<string>Arrow.mid</string> 
+			<string>rightArrow.lft</string>
+	<string>Arrowend.rgt</string>
 			</array>
 		</dict>
 		<dict>
@@ -56,6 +57,16 @@
 				<dict>
 					<key>glyph</key>
 					<string>Arrow.ext</string>
+					<key>extender</key>
+					<true/>
+					<key>startConnector</key>
+					<string>${ArrowMiddleConnector}</string>
+					<key>endConnector</key>
+					<string>${ArrowMiddleConnector}</string>
+				</dict>
+				<dict>
+					<key>glyph</key>
+					<string>Arrowend.rgt</string>
 					<key>extender</key>
 					<true/>
 					<key>startConnector</key>

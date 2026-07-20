@@ -9,10 +9,11 @@ shapes = (
 ref = DoublePairedArrow.mid;
 },
 {
-pos = (-269,-600);
+pos = (-320,0);
 ref = rightOverLeftArrow.lft;
 },
 {
+alignment = 1;
 pos = (500,0);
 ref = rightOverLeftArrow.rgt;
 }
@@ -50,10 +51,11 @@ shapes = (
 ref = DoublePairedArrow.mid;
 },
 {
-pos = (-320,-600);
+pos = (-353,0);
 ref = rightOverLeftArrow.lft;
 },
 {
+alignment = 1;
 pos = (500,0);
 ref = rightOverLeftArrow.rgt;
 }
@@ -91,10 +93,11 @@ shapes = (
 ref = DoublePairedArrow.mid;
 },
 {
-pos = (-269,-600);
+pos = (-320,0);
 ref = rightOverLeftArrow.lft;
 },
 {
+alignment = 1;
 pos = (500,0);
 ref = rightOverLeftArrow.rgt;
 }
@@ -132,10 +135,11 @@ shapes = (
 ref = DoublePairedArrow.mid;
 },
 {
-pos = (-334,-599);
+pos = (-360,1);
 ref = rightOverLeftArrow.lft;
 },
 {
+alignment = 1;
 pos = (500,1);
 ref = rightOverLeftArrow.rgt;
 }
@@ -173,10 +177,11 @@ shapes = (
 ref = DoublePairedArrow.mid;
 },
 {
-pos = (-500,-600);
+pos = (-280,0);
 ref = rightOverLeftArrow.lft;
 },
 {
+alignment = 1;
 pos = (500,0);
 ref = rightOverLeftArrow.rgt;
 }
@@ -214,10 +219,11 @@ shapes = (
 ref = DoublePairedArrow.mid;
 },
 {
-pos = (-500,-600);
+pos = (-310,0);
 ref = rightOverLeftArrow.lft;
 },
 {
+alignment = 1;
 pos = (500,0);
 ref = rightOverLeftArrow.rgt;
 }
@@ -255,10 +261,11 @@ shapes = (
 ref = DoublePairedArrow.mid;
 },
 {
-pos = (-500,-600);
+pos = (-298,0);
 ref = rightOverLeftArrow.lft;
 },
 {
+alignment = 1;
 pos = (500,0);
 ref = rightOverLeftArrow.rgt;
 }
@@ -299,6 +306,7 @@ ref = DoublePairedArrow.mid;
 ref = rightOverLeftArrow.lft;
 },
 {
+alignment = 1;
 pos = (1000,0);
 ref = rightOverLeftArrow.rgt;
 }

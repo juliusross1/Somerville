@@ -44,6 +44,7 @@
         <string>leftArrowTail</string>
         <key>components</key>
         <array>
+          <string>Arrowend.rgt</string>
           <string>Arrow.mid</string>
           <string>leftArrow.rgt</string>
         </array>
@@ -63,15 +64,25 @@
         <string>h</string>
         <key>entries</key>
         <array>
+            <dict>
+            <key>glyph</key>
+            <string>Arrowend.lft</string>
+            <key>extender</key>
+            <integer>0</integer>
+            <key>startConnector</key>
+            <integer>30</integer>
+            <key>endConnector</key>
+            <integer>30</integer>
+          </dict>
           <dict>
             <key>glyph</key>
             <string>Arrow.ext</string>
             <key>extender</key>
             <integer>1</integer>
             <key>startConnector</key>
-            <integer>30</integer>
+            <integer>450</integer>
             <key>endConnector</key>
-            <integer>30</integer>
+            <integer>450</integer>
           </dict>
           <dict>
             <key>glyph</key>
@@ -98,6 +109,7 @@
         <string>leftArrowTail</string>
         <key>components</key>
         <array>
+          <string>Arrowend.rgt</string>
           <string>Arrow.mid</string>
           <string>leftArrow.rgt</string>
         </array>
