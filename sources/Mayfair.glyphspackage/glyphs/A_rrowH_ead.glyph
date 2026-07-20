@@ -1,5 +1,5 @@
 {
-category = Symbol;
+category = Mark;
 color = 3;
 glyphname = ArrowHead;
 layers = (
@@ -14,7 +14,7 @@ name = "#exit";
 pos = (241,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (241,265);
 }
 );
@@ -61,7 +61,7 @@ name = "#exit";
 pos = (211,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (291,265);
 }
 );
@@ -108,7 +108,7 @@ name = "#exit";
 pos = (206,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (276,265);
 }
 );
@@ -155,7 +155,7 @@ name = "#exit";
 pos = (241,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (241,265);
 }
 );
@@ -202,7 +202,7 @@ name = "#exit";
 pos = (227,264);
 },
 {
-name = "&exit";
+name = tab;
 pos = (227,264);
 }
 );
@@ -249,7 +249,7 @@ name = "#exit";
 pos = (241,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (241,265);
 }
 );
@@ -296,7 +296,7 @@ name = "#exit";
 pos = (191,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (291,265);
 }
 );
@@ -343,7 +343,7 @@ name = "#exit";
 pos = (209,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (306,265);
 }
 );
@@ -390,7 +390,7 @@ name = "#exit";
 pos = (241,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (241,265);
 }
 );
@@ -440,7 +440,7 @@ name = "#exit";
 pos = (241,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (241,265);
 }
 );
@@ -490,7 +490,7 @@ name = "#exit";
 pos = (241,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (241,265);
 }
 );
@@ -540,7 +540,7 @@ name = "#exit";
 pos = (227,264);
 },
 {
-name = "&exit";
+name = tab;
 pos = (227,264);
 }
 );
@@ -590,7 +590,7 @@ name = "#exit";
 pos = (211,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (291,265);
 }
 );
@@ -640,7 +640,7 @@ name = "#exit";
 pos = (206,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (276,265);
 }
 );
@@ -690,7 +690,7 @@ name = "#exit";
 pos = (312,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (411,265);
 }
 );
@@ -740,7 +740,7 @@ name = "#exit";
 pos = (416,265);
 },
 {
-name = "&exit";
+name = tab;
 pos = (416,265);
 }
 );
@@ -787,5 +787,5 @@ name = height;
 topValue = 100;
 }
 );
-subCategory = Arrow;
+subCategory = Spacing;
 }

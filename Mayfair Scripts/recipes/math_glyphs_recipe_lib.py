@@ -1857,6 +1857,56 @@ def action_enable_component_alignment(font, verbose=False, glyph=None, component
     return changed
 
 
+def action_set_component_position(
+    font,
+    verbose=False,
+    glyph=None,
+    componentIndex=None,
+    x=None,
+    y=None,
+    xMultiplier=1,
+    yMultiplier=1,
+    disableAlignment=True,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+    if componentIndex is None:
+        raise RuntimeError("%s: componentIndex is required." % glyph)
+
+    index = int(clean_number(componentIndex))
+    x_value = None if x is None else clean_number(x) * clean_number(xMultiplier)
+    y_value = None if y is None else clean_number(y) * clean_number(yMultiplier)
+    changed = 0
+    for layer in target_glyph.layers:
+        components = layer_components(layer)
+        try:
+            component = components[index]
+        except Exception:
+            raise RuntimeError(
+                "%s/%s: component index %i does not exist."
+                % (glyph, layer_label(layer), index)
+            )
+        if boolean_value(disableAlignment):
+            disable_component_alignment(component)
+        a, b, c, d, tx, ty = transform_values(component)
+        new_tx = tx if x_value is None else x_value
+        new_ty = ty if y_value is None else y_value
+        if not set_component_transform(component, (a, b, c, d, new_tx, new_ty)):
+            raise RuntimeError(
+                "%s/%s: could not position component index %i."
+                % (glyph, layer_label(layer), index)
+            )
+        changed += 1
+    log(
+        "%s: positioned component index %i at x=%s y=%s on %i layer(s)."
+        % (glyph, index, x_value, y_value, changed),
+        verbose,
+    )
+    return changed
+
+
 def action_place_component_sequence_by_widths(
     font,
     verbose=False,
@@ -3117,6 +3167,7 @@ ACTION_REGISTRY = {
     "setComponentAnchor": action_set_component_anchor,
     "disableComponentAlignment": action_disable_component_alignment,
     "enableComponentAlignment": action_enable_component_alignment,
+    "setComponentPosition": action_set_component_position,
     "placeComponentSequenceByWidths": action_place_component_sequence_by_widths,
     "alignComponentSequenceAnchors": action_align_component_sequence_anchors,
     "alignComponentMidpointToMathAxis": action_align_component_midpoint_to_math_axis,

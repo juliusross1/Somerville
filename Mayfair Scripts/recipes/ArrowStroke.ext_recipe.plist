@@ -7,11 +7,10 @@
   <integer>1</integer>
   <key>kind</key>
   <string>recipe</string>
-
+  <key>name</key>
+  <string>ArrowStroke.ext</string>
   <key>constants</key>
   <string>recipe_constants.plist</string>
-  <key>name</key>
-  <string>rightTabArrow.rgt</string>
   <key>actions</key>
   <array>
     <dict>
@@ -22,7 +21,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>rightTabArrow.rgt</string>
+        <string>ArrowStroke.ext</string>
         <key>export</key>
         <true/>
         <key>color</key>
@@ -33,42 +32,53 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>addComponent</string>
+      <string>addComponents</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>rightTabArrow.rgt</string>
-        <key>component</key>
-        <string>rightArrow.rgt</string>
-      </dict>
-    </dict>
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>addComponent</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>rightTabArrow.rgt</string>
-        <key>component</key>
-        <string>_ArrowTab</string>
-      </dict>
-    </dict>
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>enableComponentAlignment</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>rightTabArrow.rgt</string>
+        <string>ArrowStroke.ext</string>
         <key>components</key>
         <array>
-          <string>rightArrow.rgt</string>
-          <string>_ArrowTab</string>
+          <string>_smart.Arrow.mid</string>
+          <string>_ArrowStroke</string>
         </array>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setComponentAxisValue</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>ArrowStroke.ext</string>
+        <key>axis</key>
+        <string>width</string>
+        <key>value</key>
+        <string>${ArrowMiddleLength}</string>
+        <key>componentFilter</key>
+        <dict>
+          <key>components</key>
+          <array>
+            <string>_smart.Arrow.mid</string>
+          </array>
+        </dict>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setSideBearings</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>ArrowStroke.ext</string>
+        <key>left</key>
+        <integer>0</integer>
+        <key>right</key>
+        <integer>0</integer>
       </dict>
     </dict>
   </array>

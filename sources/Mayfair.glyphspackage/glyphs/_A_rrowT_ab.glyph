@@ -1,5 +1,5 @@
 {
-category = Letter;
+category = Mark;
 color = 3;
 export = 0;
 glyphname = _ArrowTab;
@@ -7,11 +7,7 @@ layers = (
 {
 anchors = (
 {
-name = "#exit";
-pos = (1,265);
-},
-{
-name = "&entry";
+name = _tab;
 pos = (0,265);
 }
 );
@@ -32,11 +28,7 @@ width = 1;
 {
 anchors = (
 {
-name = "#exit";
-pos = (1,265);
-},
-{
-name = "&entry";
+name = _tab;
 pos = (0,265);
 }
 );
@@ -57,11 +49,7 @@ width = 1;
 {
 anchors = (
 {
-name = "#exit";
-pos = (1,265);
-},
-{
-name = "&entry";
+name = _tab;
 pos = (0,265);
 }
 );
@@ -82,11 +70,7 @@ width = 1;
 {
 anchors = (
 {
-name = "#exit";
-pos = (1,264);
-},
-{
-name = "&entry";
+name = _tab;
 pos = (0,264);
 }
 );
@@ -107,11 +91,7 @@ width = 1;
 {
 anchors = (
 {
-name = "#exit";
-pos = (80,265);
-},
-{
-name = "&entry";
+name = _tab;
 pos = (0,265);
 }
 );
@@ -132,11 +112,7 @@ width = 80;
 {
 anchors = (
 {
-name = "#exit";
-pos = (80,265);
-},
-{
-name = "&entry";
+name = _tab;
 pos = (0,265);
 }
 );
@@ -157,11 +133,7 @@ width = 80;
 {
 anchors = (
 {
-name = "#exit";
-pos = (116,265);
-},
-{
-name = "&entry";
+name = _tab;
 pos = (0,265);
 }
 );
@@ -182,11 +154,7 @@ width = 116;
 {
 anchors = (
 {
-name = "#exit";
-pos = (117,265);
-},
-{
-name = "&entry";
+name = _tab;
 pos = (0,265);
 }
 );
@@ -206,5 +174,5 @@ width = 117;
 }
 );
 metricLeft = "=0";
-subCategory = Other;
+subCategory = Spacing;
 }
