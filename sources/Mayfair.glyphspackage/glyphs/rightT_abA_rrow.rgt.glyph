@@ -10,7 +10,7 @@ shapes = (
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-30,0);
+pos = (-13,0);
 ref = ArrowHead;
 },
 {
@@ -27,11 +27,11 @@ shapes = (
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-30,0);
+pos = (-13,0);
 ref = ArrowHead;
 },
 {
-pos = (211,0);
+pos = (261,0);
 ref = _ArrowTab;
 }
 );
@@ -44,7 +44,7 @@ shapes = (
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-30,0);
+pos = (-13,0);
 ref = ArrowHead;
 },
 {
@@ -61,15 +61,15 @@ shapes = (
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-16,0);
+pos = (-13,0);
 ref = ArrowHead;
 },
 {
-pos = (211,0);
+pos = (261,1);
 ref = _ArrowTab;
 }
 );
-width = 334;
+width = 320;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -78,15 +78,15 @@ shapes = (
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-30,0);
+pos = (-23,0);
 ref = ArrowHead;
 },
 {
-pos = (261,0);
+pos = (251,0);
 ref = _ArrowTab;
 }
 );
-width = 294;
+width = 301;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -95,32 +95,35 @@ shapes = (
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-30,0);
+pos = (-23,0);
 ref = ArrowHead;
 },
 {
-pos = (246,0);
+pos = (323,0);
 ref = _ArrowTab;
 }
 );
-width = 308;
+width = 376;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
+piece = {
+width = 89.40553;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-30,0);
+pos = (36,0);
 ref = ArrowHead;
 },
 {
-pos = (261,0);
+pos = (300,0);
 ref = _ArrowTab;
 }
 );
-width = 294;
+width = 333;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -132,16 +135,15 @@ width = 102.51643;
 ref = _smart.Arrow.mid;
 },
 {
-pos = (20,0);
+pos = (35,0);
 ref = ArrowHead;
 },
 {
-alignment = -1;
-pos = (327,0);
+pos = (393,0);
 ref = _ArrowTab;
 }
 );
-width = 500;
+width = 446;
 }
 );
 metricLeft = "=rightArrow.rgt";

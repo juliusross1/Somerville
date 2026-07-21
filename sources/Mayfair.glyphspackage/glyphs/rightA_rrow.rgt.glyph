@@ -11,20 +11,23 @@ pos = (0,265);
 },
 {
 name = tab;
-pos = (211,265);
+pos = (411,265);
 }
 );
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
+piece = {
+width = 241.44588;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-30,0);
+pos = (198,0);
 ref = ArrowHead;
 }
 );
-width = 269;
+width = 480;
 },
 {
 anchors = (
@@ -34,23 +37,23 @@ pos = (0,265);
 },
 {
 name = tab;
-pos = (467,265);
+pos = (426,265);
 }
 );
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
 piece = {
-width = 235.5641;
+width = 209.34328;
 };
 ref = _smart.Arrow.mid;
 },
 {
-pos = (176,0);
+pos = (156,0);
 ref = ArrowHead;
 }
 );
-width = 500;
+width = 480;
 },
 {
 anchors = (
@@ -60,23 +63,23 @@ pos = (0,265);
 },
 {
 name = tab;
-pos = (438,265);
+pos = (538,265);
 }
 );
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
 piece = {
-width = 222.08714;
+width = 254.47958;
 };
 ref = _smart.Arrow.mid;
 },
 {
-pos = (162,0);
+pos = (201,0);
 ref = ArrowHead;
 }
 );
-width = 500;
+width = 600;
 },
 {
 anchors = (
@@ -86,20 +89,23 @@ pos = (0,265);
 },
 {
 name = tab;
-pos = (211,265);
+pos = (411,265);
 }
 );
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
+piece = {
+width = 240.51672;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-30,0);
+pos = (198,0);
 ref = ArrowHead;
 }
 );
-width = 269;
+width = 480;
 },
 {
 anchors = (
@@ -109,20 +115,23 @@ pos = (0,264);
 },
 {
 name = tab;
-pos = (211,264);
+pos = (541,264);
 }
 );
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
+piece = {
+width = 309.83655;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-16,0);
+pos = (267,0);
 ref = ArrowHead;
 }
 );
-width = 334;
+width = 600;
 },
 {
 anchors = (
@@ -132,20 +141,23 @@ pos = (0,265);
 },
 {
 name = tab;
-pos = (211,265);
+pos = (531,265);
 }
 );
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
+piece = {
+width = 309.54672;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-30,0);
+pos = (267,0);
 ref = ArrowHead;
 }
 );
-width = 320;
+width = 600;
 },
 {
 anchors = (
@@ -155,23 +167,23 @@ pos = (0,265);
 },
 {
 name = tab;
-pos = (467,265);
+pos = (437,265);
 }
 );
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
 piece = {
-width = 236.28867;
+width = 235.99033;
 };
 ref = _smart.Arrow.mid;
 },
 {
-pos = (176,0);
+pos = (183,0);
 ref = ArrowHead;
 }
 );
-width = 500;
+width = 480;
 },
 {
 anchors = (
@@ -181,23 +193,23 @@ pos = (0,265);
 },
 {
 name = tab;
-pos = (448,265);
+pos = (543,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 piece = {
-width = 224.89165;
+width = 256.78583;
 };
 ref = _smart.Arrow.mid;
 },
 {
-pos = (142,0);
+pos = (189,0);
 ref = ArrowHead;
 }
 );
-width = 500;
+width = 600;
 }
 );
 subCategory = Spacing;

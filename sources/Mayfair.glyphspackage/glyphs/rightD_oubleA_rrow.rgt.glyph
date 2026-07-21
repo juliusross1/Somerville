@@ -16,8 +16,8 @@ shapes = (
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (-30,0);
-ref = ArrowHead;
+pos = (-13,0);
+ref = _smart.ArrowHead;
 }
 );
 width = 269;
@@ -41,11 +41,11 @@ ref = _smart.DoubleArrow.mid;
 piece = {
 height = 37.3717;
 };
-pos = (176,0);
-ref = ArrowHead;
+pos = (182,0);
+ref = _smart.ArrowHead;
 }
 );
-width = 500;
+width = 506;
 },
 {
 anchors = (
@@ -63,11 +63,11 @@ width = 222.18944;
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (162,0);
-ref = ArrowHead;
+pos = (169,0);
+ref = _smart.ArrowHead;
 }
 );
-width = 500;
+width = 496;
 },
 {
 anchors = (
@@ -82,8 +82,8 @@ shapes = (
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (-30,0);
-ref = ArrowHead;
+pos = (-13,0);
+ref = _smart.ArrowHead;
 }
 );
 width = 269;
@@ -101,11 +101,11 @@ shapes = (
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (-16,0);
-ref = ArrowHead;
+pos = (-13,0);
+ref = _smart.ArrowHead;
 }
 );
-width = 334;
+width = 320;
 },
 {
 anchors = (
@@ -120,8 +120,8 @@ shapes = (
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (-30,0);
-ref = ArrowHead;
+pos = (-13,0);
+ref = _smart.ArrowHead;
 }
 );
 width = 320;
@@ -146,11 +146,11 @@ scale = (7.5,1);
 piece = {
 height = 50;
 };
-pos = (105,0);
-ref = ArrowHead;
+pos = (172,0);
+ref = _smart.ArrowHead;
 }
 );
-width = 500;
+width = 469;
 },
 {
 anchors = (
@@ -183,11 +183,11 @@ ref = _smart.DoubleArrow.mid;
 piece = {
 height = 50;
 };
-pos = (79,0);
-ref = ArrowHead;
+pos = (157,0);
+ref = _smart.ArrowHead;
 }
 );
-width = 500;
+width = 474;
 }
 );
 subCategory = Spacing;

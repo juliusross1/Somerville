@@ -149,7 +149,7 @@ def colored_export_status(text, state):
     return text
 
 
-def exported_glyph_names(file_name):
+def created_glyph_names(file_name):
     try:
         _recipe, _template, _parameters, actions, _recipe_path, _template_path = (
             math_glyphs_recipe_lib.expanded_actions_from_recipe(file_name)
@@ -165,7 +165,7 @@ def exported_glyph_names(file_name):
         arguments = dict(action.get("arguments", {}))
         if function_name == "createGlyph":
             glyph_name = arguments.get("glyph")
-            if glyph_name and math_glyphs_recipe_lib.boolean_value(arguments.get("export", True)):
+            if glyph_name:
                 names.append(glyph_name)
         elif function_name == "createSmartComponentVariants":
             names.extend(variant_export_names(arguments))
@@ -177,7 +177,7 @@ def export_existence_status(file_name, runnable):
     if font is None:
         return "no font", "neutral"
 
-    names = exported_glyph_names(file_name)
+    names = created_glyph_names(file_name)
     if not names:
         return "none", "neutral"
 
