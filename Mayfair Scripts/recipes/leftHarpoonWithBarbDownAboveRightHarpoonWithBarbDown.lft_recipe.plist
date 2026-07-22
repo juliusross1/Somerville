@@ -114,13 +114,16 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setSideBearings</string>
+      <string>alignComponentRightBoundsAndSetMetrics</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>leftHarpoonWithBarbDownAboveRightHarpoonWithBarbDown.lft</string>
-        <key>right</key>
-        <integer>0</integer>
+        <key>componentIndexes</key>
+        <array>
+          <integer>0</integer>
+          <integer>1</integer>
+        </array>
       </dict>
     </dict>
   </array>

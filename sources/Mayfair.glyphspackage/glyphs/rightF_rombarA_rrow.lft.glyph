@@ -1,12 +1,12 @@
 {
-category = Mark;
+category = Symbol;
 color = 3;
 glyphname = rightFrombarArrow.lft;
 layers = (
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (340,265);
 }
 );
@@ -50,7 +50,7 @@ width = 340;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450,265);
 }
 );
@@ -92,7 +92,7 @@ width = 450;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (340,265);
 }
 );
@@ -134,7 +134,7 @@ width = 340;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450,265);
 }
 );
@@ -176,7 +176,7 @@ width = 450;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (340,265);
 }
 );
@@ -217,7 +217,7 @@ width = 340;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450,265);
 }
 );
@@ -261,7 +261,7 @@ width = 450;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (342,265);
 }
 );
@@ -303,7 +303,7 @@ width = 342;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450.24,265);
 }
 );
@@ -345,7 +345,7 @@ width = 450;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (340,265);
 }
 );
@@ -392,7 +392,7 @@ width = 340;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450,265);
 }
 );
@@ -437,7 +437,7 @@ width = 450;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (340,265);
 }
 );
@@ -482,7 +482,7 @@ width = 340;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450,265);
 }
 );
@@ -527,7 +527,7 @@ width = 450;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (340,265);
 }
 );
@@ -571,7 +571,7 @@ width = 340;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450,265);
 }
 );
@@ -618,7 +618,7 @@ width = 450;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (342,265);
 }
 );
@@ -663,7 +663,7 @@ width = 342;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450.24,265);
 }
 );
@@ -715,5 +715,5 @@ name = height;
 topValue = 100;
 }
 );
-subCategory = Spacing;
+subCategory = Arrow;
 }

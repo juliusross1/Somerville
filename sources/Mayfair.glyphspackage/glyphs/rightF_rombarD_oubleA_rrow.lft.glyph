@@ -1,12 +1,12 @@
 {
-category = Mark;
+category = Symbol;
 color = 3;
 glyphname = rightFrombarDoubleArrow.lft;
 layers = (
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (340,265);
 }
 );
@@ -42,7 +42,7 @@ width = 340;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450,265);
 }
 );
@@ -79,7 +79,7 @@ width = 450;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (340,265);
 }
 );
@@ -123,7 +123,7 @@ width = 340;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450,265);
 }
 );
@@ -160,7 +160,7 @@ width = 450;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (340,265);
 }
 );
@@ -197,7 +197,7 @@ width = 340;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450,265);
 }
 );
@@ -235,7 +235,7 @@ width = 450;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (338,265);
 }
 );
@@ -273,7 +273,7 @@ width = 338;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (450,265);
 }
 );
@@ -288,11 +288,11 @@ pos = (151,0);
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (151,60);
+pos = (151,61);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (151,470);
+pos = (151,469);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
@@ -300,7 +300,7 @@ scale = (1,-1);
 piece = {
 height = 50;
 };
-pos = (58,0);
+pos = (59,0);
 ref = _ArrowTab;
 scale = (0.8,1);
 }
@@ -310,5 +310,5 @@ width = 450;
 );
 metricLeft = "=rightArrow.lft";
 metricRight = "=0";
-subCategory = Spacing;
+subCategory = Arrow;
 }

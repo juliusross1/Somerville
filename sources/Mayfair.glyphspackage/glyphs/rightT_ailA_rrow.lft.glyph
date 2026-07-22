@@ -1,12 +1,12 @@
 {
-category = Mark;
+category = Symbol;
 color = 3;
 glyphname = rightTailArrow.lft;
 layers = (
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (370,265);
 }
 );
@@ -60,7 +60,7 @@ width = 370;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (405,265);
 }
 );
@@ -114,7 +114,7 @@ width = 405;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (438,265);
 }
 );
@@ -168,7 +168,7 @@ width = 438;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (363,265);
 }
 );
@@ -222,7 +222,7 @@ width = 363;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (420,264);
 }
 );
@@ -276,7 +276,7 @@ width = 420;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (436,265);
 }
 );
@@ -330,7 +330,7 @@ width = 436;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (462,264);
 }
 );
@@ -384,7 +384,7 @@ width = 462;
 {
 anchors = (
 {
-name = _left;
+name = "#exit";
 pos = (500,265);
 }
 );
@@ -442,5 +442,5 @@ width = 500;
 );
 metricLeft = "=rightArrow.lft";
 metricRight = "=0";
-subCategory = Spacing;
+subCategory = Arrow;
 }

@@ -9,11 +9,11 @@ shapes = (
 ref = harpoonleftdown;
 },
 {
-pos = (-201,0);
+pos = (-230,0);
 ref = Arrow.mid;
 },
 {
-pos = (799,0);
+pos = (770,0);
 ref = harpoonrightdown.rgt;
 }
 );
@@ -41,7 +41,7 @@ harpoonrightdown.rgt,
 );
 };
 };
-width = 1299;
+width = 1040;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -50,11 +50,11 @@ shapes = (
 ref = harpoonleftdown;
 },
 {
-pos = (-150,0);
+pos = (-180,0);
 ref = Arrow.mid;
 },
 {
-pos = (850,268);
+pos = (820,0);
 ref = harpoonrightdown.rgt;
 }
 );
@@ -82,7 +82,7 @@ harpoonrightdown.rgt,
 );
 };
 };
-width = 1350;
+width = 1140;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -91,11 +91,11 @@ shapes = (
 ref = harpoonleftdown;
 },
 {
-pos = (-201,0);
+pos = (-231,0);
 ref = Arrow.mid;
 },
 {
-pos = (799,268);
+pos = (769,0);
 ref = harpoonrightdown.rgt;
 }
 );
@@ -123,7 +123,7 @@ harpoonrightdown.rgt,
 );
 };
 };
-width = 1299;
+width = 1038;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -132,11 +132,11 @@ shapes = (
 ref = harpoonleftdown;
 },
 {
-pos = (-150,0);
+pos = (-166,0);
 ref = Arrow.mid;
 },
 {
-pos = (850,267);
+pos = (834,0);
 ref = harpoonrightdown.rgt;
 }
 );
@@ -164,7 +164,7 @@ harpoonrightdown.rgt,
 );
 };
 };
-width = 1350;
+width = 1168;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -173,11 +173,10 @@ shapes = (
 ref = harpoonleftdown;
 },
 {
-pos = (-176,0);
 ref = Arrow.mid;
 },
 {
-pos = (824,338);
+pos = (1000,0);
 ref = harpoonrightdown.rgt;
 }
 );
@@ -205,7 +204,7 @@ harpoonrightdown.rgt,
 );
 };
 };
-width = 1324;
+width = 1500;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -217,7 +216,7 @@ ref = harpoonleftdown;
 ref = Arrow.mid;
 },
 {
-pos = (1000,-143);
+pos = (1000,0);
 ref = harpoonrightdown.rgt;
 }
 );
@@ -254,11 +253,10 @@ shapes = (
 ref = harpoonleftdown;
 },
 {
-pos = (-176,0);
 ref = Arrow.mid;
 },
 {
-pos = (824,63);
+pos = (1000,0);
 ref = harpoonrightdown.rgt;
 }
 );
@@ -286,7 +284,7 @@ harpoonrightdown.rgt,
 );
 };
 };
-width = 1324;
+width = 1500;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -295,6 +293,7 @@ shapes = (
 ref = harpoonleftdown;
 },
 {
+pos = (500,0);
 ref = Arrow.mid;
 },
 {

@@ -745,10 +745,6 @@ def bounds_x_values(obj):
 def translate_component_x(component, dx):
     if abs(float(dx)) <= 0.000001:
         return True
-    a, b, c, d, tx, ty = transform_values(component)
-    if set_component_transform(component, (a, b, c, d, tx + float(dx), ty)):
-        return True
-
     position = safe_call(getattr(component, "position", None))
     if position is not None:
         try:
@@ -757,6 +753,10 @@ def translate_component_x(component, dx):
             return True
         except Exception:
             pass
+
+    a, b, c, d, tx, ty = transform_values(component)
+    if set_component_transform(component, (a, b, c, d, tx + float(dx), ty)):
+        return True
     return False
 
 
@@ -2818,6 +2818,7 @@ def action_flip_components_across_horizontal_line(
     y=0,
     anchorNames=None,
     checkAnchorY=False,
+    useMathAxis=False,
     tolerance=0.001,
     **_kwargs
 ):
@@ -2834,6 +2835,7 @@ def action_flip_components_across_horizontal_line(
     skipped = 0
     checked = 0
     for layer in target_glyph.layers:
+        flip_y = math_axis_for_layer(font, layer) if boolean_value(useMathAxis) else float(y)
         for component in layer_components(layer):
             if wanted_components and component_name(component) not in wanted_components:
                 continue
@@ -2856,7 +2858,7 @@ def action_flip_components_across_horizontal_line(
                 before_y = transformed_point(component, local_anchor_xy)[1]
 
             disable_component_alignment(component)
-            if flip_component_across_horizontal_line(component, y):
+            if flip_component_across_horizontal_line(component, flip_y):
                 changed += 1
             else:
                 skipped += 1
@@ -2875,10 +2877,10 @@ def action_flip_components_across_horizontal_line(
                     )
                 checked += 1
 
-    log("%s: flipped %i component(s) across y=%s%s%s." % (
+    log("%s: flipped %i component(s) across %s%s%s." % (
         glyph,
         changed,
-        y,
+        "each layer's math axis" if boolean_value(useMathAxis) else "y=%s" % y,
         "; checked %i anchor(s)" % checked if checked else "",
         "; skipped %i" % skipped if skipped else "",
     ), verbose)
@@ -3002,6 +3004,221 @@ def action_set_side_bearings(font, verbose=False, glyph=None, left=None, right=N
         layer_count,
     ), verbose)
     return changed
+
+
+def action_align_component_right_bounds_and_set_metrics(
+    font,
+    verbose=False,
+    glyph=None,
+    componentIndexes=None,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+
+    if componentIndexes is not None:
+        indexes = [int(index) for index in componentIndexes]
+    else:
+        indexes = None
+
+    changed_layers = 0
+    for layer in target_glyph.layers:
+        all_components = layer_components(layer)
+        selected = all_components if indexes is None else []
+        if indexes is not None:
+            for index in indexes:
+                if index < 0 or index >= len(all_components):
+                    raise RuntimeError(
+                        "%s/%s: component index %i is out of range." % (
+                            glyph,
+                            layer_name(layer),
+                            index,
+                        )
+                    )
+                selected.append(all_components[index])
+        if not selected:
+            raise RuntimeError("%s/%s: no components to align." % (glyph, layer_name(layer)))
+
+        first_component = selected[0]
+        _first_min_x, first_right, _first_center_x = bounds_x_values(first_component)
+        if first_right is None:
+            raise RuntimeError(
+                "%s/%s: first component has no bounds." % (glyph, layer_name(layer))
+            )
+
+        source_glyph = component_glyph(font, first_component)
+        source_layer = matching_layer(source_glyph, layer) if source_glyph is not None else None
+        source_lsb = safe_call(getattr(source_layer, "LSB", None)) if source_layer is not None else None
+        if source_lsb is None:
+            raise RuntimeError(
+                "%s/%s: could not read the first component's layer LSB." % (
+                    glyph,
+                    layer_name(layer),
+                )
+            )
+        source_lsb = float(source_lsb)
+
+        for component in selected:
+            _min_x, right, _center_x = bounds_x_values(component)
+            if right is None:
+                raise RuntimeError(
+                    "%s/%s: component %s has no bounds." % (
+                        glyph,
+                        layer_name(layer),
+                        component_name(component),
+                    )
+                )
+            if not translate_component_x(component, first_right - right):
+                raise RuntimeError(
+                    "%s/%s: could not align component %s by its right bound." % (
+                        glyph,
+                        layer_name(layer),
+                        component_name(component),
+                    )
+                )
+
+        aligned_bounds = [bounds_x_values(component) for component in selected]
+        group_left = min(values[0] for values in aligned_bounds if values[0] is not None)
+        group_shift = source_lsb - group_left
+        for component in selected:
+            if not translate_component_x(component, group_shift):
+                raise RuntimeError(
+                    "%s/%s: could not move component %s to the requested LSB." % (
+                        glyph,
+                        layer_name(layer),
+                        component_name(component),
+                    )
+                )
+
+        common_right = first_right + group_shift
+        set_layer_metrics_key(layer, "leftMetricsKey", None)
+        set_layer_metrics_key(layer, "rightMetricsKey", None)
+        if not set_layer_metric(layer, "width", clean_number(common_right)):
+            raise RuntimeError("%s/%s: could not set layer width." % (glyph, layer_name(layer)))
+        changed_layers += 1
+
+    log(
+        "%s: aligned component right bounds; set LSB from the first component and RSB=0 on %i layer(s)." % (
+            glyph,
+            changed_layers,
+        ),
+        verbose,
+    )
+    return changed_layers
+
+
+def action_align_component_left_bounds_and_set_metrics(
+    font,
+    verbose=False,
+    glyph=None,
+    componentIndexes=None,
+    metricsComponentIndex=0,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+
+    if componentIndexes is not None:
+        indexes = [int(index) for index in componentIndexes]
+    else:
+        indexes = None
+    metricsComponentIndex = int(metricsComponentIndex)
+
+    changed_layers = 0
+    for layer in target_glyph.layers:
+        all_components = layer_components(layer)
+        selected = all_components if indexes is None else []
+        if indexes is not None:
+            for index in indexes:
+                if index < 0 or index >= len(all_components):
+                    raise RuntimeError(
+                        "%s/%s: component index %i is out of range." % (
+                            glyph,
+                            layer_name(layer),
+                            index,
+                        )
+                    )
+                selected.append(all_components[index])
+        if not selected:
+            raise RuntimeError("%s/%s: no components to align." % (glyph, layer_name(layer)))
+        if metricsComponentIndex < 0 or metricsComponentIndex >= len(all_components):
+            raise RuntimeError(
+                "%s/%s: metrics component index %i is out of range." % (
+                    glyph,
+                    layer_name(layer),
+                    metricsComponentIndex,
+                )
+            )
+
+        first_component = selected[0]
+        first_left, _first_right, _first_center_x = bounds_x_values(first_component)
+        if first_left is None:
+            raise RuntimeError(
+                "%s/%s: first component has no bounds." % (glyph, layer_name(layer))
+            )
+
+        metrics_component = all_components[metricsComponentIndex]
+        source_glyph = component_glyph(font, metrics_component)
+        source_layer = matching_layer(source_glyph, layer) if source_glyph is not None else None
+        source_rsb = safe_call(getattr(source_layer, "RSB", None)) if source_layer is not None else None
+        if source_rsb is None:
+            raise RuntimeError(
+                "%s/%s: could not read the metrics component's layer RSB." % (
+                    glyph,
+                    layer_name(layer),
+                )
+            )
+        source_rsb = float(source_rsb)
+
+        for component in selected:
+            left, _right, _center_x = bounds_x_values(component)
+            if left is None:
+                raise RuntimeError(
+                    "%s/%s: component %s has no bounds." % (
+                        glyph,
+                        layer_name(layer),
+                        component_name(component),
+                    )
+                )
+            if not translate_component_x(component, first_left - left):
+                raise RuntimeError(
+                    "%s/%s: could not align component %s by its left bound." % (
+                        glyph,
+                        layer_name(layer),
+                        component_name(component),
+                    )
+                )
+
+        group_shift = -first_left
+        for component in selected:
+            if not translate_component_x(component, group_shift):
+                raise RuntimeError(
+                    "%s/%s: could not move component %s to LSB=0." % (
+                        glyph,
+                        layer_name(layer),
+                        component_name(component),
+                    )
+                )
+
+        shifted_bounds = [bounds_x_values(component) for component in selected]
+        group_right = max(values[1] for values in shifted_bounds if values[1] is not None)
+        set_layer_metrics_key(layer, "leftMetricsKey", None)
+        set_layer_metrics_key(layer, "rightMetricsKey", None)
+        if not set_layer_metric(layer, "width", clean_number(group_right + source_rsb)):
+            raise RuntimeError("%s/%s: could not set layer width." % (glyph, layer_name(layer)))
+        changed_layers += 1
+
+    log(
+        "%s: aligned component left bounds; set LSB=0 and RSB from component index %i on %i layer(s)." % (
+            glyph,
+            metricsComponentIndex,
+            changed_layers,
+        ),
+        verbose,
+    )
+    return changed_layers
 
 
 def action_set_side_metric_keys(font, verbose=False, glyph=None, left=None, right=None, **_kwargs):
@@ -3492,6 +3709,8 @@ ACTION_REGISTRY = {
     "copyLayerMetrics": action_copy_layer_metrics,
     "setSideMetricsFromComponentSequence": action_set_side_metrics_from_component_sequence,
     "setSideBearings": action_set_side_bearings,
+    "alignComponentRightBoundsAndSetMetrics": action_align_component_right_bounds_and_set_metrics,
+    "alignComponentLeftBoundsAndSetMetrics": action_align_component_left_bounds_and_set_metrics,
     "setSideMetricKeys": action_set_side_metric_keys,
     "updateMetrics": action_update_metrics,
     "createHighLayers": action_create_high_layers,

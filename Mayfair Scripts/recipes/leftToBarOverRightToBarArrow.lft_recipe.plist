@@ -110,6 +110,22 @@
         <string>${DoublePairedArrowGap}</string>
       </dict>
     </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>alignComponentRightBoundsAndSetMetrics</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftToBarOverRightToBarArrow.lft</string>
+        <key>componentIndexes</key>
+        <array>
+          <integer>0</integer>
+          <integer>1</integer>
+        </array>
+      </dict>
+    </dict>
   </array>
 </dict>
 </plist>

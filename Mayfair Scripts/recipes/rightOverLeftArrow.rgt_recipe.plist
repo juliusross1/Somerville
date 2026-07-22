@@ -53,8 +53,8 @@
         <string>rightOverLeftArrow.rgt</string>
         <key>components</key>
         <array>
-          <string>leftArrow.rgt</string>
           <string>rightArrow.rgt</string>
+          <string>leftArrow.rgt</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
         <key>glyph</key>
         <string>rightOverLeftArrow.rgt</string>
         <key>componentIndex</key>
-        <integer>1</integer>
+        <integer>0</integer>
         <key>x</key>
         <integer>0</integer>
         <key>y</key>
@@ -103,11 +103,29 @@
         <key>glyph</key>
         <string>rightOverLeftArrow.rgt</string>
         <key>componentIndex</key>
-        <integer>0</integer>
+        <integer>1</integer>
         <key>x</key>
         <integer>0</integer>
         <key>y</key>
         <string>${DoublePairedArrowGap}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>alignComponentLeftBoundsAndSetMetrics</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>rightOverLeftArrow.rgt</string>
+        <key>componentIndexes</key>
+        <array>
+          <integer>0</integer>
+          <integer>1</integer>
+        </array>
+        <key>metricsComponentIndex</key>
+        <integer>0</integer>
       </dict>
     </dict>
   </array>

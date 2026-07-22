@@ -8,7 +8,7 @@
   <key>actions</key><array>
     <dict><key>action</key><string>createGlyph</string><key>glyph</key><string>leftHarpoonWithBarbUpAboveLongDash</string><key>export</key><true/><key>color</key><string>${GeneratedColor}</string></dict>
     <dict><key>action</key><string>addComponents</string><key>glyph</key><string>leftHarpoonWithBarbUpAboveLongDash</string><key>components</key><array>
-      <string>DoublePairedArrow.mid</string><string>leftHarpoonWithBarbUpAboveLongDash.lft</string><string>leftHarpoonWithBarbUpAboveLongDash.rgt</string>
+      <string>leftHarpoonWithBarbUpAboveLongDash.lft</string><string>DoublePairedArrow.mid</string><string>leftHarpoonWithBarbUpAboveLongDash.rgt</string>
     </array></dict>
     <dict><key>action</key><string>setMathPluginAssembly</string><key>glyph</key><string>leftHarpoonWithBarbUpAboveLongDash</string><key>direction</key><string>h</string><key>parts</key><array>
       <dict><key>glyph</key><string>leftHarpoonWithBarbUpAboveLongDash.lft</string><key>extender</key><false/><key>startConnector</key><integer>0</integer><key>endConnector</key><string>${ArrowStartandEndConnector}</string></dict>
