@@ -20,11 +20,11 @@ pos = (-29,0);
 ref = harpoonHead;
 },
 {
-pos = (212,0);
+pos = (270,0);
 ref = _ArrowTab;
 }
 );
-width = 270;
+width = 271;
 },
 {
 anchors = (
@@ -43,11 +43,11 @@ pos = (-30,0);
 ref = harpoonHead;
 },
 {
-pos = (211,0);
+pos = (320,0);
 ref = _ArrowTab;
 }
 );
-width = 320;
+width = 321;
 },
 {
 anchors = (
@@ -66,11 +66,11 @@ pos = (-30,0);
 ref = harpoonHead;
 },
 {
-pos = (211,0);
+pos = (269,0);
 ref = _ArrowTab;
 }
 );
-width = 269;
+width = 270;
 },
 {
 anchors = (
@@ -89,11 +89,11 @@ pos = (-30,0);
 ref = harpoonHead;
 },
 {
-pos = (211,1);
+pos = (334,0);
 ref = _ArrowTab;
 }
 );
-width = 334;
+width = 335;
 },
 {
 anchors = (
@@ -115,11 +115,11 @@ pos = (116,0);
 ref = harpoonHead;
 },
 {
-pos = (420,0);
+pos = (453,0);
 ref = _ArrowTab;
 }
 );
-width = 453;
+width = 533;
 },
 {
 anchors = (
@@ -141,11 +141,11 @@ pos = (113,0);
 ref = harpoonHead;
 },
 {
-pos = (420,0);
+pos = (482,0);
 ref = _ArrowTab;
 }
 );
-width = 482;
+width = 562;
 },
 {
 anchors = (
@@ -167,11 +167,11 @@ pos = (50,0);
 ref = harpoonHead;
 },
 {
-pos = (384,0);
+pos = (417,0);
 ref = _ArrowTab;
 }
 );
-width = 417;
+width = 533;
 },
 {
 anchors = (
@@ -194,6 +194,9 @@ ref = harpoonHead;
 },
 {
 alignment = -1;
+piece = {
+height = 0;
+};
 pos = (321,0);
 ref = _ArrowTab;
 }

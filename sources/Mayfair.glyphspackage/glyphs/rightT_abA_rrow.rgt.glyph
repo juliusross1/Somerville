@@ -7,143 +7,161 @@ layers = (
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
+piece = {
+width = 267.96469;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-13,0);
+pos = (225,0);
 ref = ArrowHead;
 },
 {
-pos = (211,0);
+pos = (449,0);
 ref = _ArrowTab;
 }
 );
-width = 269;
+width = 500;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
+piece = {
+width = 398.33502;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-13,0);
+pos = (355,0);
 ref = ArrowHead;
 },
 {
-pos = (261,0);
+pos = (629,0);
 ref = _ArrowTab;
 }
 );
-width = 320;
+width = 680;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
+piece = {
+width = 268.19476;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-13,0);
+pos = (225,0);
 ref = ArrowHead;
 },
 {
-pos = (211,0);
+pos = (449,0);
 ref = _ArrowTab;
 }
 );
-width = 269;
+width = 500;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
+piece = {
+width = 398.45685;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-13,0);
+pos = (355,0);
 ref = ArrowHead;
 },
 {
-pos = (261,1);
+pos = (629,1);
 ref = _ArrowTab;
 }
 );
-width = 320;
+width = 680;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
+piece = {
+width = 148.71432;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-23,0);
+pos = (96,0);
 ref = ArrowHead;
 },
 {
-pos = (251,0);
+pos = (370,0);
 ref = _ArrowTab;
 }
 );
-width = 301;
+width = 500;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
+piece = {
+width = 256.74026;
+};
 ref = _smart.Arrow.mid;
 },
 {
-pos = (-23,0);
+pos = (204,0);
 ref = ArrowHead;
 },
 {
-pos = (323,0);
+pos = (550,0);
 ref = _ArrowTab;
 }
 );
-width = 376;
+width = 680;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
 piece = {
-width = 89.40553;
+width = 123.40553;
 };
 ref = _smart.Arrow.mid;
 },
 {
-pos = (36,0);
+pos = (70,0);
 ref = ArrowHead;
 },
 {
-pos = (300,0);
+pos = (334,0);
 ref = _ArrowTab;
 }
 );
-width = 333;
+width = 500;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 piece = {
-width = 102.51643;
+width = 223.51643;
 };
 ref = _smart.Arrow.mid;
 },
 {
-pos = (35,0);
+pos = (156,0);
 ref = ArrowHead;
 },
 {
-pos = (393,0);
+pos = (514,0);
 ref = _ArrowTab;
 }
 );
-width = 446;
+width = 680;
 }
 );
 metricLeft = "=rightArrow.rgt";

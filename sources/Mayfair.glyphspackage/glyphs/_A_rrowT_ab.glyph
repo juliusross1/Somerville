@@ -7,7 +7,7 @@ layers = (
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -31,12 +31,12 @@ nodes = (
 );
 }
 );
-width = 1;
+width = 51;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -60,12 +60,12 @@ nodes = (
 );
 }
 );
-width = 1;
+width = 51;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -89,12 +89,12 @@ nodes = (
 );
 }
 );
-width = 1;
+width = 51;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,264);
 }
 );
@@ -118,12 +118,12 @@ nodes = (
 );
 }
 );
-width = 1;
+width = 51;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -147,12 +147,12 @@ nodes = (
 );
 }
 );
-width = 80;
+width = 130;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -176,12 +176,12 @@ nodes = (
 );
 }
 );
-width = 80;
+width = 130;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -205,12 +205,12 @@ nodes = (
 );
 }
 );
-width = 116;
+width = 166;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -234,12 +234,12 @@ nodes = (
 );
 }
 );
-width = 116;
+width = 166;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -266,12 +266,12 @@ nodes = (
 );
 }
 );
-width = 1;
+width = 51;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -298,12 +298,12 @@ nodes = (
 );
 }
 );
-width = 1;
+width = 51;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -330,12 +330,12 @@ nodes = (
 );
 }
 );
-width = 1;
+width = 51;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,264);
 }
 );
@@ -362,12 +362,12 @@ nodes = (
 );
 }
 );
-width = 1;
+width = 51;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -394,12 +394,12 @@ nodes = (
 );
 }
 );
-width = 80;
+width = 130;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -426,12 +426,12 @@ nodes = (
 );
 }
 );
-width = 80;
+width = 130;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -458,12 +458,12 @@ nodes = (
 );
 }
 );
-width = 116;
+width = 166;
 },
 {
 anchors = (
 {
-name = _tab;
+name = "%entry";
 pos = (0,265);
 }
 );
@@ -490,10 +490,11 @@ nodes = (
 );
 }
 );
-width = 116;
+width = 166;
 }
 );
 metricLeft = "=0";
+metricRight = "=50";
 partsSettings = (
 {
 bottomValue = 0;
@@ -501,5 +502,5 @@ name = height;
 topValue = 100;
 }
 );
-subCategory = Spacing;
+subCategory = Other;
 }
