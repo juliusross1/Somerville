@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-  <key>formatVersion</key><integer>1</integer>
-  <key>kind</key><string>recipe</string>
-  <key>constants</key><string>recipe_constants.plist</string>
-  <key>name</key><string>leftArrow.rgt</string>
-  <key>actions</key>
-  <array>
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>createGlyph</string>
-      <key>arguments</key>
+  <dict>
+    <key>formatVersion</key>
+    <integer>1</integer>
+    <key>kind</key>
+    <string>recipe</string>
+    <key>constants</key>
+    <string>recipe_constants.plist</string>
+    <key>name</key>
+    <string>leftArrow.rgt</string>
+    <key>actions</key>
+    <array>
       <dict>
-        <key>glyph</key>
-        <string>leftArrow.rgt</string>
-        <key>export</key>
-        <true/>
-        <key>color</key>
-        <string>${GeneratedColor}</string>
+        <key>type</key>
+        <string>call</string>
+        <key>function</key>
+        <string>createGlyph</string>
+        <key>arguments</key>
+        <dict>
+          <key>glyph</key>
+          <string>leftArrow.rgt</string>
+          <key>export</key>
+          <true/>
+          <key>color</key>
+          <string>${GeneratedColor}</string>
+        </dict>
       </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>addComponent</string>
-      <key>arguments</key>
       <dict>
-        <key>glyph</key>
-        <string>leftArrow.rgt</string>
-        <key>component</key>
-        <string>rightArrow.lft</string>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>enableComponentAlignment</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>leftArrow.rgt</string>
-        <key>components</key>
-        <array>
+        <key>type</key>
+        <string>call</string>
+        <key>function</key>
+        <string>addComponent</string>
+        <key>arguments</key>
+        <dict>
+          <key>glyph</key>
+          <string>leftArrow.rgt</string>
+          <key>component</key>
           <string>rightArrow.lft</string>
-        </array>
+        </dict>
       </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>setHorizontalScale</string>
-      <key>arguments</key>
       <dict>
-        <key>glyph</key>
-        <string>leftArrow.rgt</string>
-        <key>components</key>
-        <array>
-          <string>rightArrow.lft</string>
-        </array>
-        <key>scale</key>
-        <integer>-100</integer>
+        <key>type</key>
+        <string>call</string>
+        <key>function</key>
+        <string>enableComponentAlignment</string>
+        <key>arguments</key>
+        <dict>
+          <key>glyph</key>
+          <string>leftArrow.rgt</string>
+          <key>components</key>
+          <array>
+            <string>rightArrow.lft</string>
+          </array>
+        </dict>
       </dict>
-    </dict>
-  </array>
-</dict>
+      <dict>
+        <key>type</key>
+        <string>call</string>
+        <key>function</key>
+        <string>setHorizontalScale</string>
+        <key>arguments</key>
+        <dict>
+          <key>glyph</key>
+          <string>leftArrow.rgt</string>
+          <key>components</key>
+          <array>
+            <string>rightArrow.lft</string>
+          </array>
+          <key>scale</key>
+          <integer>-100</integer>
+        </dict>
+      </dict>
+    </array>
+  </dict>
 </plist>

@@ -29,6 +29,10 @@ tag = STYB;
 {
 name = "Integral Slant";
 tag = INSL;
+},
+{
+name = "Arrow Length";
+tag = ARLN;
 }
 );
 classes = (
@@ -184,6 +188,10 @@ value = 1;
 {
 name = "Axis Mappings";
 value = {
+ARLN = {
+0 = 0;
+1000 = 1000;
+};
 INSL = {
 0 = 0;
 100 = 100;
@@ -383,6 +391,43 @@ Location = 5;
 {
 Axis = "Integral Slant";
 Location = 100;
+}
+);
+},
+{
+name = "Virtual Master";
+value = (
+{
+Axis = "Optical size";
+Location = 5;
+},
+{
+Axis = Width;
+Location = 95;
+},
+{
+Axis = Weight;
+Location = 360;
+},
+{
+Axis = "Math Weight";
+Location = 360;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+},
+{
+Axis = "Integral Slant";
+Location = 0;
+},
+{
+Axis = "Arrow Length";
+Location = 1000;
 }
 );
 }
@@ -1810,6 +1855,7 @@ axesValues = (
 360,
 5,
 5,
+0,
 0
 );
 customParameters = (
@@ -2177,6 +2223,7 @@ axesValues = (
 360,
 5,
 5,
+0,
 0
 );
 customParameters = (
@@ -2529,6 +2576,7 @@ axesValues = (
 360,
 5,
 5,
+0,
 0
 );
 customParameters = (
@@ -2897,6 +2945,7 @@ axesValues = (
 360,
 5,
 5,
+0,
 0
 );
 customParameters = (
@@ -3275,6 +3324,7 @@ axesValues = (
 360,
 5,
 5,
+0,
 0
 );
 customParameters = (
@@ -3659,6 +3709,7 @@ axesValues = (
 360,
 5,
 5,
+0,
 0
 );
 customParameters = (
@@ -4034,6 +4085,7 @@ axesValues = (
 360,
 5,
 5,
+0,
 0
 );
 customParameters = (
@@ -4423,6 +4475,7 @@ axesValues = (
 360,
 5,
 5,
+0,
 0
 );
 customParameters = (
@@ -4875,7 +4928,6 @@ Location = 5;
 );
 }
 );
-exports = 0;
 name = "Mayfair Variable";
 type = variable;
 },
@@ -4887,7 +4939,8 @@ axesValues = (
 560,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -4940,7 +4993,8 @@ axesValues = (
 600,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -4993,7 +5047,8 @@ axesValues = (
 675,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5047,7 +5102,8 @@ axesValues = (
 750,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5101,7 +5157,8 @@ axesValues = (
 850,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5157,7 +5214,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5211,7 +5269,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5248,6 +5307,7 @@ name = Filter;
 value = "RemoveOverlap; exclude: Mitalic-math";
 }
 );
+exports = 0;
 instanceInterpolations = {
 "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 1;
 };
@@ -5263,7 +5323,8 @@ axesValues = (
 560,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5316,7 +5377,8 @@ axesValues = (
 600,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5370,7 +5432,8 @@ axesValues = (
 675,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5425,7 +5488,8 @@ axesValues = (
 750,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5480,7 +5544,8 @@ axesValues = (
 850,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5537,7 +5602,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5592,7 +5658,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5645,7 +5712,8 @@ axesValues = (
 560,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5698,7 +5766,8 @@ axesValues = (
 600,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5751,7 +5820,8 @@ axesValues = (
 675,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5805,7 +5875,8 @@ axesValues = (
 750,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5859,7 +5930,8 @@ axesValues = (
 850,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5915,7 +5987,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -5969,7 +6042,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6021,7 +6095,8 @@ axesValues = (
 560,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6075,7 +6150,8 @@ axesValues = (
 600,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6130,7 +6206,8 @@ axesValues = (
 675,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6186,7 +6263,8 @@ axesValues = (
 750,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6242,7 +6320,8 @@ axesValues = (
 850,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6300,7 +6379,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6356,7 +6436,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6410,7 +6491,8 @@ axesValues = (
 560,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6465,7 +6547,8 @@ axesValues = (
 600,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6523,7 +6606,8 @@ axesValues = (
 675,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6582,7 +6666,8 @@ axesValues = (
 750,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6641,7 +6726,8 @@ axesValues = (
 850,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6702,7 +6788,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6761,7 +6848,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6816,7 +6904,8 @@ axesValues = (
 560,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6870,7 +6959,8 @@ axesValues = (
 600,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6925,7 +7015,8 @@ axesValues = (
 675,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -6981,7 +7072,8 @@ axesValues = (
 750,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7037,7 +7129,8 @@ axesValues = (
 850,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7095,7 +7188,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7151,7 +7245,8 @@ axesValues = (
 900,
 5,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7205,7 +7300,8 @@ axesValues = (
 560,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7259,7 +7355,8 @@ axesValues = (
 600,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7314,7 +7411,8 @@ axesValues = (
 675,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7370,7 +7468,8 @@ axesValues = (
 750,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7426,7 +7525,8 @@ axesValues = (
 850,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7484,7 +7584,8 @@ axesValues = (
 900,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7540,7 +7641,8 @@ axesValues = (
 900,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7594,7 +7696,8 @@ axesValues = (
 560,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7649,7 +7752,8 @@ axesValues = (
 600,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7707,7 +7811,8 @@ axesValues = (
 675,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7766,7 +7871,8 @@ axesValues = (
 750,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7825,7 +7931,8 @@ axesValues = (
 850,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7886,7 +7993,8 @@ axesValues = (
 900,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -7945,7 +8053,8 @@ axesValues = (
 900,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8000,7 +8109,8 @@ axesValues = (
 560,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8054,7 +8164,8 @@ axesValues = (
 600,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8109,7 +8220,8 @@ axesValues = (
 675,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8165,7 +8277,8 @@ axesValues = (
 750,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8221,7 +8334,8 @@ axesValues = (
 850,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8279,7 +8393,8 @@ axesValues = (
 900,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8335,7 +8450,8 @@ axesValues = (
 900,
 53,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8389,7 +8505,8 @@ axesValues = (
 560,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8443,7 +8560,8 @@ axesValues = (
 600,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8498,7 +8616,8 @@ axesValues = (
 675,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8554,7 +8673,8 @@ axesValues = (
 750,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8610,7 +8730,8 @@ axesValues = (
 850,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8668,7 +8789,8 @@ axesValues = (
 900,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8724,7 +8846,8 @@ axesValues = (
 900,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8778,7 +8901,8 @@ axesValues = (
 560,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8833,7 +8957,8 @@ axesValues = (
 600,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8891,7 +9016,8 @@ axesValues = (
 675,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -8950,7 +9076,8 @@ axesValues = (
 750,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9009,7 +9136,8 @@ axesValues = (
 850,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9070,7 +9198,8 @@ axesValues = (
 900,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9129,7 +9258,8 @@ axesValues = (
 900,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9184,7 +9314,8 @@ axesValues = (
 560,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9238,7 +9369,8 @@ axesValues = (
 600,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9293,7 +9425,8 @@ axesValues = (
 675,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9349,7 +9482,8 @@ axesValues = (
 750,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9405,7 +9539,8 @@ axesValues = (
 850,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9463,7 +9598,8 @@ axesValues = (
 900,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9519,7 +9655,8 @@ axesValues = (
 900,
 197,
 5,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9573,7 +9710,8 @@ axesValues = (
 560,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9631,7 +9769,8 @@ axesValues = (
 600,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9686,7 +9825,8 @@ axesValues = (
 675,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9742,7 +9882,8 @@ axesValues = (
 750,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9798,7 +9939,8 @@ axesValues = (
 850,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9856,7 +9998,8 @@ axesValues = (
 900,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9912,7 +10055,8 @@ axesValues = (
 900,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -9966,7 +10110,8 @@ axesValues = (
 560,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10021,7 +10166,8 @@ axesValues = (
 600,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10083,7 +10229,8 @@ axesValues = (
 675,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10142,7 +10289,8 @@ axesValues = (
 750,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10201,7 +10349,8 @@ axesValues = (
 850,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10262,7 +10411,8 @@ axesValues = (
 900,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10321,7 +10471,8 @@ axesValues = (
 900,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10376,7 +10527,8 @@ axesValues = (
 560,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10430,7 +10582,8 @@ axesValues = (
 600,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10485,7 +10638,8 @@ axesValues = (
 675,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10541,7 +10695,8 @@ axesValues = (
 750,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10597,7 +10752,8 @@ axesValues = (
 850,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10655,7 +10811,8 @@ axesValues = (
 900,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10711,7 +10868,8 @@ axesValues = (
 900,
 450,
 342,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10765,7 +10923,8 @@ axesValues = (
 560,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10819,7 +10978,8 @@ axesValues = (
 600,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10874,7 +11034,8 @@ axesValues = (
 675,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10930,7 +11091,8 @@ axesValues = (
 750,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -10986,7 +11148,8 @@ axesValues = (
 850,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11044,7 +11207,8 @@ axesValues = (
 900,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11100,7 +11264,8 @@ axesValues = (
 900,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11154,7 +11319,8 @@ axesValues = (
 560,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11209,7 +11375,8 @@ axesValues = (
 600,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11267,7 +11434,8 @@ axesValues = (
 675,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11326,7 +11494,8 @@ axesValues = (
 750,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11385,7 +11554,8 @@ axesValues = (
 850,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11446,7 +11616,8 @@ axesValues = (
 900,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11505,7 +11676,8 @@ axesValues = (
 900,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11560,7 +11732,8 @@ axesValues = (
 560,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11614,7 +11787,8 @@ axesValues = (
 600,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11669,7 +11843,8 @@ axesValues = (
 675,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11725,7 +11900,8 @@ axesValues = (
 750,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11781,7 +11957,8 @@ axesValues = (
 850,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11839,7 +12016,8 @@ axesValues = (
 900,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11895,7 +12073,8 @@ axesValues = (
 900,
 640,
 481,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -11949,7 +12128,8 @@ axesValues = (
 560,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12003,7 +12183,8 @@ axesValues = (
 600,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12058,7 +12239,8 @@ axesValues = (
 675,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12114,7 +12296,8 @@ axesValues = (
 750,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12170,7 +12353,8 @@ axesValues = (
 850,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12228,7 +12412,8 @@ axesValues = (
 900,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12284,7 +12469,8 @@ axesValues = (
 900,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12338,7 +12524,8 @@ axesValues = (
 560,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12393,7 +12580,8 @@ axesValues = (
 600,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12451,7 +12639,8 @@ axesValues = (
 675,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12510,7 +12699,8 @@ axesValues = (
 750,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12569,7 +12759,8 @@ axesValues = (
 850,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12630,7 +12821,8 @@ axesValues = (
 900,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12689,7 +12881,8 @@ axesValues = (
 900,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12744,7 +12937,8 @@ axesValues = (
 560,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12798,7 +12992,8 @@ axesValues = (
 600,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12853,7 +13048,8 @@ axesValues = (
 675,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12909,7 +13105,8 @@ axesValues = (
 750,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -12965,7 +13162,8 @@ axesValues = (
 850,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13023,7 +13221,8 @@ axesValues = (
 900,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13079,7 +13278,8 @@ axesValues = (
 900,
 696,
 649,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13133,7 +13333,8 @@ axesValues = (
 560,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13187,7 +13388,8 @@ axesValues = (
 600,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13242,7 +13444,8 @@ axesValues = (
 675,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13298,7 +13501,8 @@ axesValues = (
 750,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13354,7 +13558,8 @@ axesValues = (
 850,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13412,7 +13617,8 @@ axesValues = (
 900,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13468,7 +13674,8 @@ axesValues = (
 900,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13522,7 +13729,8 @@ axesValues = (
 560,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13577,7 +13785,8 @@ axesValues = (
 600,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13635,7 +13844,8 @@ axesValues = (
 675,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13694,7 +13904,8 @@ axesValues = (
 750,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13753,7 +13964,8 @@ axesValues = (
 850,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13814,7 +14026,8 @@ axesValues = (
 900,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13873,7 +14086,8 @@ axesValues = (
 900,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13928,7 +14142,8 @@ axesValues = (
 560,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -13982,7 +14197,8 @@ axesValues = (
 600,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14037,7 +14253,8 @@ axesValues = (
 675,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14093,7 +14310,8 @@ axesValues = (
 750,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14149,7 +14367,8 @@ axesValues = (
 850,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14207,7 +14426,8 @@ axesValues = (
 900,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14263,7 +14483,8 @@ axesValues = (
 900,
 837,
 802,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14317,7 +14538,8 @@ axesValues = (
 560,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14371,7 +14593,8 @@ axesValues = (
 600,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14426,7 +14649,8 @@ axesValues = (
 675,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14482,7 +14706,8 @@ axesValues = (
 750,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14538,7 +14763,8 @@ axesValues = (
 850,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14596,7 +14822,8 @@ axesValues = (
 900,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14652,7 +14879,8 @@ axesValues = (
 900,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14706,7 +14934,8 @@ axesValues = (
 560,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14761,7 +14990,8 @@ axesValues = (
 600,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14819,7 +15049,8 @@ axesValues = (
 675,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14878,7 +15109,8 @@ axesValues = (
 750,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14937,7 +15169,8 @@ axesValues = (
 850,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -14998,7 +15231,8 @@ axesValues = (
 900,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15057,7 +15291,8 @@ axesValues = (
 900,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15112,7 +15347,8 @@ axesValues = (
 560,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15166,7 +15402,8 @@ axesValues = (
 600,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15221,7 +15458,8 @@ axesValues = (
 675,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15277,7 +15515,8 @@ axesValues = (
 750,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15333,7 +15572,8 @@ axesValues = (
 850,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15391,7 +15631,8 @@ axesValues = (
 900,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15447,7 +15688,8 @@ axesValues = (
 900,
 925,
 874,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15501,7 +15743,8 @@ axesValues = (
 560,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15555,7 +15798,8 @@ axesValues = (
 600,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15610,7 +15854,8 @@ axesValues = (
 675,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15666,7 +15911,8 @@ axesValues = (
 750,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15722,7 +15968,8 @@ axesValues = (
 850,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15780,7 +16027,8 @@ axesValues = (
 900,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15836,7 +16084,8 @@ axesValues = (
 900,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15890,7 +16139,8 @@ axesValues = (
 560,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -15945,7 +16195,8 @@ axesValues = (
 600,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16003,7 +16254,8 @@ axesValues = (
 675,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16062,7 +16314,8 @@ axesValues = (
 750,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16121,7 +16374,8 @@ axesValues = (
 850,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16182,7 +16436,8 @@ axesValues = (
 900,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16241,7 +16496,8 @@ axesValues = (
 900,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16296,7 +16552,8 @@ axesValues = (
 560,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16350,7 +16607,8 @@ axesValues = (
 600,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16405,7 +16663,8 @@ axesValues = (
 675,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16461,7 +16720,8 @@ axesValues = (
 750,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16517,7 +16777,8 @@ axesValues = (
 850,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16575,7 +16836,8 @@ axesValues = (
 900,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16631,7 +16893,8 @@ axesValues = (
 900,
 1002,
 969,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16685,7 +16948,8 @@ axesValues = (
 560,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16739,7 +17003,8 @@ axesValues = (
 600,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16794,7 +17059,8 @@ axesValues = (
 675,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16850,7 +17116,8 @@ axesValues = (
 750,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16906,7 +17173,8 @@ axesValues = (
 850,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -16964,7 +17232,8 @@ axesValues = (
 900,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17020,7 +17289,8 @@ axesValues = (
 900,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17074,7 +17344,8 @@ axesValues = (
 560,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17129,7 +17400,8 @@ axesValues = (
 600,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17187,7 +17459,8 @@ axesValues = (
 675,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17246,7 +17519,8 @@ axesValues = (
 750,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17305,7 +17579,8 @@ axesValues = (
 850,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17366,7 +17641,8 @@ axesValues = (
 900,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17425,7 +17701,8 @@ axesValues = (
 900,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17480,7 +17757,8 @@ axesValues = (
 560,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17534,7 +17812,8 @@ axesValues = (
 600,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17589,7 +17868,8 @@ axesValues = (
 675,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17645,7 +17925,8 @@ axesValues = (
 750,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17701,7 +17982,8 @@ axesValues = (
 850,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17759,7 +18041,8 @@ axesValues = (
 900,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17815,7 +18098,8 @@ axesValues = (
 900,
 1009,
 1003,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17869,7 +18153,8 @@ axesValues = (
 560,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17922,7 +18207,8 @@ axesValues = (
 600,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -17975,7 +18261,8 @@ axesValues = (
 675,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18029,7 +18316,8 @@ axesValues = (
 750,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18083,7 +18371,8 @@ axesValues = (
 850,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18139,7 +18428,8 @@ axesValues = (
 900,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18193,7 +18483,8 @@ axesValues = (
 900,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18246,7 +18537,8 @@ axesValues = (
 560,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18299,7 +18591,8 @@ axesValues = (
 600,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18353,7 +18646,8 @@ axesValues = (
 675,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18408,7 +18702,8 @@ axesValues = (
 750,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18463,7 +18758,8 @@ axesValues = (
 850,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18520,7 +18816,8 @@ axesValues = (
 900,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18575,7 +18872,8 @@ axesValues = (
 900,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18628,7 +18926,8 @@ axesValues = (
 560,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18681,7 +18980,8 @@ axesValues = (
 600,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18734,7 +19034,8 @@ axesValues = (
 675,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18788,7 +19089,8 @@ axesValues = (
 750,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18842,7 +19144,8 @@ axesValues = (
 850,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18898,7 +19201,8 @@ axesValues = (
 900,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
@@ -18952,7 +19256,8 @@ axesValues = (
 900,
 1151,
 1122,
-0
+0,
+100
 );
 customParameters = (
 {
