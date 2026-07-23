@@ -1,13 +1,13 @@
 {
 category = Symbol;
-color = 0;
+color = 3;
 glyphname = rightFrombarDoubleArrow.lft;
 layers = (
 {
 anchors = (
 {
 name = "#exit";
-pos = (340,265);
+pos = (341,265);
 }
 );
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -15,17 +15,17 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 284;
+width = 251;
 };
-pos = (56,0);
+pos = (89,0);
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (56,85);
+pos = (89,85);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (56,445);
+pos = (89,445);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
@@ -33,7 +33,7 @@ scale = (1,-1);
 piece = {
 height = 50;
 };
-pos = (55,0);
+pos = (88,0);
 ref = _ArrowTab;
 }
 );
@@ -51,18 +51,18 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 361;
+width = 321;
 };
-pos = (89,0);
+pos = (129,0);
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (89,85);
+pos = (129,85);
 ref = _rightFrombarArrow.serif;
 },
 {
 alignment = -1;
-pos = (89,445);
+pos = (129,445);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
@@ -70,7 +70,7 @@ scale = (1,-1);
 piece = {
 height = 50;
 };
-pos = (88,0);
+pos = (128,0);
 ref = _ArrowTab;
 }
 );
@@ -80,7 +80,7 @@ width = 450;
 anchors = (
 {
 name = "#exit";
-pos = (340,265);
+pos = (343,265);
 }
 );
 annotations = (
@@ -95,18 +95,18 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 285;
+width = 252;
 };
-pos = (55,0);
+pos = (88,0);
 ref = _smart.DoubleArrow.mid;
 },
 {
 alignment = -1;
-pos = (56,85);
+pos = (89,85);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (56,445);
+pos = (89,445);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
@@ -114,7 +114,7 @@ scale = (1,-1);
 piece = {
 height = 50;
 };
-pos = (55,0);
+pos = (88,0);
 ref = _ArrowTab;
 }
 );
@@ -132,18 +132,18 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 361;
+width = 321;
 };
-pos = (89,0);
+pos = (129,0);
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (89,85);
+pos = (129,85);
 ref = _rightFrombarArrow.serif;
 },
 {
 alignment = -1;
-pos = (89,445);
+pos = (129,445);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
@@ -151,7 +151,7 @@ scale = (1,-1);
 piece = {
 height = 50;
 };
-pos = (88,0);
+pos = (128,0);
 ref = _ArrowTab;
 }
 );
@@ -161,7 +161,7 @@ width = 450;
 anchors = (
 {
 name = "#exit";
-pos = (340,265);
+pos = (343,265);
 }
 );
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -169,17 +169,17 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 231;
+width = 188;
 };
-pos = (109,0);
+pos = (152,0);
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (109,80);
+pos = (152,80);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (109,450);
+pos = (152,450);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
@@ -187,7 +187,7 @@ scale = (1,-1);
 piece = {
 height = 50;
 };
-pos = (45,0);
+pos = (88,0);
 ref = _ArrowTab;
 scale = (0.8,1);
 }
@@ -206,17 +206,17 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 308;
+width = 258;
 };
-pos = (142,0);
+pos = (192,0);
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (142,80);
+pos = (192,80);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (142,450);
+pos = (192,450);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
@@ -225,7 +225,7 @@ alignment = -1;
 piece = {
 height = 50;
 };
-pos = (78,0);
+pos = (128,0);
 ref = _ArrowTab;
 scale = (0.8,1);
 }
@@ -236,7 +236,7 @@ width = 450;
 anchors = (
 {
 name = "#exit";
-pos = (338,265);
+pos = (341,265);
 }
 );
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -244,18 +244,18 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 39.9;
+width = 31.7;
 };
-pos = (138,0);
+pos = (181,0);
 ref = _smart.DoubleArrow.mid;
 scale = (5,1);
 },
 {
-pos = (138,61);
+pos = (181,61);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (138,469);
+pos = (181,469);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
@@ -263,18 +263,18 @@ scale = (1,-1);
 piece = {
 height = 50;
 };
-pos = (45,0);
+pos = (88,0);
 ref = _ArrowTab;
 scale = (0.8,1);
 }
 );
-width = 338;
+width = 341;
 },
 {
 anchors = (
 {
 name = "#exit";
-pos = (449,265);
+pos = (448,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -282,17 +282,17 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 259.33017;
+width = 231.33017;
 };
-pos = (190,0);
+pos = (219,0);
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (190,61);
+pos = (219,61);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (190,469);
+pos = (219,469);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
@@ -300,14 +300,15 @@ scale = (1,-1);
 piece = {
 height = 50;
 };
-pos = (98,0);
+pos = (128,0);
 ref = _ArrowTab;
 scale = (0.8,1);
 }
 );
-width = 449;
+width = 450;
 }
 );
+metricLeft = "=rightFrombarArrow.lft+20";
 metricRight = "=0";
 subCategory = Arrow;
 }

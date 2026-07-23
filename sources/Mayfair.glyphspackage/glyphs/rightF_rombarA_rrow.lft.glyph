@@ -1,13 +1,13 @@
 {
 category = Symbol;
-color = 0;
+color = 3;
 glyphname = rightFrombarArrow.lft;
 layers = (
 {
 anchors = (
 {
 name = "#exit";
-pos = (340,265);
+pos = (310,265);
 }
 );
 attr = {
@@ -23,25 +23,25 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 242.29926;
+width = 272.29926;
 };
-pos = (98,0);
+pos = (68,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (98,-1);
+pos = (68,-1);
 ref = _rightFrombarArrow.serif;
 },
 {
 alignment = -1;
-pos = (98,531);
+pos = (68,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
 alignment = -1;
-pos = (98,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
@@ -51,7 +51,7 @@ width = 340;
 anchors = (
 {
 name = "#exit";
-pos = (450,265);
+pos = (460,265);
 }
 );
 attr = {
@@ -67,23 +67,23 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 350.68268;
+width = 340.68268;
 };
-pos = (99,0);
+pos = (109,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (99,-1);
+pos = (109,-1);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (99,531);
+pos = (109,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (108,0);
 ref = _ArrowTab;
 }
 );
@@ -93,7 +93,7 @@ width = 450;
 anchors = (
 {
 name = "#exit";
-pos = (340,265);
+pos = (310,265);
 }
 );
 attr = {
@@ -109,23 +109,23 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 241.29178;
+width = 271.29178;
 };
-pos = (99,0);
+pos = (69,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (99,0);
+pos = (69,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (99,531);
+pos = (69,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
@@ -135,7 +135,7 @@ width = 340;
 anchors = (
 {
 name = "#exit";
-pos = (450,265);
+pos = (460,265);
 }
 );
 attr = {
@@ -151,23 +151,23 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 351.12097;
+width = 341.12097;
 };
-pos = (99,0);
+pos = (109,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (99,0);
+pos = (109,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (99,531);
+pos = (109,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (108,0);
 ref = _ArrowTab;
 }
 );
@@ -177,7 +177,7 @@ width = 450;
 anchors = (
 {
 name = "#exit";
-pos = (340,265);
+pos = (300,265);
 }
 );
 attr = {
@@ -193,23 +193,24 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 162.06708;
+width = 202.06708;
 };
-pos = (178,0);
+pos = (138,0);
 ref = _smart.Arrow.mid;
 },
 {
-pos = (178,0);
+pos = (138,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (178,530);
+pos = (138,530);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (68,0);
 ref = _ArrowTab;
+scale = (0.9,1);
 }
 );
 width = 340;
@@ -252,8 +253,9 @@ scale = (1,-1);
 },
 {
 alignment = -1;
-pos = (98,0);
+pos = (108,0);
 ref = _ArrowTab;
+scale = (0.9,1);
 }
 );
 width = 450;
@@ -262,7 +264,7 @@ width = 450;
 anchors = (
 {
 name = "#exit";
-pos = (341,265);
+pos = (311,265);
 }
 );
 attr = {
@@ -278,23 +280,23 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 21.77423;
+width = 26.60756;
 };
-pos = (209,0);
+pos = (179,0);
 ref = _smart.Arrow.mid;
 scale = (6,1);
 },
 {
-pos = (214,0);
+pos = (184,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (214,530);
+pos = (184,530);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
@@ -304,7 +306,7 @@ width = 341;
 anchors = (
 {
 name = "#exit";
-pos = (444.2,265);
+pos = (454,265);
 }
 );
 attr = {
@@ -322,31 +324,31 @@ alignment = -1;
 piece = {
 width = 20.44948;
 };
-pos = (214,0);
+pos = (224,0);
 ref = _smart.Arrow.mid;
 scale = (11.51,1);
 },
 {
-pos = (214,0);
+pos = (224,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (214,530);
+pos = (224,530);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (108,0);
 ref = _ArrowTab;
 }
 );
-width = 444;
+width = 454;
 },
 {
 anchors = (
 {
 name = "#exit";
-pos = (340,265);
+pos = (310,265);
 }
 );
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -365,25 +367,25 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 242.43457;
+width = 272.43457;
 };
-pos = (98,0);
+pos = (68,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (98,-1);
+pos = (68,-1);
 ref = _rightFrombarArrow.serif;
 },
 {
 alignment = -1;
-pos = (98,531);
+pos = (68,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
 alignment = -1;
-pos = (98,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
@@ -393,7 +395,7 @@ width = 340;
 anchors = (
 {
 name = "#exit";
-pos = (450,265);
+pos = (460,265);
 }
 );
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -412,23 +414,23 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 350.9787;
+width = 340.9787;
 };
-pos = (99,0);
+pos = (109,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (99,-1);
+pos = (109,-1);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (99,531);
+pos = (109,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (108,0);
 ref = _ArrowTab;
 }
 );
@@ -438,7 +440,7 @@ width = 450;
 anchors = (
 {
 name = "#exit";
-pos = (340,265);
+pos = (310,265);
 }
 );
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -457,23 +459,23 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 241.45245;
+width = 271.45245;
 };
-pos = (99,0);
+pos = (69,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (99,0);
+pos = (69,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (99,531);
+pos = (69,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
@@ -483,7 +485,7 @@ width = 340;
 anchors = (
 {
 name = "#exit";
-pos = (450,265);
+pos = (460,265);
 }
 );
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -502,23 +504,23 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 351.07672;
+width = 341.07672;
 };
-pos = (99,0);
+pos = (109,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (99,0);
+pos = (109,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (99,531);
+pos = (109,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (108,0);
 ref = _ArrowTab;
 }
 );
@@ -528,7 +530,7 @@ width = 450;
 anchors = (
 {
 name = "#exit";
-pos = (340,265);
+pos = (300,265);
 }
 );
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -547,23 +549,24 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 162.38;
+width = 202.38;
 };
-pos = (178,0);
+pos = (138,0);
 ref = _smart.Arrow.mid;
 },
 {
-pos = (178,0);
+pos = (138,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (178,530);
+pos = (138,530);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (68,0);
 ref = _ArrowTab;
+scale = (0.9,1);
 }
 );
 width = 340;
@@ -609,8 +612,9 @@ scale = (1,-1);
 },
 {
 alignment = -1;
-pos = (98,0);
+pos = (108,0);
 ref = _ArrowTab;
+scale = (0.9,1);
 }
 );
 width = 450;
@@ -619,7 +623,7 @@ width = 450;
 anchors = (
 {
 name = "#exit";
-pos = (341,265);
+pos = (311,265);
 }
 );
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -638,23 +642,23 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 22.97318;
+width = 27.80651;
 };
-pos = (203,0);
+pos = (173,0);
 ref = _smart.Arrow.mid;
 scale = (6,1);
 },
 {
-pos = (214,0);
+pos = (184,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (214,530);
+pos = (184,530);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
@@ -664,7 +668,7 @@ width = 341;
 anchors = (
 {
 name = "#exit";
-pos = (455.71,265);
+pos = (466,265);
 }
 );
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -683,30 +687,29 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 20.96578;
+width = 19.5751;
 };
-pos = (214,0);
+pos = (224,0);
 ref = _smart.Arrow.mid;
 scale = (11.51,1);
 },
 {
-pos = (214,0);
+pos = (224,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (214,530);
+pos = (224,530);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (98,0);
+pos = (108,0);
 ref = _ArrowTab;
 }
 );
-width = 456;
+width = 454;
 }
 );
-metricLeft = "=98";
 metricRight = "=0";
 partsSettings = (
 {

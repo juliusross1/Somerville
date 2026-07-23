@@ -1,5 +1,5 @@
 {
-color = 0;
+color = 1;
 glyphname = rightOverLeftArrow;
 layers = (
 {
@@ -10,12 +10,12 @@ alignment = 1;
 ref = leftAndRightArrow.lft;
 },
 {
-pos = (480,-80);
+pos = (340,0);
 ref = DoublePairedArrow.mid;
 },
 {
 alignment = 1;
-pos = (980,-600);
+pos = (840,0);
 ref = leftAndRightArrow.rgt;
 }
 );
@@ -43,7 +43,7 @@ leftAndRightArrow.rgt,
 );
 };
 };
-width = 1463;
+width = 1323;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -53,265 +53,7 @@ alignment = 1;
 ref = leftAndRightArrow.lft;
 },
 {
-pos = (600,-80);
-ref = DoublePairedArrow.mid;
-},
-{
-alignment = 1;
-pos = (1100,-600);
-ref = leftAndRightArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-leftAndRightArrow.lft,
-0,
-0,
-30
-),
-(
-DoublePairedArrow.ext,
-1,
-450,
-450
-),
-(
-leftAndRightArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1692;
-},
-{
-layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
-shapes = (
-{
-alignment = 1;
-ref = leftAndRightArrow.lft;
-},
-{
-pos = (480,-80);
-ref = DoublePairedArrow.mid;
-},
-{
-alignment = 1;
-pos = (980,-600);
-ref = leftAndRightArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-leftAndRightArrow.lft,
-0,
-0,
-30
-),
-(
-DoublePairedArrow.ext,
-1,
-450,
-450
-),
-(
-leftAndRightArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1463;
-},
-{
-layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-shapes = (
-{
-alignment = 1;
-ref = leftAndRightArrow.lft;
-},
-{
-pos = (593,-81);
-ref = DoublePairedArrow.mid;
-},
-{
-alignment = 1;
-pos = (1093,-601);
-ref = leftAndRightArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-leftAndRightArrow.lft,
-0,
-0,
-30
-),
-(
-DoublePairedArrow.ext,
-1,
-450,
-450
-),
-(
-leftAndRightArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1678;
-},
-{
-layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
-shapes = (
-{
-alignment = 1;
-ref = leftAndRightArrow.lft;
-},
-{
-pos = (480,-80);
-ref = DoublePairedArrow.mid;
-},
-{
-alignment = 1;
-pos = (980,-600);
-ref = leftAndRightArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-leftAndRightArrow.lft,
-0,
-0,
-30
-),
-(
-DoublePairedArrow.ext,
-1,
-450,
-450
-),
-(
-leftAndRightArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1473;
-},
-{
-layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-shapes = (
-{
-alignment = 1;
-ref = leftAndRightArrow.lft;
-},
-{
-pos = (602,-80);
-ref = DoublePairedArrow.mid;
-},
-{
-alignment = 1;
-pos = (1102,-600);
-ref = leftAndRightArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-leftAndRightArrow.lft,
-0,
-0,
-30
-),
-(
-DoublePairedArrow.ext,
-1,
-450,
-450
-),
-(
-leftAndRightArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1706;
-},
-{
-layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
-shapes = (
-{
-alignment = 1;
-ref = leftAndRightArrow.lft;
-},
-{
-pos = (327,-80);
-ref = DoublePairedArrow.mid;
-},
-{
-alignment = 1;
-pos = (827,-600);
-ref = leftAndRightArrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-leftAndRightArrow.lft,
-0,
-0,
-30
-),
-(
-DoublePairedArrow.ext,
-1,
-450,
-450
-),
-(
-leftAndRightArrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1167;
-},
-{
-layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
-shapes = (
-{
-alignment = 1;
-ref = leftAndRightArrow.lft;
-},
-{
-pos = (450,0);
+pos = (450,-1);
 ref = DoublePairedArrow.mid;
 },
 {
@@ -344,7 +86,265 @@ leftAndRightArrow.rgt,
 );
 };
 };
-width = 1422;
+width = 1543;
+},
+{
+layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
+shapes = (
+{
+alignment = 1;
+ref = leftAndRightArrow.lft;
+},
+{
+pos = (340,0);
+ref = DoublePairedArrow.mid;
+},
+{
+alignment = 1;
+pos = (840,0);
+ref = leftAndRightArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+leftAndRightArrow.lft,
+0,
+0,
+30
+),
+(
+DoublePairedArrow.ext,
+1,
+450,
+450
+),
+(
+leftAndRightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1323;
+},
+{
+layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+shapes = (
+{
+alignment = 1;
+ref = leftAndRightArrow.lft;
+},
+{
+pos = (481,-1);
+ref = DoublePairedArrow.mid;
+},
+{
+alignment = 1;
+pos = (982,0);
+ref = leftAndRightArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+leftAndRightArrow.lft,
+0,
+0,
+30
+),
+(
+DoublePairedArrow.ext,
+1,
+450,
+450
+),
+(
+leftAndRightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1432;
+},
+{
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+shapes = (
+{
+alignment = 1;
+ref = leftAndRightArrow.lft;
+},
+{
+pos = (340,0);
+ref = DoublePairedArrow.mid;
+},
+{
+alignment = 1;
+pos = (840,0);
+ref = leftAndRightArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+leftAndRightArrow.lft,
+0,
+0,
+30
+),
+(
+DoublePairedArrow.ext,
+1,
+450,
+450
+),
+(
+leftAndRightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1180;
+},
+{
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+alignment = 1;
+ref = leftAndRightArrow.lft;
+},
+{
+pos = (481,0);
+ref = DoublePairedArrow.mid;
+},
+{
+alignment = 1;
+pos = (981,0);
+ref = leftAndRightArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+leftAndRightArrow.lft,
+0,
+0,
+30
+),
+(
+DoublePairedArrow.ext,
+1,
+450,
+450
+),
+(
+leftAndRightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1431;
+},
+{
+layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+shapes = (
+{
+alignment = 1;
+ref = leftAndRightArrow.lft;
+},
+{
+pos = (340,0);
+ref = DoublePairedArrow.mid;
+},
+{
+alignment = 1;
+pos = (841,0);
+ref = leftAndRightArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+leftAndRightArrow.lft,
+0,
+0,
+30
+),
+(
+DoublePairedArrow.ext,
+1,
+450,
+450
+),
+(
+leftAndRightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1181;
+},
+{
+layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+shapes = (
+{
+alignment = 1;
+ref = leftAndRightArrow.lft;
+},
+{
+pos = (482,0);
+ref = DoublePairedArrow.mid;
+},
+{
+alignment = 1;
+pos = (983,0);
+ref = leftAndRightArrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+leftAndRightArrow.lft,
+0,
+0,
+30
+),
+(
+DoublePairedArrow.ext,
+1,
+450,
+450
+),
+(
+leftAndRightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1433;
 }
 );
 unicode = 8644;

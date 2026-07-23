@@ -112,14 +112,20 @@ width = 270;
 anchors = (
 {
 name = _stroke;
-pos = (214,265);
+pos = (170,265);
+}
+);
+annotations = (
+{
+pos = (200.062,267.824);
+type = Text;
 }
 );
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
 alignment = -1;
-pos = (349,0);
+pos = (260,0);
 ref = _ArrowTab;
 },
 {
@@ -127,53 +133,49 @@ alignment = -1;
 ref = _ArrowTab;
 }
 );
-width = 429;
+width = 340;
 },
 {
 anchors = (
 {
 name = _stroke;
-pos = (127,265);
+pos = (147,265);
 }
 );
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
 alignment = -1;
-pos = (163,0);
+pos = (176,0);
 ref = _ArrowTab;
-scale = (0.8,1);
 },
 {
 alignment = -1;
 ref = _ArrowTab;
-scale = (0.8,1);
 }
 );
-width = 256;
+width = 292;
 },
 {
 anchors = (
 {
 name = _stroke;
-pos = (139,265);
+pos = (200,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 alignment = -1;
-pos = (187,0);
+pos = (282,0);
 ref = _ArrowTab;
-scale = (0.8,1);
 },
 {
 alignment = -1;
 ref = _ArrowTab;
-scale = (0.8,1);
 }
 );
-width = 280;
+width = 398;
 }
 );
 metricLeft = "=0";

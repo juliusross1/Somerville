@@ -10,12 +10,55 @@ alignment = 1;
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.lft;
 },
 {
-pos = (471,-80);
+pos = (398,0);
 ref = DoublePairedArrow.mid;
 },
 {
 alignment = 1;
-pos = (959,-160);
+pos = (886,0);
+ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.lft,
+0,
+0,
+30
+),
+(
+DoublePairedArrow.ext,
+1,
+450,
+450
+),
+(
+leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1208;
+},
+{
+layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+shapes = (
+{
+alignment = 1;
+ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.lft;
+},
+{
+pos = (555,0);
+ref = DoublePairedArrow.mid;
+},
+{
+alignment = 1;
+pos = (1032,0);
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt;
 }
 );
@@ -46,49 +89,6 @@ leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt,
 width = 1451;
 },
 {
-layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
-shapes = (
-{
-alignment = 1;
-ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.lft;
-},
-{
-pos = (598,-80);
-ref = DoublePairedArrow.mid;
-},
-{
-alignment = 1;
-pos = (1075,-160);
-ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.lft,
-0,
-0,
-30
-),
-(
-DoublePairedArrow.ext,
-1,
-450,
-450
-),
-(
-leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1698;
-},
-{
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
@@ -96,12 +96,12 @@ alignment = 1;
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.lft;
 },
 {
-pos = (470,-80);
+pos = (398,0);
 ref = DoublePairedArrow.mid;
 },
 {
 alignment = 1;
-pos = (957,-160);
+pos = (885,0);
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt;
 }
 );
@@ -129,7 +129,7 @@ leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt,
 );
 };
 };
-width = 1450;
+width = 1238;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -139,12 +139,12 @@ alignment = 1;
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.lft;
 },
 {
-pos = (615,-80);
+pos = (565,0);
 ref = DoublePairedArrow.mid;
 },
 {
 alignment = 1;
-pos = (1102,-160);
+pos = (1052,0);
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt;
 }
 );
@@ -172,7 +172,7 @@ leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt,
 );
 };
 };
-width = 1708;
+width = 1515;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -182,12 +182,12 @@ alignment = 1;
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.lft;
 },
 {
-pos = (500,-80);
+pos = (340,0);
 ref = DoublePairedArrow.mid;
 },
 {
 alignment = 1;
-pos = (1000,-160);
+pos = (840,0);
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt;
 }
 );
@@ -215,7 +215,7 @@ leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt,
 );
 };
 };
-width = 1512;
+width = 1365;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -225,12 +225,12 @@ alignment = 1;
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.lft;
 },
 {
-pos = (586,-80);
+pos = (450,0);
 ref = DoublePairedArrow.mid;
 },
 {
 alignment = 1;
-pos = (1086,-160);
+pos = (950,0);
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt;
 }
 );
@@ -258,7 +258,7 @@ leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt,
 );
 };
 };
-width = 1688;
+width = 1499;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -268,12 +268,12 @@ alignment = 1;
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.lft;
 },
 {
-pos = (500,-80);
+pos = (340,0);
 ref = DoublePairedArrow.mid;
 },
 {
 alignment = 1;
-pos = (1000,-160);
+pos = (840,0);
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt;
 }
 );
@@ -301,7 +301,7 @@ leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt,
 );
 };
 };
-width = 1512;
+width = 1365;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -311,12 +311,12 @@ alignment = 1;
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.lft;
 },
 {
-pos = (454,0);
+pos = (450,0);
 ref = DoublePairedArrow.mid;
 },
 {
 alignment = 1;
-pos = (954,0);
+pos = (950,0);
 ref = leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt;
 }
 );
@@ -344,7 +344,7 @@ leftHarpoonWithBarbUpAboveRightHarpoonWithBarbUp.rgt,
 );
 };
 };
-width = 1404;
+width = 1449;
 }
 );
 unicode = 10598;
