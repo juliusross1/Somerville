@@ -5,132 +5,141 @@ glyphname = leftHarpoonWithBarbDownAboveRightHarpoonWithBarbDown.lft;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+metricLeft = "=harpoonleftdown";
 shapes = (
 {
 alignment = -1;
-pos = (0,-300);
+pos = (3,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (198,300);
+pos = (201,220);
 ref = harpoonleftdown;
 }
 );
-width = 480;
+width = 483;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+metricLeft = "=harpoonleftdown";
 shapes = (
 {
 alignment = -1;
-pos = (0,-300);
+pos = (21,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (257,300);
+pos = (278,220);
 ref = harpoonleftdown;
 }
 );
-width = 600;
+width = 621;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
+metricLeft = "=harpoonleftdown";
 shapes = (
 {
 alignment = -1;
-pos = (0,-300);
+pos = (3,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (198,300);
+pos = (201,220);
 ref = harpoonleftdown;
 }
 );
-width = 480;
+width = 483;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+metricLeft = "=harpoonleftdown";
 shapes = (
 {
 alignment = -1;
-pos = (0,-300);
+pos = (35,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (246,300);
+pos = (281,220);
 ref = harpoonleftdown;
 }
 );
-width = 593;
+width = 628;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+metricLeft = "=harpoonleftdown";
 shapes = (
 {
 alignment = -1;
-pos = (32,-300);
+pos = (20,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (12,300);
+pos = (0,220);
 ref = harpoonleftdown;
 }
 );
-width = 512;
+width = 500;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+metricLeft = "=harpoonleftdown";
 shapes = (
 {
 alignment = -1;
-pos = (0,-300);
+pos = (-16,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (102,300);
+pos = (86,220);
 ref = harpoonleftdown;
 }
 );
-width = 602;
+width = 586;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+metricLeft = "=harpoonleftdown";
 shapes = (
 {
 alignment = -1;
-pos = (212,-300);
+pos = (200,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (12,300);
+pos = (0,220);
 ref = harpoonleftdown;
 }
 );
-width = 512;
+width = 500;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+metricLeft = "=harpoonleftdown";
 shapes = (
 {
 alignment = -1;
-pos = (97,-300);
+pos = (4,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (-4,300);
+pos = (4,220);
 ref = harpoonleftdown;
 }
 );
-width = 496;
+width = 454;
 }
 );
+metricLeft = "=leftArrow.lft";
 subCategory = Arrow;
 }

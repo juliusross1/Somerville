@@ -19,6 +19,30 @@ pos = (1140,0);
 ref = rightArrow.rgt;
 }
 );
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+Arrow.ext,
+1,
+450,
+450
+),
+(
+rightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
 width = 1480;
 },
 {
@@ -38,6 +62,30 @@ pos = (1250,0);
 ref = rightArrow.rgt;
 }
 );
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+Arrow.ext,
+1,
+450,
+450
+),
+(
+rightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
 width = 1700;
 },
 {
@@ -57,6 +105,30 @@ pos = (1140,0);
 ref = rightArrow.rgt;
 }
 );
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+Arrow.ext,
+1,
+450,
+450
+),
+(
+rightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
 width = 1480;
 },
 {
@@ -76,6 +148,30 @@ pos = (1250,0);
 ref = rightArrow.rgt;
 }
 );
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+Arrow.ext,
+1,
+450,
+450
+),
+(
+rightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
 width = 1700;
 },
 {
@@ -95,6 +191,30 @@ pos = (1140,0);
 ref = rightArrow.rgt;
 }
 );
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+Arrow.ext,
+1,
+450,
+450
+),
+(
+rightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
 width = 1480;
 },
 {
@@ -114,6 +234,30 @@ pos = (1250,0);
 ref = rightArrow.rgt;
 }
 );
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+Arrow.ext,
+1,
+450,
+450
+),
+(
+rightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
 width = 1700;
 },
 {
@@ -124,16 +268,40 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (-158,0);
+pos = (-159,0);
 ref = ArrowLong.mid;
 },
 {
 alignment = 1;
-pos = (1142,0);
+pos = (1141,0);
 ref = rightArrow.rgt;
 }
 );
-width = 1482;
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+Arrow.ext,
+1,
+450,
+450
+),
+(
+rightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1481;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -143,16 +311,40 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (-50,0);
+pos = (-56,0);
 ref = ArrowLong.mid;
 },
 {
 alignment = 1;
-pos = (1250,0);
+pos = (1244,0);
 ref = rightArrow.rgt;
 }
 );
-width = 1700;
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+Arrow.ext,
+1,
+450,
+450
+),
+(
+rightArrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1694;
 }
 );
 unicode = 10236;

@@ -31,21 +31,6 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setGlyphMetadata</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>rightHarpoonWithBarbDownAboveLeftHarpoonWithBarbDown.lft</string>
-        <key>category</key>
-        <string>Mark</string>
-        <key>subCategory</key>
-        <string>Spacing</string>
-      </dict>
-    </dict>
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
       <string>addComponents</string>
       <key>arguments</key>
       <dict>
@@ -121,6 +106,43 @@
         <string>rightHarpoonWithBarbDownAboveLeftHarpoonWithBarbDown.lft</string>
         <key>right</key>
         <integer>0</integer>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setSideBearings</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>rightHarpoonWithBarbDownAboveLeftHarpoonWithBarbDown.lft</string>
+        <key>right</key>
+        <integer>0</integer>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setSideMetricKeys</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>rightHarpoonWithBarbDownAboveLeftHarpoonWithBarbDown.lft</string>
+        <key>left</key>
+        <string>=rightArrow.lft</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>updateMetrics</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>rightHarpoonWithBarbDownAboveLeftHarpoonWithBarbDown.lft</string>
       </dict>
     </dict>
   </array>

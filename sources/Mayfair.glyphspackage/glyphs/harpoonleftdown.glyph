@@ -6,7 +6,7 @@ layers = (
 anchors = (
 {
 name = "#exit";
-pos = (270,265);
+pos = (282,265);
 }
 );
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -24,7 +24,7 @@ width = 270;
 anchors = (
 {
 name = "#exit";
-pos = (320,265);
+pos = (343,265);
 }
 );
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -42,7 +42,7 @@ width = 320;
 anchors = (
 {
 name = "#exit";
-pos = (269,265);
+pos = (282,265);
 }
 );
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -60,7 +60,7 @@ width = 269;
 anchors = (
 {
 name = "#exit";
-pos = (334,265);
+pos = (347,265);
 }
 );
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -132,19 +132,19 @@ width = 500;
 anchors = (
 {
 name = "#exit";
-pos = (500,265);
+pos = (450,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
-alignment = -1;
-pos = (500,0);
+alignment = 1;
+pos = (450,0);
 ref = harpoonrightdown.rgt;
 scale = (-1,1);
 }
 );
-width = 500;
+width = 450;
 }
 );
 metricLeft = "=|harpoonrightup.rgt";

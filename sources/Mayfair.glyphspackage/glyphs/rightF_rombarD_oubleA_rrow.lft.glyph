@@ -1,6 +1,6 @@
 {
 category = Symbol;
-color = 3;
+color = 0;
 glyphname = rightFrombarDoubleArrow.lft;
 layers = (
 {
@@ -274,7 +274,7 @@ width = 338;
 anchors = (
 {
 name = "#exit";
-pos = (450,265);
+pos = (449,265);
 }
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -282,17 +282,17 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 299;
+width = 259.33017;
 };
-pos = (151,0);
+pos = (190,0);
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (151,61);
+pos = (190,61);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (151,469);
+pos = (190,469);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
@@ -300,15 +300,14 @@ scale = (1,-1);
 piece = {
 height = 50;
 };
-pos = (59,0);
+pos = (98,0);
 ref = _ArrowTab;
 scale = (0.8,1);
 }
 );
-width = 450;
+width = 449;
 }
 );
-metricLeft = "=rightArrow.lft";
 metricRight = "=0";
 subCategory = Arrow;
 }

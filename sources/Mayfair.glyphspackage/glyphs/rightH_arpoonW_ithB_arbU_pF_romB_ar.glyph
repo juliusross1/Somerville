@@ -1,6 +1,5 @@
 {
 color = 1;
-export = 0;
 glyphname = rightHarpoonWithBarbUpFromBar;
 layers = (
 {
@@ -269,12 +268,12 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (342,0);
+pos = (341,0);
 ref = Arrow.mid;
 },
 {
 alignment = 1;
-pos = (842,0);
+pos = (841,0);
 ref = harpoonrightup.rgt;
 }
 );
@@ -302,7 +301,7 @@ harpoonrightup.rgt,
 );
 };
 };
-width = 1342;
+width = 1341;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -312,12 +311,12 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (450,0);
+pos = (444,0);
 ref = Arrow.mid;
 },
 {
 alignment = 1;
-pos = (950,0);
+pos = (944,0);
 ref = harpoonrightup.rgt;
 }
 );
@@ -345,7 +344,7 @@ harpoonrightup.rgt,
 );
 };
 };
-width = 1450;
+width = 1394;
 }
 );
 unicode = 10587;

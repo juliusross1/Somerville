@@ -31,21 +31,6 @@
         <key>type</key>
         <string>call</string>
         <key>function</key>
-        <string>setGlyphMetadata</string>
-        <key>arguments</key>
-        <dict>
-          <key>glyph</key>
-          <string>leftHarpoonWithBarbDownBelowLongDash.lft</string>
-          <key>category</key>
-          <string>Mark</string>
-          <key>subCategory</key>
-          <string>Spacing</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>type</key>
-        <string>call</string>
-        <key>function</key>
         <string>addComponents</string>
         <key>arguments</key>
         <dict>
@@ -53,8 +38,8 @@
           <string>leftHarpoonWithBarbDownBelowLongDash.lft</string>
           <key>components</key>
           <array>
+            <string>harpoonleftdown</string>
             <string>Arrowend.lft</string>
-            <string>harpoonrightdown.rgt</string>
           </array>
         </dict>
       </dict>
@@ -78,28 +63,13 @@
         <key>type</key>
         <string>call</string>
         <key>function</key>
-        <string>flipComponentsAcrossYAxis</string>
-        <key>arguments</key>
-        <dict>
-          <key>glyph</key>
-          <string>leftHarpoonWithBarbDownBelowLongDash.lft</string>
-          <key>components</key>
-          <array>
-            <string>harpoonrightdown.rgt</string>
-          </array>
-        </dict>
-      </dict>
-      <dict>
-        <key>type</key>
-        <string>call</string>
-        <key>function</key>
         <string>setComponentPosition</string>
         <key>arguments</key>
         <dict>
           <key>glyph</key>
           <string>leftHarpoonWithBarbDownBelowLongDash.lft</string>
           <key>componentIndex</key>
-          <integer>0</integer>
+          <integer>1</integer>
           <key>x</key>
           <integer>0</integer>
           <key>y</key>
@@ -116,30 +86,50 @@
           <key>glyph</key>
           <string>leftHarpoonWithBarbDownBelowLongDash.lft</string>
           <key>componentIndex</key>
-          <integer>1</integer>
+          <integer>0</integer>
           <key>y</key>
           <string>${DoublePairedArrowGap}</string>
           <key>yMultiplier</key>
           <integer>-1</integer>
         </dict>
       </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setSideBearings</string>
+      <key>arguments</key>
       <dict>
-        <key>type</key>
-        <string>call</string>
-        <key>function</key>
-        <string>addAnchorAtRightEdgeShiftedSourceBoundsMidpoint</string>
-        <key>arguments</key>
-        <dict>
-          <key>glyph</key>
-          <string>leftHarpoonWithBarbDownBelowLongDash.lft</string>
-          <key>anchor</key>
-          <string>_left</string>
-          <key>componentIndex</key>
-          <integer>1</integer>
-          <key>sourceGlyph</key>
-          <string>Arrowend.lft</string>
-        </dict>
+        <key>glyph</key>
+        <string>leftHarpoonWithBarbDownBelowLongDash.lft</string>
+        <key>right</key>
+        <integer>0</integer>
       </dict>
-    </array>
-  </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setSideMetricKeys</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftHarpoonWithBarbDownBelowLongDash.lft</string>
+        <key>left</key>
+        <string>=Arrowend.lft</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>updateMetrics</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftHarpoonWithBarbDownBelowLongDash.lft</string>
+      </dict>
+    </dict>
+  </array>
+</dict>
 </plist>

@@ -1,5 +1,6 @@
 {
 color = 1;
+export = 0;
 glyphname = upBarbRightDownBarbRightHarpoon;
 layers = (
 {
@@ -13,7 +14,7 @@ pos = (358,516);
 ref = upBarbRightharpoon.top;
 },
 {
-pos = (358,291);
+pos = (358,351);
 ref = downBarbRightharpoon.bot;
 }
 );
@@ -54,7 +55,7 @@ pos = (377,516);
 ref = upBarbRightharpoon.top;
 },
 {
-pos = (374,282);
+pos = (377,342);
 ref = downBarbRightharpoon.bot;
 }
 );
@@ -95,7 +96,7 @@ pos = (358,516);
 ref = upBarbRightharpoon.top;
 },
 {
-pos = (355,292);
+pos = (358,352);
 ref = downBarbRightharpoon.bot;
 }
 );
@@ -136,7 +137,7 @@ pos = (377,32);
 ref = upBarbRightharpoon.top;
 },
 {
-pos = (375,-206);
+pos = (377,-146);
 ref = downBarbRightharpoon.bot;
 }
 );
@@ -177,7 +178,7 @@ pos = (338,515);
 ref = upBarbRightharpoon.top;
 },
 {
-pos = (257,-128);
+pos = (330,318);
 ref = downBarbRightharpoon.bot;
 }
 );
@@ -205,7 +206,7 @@ upBarbRightharpoon.top,
 );
 };
 };
-width = 938;
+width = 930;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -218,7 +219,7 @@ pos = (-143,515);
 ref = upBarbRightharpoon.top;
 },
 {
-pos = (-243,77);
+pos = (-143,458);
 ref = downBarbRightharpoon.bot;
 }
 );
@@ -259,7 +260,7 @@ pos = (63,530);
 ref = upBarbRightharpoon.top;
 },
 {
-pos = (0,-113);
+pos = (63,274);
 ref = downBarbRightharpoon.bot;
 }
 );
@@ -300,7 +301,7 @@ pos = (0,529);
 ref = upBarbRightharpoon.top;
 },
 {
-pos = (0,91);
+pos = (0,406);
 ref = downBarbRightharpoon.bot;
 }
 );

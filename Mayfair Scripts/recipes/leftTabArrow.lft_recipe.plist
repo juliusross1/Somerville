@@ -51,22 +51,6 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>enableComponentAlignment</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>leftTabArrow.lft</string>
-        <key>components</key>
-        <array>
-          <string>rightTabArrow.rgt</string>
-        </array>
-      </dict>
-    </dict>
-
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
       <string>setHorizontalScale</string>
       <key>arguments</key>
       <dict>
@@ -78,6 +62,22 @@
         </array>
         <key>scale</key>
         <integer>-100</integer>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>enableComponentAlignment</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>leftTabArrow.lft</string>
+        <key>components</key>
+        <array>
+          <string>rightTabArrow.rgt</string>
+        </array>
       </dict>
     </dict>
   </array>

@@ -31,21 +31,6 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setGlyphMetadata</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>rightHarpoonWithBarbUpAboveLongDash.rgt</string>
-        <key>category</key>
-        <string>Mark</string>
-        <key>subCategory</key>
-        <string>Spacing</string>
-      </dict>
-    </dict>
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
       <string>addComponents</string>
       <key>arguments</key>
       <dict>
@@ -70,8 +55,8 @@
         <string>rightHarpoonWithBarbUpAboveLongDash.rgt</string>
         <key>components</key>
         <array>
-          <string>harpoonrightup.rgt</string>
           <string>Arrowend.rgt</string>
+          <string>harpoonrightup.rgt</string>
         </array>
       </dict>
     </dict>
@@ -85,7 +70,7 @@
         <key>glyph</key>
         <string>rightHarpoonWithBarbUpAboveLongDash.rgt</string>
         <key>componentIndex</key>
-        <integer>0</integer>
+        <integer>1</integer>
         <key>x</key>
         <integer>0</integer>
         <key>y</key>
@@ -102,7 +87,7 @@
         <key>glyph</key>
         <string>rightHarpoonWithBarbUpAboveLongDash.rgt</string>
         <key>componentIndex</key>
-        <integer>1</integer>
+        <integer>0</integer>
         <key>x</key>
         <integer>0</integer>
         <key>y</key>
@@ -115,17 +100,37 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>addAnchorAtXComponentMidpoint</string>
+      <string>setSideBearings</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>rightHarpoonWithBarbUpAboveLongDash.rgt</string>
-        <key>anchor</key>
-        <string>_right</string>
-        <key>componentIndex</key>
-        <integer>1</integer>
-        <key>x</key>
+        <key>left</key>
         <integer>0</integer>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setSideMetricKeys</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>rightHarpoonWithBarbUpAboveLongDash.rgt</string>
+        <key>right</key>
+        <string>=Arrowend.rgt</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>updateMetrics</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>rightHarpoonWithBarbUpAboveLongDash.rgt</string>
       </dict>
     </dict>
   </array>

@@ -1,6 +1,5 @@
 {
 color = 1;
-export = 0;
 glyphname = leftFrombarArrow;
 layers = (
 {
@@ -260,7 +259,7 @@ pos = (340,0);
 ref = Arrow.mid;
 },
 {
-pos = (840,0);
+pos = (839,0);
 ref = leftFrombarArrow.rgt;
 }
 );
