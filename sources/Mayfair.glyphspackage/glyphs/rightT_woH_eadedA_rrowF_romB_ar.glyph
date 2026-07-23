@@ -11,11 +11,11 @@ ref = rightFrombarArrow.lft;
 },
 {
 pos = (310,0);
-ref = Arrow.mid;
+ref = Arrow.mid.2;
 },
 {
 alignment = 1;
-pos = (810,0);
+pos = (650,0);
 ref = twoheadrightarrow.rgt;
 }
 );
@@ -43,7 +43,7 @@ twoheadrightarrow.rgt,
 );
 };
 };
-width = 1310;
+width = 1150;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -54,136 +54,7 @@ ref = rightFrombarArrow.lft;
 },
 {
 pos = (460,0);
-ref = Arrow.mid;
-},
-{
-alignment = 1;
-pos = (960,0);
-ref = twoheadrightarrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-rightFrombarArrow.lft,
-0,
-0,
-30
-),
-(
-Arrow.ext,
-1,
-450,
-450
-),
-(
-twoheadrightarrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1640;
-},
-{
-layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
-shapes = (
-{
-alignment = 1;
-ref = rightFrombarArrow.lft;
-},
-{
-pos = (310,0);
-ref = Arrow.mid;
-},
-{
-alignment = 1;
-pos = (810,0);
-ref = twoheadrightarrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-rightFrombarArrow.lft,
-0,
-0,
-30
-),
-(
-Arrow.ext,
-1,
-450,
-450
-),
-(
-twoheadrightarrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1310;
-},
-{
-layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-shapes = (
-{
-alignment = 1;
-ref = rightFrombarArrow.lft;
-},
-{
-pos = (460,0);
-ref = Arrow.mid;
-},
-{
-alignment = 1;
-pos = (960,0);
-ref = twoheadrightarrow.rgt;
-}
-);
-userData = {
-com.nagwa.MATHPlugin.variants = {
-hAssembly = (
-(
-rightFrombarArrow.lft,
-0,
-0,
-30
-),
-(
-Arrow.ext,
-1,
-450,
-450
-),
-(
-twoheadrightarrow.rgt,
-0,
-30,
-0
-)
-);
-};
-};
-width = 1640;
-},
-{
-layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
-shapes = (
-{
-alignment = 1;
-ref = rightFrombarArrow.lft;
-},
-{
-pos = (300,0);
-ref = Arrow.mid;
+ref = Arrow.mid.2;
 },
 {
 alignment = 1;
@@ -215,7 +86,136 @@ twoheadrightarrow.rgt,
 );
 };
 };
-width = 1300;
+width = 1480;
+},
+{
+layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
+shapes = (
+{
+alignment = 1;
+ref = rightFrombarArrow.lft;
+},
+{
+pos = (310,0);
+ref = Arrow.mid.2;
+},
+{
+alignment = 1;
+pos = (650,0);
+ref = twoheadrightarrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+Arrow.ext,
+1,
+450,
+450
+),
+(
+twoheadrightarrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1150;
+},
+{
+layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+shapes = (
+{
+alignment = 1;
+ref = rightFrombarArrow.lft;
+},
+{
+pos = (460,0);
+ref = Arrow.mid.2;
+},
+{
+alignment = 1;
+pos = (800,0);
+ref = twoheadrightarrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+Arrow.ext,
+1,
+450,
+450
+),
+(
+twoheadrightarrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1480;
+},
+{
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+shapes = (
+{
+alignment = 1;
+ref = rightFrombarArrow.lft;
+},
+{
+pos = (340,0);
+ref = Arrow.mid.2;
+},
+{
+alignment = 1;
+pos = (680,0);
+ref = twoheadrightarrow.rgt;
+}
+);
+userData = {
+com.nagwa.MATHPlugin.variants = {
+hAssembly = (
+(
+rightFrombarArrow.lft,
+0,
+0,
+30
+),
+(
+Arrow.ext,
+1,
+450,
+450
+),
+(
+twoheadrightarrow.rgt,
+0,
+30,
+0
+)
+);
+};
+};
+width = 1180;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -226,11 +226,11 @@ ref = rightFrombarArrow.lft;
 },
 {
 pos = (450,0);
-ref = Arrow.mid;
+ref = Arrow.mid.2;
 },
 {
 alignment = 1;
-pos = (950,0);
+pos = (790,0);
 ref = twoheadrightarrow.rgt;
 }
 );
@@ -258,7 +258,7 @@ twoheadrightarrow.rgt,
 );
 };
 };
-width = 1630;
+width = 1470;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -268,12 +268,12 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (311,0);
-ref = Arrow.mid;
+pos = (341,0);
+ref = Arrow.mid.2;
 },
 {
 alignment = 1;
-pos = (811,0);
+pos = (681,0);
 ref = twoheadrightarrow.rgt;
 }
 );
@@ -301,7 +301,7 @@ twoheadrightarrow.rgt,
 );
 };
 };
-width = 1311;
+width = 1181;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -312,11 +312,11 @@ ref = rightFrombarArrow.lft;
 },
 {
 pos = (454,0);
-ref = Arrow.mid;
+ref = Arrow.mid.2;
 },
 {
 alignment = 1;
-pos = (954,0);
+pos = (794,0);
 ref = twoheadrightarrow.rgt;
 }
 );
@@ -344,7 +344,7 @@ twoheadrightarrow.rgt,
 );
 };
 };
-width = 1634;
+width = 1474;
 }
 );
 unicode = 10501;

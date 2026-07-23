@@ -25,7 +25,7 @@ pos = (848,0);
 ref = arrowdot;
 },
 {
-pos = (1017,-265);
+pos = (1017,0);
 ref = ArrowHead;
 }
 );
@@ -72,7 +72,7 @@ pos = (848,0);
 ref = arrowdot;
 },
 {
-pos = (1017,-265);
+pos = (1017,0);
 ref = ArrowHead;
 }
 );
@@ -119,7 +119,7 @@ pos = (848,0);
 ref = arrowdot;
 },
 {
-pos = (1017,-265);
+pos = (1017,0);
 ref = ArrowHead;
 }
 );
@@ -166,7 +166,7 @@ pos = (848,0);
 ref = arrowdot;
 },
 {
-pos = (1017,-265);
+pos = (1017,0);
 ref = ArrowHead;
 }
 );
@@ -213,7 +213,7 @@ pos = (848,0);
 ref = arrowdot;
 },
 {
-pos = (1007,-265);
+pos = (1007,0);
 ref = ArrowHead;
 }
 );
@@ -244,23 +244,23 @@ shapes = (
 ref = arrowdot;
 },
 {
-pos = (212,0);
+pos = (211,0);
 ref = arrowdot;
 },
 {
-pos = (424,0);
+pos = (422,0);
 ref = arrowdot;
 },
 {
-pos = (636,0);
+pos = (633,0);
 ref = arrowdot;
 },
 {
-pos = (848,0);
+pos = (844,0);
 ref = arrowdot;
 },
 {
-pos = (1007,-265);
+pos = (1003,0);
 ref = ArrowHead;
 }
 );
@@ -282,7 +282,7 @@ ArrowHead,
 );
 };
 };
-width = 1433;
+width = 1429;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -307,7 +307,7 @@ pos = (764,0);
 ref = arrowdot;
 },
 {
-pos = (902,-265);
+pos = (902,0);
 ref = ArrowHead;
 }
 );
@@ -354,7 +354,7 @@ pos = (1004,0);
 ref = arrowdot;
 },
 {
-pos = (1188,1);
+pos = (1188,0);
 ref = ArrowHead;
 }
 );
@@ -364,8 +364,8 @@ hAssembly = (
 (
 arrowdot,
 1,
-45,
-45
+0,
+10
 ),
 (
 ArrowHead,

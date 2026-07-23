@@ -1,5 +1,6 @@
 {
 color = 1;
+export = 0;
 glyphname = rightHarpoonWithBarbUpFromBar;
 layers = (
 {
@@ -11,7 +12,7 @@ ref = rightFrombarArrow.lft;
 },
 {
 pos = (310,0);
-ref = Arrow.mid;
+ref = Arrow.mid.1;
 },
 {
 alignment = 1;
@@ -54,7 +55,7 @@ ref = rightFrombarArrow.lft;
 },
 {
 pos = (460,0);
-ref = Arrow.mid;
+ref = Arrow.mid.1;
 },
 {
 alignment = 1;
@@ -97,7 +98,7 @@ ref = rightFrombarArrow.lft;
 },
 {
 pos = (310,0);
-ref = Arrow.mid;
+ref = Arrow.mid.1;
 },
 {
 alignment = 1;
@@ -140,7 +141,7 @@ ref = rightFrombarArrow.lft;
 },
 {
 pos = (460,0);
-ref = Arrow.mid;
+ref = Arrow.mid.1;
 },
 {
 alignment = 1;
@@ -182,12 +183,12 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (300,0);
-ref = Arrow.mid;
+pos = (340,0);
+ref = Arrow.mid.1;
 },
 {
 alignment = 1;
-pos = (800,0);
+pos = (840,0);
 ref = harpoonrightup.rgt;
 }
 );
@@ -215,7 +216,7 @@ harpoonrightup.rgt,
 );
 };
 };
-width = 1140;
+width = 1180;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -226,7 +227,7 @@ ref = rightFrombarArrow.lft;
 },
 {
 pos = (450,0);
-ref = Arrow.mid;
+ref = Arrow.mid.1;
 },
 {
 alignment = 1;
@@ -268,12 +269,12 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (311,0);
-ref = Arrow.mid;
+pos = (341,0);
+ref = Arrow.mid.1;
 },
 {
 alignment = 1;
-pos = (811,0);
+pos = (841,0);
 ref = harpoonrightup.rgt;
 }
 );
@@ -301,7 +302,7 @@ harpoonrightup.rgt,
 );
 };
 };
-width = 1151;
+width = 1181;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -311,8 +312,8 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (454,0);
-ref = Arrow.mid;
+pos = (-46,0);
+ref = Arrow.mid.1;
 },
 {
 alignment = 1;

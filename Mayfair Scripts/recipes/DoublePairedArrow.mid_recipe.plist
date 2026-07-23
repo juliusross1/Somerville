@@ -38,8 +38,8 @@
         <string>DoublePairedArrow.mid</string>
         <key>components</key>
         <array>
-          <string>Arrow.mid</string>
-          <string>Arrow.mid</string>
+          <string>Arrow.mid.1</string>
+          <string>Arrow.mid.1</string>
         </array>
       </dict>
     </dict>
@@ -54,7 +54,7 @@
         <string>DoublePairedArrow.mid</string>
         <key>components</key>
         <array>
-          <string>Arrow.mid</string>
+          <string>Arrow.mid.1</string>
         </array>
       </dict>
     </dict>
@@ -92,6 +92,21 @@
         <integer>0</integer>
         <key>y</key>
         <string>${DoublePairedArrowGap}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setSideBearings</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>DoublePairedArrow.mid</string>
+        <key>left</key>
+        <integer>0</integer>
+        <key>right</key>
+        <integer>0</integer>
       </dict>
     </dict>
   </array>

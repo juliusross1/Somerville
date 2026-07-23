@@ -8,7 +8,7 @@
   <key>kind</key>
   <string>recipe</string>
   <key>name</key>
-  <string>Arrow.mid</string>
+  <string>Arrow.mid.3</string>
   <key>constants</key>
   <string>recipe_constants.plist</string>
   <key>actions</key>
@@ -21,7 +21,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>Arrow.mid</string>
+        <string>Arrow.mid.3</string>
         <key>export</key>
         <false/>
       </dict>
@@ -34,7 +34,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>Arrow.mid</string>
+        <string>Arrow.mid.3</string>
         <key>component</key>
         <string>_smart.Arrow.mid</string>
       </dict>
@@ -47,11 +47,11 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>Arrow.mid</string>
+        <string>Arrow.mid.3</string>
         <key>axis</key>
         <string>width</string>
         <key>value</key>
-        <string>${ArrowMiddleLength}</string>
+        <string>${ArrowMiddleLength3}</string>
         <key>componentFilter</key>
         <dict>
           <key>components</key>
@@ -69,7 +69,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>Arrow.mid</string>
+        <string>Arrow.mid.3</string>
         <key>components</key>
         <array>
           <string>_smart.Arrow.mid</string>
@@ -84,11 +84,11 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>Arrow.mid</string>
+        <string>Arrow.mid.3</string>
         <key>left</key>
-        <string>${ArrowEndLength}</string>
+        <integer>0</integer>
         <key>right</key>
-        <string>${ArrowEndLength}</string>
+        <integer>0</integer>
       </dict>
     </dict>
   </array>
