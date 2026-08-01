@@ -54,10 +54,12 @@ alignment = 1;
 ref = rightFrombarDoubleArrow.lft;
 },
 {
+pos = (450,0);
 ref = DoubleArrow.mid;
 },
 {
 alignment = 1;
+pos = (950,0);
 ref = rightDoubleArrow.rgt;
 }
 );
@@ -138,10 +140,12 @@ alignment = 1;
 ref = rightFrombarDoubleArrow.lft;
 },
 {
+pos = (450,0);
 ref = DoubleArrow.mid;
 },
 {
 alignment = 1;
+pos = (950,0);
 ref = rightDoubleArrow.rgt;
 }
 );
@@ -265,10 +269,12 @@ alignment = 1;
 ref = rightFrombarDoubleArrow.lft;
 },
 {
+pos = (341,0);
 ref = DoubleArrow.mid;
 },
 {
 alignment = 1;
+pos = (841,0);
 ref = rightDoubleArrow.rgt;
 }
 );
@@ -339,7 +345,7 @@ rightDoubleArrow.rgt,
 );
 };
 };
-width = 1398;
+width = 1393;
 }
 );
 subCategory = Arrow;

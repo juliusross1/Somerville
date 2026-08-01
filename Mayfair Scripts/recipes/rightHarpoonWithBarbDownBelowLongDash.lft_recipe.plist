@@ -94,19 +94,6 @@
           <integer>-1</integer>
         </dict>
       </dict>
-      <dict>
-        <key>type</key>
-        <string>call</string>
-        <key>function</key>
-        <string>setSideBearings</string>
-        <key>arguments</key>
-        <dict>
-          <key>glyph</key>
-          <string>rightHarpoonWithBarbDownBelowLongDash.lft</string>
-          <key>right</key>
-          <integer>1</integer>
-        </dict>
-      </dict>
     <dict>
       <key>type</key>
       <string>call</string>
@@ -124,24 +111,24 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setSideMetricKeys</string>
+      <string>updateMetrics</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>rightHarpoonWithBarbDownBelowLongDash.lft</string>
-        <key>left</key>
-        <string>=Arrowend.lft</string>
       </dict>
     </dict>
     <dict>
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>updateMetrics</string>
+      <string>setWidthFromComponent</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>rightHarpoonWithBarbDownBelowLongDash.lft</string>
+        <key>componentIndex</key>
+        <integer>0</integer>
       </dict>
     </dict>
   </array>

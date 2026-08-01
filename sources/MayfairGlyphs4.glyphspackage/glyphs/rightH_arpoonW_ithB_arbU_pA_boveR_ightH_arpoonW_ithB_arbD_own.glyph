@@ -1,5 +1,5 @@
 {
-color = 1;
+color = 0;
 glyphname = rightHarpoonWithBarbUpAboveRightHarpoonWithBarbDown;
 layers = (
 {
@@ -139,12 +139,12 @@ alignment = 1;
 ref = rightHarpoonWithBarbUpAboveRightHarpoonWithBarbDown.lft;
 },
 {
-pos = (450,-1);
+pos = (450,0);
 ref = DoublePairedArrow.mid;
 },
 {
 alignment = 1;
-pos = (950,-1);
+pos = (950,0);
 ref = rightHarpoonWithBarbUpAboveRightHarpoonWithBarbDown.rgt;
 }
 );

@@ -18,7 +18,7 @@ from GlyphsApp import (
 from AppKit import NSMakePoint, NSPoint
 
 
-SCRIPT_VERSION = "2026-07-03 14:48 CDT pair-anchor-master-source"
+SCRIPT_VERSION = "2026-08-01 Glyphs-4-glyph-axes"
 DEFAULT_RECIPE_FILE = "triple_integral_recipe.plist"
 VERBOSE = True
 VARIABLE_PATTERN = re.compile(r"\$\{([^}]+)\}")
@@ -419,7 +419,18 @@ def clear_glyph(glyph):
         for proxy_name in ("shapes", "components", "paths", "anchors", "hints"):
             clear_proxy(getattr(layer, proxy_name, None))
 
-    for attribute_name in ("smartComponentAxes", "stems"):
+    # Glyphs 4 renamed GSGlyph.smartComponentAxes to GSGlyph.axes. Accessing
+    # the old property still works, but emits a deprecation warning even for
+    # recipes that do not create smart components.
+    try:
+        glyph.axes = []
+    except (AttributeError, TypeError):
+        try:
+            glyph.smartComponentAxes = []
+        except Exception:
+            pass
+
+    for attribute_name in ("stems",):
         try:
             setattr(glyph, attribute_name, [])
         except Exception:
@@ -450,6 +461,13 @@ def make_component(component_name):
 
 
 def layer_components(layer):
+    try:
+        return [
+            shape for shape in layer.shapes
+            if shape.__class__.__name__ == "GSComponent"
+        ]
+    except (AttributeError, TypeError):
+        pass
     try:
         return list(layer.components)
     except Exception:
@@ -540,6 +558,12 @@ def copy_layer_metrics(source_layer, target_layer, source_glyph_name=None):
 
 def append_component_to_layer(layer, component_name):
     component = make_component(component_name)
+    # Glyphs 4 stores components in the general shapes collection.
+    try:
+        layer.shapes.append(component)
+        return True
+    except (AttributeError, TypeError):
+        pass
     try:
         layer.components.append(component)
         return True
@@ -1272,6 +1296,10 @@ def smart_axis_name(axis):
 
 def glyph_smart_axes(glyph):
     try:
+        return list(glyph.axes or [])
+    except (AttributeError, TypeError):
+        pass
+    try:
         return list(glyph.smartComponentAxes or [])
     except Exception:
         return []
@@ -1286,15 +1314,22 @@ def smart_axis_for_name(glyph, wanted_name):
 
 def append_smart_axis(glyph, axis):
     try:
+        glyph.axes.append(axis)
+        return True
+    except (AttributeError, TypeError):
+        pass
+    try:
         glyph.smartComponentAxes.append(axis)
         return True
     except Exception:
         pass
-    try:
-        axes = list(glyph.smartComponentAxes or [])
-    except Exception:
-        axes = []
+    axes = glyph_smart_axes(glyph)
     axes.append(axis)
+    try:
+        glyph.axes = axes
+        return True
+    except (AttributeError, TypeError):
+        pass
     try:
         glyph.smartComponentAxes = axes
         return True
@@ -2940,6 +2975,59 @@ def action_copy_layer_metrics(font, verbose=False, glyph=None, sourceGlyph=None,
     return changed_layers
 
 
+def action_set_width_from_component(
+    font,
+    verbose=False,
+    glyph=None,
+    componentIndex=0,
+    **_kwargs
+):
+    target_glyph = glyph_for_name(font, glyph)
+    if target_glyph is None:
+        raise RuntimeError("Missing glyph: %s" % glyph)
+
+    component_index = int(componentIndex)
+    changed_layers = 0
+    for target_layer in target_glyph.layers:
+        components = layer_components(target_layer)
+        if component_index < 0 or component_index >= len(components):
+            raise RuntimeError(
+                "%s/%s: component index %i is out of range."
+                % (glyph, layer_name(target_layer), component_index)
+            )
+
+        component = components[component_index]
+        source_glyph = component_glyph(font, component)
+        source_layer = matching_layer(source_glyph, target_layer) if source_glyph is not None else None
+        source_width = layer_width(source_layer) if source_layer is not None else None
+        if source_width is None:
+            raise RuntimeError(
+                "%s/%s: could not read the width of component %i (%s)."
+                % (
+                    glyph,
+                    layer_name(target_layer),
+                    component_index,
+                    component_name(component),
+                )
+            )
+
+        set_layer_metrics_key(target_layer, "widthMetricsKey", None)
+        set_layer_metrics_key(target_layer, "rightMetricsKey", None)
+        if not set_layer_metric(target_layer, "width", clean_number(source_width)):
+            raise RuntimeError(
+                "%s/%s: could not set the layer width."
+                % (glyph, layer_name(target_layer))
+            )
+        changed_layers += 1
+
+    log(
+        "%s: set width from component index %i on %i layer(s)."
+        % (glyph, component_index, changed_layers),
+        verbose,
+    )
+    return changed_layers
+
+
 def action_set_side_metrics_from_component_sequence(
     font,
     verbose=False,
@@ -3707,6 +3795,7 @@ ACTION_REGISTRY = {
     "flipComponentsAcrossHorizontalLine": action_flip_components_across_horizontal_line,
     "rotateComponents": action_rotate_components,
     "copyLayerMetrics": action_copy_layer_metrics,
+    "setWidthFromComponent": action_set_width_from_component,
     "setSideMetricsFromComponentSequence": action_set_side_metrics_from_component_sequence,
     "setSideBearings": action_set_side_bearings,
     "alignComponentRightBoundsAndSetMetrics": action_align_component_right_bounds_and_set_metrics,

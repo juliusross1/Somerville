@@ -69,13 +69,16 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
+pos = (450,0);
 ref = DoubleArrow.mid;
 },
 {
+pos = (700,0);
 ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
+pos = (950,0);
 ref = rightDoubleArrow.rgt;
 }
 );
@@ -184,13 +187,16 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
+pos = (450,0);
 ref = DoubleArrow.mid;
 },
 {
+pos = (700,0);
 ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
+pos = (950,0);
 ref = rightDoubleArrow.rgt;
 }
 );
@@ -358,13 +364,16 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
+pos = (340,0);
 ref = DoubleArrow.mid;
 },
 {
+pos = (544,0);
 ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
+pos = (840,0);
 ref = rightDoubleArrow.rgt;
 }
 );
@@ -414,16 +423,16 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (450,0);
+pos = (445,0);
 ref = DoubleArrow.mid;
 },
 {
-pos = (654,0);
+pos = (649,0);
 ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (950,0);
+pos = (945,0);
 ref = rightDoubleArrow.rgt;
 }
 );
@@ -463,7 +472,7 @@ rightDoubleArrow.rgt,
 );
 };
 };
-width = 1400;
+width = 1390;
 }
 );
 unicode = 10500;

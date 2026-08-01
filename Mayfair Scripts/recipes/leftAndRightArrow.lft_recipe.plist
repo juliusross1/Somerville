@@ -128,24 +128,24 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setSideMetricKeys</string>
+      <string>updateMetrics</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>leftAndRightArrow.lft</string>
-        <key>left</key>
-        <string>=rightArrow.lft</string>
       </dict>
     </dict>
     <dict>
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>updateMetrics</string>
+      <string>setWidthFromComponent</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>leftAndRightArrow.lft</string>
+        <key>componentIndex</key>
+        <integer>0</integer>
       </dict>
     </dict>
   </array>

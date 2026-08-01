@@ -132,6 +132,19 @@
         <string>rightHarpoonWithBarbDownBelowLongDash.rgt</string>
       </dict>
     </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setWidthFromComponent</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>rightHarpoonWithBarbDownBelowLongDash.rgt</string>
+        <key>componentIndex</key>
+        <integer>0</integer>
+      </dict>
+    </dict>
   </array>
 </dict>
 </plist>

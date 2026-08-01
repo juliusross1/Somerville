@@ -1,6 +1,6 @@
 {
 category = Symbol;
-color = 3;
+color = 0;
 export = 0;
 glyphname = _smart.FrombarArrow;
 layers = (
@@ -52,7 +52,7 @@ width = 340;
 anchors = (
 {
 name = "#exit";
-pos = (460,265);
+pos = (420,265);
 }
 );
 attr = {
@@ -70,25 +70,25 @@ alignment = -1;
 piece = {
 width = 340.68268;
 };
-pos = (109,0);
+pos = (69,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (109,-1);
+pos = (69,-1);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (109,531);
+pos = (69,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (108,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
-width = 450;
+width = 410;
 },
 {
 anchors = (
@@ -136,7 +136,7 @@ width = 340;
 anchors = (
 {
 name = "#exit";
-pos = (460,265);
+pos = (420,265);
 }
 );
 attr = {
@@ -154,25 +154,25 @@ alignment = -1;
 piece = {
 width = 341.12097;
 };
-pos = (109,0);
+pos = (69,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (109,0);
+pos = (69,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (109,531);
+pos = (69,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (108,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
-width = 450;
+width = 410;
 },
 {
 anchors = (
@@ -220,7 +220,7 @@ width = 340;
 anchors = (
 {
 name = "#exit";
-pos = (450,265);
+pos = (410,265);
 }
 );
 attr = {
@@ -238,28 +238,28 @@ alignment = -1;
 piece = {
 width = 271.63507;
 };
-pos = (178,0);
+pos = (138,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (178,0);
+pos = (138,0);
 ref = _rightFrombarArrow.serif;
 },
 {
 alignment = -1;
-pos = (178,530);
+pos = (138,530);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
 alignment = -1;
-pos = (108,0);
+pos = (68,0);
 ref = _ArrowTab;
 scale = (0.9,1);
 }
 );
-width = 450;
+width = 410;
 },
 {
 anchors = (
@@ -307,7 +307,7 @@ width = 341;
 anchors = (
 {
 name = "#exit";
-pos = (454,265);
+pos = (414,265);
 }
 );
 attr = {
@@ -323,27 +323,27 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 20.44948;
+width = 30;
 };
-pos = (224,0);
+pos = (184,0);
 ref = _smart.Arrow.mid;
 scale = (11.51,1);
 },
 {
-pos = (224,0);
+pos = (184,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (224,530);
+pos = (184,530);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (108,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
-width = 454;
+width = 529;
 },
 {
 anchors = (
@@ -396,7 +396,7 @@ width = 340;
 anchors = (
 {
 name = "#exit";
-pos = (460,265);
+pos = (420,265);
 }
 );
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -417,25 +417,25 @@ alignment = -1;
 piece = {
 width = 340.9787;
 };
-pos = (109,0);
+pos = (69,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (109,-1);
+pos = (69,-1);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (109,531);
+pos = (69,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (108,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
-width = 450;
+width = 410;
 },
 {
 anchors = (
@@ -486,7 +486,7 @@ width = 340;
 anchors = (
 {
 name = "#exit";
-pos = (460,265);
+pos = (420,265);
 }
 );
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -507,25 +507,25 @@ alignment = -1;
 piece = {
 width = 341.07672;
 };
-pos = (109,0);
+pos = (69,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (109,0);
+pos = (69,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (109,531);
+pos = (69,531);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (108,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
-width = 450;
+width = 410;
 },
 {
 anchors = (
@@ -576,7 +576,7 @@ width = 340;
 anchors = (
 {
 name = "#exit";
-pos = (450,265);
+pos = (410,265);
 }
 );
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -597,28 +597,28 @@ alignment = -1;
 piece = {
 width = 271.8465;
 };
-pos = (178,0);
+pos = (138,0);
 ref = _smart.Arrow.mid;
 },
 {
 alignment = -1;
-pos = (178,0);
+pos = (138,0);
 ref = _rightFrombarArrow.serif;
 },
 {
 alignment = -1;
-pos = (178,530);
+pos = (138,530);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
 alignment = -1;
-pos = (108,0);
+pos = (68,0);
 ref = _ArrowTab;
 scale = (0.9,1);
 }
 );
-width = 450;
+width = 410;
 },
 {
 anchors = (
@@ -669,7 +669,7 @@ width = 341;
 anchors = (
 {
 name = "#exit";
-pos = (466,265);
+pos = (426,265);
 }
 );
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -690,25 +690,25 @@ alignment = -1;
 piece = {
 width = 19.5751;
 };
-pos = (224,0);
+pos = (184,0);
 ref = _smart.Arrow.mid;
 scale = (11.51,1);
 },
 {
-pos = (224,0);
+pos = (184,0);
 ref = _rightFrombarArrow.serif;
 },
 {
-pos = (224,530);
+pos = (184,530);
 ref = _rightFrombarArrow.serif;
 scale = (1,-1);
 },
 {
-pos = (108,0);
+pos = (68,0);
 ref = _ArrowTab;
 }
 );
-width = 454;
+width = 414;
 }
 );
 metricRight = "=0";

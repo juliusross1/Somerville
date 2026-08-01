@@ -39,7 +39,7 @@
         <key>components</key>
         <array>
           <string>rightTabArrow.rgt</string>
-          <string>leftArrow.rgt</string>
+          <string>leftArrow.rgt.long</string>
         </array>
       </dict>
     </dict>
@@ -55,7 +55,7 @@
         <key>components</key>
         <array>
           <string>leftArrow.rgt</string>
-          <string>rightTabArrow.rgt</string>
+          <string>rightTabArrow.rgt.long</string>
         </array>
       </dict>
     </dict>
@@ -112,24 +112,24 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>setSideMetricKeys</string>
+      <string>updateMetrics</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>leftToBarOverRightToBarArrow.rgt</string>
-        <key>right</key>
-        <string>=leftArrow.rgt</string>
       </dict>
     </dict>
     <dict>
       <key>type</key>
       <string>call</string>
       <key>function</key>
-      <string>updateMetrics</string>
+      <string>setWidthFromComponent</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
         <string>leftToBarOverRightToBarArrow.rgt</string>
+        <key>componentIndex</key>
+        <integer>0</integer>
       </dict>
     </dict>
   </array>

@@ -1,5 +1,5 @@
 {
-color = 1;
+color = 0;
 glyphname = rightHarpoonWithBarbUpFromBar;
 layers = (
 {
@@ -53,12 +53,12 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (460,0);
+pos = (420,0);
 ref = Arrow.mid.1;
 },
 {
 alignment = 1;
-pos = (960,0);
+pos = (920,0);
 ref = harpoonrightup.rgt;
 }
 );
@@ -86,7 +86,7 @@ harpoonrightup.rgt,
 );
 };
 };
-width = 1410;
+width = 1370;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -139,12 +139,12 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (460,0);
+pos = (420,0);
 ref = Arrow.mid.1;
 },
 {
 alignment = 1;
-pos = (960,0);
+pos = (920,0);
 ref = harpoonrightup.rgt;
 }
 );
@@ -172,7 +172,7 @@ harpoonrightup.rgt,
 );
 };
 };
-width = 1410;
+width = 1370;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -225,12 +225,12 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (450,0);
+pos = (410,0);
 ref = Arrow.mid.1;
 },
 {
 alignment = 1;
-pos = (950,0);
+pos = (910,0);
 ref = harpoonrightup.rgt;
 }
 );
@@ -258,7 +258,7 @@ harpoonrightup.rgt,
 );
 };
 };
-width = 1400;
+width = 1360;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -311,12 +311,12 @@ alignment = 1;
 ref = rightFrombarArrow.lft;
 },
 {
-pos = (454,0);
+pos = (414,0);
 ref = Arrow.mid.1;
 },
 {
 alignment = 1;
-pos = (954,0);
+pos = (914,0);
 ref = harpoonrightup.rgt;
 }
 );
@@ -344,7 +344,7 @@ harpoonrightup.rgt,
 );
 };
 };
-width = 1404;
+width = 1364;
 }
 );
 unicode = 10587;

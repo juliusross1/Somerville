@@ -38,8 +38,7 @@
         <string>rightHarpoonWithBarbUpAboveLongDash.rgt</string>
         <key>components</key>
         <array>
-                  <string>harpoonrightup.rgt</string>
-
+          <string>harpoonrightup.rgt</string>
           <string>Arrowend.rgt</string>
         </array>
       </dict>
@@ -131,6 +130,19 @@
       <dict>
         <key>glyph</key>
         <string>rightHarpoonWithBarbUpAboveLongDash.rgt</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setWidthFromComponent</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>rightHarpoonWithBarbUpAboveLongDash.rgt</string>
+        <key>componentIndex</key>
+        <integer>0</integer>
       </dict>
     </dict>
   </array>
