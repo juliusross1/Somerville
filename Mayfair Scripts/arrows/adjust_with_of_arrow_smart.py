@@ -1,4 +1,4 @@
-#MenuTitle: Adjust widrightTwoHeadedArrowFromBarth of arrows in a smart way
+#MenuTitle: Adjust Width of arrow components in a smart way
 
 
 # Glyphs 3 Macro Panel script
