@@ -1,17 +1,17 @@
 {
 color = 1;
-glyphname = leftDoubleArrowTail;
+glyphname = leftTwoHeadedArrowWithTail;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
 alignment = 1;
-ref = Arrowend.lft;
+ref = twoheadleftarrow.lft;
 },
 {
-pos = (340,0);
-ref = Arrow.mid.2;
+pos = (500,0);
+ref = Arrow.mid.3;
 },
 {
 alignment = 1;
@@ -23,9 +23,9 @@ userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-Arrowend.lft,
+twoheadleftarrow.lft,
 0,
-30,
+0,
 30
 ),
 (
@@ -50,11 +50,11 @@ layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
 alignment = 1;
-ref = Arrowend.lft;
+ref = twoheadleftarrow.lft;
 },
 {
-pos = (450,0);
-ref = Arrow.mid.2;
+pos = (680,0);
+ref = Arrow.mid.3;
 },
 {
 alignment = 1;
@@ -66,9 +66,9 @@ userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-Arrowend.lft,
+twoheadleftarrow.lft,
 0,
-30,
+0,
 30
 ),
 (
@@ -93,11 +93,11 @@ layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
 alignment = 1;
-ref = Arrowend.lft;
+ref = twoheadleftarrow.lft;
 },
 {
-pos = (340,0);
-ref = Arrow.mid.2;
+pos = (500,0);
+ref = Arrow.mid.3;
 },
 {
 alignment = 1;
@@ -109,9 +109,9 @@ userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-Arrowend.lft,
+twoheadleftarrow.lft,
 0,
-30,
+0,
 30
 ),
 (
@@ -136,11 +136,11 @@ layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
 alignment = 1;
-ref = Arrowend.lft;
+ref = twoheadleftarrow.lft;
 },
 {
-pos = (450,0);
-ref = Arrow.mid.2;
+pos = (680,0);
+ref = Arrow.mid.3;
 },
 {
 alignment = 1;
@@ -152,9 +152,9 @@ userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-Arrowend.lft,
+twoheadleftarrow.lft,
 0,
-30,
+0,
 30
 ),
 (
@@ -179,11 +179,11 @@ layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
 alignment = 1;
-ref = Arrowend.lft;
+ref = twoheadleftarrow.lft;
 },
 {
-pos = (340,0);
-ref = Arrow.mid.2;
+pos = (500,0);
+ref = Arrow.mid.3;
 },
 {
 alignment = 1;
@@ -195,9 +195,9 @@ userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-Arrowend.lft,
+twoheadleftarrow.lft,
 0,
-30,
+0,
 30
 ),
 (
@@ -222,11 +222,11 @@ layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
 alignment = 1;
-ref = Arrowend.lft;
+ref = twoheadleftarrow.lft;
 },
 {
-pos = (450,0);
-ref = Arrow.mid.2;
+pos = (680,0);
+ref = Arrow.mid.3;
 },
 {
 alignment = 1;
@@ -238,9 +238,9 @@ userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-Arrowend.lft,
+twoheadleftarrow.lft,
 0,
-30,
+0,
 30
 ),
 (
@@ -265,11 +265,11 @@ layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
 alignment = 1;
-ref = Arrowend.lft;
+ref = twoheadleftarrow.lft;
 },
 {
-pos = (340,0);
-ref = Arrow.mid.2;
+pos = (500,0);
+ref = Arrow.mid.3;
 },
 {
 alignment = 1;
@@ -281,9 +281,9 @@ userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-Arrowend.lft,
+twoheadleftarrow.lft,
 0,
-30,
+0,
 30
 ),
 (
@@ -308,11 +308,11 @@ layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 alignment = 1;
-ref = Arrowend.lft;
+ref = twoheadleftarrow.lft;
 },
 {
-pos = (450,0);
-ref = Arrow.mid.2;
+pos = (680,0);
+ref = Arrow.mid.3;
 },
 {
 alignment = 1;
@@ -324,9 +324,9 @@ userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-Arrowend.lft,
+twoheadleftarrow.lft,
 0,
-30,
+0,
 30
 ),
 (
@@ -347,5 +347,5 @@ leftTailArrow.rgt,
 width = 1700;
 }
 );
-unicode = 10523;
+unicode = 11067;
 }

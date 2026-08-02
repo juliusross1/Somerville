@@ -1,5 +1,5 @@
 {
-color = 0;
+color = 1;
 glyphname = rightOverLeftArrow;
 layers = (
 {
@@ -139,12 +139,12 @@ alignment = 1;
 ref = leftAndRightArrow.lft;
 },
 {
-pos = (511,-1);
+pos = (450,-1);
 ref = DoublePairedArrow.mid;
 },
 {
 alignment = 1;
-pos = (1012,0);
+pos = (951,0);
 ref = leftAndRightArrow.rgt;
 }
 );
@@ -172,7 +172,7 @@ leftAndRightArrow.rgt,
 );
 };
 };
-width = 1462;
+width = 1401;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -316,7 +316,7 @@ ref = DoublePairedArrow.mid;
 },
 {
 alignment = 1;
-pos = (950,0);
+pos = (951,0);
 ref = leftAndRightArrow.rgt;
 }
 );
@@ -344,7 +344,7 @@ leftAndRightArrow.rgt,
 );
 };
 };
-width = 1400;
+width = 1401;
 }
 );
 unicode = 8644;
