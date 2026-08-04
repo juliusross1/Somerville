@@ -8,7 +8,7 @@
   <key>kind</key>
   <string>recipe</string>
   <key>name</key>
-  <string>ArrowLong.mid</string>
+  <string>ArrowLong.mid.ShortShort</string>
   <key>constants</key>
   <string>recipe_constants.plist</string>
   <key>actions</key>
@@ -21,9 +21,9 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>ArrowLong.mid</string>
+        <string>ArrowLong.mid.ShortShort</string>
         <key>export</key>
-        <true/>
+        <false/>
       </dict>
     </dict>
     <dict>
@@ -34,24 +34,9 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>ArrowLong.mid</string>
+        <string>ArrowLong.mid.ShortShort</string>
         <key>component</key>
         <string>_smart.Arrow.mid</string>
-      </dict>
-    </dict>
-    <dict>
-      <key>type</key>
-      <string>call</string>
-      <key>function</key>
-      <string>disableComponentAlignment</string>
-      <key>arguments</key>
-      <dict>
-        <key>glyph</key>
-        <string>ArrowLong.mid</string>
-        <key>components</key>
-        <array>
-          <string>_smart.Arrow.mid</string>
-        </array>
       </dict>
     </dict>
     <dict>
@@ -62,11 +47,22 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>ArrowLong.mid</string>
+        <string>ArrowLong.mid.ShortShort</string>
         <key>axis</key>
         <string>width</string>
         <key>value</key>
-        <string>${LongArrowMiddleLength}</string>
+        <dict>
+          <key>operation</key>
+          <string>subtract</string>
+          <key>values</key>
+          <array>
+            <string>${LongArrowLength}</string>
+            <string>${ShortHeadsandEnds}</string>
+            <string>${ShortHeadsandEnds}</string>
+          </array>
+        </dict>
+        <key>requirePositive</key>
+        <true/>
         <key>componentFilter</key>
         <dict>
           <key>components</key>
@@ -80,15 +76,30 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
+      <string>disableComponentAlignment</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>ArrowLong.mid.ShortShort</string>
+        <key>components</key>
+        <array>
+          <string>_smart.Arrow.mid</string>
+        </array>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
       <string>setSideBearings</string>
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>ArrowLong.mid</string>
+        <string>ArrowLong.mid.ShortShort</string>
         <key>left</key>
-        <string>${ArrowMiddleLength}</string>
+        <integer>0</integer>
         <key>right</key>
-        <string>${ArrowMiddleLength}</string>
+        <integer>0</integer>
       </dict>
     </dict>
   </array>

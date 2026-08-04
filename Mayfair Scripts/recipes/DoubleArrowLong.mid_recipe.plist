@@ -66,7 +66,18 @@
         <key>axis</key>
         <string>width</string>
         <key>value</key>
-        <string>${LongArrowMiddleLength}</string>
+        <dict>
+          <key>operation</key>
+          <string>subtract</string>
+          <key>values</key>
+          <array>
+            <string>${LongArrowLength}</string>
+            <string>${ShortHeadsandEnds}</string>
+            <string>${ShortHeadsandEnds}</string>
+          </array>
+        </dict>
+        <key>requirePositive</key>
+        <true/>
         <key>componentFilter</key>
         <dict>
           <key>components</key>
@@ -86,9 +97,9 @@
         <key>glyph</key>
         <string>DoubleArrowLong.mid.ShortShort</string>
         <key>left</key>
-        <string>${ArrowMiddleLength}</string>
+        <integer>0</integer>
         <key>right</key>
-        <string>${ArrowMiddleLength}</string>
+        <integer>0</integer>
       </dict>
     </dict>
   </array>
