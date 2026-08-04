@@ -9,7 +9,7 @@
   <key>constants</key>
   <string>recipe_constants.plist</string>
   <key>name</key>
-  <string>DoublePairedArrow.mid</string>
+  <string>DoublePairedArrow.mid.ShortShort</string>
   <key>actions</key>
   <array>
     <dict>
@@ -20,7 +20,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>DoublePairedArrow.mid</string>
+        <string>DoublePairedArrow.mid.ShortShort</string>
         <key>export</key>
         <true/>
         <key>color</key>
@@ -35,11 +35,11 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>DoublePairedArrow.mid</string>
+        <string>DoublePairedArrow.mid.ShortShort</string>
         <key>components</key>
         <array>
-          <string>Arrow.mid.1</string>
-          <string>Arrow.mid.1</string>
+				<string>Arrow.mid.ShortShort</string>
+				<string>Arrow.mid.ShortShort</string>
         </array>
       </dict>
     </dict>
@@ -51,10 +51,10 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>DoublePairedArrow.mid</string>
+        <string>DoublePairedArrow.mid.ShortShort</string>
         <key>components</key>
         <array>
-          <string>Arrow.mid.1</string>
+				<string>Arrow.mid.ShortShort</string>
         </array>
       </dict>
     </dict>
@@ -66,7 +66,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>DoublePairedArrow.mid</string>
+        <string>DoublePairedArrow.mid.ShortShort</string>
         <key>componentIndex</key>
         <integer>1</integer>
         <key>x</key>
@@ -85,7 +85,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>DoublePairedArrow.mid</string>
+        <string>DoublePairedArrow.mid.ShortShort</string>
         <key>componentIndex</key>
         <integer>0</integer>
         <key>x</key>
@@ -102,7 +102,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>DoublePairedArrow.mid</string>
+        <string>DoublePairedArrow.mid.ShortShort</string>
         <key>left</key>
         <integer>0</integer>
         <key>right</key>

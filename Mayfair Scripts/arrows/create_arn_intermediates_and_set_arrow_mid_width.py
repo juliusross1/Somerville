@@ -6,21 +6,33 @@
 For the currently selected glyph, this script first removes every existing
 intermediate layer, then creates layers at the two requested Arrow Length
 values under every master. It sets the ``width`` smart-axis value on
-_smart.Arrow.mid components according to the associated master's width class
+supported Arrow.mid smart components according to the associated master's width class
 on both master and intermediate layers, and reports every final value.
 """
 
 import uuid
+import os
+import plistlib
 
 import vanilla
 from GlyphsApp import Glyphs, Message
 
 
-SCRIPT_VERSION = "2026-08-02 dim-disabled-arln-controls"
+SCRIPT_VERSION = "2026-08-04 arrow-and-double-arrow-smart-components"
 PREFS_PREFIX = "com.mayfairmath.createARNIntermediates.v2"
-GLYPH_SETTINGS_KEY = "com.mayfairmath.arlnIntermediateComponentWidths"
-ARROW_COMPONENT_NAME = "_smart.Arrow.mid"
+SUPPORTED_COMPONENTS = (
+    "_smart.Arrow.mid",
+    "_smart.DoubleArrow.mid",
+)
+SHORT_SHORT_REFERENCE_GLYPHS = {
+    "_smart.Arrow.mid": "Arrow.mid.ShortShort",
+    "_smart.DoubleArrow.mid": "DoubleArrow.mid.ShortShort",
+}
 SMART_AXIS_NAME = "width"
+ARLN_MAXIMUM_CONSTANT = "ARLNmaximum"
+CONSTANTS_PATH = os.path.normpath(
+    os.path.join(os.path.dirname(__file__), "..", "recipes", "recipe_constants.plist")
+)
 
 
 def clean_number(value):
@@ -268,9 +280,24 @@ def components_in_layer(layer):
     except Exception:
         shapes = []
     for shape in shapes:
-        if component_name(shape) == ARROW_COMPONENT_NAME:
+        if component_name(shape) in SUPPORTED_COMPONENTS:
             result.append(shape)
     return result
+
+
+def recipe_constant(name):
+    try:
+        with open(CONSTANTS_PATH, "rb") as handle:
+            constants_plist = plistlib.load(handle)
+        constants = constants_plist.get("constants", {})
+        if name not in constants:
+            raise RuntimeError("Constant %s is not defined." % name)
+        return float(constants[name])
+    except Exception as error:
+        raise RuntimeError(
+            "Could not read %s from %s: %s"
+            % (name, CONSTANTS_PATH, error)
+        )
 
 
 def component_smart_axis(component):
@@ -337,9 +364,14 @@ def set_component_smart_value(component, value):
         matches = False
     if not matches:
         raise RuntimeError(
-            "Could not verify explicit _smart.Arrow.mid %s: requested %s, "
+            "Could not verify explicit %s %s: requested %s, "
             "smartComponentValues=%s."
-            % (SMART_AXIS_NAME, format_number(value), smart_values_dict(component))
+            % (
+                component_name(component),
+                SMART_AXIS_NAME,
+                format_number(value),
+                smart_values_dict(component),
+            )
         )
     return actual
 
@@ -356,16 +388,22 @@ def master_width_class(master):
 class ARNIntermediateWindow(object):
     def __init__(self):
         self.initial_glyph = self.selected_glyph()
+        self.b_calculation = self.calculate_b_default(self.initial_glyph)
+        calculated_b = self.b_calculation.get("r")
+        b_fallback = format_number(calculated_b) if calculated_b is not None else "50"
         self.w = vanilla.FloatingWindow(
             (460, 380),
-            "ARLN Intermediates and _smart.Arrow.mid Width",
+            "ARLN Intermediates and Smart Mid Width",
         )
         self.w.intro = vanilla.TextBox(
             (15, 14, -15, 36),
             "Set master component widths and optionally recreate two ARLN intermediate layers.",
         )
-        self.w.masterHeading = vanilla.TextBox(
-            (15, 58, -15, 18), "Component width on the actual master layers"
+        self.w.adjustMasters = vanilla.CheckBox(
+            (15, 56, -15, 20),
+            "Adjust component widths on the actual master layers",
+            value=self.boolean_preference("adjustMasters", True),
+            callback=self.update_enabled_controls,
         )
         self.w.condensedMasterLabel = vanilla.TextBox(
             (28, 88, 120, 18), "SemiCondensed"
@@ -394,11 +432,14 @@ class ARNIntermediateWindow(object):
             value=self.boolean_preference("createB", True),
             callback=self.update_enabled_controls,
         )
-        self.w.b = vanilla.EditText((365, 151, 80, 24), self.preference("B", "50"))
+        self.w.b = vanilla.EditText(
+            (365, 151, 80, 24),
+            self.preference("B", b_fallback, calculated_default=True),
+        )
 
         self.w.axisHeading = vanilla.TextBox(
             (15, 193, -15, 18),
-            "_smart.Arrow.mid smart-axis value: width",
+            "Smart mid-component axis value: width",
         )
         self.w.tableA = vanilla.TextBox((197, 220, 95, 18), "At ARLN = A")
         self.w.tableB = vanilla.TextBox((330, 220, 95, 18), "At ARLN = B")
@@ -416,8 +457,11 @@ class ARNIntermediateWindow(object):
         self.w.makeKey()
 
     def update_enabled_controls(self, sender=None):
+        adjust_masters = bool(self.w.adjustMasters.get())
         create_a = bool(self.w.createA.get())
         create_b = bool(self.w.createB.get())
+        for control in (self.w.condensedMaster, self.w.expandedMaster):
+            control.enable(adjust_masters)
         for control in (self.w.a, self.w.tableA, self.w.c1, self.w.c2):
             control.enable(create_a)
         for control in (self.w.b, self.w.tableB, self.w.d1, self.w.d2):
@@ -430,19 +474,9 @@ class ARNIntermediateWindow(object):
         except Exception:
             return None
 
-    def glyph_settings(self, glyph=None):
-        glyph = glyph or self.initial_glyph
-        if glyph is None:
-            return {}
-        try:
-            return dict(glyph.userData[GLYPH_SETTINGS_KEY] or {})
-        except Exception:
-            return {}
-
-    def preference(self, key, fallback):
-        glyph_value = self.glyph_settings().get(key)
-        if glyph_value is not None:
-            return format_number(glyph_value)
+    def preference(self, key, fallback, calculated_default=False):
+        if calculated_default:
+            return fallback
         try:
             value = Glyphs.defaults["%s.%s" % (PREFS_PREFIX, key)]
             if value is not None:
@@ -451,10 +485,111 @@ class ARNIntermediateWindow(object):
             pass
         return fallback
 
+    def calculate_b_default(self, glyph):
+        result = {"c": None, "masters": [], "r": None, "warnings": []}
+        print("Calculating the default B-layer ARLN value (r):")
+        print("  Formula for each master: (b - a) * c / b")
+        print("  Supported smart components: %s" % ", ".join(SUPPORTED_COMPONENTS))
+        print("  a = supported component width in the selected glyph")
+        print("  b = matching component width in its ShortShort reference glyph")
+        if glyph is None or Glyphs.font is None:
+            result["warnings"].append("No selected glyph was available for the B calculation.")
+            print("  ERROR: %s" % result["warnings"][-1])
+            return result
+        try:
+            result["c"] = recipe_constant(ARLN_MAXIMUM_CONSTANT)
+            print(
+                "  c = %s (constant %s)"
+                % (format_number(result["c"]), ARLN_MAXIMUM_CONSTANT)
+            )
+        except Exception as error:
+            result["warnings"].append(str(error))
+            print("  ERROR: %s" % result["warnings"][-1])
+            return result
+        calculated_values = []
+        for master in Glyphs.font.masters:
+            print("  Master: %s" % master.name)
+            try:
+                source_layer = master_layer_for_glyph(glyph, master)
+                source_components = components_in_layer(source_layer) if source_layer is not None else []
+                if not source_components:
+                    raise RuntimeError(
+                        "selected glyph has none of: %s" % ", ".join(SUPPORTED_COMPONENTS)
+                    )
+                source_component = source_components[0]
+                source_component_name = component_name(source_component)
+                reference_glyph_name = SHORT_SHORT_REFERENCE_GLYPHS[source_component_name]
+                try:
+                    reference_glyph = Glyphs.font.glyphs[reference_glyph_name]
+                except Exception:
+                    reference_glyph = None
+                if reference_glyph is None:
+                    raise RuntimeError("missing reference glyph %s" % reference_glyph_name)
+                reference_layer = master_layer_for_glyph(reference_glyph, master)
+                reference_components = components_in_layer(reference_layer) if reference_layer is not None else []
+                reference_components = [
+                    component
+                    for component in reference_components
+                    if component_name(component) == source_component_name
+                ]
+                if not reference_components:
+                    raise RuntimeError(
+                        "%s has no %s component"
+                        % (reference_glyph_name, source_component_name)
+                    )
+                a = read_component_smart_value(source_component)
+                b = read_component_smart_value(reference_components[0])
+                if a is None:
+                    raise RuntimeError(
+                        "selected glyph's %s has no explicit width value"
+                        % source_component_name
+                    )
+                if b is None:
+                    raise RuntimeError(
+                        "%s component has no explicit width value" % reference_glyph_name
+                    )
+                a = float(a)
+                b = float(b)
+                if abs(b) < 0.0001:
+                    raise RuntimeError("b is zero")
+                calculated = (b - a) * result["c"] / b
+                running_minimum = min(calculated_values + [calculated])
+                result["masters"].append(
+                    {
+                        "name": master.name,
+                        "a": a,
+                        "b": b,
+                        "value": calculated,
+                        "runningMinimum": running_minimum,
+                        "component": source_component_name,
+                        "referenceGlyph": reference_glyph_name,
+                    }
+                )
+                calculated_values.append(calculated)
+                print("    component = %s" % source_component_name)
+                print("    ShortShort reference glyph = %s" % reference_glyph_name)
+                print("    a = %s" % format_number(a))
+                print("    b = %s" % format_number(b))
+                print("    b - a = %s" % format_number(b - a))
+                print(
+                    "    (%s - %s) * %s / %s = %s"
+                    % tuple(
+                        format_number(value)
+                        for value in (b, a, result["c"], b, calculated)
+                    )
+                )
+                print("    running minimum = %s" % format_number(running_minimum))
+            except Exception as error:
+                result["warnings"].append("%s: %s" % (master.name, error))
+                print("    ERROR: %s" % error)
+        if calculated_values:
+            result["r"] = min(calculated_values)
+            print("  Final r = minimum across all masters = %s" % format_number(result["r"]))
+        else:
+            print("  Final r could not be calculated: no master produced a value.")
+        return result
+
     def boolean_preference(self, key, fallback):
-        glyph_value = self.glyph_settings().get(key)
-        if glyph_value is not None:
-            return bool(glyph_value)
         try:
             value = Glyphs.defaults["%s.%s" % (PREFS_PREFIX, key)]
             if value is not None:
@@ -463,7 +598,7 @@ class ARNIntermediateWindow(object):
             pass
         return fallback
 
-    def read_values(self, glyph):
+    def read_values(self):
         controls = {
             "A": self.w.a,
             "B": self.w.b,
@@ -482,13 +617,13 @@ class ARNIntermediateWindow(object):
                 raise ValueError("%s must be a number." % key)
         values["createA"] = bool(self.w.createA.get())
         values["createB"] = bool(self.w.createB.get())
+        values["adjustMasters"] = bool(self.w.adjustMasters.get())
         if values["createA"] and values["createB"] and abs(values["A"] - values["B"]) < 0.0001:
             raise ValueError("A and B must be different Arrow Length values.")
         for key in controls:
             Glyphs.defaults["%s.%s" % (PREFS_PREFIX, key)] = format_number(values[key])
-        for key in ("createA", "createB"):
+        for key in ("createA", "createB", "adjustMasters"):
             Glyphs.defaults["%s.%s" % (PREFS_PREFIX, key)] = values[key]
-        glyph.userData[GLYPH_SETTINGS_KEY] = dict(values)
         return values
 
     def apply(self, sender):
@@ -513,7 +648,7 @@ class ARNIntermediateWindow(object):
             )
             return
         try:
-            values = self.read_values(glyph)
+            values = self.read_values()
         except ValueError as error:
             Message("Invalid Input", str(error))
             return
@@ -545,7 +680,7 @@ class ARNIntermediateWindow(object):
                 width_class = master_width_class(master)
                 if width_class is None:
                     skipped_masters.append(master.name)
-                else:
+                elif values["adjustMasters"]:
                     try:
                         master_layer = master_layer_for_glyph(glyph, master)
                         if master_layer is None:
@@ -557,8 +692,8 @@ class ARNIntermediateWindow(object):
                         master_components = components_in_layer(master_layer)
                         if not master_components:
                             details.append(
-                                "%s | actual master layer | no %s component found"
-                                % (master.name, ARROW_COMPONENT_NAME)
+                                "%s | actual master layer | no supported smart component found (%s)"
+                                % (master.name, ", ".join(SUPPORTED_COMPONENTS))
                             )
                         for component_index, component in enumerate(master_components, 1):
                             actual = set_component_smart_value(component, master_value)
@@ -568,7 +703,7 @@ class ARNIntermediateWindow(object):
                                 "explicit read-back=%s; smartComponentValues=%s"
                                 % (
                                     master.name,
-                                    ARROW_COMPONENT_NAME,
+                                    component_name(component),
                                     component_index,
                                     format_number(master_value),
                                     format_number(actual),
@@ -577,6 +712,11 @@ class ARNIntermediateWindow(object):
                             )
                     except Exception as error:
                         errors.append("%s / actual master layer: %s" % (master.name, error))
+                else:
+                    details.append(
+                        "%s | actual master layer | width adjustment disabled in UI"
+                        % master.name
+                    )
                 for arn_key in ("A", "B"):
                     if not values["create%s" % arn_key]:
                         details.append(
@@ -612,14 +752,17 @@ class ARNIntermediateWindow(object):
                         )
                         components = components_in_layer(layer)
                         if not components:
-                            details.append("  no %s component found" % ARROW_COMPONENT_NAME)
+                            details.append(
+                                "  no supported smart component found (%s)"
+                                % ", ".join(SUPPORTED_COMPONENTS)
+                            )
                         for component_index, component in enumerate(components, 1):
                             actual = set_component_smart_value(component, smart_value)
                             changed_components += 1
                             details.append(
                                 "  %s component %i: requested width=%s; explicit read-back=%s; smartComponentValues=%s (%s, ARLN %s)"
                                 % (
-                                    ARROW_COMPONENT_NAME,
+                                    component_name(component),
                                     component_index,
                                     format_number(smart_value),
                                     format_number(actual),
@@ -638,17 +781,18 @@ class ARNIntermediateWindow(object):
                 components = components_in_layer(layer)
                 if not components:
                     final_readback.append(
-                        "%s | %s | no %s component found"
-                        % (master_name, location_key, ARROW_COMPONENT_NAME)
+                        "%s | %s | no supported smart component found (%s)"
+                        % (master_name, location_key, ", ".join(SUPPORTED_COMPONENTS))
                     )
                     continue
                 for component_index, component in enumerate(components, 1):
                     actual = read_component_smart_value(component)
                     final_readback.append(
-                        "%s | %s | component %i | requested width=%s | explicit actual=%s | smartComponentValues=%s"
+                        "%s | %s | %s component %i | requested width=%s | explicit actual=%s | smartComponentValues=%s"
                         % (
                             master_name,
                             location_key,
+                            component_name(component),
                             component_index,
                             format_number(expected),
                             format_number(actual) if actual is not None else "not set",
@@ -677,10 +821,17 @@ class ARNIntermediateWindow(object):
         finally:
             font.enableUpdateInterface()
 
-        print("Create ARLN Intermediates and Set _smart.Arrow.mid Width")
+        print("Create ARLN Intermediates and Set Smart Mid Width")
         print("Script version: %s" % SCRIPT_VERSION)
         print("Glyph: %s" % glyph.name)
         print("Arrow Length axis: %s (%s)" % (axis_name(arn_axis), axis_tag(arn_axis)))
+        print("Calculated B-layer ARLN default r: %s" % (
+            format_number(self.b_calculation["r"])
+            if self.b_calculation.get("r") is not None
+            else "unavailable"
+        ))
+        for warning in self.b_calculation.get("warnings", []):
+            print("  WARNING: %s" % warning)
         print(
             "ARLN A=%s (create=%s); ARLN B=%s (create=%s)"
             % (
@@ -699,16 +850,18 @@ class ARNIntermediateWindow(object):
             % (format_number(values["C2"]), format_number(values["D2"]))
         )
         print(
-            "Actual master-layer component widths: SemiCondensed=%s; SemiExpanded=%s"
-            % (format_number(values["MC"]), format_number(values["ME"]))
+            "Actual master-layer component widths: adjust=%s; SemiCondensed=%s; SemiExpanded=%s"
+            % (
+                "yes" if values["adjustMasters"] else "no",
+                format_number(values["MC"]),
+                format_number(values["ME"]),
+            )
         )
-        print("Glyph userData key: %s" % GLYPH_SETTINGS_KEY)
-        print("Stored glyph settings: %s" % self.glyph_settings(glyph))
         print("Removed existing intermediate layers: %i" % len(removed_layers))
         print("Details:")
         for detail in details:
             print(detail)
-        print("Final _smart.Arrow.mid width read-back:")
+        print("Final smart mid-component width read-back:")
         if final_readback:
             for result in final_readback:
                 print(result)
@@ -716,7 +869,7 @@ class ARNIntermediateWindow(object):
             print("No classified intermediate layers were available to inspect.")
         print("Created layers: %i" % created)
         print("Reused layers: %i" % reused)
-        print("Updated _smart.Arrow.mid components: %i" % changed_components)
+        print("Updated supported smart mid components: %i" % changed_components)
         if skipped_masters:
             print("Skipped component-width assignment for unclassified masters: %s" % ", ".join(skipped_masters))
         for error in errors:

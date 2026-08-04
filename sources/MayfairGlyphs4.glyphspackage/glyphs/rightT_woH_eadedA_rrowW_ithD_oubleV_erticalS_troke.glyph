@@ -1,5 +1,5 @@
 {
-color = 0;
+color = 1;
 glyphname = rightTwoHeadedArrowWithDoubleVerticalStroke;
 layers = (
 {
@@ -11,7 +11,7 @@ ref = rightArrow.lft;
 },
 {
 pos = (340,0);
-ref = Arrow.mid.2;
+ref = Arrow.mid.ShortLong;
 },
 {
 anchor = stroke_2;
@@ -71,7 +71,7 @@ ref = rightArrow.lft;
 },
 {
 pos = (450,-1);
-ref = Arrow.mid.2;
+ref = Arrow.mid.ShortLong;
 },
 {
 anchor = stroke_2;
@@ -131,7 +131,7 @@ ref = rightArrow.lft;
 },
 {
 pos = (340,0);
-ref = Arrow.mid.2;
+ref = Arrow.mid.ShortLong;
 },
 {
 anchor = stroke_2;
@@ -191,7 +191,7 @@ ref = rightArrow.lft;
 },
 {
 pos = (450,-1);
-ref = Arrow.mid.2;
+ref = Arrow.mid.ShortLong;
 },
 {
 anchor = stroke_2;
@@ -251,7 +251,7 @@ ref = rightArrow.lft;
 },
 {
 pos = (340,0);
-ref = Arrow.mid.2;
+ref = Arrow.mid.ShortLong;
 },
 {
 anchor = stroke_left1;
@@ -311,7 +311,7 @@ ref = rightArrow.lft;
 },
 {
 pos = (450,0);
-ref = Arrow.mid.2;
+ref = Arrow.mid.ShortLong;
 },
 {
 anchor = stroke_2;
@@ -371,7 +371,7 @@ ref = rightArrow.lft;
 },
 {
 pos = (340,0);
-ref = Arrow.mid.2;
+ref = Arrow.mid.ShortLong;
 },
 {
 anchor = stroke_2;
@@ -431,7 +431,7 @@ ref = rightArrow.lft;
 },
 {
 pos = (450,0);
-ref = Arrow.mid.2;
+ref = Arrow.mid.ShortLong;
 },
 {
 anchor = stroke_2;

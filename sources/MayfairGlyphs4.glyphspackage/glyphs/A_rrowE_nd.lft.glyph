@@ -1,7 +1,8 @@
 {
 category = Symbol;
 color = 0;
-glyphname = rightTailArrow.lft;
+export = 0;
+glyphname = ArrowEnd.lft;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -27,7 +28,7 @@ nodes = (
 },
 {
 pos = (80,0);
-ref = _smart.tail;
+ref = _smart.ArrowEnd;
 },
 {
 piece = {
@@ -63,7 +64,7 @@ nodes = (
 },
 {
 pos = (163,0);
-ref = _smart.tail;
+ref = _smart.ArrowEnd;
 },
 {
 piece = {
@@ -99,7 +100,7 @@ nodes = (
 },
 {
 pos = (170,0);
-ref = _smart.tail;
+ref = _smart.ArrowEnd;
 },
 {
 piece = {
@@ -135,7 +136,7 @@ nodes = (
 },
 {
 pos = (163,0);
-ref = _smart.tail;
+ref = _smart.ArrowEnd;
 },
 {
 piece = {
@@ -171,7 +172,7 @@ nodes = (
 },
 {
 pos = (163,0);
-ref = _smart.tail;
+ref = _smart.ArrowEnd;
 },
 {
 piece = {
@@ -207,7 +208,7 @@ nodes = (
 },
 {
 pos = (160,0);
-ref = _smart.tail;
+ref = _smart.ArrowEnd;
 },
 {
 piece = {
@@ -243,7 +244,7 @@ nodes = (
 },
 {
 pos = (173,0);
-ref = _smart.tail;
+ref = _smart.ArrowEnd;
 },
 {
 piece = {
@@ -288,7 +289,7 @@ nodes = (
 },
 {
 pos = (208,0);
-ref = _smart.tail;
+ref = _smart.ArrowEnd;
 },
 {
 piece = {
@@ -305,7 +306,7 @@ com.nagwa.MATHPlugin.variants = {
 width = 680;
 }
 );
-metricLeft = "=_smart.tail";
+metricLeft = "=_smart.ArrowEnd";
 metricRight = "=0";
 subCategory = Arrow;
 }

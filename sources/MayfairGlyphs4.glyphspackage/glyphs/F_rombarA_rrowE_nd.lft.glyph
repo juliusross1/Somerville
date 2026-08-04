@@ -1,6 +1,7 @@
 {
 color = 0;
-glyphname = rightFrombarArrow.lft;
+export = 0;
+glyphname = FrombarArrowEnd.lft;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -72,7 +73,8 @@ shapes = (
 ref = _smart.FrombarArrow;
 }
 );
-width = 454;
+width = 529;
 }
 );
+metricRight = "=0";
 }

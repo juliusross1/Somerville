@@ -11,6 +11,7 @@
   <string>Recipe Constants</string>
   <key>constants</key>
   <dict>
+  <!--
     <key>ArrowMiddleLength1</key>
     <integer>500</integer>
     <key>ArrowMiddleLength2</key>
@@ -19,10 +20,13 @@
     <integer>180</integer>
     <key>LongArrowMiddleLength</key>
     <integer>800</integer>
-    <key>DoublePairedArrowGap</key>
-    <integer>220</integer>
     <key>ArrowEndLength</key>
     <integer>500</integer>
+-->
+    <key>ARLNmaximum</key>
+    <integer>200</integer>
+    <key>DoublePairedArrowGap</key>
+    <integer>220</integer>
     <key>ArrowStartandEndConnector</key>
     <integer>30</integer>
     <key>ArrowMiddleConnector</key>
@@ -34,5 +38,41 @@
     <key>GeneratedColor</key>
     <string>orange</string>
   </dict>
+
+  <key>masterGroups</key>
+  <array>
+    <dict>
+      <key>match</key>
+      <string>*SemiCondensed*</string>
+      <key>constants</key>
+      <dict>
+        <key>StandardArrowLength</key>
+        <integer>1480</integer>
+        <key>LongArrowLength</key>
+        <integer>1980</integer>
+        <key>ShortHeadsandEnds</key>
+        <integer>340</integer>
+        <key>LongHeadsandEnds</key>
+        <integer>500</integer>
+      </dict>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>*SemiExpanded*</string>
+      <key>constants</key>
+      <dict>
+        <key>StandardArrowLength</key>
+        <integer>1700</integer>
+        <key>LongArrowLength</key>
+        <integer>2200</integer>
+        <key>ShortHeadsandEnds</key>
+        <integer>450</integer>
+        <key>LongHeadsandEnds</key>
+        <integer>680</integer>
+      </dict>
+    </dict>
+  </array>
+  <key>masterOverrides</key>
+  <dict/>
 </dict>
 </plist>

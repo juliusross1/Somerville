@@ -8,7 +8,7 @@
   <key>kind</key>
   <string>recipe</string>
   <key>name</key>
-  <string>DoubleArrow.mid</string>
+  <string>DoubleArrow.mid.ShortShort</string>
   <key>constants</key>
   <string>recipe_constants.plist</string>
   <key>actions</key>
@@ -21,7 +21,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>DoubleArrow.mid</string>
+        <string>DoubleArrow.mid.ShortShort</string>
         <key>export</key>
         <false/>
       </dict>
@@ -34,7 +34,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>DoubleArrow.mid</string>
+        <string>DoubleArrow.mid.ShortShort</string>
         <key>component</key>
         <string>_smart.DoubleArrow.mid</string>
       </dict>
@@ -47,11 +47,22 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>DoubleArrow.mid</string>
+        <string>DoubleArrow.mid.ShortShort</string>
         <key>axis</key>
         <string>width</string>
         <key>value</key>
-        <string>${ArrowMiddleLength}</string>
+        <dict>
+          <key>operation</key>
+          <string>subtract</string>
+          <key>values</key>
+          <array>
+            <string>${StandardArrowLength}</string>
+            <string>${ShortHeadsandEnds}</string>
+            <string>${ShortHeadsandEnds}</string>
+          </array>
+        </dict>
+        <key>requirePositive</key>
+        <true/>
         <key>componentFilter</key>
         <dict>
           <key>components</key>
@@ -69,7 +80,7 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>DoubleArrow.mid</string>
+        <string>DoubleArrow.mid.ShortShort</string>
         <key>components</key>
         <array>
           <string>_smart.DoubleArrow.mid</string>
@@ -84,11 +95,11 @@
       <key>arguments</key>
       <dict>
         <key>glyph</key>
-        <string>DoubleArrow.mid</string>
+        <string>DoubleArrow.mid.ShortShort</string>
         <key>left</key>
-        <string>${ArrowEndLength}</string>
+        <integer>0</integer>
         <key>right</key>
-        <string>${ArrowEndLength}</string>
+        <integer>0</integer>
       </dict>
     </dict>
   </array>

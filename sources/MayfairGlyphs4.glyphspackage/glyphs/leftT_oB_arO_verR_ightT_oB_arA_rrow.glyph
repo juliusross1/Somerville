@@ -1,5 +1,5 @@
 {
-color = 0;
+color = 1;
 glyphname = leftToBarOverRightToBarArrow;
 layers = (
 {
@@ -11,11 +11,11 @@ ref = leftToBarOverRightToBarArrow.lft;
 },
 {
 pos = (480,0);
-ref = DoublePairedArrow.mid;
+ref = DoublePairedArrow.mid.LongLong;
 },
 {
 alignment = 1;
-pos = (980,0);
+pos = (960,0);
 ref = leftToBarOverRightToBarArrow.rgt;
 }
 );
@@ -43,7 +43,7 @@ leftToBarOverRightToBarArrow.rgt,
 );
 };
 };
-width = 1480;
+width = 1460;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -54,11 +54,11 @@ ref = leftToBarOverRightToBarArrow.lft;
 },
 {
 pos = (651,0);
-ref = DoublePairedArrow.mid;
+ref = DoublePairedArrow.mid.LongLong;
 },
 {
 alignment = 1;
-pos = (1151,0);
+pos = (991,0);
 ref = leftToBarOverRightToBarArrow.rgt;
 }
 );
@@ -86,7 +86,7 @@ leftToBarOverRightToBarArrow.rgt,
 );
 };
 };
-width = 1831;
+width = 1671;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -97,11 +97,11 @@ ref = leftToBarOverRightToBarArrow.lft;
 },
 {
 pos = (480,0);
-ref = DoublePairedArrow.mid;
+ref = DoublePairedArrow.mid.LongLong;
 },
 {
 alignment = 1;
-pos = (980,0);
+pos = (960,0);
 ref = leftToBarOverRightToBarArrow.rgt;
 }
 );
@@ -129,7 +129,7 @@ leftToBarOverRightToBarArrow.rgt,
 );
 };
 };
-width = 1480;
+width = 1460;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -140,11 +140,11 @@ ref = leftToBarOverRightToBarArrow.lft;
 },
 {
 pos = (681,0);
-ref = DoublePairedArrow.mid;
+ref = DoublePairedArrow.mid.LongLong;
 },
 {
 alignment = 1;
-pos = (1181,0);
+pos = (1021,0);
 ref = leftToBarOverRightToBarArrow.rgt;
 }
 );
@@ -172,7 +172,7 @@ leftToBarOverRightToBarArrow.rgt,
 );
 };
 };
-width = 1861;
+width = 1701;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -183,11 +183,11 @@ ref = leftToBarOverRightToBarArrow.lft;
 },
 {
 pos = (480,0);
-ref = DoublePairedArrow.mid;
+ref = DoublePairedArrow.mid.LongLong;
 },
 {
 alignment = 1;
-pos = (980,0);
+pos = (960,0);
 ref = leftToBarOverRightToBarArrow.rgt;
 }
 );
@@ -215,7 +215,7 @@ leftToBarOverRightToBarArrow.rgt,
 );
 };
 };
-width = 1480;
+width = 1460;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -226,11 +226,11 @@ ref = leftToBarOverRightToBarArrow.lft;
 },
 {
 pos = (651,0);
-ref = DoublePairedArrow.mid;
+ref = DoublePairedArrow.mid.LongLong;
 },
 {
 alignment = 1;
-pos = (1151,0);
+pos = (991,0);
 ref = leftToBarOverRightToBarArrow.rgt;
 }
 );
@@ -258,7 +258,7 @@ leftToBarOverRightToBarArrow.rgt,
 );
 };
 };
-width = 1831;
+width = 1671;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -269,11 +269,11 @@ ref = leftToBarOverRightToBarArrow.lft;
 },
 {
 pos = (480,0);
-ref = DoublePairedArrow.mid;
+ref = DoublePairedArrow.mid.LongLong;
 },
 {
 alignment = 1;
-pos = (980,0);
+pos = (960,0);
 ref = leftToBarOverRightToBarArrow.rgt;
 }
 );
@@ -301,7 +301,7 @@ leftToBarOverRightToBarArrow.rgt,
 );
 };
 };
-width = 1480;
+width = 1460;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -311,12 +311,12 @@ alignment = 1;
 ref = leftToBarOverRightToBarArrow.lft;
 },
 {
-pos = (656,0);
-ref = DoublePairedArrow.mid;
+pos = (680,0);
+ref = DoublePairedArrow.mid.LongLong;
 },
 {
 alignment = 1;
-pos = (1156,0);
+pos = (1020,0);
 ref = leftToBarOverRightToBarArrow.rgt;
 }
 );
@@ -344,7 +344,7 @@ leftToBarOverRightToBarArrow.rgt,
 );
 };
 };
-width = 1836;
+width = 1700;
 }
 );
 unicode = 8633;

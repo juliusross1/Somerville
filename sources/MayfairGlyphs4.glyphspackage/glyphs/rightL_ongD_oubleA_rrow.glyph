@@ -7,23 +7,22 @@ layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
 alignment = 1;
-ref = rightDoubleArrow.lft;
+ref = DoubleArrowEnd.lft;
 },
 {
-pos = (328,0);
-ref = DoubleArrowLong.mid;
+pos = (298,0);
+ref = DoubleArrowLong.mid.ShortShort;
 },
 {
-alignment = 1;
-pos = (1128,0);
-ref = rightDoubleArrow.rgt;
+pos = (1098,0);
+ref = DoubleArrowHead.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-rightDoubleArrow.lft,
+DoubleArrowEnd.lft,
 0,
 0,
 30
@@ -35,7 +34,7 @@ DoubleArrow.ext,
 450
 ),
 (
-rightDoubleArrow.rgt,
+DoubleArrowHead.rgt,
 0,
 30,
 0
@@ -43,30 +42,29 @@ rightDoubleArrow.rgt,
 );
 };
 };
-width = 1468;
+width = 1428;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
 alignment = 1;
-ref = rightDoubleArrow.lft;
+ref = DoubleArrowEnd.lft;
 },
 {
-pos = (411,0);
-ref = DoubleArrowLong.mid;
+pos = (381,5);
+ref = DoubleArrowLong.mid.ShortShort;
 },
 {
-alignment = 1;
-pos = (1211,0);
-ref = rightDoubleArrow.rgt;
+pos = (1181,5);
+ref = DoubleArrowHead.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-rightDoubleArrow.lft,
+DoubleArrowEnd.lft,
 0,
 0,
 30
@@ -78,7 +76,7 @@ DoubleArrow.ext,
 450
 ),
 (
-rightDoubleArrow.rgt,
+DoubleArrowHead.rgt,
 0,
 30,
 0
@@ -86,30 +84,29 @@ rightDoubleArrow.rgt,
 );
 };
 };
-width = 1661;
+width = 1631;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
 alignment = 1;
-ref = rightDoubleArrow.lft;
+ref = DoubleArrowEnd.lft;
 },
 {
-pos = (328,0);
-ref = DoubleArrowLong.mid;
+pos = (298,0);
+ref = DoubleArrowLong.mid.ShortShort;
 },
 {
-alignment = 1;
-pos = (1128,0);
-ref = rightDoubleArrow.rgt;
+pos = (1098,0);
+ref = DoubleArrowHead.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-rightDoubleArrow.lft,
+DoubleArrowEnd.lft,
 0,
 0,
 30
@@ -121,7 +118,7 @@ DoubleArrow.ext,
 450
 ),
 (
-rightDoubleArrow.rgt,
+DoubleArrowHead.rgt,
 0,
 30,
 0
@@ -129,30 +126,29 @@ rightDoubleArrow.rgt,
 );
 };
 };
-width = 1468;
+width = 1427;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
 alignment = 1;
-ref = rightDoubleArrow.lft;
+ref = DoubleArrowEnd.lft;
 },
 {
-pos = (412,0);
-ref = DoubleArrowLong.mid;
+pos = (382,5);
+ref = DoubleArrowLong.mid.ShortShort;
 },
 {
-alignment = 1;
-pos = (1212,0);
-ref = rightDoubleArrow.rgt;
+pos = (1182,5);
+ref = DoubleArrowHead.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-rightDoubleArrow.lft,
+DoubleArrowEnd.lft,
 0,
 0,
 30
@@ -164,7 +160,7 @@ DoubleArrow.ext,
 450
 ),
 (
-rightDoubleArrow.rgt,
+DoubleArrowHead.rgt,
 0,
 30,
 0
@@ -172,30 +168,29 @@ rightDoubleArrow.rgt,
 );
 };
 };
-width = 1662;
+width = 1632;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
 alignment = 1;
-ref = rightDoubleArrow.lft;
+ref = DoubleArrowEnd.lft;
 },
 {
-pos = (500,0);
-ref = DoubleArrowLong.mid;
+pos = (330,0);
+ref = DoubleArrowLong.mid.ShortShort;
 },
 {
-alignment = 1;
-pos = (1300,0);
-ref = rightDoubleArrow.rgt;
+pos = (1130,0);
+ref = DoubleArrowHead.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-rightDoubleArrow.lft,
+DoubleArrowEnd.lft,
 0,
 0,
 30
@@ -207,7 +202,7 @@ DoubleArrow.ext,
 450
 ),
 (
-rightDoubleArrow.rgt,
+DoubleArrowHead.rgt,
 0,
 30,
 0
@@ -215,30 +210,29 @@ rightDoubleArrow.rgt,
 );
 };
 };
-width = 1640;
+width = 1460;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
 alignment = 1;
-ref = rightDoubleArrow.lft;
+ref = DoubleArrowEnd.lft;
 },
 {
-pos = (500,0);
-ref = DoubleArrowLong.mid;
+pos = (450,0);
+ref = DoubleArrowLong.mid.ShortShort;
 },
 {
-alignment = 1;
-pos = (1300,0);
-ref = rightDoubleArrow.rgt;
+pos = (1250,0);
+ref = DoubleArrowHead.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-rightDoubleArrow.lft,
+DoubleArrowEnd.lft,
 0,
 0,
 30
@@ -250,7 +244,7 @@ DoubleArrow.ext,
 450
 ),
 (
-rightDoubleArrow.rgt,
+DoubleArrowHead.rgt,
 0,
 30,
 0
@@ -258,30 +252,29 @@ rightDoubleArrow.rgt,
 );
 };
 };
-width = 1750;
+width = 1700;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
 alignment = 1;
-ref = rightDoubleArrow.lft;
+ref = DoubleArrowEnd.lft;
 },
 {
-pos = (500,0);
-ref = DoubleArrowLong.mid;
+pos = (330,0);
+ref = DoubleArrowLong.mid.ShortShort;
 },
 {
-alignment = 1;
-pos = (1300,0);
-ref = rightDoubleArrow.rgt;
+pos = (1130,0);
+ref = DoubleArrowHead.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-rightDoubleArrow.lft,
+DoubleArrowEnd.lft,
 0,
 0,
 30
@@ -293,7 +286,7 @@ DoubleArrow.ext,
 450
 ),
 (
-rightDoubleArrow.rgt,
+DoubleArrowHead.rgt,
 0,
 30,
 0
@@ -301,30 +294,29 @@ rightDoubleArrow.rgt,
 );
 };
 };
-width = 1640;
+width = 1460;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 alignment = 1;
-ref = rightDoubleArrow.lft;
+ref = DoubleArrowEnd.lft;
 },
 {
-pos = (500,0);
-ref = DoubleArrowLong.mid;
+pos = (450,0);
+ref = DoubleArrowLong.mid.ShortShort;
 },
 {
-alignment = 1;
-pos = (1300,0);
-ref = rightDoubleArrow.rgt;
+pos = (1250,0);
+ref = DoubleArrowHead.rgt;
 }
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
 hAssembly = (
 (
-rightDoubleArrow.lft,
+DoubleArrowEnd.lft,
 0,
 0,
 30
@@ -336,7 +328,7 @@ DoubleArrow.ext,
 450
 ),
 (
-rightDoubleArrow.rgt,
+DoubleArrowHead.rgt,
 0,
 30,
 0
@@ -344,7 +336,7 @@ rightDoubleArrow.rgt,
 );
 };
 };
-width = 1745;
+width = 1700;
 }
 );
 unicode = 10233;

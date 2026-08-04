@@ -30,9 +30,9 @@
 			<string>rightDoubleArrowFromBar</string>
 			<key>components</key>
 			<array>
-				<string>rightFrombarDoubleArrow.lft</string>
-				<string>DoubleArrow.mid</string>
-				<string>rightDoubleArrow.rgt</string>
+				<string>FrombarDoubleArrowEnd.lft</string>
+				<string>DoubleArrow.mid.ShortShort</string>
+				<string>DoubleArrowHead.rgt</string>
 			</array>
 		</dict>
 		<dict>
@@ -46,7 +46,7 @@
 			<array>
 				<dict>
 					<key>glyph</key>
-					<string>rightFrombarDoubleArrow.lft</string>
+					<string>FrombarDoubleArrowEnd.lft</string>
 					<key>extender</key>
 					<false/>
 					<key>startConnector</key>
@@ -66,7 +66,7 @@
 				</dict>
 				<dict>
 					<key>glyph</key>
-					<string>rightDoubleArrow.rgt</string>
+					<string>DoubleArrowHead.rgt</string>
 					<key>extender</key>
 					<false/>
 					<key>startConnector</key>

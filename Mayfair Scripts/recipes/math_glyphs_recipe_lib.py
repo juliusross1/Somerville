@@ -6,6 +6,7 @@ import os
 import plistlib
 import re
 import uuid
+from fnmatch import fnmatchcase
 
 from GlyphsApp import (
     Glyphs,
@@ -18,7 +19,7 @@ from GlyphsApp import (
 from AppKit import NSMakePoint, NSPoint
 
 
-SCRIPT_VERSION = "2026-08-01 Glyphs-4-glyph-axes"
+SCRIPT_VERSION = "2026-08-04 per-master-recipe-constants"
 DEFAULT_RECIPE_FILE = "triple_integral_recipe.plist"
 VERBOSE = True
 VARIABLE_PATTERN = re.compile(r"\$\{([^}]+)\}")
@@ -51,6 +52,50 @@ GLYPHS_COLOR_INDEXES = dict(
 
 class RecipeStopped(Exception):
     pass
+
+
+class MasterScopedValue(object):
+    """A recipe constant resolved against a layer's associated master."""
+
+    NO_DEFAULT = object()
+
+    def __init__(self, name, default=NO_DEFAULT, groups=None, master_overrides=None):
+        self.name = str(name)
+        self.default = default
+        self.groups = list(groups or [])
+        self.master_overrides = dict(master_overrides or {})
+
+    def resolve(self, master):
+        if master is None:
+            raise RuntimeError(
+                "Cannot resolve per-master constant %s without an associated master."
+                % self.name
+            )
+        value = self.default
+        source = "all masters"
+        master_name = str(safe_call(getattr(master, "name", None), "") or "")
+        master_id = str(safe_call(getattr(master, "id", None), "") or "")
+        for group in self.groups:
+            pattern = str(group.get("match", ""))
+            group_constants = group.get("constants", {})
+            if (
+                pattern
+                and fnmatchcase(master_name.lower(), pattern.lower())
+                and self.name in group_constants
+            ):
+                value = group_constants[self.name]
+                source = "group %s" % pattern
+        for key in (master_name, master_id):
+            constants = self.master_overrides.get(key)
+            if constants and self.name in constants:
+                value = constants[self.name]
+                source = "master %s" % key
+        if value is self.NO_DEFAULT:
+            raise RuntimeError(
+                "No value for constant %s matches master %s."
+                % (self.name, master_name or master_id)
+            )
+        return value, source
 
 
 def script_directory():
@@ -215,6 +260,39 @@ def master_for_layer(font, layer):
             pass
 
     return safe_call(getattr(font, "selectedFontMaster", None))
+
+
+def resolve_master_value(value, font, layer):
+    """Resolve deferred constants recursively for the layer's master."""
+    if isinstance(value, MasterScopedValue):
+        resolved, _source = value.resolve(master_for_layer(font, layer))
+        return resolved
+    if isinstance(value, dict):
+        resolved = {
+            key: resolve_master_value(item, font, layer)
+            for key, item in value.items()
+        }
+        operation = resolved.get("operation")
+        if operation is not None:
+            operands = resolved.get("values")
+            if not isinstance(operands, list) or not operands:
+                raise RuntimeError(
+                    "Recipe calculation %s requires a non-empty values array."
+                    % operation
+                )
+            numbers = [clean_number(item) for item in operands]
+            if str(operation).lower() == "subtract":
+                result = numbers[0]
+                for number in numbers[1:]:
+                    result -= number
+                return clean_number(result)
+            raise RuntimeError("Unknown recipe calculation: %s" % operation)
+        return resolved
+    if isinstance(value, list):
+        return [resolve_master_value(item, font, layer) for item in value]
+    if isinstance(value, tuple):
+        return tuple(resolve_master_value(item, font, layer) for item in value)
+    return value
 
 
 def custom_parameter_value(owner, parameter_name):
@@ -1620,6 +1698,8 @@ def load_recipe_constants(recipe):
         constant_files = [constant_files]
 
     constants = {}
+    master_groups = []
+    master_overrides = {}
     for constant_file in constant_files:
         constant_plist, constant_path = load_plist(constant_file)
         values = constant_plist.get("constants")
@@ -1629,6 +1709,61 @@ def load_recipe_constants(recipe):
                 % constant_path
             )
         constants.update(values)
+
+        groups = constant_plist.get("masterGroups", [])
+        if not isinstance(groups, list):
+            raise RuntimeError(
+                "Recipe constants file %s masterGroups must be an array."
+                % constant_path
+            )
+        for group in groups:
+            if not isinstance(group, dict) or not isinstance(group.get("constants"), dict):
+                raise RuntimeError(
+                    "Recipe constants file %s has an invalid masterGroups entry."
+                    % constant_path
+                )
+            if not group.get("match"):
+                raise RuntimeError(
+                    "Recipe constants file %s has a master group without match."
+                    % constant_path
+                )
+            master_groups.append(dict(group))
+
+        overrides = constant_plist.get("masterOverrides", {})
+        if not isinstance(overrides, dict):
+            raise RuntimeError(
+                "Recipe constants file %s masterOverrides must be a dictionary."
+                % constant_path
+            )
+        for master_key, master_values in overrides.items():
+            if not isinstance(master_values, dict):
+                raise RuntimeError(
+                    "Recipe constants file %s override for %s must be a dictionary."
+                    % (constant_path, master_key)
+                )
+            master_overrides.setdefault(str(master_key), {}).update(master_values)
+
+    scoped_names = set()
+    for group in master_groups:
+        scoped_names.update(group.get("constants", {}).keys())
+    for master_values in master_overrides.values():
+        scoped_names.update(master_values.keys())
+    for name in scoped_names:
+        relevant_groups = [
+            group for group in master_groups
+            if name in group.get("constants", {})
+        ]
+        relevant_overrides = {
+            master_key: master_values
+            for master_key, master_values in master_overrides.items()
+            if name in master_values
+        }
+        constants[name] = MasterScopedValue(
+            name,
+            default=constants.get(name, MasterScopedValue.NO_DEFAULT),
+            groups=relevant_groups,
+            master_overrides=relevant_overrides,
+        )
     return constants
 
 
@@ -1647,7 +1782,13 @@ def expand_value(value, parameters):
 
     def replace(match):
         key = match.group(1)
-        return str(parameters.get(key, match.group(0)))
+        replacement = parameters.get(key, match.group(0))
+        if isinstance(replacement, MasterScopedValue):
+            raise RuntimeError(
+                "Per-master constant %s must occupy the complete value, not part of a string."
+                % key
+            )
+        return str(replacement)
 
     return VARIABLE_PATTERN.sub(replace, value)
 
@@ -1911,10 +2052,14 @@ def action_set_component_position(
         raise RuntimeError("%s: componentIndex is required." % glyph)
 
     index = int(clean_number(componentIndex))
-    x_value = None if x is None else clean_number(x) * clean_number(xMultiplier)
-    y_value = None if y is None else clean_number(y) * clean_number(yMultiplier)
     changed = 0
     for layer in target_glyph.layers:
+        layer_x = resolve_master_value(x, font, layer)
+        layer_y = resolve_master_value(y, font, layer)
+        layer_x_multiplier = resolve_master_value(xMultiplier, font, layer)
+        layer_y_multiplier = resolve_master_value(yMultiplier, font, layer)
+        x_value = None if layer_x is None else clean_number(layer_x) * clean_number(layer_x_multiplier)
+        y_value = None if layer_y is None else clean_number(layer_y) * clean_number(layer_y_multiplier)
         components = layer_components(layer)
         try:
             component = components[index]
@@ -3081,9 +3226,11 @@ def action_set_side_bearings(font, verbose=False, glyph=None, left=None, right=N
         layer_count += 1
         set_layer_metrics_key(layer, "leftMetricsKey", None)
         set_layer_metrics_key(layer, "rightMetricsKey", None)
-        if left is not None and set_layer_metric(layer, "LSB", clean_number(left)):
+        layer_left = resolve_master_value(left, font, layer)
+        layer_right = resolve_master_value(right, font, layer)
+        if layer_left is not None and set_layer_metric(layer, "LSB", clean_number(layer_left)):
             changed += 1
-        if right is not None and set_layer_metric(layer, "RSB", clean_number(right)):
+        if layer_right is not None and set_layer_metric(layer, "RSB", clean_number(layer_right)):
             changed += 1
     log("%s: set LSB=%s and RSB=%s on %i layer(s)." % (
         glyph,
@@ -3430,7 +3577,7 @@ def action_set_component_axis_low_high(font, verbose=False, glyph=None, axis="he
     skipped = 0
     for layer in target_glyph.layers:
         is_high = "high" in layer_name(layer).lower()
-        value = highValue if is_high else lowValue
+        value = resolve_master_value(highValue if is_high else lowValue, font, layer)
         for component in layer_components(layer):
             if not component_matches_filter(component, componentFilter):
                 continue
@@ -3451,13 +3598,28 @@ def action_set_component_axis_low_high(font, verbose=False, glyph=None, axis="he
     return changed
 
 
-def action_set_component_axis_value(font, verbose=False, glyph=None, axis="height", value=0, componentFilter=None, **_kwargs):
+def action_set_component_axis_value(
+    font,
+    verbose=False,
+    glyph=None,
+    axis="height",
+    value=0,
+    componentFilter=None,
+    requirePositive=False,
+    **_kwargs
+):
     target_glyph = glyph_for_name(font, glyph)
     if target_glyph is None:
         raise RuntimeError("Missing glyph: %s" % glyph)
     changed = 0
     skipped = 0
     for layer in target_glyph.layers:
+        layer_value = resolve_master_value(value, font, layer)
+        if boolean_value(requirePositive) and clean_number(layer_value) <= 0:
+            raise RuntimeError(
+                "%s/%s: calculated %s value must be positive; got %s."
+                % (glyph, layer_label(layer), axis, layer_value)
+            )
         for component in layer_components(layer):
             if not component_matches_filter(component, componentFilter):
                 continue
@@ -3465,7 +3627,7 @@ def action_set_component_axis_value(font, verbose=False, glyph=None, axis="heigh
             if axis_id is None:
                 skipped += 1
                 continue
-            if set_component_smart_value(component, axis_id, value):
+            if set_component_smart_value(component, axis_id, layer_value):
                 changed += 1
             else:
                 skipped += 1
@@ -3575,11 +3737,14 @@ def action_set_math_plugin_assembly(font, verbose=False, glyph=None, direction="
         raise RuntimeError("%s: assembly entries are required." % glyph)
 
     assembly_key = "vAssembly" if str(direction).lower().startswith("v") else "hAssembly"
-    parsed_entries = [math_assembly_entry(entry) for entry in entries]
     mid_glyphs = {}
     if assembly_key == "hAssembly":
-        for entry in parsed_entries:
-            part_name = entry[0]
+        for entry in entries:
+            if isinstance(entry, dict):
+                part_name = entry.get("glyph") or entry.get("component") or entry.get("name")
+            else:
+                values = list(entry or [])
+                part_name = values[0] if values else None
             if ".mid" not in part_name or part_name in mid_glyphs:
                 continue
             mid_glyph = glyph_for_name(font, part_name)
@@ -3588,8 +3753,10 @@ def action_set_math_plugin_assembly(font, verbose=False, glyph=None, direction="
             mid_glyphs[part_name] = mid_glyph
     changed = 0
     for layer in target_glyph.layers:
+        layer_entries = resolve_master_value(entries, font, layer)
         assembly = []
-        for raw_entry, parsed_entry in zip(entries, parsed_entries):
+        parsed_layer_entries = [math_assembly_entry(entry) for entry in layer_entries]
+        for raw_entry, parsed_entry in zip(layer_entries, parsed_layer_entries):
             part_name = parsed_entry[0]
             connector_width = None
             mid_glyph = mid_glyphs.get(part_name)

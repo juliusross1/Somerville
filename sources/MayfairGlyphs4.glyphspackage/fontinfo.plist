@@ -55,6 +55,7 @@ name = "Enforce Compatibility Check";
 value = 1;
 },
 {
+disabled = 1;
 name = "Axis Mappings";
 value = {
 ARLN = {
@@ -305,40 +306,6 @@ Location = 0;
 );
 },
 {
-disabled = 1;
-name = "Virtual Master";
-value = (
-{
-Axis = "Optical size";
-Location = 5;
-},
-{
-Axis = Width;
-Location = 95;
-},
-{
-Axis = Weight;
-Location = 360;
-},
-{
-Axis = "Math Weight";
-Location = 360;
-},
-{
-Axis = ssty1;
-Location = 5;
-},
-{
-Axis = ssty2;
-Location = 5;
-},
-{
-Axis = "Arrow Length";
-Location = 1000;
-}
-);
-},
-{
 name = "Disable Subroutines";
 value = 1;
 }
@@ -533,6 +500,15 @@ value = 0;
 {
 name = typoLineGap;
 value = 0;
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Arrow Length";
+Location = 200;
+}
+);
 }
 );
 guides = (
@@ -870,6 +846,15 @@ value = 0;
 {
 name = typoLineGap;
 value = 0;
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Arrow Length";
+Location = 200;
+}
+);
 }
 );
 guides = (
@@ -1213,6 +1198,15 @@ pos = 518;
 size = 30;
 }
 );
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Arrow Length";
+Location = 200;
+}
+);
 }
 );
 guides = (
@@ -1549,6 +1543,15 @@ size = 40;
 {
 pos = 518;
 size = 30;
+}
+);
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Arrow Length";
+Location = 200;
 }
 );
 }
@@ -1893,6 +1896,15 @@ size = 40;
 {
 pos = 493;
 size = 40;
+}
+);
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Arrow Length";
+Location = 200;
 }
 );
 }
@@ -2249,6 +2261,15 @@ pos = 493;
 size = 40;
 }
 );
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Arrow Length";
+Location = 200;
+}
+);
 }
 );
 guides = (
@@ -2596,6 +2617,15 @@ size = 40;
 {
 pos = 518;
 size = 30;
+}
+);
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Arrow Length";
+Location = 200;
 }
 );
 }
@@ -2955,6 +2985,15 @@ size = 40;
 {
 pos = 518;
 size = 30;
+}
+);
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Arrow Length";
+Location = 200;
 }
 );
 }
