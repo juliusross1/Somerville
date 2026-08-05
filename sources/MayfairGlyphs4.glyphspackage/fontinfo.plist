@@ -29,6 +29,10 @@ tag = STYB;
 {
 name = "Arrow Length";
 tag = ARLN;
+},
+{
+name = "Arrow Head";
+tag = ARHD;
 }
 );
 customParameters = (
@@ -170,6 +174,10 @@ Location = 5;
 {
 Axis = "Arrow Length";
 Location = 100;
+},
+{
+Axis = "Arrow Head";
+Location = 100;
 }
 );
 },
@@ -202,6 +210,10 @@ Location = 5;
 },
 {
 Axis = "Arrow Length";
+Location = 100;
+},
+{
+Axis = "Arrow Head";
 Location = 100;
 }
 );
@@ -236,6 +248,10 @@ Location = 1200;
 {
 Axis = "Arrow Length";
 Location = 100;
+},
+{
+Axis = "Arrow Head";
+Location = 100;
 }
 );
 },
@@ -268,6 +284,10 @@ Location = 5;
 },
 {
 Axis = "Arrow Length";
+Location = 100;
+},
+{
+Axis = "Arrow Head";
 Location = 100;
 }
 );
@@ -302,12 +322,53 @@ Location = 5;
 {
 Axis = "Arrow Length";
 Location = 0;
+},
+{
+Axis = "Arrow Head";
+Location = 100;
 }
 );
 },
 {
 name = "Disable Subroutines";
 value = 1;
+},
+{
+name = "Virtual Master";
+value = (
+{
+Axis = "Optical size";
+Location = 5;
+},
+{
+Axis = Width;
+Location = 95;
+},
+{
+Axis = Weight;
+Location = 360;
+},
+{
+Axis = "Math Weight";
+Location = 360;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+},
+{
+Axis = "Arrow Length";
+Location = 100;
+},
+{
+Axis = "Arrow Head";
+Location = 200;
+}
+);
 }
 );
 date = "2024-11-05 07:24:09 +0000";
@@ -458,7 +519,8 @@ axesValues = (
 360,
 5,
 5,
-200
+200,
+100
 );
 customParameters = (
 {
@@ -804,7 +866,8 @@ axesValues = (
 360,
 5,
 5,
-200
+200,
+100
 );
 customParameters = (
 {
@@ -1135,7 +1198,8 @@ axesValues = (
 360,
 5,
 5,
-200
+200,
+100
 );
 customParameters = (
 {
@@ -1482,7 +1546,8 @@ axesValues = (
 360,
 5,
 5,
-200
+200,
+100
 );
 customParameters = (
 {
@@ -1839,7 +1904,8 @@ axesValues = (
 360,
 5,
 5,
-200
+200,
+100
 );
 customParameters = (
 {
@@ -2202,7 +2268,8 @@ axesValues = (
 360,
 5,
 5,
-200
+200,
+100
 );
 customParameters = (
 {
@@ -2556,7 +2623,8 @@ axesValues = (
 360,
 5,
 5,
-200
+200,
+100
 );
 customParameters = (
 {
@@ -2924,7 +2992,8 @@ axesValues = (
 360,
 5,
 5,
-200
+200,
+100
 );
 customParameters = (
 {
@@ -3308,6 +3377,7 @@ name = "Decompose Glyphs";
 value = (
 ArrowHead,
 harpoonHead,
+rightArrow.rgt,
 twoheadrightarrow.rgt,
 rightTailArrow.lft,
 harpoonrightup.rgt,
@@ -3363,6 +3433,7 @@ axesValues = (
 560,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3396,6 +3467,7 @@ axesValues = (
 600,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3429,6 +3501,7 @@ axesValues = (
 675,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3467,6 +3540,7 @@ axesValues = (
 750,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3505,6 +3579,7 @@ axesValues = (
 850,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3545,6 +3620,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3583,6 +3659,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3616,6 +3693,7 @@ axesValues = (
 560,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3640,6 +3718,7 @@ axesValues = (
 600,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3665,6 +3744,7 @@ axesValues = (
 675,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3700,6 +3780,7 @@ axesValues = (
 750,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3735,6 +3816,7 @@ axesValues = (
 850,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3772,6 +3854,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3807,6 +3890,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3831,6 +3915,7 @@ axesValues = (
 560,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3855,6 +3940,7 @@ axesValues = (
 600,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3879,6 +3965,7 @@ axesValues = (
 675,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3913,6 +4000,7 @@ axesValues = (
 750,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3947,6 +4035,7 @@ axesValues = (
 850,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -3983,6 +4072,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4017,6 +4107,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4041,6 +4132,7 @@ axesValues = (
 560,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4079,6 +4171,7 @@ axesValues = (
 600,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4118,6 +4211,7 @@ axesValues = (
 675,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4162,6 +4256,7 @@ axesValues = (
 750,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4206,6 +4301,7 @@ axesValues = (
 850,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4252,6 +4348,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4296,6 +4393,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4334,6 +4432,7 @@ axesValues = (
 560,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4369,6 +4468,7 @@ axesValues = (
 600,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4407,6 +4507,7 @@ axesValues = (
 675,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4450,6 +4551,7 @@ axesValues = (
 750,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4493,6 +4595,7 @@ axesValues = (
 850,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4538,6 +4641,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4581,6 +4685,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4616,6 +4721,7 @@ axesValues = (
 560,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4650,6 +4756,7 @@ axesValues = (
 600,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4685,6 +4792,7 @@ axesValues = (
 675,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4725,6 +4833,7 @@ axesValues = (
 750,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4765,6 +4874,7 @@ axesValues = (
 850,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4807,6 +4917,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4847,6 +4958,7 @@ axesValues = (
 900,
 5,
 5,
+100,
 100
 );
 customParameters = (
@@ -4881,6 +4993,7 @@ axesValues = (
 560,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -4919,6 +5032,7 @@ axesValues = (
 600,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -4958,6 +5072,7 @@ axesValues = (
 675,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5002,6 +5117,7 @@ axesValues = (
 750,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5046,6 +5162,7 @@ axesValues = (
 850,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5092,6 +5209,7 @@ axesValues = (
 900,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5136,6 +5254,7 @@ axesValues = (
 900,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5174,6 +5293,7 @@ axesValues = (
 560,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5209,6 +5329,7 @@ axesValues = (
 600,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5247,6 +5368,7 @@ axesValues = (
 675,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5290,6 +5412,7 @@ axesValues = (
 750,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5333,6 +5456,7 @@ axesValues = (
 850,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5378,6 +5502,7 @@ axesValues = (
 900,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5421,6 +5546,7 @@ axesValues = (
 900,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5456,6 +5582,7 @@ axesValues = (
 560,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5490,6 +5617,7 @@ axesValues = (
 600,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5525,6 +5653,7 @@ axesValues = (
 675,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5565,6 +5694,7 @@ axesValues = (
 750,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5605,6 +5735,7 @@ axesValues = (
 850,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5647,6 +5778,7 @@ axesValues = (
 900,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5687,6 +5819,7 @@ axesValues = (
 900,
 53,
 5,
+100,
 100
 );
 customParameters = (
@@ -5721,6 +5854,7 @@ axesValues = (
 560,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -5759,6 +5893,7 @@ axesValues = (
 600,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -5798,6 +5933,7 @@ axesValues = (
 675,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -5842,6 +5978,7 @@ axesValues = (
 750,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -5886,6 +6023,7 @@ axesValues = (
 850,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -5932,6 +6070,7 @@ axesValues = (
 900,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -5976,6 +6115,7 @@ axesValues = (
 900,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6014,6 +6154,7 @@ axesValues = (
 560,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6049,6 +6190,7 @@ axesValues = (
 600,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6087,6 +6229,7 @@ axesValues = (
 675,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6130,6 +6273,7 @@ axesValues = (
 750,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6173,6 +6317,7 @@ axesValues = (
 850,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6218,6 +6363,7 @@ axesValues = (
 900,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6261,6 +6407,7 @@ axesValues = (
 900,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6296,6 +6443,7 @@ axesValues = (
 560,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6330,6 +6478,7 @@ axesValues = (
 600,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6365,6 +6514,7 @@ axesValues = (
 675,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6405,6 +6555,7 @@ axesValues = (
 750,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6445,6 +6596,7 @@ axesValues = (
 850,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6487,6 +6639,7 @@ axesValues = (
 900,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6527,6 +6680,7 @@ axesValues = (
 900,
 197,
 5,
+100,
 100
 );
 customParameters = (
@@ -6561,6 +6715,7 @@ axesValues = (
 560,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -6603,6 +6758,7 @@ axesValues = (
 600,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -6642,6 +6798,7 @@ axesValues = (
 675,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -6686,6 +6843,7 @@ axesValues = (
 750,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -6730,6 +6888,7 @@ axesValues = (
 850,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -6776,6 +6935,7 @@ axesValues = (
 900,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -6820,6 +6980,7 @@ axesValues = (
 900,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -6858,6 +7019,7 @@ axesValues = (
 560,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -6893,6 +7055,7 @@ axesValues = (
 600,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -6934,6 +7097,7 @@ axesValues = (
 675,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -6977,6 +7141,7 @@ axesValues = (
 750,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -7020,6 +7185,7 @@ axesValues = (
 850,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -7065,6 +7231,7 @@ axesValues = (
 900,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -7108,6 +7275,7 @@ axesValues = (
 900,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -7143,6 +7311,7 @@ axesValues = (
 560,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -7177,6 +7346,7 @@ axesValues = (
 600,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -7212,6 +7382,7 @@ axesValues = (
 675,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -7252,6 +7423,7 @@ axesValues = (
 750,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -7292,6 +7464,7 @@ axesValues = (
 850,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -7334,6 +7507,7 @@ axesValues = (
 900,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -7374,6 +7548,7 @@ axesValues = (
 900,
 450,
 342,
+100,
 100
 );
 customParameters = (
@@ -7408,6 +7583,7 @@ axesValues = (
 560,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7446,6 +7622,7 @@ axesValues = (
 600,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7485,6 +7662,7 @@ axesValues = (
 675,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7529,6 +7707,7 @@ axesValues = (
 750,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7573,6 +7752,7 @@ axesValues = (
 850,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7619,6 +7799,7 @@ axesValues = (
 900,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7663,6 +7844,7 @@ axesValues = (
 900,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7701,6 +7883,7 @@ axesValues = (
 560,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7736,6 +7919,7 @@ axesValues = (
 600,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7774,6 +7958,7 @@ axesValues = (
 675,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7817,6 +8002,7 @@ axesValues = (
 750,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7860,6 +8046,7 @@ axesValues = (
 850,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7905,6 +8092,7 @@ axesValues = (
 900,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7948,6 +8136,7 @@ axesValues = (
 900,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -7983,6 +8172,7 @@ axesValues = (
 560,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -8017,6 +8207,7 @@ axesValues = (
 600,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -8052,6 +8243,7 @@ axesValues = (
 675,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -8092,6 +8284,7 @@ axesValues = (
 750,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -8132,6 +8325,7 @@ axesValues = (
 850,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -8174,6 +8368,7 @@ axesValues = (
 900,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -8214,6 +8409,7 @@ axesValues = (
 900,
 640,
 481,
+100,
 100
 );
 customParameters = (
@@ -8248,6 +8444,7 @@ axesValues = (
 560,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8286,6 +8483,7 @@ axesValues = (
 600,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8325,6 +8523,7 @@ axesValues = (
 675,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8369,6 +8568,7 @@ axesValues = (
 750,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8413,6 +8613,7 @@ axesValues = (
 850,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8459,6 +8660,7 @@ axesValues = (
 900,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8503,6 +8705,7 @@ axesValues = (
 900,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8541,6 +8744,7 @@ axesValues = (
 560,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8576,6 +8780,7 @@ axesValues = (
 600,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8614,6 +8819,7 @@ axesValues = (
 675,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8657,6 +8863,7 @@ axesValues = (
 750,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8700,6 +8907,7 @@ axesValues = (
 850,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8745,6 +8953,7 @@ axesValues = (
 900,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8788,6 +8997,7 @@ axesValues = (
 900,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8823,6 +9033,7 @@ axesValues = (
 560,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8857,6 +9068,7 @@ axesValues = (
 600,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8892,6 +9104,7 @@ axesValues = (
 675,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8932,6 +9145,7 @@ axesValues = (
 750,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -8972,6 +9186,7 @@ axesValues = (
 850,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -9014,6 +9229,7 @@ axesValues = (
 900,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -9054,6 +9270,7 @@ axesValues = (
 900,
 696,
 649,
+100,
 100
 );
 customParameters = (
@@ -9088,6 +9305,7 @@ axesValues = (
 560,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9126,6 +9344,7 @@ axesValues = (
 600,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9165,6 +9384,7 @@ axesValues = (
 675,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9209,6 +9429,7 @@ axesValues = (
 750,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9253,6 +9474,7 @@ axesValues = (
 850,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9299,6 +9521,7 @@ axesValues = (
 900,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9343,6 +9566,7 @@ axesValues = (
 900,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9381,6 +9605,7 @@ axesValues = (
 560,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9416,6 +9641,7 @@ axesValues = (
 600,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9454,6 +9680,7 @@ axesValues = (
 675,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9497,6 +9724,7 @@ axesValues = (
 750,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9540,6 +9768,7 @@ axesValues = (
 850,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9585,6 +9814,7 @@ axesValues = (
 900,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9628,6 +9858,7 @@ axesValues = (
 900,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9663,6 +9894,7 @@ axesValues = (
 560,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9697,6 +9929,7 @@ axesValues = (
 600,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9732,6 +9965,7 @@ axesValues = (
 675,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9772,6 +10006,7 @@ axesValues = (
 750,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9812,6 +10047,7 @@ axesValues = (
 850,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9854,6 +10090,7 @@ axesValues = (
 900,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9894,6 +10131,7 @@ axesValues = (
 900,
 837,
 802,
+100,
 100
 );
 customParameters = (
@@ -9928,6 +10166,7 @@ axesValues = (
 560,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -9966,6 +10205,7 @@ axesValues = (
 600,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10005,6 +10245,7 @@ axesValues = (
 675,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10049,6 +10290,7 @@ axesValues = (
 750,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10093,6 +10335,7 @@ axesValues = (
 850,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10139,6 +10382,7 @@ axesValues = (
 900,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10183,6 +10427,7 @@ axesValues = (
 900,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10221,6 +10466,7 @@ axesValues = (
 560,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10256,6 +10502,7 @@ axesValues = (
 600,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10294,6 +10541,7 @@ axesValues = (
 675,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10337,6 +10585,7 @@ axesValues = (
 750,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10380,6 +10629,7 @@ axesValues = (
 850,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10425,6 +10675,7 @@ axesValues = (
 900,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10468,6 +10719,7 @@ axesValues = (
 900,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10503,6 +10755,7 @@ axesValues = (
 560,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10537,6 +10790,7 @@ axesValues = (
 600,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10572,6 +10826,7 @@ axesValues = (
 675,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10612,6 +10867,7 @@ axesValues = (
 750,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10652,6 +10908,7 @@ axesValues = (
 850,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10694,6 +10951,7 @@ axesValues = (
 900,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10734,6 +10992,7 @@ axesValues = (
 900,
 925,
 874,
+100,
 100
 );
 customParameters = (
@@ -10768,6 +11027,7 @@ axesValues = (
 560,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -10806,6 +11066,7 @@ axesValues = (
 600,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -10845,6 +11106,7 @@ axesValues = (
 675,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -10889,6 +11151,7 @@ axesValues = (
 750,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -10933,6 +11196,7 @@ axesValues = (
 850,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -10979,6 +11243,7 @@ axesValues = (
 900,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11023,6 +11288,7 @@ axesValues = (
 900,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11061,6 +11327,7 @@ axesValues = (
 560,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11096,6 +11363,7 @@ axesValues = (
 600,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11134,6 +11402,7 @@ axesValues = (
 675,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11177,6 +11446,7 @@ axesValues = (
 750,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11220,6 +11490,7 @@ axesValues = (
 850,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11265,6 +11536,7 @@ axesValues = (
 900,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11308,6 +11580,7 @@ axesValues = (
 900,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11343,6 +11616,7 @@ axesValues = (
 560,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11377,6 +11651,7 @@ axesValues = (
 600,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11412,6 +11687,7 @@ axesValues = (
 675,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11452,6 +11728,7 @@ axesValues = (
 750,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11492,6 +11769,7 @@ axesValues = (
 850,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11534,6 +11812,7 @@ axesValues = (
 900,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11574,6 +11853,7 @@ axesValues = (
 900,
 1002,
 969,
+100,
 100
 );
 customParameters = (
@@ -11608,6 +11888,7 @@ axesValues = (
 560,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -11646,6 +11927,7 @@ axesValues = (
 600,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -11685,6 +11967,7 @@ axesValues = (
 675,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -11729,6 +12012,7 @@ axesValues = (
 750,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -11773,6 +12057,7 @@ axesValues = (
 850,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -11819,6 +12104,7 @@ axesValues = (
 900,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -11863,6 +12149,7 @@ axesValues = (
 900,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -11901,6 +12188,7 @@ axesValues = (
 560,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -11936,6 +12224,7 @@ axesValues = (
 600,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -11974,6 +12263,7 @@ axesValues = (
 675,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12017,6 +12307,7 @@ axesValues = (
 750,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12060,6 +12351,7 @@ axesValues = (
 850,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12105,6 +12397,7 @@ axesValues = (
 900,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12148,6 +12441,7 @@ axesValues = (
 900,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12183,6 +12477,7 @@ axesValues = (
 560,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12217,6 +12512,7 @@ axesValues = (
 600,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12252,6 +12548,7 @@ axesValues = (
 675,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12292,6 +12589,7 @@ axesValues = (
 750,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12332,6 +12630,7 @@ axesValues = (
 850,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12374,6 +12673,7 @@ axesValues = (
 900,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12414,6 +12714,7 @@ axesValues = (
 900,
 1009,
 1003,
+100,
 100
 );
 customParameters = (
@@ -12448,6 +12749,7 @@ axesValues = (
 560,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12481,6 +12783,7 @@ axesValues = (
 600,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12514,6 +12817,7 @@ axesValues = (
 675,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12552,6 +12856,7 @@ axesValues = (
 750,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12590,6 +12895,7 @@ axesValues = (
 850,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12630,6 +12936,7 @@ axesValues = (
 900,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12668,6 +12975,7 @@ axesValues = (
 900,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12701,6 +13009,7 @@ axesValues = (
 560,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12725,6 +13034,7 @@ axesValues = (
 600,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12750,6 +13060,7 @@ axesValues = (
 675,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12785,6 +13096,7 @@ axesValues = (
 750,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12820,6 +13132,7 @@ axesValues = (
 850,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12857,6 +13170,7 @@ axesValues = (
 900,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12892,6 +13206,7 @@ axesValues = (
 900,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12916,6 +13231,7 @@ axesValues = (
 560,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12940,6 +13256,7 @@ axesValues = (
 600,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12964,6 +13281,7 @@ axesValues = (
 675,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -12998,6 +13316,7 @@ axesValues = (
 750,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -13032,6 +13351,7 @@ axesValues = (
 850,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -13068,6 +13388,7 @@ axesValues = (
 900,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
@@ -13102,6 +13423,7 @@ axesValues = (
 900,
 1151,
 1122,
+100,
 100
 );
 customParameters = (
