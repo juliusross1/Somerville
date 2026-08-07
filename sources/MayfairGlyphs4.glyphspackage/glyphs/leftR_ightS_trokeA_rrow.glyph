@@ -1,5 +1,5 @@
 {
-color = 1;
+color = 4;
 glyphname = leftRightStrokeArrow;
 layers = (
 {
@@ -11,9 +11,10 @@ ref = leftArrow.lft;
 },
 {
 pos = (340,0);
-ref = Arrow.mid.ShortShort;
+ref = Arrow.mid.ShortShort.FloorB;
 },
 {
+anchor = stroke;
 pos = (667,1);
 ref = _ArrowStroke;
 },
@@ -70,9 +71,10 @@ ref = leftArrow.lft;
 },
 {
 pos = (450,0);
-ref = Arrow.mid.ShortShort;
+ref = Arrow.mid.ShortShort.FloorB;
 },
 {
+anchor = stroke;
 pos = (763,1);
 ref = _ArrowStroke;
 },
@@ -129,9 +131,10 @@ ref = leftArrow.lft;
 },
 {
 pos = (340,0);
-ref = Arrow.mid.ShortShort;
+ref = Arrow.mid.ShortShort.FloorB;
 },
 {
+anchor = stroke;
 pos = (667,1);
 ref = _ArrowStroke;
 },
@@ -188,9 +191,10 @@ ref = leftArrow.lft;
 },
 {
 pos = (450,0);
-ref = Arrow.mid.ShortShort;
+ref = Arrow.mid.ShortShort.FloorB;
 },
 {
+anchor = stroke;
 pos = (762,1);
 ref = _ArrowStroke;
 },
@@ -247,9 +251,10 @@ ref = leftArrow.lft;
 },
 {
 pos = (340,0);
-ref = Arrow.mid.ShortShort;
+ref = Arrow.mid.ShortShort.FloorB;
 },
 {
+anchor = stroke;
 pos = (631,0);
 ref = _ArrowStroke;
 },
@@ -306,9 +311,10 @@ ref = leftArrow.lft;
 },
 {
 pos = (450,0);
-ref = Arrow.mid.ShortShort;
+ref = Arrow.mid.ShortShort.FloorB;
 },
 {
+anchor = stroke;
 pos = (720,0);
 ref = _ArrowStroke;
 },
@@ -365,9 +371,10 @@ ref = leftArrow.lft;
 },
 {
 pos = (340,0);
-ref = Arrow.mid.ShortShort;
+ref = Arrow.mid.ShortShort.FloorB;
 },
 {
+anchor = stroke;
 pos = (625,0);
 ref = _ArrowStroke;
 },
@@ -424,9 +431,10 @@ ref = leftArrow.lft;
 },
 {
 pos = (450,0);
-ref = Arrow.mid.ShortShort;
+ref = Arrow.mid.ShortShort.FloorB;
 },
 {
+anchor = stroke;
 pos = (720,1);
 ref = _ArrowStroke;
 },

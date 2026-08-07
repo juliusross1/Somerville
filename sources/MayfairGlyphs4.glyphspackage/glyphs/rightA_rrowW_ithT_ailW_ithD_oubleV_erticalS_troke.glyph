@@ -1,5 +1,5 @@
 {
-color = 1;
+color = 4;
 glyphname = rightArrowWithTailWithDoubleVerticalStroke;
 layers = (
 {
@@ -11,10 +11,11 @@ ref = ArrowEnd.lft;
 },
 {
 pos = (450,0);
-ref = Arrow.mid.ShortLong;
+ref = Arrow.mid.ShortLong.FloorB;
 },
 {
-pos = (720,0);
+anchor = stroke_doubletail_head;
+pos = (675,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
@@ -70,10 +71,11 @@ ref = ArrowEnd.lft;
 },
 {
 pos = (680,0);
-ref = Arrow.mid.ShortLong;
+ref = Arrow.mid.ShortLong.FloorB;
 },
 {
-pos = (839,0);
+anchor = stroke_doubletail_head;
+pos = (854,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
@@ -129,10 +131,11 @@ ref = ArrowEnd.lft;
 },
 {
 pos = (450,0);
-ref = Arrow.mid.ShortLong;
+ref = Arrow.mid.ShortLong.FloorB;
 },
 {
-pos = (720,0);
+anchor = stroke_doubletail_head;
+pos = (675,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
@@ -188,10 +191,11 @@ ref = ArrowEnd.lft;
 },
 {
 pos = (680,0);
-ref = Arrow.mid.ShortLong;
+ref = Arrow.mid.ShortLong.FloorB;
 },
 {
-pos = (840,0);
+anchor = stroke_doubletail_head;
+pos = (850,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
@@ -247,10 +251,11 @@ ref = ArrowEnd.lft;
 },
 {
 pos = (500,0);
-ref = Arrow.mid.ShortLong;
+ref = Arrow.mid.ShortLong.FloorB;
 },
 {
-pos = (685,0);
+anchor = stroke_doubletail_head;
+pos = (637,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
@@ -306,10 +311,11 @@ ref = ArrowEnd.lft;
 },
 {
 pos = (680,0);
-ref = Arrow.mid.ShortLong;
+ref = Arrow.mid.ShortLong.FloorB;
 },
 {
-pos = (795,0);
+anchor = stroke_doubletail_head;
+pos = (760,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
@@ -365,10 +371,11 @@ ref = ArrowEnd.lft;
 },
 {
 pos = (500,0);
-ref = Arrow.mid.ShortLong;
+ref = Arrow.mid.ShortLong.FloorB;
 },
 {
-pos = (673,0);
+anchor = stroke_doubletail_head;
+pos = (630,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
@@ -424,10 +431,11 @@ ref = ArrowEnd.lft;
 },
 {
 pos = (680,0);
-ref = Arrow.mid.ShortLong;
+ref = Arrow.mid.ShortLong.FloorB;
 },
 {
-pos = (765,0);
+anchor = stroke_doubletail_head;
+pos = (756,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {

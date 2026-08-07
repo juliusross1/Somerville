@@ -1,13 +1,46 @@
 #MenuTitle: Adjust Arrow.mid components in a smart way
 # -*- coding: utf-8 -*-
 
-"""Recreate two Arrow Length intermediates and set component width values.
+"""Rebuild ARLN intermediate layers and configure their smart arrow middles.
 
-For the currently selected glyph, this script first removes every existing
-intermediate layer, then creates layers at the two requested Arrow Length
-values under every master. It sets the ``width`` smart-axis value on
-supported Arrow.mid smart components according to the associated master's width class
-on both master and intermediate layers, and reports every final value.
+Run this Glyphs script with a glyph selected. It opens a window for defining
+up to two Arrow Length (ARLN) positions, A and B, and a separate explicit
+``width`` smart-axis value for the arrow-middle components at each position.
+The supported components are ``_smart.Arrow.mid`` and
+``_smart.DoubleArrow.mid``.
+
+When Create / Update is clicked, the script:
+
+* removes every non-master layer in the selected glyph that has designspace
+  coordinates (not only layers previously made by this script);
+* optionally copies each master layer to new intermediate layers at ARLN A
+  and/or B, preserving all of the master's other axis coordinates;
+* applies the requested A width to every supported component on A layers and
+  the requested B width to every supported component on B layers; and
+* prints a detailed report and verifies that every explicit smart-component
+  value can be read back after all edits are complete.
+
+The initial value for B is calculated, where possible, from the first
+supported component in every master of the selected glyph and its matching
+``Arrow.mid.ShortShort`` or ``DoubleArrow.mid.ShortShort`` reference glyph.
+For each master the calculation is ``(b - a) * c / b``, where ``a`` is the
+selected glyph's explicit component width, ``b`` is the reference glyph's
+explicit component width, and ``c`` is the ``ARLNmaximum`` recipe constant.
+The smallest successfully calculated result becomes the default. The full
+calculation and any missing-data warnings are printed to the Macro window.
+
+The font must have an axis tagged ``ARLN``/``ARN`` or named Arrow Length.
+The script does not modify components on master layers. All controls are
+remembered between runs, except the calculated B default. The operation is
+grouped for undo.
+
+Other Glyphs scripts can import this file and call
+``adjust_arrow_mid_components(glyph, b, a=0, component_width_a=0,
+component_width_b=0, create_a=True, create_b=True)``. The
+function removes the glyph's existing coordinate-bearing intermediate layers,
+creates the requested A and/or B layers under every master, assigns their
+respective component widths, and returns a summary dictionary. Importing the
+file does not open its window.
 """
 
 import uuid
@@ -18,7 +51,7 @@ import vanilla
 from GlyphsApp import Glyphs, Message
 
 
-SCRIPT_VERSION = "2026-08-04 arrow-and-double-arrow-smart-components"
+SCRIPT_VERSION = "2026-08-07 optional-a-b-layer-creation"
 PREFS_PREFIX = "com.mayfairmath.createARNIntermediates.v2"
 SUPPORTED_COMPONENTS = (
     "_smart.Arrow.mid",
@@ -376,13 +409,136 @@ def set_component_smart_value(component, value):
     return actual
 
 
-def master_width_class(master):
-    name = str(master.name or "").lower()
-    if "semicondens" in name:  # accepts SemiCondensed and the common misspelling
-        return "condensed"
-    if "semiexpand" in name:
-        return "expanded"
-    return None
+def adjust_arrow_mid_components(
+    glyph,
+    b,
+    a=0,
+    component_width_a=0,
+    component_width_b=0,
+    create_a=True,
+    create_b=True,
+):
+    """Rebuild a glyph's A/B ARLN layers and set their component widths.
+
+    Args:
+        glyph: The GSGlyph whose intermediate layers should be rebuilt.
+        b: Required Arrow Length value for the B intermediate layer.
+        a: Arrow Length value for the A intermediate layer. Defaults to 0.
+        component_width_a: Explicit ``width`` smart-axis value assigned to
+            supported arrow-middle components on A layers. Defaults to 0.
+            May also be a callable accepting ``(master, component, index)``.
+        component_width_b: Explicit ``width`` smart-axis value assigned to
+            supported arrow-middle components on B layers. Defaults to 0.
+            May also be a callable accepting ``(master, component, index)``.
+        create_a: Whether to create A layers. Defaults to ``True``.
+        create_b: Whether to create B layers. Defaults to ``True``.
+
+    Returns:
+        A dictionary containing the removed layer names, created/reused layer
+        counts, number of changed components, and details for each new layer.
+
+    Raises:
+        TypeError: If the required B argument is omitted.
+        ValueError: If an argument is non-numeric, B is ``None``, or A equals B.
+        RuntimeError: If the glyph is not attached to a suitable font, the
+            font has no Arrow Length axis, or a layer/component cannot be set.
+
+    This function deliberately does not alter components on master layers.
+    Like the UI action, it removes every non-master layer on ``glyph`` that
+    carries designspace coordinates before creating the requested layers.
+    """
+    if glyph is None:
+        raise ValueError("glyph is required.")
+    if b is None:
+        raise ValueError("b is required.")
+    try:
+        a = float(a)
+        b = float(b)
+        if not callable(component_width_a):
+            component_width_a = float(component_width_a)
+        if not callable(component_width_b):
+            component_width_b = float(component_width_b)
+    except (TypeError, ValueError):
+        raise ValueError(
+            "a, b, component_width_a, and component_width_b must be numbers."
+        )
+    create_a = bool(create_a)
+    create_b = bool(create_b)
+    if not create_a and not create_b:
+        raise ValueError("At least one of create_a or create_b must be true.")
+    if create_a and create_b and abs(a - b) < 0.0001:
+        raise ValueError("a and b must be different Arrow Length values.")
+
+    try:
+        font = glyph.parent
+    except Exception:
+        font = None
+    if font is None or not hasattr(font, "masters"):
+        raise RuntimeError("glyph must belong to an open font.")
+    arn_axis = find_arrow_length_axis(font)
+    if arn_axis is None:
+        raise RuntimeError(
+            "The font needs an axis tagged ARLN/ARN or named Arrow Length."
+        )
+
+    result = {
+        "removedLayers": [],
+        "createdLayers": 0,
+        "reusedLayers": 0,
+        "changedComponents": 0,
+        "layers": [],
+    }
+    font.disableUpdateInterface()
+    undo_started = False
+    try:
+        try:
+            glyph.beginUndo()
+            undo_started = True
+        except Exception:
+            pass
+        result["removedLayers"] = remove_all_intermediate_layers(glyph)
+        for master in font.masters:
+            positions = []
+            if create_a:
+                positions.append(("A", a, component_width_a))
+            if create_b:
+                positions.append(("B", b, component_width_b))
+            for position_name, arn_value, component_width_source in positions:
+                layer, did_create = make_intermediate_layer(
+                    glyph, font, master, arn_axis, arn_value
+                )
+                result["createdLayers"] += int(did_create)
+                result["reusedLayers"] += int(not did_create)
+                components = components_in_layer(layer)
+                component_widths = []
+                for component_index, component in enumerate(components):
+                    if callable(component_width_source):
+                        component_width = float(
+                            component_width_source(master, component, component_index)
+                        )
+                    else:
+                        component_width = component_width_source
+                    set_component_smart_value(component, component_width)
+                    component_widths.append(clean_number(component_width))
+                    result["changedComponents"] += 1
+                result["layers"].append(
+                    {
+                        "master": master.name,
+                        "position": position_name,
+                        "arln": clean_number(arn_value),
+                        "componentWidths": component_widths,
+                        "layer": layer,
+                        "componentCount": len(components),
+                    }
+                )
+    finally:
+        if undo_started:
+            try:
+                glyph.endUndo()
+            except Exception:
+                pass
+        font.enableUpdateInterface()
+    return result
 
 
 class ARNIntermediateWindow(object):
@@ -392,80 +548,59 @@ class ARNIntermediateWindow(object):
         calculated_b = self.b_calculation.get("r")
         b_fallback = format_number(calculated_b) if calculated_b is not None else "50"
         self.w = vanilla.FloatingWindow(
-            (460, 380),
+            (460, 245),
             "ARLN Intermediates and Smart Mid Width",
         )
         self.w.intro = vanilla.TextBox(
             (15, 14, -15, 36),
-            "Set master component widths and optionally recreate two ARLN intermediate layers.",
+            "Recreate up to two ARLN intermediate layers and set their component widths.",
         )
-        self.w.adjustMasters = vanilla.CheckBox(
-            (15, 56, -15, 20),
-            "Adjust component widths on the actual master layers",
-            value=self.boolean_preference("adjustMasters", True),
-            callback=self.update_enabled_controls,
-        )
-        self.w.condensedMasterLabel = vanilla.TextBox(
-            (28, 88, 120, 18), "SemiCondensed"
-        )
-        self.w.condensedMaster = vanilla.EditText(
-            (150, 84, 85, 24), self.preference("MC", "0")
-        )
-        self.w.expandedMasterLabel = vanilla.TextBox(
-            (250, 88, 110, 18), "SemiExpanded"
-        )
-        self.w.expandedMaster = vanilla.EditText(
-            (365, 84, 80, 24), self.preference("ME", "0")
-        )
-
-        self.w.arnHeading = vanilla.TextBox((15, 126, -15, 18), "ARLN intermediate-layer values")
+        self.w.arnHeading = vanilla.TextBox((15, 56, -15, 18), "ARLN intermediate-layer values")
         self.w.createA = vanilla.CheckBox(
-            (28, 154, 120, 20),
+            (28, 84, 120, 20),
             "Create A layer",
             value=self.boolean_preference("createA", True),
             callback=self.update_enabled_controls,
         )
-        self.w.a = vanilla.EditText((150, 151, 85, 24), self.preference("A", "0"))
+        self.w.a = vanilla.EditText((150, 81, 85, 24), self.preference("A", "0"))
         self.w.createB = vanilla.CheckBox(
-            (250, 154, 112, 20),
+            (250, 84, 112, 20),
             "Create B layer",
             value=self.boolean_preference("createB", True),
             callback=self.update_enabled_controls,
         )
         self.w.b = vanilla.EditText(
-            (365, 151, 80, 24),
+            (365, 81, 80, 24),
             self.preference("B", b_fallback, calculated_default=True),
         )
 
         self.w.axisHeading = vanilla.TextBox(
-            (15, 193, -15, 18),
-            "Smart mid-component axis value: width",
+            (15, 123, -15, 18),
+            "Smart mid-component width at each ARLN position",
         )
-        self.w.tableA = vanilla.TextBox((197, 220, 95, 18), "At ARLN = A")
-        self.w.tableB = vanilla.TextBox((330, 220, 95, 18), "At ARLN = B")
-        self.w.condensedLabel = vanilla.TextBox((28, 249, 155, 18), "SemiCondensed masters")
-        self.w.c1 = vanilla.EditText((195, 245, 90, 24), self.preference("C1", "0"))
-        self.w.d1 = vanilla.EditText((330, 245, 90, 24), self.preference("D1", "0"))
-        self.w.expandedLabel = vanilla.TextBox((28, 283, 155, 18), "SemiExpanded masters")
-        self.w.c2 = vanilla.EditText((195, 279, 90, 24), self.preference("C2", "0"))
-        self.w.d2 = vanilla.EditText((330, 279, 90, 24), self.preference("D2", "0"))
+        old_width = self.preference("width", "0")
+        self.w.widthALabel = vanilla.TextBox((28, 154, 105, 18), "Width at A")
+        self.w.widthA = vanilla.EditText(
+            (135, 150, 90, 24), self.preference("widthA", old_width)
+        )
+        self.w.widthBLabel = vanilla.TextBox((250, 154, 105, 18), "Width at B")
+        self.w.widthB = vanilla.EditText(
+            (355, 150, 90, 24), self.preference("widthB", old_width)
+        )
 
-        self.w.status = vanilla.TextBox((15, 337, 290, 18), "Ready")
-        self.w.applyButton = vanilla.Button((315, 331, 130, 28), "Create / Update", callback=self.apply)
+        self.w.status = vanilla.TextBox((15, 202, 290, 18), "Ready")
+        self.w.applyButton = vanilla.Button((315, 196, 130, 28), "Create / Update", callback=self.apply)
         self.update_enabled_controls()
         self.w.open()
         self.w.makeKey()
 
     def update_enabled_controls(self, sender=None):
-        adjust_masters = bool(self.w.adjustMasters.get())
         create_a = bool(self.w.createA.get())
         create_b = bool(self.w.createB.get())
-        for control in (self.w.condensedMaster, self.w.expandedMaster):
-            control.enable(adjust_masters)
-        for control in (self.w.a, self.w.tableA, self.w.c1, self.w.c2):
-            control.enable(create_a)
-        for control in (self.w.b, self.w.tableB, self.w.d1, self.w.d2):
-            control.enable(create_b)
+        self.w.a.enable(create_a)
+        self.w.b.enable(create_b)
+        self.w.widthA.enable(create_a)
+        self.w.widthB.enable(create_b)
 
     def selected_glyph(self):
         try:
@@ -602,12 +737,8 @@ class ARNIntermediateWindow(object):
         controls = {
             "A": self.w.a,
             "B": self.w.b,
-            "C1": self.w.c1,
-            "D1": self.w.d1,
-            "C2": self.w.c2,
-            "D2": self.w.d2,
-            "MC": self.w.condensedMaster,
-            "ME": self.w.expandedMaster,
+            "widthA": self.w.widthA,
+            "widthB": self.w.widthB,
         }
         values = {}
         for key, control in controls.items():
@@ -617,12 +748,11 @@ class ARNIntermediateWindow(object):
                 raise ValueError("%s must be a number." % key)
         values["createA"] = bool(self.w.createA.get())
         values["createB"] = bool(self.w.createB.get())
-        values["adjustMasters"] = bool(self.w.adjustMasters.get())
         if values["createA"] and values["createB"] and abs(values["A"] - values["B"]) < 0.0001:
             raise ValueError("A and B must be different Arrow Length values.")
         for key in controls:
             Glyphs.defaults["%s.%s" % (PREFS_PREFIX, key)] = format_number(values[key])
-        for key in ("createA", "createB", "adjustMasters"):
+        for key in ("createA", "createB"):
             Glyphs.defaults["%s.%s" % (PREFS_PREFIX, key)] = values[key]
         return values
 
@@ -657,7 +787,6 @@ class ARNIntermediateWindow(object):
         reused = 0
         changed_components = 0
         removed_layers = []
-        skipped_masters = []
         errors = []
         details = []
         processed_layers = []
@@ -677,46 +806,6 @@ class ARNIntermediateWindow(object):
                 errors.append("Removing existing intermediate layers: %s" % error)
 
             for master in font.masters:
-                width_class = master_width_class(master)
-                if width_class is None:
-                    skipped_masters.append(master.name)
-                elif values["adjustMasters"]:
-                    try:
-                        master_layer = master_layer_for_glyph(glyph, master)
-                        if master_layer is None:
-                            raise RuntimeError("No glyph layer exists for this master.")
-                        master_value = values["MC" if width_class == "condensed" else "ME"]
-                        processed_layers.append(
-                            (master.name, "MASTER", master_layer, float(master_value))
-                        )
-                        master_components = components_in_layer(master_layer)
-                        if not master_components:
-                            details.append(
-                                "%s | actual master layer | no supported smart component found (%s)"
-                                % (master.name, ", ".join(SUPPORTED_COMPONENTS))
-                            )
-                        for component_index, component in enumerate(master_components, 1):
-                            actual = set_component_smart_value(component, master_value)
-                            changed_components += 1
-                            details.append(
-                                "%s | actual master layer | %s component %i: requested width=%s; "
-                                "explicit read-back=%s; smartComponentValues=%s"
-                                % (
-                                    master.name,
-                                    component_name(component),
-                                    component_index,
-                                    format_number(master_value),
-                                    format_number(actual),
-                                    smart_values_dict(component),
-                                )
-                            )
-                    except Exception as error:
-                        errors.append("%s / actual master layer: %s" % (master.name, error))
-                else:
-                    details.append(
-                        "%s | actual master layer | width adjustment disabled in UI"
-                        % master.name
-                    )
                 for arn_key in ("A", "B"):
                     if not values["create%s" % arn_key]:
                         details.append(
@@ -740,13 +829,7 @@ class ARNIntermediateWindow(object):
                                 layer.name or layer.layerId,
                             )
                         )
-                        if width_class is None:
-                            details.append("  component width skipped: master is neither SemiCondensed nor SemiExpanded")
-                            continue
-                        if width_class == "condensed":
-                            smart_value = values["C1" if arn_key == "A" else "D1"]
-                        else:
-                            smart_value = values["C2" if arn_key == "A" else "D2"]
+                        smart_value = values["width%s" % arn_key]
                         processed_layers.append(
                             (master.name, arn_key, layer, float(smart_value))
                         )
@@ -760,14 +843,13 @@ class ARNIntermediateWindow(object):
                             actual = set_component_smart_value(component, smart_value)
                             changed_components += 1
                             details.append(
-                                "  %s component %i: requested width=%s; explicit read-back=%s; smartComponentValues=%s (%s, ARLN %s)"
+                                "  %s component %i: requested width=%s; explicit read-back=%s; smartComponentValues=%s (ARLN %s)"
                                 % (
                                     component_name(component),
                                     component_index,
                                     format_number(smart_value),
                                     format_number(actual),
                                     smart_values_dict(component),
-                                    "SemiCondensed" if width_class == "condensed" else "SemiExpanded",
                                     arn_key,
                                 )
                             )
@@ -842,20 +924,8 @@ class ARNIntermediateWindow(object):
             )
         )
         print(
-            "SemiCondensed component widths: C1=%s at ARLN A; D1=%s at ARLN B"
-            % (format_number(values["C1"]), format_number(values["D1"]))
-        )
-        print(
-            "SemiExpanded component widths: C2=%s at ARLN A; D2=%s at ARLN B"
-            % (format_number(values["C2"]), format_number(values["D2"]))
-        )
-        print(
-            "Actual master-layer component widths: adjust=%s; SemiCondensed=%s; SemiExpanded=%s"
-            % (
-                "yes" if values["adjustMasters"] else "no",
-                format_number(values["MC"]),
-                format_number(values["ME"]),
-            )
+            "Smart mid-component widths: A=%s; B=%s"
+            % (format_number(values["widthA"]), format_number(values["widthB"]))
         )
         print("Removed existing intermediate layers: %i" % len(removed_layers))
         print("Details:")
@@ -870,8 +940,6 @@ class ARNIntermediateWindow(object):
         print("Created layers: %i" % created)
         print("Reused layers: %i" % reused)
         print("Updated supported smart mid components: %i" % changed_components)
-        if skipped_masters:
-            print("Skipped component-width assignment for unclassified masters: %s" % ", ".join(skipped_masters))
         for error in errors:
             print("WARNING: %s" % error)
 
@@ -884,4 +952,5 @@ class ARNIntermediateWindow(object):
             )
 
 
-ARNIntermediateWindow()
+if __name__ == "__main__":
+    ARNIntermediateWindow()

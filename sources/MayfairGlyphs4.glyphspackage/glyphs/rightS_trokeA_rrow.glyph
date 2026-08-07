@@ -1,5 +1,5 @@
 {
-color = 1;
+color = 4;
 glyphname = rightStrokeArrow;
 layers = (
 {
@@ -12,6 +12,11 @@ ref = rightArrow.lft;
 {
 pos = (340,0);
 ref = Arrow.mid.ShortShort;
+},
+{
+anchor = stroke_tail_head;
+pos = (599,1);
+ref = _ArrowStroke;
 },
 {
 alignment = 1;
@@ -69,6 +74,11 @@ pos = (450,-1);
 ref = Arrow.mid.ShortShort;
 },
 {
+anchor = stroke_tail_head;
+pos = (696,0);
+ref = _ArrowStroke;
+},
+{
 alignment = 1;
 pos = (1250,-1);
 ref = rightArrow.rgt;
@@ -122,6 +132,11 @@ ref = rightArrow.lft;
 {
 pos = (340,0);
 ref = Arrow.mid.ShortShort;
+},
+{
+anchor = stroke_tail_head;
+pos = (599,1);
+ref = _ArrowStroke;
 },
 {
 alignment = 1;
@@ -179,6 +194,11 @@ pos = (450,-1);
 ref = Arrow.mid.ShortShort;
 },
 {
+anchor = stroke_tail_head;
+pos = (695,0);
+ref = _ArrowStroke;
+},
+{
 alignment = 1;
 pos = (1250,-1);
 ref = rightArrow.rgt;
@@ -232,6 +252,11 @@ ref = rightArrow.lft;
 {
 pos = (340,0);
 ref = Arrow.mid.ShortShort;
+},
+{
+anchor = stroke_tail_head;
+pos = (563,0);
+ref = _ArrowStroke;
 },
 {
 alignment = 1;
@@ -289,6 +314,11 @@ pos = (450,0);
 ref = Arrow.mid.ShortShort;
 },
 {
+anchor = stroke_tail_head;
+pos = (652,0);
+ref = _ArrowStroke;
+},
+{
 alignment = 1;
 pos = (1250,0);
 ref = rightArrow.rgt;
@@ -344,6 +374,11 @@ pos = (340,0);
 ref = Arrow.mid.ShortShort;
 },
 {
+anchor = stroke_tail_head;
+pos = (562,0);
+ref = _ArrowStroke;
+},
+{
 alignment = 1;
 pos = (1140,0);
 ref = rightArrow.rgt;
@@ -397,6 +432,11 @@ ref = rightArrow.lft;
 {
 pos = (450,0);
 ref = Arrow.mid.ShortShort;
+},
+{
+anchor = stroke_tail_head;
+pos = (652,1);
+ref = _ArrowStroke;
 },
 {
 alignment = 1;
