@@ -21,8 +21,7 @@ the same value Y. Y is the piecewise-linear interpolation of the corresponding
 ``MiddleGlyphInput`` component's explicit widths, evaluated at ARLN=Floor.
 Intermediate layers provide their own ARLN knots, and the master layer provides
 the knot at ``ARLNmaximum`` from ``recipe_constants.plist``. Afterward, the
-output glyph's metrics are updated for every master. The UI's Ignore Floor
-option instead creates only A at ARLN 0 with component width 0.
+output glyph's metrics are updated for every master.
 """
 
 import importlib.util
@@ -33,7 +32,7 @@ import vanilla
 from GlyphsApp import Glyphs, Message
 
 
-SCRIPT_VERSION = "2026-08-07 optional-ignore-floor-mode"
+SCRIPT_VERSION = "2026-08-07 piecewise-input-width-interpolation"
 PLIST_PATH = os.path.normpath(
     os.path.join(os.path.dirname(__file__), "..", "recipes", "ARLN_floors.plist")
 )
@@ -483,7 +482,7 @@ def set_component_name(component, output_name):
         )
 
 
-def apply_configuration_block(block, ignore_floor=False):
+def apply_configuration_block(block):
     """Apply one validated block returned by ``load_configurations``."""
     font = Glyphs.font
     if font is None:
@@ -515,7 +514,6 @@ def apply_configuration_block(block, ignore_floor=False):
     print("Configuration: %s" % PLIST_PATH)
     print("Selected block: %s" % block["name"])
     print("Floor: %s" % block["floor"])
-    print("Ignore Floor: %s" % ("yes" if ignore_floor else "no"))
     print("Unicode points: %s" % " ".join(chr(value) for value in unicode_points))
     print("Configured exchanges:")
     for input_name, output_name in exchanges.items():
@@ -601,14 +599,10 @@ def apply_configuration_block(block, ignore_floor=False):
     try:
         adjuster = load_arrow_adjuster()
         adjust_arrow_mid_components = adjuster.adjust_arrow_mid_components
-        arln_maximum = None
-        if ignore_floor:
-            print("  Floor ignored: creating only A=0 with component width 0.")
-        else:
-            arln_maximum = adjuster.recipe_constant("ARLNmaximum")
-            if abs(arln_maximum) < 0.0001:
-                raise RuntimeError("ARLNmaximum must not be zero.")
-            print("  ARLNmaximum=%s" % adjuster.format_number(arln_maximum))
+        arln_maximum = adjuster.recipe_constant("ARLNmaximum")
+        if abs(arln_maximum) < 0.0001:
+            raise RuntimeError("ARLNmaximum must not be zero.")
+        print("  ARLNmaximum=%s" % adjuster.format_number(arln_maximum))
     except Exception as error:
         errors.append(str(error))
         adjust_arrow_mid_components = None
@@ -643,51 +637,29 @@ def apply_configuration_block(block, ignore_floor=False):
                         )
                     return width_calculations[cache_key][0]
 
-                if ignore_floor:
-                    result = adjust_arrow_mid_components(
-                        output_glyph,
-                        b=floor,
-                        a=0,
-                        component_width_a=0,
-                        component_width_b=0,
-                        create_b=False,
-                    )
-                else:
-                    result = adjust_arrow_mid_components(
-                        output_glyph,
-                        b=floor,
-                        a=0,
-                        component_width_a=calculated_width,
-                        component_width_b=calculated_width,
-                    )
+                result = adjust_arrow_mid_components(
+                    output_glyph,
+                    b=floor,
+                    a=0,
+                    component_width_a=calculated_width,
+                    component_width_b=calculated_width,
+                )
                 updated_metric_layers = update_metrics_for_all_masters(
                     output_glyph, adjuster
                 )
                 adjusted_output_glyphs += 1
                 adjusted_output_components += result["changedComponents"]
-                if ignore_floor:
-                    print(
-                        "  %s -> %s: Floor ignored; A=0 width=0; no B layer; created %i layer(s), updated %i component(s), updated metrics on %i master layer(s)"
-                        % (
-                            input_name,
-                            output_name,
-                            result["createdLayers"],
-                            result["changedComponents"],
-                            updated_metric_layers,
-                        )
+                print(
+                    "  %s -> %s: A=0, B=%s; both widths=interpolated input width at B; created %i layer(s), updated %i component(s), updated metrics on %i master layer(s)"
+                    % (
+                        input_name,
+                        output_name,
+                        floor,
+                        result["createdLayers"],
+                        result["changedComponents"],
+                        updated_metric_layers,
                     )
-                else:
-                    print(
-                        "  %s -> %s: A=0, B=%s; both widths=interpolated input width at B; created %i layer(s), updated %i component(s), updated metrics on %i master layer(s)"
-                        % (
-                            input_name,
-                            output_name,
-                            floor,
-                            result["createdLayers"],
-                            result["changedComponents"],
-                            updated_metric_layers,
-                        )
-                    )
+                )
                 for cache_key, calculation in width_calculations.items():
                     master_id, component_index, smart_component_name = cache_key
                     width, knots = calculation
@@ -755,7 +727,7 @@ def apply_configuration_block(block, ignore_floor=False):
         )
 
 
-def block_description(block, ignore_floor=False):
+def block_description(block):
     """Build the human-readable preview shown in the selection window."""
     unicode_lines = [
         "%s  U+%04X" % (chr(value), value) for value in block["unicodePoints"]
@@ -764,26 +736,18 @@ def block_description(block, ignore_floor=False):
         "%s  →  %s" % (input_name, output_name)
         for input_name, output_name in block["exchanges"].items()
     ]
-    layer_description = (
-        "Floor ignored: create A=0 with width 0; do not create B"
-        if ignore_floor
-        else (
-            "Floor / B value: %s\n"
-            "A value: 0\n"
-            "Component width at A: Y\n"
-            "Component width at B: Y\n"
-            "Y: MiddleGlyphInput width interpolated at ARLN = Floor"
-            % block["floor"]
-        )
-    )
     return (
         "Name: %s\n"
-        "%s\n\n"
+        "Floor / B value: %s\n"
+        "A value: 0\n"
+        "Component width at A: Y\n"
+        "Component width at B: Y\n"
+        "Y: MiddleGlyphInput width interpolated at ARLN = Floor\n\n"
         "Unicode points:\n%s\n\n"
         "Middle-piece exchanges:\n%s"
         % (
             block["name"],
-            layer_description,
+            block["floor"],
             "\n".join("  " + line for line in unicode_lines),
             "\n".join("  " + line for line in exchange_lines),
         )
@@ -813,14 +777,8 @@ class ARLNFloorsWindow(object):
             [block["name"] for block in self.blocks],
             callback=self.update_preview,
         )
-        self.w.ignoreFloor = vanilla.CheckBox(
-            (15, 88, -15, 20),
-            "Ignore Floor: create only A=0 with component width 0",
-            value=False,
-            callback=self.update_preview,
-        )
         self.w.preview = vanilla.TextEditor(
-            (15, 120, -15, -62),
+            (15, 92, -15, -62),
             "",
             readOnly=True,
         )
@@ -838,20 +796,12 @@ class ARLNFloorsWindow(object):
         return self.blocks[int(self.w.block.get())]
 
     def update_preview(self, sender=None):
-        self.w.preview.set(
-            block_description(
-                self.selected_block(),
-                ignore_floor=bool(self.w.ignoreFloor.get()),
-            )
-        )
+        self.w.preview.set(block_description(self.selected_block()))
 
     def run_selected(self, sender):
         block = self.selected_block()
         self.w.status.set("Running %s…" % block["name"])
-        apply_configuration_block(
-            block,
-            ignore_floor=bool(self.w.ignoreFloor.get()),
-        )
+        apply_configuration_block(block)
         self.w.status.set("Finished %s" % block["name"])
 
 

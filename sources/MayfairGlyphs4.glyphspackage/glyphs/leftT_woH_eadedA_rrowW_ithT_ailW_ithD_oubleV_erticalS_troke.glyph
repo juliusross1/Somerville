@@ -1,5 +1,5 @@
 {
-color = 4;
+color = 1;
 glyphname = leftTwoHeadedArrowWithTailWithDoubleVerticalStroke;
 layers = (
 {
@@ -11,7 +11,7 @@ ref = twoheadleftarrow.lft;
 },
 {
 pos = (500,0);
-ref = Arrow.mid.LongLong;
+ref = Arrow.mid.LongLong.FloorA;
 },
 {
 anchor = stroke_doublehead_doubletail;
@@ -70,17 +70,17 @@ alignment = 1;
 ref = twoheadleftarrow.lft;
 },
 {
-pos = (680,0);
-ref = Arrow.mid.LongLong;
+pos = (681,0);
+ref = Arrow.mid.LongLong.FloorA;
 },
 {
 anchor = stroke_doublehead_doubletail;
-pos = (739,0);
+pos = (740,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1020,0);
+pos = (1021,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -120,7 +120,7 @@ leftTailArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1701;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -131,7 +131,7 @@ ref = twoheadleftarrow.lft;
 },
 {
 pos = (500,0);
-ref = Arrow.mid.LongLong;
+ref = Arrow.mid.LongLong.FloorA;
 },
 {
 anchor = stroke_doublehead_doubletail;
@@ -191,7 +191,7 @@ ref = twoheadleftarrow.lft;
 },
 {
 pos = (680,0);
-ref = Arrow.mid.LongLong;
+ref = Arrow.mid.LongLong.FloorA;
 },
 {
 anchor = stroke_doublehead_doubletail;
@@ -251,7 +251,7 @@ ref = twoheadleftarrow.lft;
 },
 {
 pos = (500,0);
-ref = Arrow.mid.LongLong;
+ref = Arrow.mid.LongLong.FloorA;
 },
 {
 anchor = stroke_doublehead_doubletail;
@@ -310,17 +310,17 @@ alignment = 1;
 ref = twoheadleftarrow.lft;
 },
 {
-pos = (680,0);
-ref = Arrow.mid.LongLong;
+pos = (644,0);
+ref = Arrow.mid.LongLong.FloorA;
 },
 {
 anchor = stroke_doublehead_doubletail;
-pos = (743,0);
+pos = (707,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1020,0);
+pos = (984,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -360,7 +360,7 @@ leftTailArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1664;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -371,7 +371,7 @@ ref = twoheadleftarrow.lft;
 },
 {
 pos = (500,0);
-ref = Arrow.mid.LongLong;
+ref = Arrow.mid.LongLong.FloorA;
 },
 {
 anchor = stroke_doublehead_doubletail;
@@ -430,17 +430,17 @@ alignment = 1;
 ref = twoheadleftarrow.lft;
 },
 {
-pos = (680,0);
-ref = Arrow.mid.LongLong;
+pos = (673,0);
+ref = Arrow.mid.LongLong.FloorA;
 },
 {
 anchor = stroke_doublehead_doubletail;
-pos = (756,0);
+pos = (749,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1020,0);
+pos = (1013,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -480,7 +480,7 @@ leftTailArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1693;
 }
 );
 unicode = 11069;

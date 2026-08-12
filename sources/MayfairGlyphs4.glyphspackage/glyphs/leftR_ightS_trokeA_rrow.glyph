@@ -1,5 +1,5 @@
 {
-color = 4;
+color = 1;
 glyphname = leftRightStrokeArrow;
 layers = (
 {
@@ -310,17 +310,17 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (450,0);
+pos = (414,0);
 ref = Arrow.mid.ShortShort.FloorB;
 },
 {
 anchor = stroke;
-pos = (720,0);
+pos = (684,0);
 ref = _ArrowStroke;
 },
 {
 alignment = 1;
-pos = (1250,0);
+pos = (1214,0);
 ref = rightArrow.rgt;
 }
 );
@@ -360,7 +360,7 @@ rightArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1628;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -430,17 +430,17 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (450,0);
+pos = (470,0);
 ref = Arrow.mid.ShortShort.FloorB;
 },
 {
 anchor = stroke;
-pos = (720,1);
+pos = (740,1);
 ref = _ArrowStroke;
 },
 {
 alignment = 1;
-pos = (1250,0);
+pos = (1270,0);
 ref = rightArrow.rgt;
 }
 );
@@ -480,7 +480,7 @@ rightArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1740;
 }
 );
 unicode = 8622;

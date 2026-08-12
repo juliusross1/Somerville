@@ -14,7 +14,8 @@ pos = (330,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (657,1);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (736,1);
 ref = _ArrowStroke;
 },
 {
@@ -73,7 +74,8 @@ pos = (450,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (763,1);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (842,1);
 ref = _ArrowStroke;
 },
 {
@@ -132,7 +134,8 @@ pos = (330,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (657,1);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (736,1);
 ref = _ArrowStroke;
 },
 {
@@ -191,7 +194,8 @@ pos = (450,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (762,1);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (841,1);
 ref = _ArrowStroke;
 },
 {
@@ -250,7 +254,8 @@ pos = (330,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (621,0);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (677,0);
 ref = _ArrowStroke;
 },
 {
@@ -305,16 +310,17 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (450,0);
+pos = (414,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (720,0);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (778,0);
 ref = _ArrowStroke;
 },
 {
 alignment = 1;
-pos = (1250,0);
+pos = (1214,0);
 ref = leftDoubleArrow.rgt;
 }
 );
@@ -354,7 +360,7 @@ leftDoubleArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1664;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -368,7 +374,8 @@ pos = (330,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (615,0);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (671,0);
 ref = _ArrowStroke;
 },
 {
@@ -423,16 +430,17 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (450,0);
+pos = (443,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (720,1);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (807,1);
 ref = _ArrowStroke;
 },
 {
 alignment = 1;
-pos = (1250,0);
+pos = (1243,0);
 ref = leftDoubleArrow.rgt;
 }
 );
@@ -472,7 +480,7 @@ leftDoubleArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1693;
 }
 );
 unicode = 8653;

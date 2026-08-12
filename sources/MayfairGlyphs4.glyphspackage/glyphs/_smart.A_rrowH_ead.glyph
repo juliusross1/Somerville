@@ -183,12 +183,12 @@ piece = {
 height = 0;
 width = 0;
 };
-pos = (-1,530);
+pos = (0,530);
 ref = _smart.ArrowHead.top;
 scale = (1,-1);
 }
 );
-width = 281;
+width = 282;
 },
 {
 attr = {
@@ -204,6 +204,7 @@ width = 1;
 shapes = (
 {
 piece = {
+Width = 95;
 height = 0;
 width = 0;
 };
@@ -242,6 +243,9 @@ ref = _smart.ArrowHead.top;
 },
 {
 piece = {
+"Optical size" = 5;
+Weight = 900;
+Width = 113;
 height = 0;
 width = 0;
 };

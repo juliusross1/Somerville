@@ -1,11 +1,10 @@
 Todo: 
-
-Then put in the strokes as best you can.  
-Think about how you want to deal with the recipes for these (split off or not?)
-11. Fix up the tails and the heads!!!!!
-4. leftHarpoonWithBarbDownBelowLongDash.lft is overcomplicated in what it is doing!
-8. Adjust strokes of extendibles
-9. Assemblies
+Fix up the tails and the heads!!!!!
+MathML tests
+Test/fix Assemblies
+Fix up Arrow head axis
+Retest building all the arrow and fix up documentation
+Notes: I think that the total width of the Arrow can be a little longer on semiexpanded and a little less long on semicondensed
 
 # Mathematical Arrow Notes
 
@@ -90,7 +89,8 @@ stroke_head_tail
 stroke_doublehead_tail
 stroke_head_doubletail
 stroke_doublehead_doubletail
-The stroke ones can be centrally placed for now (see Section ?? for what these are used for)
+The stroke ones can be centrally placed for now (see Section ?? for what these are used for).
+
 
 #### _smart.DoubleArrow.mid
 Similar to _smart.Arrow.mid this will be the double horizontal bars of the double horiztonal arrows.  LSB=RSB=0.  As the _smart.Arrow.mid it should have a width axis setup in the same way.   Has #entry/#exit anchors on the border of the boundingbox, center aligned vertically.   Should be non-exporting.
@@ -227,6 +227,8 @@ stroke_tail_doublehead
 stroke_doubletail_head
 stroke_doubletail_doublehead
 So "stroke_tail_head" is the position of a stroke for an arrow with a simple single tail and single head (e.g. \rightArrow), where as stroke_doubletail_doublehead (e.g. blah).  Position these as needed.  
+
+The script called "Reflect Paired Anchors around Center Anchors" means you need only place the first 1-5 of them, and the last 4 will be place symmetrically around the center axis.
 
 Note: The naming here is poor as Mayfair has a notion of "doubletail" but it is really "tail".  
 

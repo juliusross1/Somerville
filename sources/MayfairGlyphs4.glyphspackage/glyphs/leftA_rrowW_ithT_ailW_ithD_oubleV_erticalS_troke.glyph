@@ -1,5 +1,5 @@
 {
-color = 4;
+color = 1;
 glyphname = leftArrowWithTailWithDoubleVerticalStroke;
 layers = (
 {
@@ -14,6 +14,7 @@ pos = (340,0);
 ref = Arrow.mid.ShortLong.FloorB;
 },
 {
+anchor = stroke_head_doubletail;
 pos = (565,0);
 ref = _ArrowDoubleVerticalStroke;
 },
@@ -73,6 +74,7 @@ pos = (450,0);
 ref = Arrow.mid.ShortLong.FloorB;
 },
 {
+anchor = stroke_head_doubletail;
 pos = (624,0);
 ref = _ArrowDoubleVerticalStroke;
 },
@@ -132,6 +134,7 @@ pos = (340,0);
 ref = Arrow.mid.ShortLong.FloorB;
 },
 {
+anchor = stroke_head_doubletail;
 pos = (565,0);
 ref = _ArrowDoubleVerticalStroke;
 },
@@ -191,6 +194,7 @@ pos = (450,0);
 ref = Arrow.mid.ShortLong.FloorB;
 },
 {
+anchor = stroke_head_doubletail;
 pos = (620,0);
 ref = _ArrowDoubleVerticalStroke;
 },
@@ -250,7 +254,8 @@ pos = (340,0);
 ref = Arrow.mid.ShortLong.FloorB;
 },
 {
-pos = (525,0);
+anchor = stroke_head_doubletail;
+pos = (573,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
@@ -305,16 +310,17 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (450,0);
+pos = (414,0);
 ref = Arrow.mid.ShortLong.FloorB;
 },
 {
-pos = (585,0);
+anchor = stroke_head_doubletail;
+pos = (603,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1020,0);
+pos = (984,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -354,7 +360,7 @@ leftTailArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1664;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -368,7 +374,8 @@ pos = (340,0);
 ref = Arrow.mid.ShortLong.FloorB;
 },
 {
-pos = (513,0);
+anchor = stroke_head_doubletail;
+pos = (556,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
@@ -423,17 +430,17 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (450,0);
+pos = (470,0);
 ref = Arrow.mid.ShortLong.FloorB;
 },
 {
 anchor = stroke_head_doubletail;
-pos = (621,0);
+pos = (641,0);
 ref = _ArrowDoubleVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1020,0);
+pos = (1040,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -473,7 +480,7 @@ leftTailArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1720;
 }
 );
 unicode = 11066;

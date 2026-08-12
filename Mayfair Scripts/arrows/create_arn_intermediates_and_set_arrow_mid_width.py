@@ -36,11 +36,11 @@ grouped for undo.
 
 Other Glyphs scripts can import this file and call
 ``adjust_arrow_mid_components(glyph, b, a=0, component_width_a=0,
-component_width_b=0, create_a=True, create_b=True)``. The
+component_width_b=0)``. The
 function removes the glyph's existing coordinate-bearing intermediate layers,
-creates the requested A and/or B layers under every master, assigns their
-respective component widths, and returns a summary dictionary. Importing the
-file does not open its window.
+creates A and B layers under every master, assigns their respective component
+widths, and returns a summary dictionary. Importing the file does not open its
+window.
 """
 
 import uuid
@@ -51,7 +51,7 @@ import vanilla
 from GlyphsApp import Glyphs, Message
 
 
-SCRIPT_VERSION = "2026-08-07 optional-a-b-layer-creation"
+SCRIPT_VERSION = "2026-08-04 arrow-and-double-arrow-smart-components"
 PREFS_PREFIX = "com.mayfairmath.createARNIntermediates.v2"
 SUPPORTED_COMPONENTS = (
     "_smart.Arrow.mid",
@@ -410,13 +410,7 @@ def set_component_smart_value(component, value):
 
 
 def adjust_arrow_mid_components(
-    glyph,
-    b,
-    a=0,
-    component_width_a=0,
-    component_width_b=0,
-    create_a=True,
-    create_b=True,
+    glyph, b, a=0, component_width_a=0, component_width_b=0
 ):
     """Rebuild a glyph's A/B ARLN layers and set their component widths.
 
@@ -430,8 +424,6 @@ def adjust_arrow_mid_components(
         component_width_b: Explicit ``width`` smart-axis value assigned to
             supported arrow-middle components on B layers. Defaults to 0.
             May also be a callable accepting ``(master, component, index)``.
-        create_a: Whether to create A layers. Defaults to ``True``.
-        create_b: Whether to create B layers. Defaults to ``True``.
 
     Returns:
         A dictionary containing the removed layer names, created/reused layer
@@ -462,11 +454,7 @@ def adjust_arrow_mid_components(
         raise ValueError(
             "a, b, component_width_a, and component_width_b must be numbers."
         )
-    create_a = bool(create_a)
-    create_b = bool(create_b)
-    if not create_a and not create_b:
-        raise ValueError("At least one of create_a or create_b must be true.")
-    if create_a and create_b and abs(a - b) < 0.0001:
+    if abs(a - b) < 0.0001:
         raise ValueError("a and b must be different Arrow Length values.")
 
     try:
@@ -498,12 +486,10 @@ def adjust_arrow_mid_components(
             pass
         result["removedLayers"] = remove_all_intermediate_layers(glyph)
         for master in font.masters:
-            positions = []
-            if create_a:
-                positions.append(("A", a, component_width_a))
-            if create_b:
-                positions.append(("B", b, component_width_b))
-            for position_name, arn_value, component_width_source in positions:
+            for position_name, arn_value, component_width_source in (
+                ("A", a, component_width_a),
+                ("B", b, component_width_b),
+            ):
                 layer, did_create = make_intermediate_layer(
                     glyph, font, master, arn_axis, arn_value
                 )

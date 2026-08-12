@@ -1,5 +1,5 @@
 {
-.appVersion = "4001";
+.appVersion = "4004";
 .formatVersion = 3;
 axes = (
 {
@@ -3378,6 +3378,7 @@ value = (
 ArrowHead,
 harpoonHead,
 rightArrow.rgt,
+rightDoubleArrow.rgt,
 twoheadrightarrow.rgt,
 rightTailArrow.lft,
 harpoonrightup.rgt,
@@ -122835,15 +122836,6 @@ UUID0 = {
 KernOnKerningWeightLimit = 64000;
 KernOnRegenerateGroups = 1;
 KernOnVersion = "1.33";
-MoveOnAxisHiddenAxes = (
-ARLN,
-MGHT,
-STYA,
-STYB,
-opsz,
-wdth,
-wght
-);
 };
 versionMajor = 2;
 versionMinor = 202;

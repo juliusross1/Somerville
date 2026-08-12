@@ -14,7 +14,8 @@ pos = (330,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (730,0);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (809,0);
 ref = _ArrowVerticalStroke;
 },
 {
@@ -73,7 +74,8 @@ pos = (450,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (850,0);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (929,0);
 ref = _ArrowVerticalStroke;
 },
 {
@@ -132,7 +134,8 @@ pos = (330,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (730,0);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (809,0);
 ref = _ArrowVerticalStroke;
 },
 {
@@ -191,7 +194,8 @@ pos = (450,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (850,0);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (929,0);
 ref = _ArrowVerticalStroke;
 },
 {
@@ -250,7 +254,8 @@ pos = (330,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (690,0);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (746,0);
 ref = _ArrowVerticalStroke;
 },
 {
@@ -305,16 +310,17 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (450,0);
+pos = (414,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (810,0);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (868,0);
 ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1250,0);
+pos = (1214,0);
 ref = leftDoubleArrow.rgt;
 }
 );
@@ -354,7 +360,7 @@ leftDoubleArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1664;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -368,7 +374,8 @@ pos = (330,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (684,0);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (740,0);
 ref = _ArrowVerticalStroke;
 },
 {
@@ -423,16 +430,17 @@ alignment = 1;
 ref = leftDoubleArrow.lft;
 },
 {
-pos = (450,0);
+pos = (443,0);
 ref = DoubleArrow.mid.ShortShort.Floor;
 },
 {
-pos = (804,0);
+anchor = stroke_DoubleStrokeHead_DoubleStrokeTail;
+pos = (891,0);
 ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1250,0);
+pos = (1243,0);
 ref = leftDoubleArrow.rgt;
 }
 );
@@ -472,7 +480,7 @@ leftDoubleArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1693;
 }
 );
 unicode = 10498;

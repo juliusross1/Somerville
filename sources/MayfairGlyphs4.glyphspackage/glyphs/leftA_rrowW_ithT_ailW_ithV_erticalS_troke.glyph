@@ -1,5 +1,5 @@
 {
-color = 4;
+color = 1;
 glyphname = leftArrowWithTailWithVerticalStroke;
 layers = (
 {
@@ -310,17 +310,17 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (450,0);
+pos = (414,0);
 ref = Arrow.mid.ShortLong.FloorC;
 },
 {
 anchor = stroke_head_doubletail;
-pos = (749,0);
+pos = (713,0);
 ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1020,0);
+pos = (984,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -360,7 +360,7 @@ leftTailArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1664;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -430,17 +430,17 @@ alignment = 1;
 ref = leftArrow.lft;
 },
 {
-pos = (450,0);
+pos = (470,0);
 ref = Arrow.mid.ShortLong.FloorC;
 },
 {
 anchor = stroke_head_doubletail;
-pos = (737,0);
+pos = (757,0);
 ref = _ArrowVerticalStroke;
 },
 {
 alignment = 1;
-pos = (1020,0);
+pos = (1040,0);
 ref = leftTailArrow.rgt;
 }
 );
@@ -480,7 +480,7 @@ leftTailArrow.rgt,
 );
 };
 };
-width = 1700;
+width = 1720;
 }
 );
 unicode = 11065;
