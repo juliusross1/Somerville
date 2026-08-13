@@ -1,10 +1,12 @@
 Todo: 
-Fix up the tails and the heads!!!!!
-MathML tests
-Test/fix Assemblies
-Fix up Arrow head axis
-Retest building all the arrow and fix up documentation
+= MathML tests
+= DoubleArrow Tails
+= Go through the smart component settings of ArrowHead, Harpoon, DoubleArrow Head for consistency and design choices
+= Look over all lengths again (script to test this)
 Notes: I think that the total width of the Arrow can be a little longer on semiexpanded and a little less long on semicondensed
+= Strokes and minimal lengths (again).  Recipes for the anchors
+= Test/fix Assemblies
+= Retest building all the arrow and fix up documentation
 
 # Mathematical Arrow Notes
 
@@ -120,6 +122,7 @@ Design of the tails of FrombarArrow and FromDobuleArrow.  RSB=0.   LSB by design
 ### ArrowHeads
 Glyphs: _smart.ArrowHead.top,_smart.ArrowHead,ArrowHead.rgt,
 DoubleArrowHead.rgt
+DoubleArrowHead (adjusted Smart component from ArrowHead)
 harpoonrightup.rgt
 /twoheadrightarrow.rgt/
 

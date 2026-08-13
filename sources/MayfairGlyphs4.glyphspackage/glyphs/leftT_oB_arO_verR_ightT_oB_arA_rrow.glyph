@@ -1,6 +1,5 @@
 {
 color = 1;
-export = 0;
 glyphname = leftToBarOverRightToBarArrow;
 layers = (
 {
@@ -54,12 +53,12 @@ alignment = 1;
 ref = leftToBarOverRightToBarArrow.lft;
 },
 {
-pos = (652,0);
+pos = (651,0);
 ref = DoublePairedArrow.mid.LongLong;
 },
 {
 alignment = 1;
-pos = (992,0);
+pos = (991,0);
 ref = leftToBarOverRightToBarArrow.rgt;
 }
 );
@@ -87,7 +86,7 @@ leftToBarOverRightToBarArrow.rgt,
 );
 };
 };
-width = 1672;
+width = 1671;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -226,12 +225,12 @@ alignment = 1;
 ref = leftToBarOverRightToBarArrow.lft;
 },
 {
-pos = (586,0);
+pos = (651,0);
 ref = DoublePairedArrow.mid.LongLong;
 },
 {
 alignment = 1;
-pos = (926,0);
+pos = (991,0);
 ref = leftToBarOverRightToBarArrow.rgt;
 }
 );
@@ -259,7 +258,7 @@ leftToBarOverRightToBarArrow.rgt,
 );
 };
 };
-width = 1606;
+width = 1671;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -312,12 +311,12 @@ alignment = 1;
 ref = leftToBarOverRightToBarArrow.lft;
 },
 {
-pos = (666,0);
+pos = (680,0);
 ref = DoublePairedArrow.mid.LongLong;
 },
 {
 alignment = 1;
-pos = (1006,0);
+pos = (1020,0);
 ref = leftToBarOverRightToBarArrow.rgt;
 }
 );
@@ -345,7 +344,7 @@ leftToBarOverRightToBarArrow.rgt,
 );
 };
 };
-width = 1686;
+width = 1700;
 }
 );
 unicode = 8633;

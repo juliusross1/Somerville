@@ -3376,6 +3376,7 @@ value = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 name = "Decompose Glyphs";
 value = (
 ArrowHead,
+DoubleArrowHead,
 harpoonHead,
 rightArrow.rgt,
 rightDoubleArrow.rgt,
@@ -122836,6 +122837,16 @@ UUID0 = {
 KernOnKerningWeightLimit = 64000;
 KernOnRegenerateGroups = 1;
 KernOnVersion = "1.33";
+MoveOnAxisHiddenAxes = (
+ARHD,
+ARLN,
+MGHT,
+STYA,
+STYB,
+opsz,
+wdth,
+wght
+);
 };
 versionMajor = 2;
 versionMinor = 202;

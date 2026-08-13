@@ -9,7 +9,7 @@ layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
 piece = {
-width = 134.425;
+width = 124.425;
 };
 ref = _smart.Arrow.mid;
 },
@@ -21,7 +21,7 @@ ref = ArrowHead;
 piece = {
 width = 127.05257;
 };
-pos = (134,0);
+pos = (124,0);
 ref = _smart.Arrow.mid;
 },
 {
@@ -36,23 +36,23 @@ layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
 piece = {
-width = 64.45685;
+width = 94.45685;
 };
 ref = _smart.Arrow.mid;
 },
 {
-pos = (11,0);
+pos = (31,0);
 ref = ArrowHead;
 },
 {
 piece = {
 width = 157.02533;
 };
-pos = (64,0);
+pos = (94,0);
 ref = _smart.Arrow.mid;
 },
 {
-pos = (168,0);
+pos = (188,0);
 ref = ArrowHead;
 }
 );
@@ -63,34 +63,34 @@ layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
 piece = {
-width = 102.9893;
+width = 154.9893;
 };
 ref = _smart.Arrow.mid;
 },
 {
-pos = (14,0);
+pos = (70,0);
 ref = ArrowHead;
 },
 {
 piece = {
 width = 203.73543;
 };
-pos = (103,0);
+pos = (155,0);
 ref = _smart.Arrow.mid;
 },
 {
-pos = (218,0);
+pos = (274,0);
 ref = ArrowHead;
 }
 );
-width = 644;
+width = 680;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
 piece = {
-width = 123.95423;
+width = 113.95423;
 };
 ref = _smart.Arrow.mid;
 },
@@ -102,7 +102,7 @@ ref = ArrowHead;
 piece = {
 width = 137.29575;
 };
-pos = (124,0);
+pos = (114,0);
 ref = _smart.Arrow.mid;
 },
 {
@@ -117,7 +117,7 @@ layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
 piece = {
-width = 201.60127;
+width = 191.60127;
 };
 ref = _smart.Arrow.mid;
 },
@@ -129,7 +129,7 @@ ref = ArrowHead;
 piece = {
 width = 166.91473;
 };
-pos = (202,0);
+pos = (192,0);
 ref = _smart.Arrow.mid;
 },
 {
@@ -144,27 +144,27 @@ layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
 piece = {
-width = 210.86383;
+width = 199.86383;
 };
 ref = _smart.Arrow.mid;
 },
 {
-pos = (168,0);
+pos = (167,0);
 ref = ArrowHead;
 },
 {
 piece = {
 width = 158.72664;
 };
-pos = (211,0);
+pos = (200,0);
 ref = _smart.Arrow.mid;
 },
 {
-pos = (327,0);
+pos = (326,0);
 ref = ArrowHead;
 }
 );
-width = 681;
+width = 680;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -198,27 +198,355 @@ layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 piece = {
-width = 90.18036;
+width = 97.18036;
 };
 ref = _smart.Arrow.mid;
 },
 {
-pos = (16,0);
+pos = (23,0);
 ref = ArrowHead;
 },
 {
 piece = {
 width = 220.34834;
 };
-pos = (90,0);
+pos = (97,0);
 ref = _smart.Arrow.mid;
 },
 {
-pos = (236,0);
+pos = (243,0);
 ref = ArrowHead;
 }
 );
-width = 673;
+width = 680;
+},
+{
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+1200,
+95,
+360,
+360,
+5,
+5,
+200,
+200
+);
+};
+layerId = "C10768D3-5582-48CC-955C-D6F28E3BD0C6";
+name = "Needlepoint SemiCondensed Upright ARHD=200";
+shapes = (
+{
+piece = {
+width = 124.425;
+};
+ref = _smart.Arrow.mid;
+},
+{
+pos = (81,0);
+ref = ArrowHead;
+},
+{
+piece = {
+width = 127.05257;
+};
+pos = (124,0);
+ref = _smart.Arrow.mid;
+},
+{
+pos = (208,0);
+ref = ArrowHead;
+}
+);
+width = 566;
+},
+{
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+1200,
+113,
+360,
+360,
+5,
+5,
+200,
+200
+);
+};
+layerId = "D8A2108F-75DE-4EC1-88A2-560BDFE304B9";
+name = "Needlepoint SemiExpanded Upright ARHD=200";
+shapes = (
+{
+piece = {
+width = 199.86383;
+};
+ref = _smart.Arrow.mid;
+},
+{
+pos = (157,0);
+ref = ArrowHead;
+},
+{
+piece = {
+width = 158.72664;
+};
+pos = (200,0);
+ref = _smart.Arrow.mid;
+},
+{
+pos = (316,0);
+ref = ArrowHead;
+}
+);
+width = 728;
+},
+{
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+1200,
+95,
+900,
+360,
+5,
+5,
+200,
+200
+);
+};
+layerId = "A145D878-9C82-4FB9-8EB5-A84812CE0D4B";
+name = "Needlepoint Black SemiCondensed Upright ARHD=200";
+shapes = (
+{
+piece = {
+width = 113.95423;
+};
+ref = _smart.Arrow.mid;
+},
+{
+pos = (71,0);
+ref = ArrowHead;
+},
+{
+piece = {
+width = 137.29575;
+};
+pos = (114,0);
+ref = _smart.Arrow.mid;
+},
+{
+pos = (208,0);
+ref = ArrowHead;
+}
+);
+width = 566;
+},
+{
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+1200,
+113,
+900,
+360,
+5,
+5,
+200,
+200
+);
+};
+layerId = "DD00AC8A-664E-42B1-85B9-6A3CBFBA0D91";
+name = "Needlepoint Black SemiExpanded Upright ARHD=200";
+shapes = (
+{
+piece = {
+width = 191.60127;
+};
+ref = _smart.Arrow.mid;
+},
+{
+pos = (149,0);
+ref = ArrowHead;
+},
+{
+piece = {
+width = 166.91473;
+};
+pos = (192,0);
+ref = _smart.Arrow.mid;
+},
+{
+pos = (316,0);
+ref = ArrowHead;
+}
+);
+width = 728;
+},
+{
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+5,
+95,
+360,
+360,
+5,
+5,
+200,
+200
+);
+};
+layerId = "50C9AB0A-F1C0-497E-85CC-6C3A7845C358";
+name = "Agate SemiCondensed Upright ARHD=200";
+shapes = (
+{
+piece = {
+width = 94.45685;
+};
+ref = _smart.Arrow.mid;
+},
+{
+pos = (13,0);
+ref = ArrowHead;
+},
+{
+piece = {
+width = 157.02533;
+};
+pos = (94,0);
+ref = _smart.Arrow.mid;
+},
+{
+pos = (170,0);
+ref = ArrowHead;
+}
+);
+width = 564;
+},
+{
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+5,
+113,
+360,
+360,
+5,
+5,
+200,
+200
+);
+};
+layerId = "B6D9908E-F747-4C91-864B-87159251E1B9";
+name = "Agate SemiExpanded Upright ARHD=200";
+shapes = (
+{
+piece = {
+width = 154.9893;
+};
+ref = _smart.Arrow.mid;
+},
+{
+pos = (82,0);
+ref = ArrowHead;
+},
+{
+piece = {
+width = 203.73543;
+};
+pos = (155,0);
+ref = _smart.Arrow.mid;
+},
+{
+pos = (286,0);
+ref = ArrowHead;
+}
+);
+width = 732;
+},
+{
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+5,
+95,
+900,
+360,
+5,
+5,
+200,
+200
+);
+};
+layerId = "C8D34337-BD90-4F2E-9443-840AFB563782";
+name = "Agate Black SemiCondensed Upright ARHD=200";
+shapes = (
+{
+piece = {
+width = 57.97777;
+};
+ref = _smart.Arrow.mid;
+},
+{
+pos = (-13,0);
+ref = ArrowHead;
+},
+{
+piece = {
+width = 173.22992;
+};
+pos = (58,0);
+ref = _smart.Arrow.mid;
+},
+{
+pos = (160,0);
+ref = ArrowHead;
+}
+);
+width = 570;
+},
+{
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+5,
+113,
+900,
+360,
+5,
+5,
+200,
+200
+);
+};
+layerId = "69562AF1-2E02-45EC-A4F0-14CCC8416F12";
+name = "Agate Black SemiExpanded Upright ARHD=200";
+shapes = (
+{
+piece = {
+width = 97.18036;
+};
+ref = _smart.Arrow.mid;
+},
+{
+pos = (34,0);
+ref = ArrowHead;
+},
+{
+piece = {
+width = 220.34834;
+};
+pos = (97,0);
+ref = _smart.Arrow.mid;
+},
+{
+pos = (255,0);
+ref = ArrowHead;
+}
+);
+width = 737;
 }
 );
 metricLeft = "=0";
