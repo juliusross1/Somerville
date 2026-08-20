@@ -8,35 +8,51 @@ layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
 piece = {
-width = 91.18456;
+width = 77.18456;
 };
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (55,0);
+pos = (41,0);
 ref = DoubleArrowHead;
 }
 );
-width = 354;
+width = 340;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
 {
 piece = {
-width = 51.46037;
+width = 80.46037;
 };
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (-19,0);
+pos = (10,0);
 ref = DoubleArrowHead;
 }
 );
-width = 311;
+width = 340;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+piece = {
+width = 120;
+};
+ref = _smart.DoubleArrow.mid;
+},
+{
+pos = (38,0);
+ref = DoubleArrowHead;
+}
+);
+width = 450;
+},
+{
+layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
 piece = {
@@ -45,59 +61,43 @@ width = 77;
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (-5,0);
+pos = (41,0);
 ref = DoubleArrowHead;
 }
 );
-width = 407;
-},
-{
-layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
-shapes = (
-{
-piece = {
-width = 91;
-};
-ref = _smart.DoubleArrow.mid;
-},
-{
-pos = (55,0);
-ref = DoubleArrowHead;
-}
-);
-width = 354;
+width = 340;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
 piece = {
-width = 139;
+width = 120;
 };
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (103,0);
+pos = (84,0);
 ref = DoubleArrowHead;
 }
 );
-width = 469;
+width = 450;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
 {
 piece = {
-width = 139.44316;
+width = 120.44316;
 };
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (103,0);
+pos = (84,0);
 ref = DoubleArrowHead;
 }
 );
-width = 469;
+width = 450;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -128,16 +128,16 @@ layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 piece = {
-width = 80.46875;
+width = 80;
 };
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (9,0);
+pos = (8,0);
 ref = DoubleArrowHead;
 }
 );
-width = 451;
+width = 450;
 },
 {
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -158,16 +158,16 @@ name = "Needlepoint SemiCondensed Upright ARHD=200";
 shapes = (
 {
 piece = {
-width = 91.18456;
+width = 25.18456;
 };
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (48,0);
+pos = (-18,0);
 ref = DoubleArrowHead;
 }
 );
-width = 406;
+width = 340;
 },
 {
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -188,16 +188,16 @@ name = "Needlepoint SemiExpanded Upright ARHD=200";
 shapes = (
 {
 piece = {
-width = 139.44316;
+width = 81.44316;
 };
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (96,0);
+pos = (38,0);
 ref = DoubleArrowHead;
 }
 );
-width = 508;
+width = 450;
 },
 {
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -218,16 +218,16 @@ name = "Needlepoint Black SemiCondensed Upright ARHD=200";
 shapes = (
 {
 piece = {
-width = 91;
+width = 25;
 };
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (48,0);
+pos = (-18,0);
 ref = DoubleArrowHead;
 }
 );
-width = 406;
+width = 340;
 },
 {
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -248,16 +248,16 @@ name = "Needlepoint Black SemiExpanded Upright ARHD=200";
 shapes = (
 {
 piece = {
-width = 139;
+width = 81;
 };
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (96,0);
+pos = (38,0);
 ref = DoubleArrowHead;
 }
 );
-width = 508;
+width = 450;
 },
 {
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -278,16 +278,16 @@ name = "Agate SemiCondensed Upright ARHD=200";
 shapes = (
 {
 piece = {
-width = 51.46037;
+width = 27.46037;
 };
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (-30,0);
+pos = (-54,0);
 ref = DoubleArrowHead;
 }
 );
-width = 364;
+width = 340;
 },
 {
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -338,17 +338,17 @@ name = "Agate Black SemiCondensed Upright ARHD=200";
 shapes = (
 {
 piece = {
-width = 8.14744;
+width = 0.14744;
 };
 ref = _smart.DoubleArrow.mid;
 scale = (7.5,1);
 },
 {
-pos = (-10,0);
+pos = (-70,0);
 ref = DoubleArrowHead;
 }
 );
-width = 400;
+width = 340;
 },
 {
 annotations = (
@@ -376,16 +376,16 @@ name = "Agate Black SemiExpanded Upright ARHD=200";
 shapes = (
 {
 piece = {
-width = 80.46875;
+width = 31.46875;
 };
 ref = _smart.DoubleArrow.mid;
 },
 {
-pos = (17,0);
+pos = (-32,0);
 ref = DoubleArrowHead;
 }
 );
-width = 499;
+width = 450;
 }
 );
 subCategory = Arrow;

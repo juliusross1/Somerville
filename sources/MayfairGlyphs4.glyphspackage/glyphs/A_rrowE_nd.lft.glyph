@@ -1,7 +1,6 @@
 {
 category = Symbol;
-color = 0;
-export = 0;
+color = 3;
 glyphname = ArrowEnd.lft;
 layers = (
 {
@@ -12,13 +11,13 @@ ref = _smart.ArrowTail;
 },
 {
 piece = {
-width = 169.71905;
+width = 118.71905;
 };
 pos = (381,0);
 ref = _smart.Arrow.mid;
 }
 );
-width = 551;
+width = 500;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -28,13 +27,13 @@ ref = _smart.ArrowTail;
 },
 {
 piece = {
-width = 70.86406;
+width = 127.86406;
 };
-pos = (372,0);
+pos = (382,0);
 ref = _smart.Arrow.mid;
 }
 );
-width = 443;
+width = 510;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -44,13 +43,13 @@ ref = _smart.ArrowTail;
 },
 {
 piece = {
-width = 271.78295;
+width = 235.78295;
 };
-pos = (444,0);
+pos = (424,0);
 ref = _smart.Arrow.mid;
 }
 );
-width = 716;
+width = 660;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -60,13 +59,13 @@ ref = _smart.ArrowTail;
 },
 {
 piece = {
-width = 154.41106;
+width = 144.41106;
 };
 pos = (356,0);
 ref = _smart.Arrow.mid;
 }
 );
-width = 510;
+width = 500;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -76,13 +75,13 @@ ref = _smart.ArrowTail;
 },
 {
 piece = {
-width = 180.95558;
+width = 151.95558;
 };
-pos = (528,0);
+pos = (508,0);
 ref = _smart.Arrow.mid;
 }
 );
-width = 709;
+width = 660;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -92,13 +91,13 @@ ref = _smart.ArrowTail;
 },
 {
 piece = {
-width = 193.57454;
+width = 154.57454;
 };
-pos = (525,0);
+pos = (505,0);
 ref = _smart.Arrow.mid;
 }
 );
-width = 719;
+width = 660;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -108,13 +107,13 @@ ref = _smart.ArrowTail;
 },
 {
 piece = {
-width = 65.93554;
+width = 73.93554;
 };
 pos = (426,0);
 ref = _smart.Arrow.mid;
 }
 );
-width = 492;
+width = 500;
 },
 {
 guides = (
@@ -133,9 +132,9 @@ ref = _smart.ArrowTail;
 },
 {
 piece = {
-width = 199.12026;
+width = 180.12026;
 };
-pos = (500,0);
+pos = (480,0);
 ref = _smart.Arrow.mid;
 }
 );
@@ -143,7 +142,7 @@ userData = {
 com.nagwa.MATHPlugin.variants = {
 };
 };
-width = 699;
+width = 660;
 }
 );
 metricLeft = "=_smart.ArrowEnd";

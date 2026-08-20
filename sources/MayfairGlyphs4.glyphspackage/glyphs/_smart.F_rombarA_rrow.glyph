@@ -265,7 +265,7 @@ width = 450;
 anchors = (
 {
 name = "#exit";
-pos = (341,265);
+pos = (340,265);
 }
 );
 attr = {
@@ -281,11 +281,10 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 26.60756;
+width = 161.39023;
 };
 pos = (179,0);
 ref = _smart.Arrow.mid;
-scale = (6,1);
 },
 {
 pos = (184,0);
@@ -301,13 +300,13 @@ pos = (68,0);
 ref = _ArrowTab;
 }
 );
-width = 341;
+width = 340;
 },
 {
 anchors = (
 {
 name = "#exit";
-pos = (449,265);
+pos = (450,265);
 }
 );
 attr = {
@@ -323,11 +322,10 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 23.13043;
+width = 265.8434;
 };
 pos = (184,0);
 ref = _smart.Arrow.mid;
-scale = (11.51,1);
 },
 {
 pos = (184,0);
@@ -343,7 +341,7 @@ pos = (68,0);
 ref = _ArrowTab;
 }
 );
-width = 449;
+width = 450;
 },
 {
 anchors = (
@@ -643,11 +641,10 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 27.80651;
+width = 167.12799;
 };
 pos = (173,0);
 ref = _smart.Arrow.mid;
-scale = (6,1);
 },
 {
 pos = (184,0);
@@ -663,13 +660,13 @@ pos = (68,0);
 ref = _ArrowTab;
 }
 );
-width = 341;
+width = 340;
 },
 {
 anchors = (
 {
 name = "#exit";
-pos = (449,265);
+pos = (450,265);
 }
 );
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -688,11 +685,10 @@ shapes = (
 {
 alignment = -1;
 piece = {
-width = 22.70553;
+width = 266.35235;
 };
 pos = (184,0);
 ref = _smart.Arrow.mid;
-scale = (11.51,1);
 },
 {
 pos = (184,0);
@@ -708,7 +704,7 @@ pos = (68,0);
 ref = _ArrowTab;
 }
 );
-width = 449;
+width = 450;
 }
 );
 metricRight = "=0";

@@ -22,6 +22,13 @@ the same value Y. Y is the piecewise-linear interpolation of the corresponding
 Intermediate layers provide their own ARLN knots, and the master layer provides
 the knot at ``ARLNmaximum`` from ``recipe_constants.plist``. Afterward, the
 output glyph's metrics are updated for every master.
+
+An enabled-by-default UI option also synchronizes the supported smart
+component's explicit ``width`` value on every master of a pre-existing output
+glyph from the corresponding input glyph. Component count, order, and names
+are validated across all masters before any such values or intermediate layers
+are changed. Newly created outputs already inherit their masters from the full
+input-glyph copy and are not processed by this option.
 """
 
 import importlib.util
@@ -32,7 +39,7 @@ import vanilla
 from GlyphsApp import Glyphs, Message
 
 
-SCRIPT_VERSION = "2026-08-07 piecewise-input-width-interpolation"
+SCRIPT_VERSION = "2026-08-18 sync-existing-output-master-widths"
 PLIST_PATH = os.path.normpath(
     os.path.join(os.path.dirname(__file__), "..", "recipes", "ARLN_floors.plist")
 )
@@ -207,6 +214,86 @@ def update_metrics_for_all_masters(glyph, adjuster):
             )
         updated += 1
     return updated
+
+
+def master_component_width_plan(adjuster, input_glyph, output_glyph):
+    """Validate and plan width-only master-component synchronization."""
+    font = input_glyph.parent
+    plan = []
+    for master in font.masters:
+        input_layer = adjuster.master_layer_for_glyph(input_glyph, master)
+        output_layer = adjuster.master_layer_for_glyph(output_glyph, master)
+        if input_layer is None:
+            raise RuntimeError(
+                "%s has no master layer for %s." % (input_glyph.name, master.name)
+            )
+        if output_layer is None:
+            raise RuntimeError(
+                "%s has no master layer for %s." % (output_glyph.name, master.name)
+            )
+        input_components = adjuster.components_in_layer(input_layer)
+        output_components = adjuster.components_in_layer(output_layer)
+        if not input_components:
+            raise RuntimeError(
+                "%s / %s has no supported arrow-middle component."
+                % (input_glyph.name, master.name)
+            )
+        if len(input_components) != len(output_components):
+            raise RuntimeError(
+                "%s / %s has %i supported component(s), but %s has %i."
+                % (
+                    input_glyph.name,
+                    master.name,
+                    len(input_components),
+                    output_glyph.name,
+                    len(output_components),
+                )
+            )
+        for component_index, (input_component, output_component) in enumerate(
+            zip(input_components, output_components), 1
+        ):
+            input_name = adjuster.component_name(input_component)
+            output_name = adjuster.component_name(output_component)
+            if input_name != output_name:
+                raise RuntimeError(
+                    "%s / %s component %i is %s, but %s has %s."
+                    % (
+                        input_glyph.name,
+                        master.name,
+                        component_index,
+                        input_name,
+                        output_glyph.name,
+                        output_name,
+                    )
+                )
+            width = adjuster.read_component_smart_value(input_component)
+            if width is None:
+                raise RuntimeError(
+                    "%s / %s component %i has no explicit width value."
+                    % (input_glyph.name, master.name, component_index)
+                )
+            plan.append(
+                (master.name, component_index, output_component, float(width))
+            )
+    return plan
+
+
+def apply_master_component_width_plan(adjuster, output_glyph, plan):
+    """Apply a previously validated width-only synchronization plan."""
+    changed = 0
+    for master_name, component_index, component, width in plan:
+        actual = adjuster.set_component_smart_value(component, width)
+        print(
+            "    %s | master component %i | width=%s (read-back %s)"
+            % (
+                master_name,
+                component_index,
+                adjuster.format_number(width),
+                adjuster.format_number(actual),
+            )
+        )
+        changed += 1
+    return changed
 
 
 def component_name(component):
@@ -482,7 +569,7 @@ def set_component_name(component, output_name):
         )
 
 
-def apply_configuration_block(block):
+def apply_configuration_block(block, sync_existing_master_widths=True):
     """Apply one validated block returned by ``load_configurations``."""
     font = Glyphs.font
     if font is None:
@@ -507,6 +594,7 @@ def apply_configuration_block(block):
     changed_glyphs = 0
     adjusted_output_glyphs = 0
     adjusted_output_components = 0
+    synchronized_master_components = 0
     errors = []
 
     print("Apply ARLN Floor Middle-Piece Exchanges")
@@ -514,6 +602,10 @@ def apply_configuration_block(block):
     print("Configuration: %s" % PLIST_PATH)
     print("Selected block: %s" % block["name"])
     print("Floor: %s" % block["floor"])
+    print(
+        "Synchronize pre-existing output master component widths: %s"
+        % ("yes" if sync_existing_master_widths else "no")
+    )
     print("Unicode points: %s" % " ".join(chr(value) for value in unicode_points))
     print("Configured exchanges:")
     for input_name, output_name in exchanges.items():
@@ -522,6 +614,11 @@ def apply_configuration_block(block):
     font.disableUpdateInterface()
     try:
         print("Preparing MiddleGlyphOutput glyphs:")
+        preexisting_output_names = set(
+            output_name
+            for output_name in exchanges.values()
+            if glyph_for_name(font, output_name) is not None
+        )
         try:
             created_output_glyphs = ensure_exchange_outputs(font, exchanges)
         except Exception as error:
@@ -617,6 +714,32 @@ def apply_configuration_block(block):
                 errors.append("Missing MiddleGlyphOutput glyph %s." % output_name)
                 continue
             try:
+                if sync_existing_master_widths and output_name in preexisting_output_names:
+                    print(
+                        "  %s -> %s: validating pre-existing output master widths"
+                        % (input_name, output_name)
+                    )
+                    width_plan = master_component_width_plan(
+                        adjuster, input_glyph, output_glyph
+                    )
+                    print(
+                        "    Validation passed for %i master component(s); "
+                        "synchronizing width only."
+                        % len(width_plan)
+                    )
+                    synchronized_master_components += apply_master_component_width_plan(
+                        adjuster, output_glyph, width_plan
+                    )
+                elif output_name in preexisting_output_names:
+                    print(
+                        "  %s -> %s: master width synchronization disabled"
+                        % (input_name, output_name)
+                    )
+                else:
+                    print(
+                        "  %s -> %s: newly created output already inherited master widths"
+                        % (input_name, output_name)
+                    )
                 width_calculations = {}
 
                 def calculated_width(master, component, component_index):
@@ -708,6 +831,10 @@ def apply_configuration_block(block):
     print("  Changed components: %i" % changed_components)
     print("  Adjusted MiddleGlyphOutput glyphs: %i" % adjusted_output_glyphs)
     print("  Adjusted MiddleGlyphOutput components: %i" % adjusted_output_components)
+    print(
+        "  Synchronized pre-existing output master components: %i"
+        % synchronized_master_components
+    )
     if missing_characters:
         print("  Missing Unicode glyphs: %s" % ", ".join(missing_characters))
     for error in errors:
@@ -764,7 +891,7 @@ class ARLNFloorsWindow(object):
             return
 
         self.w = vanilla.FloatingWindow(
-            (600, 440),
+            (600, 475),
             "Apply ARLN Floor Block",
         )
         self.w.intro = vanilla.TextBox(
@@ -778,13 +905,18 @@ class ARLNFloorsWindow(object):
             callback=self.update_preview,
         )
         self.w.preview = vanilla.TextEditor(
-            (15, 92, -15, -62),
+            (15, 92, -15, -100),
             "",
             readOnly=True,
         )
-        self.w.status = vanilla.TextBox((15, -42, 360, 18), "Ready")
+        self.w.syncExistingMasterWidths = vanilla.CheckBox(
+            (15, -88, -15, 20),
+            "Update smart-component width on masters of existing Floor glyphs",
+            value=True,
+        )
+        self.w.status = vanilla.TextBox((15, -47, 360, 18), "Ready")
         self.w.runButton = vanilla.Button(
-            (-160, -48, 145, 28),
+            (-160, -55, 145, 28),
             "Run Selected Block",
             callback=self.run_selected,
         )
@@ -801,7 +933,12 @@ class ARLNFloorsWindow(object):
     def run_selected(self, sender):
         block = self.selected_block()
         self.w.status.set("Running %s…" % block["name"])
-        apply_configuration_block(block)
+        apply_configuration_block(
+            block,
+            sync_existing_master_widths=bool(
+                self.w.syncExistingMasterWidths.get()
+            ),
+        )
         self.w.status.set("Finished %s" % block["name"])
 
 

@@ -1,12 +1,12 @@
 Todo: 
-= MathML tests
+= The bar needs to be bigger in ⥒ and similar
+= Is the harpoon changing with the width axis?
 = DoubleArrow Tails
 = Go through the smart component settings of ArrowHead, Harpoon, DoubleArrow Head for consistency and design choices
-= Look over all lengths again (script to test this)
-Notes: I think that the total width of the Arrow can be a little longer on semiexpanded and a little less long on semicondensed
 = Strokes and minimal lengths (again).  Recipes for the anchors
+= ARLN scripts
 = Test/fix Assemblies
-= Retest building all the arrow and fix up documentation
+= Fix up documentation
 
 # Mathematical Arrow Notes
 
@@ -34,9 +34,10 @@ Tip: if there is not to be an ARLN axis and/or you do not need as much control o
 
 ### Short Heads 
 rightArrow.rgt
-harpoonrightup.rgt
 rightDoubleArrow.rgt
 Arrowend.rgt
+harpoonrightup.rgt
+
 
 ### Long Heads
 twoheadrightarrow.rgt
@@ -48,10 +49,10 @@ rightTabHarpoonUpArrow.rgt
 rightArrow.lft
 FrombarArrowEnd.lft
 FrombarDoubleArrowEnd.lft
+DoubleArrowEnd.lft
 
 ### Long Ends
 ArrowEnd.lft
-?DoubleArrowEnd.lft
 ArrowEnd.lft
 needs #exit anchor
 

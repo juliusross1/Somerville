@@ -16,6 +16,11 @@
         <string>⬴</string>
         <string>⇷</string>
         <string>⇸</string>
+        <string>↔</string>
+        <string>⥊</string>
+        <string>⥋</string>
+        <string>⥎</string>
+        <string>⥐</string>
       </array>
       <key>MiddlePieceExchange</key>
       <array>
@@ -40,16 +45,12 @@
       <string>Floor B</string>
       <key>UnicodePoints</key>
       <array>
-        <string>⤕</string>
-        <string>⬺</string>
-        <string>⤁</string>
         <string>⇺</string>
         <string>⇻</string>
-        <string>⤀</string>
-        <string>⬴</string>
         <string>⇹</string>
         <string>↮</string>
         <string>↚</string>
+        <string>↛</string>     
       </array>
       <key>MiddlePieceExchange</key>
       <array>
@@ -77,6 +78,12 @@
       <array>
         <string>⤘</string>
         <string>⬽</string>
+        <string>⤕</string>
+        <string>⬺</string>
+        <string>⤀</string>
+        <string>⬴</string>
+        <string>⬵</string>
+        <string>⤁</string>
       </array>
       <key>MiddlePieceExchange</key>
       <array>
@@ -85,6 +92,12 @@
           <string>Arrow.mid.LongLong</string>
           <key>MiddleGlyphOutput</key>
           <string>Arrow.mid.LongLong.FloorA</string>
+        </dict>
+        <dict>
+          <key>MiddleGlyphInput</key>
+          <string>Arrow.mid.ShortLong</string>
+          <key>MiddleGlyphOutput</key>
+          <string>Arrow.mid.ShortLong.FloorA</string>
         </dict>
       </array>
       <key>Floor</key>
@@ -101,6 +114,7 @@
         <string>⇍</string>
         <string>⇎</string>
         <string>⇏</string>
+        <string>⤄</string>
       </array>
       <key>MiddlePieceExchange</key>
       <array>
@@ -112,7 +126,7 @@
         </dict>
       </array>
       <key>Floor</key>
-      <integer>50</integer>
+      <integer>80</integer>
     </dict>
   </array>
 </dict>

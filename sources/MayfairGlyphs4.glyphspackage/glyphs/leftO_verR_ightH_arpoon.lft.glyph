@@ -1,6 +1,5 @@
 {
-color = 1;
-export = 0;
+color = 0;
 glyphname = leftOverRightHarpoon.lft;
 layers = (
 {
@@ -43,12 +42,12 @@ metricLeft = "=harpoonrightup.lft";
 shapes = (
 {
 alignment = -1;
-pos = (0,-220);
+pos = (10,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (0,220);
+pos = (10,220);
 ref = harpoonrightup.lft;
 }
 );
@@ -77,12 +76,12 @@ metricLeft = "=harpoonrightup.lft";
 shapes = (
 {
 alignment = -1;
-pos = (0,-220);
+pos = (35,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (0,220);
+pos = (4,220);
 ref = harpoonrightup.lft;
 }
 );
@@ -94,12 +93,12 @@ metricLeft = "=harpoonrightup.lft";
 shapes = (
 {
 alignment = -1;
-pos = (0,-220);
+pos = (19,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (0,220);
+pos = (19,220);
 ref = harpoonrightup.lft;
 }
 );
@@ -111,7 +110,7 @@ metricLeft = "=harpoonrightup.lft";
 shapes = (
 {
 alignment = -1;
-pos = (0,-220);
+pos = (47,-220);
 ref = rightArrow.lft;
 },
 {
@@ -128,12 +127,12 @@ metricLeft = "=harpoonrightup.lft";
 shapes = (
 {
 alignment = -1;
-pos = (0,-220);
+pos = (21,-220);
 ref = rightArrow.lft;
 },
 {
 alignment = -1;
-pos = (0,220);
+pos = (21,220);
 ref = harpoonrightup.lft;
 }
 );

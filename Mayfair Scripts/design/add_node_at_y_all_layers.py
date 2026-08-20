@@ -13,9 +13,10 @@ Before changing anything, the script validates every layer. Each corresponding
 segment must have compatible structure and must cross the requested Y at one
 and only one point strictly inside the segment. Lines and cubic curves are
 supported; cubic curves are divided with de Casteljau's construction so their
-shape is preserved. Wrapped segments across the stored start/end of a closed
-path are rejected. If any validation fails, no layer is changed and the full
-reason is printed in the Macro window.
+shape is preserved. Closed-path segments that cross the stored path boundary
+(including a segment ending at the first node) are handled cyclically. If any
+validation fails, no layer is changed and the full reason is printed in the
+Macro window.
 """
 
 import math
@@ -120,17 +121,52 @@ def cubic_roots_in_unit_interval(coefficients):
     return unique_values(roots)
 
 
+def indices_between(path, start_index, end_index):
+    """Return node indices encountered from start to end, excluding both."""
+    node_count = len(path.nodes)
+    if not node_count:
+        return []
+    result = []
+    current = (start_index + 1) % node_count
+    while current != end_index:
+        if current == start_index:
+            raise ValueError("the two nodes do not define a segment")
+        result.append(current)
+        current = (current + 1) % node_count
+    return result
+
+
+def next_oncurve_index(path, start_index):
+    node_count = len(path.nodes)
+    if bool(path.closed):
+        candidates = [
+            (start_index + offset) % node_count
+            for offset in range(1, node_count)
+        ]
+    else:
+        candidates = range(start_index + 1, node_count)
+    for index in candidates:
+        if is_oncurve(path.nodes[index]):
+            return index
+    return None
+
+
 def segment_data(path, start_index, end_index):
     nodes = list(path.nodes)
-    if start_index >= end_index:
-        raise ValueError("the selected segment wraps across the path's stored boundary")
-    between = nodes[start_index + 1:end_index]
+    if not bool(path.closed) and start_index >= end_index:
+        raise ValueError("an open path cannot wrap from its last node to its first")
+    between_indices = indices_between(path, start_index, end_index)
+    between = [nodes[index] for index in between_indices]
     if not is_oncurve(nodes[start_index]) or not is_oncurve(nodes[end_index]):
         raise ValueError("the segment endpoints are not both on-curve nodes")
     if any(is_oncurve(node) for node in between):
         raise ValueError("the selected nodes are not consecutive on-curve nodes")
     if len(between) == 0:
-        return {"kind": "line", "points": [node_point(nodes[start_index]), node_point(nodes[end_index])]}
+        return {
+            "kind": "line",
+            "points": [node_point(nodes[start_index]), node_point(nodes[end_index])],
+            "control_indices": [],
+        }
     if len(between) == 2 and all(node_type(node) == OFFCURVE for node in between):
         return {
             "kind": "curve",
@@ -140,6 +176,7 @@ def segment_data(path, start_index, end_index):
                 node_point(between[1]),
                 node_point(nodes[end_index]),
             ],
+            "control_indices": between_indices,
         }
     raise ValueError("the segment is neither a line nor a cubic curve")
 
@@ -189,8 +226,9 @@ def split_path(path, start_index, end_index, data, t):
     r1 = interpolate(q1, q2, t)
     split = interpolate(r0, r1, t)
 
-    path.nodes[start_index + 1].position = NSPoint(q0[0], q0[1])
-    path.nodes[start_index + 2].position = NSPoint(r0[0], r0[1])
+    first_control_index, second_control_index = data["control_indices"]
+    path.nodes[first_control_index].position = NSPoint(q0[0], q0[1])
+    path.nodes[second_control_index].position = NSPoint(r0[0], r0[1])
     # Insert in reverse order at the same index to produce S, R1, Q2, P3.
     path.nodes.insert(end_index, new_node(q2, OFFCURVE))
     path.nodes.insert(end_index, new_node(r1, OFFCURVE))
@@ -227,8 +265,14 @@ def selected_segment(font):
     if selected[0][0] != selected[1][0]:
         raise ValueError("the two selected nodes belong to different paths")
     path_index = selected[0][0]
-    first_index, second_index = sorted((selected[0][1], selected[1][1]))
+    first_selected_index, second_selected_index = selected[0][1], selected[1][1]
     reference_path = layer.paths[path_index]
+    if next_oncurve_index(reference_path, first_selected_index) == second_selected_index:
+        first_index, second_index = first_selected_index, second_selected_index
+    elif next_oncurve_index(reference_path, second_selected_index) == first_selected_index:
+        first_index, second_index = second_selected_index, first_selected_index
+    else:
+        raise ValueError("the selected nodes are not consecutive on-curve nodes")
     reference_data = segment_data(reference_path, first_index, second_index)
     return (
         layer.parent,
