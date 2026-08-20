@@ -3416,7 +3416,6 @@ r,
 "mitalic-math",
 "Titalic-math.ss07",
 "Titalic-math",
-parenleft,
 parenright,
 braceleft,
 braceright,
@@ -3425,7 +3424,10 @@ rightFloor,
 leftCeiling,
 rightCeiling,
 bracketleft,
-bracketright
+bracketright,
+lambda,
+parenleft,
+bar
 );
 },
 {
