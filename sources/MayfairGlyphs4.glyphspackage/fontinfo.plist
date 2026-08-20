@@ -2259,7 +2259,6 @@ UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -3416,7 +3415,17 @@ r,
 "lambdaitalic-math",
 "mitalic-math",
 "Titalic-math.ss07",
-"Titalic-math"
+"Titalic-math",
+parenleft,
+parenright,
+braceleft,
+braceright,
+leftFloor,
+rightFloor,
+leftCeiling,
+rightCeiling,
+bracketleft,
+bracketright
 );
 },
 {
@@ -25947,7 +25956,6 @@ asterisk = -59;
 eightsuperior = -59;
 equal.lf = -74;
 glottalstopmod = -112;
-parenleft.tf.ss14 = -77;
 ringhalfleft = -100;
 ringhalfright = -77;
 trademark = -107;
@@ -26030,7 +26038,6 @@ zero = -51;
 };
 colon.tf.ss14 = {
 bracketright.tf.ss14 = -242;
-parenleft.tf.ss14 = -179;
 };
 comma = {
 emdash = -132;
@@ -26364,7 +26371,6 @@ Z = -121;
 i = {
 equal.lf = -63;
 exclam = 0;
-parenleft.tf.ss14 = -52;
 parenright = 0;
 t = 0;
 };
@@ -26393,7 +26399,6 @@ i = 65;
 m = {
 asterisk = -60;
 braceright.tf.ss14 = -105;
-parenleft.tf.ss14 = -77;
 parenright = -68;
 periodcentered = -58;
 periodcentered.tf.ss14 = -153;
@@ -26454,7 +26459,6 @@ exclam = -18;
 glottalstopmod = -115;
 n = 0;
 o = 0;
-parenleft.tf.ss14 = -77;
 parenright = -68;
 ringhalfleft = -105;
 trademark = -110;
@@ -26578,28 +26582,6 @@ section = 71;
 sterling = -45;
 z = -60;
 };
-parenleft.tf.ss14 = {
-Delta = -71;
-Omega = -85;
-Z = -76;
-approxequal = -191;
-approxequal.lf = -197;
-asciicircum.lf = -207;
-asciitilde.lf = -204;
-asterisk = -135;
-dollar = -51;
-eight = -89;
-equal = -266;
-equal.lf = -213;
-euro = -146;
-nine = -100;
-parenleft.tf.ss14 = -170;
-pi = -118;
-plus.lf = -240;
-plusminus.lf = -184;
-question = -71;
-quotedblbase = -89;
-};
 parenright = {
 bracketright = -65;
 equal = -100;
@@ -26609,7 +26591,6 @@ question = -75;
 };
 parenright.tf.ss14 = {
 bracketright.tf.ss14 = -162;
-parenleft.tf.ss14 = -73;
 };
 percent = {
 asterisk = -99;
@@ -26703,7 +26684,6 @@ hyphen.smcp = -153;
 nine = -145;
 ninesuperior = -214;
 onesuperior = -149;
-parenleft.tf.ss14 = -222;
 pi = -149;
 question = -177;
 quotedblleft.smcp = -220;
@@ -39589,7 +39569,6 @@ asterisk = -64;
 eightsuperior = -68;
 equal.lf = -81;
 glottalstopmod = -134;
-parenleft.tf.ss14 = -72;
 ringhalfleft = -118;
 ringhalfright = -93;
 trademark = -138;
@@ -39672,7 +39651,6 @@ zero = -75;
 };
 colon.tf.ss14 = {
 bracketright.tf.ss14 = -289;
-parenleft.tf.ss14 = -206;
 };
 comma = {
 emdash = -111;
@@ -40006,7 +39984,6 @@ Z = -151;
 i = {
 equal.lf = -76;
 exclam = 0;
-parenleft.tf.ss14 = -53;
 parenright = 0;
 t = 0;
 };
@@ -40035,7 +40012,6 @@ i = 60;
 m = {
 asterisk = -62;
 braceright.tf.ss14 = -123;
-parenleft.tf.ss14 = -73;
 parenright = -78;
 periodcentered = -64;
 periodcentered.tf.ss14 = -184;
@@ -40096,7 +40072,6 @@ exclam = -19;
 glottalstopmod = -133;
 n = 0;
 o = 0;
-parenleft.tf.ss14 = -74;
 parenright = -78;
 ringhalfleft = -117;
 trademark = -137;
@@ -40220,28 +40195,6 @@ section = 53;
 sterling = -31;
 z = -76;
 };
-parenleft.tf.ss14 = {
-Delta = -71;
-Omega = -114;
-Z = -98;
-approxequal = -220;
-approxequal.lf = -247;
-asciicircum.lf = -255;
-asciitilde.lf = -258;
-asterisk = -158;
-dollar = -67;
-eight = -124;
-equal = -248;
-equal.lf = -260;
-euro = -195;
-nine = -145;
-parenleft.tf.ss14 = -189;
-pi = -139;
-plus.lf = -275;
-plusminus.lf = -141;
-question = -91;
-quotedblbase = -69;
-};
 parenright = {
 bracketright = -96;
 equal = -111;
@@ -40251,7 +40204,6 @@ question = -89;
 };
 parenright.tf.ss14 = {
 bracketright.tf.ss14 = -191;
-parenleft.tf.ss14 = -59;
 };
 percent = {
 asterisk = -112;
@@ -40345,7 +40297,6 @@ hyphen.smcp = -152;
 nine = -190;
 ninesuperior = -251;
 onesuperior = -178;
-parenleft.tf.ss14 = -241;
 pi = -186;
 question = -220;
 quotedblleft.smcp = -259;
@@ -53231,7 +53182,6 @@ asterisk = -48;
 eightsuperior = -63;
 equal.lf = -99;
 glottalstopmod = -133;
-parenleft.tf.ss14 = -72;
 ringhalfleft = -132;
 ringhalfright = -116;
 trademark = -117;
@@ -53314,7 +53264,6 @@ zero = -23;
 };
 colon.tf.ss14 = {
 bracketright.tf.ss14 = -265;
-parenleft.tf.ss14 = -198;
 };
 comma = {
 emdash = -140;
@@ -53648,7 +53597,6 @@ Z = -96;
 i = {
 equal.lf = -64;
 exclam = 102;
-parenleft.tf.ss14 = -25;
 parenright = 73;
 t = 0;
 };
@@ -53677,7 +53625,6 @@ i = 195;
 m = {
 asterisk = -42;
 braceright.tf.ss14 = -141;
-parenleft.tf.ss14 = -69;
 parenright = -118;
 periodcentered = -32;
 periodcentered.tf.ss14 = -177;
@@ -53738,7 +53685,6 @@ exclam = 0;
 glottalstopmod = -122;
 n = 0;
 o = 0;
-parenleft.tf.ss14 = -70;
 parenright = -118;
 ringhalfleft = -132;
 trademark = -110;
@@ -53862,28 +53808,6 @@ section = 58;
 sterling = -41;
 z = -89;
 };
-parenleft.tf.ss14 = {
-Delta = -59;
-Omega = 0;
-Z = -27;
-approxequal = -186;
-approxequal.lf = -217;
-asciicircum.lf = -246;
-asciitilde.lf = -225;
-asterisk = -189;
-dollar = -9;
-eight = -28;
-equal = -246;
-equal.lf = -307;
-euro = -146;
-nine = -74;
-parenleft.tf.ss14 = -131;
-pi = -119;
-plus.lf = -271;
-plusminus.lf = -219;
-question = -85;
-quotedblbase = -114;
-};
 parenright = {
 bracketright = 0;
 equal = -104;
@@ -53893,7 +53817,6 @@ question = -42;
 };
 parenright.tf.ss14 = {
 bracketright.tf.ss14 = -114;
-parenleft.tf.ss14 = -41;
 };
 percent = {
 asterisk = -161;
@@ -53987,7 +53910,6 @@ hyphen.smcp = -138;
 nine = -176;
 ninesuperior = -251;
 onesuperior = -160;
-parenleft.tf.ss14 = -235;
 pi = -143;
 question = -209;
 quotedblleft.smcp = -259;
@@ -66873,7 +66795,6 @@ asterisk = -71;
 eightsuperior = -92;
 equal.lf = -137;
 glottalstopmod = -140;
-parenleft.tf.ss14 = -72;
 ringhalfleft = -161;
 ringhalfright = -155;
 trademark = -160;
@@ -66956,7 +66877,6 @@ zero = -28;
 };
 colon.tf.ss14 = {
 bracketright.tf.ss14 = -299;
-parenleft.tf.ss14 = -206;
 };
 comma = {
 emdash = -169;
@@ -67290,7 +67210,6 @@ Z = -111;
 i = {
 equal.lf = -111;
 exclam = 0;
-parenleft.tf.ss14 = -59;
 parenright = -46;
 t = 0;
 };
@@ -67319,7 +67238,6 @@ i = 111;
 m = {
 asterisk = -67;
 braceright.tf.ss14 = -167;
-parenleft.tf.ss14 = -71;
 parenright = -143;
 periodcentered = -70;
 periodcentered.tf.ss14 = -194;
@@ -67380,7 +67298,6 @@ exclam = -20;
 glottalstopmod = -132;
 n = 0;
 o = 0;
-parenleft.tf.ss14 = -71;
 parenright = -143;
 ringhalfleft = -161;
 trademark = -156;
@@ -67504,28 +67421,6 @@ section = -35;
 sterling = -104;
 z = -110;
 };
-parenleft.tf.ss14 = {
-Delta = -114;
-Omega = -122;
-Z = -101;
-approxequal = -200;
-approxequal.lf = -216;
-asciicircum.lf = -264;
-asciitilde.lf = -241;
-asterisk = -193;
-dollar = -143;
-eight = -145;
-equal = -294;
-equal.lf = -313;
-euro = -237;
-nine = -160;
-parenleft.tf.ss14 = -236;
-pi = -141;
-plus.lf = -302;
-plusminus.lf = -226;
-question = -157;
-quotedblbase = -106;
-};
 parenright = {
 bracketright = -68;
 equal = -154;
@@ -67535,7 +67430,6 @@ question = -149;
 };
 parenright.tf.ss14 = {
 bracketright.tf.ss14 = -211;
-parenleft.tf.ss14 = -92;
 };
 percent = {
 asterisk = -146;
@@ -67629,7 +67523,6 @@ hyphen.smcp = -151;
 nine = -193;
 ninesuperior = -291;
 onesuperior = -190;
-parenleft.tf.ss14 = -255;
 pi = -146;
 question = -234;
 quotedblleft.smcp = -296;
@@ -80515,7 +80408,6 @@ asterisk = -117;
 eightsuperior = -143;
 equal.lf = -93;
 glottalstopmod = -196;
-parenleft.tf.ss14 = -110;
 ringhalfleft = -151;
 ringhalfright = -151;
 trademark = -157;
@@ -80598,7 +80490,6 @@ zero = -31;
 };
 colon.tf.ss14 = {
 bracketright.tf.ss14 = -266;
-parenleft.tf.ss14 = -196;
 };
 comma = {
 emdash = -163;
@@ -80932,7 +80823,6 @@ Z = -148;
 i = {
 equal.lf = -81;
 exclam = 0;
-parenleft.tf.ss14 = -105;
 parenright = -34;
 t = 0;
 };
@@ -80961,7 +80851,6 @@ i = 0;
 m = {
 asterisk = -116;
 braceright.tf.ss14 = -145;
-parenleft.tf.ss14 = -112;
 parenright = -96;
 periodcentered = -97;
 periodcentered.tf.ss14 = -222;
@@ -81022,7 +80911,6 @@ exclam = -17;
 glottalstopmod = -196;
 n = 0;
 o = 0;
-parenleft.tf.ss14 = -112;
 parenright = -97;
 ringhalfleft = -151;
 trademark = -157;
@@ -81146,28 +81034,6 @@ section = 25;
 sterling = -25;
 z = -87;
 };
-parenleft.tf.ss14 = {
-Delta = -105;
-Omega = -147;
-Z = -80;
-approxequal = -230;
-approxequal.lf = -243;
-asciicircum.lf = -244;
-asciitilde.lf = -270;
-asterisk = -166;
-dollar = -82;
-eight = -124;
-equal = -231;
-equal.lf = -243;
-euro = -151;
-nine = -130;
-parenleft.tf.ss14 = -200;
-pi = -143;
-plus.lf = -260;
-plusminus.lf = -131;
-question = -70;
-quotedblbase = -65;
-};
 parenright = {
 bracketright = -5;
 equal = -49;
@@ -81177,7 +81043,6 @@ question = -59;
 };
 parenright.tf.ss14 = {
 bracketright.tf.ss14 = -195;
-parenleft.tf.ss14 = -107;
 };
 percent = {
 asterisk = -168;
@@ -81271,7 +81136,6 @@ hyphen.smcp = -257;
 nine = -162;
 ninesuperior = -237;
 onesuperior = -195;
-parenleft.tf.ss14 = -246;
 pi = -143;
 question = -160;
 quotedblleft.smcp = -290;
@@ -94157,7 +94021,6 @@ asterisk = -110;
 eightsuperior = -161;
 equal.lf = -69;
 glottalstopmod = -194;
-parenleft.tf.ss14 = -97;
 ringhalfleft = -187;
 ringhalfright = -187;
 trademark = -167;
@@ -94240,7 +94103,6 @@ zero = -41;
 };
 colon.tf.ss14 = {
 bracketright.tf.ss14 = -274;
-parenleft.tf.ss14 = -194;
 };
 comma = {
 emdash = -99;
@@ -94574,7 +94436,6 @@ Z = -158;
 i = {
 equal.lf = -50;
 exclam = 0;
-parenleft.tf.ss14 = -73;
 parenright = -20;
 t = 0;
 };
@@ -94603,7 +94464,6 @@ i = 15;
 m = {
 asterisk = -114;
 braceright.tf.ss14 = -152;
-parenleft.tf.ss14 = -96;
 parenright = -95;
 periodcentered = -88;
 periodcentered.tf.ss14 = -218;
@@ -94664,7 +94524,6 @@ exclam = -20;
 glottalstopmod = -197;
 n = 0;
 o = 0;
-parenleft.tf.ss14 = -96;
 parenright = -95;
 ringhalfleft = -187;
 trademark = -175;
@@ -94788,28 +94647,6 @@ section = 22;
 sterling = -15;
 z = -93;
 };
-parenleft.tf.ss14 = {
-Delta = -102;
-Omega = -140;
-Z = -80;
-approxequal = -212;
-approxequal.lf = -213;
-asciicircum.lf = -237;
-asciitilde.lf = -296;
-asterisk = -160;
-dollar = -115;
-eight = -126;
-equal = -231;
-equal.lf = -228;
-euro = -172;
-nine = -128;
-parenleft.tf.ss14 = -207;
-pi = -161;
-plus.lf = -223;
-plusminus.lf = -105;
-question = -58;
-quotedblbase = -81;
-};
 parenright = {
 bracketright = -93;
 equal = -38;
@@ -94819,7 +94656,6 @@ question = -45;
 };
 parenright.tf.ss14 = {
 bracketright.tf.ss14 = -224;
-parenleft.tf.ss14 = -109;
 };
 percent = {
 asterisk = -156;
@@ -94913,7 +94749,6 @@ hyphen.smcp = -254;
 nine = -179;
 ninesuperior = -296;
 onesuperior = -251;
-parenleft.tf.ss14 = -249;
 pi = -180;
 question = -196;
 quotedblleft.smcp = -307;
@@ -107799,7 +107634,6 @@ asterisk = -87;
 eightsuperior = -117;
 equal.lf = -70;
 glottalstopmod = -171;
-parenleft.tf.ss14 = -104;
 ringhalfleft = -128;
 ringhalfright = -128;
 trademark = -152;
@@ -107882,7 +107716,6 @@ zero = -35;
 };
 colon.tf.ss14 = {
 bracketright.tf.ss14 = -261;
-parenleft.tf.ss14 = -202;
 };
 comma = {
 emdash = -153;
@@ -108224,7 +108057,6 @@ Z = -100;
 i = {
 equal.lf = -67;
 exclam = 0;
-parenleft.tf.ss14 = -79;
 parenright = -44;
 t = 0;
 };
@@ -108253,7 +108085,6 @@ i = 60;
 m = {
 asterisk = -85;
 braceright.tf.ss14 = -121;
-parenleft.tf.ss14 = -107;
 parenright = -95;
 periodcentered = -73;
 periodcentered.tf.ss14 = -194;
@@ -108314,7 +108145,6 @@ exclam = -15;
 glottalstopmod = -165;
 n = 0;
 o = 0;
-parenleft.tf.ss14 = -106;
 parenright = -95;
 ringhalfleft = -128;
 trademark = -147;
@@ -108438,28 +108268,6 @@ section = -26;
 sterling = -66;
 z = -83;
 };
-parenleft.tf.ss14 = {
-Delta = -90;
-Omega = -121;
-Z = -77;
-approxequal = -232;
-approxequal.lf = -223;
-asciicircum.lf = -209;
-asciitilde.lf = -228;
-asterisk = -182;
-dollar = -112;
-eight = -102;
-equal = -229;
-equal.lf = -223;
-euro = -189;
-nine = -124;
-parenleft.tf.ss14 = -212;
-pi = -118;
-plus.lf = -238;
-plusminus.lf = -115;
-question = -120;
-quotedblbase = -84;
-};
 parenright = {
 bracketright = -17;
 equal = -77;
@@ -108469,7 +108277,6 @@ question = -133;
 };
 parenright.tf.ss14 = {
 bracketright.tf.ss14 = -193;
-parenleft.tf.ss14 = -111;
 };
 percent = {
 asterisk = -196;
@@ -108563,7 +108370,6 @@ hyphen.smcp = -186;
 nine = -167;
 ninesuperior = -251;
 onesuperior = -151;
-parenleft.tf.ss14 = -249;
 pi = -153;
 question = -217;
 quotedblleft.smcp = -290;
@@ -121456,7 +121262,6 @@ asterisk = -92;
 eightsuperior = -146;
 equal.lf = -72;
 glottalstopmod = -195;
-parenleft.tf.ss14 = -110;
 ringhalfleft = -162;
 ringhalfright = -162;
 trademark = -184;
@@ -121539,7 +121344,6 @@ zero = -35;
 };
 colon.tf.ss14 = {
 bracketright.tf.ss14 = -324;
-parenleft.tf.ss14 = -238;
 };
 comma = {
 emdash = -112;
@@ -121881,7 +121685,6 @@ Z = -130;
 i = {
 equal.lf = -70;
 exclam = 0;
-parenleft.tf.ss14 = -109;
 parenright = -41;
 t = 0;
 };
@@ -121910,7 +121713,6 @@ i = 108;
 m = {
 asterisk = -93;
 braceright.tf.ss14 = -178;
-parenleft.tf.ss14 = -116;
 parenright = -143;
 periodcentered = -80;
 periodcentered.tf.ss14 = -230;
@@ -121971,7 +121773,6 @@ exclam = -20;
 glottalstopmod = -195;
 n = 0;
 o = 0;
-parenleft.tf.ss14 = -116;
 parenright = -143;
 ringhalfleft = -162;
 trademark = -184;
@@ -122095,28 +121896,6 @@ section = 0;
 sterling = -38;
 z = -54;
 };
-parenleft.tf.ss14 = {
-Delta = -141;
-Omega = -163;
-Z = -108;
-approxequal = -270;
-approxequal.lf = -272;
-asciicircum.lf = -273;
-asciitilde.lf = -309;
-asterisk = -206;
-dollar = -159;
-eight = -168;
-equal = -273;
-equal.lf = -272;
-euro = -247;
-nine = -173;
-parenleft.tf.ss14 = -255;
-pi = -186;
-plus.lf = -275;
-plusminus.lf = -133;
-question = -139;
-quotedblbase = -121;
-};
 parenright = {
 bracketright = -41;
 equal = -77;
@@ -122126,7 +121905,6 @@ question = -144;
 };
 parenright.tf.ss14 = {
 bracketright.tf.ss14 = -262;
-parenleft.tf.ss14 = -141;
 };
 percent = {
 asterisk = -201;
@@ -122220,7 +121998,6 @@ hyphen.smcp = -184;
 nine = -215;
 ninesuperior = -339;
 onesuperior = -223;
-parenleft.tf.ss14 = -291;
 pi = -198;
 question = -261;
 quotedblleft.smcp = -340;
