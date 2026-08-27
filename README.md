@@ -489,8 +489,6 @@ Go back and deal with the relative widths of the different arrows
 === Center the bar, bracket, brace etc (these might be OK)
 === relations recipes (in fact need to revisit the entire recipe system)
 === Other accents
-=== ssty for bold-math and bolditalic-math (need script additions).  Also the script is not creating the layers so a few of the the italic-math need fixing up.
-=== rethink ssty1 and ssty2 values for instances
 === may need to think more about sidebearings of _smart.circle as I just did this roughly
 === Product glyph serifs at high
 === sym glyph so can do many more relations
