@@ -1,0 +1,87 @@
+\setuppapersize[A4,landscape]
+\setuplayout
+  [backspace=12mm,
+   topspace=10mm,
+   width=middle,
+   height=middle,
+   header=0mm,
+   footer=8mm]
+
+\definefontfamily[document][sans][Helvetica]
+\definefontfamily[arrows][sans][STIX Two Math]
+\setupbodyfont[document,10pt]
+\setupfootertexts[ARLN floor thresholds][\pagenumber]
+
+\definecolor[activeblue][h=dcebf3]
+\definecolor[rowgray][h=f4f4f4]
+
+\setupTABLE
+  [frame=on,
+   rulethickness=.4pt,
+   offset=2.5mm,
+   align={middle,lohi}]
+\setupTABLE[row][first][style=bold]
+\setupTABLE[column][1][width=33mm]
+\setupTABLE[column][2][width=33mm]
+\setupTABLE[column][3][width=33mm]
+\setupTABLE[column][4][width=33mm]
+\setupTABLE[column][5][width=132mm,align={flushleft,lohi}]
+
+\starttext
+
+\startalignment[middle]
+  {\tfd Arrow Length Axis in Mayfair}
+\stopalignment
+\blank[small]
+
+Mayfair attempts to keep horizontal arrows all the same length where reasonably possible, with the
+exception of "Long Arrows" that are, well, longer.
+
+Mayfair has an Arrow Length axis that controls the default length of arrows.  The following table indicates at the ranges of this axis for which
+horizontal arrows will have the same width.  An X in the table indicates that at this range those arrows will have the same width as all other arrows that are also in a row with an X.
+
+It is remarked that Mayfair also has a width axis that slightly changes the lengths of the arrows, but that is not relevant for this table.
+
+All of this is probably much more than one might want to know, or ever need to think about.
+
+\blank[medium]
+
+\bTABLE
+  \bTR
+    \bTH Arrow Length $\geq 180$\eTH
+    \bTH Arrow Length $\geq 100$\eTH
+    \bTH Arrow Length $\geq 50$\eTH
+    \bTH Arrow Length $\geq 0$\eTH
+    \bTH Arrows\eTH
+  \eTR
+  \bTR
+    \bTD X\eTD
+    \bTD -\eTD
+    \bTD -\eTD
+    \bTD -\eTD
+    \bTD{\switchtobodyfont[arrows,13pt]⤘ ⬽}\eTD
+  \eTR
+  \bTR[background=color,backgroundcolor=rowgray]
+    \bTD X\eTD
+    \bTD X\eTD
+    \bTD -\eTD
+    \bTD -\eTD
+    \bTD{\switchtobodyfont[arrows,13pt]⤕ ⬺ ⤁ ⇺ ⇻ ⤀ ⬴ ⇹ ↮ ↚}\eTD
+  \eTR
+  \bTR
+    \bTD X\eTD
+    \bTD X\eTD
+    \bTD X\eTD
+    \bTD -\eTD
+    \bTD{\switchtobodyfont[arrows,13pt]⬹ ⤔ ⤀ ⬴ ⇷ ⇸ ⤂ ⤃ ⇍ ⇎ ⇏}\eTD
+  \eTR
+  \bTR[background=color,backgroundcolor=rowgray]
+    \bTD X\eTD
+    \bTD X\eTD
+    \bTD X\eTD
+    \bTD X\eTD
+    \bTD{\switchtobodyfont[arrows,12pt]← → ↔ ↢ ↣ ⤙ ⤚ ⤛ ⤜ ↞ ↠ ⤖ ⤗ ⬻ ⬵ ↼ ↽ ⇀ ⇁ ⥊ ⥋ ⥎ ⥐ ⥒ ⥓ ⥖ ⥗ ⇤ ⇥ ↤ ↦ ⤅ ⤆ ⤇ ⥚ ⥛ ⥞ ⥟ ↹ ⇄ ⇆ ⇇ ⇉ ⇋ ⇌ ⥢ ⥤ ⥦ ⥧ ⥨ ⥩ ⥪ ⥫ ⥬ ⥭ ⇒ ⇔ ↛}\eTD
+  \eTR
+\eTABLE
+
+\stoptext
