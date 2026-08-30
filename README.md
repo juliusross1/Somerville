@@ -3,13 +3,13 @@
 ## About
 Somerville is an experimental variable Math font based on [Playfair](xxx.forthehearts.net).
 
-Note that Somerville is not meant to be usable as a math font for at least the following reasons
+<span style="color: red;">Note that Somerville is not meant to be usable as a math font for actual documents,  for at least the following reasons</span>
 - Variable math fonts are not supported, but [hopefully may be one day](https://github.com/harfbuzz/boring-expansion-spec/issues/136)
 - The font is very incomplete; in particular there are very few greek letters
 
-One option is to use the static instances (but at the cost of losing some of the variable features).   The variable font has an artifical static MATH table which fools luaLaTeX, Firefox and Typst so that math is rendered (although there are limitations).
+One option to experiment with Somerville as a math font is to use the static instances (but at the cost of losing some of the variable features).   The variable font MayfairVF-withMATHtable.ttf has an artifical static MATH table which fools luaLaTeX, Firefox and Typst enough so that math is rendered (although there are limitations).   ConTeXt does not do well with SomervilleVF.ttf, even as a text font.
 
-The goal here was to explore and along the way in addition to this experimental font we have
+The goal here was to explore and in addition to this experimental font we have
 - Notes on how this font was made [Creation.md]
 - Some AI-created Glyphs scripts that were used to make this font, and could be used in the future
 
@@ -24,5 +24,4 @@ There are some features in Somerville that are not present in any existing math 
 
 ## About the Name
 [Mary Somerville](https://en.wikipedia.org/wiki/Mary_Somerville) was a Scottish mathematician.
-
 
