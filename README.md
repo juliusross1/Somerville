@@ -10,7 +10,7 @@ Somerville is an experimental variable Math font based on [Playfair](xxx.fortheh
 One option to experiment with Somerville as a math font is to use the static instances (but at the cost of losing some of the variable features).   The variable font MayfairVF-withMATHtable.ttf has an artifical static MATH table which fools luaLaTeX, Firefox and Typst enough so that math is rendered (although there are limitations).   ConTeXt does not do well with SomervilleVF.ttf, even as a text font.
 
 The goal here was to explore and in addition to this experimental font we have
-- Notes on how this font was made [Creation.md]
+- Notes on how this font was made (Creation.md)
 - Some AI-created Glyphs scripts that were used to make this font, and could be used in the future
 
 The idea behind the above glyph scrips is that many mathematical glyphs can be created automatically (or semiautomatically) from a small number of core glyphs, which makes organizing, maintaining easier and could be used to assit creation of (variable) math compantion fonts in the future.
