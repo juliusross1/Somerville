@@ -471,14 +471,7 @@ Recipes needed
 
 *Mayfair Todo (16)*
 ===== Arrows
-Go back and deal with the relative widths of the different arrows
--minus
--equals
--congruent
--leftoverright (how to do over/under arrows in general?)
--injection arrow
--Long versions
-=== Import mathml tests/use their css
+Go back and deal with the minimum widths of the different arrows
 === Create times at sizes;  fix this mess
 === Return to bigodot, bigoplus, bigotimes (+testing pages)
 === Variable Integral
@@ -499,10 +492,8 @@ Go back and deal with the relative widths of the different arrows
 Email people about here maybe?
 
 Longer run
-===? Wider arrows in semiexpanded
 ===? Testing tool to also support looking at instances
 ===? Latex system in my testing tool
-=== Play with VARC
 === over/underbraces
 === extended plus,minus, equv etc
 === italic correction on large parenthesis
