@@ -33,6 +33,10 @@ tag = ARLN;
 {
 name = "Arrow Head";
 tag = ARHD;
+},
+{
+name = "Integral Slant";
+tag = INSL;
 }
 );
 customParameters = (
@@ -169,6 +173,10 @@ Location = 100;
 {
 Axis = "Arrow Head";
 Location = 100;
+},
+{
+Axis = "Integral Slant";
+Location = 0;
 }
 );
 },
@@ -206,6 +214,10 @@ Location = 100;
 {
 Axis = "Arrow Head";
 Location = 100;
+},
+{
+Axis = "Integral Slant";
+Location = 0;
 }
 );
 },
@@ -243,6 +255,10 @@ Location = 100;
 {
 Axis = "Arrow Head";
 Location = 100;
+},
+{
+Axis = "Integral Slant";
+Location = 0;
 }
 );
 },
@@ -280,6 +296,10 @@ Location = 100;
 {
 Axis = "Arrow Head";
 Location = 100;
+},
+{
+Axis = "Integral Slant";
+Location = 0;
 }
 );
 },
@@ -317,13 +337,12 @@ Location = 0;
 {
 Axis = "Arrow Head";
 Location = 100;
-}
-);
 },
 {
-disabled = 1;
-name = "Disable Subroutines";
-value = 1;
+Axis = "Integral Slant";
+Location = 0;
+}
+);
 },
 {
 name = "Virtual Master";
@@ -359,8 +378,58 @@ Location = 100;
 {
 Axis = "Arrow Head";
 Location = 200;
+},
+{
+Axis = "Integral Slant";
+Location = 0;
 }
 );
+},
+{
+name = "Virtual Master";
+value = (
+{
+Axis = Width;
+Location = 95;
+},
+{
+Axis = Weight;
+Location = 360;
+},
+{
+Axis = "Math Weight";
+Location = 360;
+},
+{
+Axis = "Optical size";
+Location = 5;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+},
+{
+Axis = "Arrow Length";
+Location = 100;
+},
+{
+Axis = "Arrow Head";
+Location = 100;
+},
+{
+Axis = "Integral Slant";
+Location = 100;
+}
+);
+},
+{
+disabled = 1;
+name = "Disable Subroutines";
+value = 1;
 },
 {
 disabled = 1;
@@ -810,7 +879,8 @@ axesValues = (
 5,
 5,
 200,
-100
+100,
+0
 );
 customParameters = (
 {
@@ -989,6 +1059,15 @@ userData = {
 GSOffsetHorizontal = 12;
 GSOffsetProportional = 1;
 GSOffsetVertical = 10;
+GSSlanterCursivy = 0;
+GSSlanterCursivyContrastFactor = 0.5;
+GSSlanterCursivyDoContrast = 1;
+GSSlanterCursivyDoShape = 1;
+GSSlanterCursivyDoThickness = 1;
+GSSlanterCursivyShapeFactor = 0.5;
+GSSlanterCursivyThicknessFactor = 1;
+GSSlanterGeometric = 25;
+GSSlanterRotate = 0;
 KernOnIndependentPairs = (
 "o i",
 "e quotedblleft",
@@ -1157,7 +1236,8 @@ axesValues = (
 5,
 5,
 200,
-100
+100,
+0
 );
 customParameters = (
 {
@@ -1489,7 +1569,8 @@ axesValues = (
 5,
 5,
 200,
-100
+100,
+0
 );
 customParameters = (
 {
@@ -1837,7 +1918,8 @@ axesValues = (
 5,
 5,
 200,
-100
+100,
+0
 );
 customParameters = (
 {
@@ -2195,7 +2277,8 @@ axesValues = (
 5,
 5,
 200,
-100
+100,
+0
 );
 customParameters = (
 {
@@ -2559,7 +2642,8 @@ axesValues = (
 5,
 5,
 200,
-100
+100,
+0
 );
 customParameters = (
 {
@@ -2751,6 +2835,15 @@ stemValues = (
 100
 );
 userData = {
+GSSlanterCursivy = 0;
+GSSlanterCursivyContrastFactor = 0.5;
+GSSlanterCursivyDoContrast = 1;
+GSSlanterCursivyDoShape = 1;
+GSSlanterCursivyDoThickness = 1;
+GSSlanterCursivyShapeFactor = 0.5;
+GSSlanterCursivyThicknessFactor = 1;
+GSSlanterGeometric = 25;
+GSSlanterRotate = 0;
 KernOnIndependentPairs = (
 "o u",
 "n u",
@@ -2914,7 +3007,8 @@ axesValues = (
 5,
 5,
 200,
-100
+100,
+0
 );
 customParameters = (
 {
@@ -3283,7 +3377,8 @@ axesValues = (
 5,
 5,
 200,
-100
+100,
+0
 );
 customParameters = (
 {
@@ -6609,7 +6704,8 @@ axesValues = (
 5,
 5,
 100,
-100
+100,
+0
 );
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.1399;
