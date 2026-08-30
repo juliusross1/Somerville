@@ -1,7 +1,7 @@
 # Somerville
 
 ## About
-Somerville is an experimental variable Math font based on [xxx.forthehearts.net].
+Somerville is an experimental variable Math font based on [Playfair](xxx.forthehearts.net).
 
 Note that Somerville is not meant to be usable as a math font for at least the following reasons
 - Variable math fonts are not supported, but [hopefully may be one day](https://github.com/harfbuzz/boring-expansion-spec/issues/136)
