@@ -19,10 +19,12 @@ name = "Optical size";
 tag = opsz;
 },
 {
+hidden = 1;
 name = ssty1;
 tag = STYA;
 },
 {
+hidden = 1;
 name = ssty2;
 tag = STYB;
 },
@@ -58,10 +60,12 @@ name = "Use Extension Kerning";
 value = 1;
 },
 {
+disabled = 1;
 name = "Enforce Compatibility Check";
 value = 1;
 },
 {
+disabled = 1;
 name = "Axis Mappings";
 value = {
 ARHD = {
@@ -436,111 +440,25 @@ name = "Disable Subroutines";
 value = 1;
 },
 {
-disabled = 1;
 name = "Axis Mappings 2";
 value = (
 {
 input = {
-opsz = 1200;
+STYA = 5;
+STYB = 5;
+opsz = 5;
 };
 output = {
-STYA = 1150;
-STYB = 1100;
-opsz = 1200;
+MGHT = 900;
+STYA = 5;
+STYB = 5;
+opsz = 5;
 };
 },
 {
 input = {
-opsz = 96;
-};
-output = {
-STYA = 966;
-STYB = 893;
-opsz = 1020;
-};
-},
-{
-input = {
-opsz = 72;
-};
-output = {
-STYA = 916;
-STYB = 830;
-opsz = 980;
-};
-},
-{
-input = {
-opsz = 48;
-};
-output = {
-STYA = 818;
-STYB = 711;
-opsz = 900;
-};
-},
-{
-input = {
-opsz = 32;
-};
-output = {
-STYA = 700;
-STYB = 575;
-opsz = 800;
-};
-},
-{
-input = {
-opsz = 21;
-};
-output = {
-STYA = 585;
-STYB = 451;
-opsz = 700;
-};
-},
-{
-input = {
-opsz = 16;
-};
-output = {
-STYA = 519;
-STYB = 384;
-opsz = 640;
-};
-},
-{
-input = {
-opsz = 12;
-};
-output = {
-STYA = 375;
-STYB = 246;
-opsz = 550;
-};
-},
-{
-input = {
-opsz = 8;
-};
-output = {
-STYA = 278;
-STYB = 165;
-opsz = 400;
-};
-},
-{
-input = {
-opsz = 7;
-};
-output = {
-STYA = 221;
-STYB = 114;
-opsz = 325;
-};
-},
-{
-input = {
+STYA = 5;
+STYB = 5;
 opsz = 6;
 };
 output = {
@@ -551,48 +469,146 @@ opsz = 200;
 },
 {
 input = {
-opsz = 5;
-};
-output = {
 STYA = 5;
 STYB = 5;
-opsz = 5;
-};
-}
-);
-},
-{
-disabled = 1;
-name = "Axis Mappings 2";
-value = (
-{
-input = {
-STYA = 5;
-opsz = 1200;
+opsz = 7;
 };
 output = {
-STYA = 1200;
-opsz = 1200;
+STYA = 221;
+STYB = 114;
+opsz = 325;
 };
 },
 {
 input = {
 STYA = 5;
+STYB = 5;
+opsz = 8;
+};
+output = {
+STYA = 278;
+STYB = 165;
+opsz = 400;
+};
+},
+{
+input = {
+STYA = 5;
+STYB = 5;
 opsz = 12;
 };
 output = {
-STYA = 350;
+STYA = 375;
+STYB = 246;
 opsz = 550;
 };
 },
 {
 input = {
 STYA = 5;
-opsz = 5;
+STYB = 5;
+opsz = 16;
 };
 output = {
+STYA = 519;
+STYB = 384;
+opsz = 640;
+};
+},
+{
+input = {
 STYA = 5;
-opsz = 5;
+STYB = 5;
+opsz = 21;
+};
+output = {
+STYA = 585;
+STYB = 451;
+opsz = 700;
+};
+},
+{
+input = {
+STYA = 5;
+STYB = 5;
+opsz = 32;
+};
+output = {
+STYA = 700;
+STYB = 575;
+opsz = 800;
+};
+},
+{
+input = {
+STYA = 5;
+STYB = 5;
+opsz = 48;
+};
+output = {
+STYA = 818;
+STYB = 711;
+opsz = 900;
+};
+},
+{
+input = {
+STYA = 5;
+STYB = 5;
+opsz = 72;
+};
+output = {
+STYA = 916;
+STYB = 830;
+opsz = 980;
+};
+},
+{
+input = {
+STYA = 5;
+STYB = 5;
+opsz = 96;
+};
+output = {
+STYA = 966;
+STYB = 893;
+opsz = 1020;
+};
+},
+{
+input = {
+STYA = 5;
+STYB = 5;
+opsz = 1200;
+};
+output = {
+STYA = 1150;
+STYB = 1100;
+opsz = 1200;
+};
+},
+{
+input = {
+wght = 360;
+};
+output = {
+MGHT = 660;
+};
+},
+{
+input = {
+wght = 600;
+};
+output = {
+MGHT = 900;
+};
+},
+{
+input = {
+wght = 900;
+};
+output = {
+MGHT = 900;
 };
 }
 );
@@ -774,7 +790,256 @@ tag = zero;
 },
 {
 automatic = 1;
-code = "";
+code = "sub A from [A.ssty1 A.ssty2];
+sub B from [B.ssty1 B.ssty2];
+sub C from [C.ssty1 C.ssty2];
+sub D from [D.ssty1 D.ssty2];
+sub E from [E.ssty1 E.ssty2];
+sub F from [F.ssty1 F.ssty2];
+sub G from [G.ssty1 G.ssty2];
+sub H from [H.ssty1 H.ssty2];
+sub I from [I.ssty1 I.ssty2];
+sub J from [J.ssty1 J.ssty2];
+sub K from [K.ssty1 K.ssty2];
+sub L from [L.ssty1 L.ssty2];
+sub N from [N.ssty1 N.ssty2];
+sub O from [O.ssty1 O.ssty2];
+sub P from [P.ssty1 P.ssty2];
+sub Q from [Q.ssty1 Q.ssty2];
+sub R from [R.ssty1 R.ssty2];
+sub S from [S.ssty1 S.ssty2];
+sub T from [T.ssty1 T.ssty2];
+sub U from [U.ssty1 U.ssty2];
+sub V from [V.ssty1 V.ssty2];
+sub W from [W.ssty1 W.ssty2];
+sub X from [X.ssty1 X.ssty2];
+sub Y from [Y.ssty1 Y.ssty2];
+sub Z from [Z.ssty1 Z.ssty2];
+sub a from [a.ssty1 a.ssty2];
+sub b from [b.ssty1 b.ssty2];
+sub c from [c.ssty1 c.ssty2];
+sub d from [d.ssty1 d.ssty2];
+sub e from [e.ssty1 e.ssty2];
+sub f from [f.ssty1 f.ssty2];
+sub g from [g.ssty1 g.ssty2];
+sub h from [h.ssty1 h.ssty2];
+sub i from [i.ssty1 i.ssty2];
+sub idotless from [idotless.ssty1 idotless.ssty2];
+sub j from [j.ssty1 j.ssty2];
+sub jdotless from [jdotless.ssty1 jdotless.ssty2];
+sub k from [k.ssty1 k.ssty2];
+sub l from [l.ssty1 l.ssty2];
+sub m from [m.ssty1 m.ssty2];
+sub n from [n.ssty1 n.ssty2];
+sub o from [o.ssty1 o.ssty2];
+sub p from [p.ssty1 p.ssty2];
+sub q from [q.ssty1 q.ssty2];
+sub r from [r.ssty1 r.ssty2];
+sub s from [s.ssty1 s.ssty2];
+sub t from [t.ssty1 t.ssty2];
+sub u from [u.ssty1 u.ssty2];
+sub v from [v.ssty1 v.ssty2];
+sub w from [w.ssty1 w.ssty2];
+sub x from [x.ssty1 x.ssty2];
+sub y from [y.ssty1 y.ssty2];
+sub z from [z.ssty1 z.ssty2];
+sub Delta from [Delta.ssty1 Delta.ssty2];
+sub Omega from [Omega.ssty1 Omega.ssty2];
+sub lambda from [lambda.ssty1 lambda.ssty2];
+sub mu from [mu.ssty1 mu.ssty2];
+sub pi from [pi.ssty1 pi.ssty2];
+sub tau from [tau.ssty1 tau.ssty2];
+sub Abold-math from [Abold-math.ssty1 Abold-math.ssty2];
+sub Bbold-math from [Bbold-math.ssty1 Bbold-math.ssty2];
+sub Cbold-math from [Cbold-math.ssty1 Cbold-math.ssty2];
+sub Dbold-math from [Dbold-math.ssty1 Dbold-math.ssty2];
+sub Ebold-math from [Ebold-math.ssty1 Ebold-math.ssty2];
+sub Fbold-math from [Fbold-math.ssty1 Fbold-math.ssty2];
+sub Gbold-math from [Gbold-math.ssty1 Gbold-math.ssty2];
+sub Hbold-math from [Hbold-math.ssty1 Hbold-math.ssty2];
+sub Ibold-math from [Ibold-math.ssty1 Ibold-math.ssty2];
+sub Jbold-math from [Jbold-math.ssty1 Jbold-math.ssty2];
+sub Kbold-math from [Kbold-math.ssty1 Kbold-math.ssty2];
+sub Lbold-math from [Lbold-math.ssty1 Lbold-math.ssty2];
+sub Mbold-math from [Mbold-math.ssty1 Mbold-math.ssty2];
+sub Nbold-math from [Nbold-math.ssty1 Nbold-math.ssty2];
+sub Obold-math from [Obold-math.ssty1 Obold-math.ssty2];
+sub Pbold-math from [Pbold-math.ssty1 Pbold-math.ssty2];
+sub Qbold-math from [Qbold-math.ssty1 Qbold-math.ssty2];
+sub Rbold-math from [Rbold-math.ssty1 Rbold-math.ssty2];
+sub Sbold-math from [Sbold-math.ssty1 Sbold-math.ssty2];
+sub Tbold-math from [Tbold-math.ssty1 Tbold-math.ssty2];
+sub Ubold-math from [Ubold-math.ssty1 Ubold-math.ssty2];
+sub Vbold-math from [Vbold-math.ssty1 Vbold-math.ssty2];
+sub Wbold-math from [Wbold-math.ssty1 Wbold-math.ssty2];
+sub Xbold-math from [Xbold-math.ssty1 Xbold-math.ssty2];
+sub Ybold-math from [Ybold-math.ssty1 Ybold-math.ssty2];
+sub Zbold-math from [Zbold-math.ssty1 Zbold-math.ssty2];
+sub Aitalic-math from [Aitalic-math.ssty1 Aitalic-math.ssty2];
+sub Bitalic-math from [Bitalic-math.ssty1 Bitalic-math.ssty2];
+sub Citalic-math from [Citalic-math.ssty1 Citalic-math.ssty2];
+sub Ditalic-math from [Ditalic-math.ssty1 Ditalic-math.ssty2];
+sub Eitalic-math from [Eitalic-math.ssty1 Eitalic-math.ssty2];
+sub Fitalic-math from [Fitalic-math.ssty1 Fitalic-math.ssty2];
+sub Gitalic-math from [Gitalic-math.ssty1 Gitalic-math.ssty2];
+sub Hitalic-math from [Hitalic-math.ssty1 Hitalic-math.ssty2];
+sub Iitalic-math from [Iitalic-math.ssty1 Iitalic-math.ssty2];
+sub Jitalic-math from [Jitalic-math.ssty1 Jitalic-math.ssty2];
+sub Kitalic-math from [Kitalic-math.ssty1 Kitalic-math.ssty2];
+sub Litalic-math from [Litalic-math.ssty1 Litalic-math.ssty2];
+sub Mitalic-math from [Mitalic-math.ssty1 Mitalic-math.ssty2];
+sub Nitalic-math from [Nitalic-math.ssty1 Nitalic-math.ssty2];
+sub Oitalic-math from [Oitalic-math.ssty1 Oitalic-math.ssty2];
+sub Pitalic-math from [Pitalic-math.ssty1 Pitalic-math.ssty2];
+sub Qitalic-math from [Qitalic-math.ssty1 Qitalic-math.ssty2];
+sub Ritalic-math from [Ritalic-math.ssty1 Ritalic-math.ssty2];
+sub Sitalic-math from [Sitalic-math.ssty1 Sitalic-math.ssty2];
+sub Titalic-math from [Titalic-math.ssty1 Titalic-math.ssty2];
+sub Uitalic-math from [Uitalic-math.ssty1 Uitalic-math.ssty2];
+sub Vitalic-math from [Vitalic-math.ssty1 Vitalic-math.ssty2];
+sub Witalic-math from [Witalic-math.ssty1 Witalic-math.ssty2];
+sub Xitalic-math from [Xitalic-math.ssty1 Xitalic-math.ssty2];
+sub Yitalic-math from [Yitalic-math.ssty1 Yitalic-math.ssty2];
+sub Zitalic-math from [Zitalic-math.ssty1 Zitalic-math.ssty2];
+sub Abolditalic-math from [Abolditalic-math.ssty1 Abolditalic-math.ssty2];
+sub Bbolditalic-math from [Bbolditalic-math.ssty1 Bbolditalic-math.ssty2];
+sub Cbolditalic-math from [Cbolditalic-math.ssty1 Cbolditalic-math.ssty2];
+sub Dbolditalic-math from [Dbolditalic-math.ssty1 Dbolditalic-math.ssty2];
+sub Ebolditalic-math from [Ebolditalic-math.ssty1 Ebolditalic-math.ssty2];
+sub Fbolditalic-math from [Fbolditalic-math.ssty1 Fbolditalic-math.ssty2];
+sub Gbolditalic-math from [Gbolditalic-math.ssty1 Gbolditalic-math.ssty2];
+sub Hbolditalic-math from [Hbolditalic-math.ssty1 Hbolditalic-math.ssty2];
+sub Ibolditalic-math from [Ibolditalic-math.ssty1 Ibolditalic-math.ssty2];
+sub Jbolditalic-math from [Jbolditalic-math.ssty1 Jbolditalic-math.ssty2];
+sub Kbolditalic-math from [Kbolditalic-math.ssty1 Kbolditalic-math.ssty2];
+sub Lbolditalic-math from [Lbolditalic-math.ssty1 Lbolditalic-math.ssty2];
+sub Mbolditalic-math from [Mbolditalic-math.ssty1 Mbolditalic-math.ssty2];
+sub Nbolditalic-math from [Nbolditalic-math.ssty1 Nbolditalic-math.ssty2];
+sub Obolditalic-math from [Obolditalic-math.ssty1 Obolditalic-math.ssty2];
+sub Pbolditalic-math from [Pbolditalic-math.ssty1 Pbolditalic-math.ssty2];
+sub Qbolditalic-math from [Qbolditalic-math.ssty1 Qbolditalic-math.ssty2];
+sub Rbolditalic-math from [Rbolditalic-math.ssty1 Rbolditalic-math.ssty2];
+sub Sbolditalic-math from [Sbolditalic-math.ssty1 Sbolditalic-math.ssty2];
+sub Tbolditalic-math from [Tbolditalic-math.ssty1 Tbolditalic-math.ssty2];
+sub Ubolditalic-math from [Ubolditalic-math.ssty1 Ubolditalic-math.ssty2];
+sub Vbolditalic-math from [Vbolditalic-math.ssty1 Vbolditalic-math.ssty2];
+sub Wbolditalic-math from [Wbolditalic-math.ssty1 Wbolditalic-math.ssty2];
+sub Xbolditalic-math from [Xbolditalic-math.ssty1 Xbolditalic-math.ssty2];
+sub Ybolditalic-math from [Ybolditalic-math.ssty1 Ybolditalic-math.ssty2];
+sub Zbolditalic-math from [Zbolditalic-math.ssty1 Zbolditalic-math.ssty2];
+sub Deltabold-math from [Deltabold-math.ssty1 Deltabold-math.ssty2];
+sub Omegabold-math from [Omegabold-math.ssty1 Omegabold-math.ssty2];
+sub Deltaitalic-math from [Deltaitalic-math.ssty1 Deltaitalic-math.ssty2];
+sub Omegaitalic-math from [Omegaitalic-math.ssty1 Omegaitalic-math.ssty2];
+sub Deltabolditalic-math from [Deltabolditalic-math.ssty1 Deltabolditalic-math.ssty2];
+sub Omegabolditalic-math from [Omegabolditalic-math.ssty1 Omegabolditalic-math.ssty2];
+sub Eitalic-math.ss02 from [Eitalic-math.ss02.ssty1 Eitalic-math.ss02.ssty2];
+sub Ebolditalic-math.ss02 from [Ebolditalic-math.ss02.ssty1 Ebolditalic-math.ss02.ssty2];
+sub Titalic-math.ss07 from [Titalic-math.ss07.ssty1 Titalic-math.ss07.ssty2];
+sub Tbolditalic-math.ss07 from [Tbolditalic-math.ss07.ssty1 Tbolditalic-math.ss07.ssty2];
+sub Zitalic-math.ss12 from [Zitalic-math.ss12.ssty1 Zitalic-math.ss12.ssty2];
+sub Zbolditalic-math.ss12 from [Zbolditalic-math.ss12.ssty1 Zbolditalic-math.ss12.ssty2];
+sub Xitalic-math.ss13 from [Xitalic-math.ss13.ssty1 Xitalic-math.ss13.ssty2];
+sub Xbolditalic-math.ss13 from [Xbolditalic-math.ss13.ssty1 Xbolditalic-math.ss13.ssty2];
+sub abold-math from [abold-math.ssty1 abold-math.ssty2];
+sub bbold-math from [bbold-math.ssty1 bbold-math.ssty2];
+sub cbold-math from [cbold-math.ssty1 cbold-math.ssty2];
+sub dbold-math from [dbold-math.ssty1 dbold-math.ssty2];
+sub ebold-math from [ebold-math.ssty1 ebold-math.ssty2];
+sub fbold-math from [fbold-math.ssty1 fbold-math.ssty2];
+sub gbold-math from [gbold-math.ssty1 gbold-math.ssty2];
+sub hbold-math from [hbold-math.ssty1 hbold-math.ssty2];
+sub ibold-math from [ibold-math.ssty1 ibold-math.ssty2];
+sub jbold-math from [jbold-math.ssty1 jbold-math.ssty2];
+sub kbold-math from [kbold-math.ssty1 kbold-math.ssty2];
+sub lbold-math from [lbold-math.ssty1 lbold-math.ssty2];
+sub mbold-math from [mbold-math.ssty1 mbold-math.ssty2];
+sub nbold-math from [nbold-math.ssty1 nbold-math.ssty2];
+sub obold-math from [obold-math.ssty1 obold-math.ssty2];
+sub pbold-math from [pbold-math.ssty1 pbold-math.ssty2];
+sub qbold-math from [qbold-math.ssty1 qbold-math.ssty2];
+sub rbold-math from [rbold-math.ssty1 rbold-math.ssty2];
+sub sbold-math from [sbold-math.ssty1 sbold-math.ssty2];
+sub tbold-math from [tbold-math.ssty1 tbold-math.ssty2];
+sub ubold-math from [ubold-math.ssty1 ubold-math.ssty2];
+sub vbold-math from [vbold-math.ssty1 vbold-math.ssty2];
+sub wbold-math from [wbold-math.ssty1 wbold-math.ssty2];
+sub xbold-math from [xbold-math.ssty1 xbold-math.ssty2];
+sub ybold-math from [ybold-math.ssty1 ybold-math.ssty2];
+sub zbold-math from [zbold-math.ssty1 zbold-math.ssty2];
+sub aitalic-math from [aitalic-math.ssty1 aitalic-math.ssty2];
+sub bitalic-math from [bitalic-math.ssty1 bitalic-math.ssty2];
+sub citalic-math from [citalic-math.ssty1 citalic-math.ssty2];
+sub ditalic-math from [ditalic-math.ssty1 ditalic-math.ssty2];
+sub eitalic-math from [eitalic-math.ssty1 eitalic-math.ssty2];
+sub fitalic-math from [fitalic-math.ssty1 fitalic-math.ssty2];
+sub gitalic-math from [gitalic-math.ssty1 gitalic-math.ssty2];
+sub iitalic-math from [iitalic-math.ssty1 iitalic-math.ssty2];
+sub jitalic-math from [jitalic-math.ssty1 jitalic-math.ssty2];
+sub kitalic-math from [kitalic-math.ssty1 kitalic-math.ssty2];
+sub litalic-math from [litalic-math.ssty1 litalic-math.ssty2];
+sub mitalic-math from [mitalic-math.ssty1 mitalic-math.ssty2];
+sub nitalic-math from [nitalic-math.ssty1 nitalic-math.ssty2];
+sub oitalic-math from [oitalic-math.ssty1 oitalic-math.ssty2];
+sub pitalic-math from [pitalic-math.ssty1 pitalic-math.ssty2];
+sub qitalic-math from [qitalic-math.ssty1 qitalic-math.ssty2];
+sub ritalic-math from [ritalic-math.ssty1 ritalic-math.ssty2];
+sub sitalic-math from [sitalic-math.ssty1 sitalic-math.ssty2];
+sub titalic-math from [titalic-math.ssty1 titalic-math.ssty2];
+sub uitalic-math from [uitalic-math.ssty1 uitalic-math.ssty2];
+sub vitalic-math from [vitalic-math.ssty1 vitalic-math.ssty2];
+sub witalic-math from [witalic-math.ssty1 witalic-math.ssty2];
+sub xitalic-math from [xitalic-math.ssty1 xitalic-math.ssty2];
+sub yitalic-math from [yitalic-math.ssty1 yitalic-math.ssty2];
+sub zitalic-math from [zitalic-math.ssty1 zitalic-math.ssty2];
+sub abolditalic-math from [abolditalic-math.ssty1 abolditalic-math.ssty2];
+sub bbolditalic-math from [bbolditalic-math.ssty1 bbolditalic-math.ssty2];
+sub cbolditalic-math from [cbolditalic-math.ssty1 cbolditalic-math.ssty2];
+sub dbolditalic-math from [dbolditalic-math.ssty1 dbolditalic-math.ssty2];
+sub ebolditalic-math from [ebolditalic-math.ssty1 ebolditalic-math.ssty2];
+sub fbolditalic-math from [fbolditalic-math.ssty1 fbolditalic-math.ssty2];
+sub gbolditalic-math from [gbolditalic-math.ssty1 gbolditalic-math.ssty2];
+sub hbolditalic-math from [hbolditalic-math.ssty1 hbolditalic-math.ssty2];
+sub ibolditalic-math from [ibolditalic-math.ssty1 ibolditalic-math.ssty2];
+sub jbolditalic-math from [jbolditalic-math.ssty1 jbolditalic-math.ssty2];
+sub kbolditalic-math from [kbolditalic-math.ssty1 kbolditalic-math.ssty2];
+sub lbolditalic-math from [lbolditalic-math.ssty1 lbolditalic-math.ssty2];
+sub mbolditalic-math from [mbolditalic-math.ssty1 mbolditalic-math.ssty2];
+sub nbolditalic-math from [nbolditalic-math.ssty1 nbolditalic-math.ssty2];
+sub obolditalic-math from [obolditalic-math.ssty1 obolditalic-math.ssty2];
+sub pbolditalic-math from [pbolditalic-math.ssty1 pbolditalic-math.ssty2];
+sub qbolditalic-math from [qbolditalic-math.ssty1 qbolditalic-math.ssty2];
+sub rbolditalic-math from [rbolditalic-math.ssty1 rbolditalic-math.ssty2];
+sub sbolditalic-math from [sbolditalic-math.ssty1 sbolditalic-math.ssty2];
+sub tbolditalic-math from [tbolditalic-math.ssty1 tbolditalic-math.ssty2];
+sub ubolditalic-math from [ubolditalic-math.ssty1 ubolditalic-math.ssty2];
+sub vbolditalic-math from [vbolditalic-math.ssty1 vbolditalic-math.ssty2];
+sub wbolditalic-math from [wbolditalic-math.ssty1 wbolditalic-math.ssty2];
+sub xbolditalic-math from [xbolditalic-math.ssty1 xbolditalic-math.ssty2];
+sub ybolditalic-math from [ybolditalic-math.ssty1 ybolditalic-math.ssty2];
+sub zbolditalic-math from [zbolditalic-math.ssty1 zbolditalic-math.ssty2];
+sub idotlessitalic-math from [idotlessitalic-math.ssty1 idotlessitalic-math.ssty2];
+sub jdotlessitalic-math from [jdotlessitalic-math.ssty1 jdotlessitalic-math.ssty2];
+sub lambdabold-math from [lambdabold-math.ssty1 lambdabold-math.ssty2];
+sub mubold-math from [mubold-math.ssty1 mubold-math.ssty2];
+sub pibold-math from [pibold-math.ssty1 pibold-math.ssty2];
+sub taubold-math from [taubold-math.ssty1 taubold-math.ssty2];
+sub lambdaitalic-math from [lambdaitalic-math.ssty1 lambdaitalic-math.ssty2];
+sub muitalic-math from [muitalic-math.ssty1 muitalic-math.ssty2];
+sub piitalic-math from [piitalic-math.ssty1 piitalic-math.ssty2];
+sub lambdabolditalic-math from [lambdabolditalic-math.ssty1 lambdabolditalic-math.ssty2];
+sub mubolditalic-math from [mubolditalic-math.ssty1 mubolditalic-math.ssty2];
+sub pibolditalic-math from [pibolditalic-math.ssty1 pibolditalic-math.ssty2];
+sub pitalic-math.ss01 from [pitalic-math.ss01.ssty1 pitalic-math.ss01.ssty2];
+sub pbolditalic-math.ss01 from [pbolditalic-math.ss01.ssty1 pbolditalic-math.ss01.ssty2];
+sub zitalic-math.ss12 from [zitalic-math.ss12.ssty1 zitalic-math.ss12.ssty2];
+sub zbolditalic-math.ss12 from [zbolditalic-math.ss12.ssty1 zbolditalic-math.ss12.ssty2];
+sub xitalic-math.ss13 from [xitalic-math.ss13.ssty1 xitalic-math.ss13.ssty2];
+sub xbolditalic-math.ss13 from [xbolditalic-math.ss13.ssty1 xbolditalic-math.ss13.ssty2];
+sub QdoubleStruck from [QdoubleStruck.ssty1 QdoubleStruck.ssty2];
+sub planckconstant from [planckconstant.ssty1 planckconstant.ssty2];
+sub M from [M.ssty1 M.ssty2];
+";
 tag = ssty;
 },
 {

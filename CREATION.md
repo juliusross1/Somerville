@@ -473,6 +473,9 @@ Recipes needed
 
 
 *Somerville Todo (16)*
+=== Fix bold vs ssty (did I even write the script for this?)
+=== Instances
+=== Remove the non exporting glyphs
 ===== Arrows
 Go back and deal with the minimum widths of the different arrows
 === Arrowheads
@@ -481,6 +484,8 @@ Go back and deal with the minimum widths of the different arrows
 === Variable Integral
 === Look back at weight of summation (started)
 === primes
+=== spacing of double and triple bar (?)
+=== improve ceiling, floor, bracket
 === ??Variation of naryoperatorsize
 === Center the bar, bracket, brace etc (these might be OK)
 === relations recipes (in fact need to revisit the entire recipe system)
