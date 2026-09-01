@@ -1,0 +1,329 @@
+{
+color = 1;
+glyphname = integral;
+layers = (
+{
+layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+shapes = (
+{
+ref = _smart.integral;
+}
+);
+width = 446;
+},
+{
+layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+shapes = (
+{
+ref = _smart.integral;
+}
+);
+width = 614;
+},
+{
+layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
+shapes = (
+{
+ref = _smart.integral;
+}
+);
+width = 654;
+},
+{
+layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+shapes = (
+{
+ref = _smart.integral;
+}
+);
+width = 710;
+},
+{
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+shapes = (
+{
+ref = _smart.integral;
+}
+);
+width = 592;
+},
+{
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+ref = _smart.integral;
+}
+);
+width = 694;
+},
+{
+layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+shapes = (
+{
+ref = _smart.integral;
+}
+);
+width = 634;
+},
+{
+layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+shapes = (
+{
+ref = _smart.integral;
+}
+);
+width = 828;
+},
+{
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+95,
+360,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "43C8D424-4CC9-4CDE-997C-848A334C686C";
+name = "Needlepoint SemiCondensed Upright INSL=100";
+shapes = (
+{
+piece = {
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 446;
+},
+{
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+113,
+360,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "88668985-5C81-4F0C-8370-A52F5CFF541B";
+name = "Needlepoint SemiExpanded Upright INSL=100";
+shapes = (
+{
+piece = {
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 614;
+},
+{
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+95,
+900,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "241F38CD-5FA6-4BB1-AC71-879A42BB8D71";
+name = "Needlepoint Black SemiCondensed Upright INSL=100";
+shapes = (
+{
+piece = {
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 654;
+},
+{
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+113,
+900,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "89B5E6CC-64E6-4C2F-AAAB-ECD9A999C181";
+name = "Needlepoint Black SemiExpanded Upright INSL=100";
+shapes = (
+{
+piece = {
+height = 0.1;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 710;
+},
+{
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+95,
+360,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "AD364C01-28F3-46BD-BC32-784B981F6202";
+name = "Agate SemiCondensed Upright INSL=100";
+shapes = (
+{
+piece = {
+"Integral Slant" = 0;
+height = 0.1;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 592;
+},
+{
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+113,
+360,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "5F84E1AC-79E9-42AF-AB2F-0D308AC561C6";
+name = "Agate SemiExpanded Upright INSL=100";
+shapes = (
+{
+piece = {
+height = 0.1;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 694;
+},
+{
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+95,
+900,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "35C90EE4-57F2-4A68-8672-8EC6265F1A03";
+name = "Agate Black SemiCondensed Upright INSL=100";
+shapes = (
+{
+piece = {
+"Integral Slant" = 100;
+height = 0.1;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 634;
+},
+{
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+113,
+900,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "89252F01-172E-4C1B-8548-C7A991B98D42";
+name = "Agate Black SemiExpanded Upright INSL=100";
+shapes = (
+{
+piece = {
+height = 0.1;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 828;
+}
+);
+unicode = 8747;
+userData = {
+com.nagwa.MATHPlugin.variants = {
+vVariants = (
+integral,
+integral.s01,
+integral.s02,
+integral.s03,
+integral.s04,
+integral.s05,
+integral.s06,
+integral.s07,
+integral.s08,
+integral.s09,
+integral.s10,
+integral.s11,
+integral.s12,
+integral.s13,
+integral.s14,
+integral.s15,
+integral.s16,
+integral.s17,
+integral.s18,
+integral.s19,
+integral.s20
+);
+};
+};
+}

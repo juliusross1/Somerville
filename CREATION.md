@@ -441,6 +441,9 @@ varianttester??
 
 
 **Arrows**
+
+(see Arrows.md)
+
 I decided to make all the arrows from components consisting of a "tail" "middle" and "head".  The naming convention is arrowname.lft,  arrowname.mid, arrowname.rgt.  Exceptions are made, in particular when reusing components.  The .mid pieces are smart that have a width axis (so that the total width of the arrow can be adjusted).   The left-to-right arrows are considered primary.  #exit/#entry anchors helped.  Putting a short .mid component on the .lft and .rhg is useful for extendibles as some typesetting systems take into account the sidebearings of the components.  with this sytem creating extendibles is immediate (it was decided that all overlaps should be 30 units which was set to be the smallest value of the .mid).
 
 Somewhat painful is to make double arrows, e.g. two right arrows on top of each other as you need to adjust 3 glyphs.  The script **blah** helps with this, but some manual adjustment is needed
@@ -472,24 +475,24 @@ Recipes needed
 *Somerville Todo (16)*
 ===== Arrows
 Go back and deal with the minimum widths of the different arrows
+=== Arrowheads
 === Create times at sizes;  fix this mess
 === Return to bigodot, bigoplus, bigotimes (+testing pages)
 === Variable Integral
 === Look back at weight of summation (started)
 === primes
-=== Union, Subset, \in
-=== Variation of naryoperatorsize
+=== ??Variation of naryoperatorsize
 === Center the bar, bracket, brace etc (these might be OK)
 === relations recipes (in fact need to revisit the entire recipe system)
 === Other accents
+=== Union, Subset, \in
 === may need to think more about sidebearings of _smart.circle as I just did this roughly
 === Product glyph serifs at high
 === sym glyph so can do many more relations
 === bold underlines (script?)
 === spacing/italic correction
-
 === slash at sizes
-Email people about here maybe?
+
 
 Longer run
 ===? Testing tool to also support looking at instances
