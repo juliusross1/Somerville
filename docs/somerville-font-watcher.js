@@ -332,7 +332,7 @@
 
       if (!lastSignature) {
         lastSignature = status.signature;
-        updateStatusDisplay(status, displayedLoadedStatus);
+        await loadVersionedFont(status);
         return true;
       }
 
