@@ -324,6 +324,19 @@
       return snippetModule(sandbox);
     }
 
+    function loadEmbeddedSnippets() {
+      try {
+        const snippets = normalizeSnippets(window.SomervilleSnippets);
+
+        if (snippets.length) {
+          mathSnippets = snippets;
+          snippetsSignature = JSON.stringify(snippets);
+        }
+      } catch (error) {
+        console.warn("Could not use the embedded Somerville snippets.", error);
+      }
+    }
+
     async function loadSnippets({ rerender = false } = {}) {
       if (snippetsLoadInFlight) {
         return;
@@ -415,10 +428,30 @@
       applyStretchyOperators();
     }
 
-    async function cycleSnippet(direction) {
-      await loadSnippets();
+    function cycleSnippet(direction) {
       currentSnippetIndex = (currentSnippetIndex + direction + mathSnippets.length) % mathSnippets.length;
       renderSnippet({ initializeSnippetOptions: true });
+    }
+
+    function startSnippetRefresh() {
+      if (snippetsRefreshTimer) {
+        return;
+      }
+
+      loadSnippets({ rerender: true });
+      snippetsRefreshTimer = window.setInterval(
+        () => loadSnippets({ rerender: true }),
+        snippetsRefreshInterval
+      );
+    }
+
+    function stopSnippetRefresh() {
+      if (!snippetsRefreshTimer) {
+        return;
+      }
+
+      window.clearInterval(snippetsRefreshTimer);
+      snippetsRefreshTimer = null;
     }
 
     function updateMathSize(syncLockedSlider = true) {
@@ -633,8 +666,8 @@
     document.getElementById("grid-size").addEventListener("input", updateGridSize);
     document.getElementById("opsz-size-lock").addEventListener("change", updateSliderLock);
     document.getElementById("controls-toggle").addEventListener("click", toggleControlPanel);
-    loadSnippets({ rerender: true }).then(renderSnippet);
-    snippetsRefreshTimer = window.setInterval(() => loadSnippets({ rerender: true }), snippetsRefreshInterval);
+    loadEmbeddedSnippets();
+    renderSnippet({ initializeSnippetOptions: true });
     updateMathSize();
     updateExpand();
     updateTitleVisibility();
@@ -670,5 +703,8 @@
     ]).then(applyMathVariations);
 
     if (window.SomervilleFontWatcher) {
-      window.SomervilleFontWatcher.start();
+      window.SomervilleFontWatcher.start({
+        onServerAvailable: startSnippetRefresh,
+        onServerUnavailable: stopSnippetRefresh,
+      });
     }
