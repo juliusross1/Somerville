@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MathML test</title>
+  <link rel="stylesheet" href="./somerville-mathml.css">
+  <script src="./Temml/temml.min.js"></script>
+</head>
+<body class="somerville-mathml-page">
+  <button id="controls-toggle" class="panel-toggle" type="button" aria-controls="control-panel" aria-expanded="true" title="Hide controls">Hide</button>
+
+  <section id="control-panel" class="control-panel" aria-label="Variation axis controls">
+    <div class="controls">
+      <label>
+        Weight <span class="value"><input id="wght-value" type="text" inputmode="decimal" value="400" aria-label="Weight value"></span>
+        <span id="wght-name" class="axis-name">Regular</span>
+        <input id="wght" type="range" min="360" max="900" value="400" step="1">
+      </label>
+
+      <label>
+        Width <span class="value"><input id="wdth-value" type="text" inputmode="decimal" value="100" aria-label="Width value"></span>
+        <span id="wdth-name" class="axis-name">Regular</span>
+        <input id="wdth" type="range" min="94" max="114" value="100" step="1">
+      </label>
+
+      <label>
+        Optical Size <span class="value"><input id="opsz-value" type="text" inputmode="decimal" value="12" aria-label="Optical Size value"></span>
+        <span id="opsz-name" class="axis-name">Regular</span>
+        <input id="opsz" type="range" min="5" max="1200" value="12" step="1">
+      </label>
+
+      <label class="lock-control" title="Lock optical size and font size">
+        <input id="opsz-size-lock" type="checkbox" aria-label="Lock optical size and font size">
+        <span class="lock-icon" aria-hidden="true">&#128274;</span>
+      </label>
+
+      <label>
+        Font Size <span class="value"><input id="math-size-value" type="text" inputmode="decimal" value="12" aria-label="Font Size value">px</span>
+        <input id="math-size" type="range" min="5" max="96" value="12" step="1">
+      </label>
+
+      <label>
+        Expand <span class="value"><input id="expand-value" type="text" inputmode="decimal" value="2" aria-label="Expand value"></span>
+        <input id="expand" type="range" min="0.1" max="8" value="2" step="0.01">
+      </label>
+
+      <label>
+        Upright Letters
+        <input id="upright-toggle" type="checkbox">
+      </label>
+
+      <label>
+        Stretchy Operators
+        <input id="stretchy-toggle" type="checkbox" checked>
+      </label>
+
+    </div>
+
+    <div id="extra-axes-controls" class="controls extra-controls">
+      <label>
+        Math Weight <span class="value"><input id="MGHT-value" type="text" inputmode="decimal" value="400" aria-label="Math Weight value"></span>
+        <input id="MGHT" type="range" min="360" max="900" value="400" step="1">
+      </label>
+
+      <label hidden>
+        ssty1 <span class="value"><input id="STYA-value" type="text" inputmode="decimal" value="5.0" aria-label="ssty1 value"></span>
+        <input id="STYA" type="range" min="5" max="1200" value="5" step="0.1">
+      </label>
+
+      <label hidden>
+        ssty2 <span class="value"><input id="STYB-value" type="text" inputmode="decimal" value="5.0" aria-label="ssty2 value"></span>
+        <input id="STYB" type="range" min="5" max="1200" value="5" step="0.1">
+      </label>
+
+      <label>
+        Integral Slant <span class="value"><input id="INSL-value" type="text" inputmode="decimal" value="0" aria-label="Integral Slant value"></span>
+        <input id="INSL" type="range" min="0" max="100" value="0" step="1">
+      </label>
+
+      <label>
+        Arrow Length <span class="value"><input id="ARLN-value" type="text" inputmode="decimal" value="100" aria-label="Arrow Length value"></span>
+        <input id="ARLN" type="range" min="0" max="200" value="100" step="1">
+      </label>
+
+      <label>
+        Arrow Head <span class="value"><input id="ARHD-value" type="text" inputmode="decimal" value="100" aria-label="Arrow Head value"></span>
+        <input id="ARHD" type="range" min="100" max="200" value="100" step="1">
+      </label>
+
+      <label>
+        show grid
+        <input id="grid-toggle" type="checkbox">
+      </label>
+
+      <label>
+        Show Info
+        <input id="title-toggle" type="checkbox" checked>
+      </label>
+
+      <label>
+        Grid Size <span class="value"><input id="grid-size-value" type="text" inputmode="decimal" value="1" aria-label="Grid Size value">em</span>
+        <input id="grid-size" type="range" min="0.1" max="1" value="1" step="0.01">
+      </label>
+
+      <p id="font-status" class="font-status">Font loaded: waiting for server status</p>
+    </div>
+    <p class="shortcut-help">
+      left/right: next snippet · up/down: next placeholder ·   f: first placeholder ·  q/w: weight down/up · a/s: width down/up · z/x: optical size down/up ·
+      1/2: expand down/up · u: upright letters · t: show/hide info · r: reset sliders · h: show/hide controls
+    </p>
+    <p class="shortcut-help">
+      This test page is a hack since variable math fonts are not supported.  Works best in Firefox.
+      (No browser seems to respect math corner kerns which is a shame)
+    </p>
+  </section>
+
+  <main>
+    <div class="snippet-details">
+      <p id="snippet-title" class="snippet-title"></p>
+      <p id="snippet-comment" class="snippet-comment"></p>
+      <p id="snippet-placeholders" class="snippet-placeholders"></p>
+    </div>
+    <section class="math-samples" aria-label="MathML samples">
+      <div id="math-display" class="sample"></div>
+    </section>
+  </main>
+
+  <div id="font-refresh-toast" class="refresh-toast" role="status" aria-live="polite" aria-hidden="true">
+    <div class="refresh-toast-content">
+      <span id="font-refresh-toast-icon" class="refresh-toast-icon" aria-hidden="true"></span>
+      <span id="font-refresh-toast-text">Refreshing</span>
+    </div>
+  </div>
+
+  <script src="./somerville-avar-compensation.js"></script>
+  <script src="./somerville-fraction-rule-thickness.js"></script>
+  <script src="./somerville-font-watcher.js"></script>
+  <script src="./somerville-mathml.js"></script>
+</body>
+</html>

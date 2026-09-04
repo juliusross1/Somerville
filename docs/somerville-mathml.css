@@ -1,0 +1,415 @@
+@font-face {
+  font-family: "SomervilleVF";
+  src:
+    local("Somerville Somerville Variable"),
+    local("SomervilleSomervilleVariable-SomervilleVariable"),
+    url("./SomervilleVF-withMathtable.ttf") format("truetype");
+  font-weight: 360 900;
+  font-stretch: 94% 114%;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "PlayfairVF";
+  src: url("./PlayfairRomanVF.ttf") format("truetype");
+  font-weight: 360 900;
+  font-stretch: 94% 114%;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "MissingGlyphBlocker";
+  src: url("./MissingGlyphBlocker.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+}
+
+:root {
+  --wght: 400;
+  --opsz: 12;
+  --wdth: 100;
+  --wdth-percent: 100%;
+  --MGHT: 700;
+  --STYA: 9;
+  --STYB: 7.2;
+  --INSL: 0;
+  --ARLN: 100;
+  --ARHD: 100;
+  --math-size: 88px;
+  --grid-size: 1em;
+  --somerville-fraction-rule-thickness: 0.0371em;
+  color: #1c1c1c;
+  background: #f7f5f0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.somerville-mathml-page {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  counter-reset: none;
+}
+
+main {
+  width: 100%;
+  min-width: 0;
+  padding: clamp(4px, 1vw, 12px);
+  display: grid;
+}
+
+.control-panel {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 8px clamp(12px, 3vw, 32px) 10px;
+  border-bottom: 1px solid #d7d0c3;
+  background: #fffdfa;
+}
+
+.control-panel[hidden] {
+  display: none;
+}
+
+.panel-toggle {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  min-width: 34px;
+  height: 28px;
+  border: 1px solid #b8ad9d;
+  border-radius: 6px;
+  color: #524a40;
+  background: #fffdfa;
+  font: 700 0.78rem/1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  cursor: pointer;
+}
+
+.controls {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(110px, 1fr)) auto repeat(4, minmax(95px, 1fr));
+  gap: 8px;
+  align-items: end;
+}
+
+label {
+  display: grid;
+  gap: 3px;
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+label[hidden] {
+  display: none;
+}
+
+.value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  color: #645c51;
+}
+
+.value input {
+  width: 5.5em;
+  padding: 2px 4px;
+  border: 1px solid #c9c1b3;
+  border-radius: 4px;
+  background: #fffdfa;
+  color: #1c1c1c;
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+}
+
+.axis-name {
+  min-height: 1em;
+  color: #645c51;
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.shortcut-help {
+  width: min(1120px, 100%);
+  margin: 6px auto 0;
+  color: #645c51;
+  font-size: 0.72rem;
+  line-height: 1.28;
+}
+
+.font-status {
+  width: min(1120px, 100%);
+  margin: 6px auto 0;
+  color: #645c51;
+  font-size: 0.72rem;
+  line-height: 1.28;
+  font-variant-numeric: tabular-nums;
+}
+
+.font-status time {
+  color: #1c1c1c;
+  font-weight: 600;
+}
+
+.refresh-toast {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  color: #fffdfa;
+  background: rgba(28, 28, 28, 0.68);
+  box-shadow: 0 18px 40px rgba(28, 28, 28, 0.22);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.92);
+  transition: opacity 180ms ease, transform 180ms ease;
+  backdrop-filter: blur(6px);
+}
+
+.refresh-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.refresh-toast.is-sticky {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.refresh-toast.is-failed {
+  background: rgba(126, 42, 42, 0.86);
+  box-shadow: 0 18px 40px rgba(126, 42, 42, 0.28);
+}
+
+.refresh-toast-content {
+  display: grid;
+  gap: 6px;
+  justify-items: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.refresh-toast-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 253, 250, 0.35);
+  border-top-color: #fffdfa;
+  border-radius: 999px;
+  animation: refresh-spin 850ms linear infinite;
+  font-size: 1.25rem;
+}
+
+.refresh-toast.is-done .refresh-toast-icon {
+  border-color: transparent;
+  animation: none;
+}
+
+.refresh-toast.is-failed .refresh-toast-icon {
+  border-color: transparent;
+  animation: none;
+}
+
+@keyframes refresh-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.extra-controls {
+  margin-top: 8px;
+  grid-template-columns: auto repeat(7, minmax(95px, 1fr));
+}
+
+.extra-controls .font-status {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #2c6f69;
+}
+
+input[type="checkbox"] {
+  accent-color: #2c6f69;
+}
+
+.lock-control {
+  display: grid;
+  place-items: center;
+  min-width: 30px;
+  padding-bottom: 1px;
+}
+
+.lock-control input {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.lock-icon {
+  display: grid;
+  place-items: center;
+  inline-size: 26px;
+  block-size: 26px;
+  border: 1px solid #b8ad9d;
+  border-radius: 6px;
+  color: #645c51;
+  background: #fffdfa;
+  cursor: pointer;
+  font-size: 0.82rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.lock-control input:checked + .lock-icon {
+  border-color: #2c6f69;
+  color: #0f4f49;
+  background: #e6f2ef;
+}
+
+.lock-control input:focus-visible + .lock-icon {
+  outline: 2px solid #2c6f69;
+  outline-offset: 3px;
+}
+
+.math-samples {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+  min-height: min(64vh, 620px);
+  padding-block: 8px;
+  align-items: start;
+}
+
+.sample {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+  text-align: center;
+  padding: 32px 0;
+  border-bottom: 1px solid #ded7ca;
+}
+
+.snippet-details {
+  width: min(1120px, 100%);
+  margin: 0 auto 8px;
+}
+
+.snippet-title,
+.snippet-comment,
+.snippet-placeholders {
+  margin: 0;
+  color: #1c1c1c;
+  font-family: "PlayfairVF", serif;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-variation-settings: "wght" 400, "opsz" 12, "wdth" 100;
+  font-optical-sizing: none;
+  font-size: 1rem;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.snippet-comment,
+.snippet-placeholders {
+  margin-top: 4px;
+}
+
+.snippet-placeholders {
+  font-family: "SomervilleVF", serif;
+}
+
+.snippet-placeholders .current-placeholder {
+  color: #d00000;
+}
+
+body.hide-snippet-title .snippet-details {
+  display: none;
+}
+
+body.somerville-mathml-page #math-display math {
+  font-family: "SomervilleVF", "MissingGlyphBlocker";
+  font-weight: var(--wght);
+  font-stretch: var(--wdth-percent);
+  font-size: var(--math-size);
+  font-variation-settings: "wght" var(--wght), "opsz" var(--opsz), "wdth" var(--wdth), "MGHT" var(--MGHT), "STYA" var(--STYA), "STYB" var(--STYB), "INSL" var(--INSL), "ARLN" var(--ARLN), "ARHD" var(--ARHD);
+  font-feature-settings: normal;
+  font-optical-sizing: none;
+}
+
+.snippet-flow {
+  display: block;
+  width: 100%;
+  white-space: normal;
+  text-align: left;
+  line-height: 0.45;
+}
+
+.mathml-snippet-flow > math {
+  display: block;
+  width: max-content;
+  margin-inline: auto;
+}
+
+.arrow-table mtd > mo {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+}
+
+.snippet-text {
+  display: inline;
+  font-family: "PlayfairVF", serif;
+  font-weight: var(--wght);
+  font-stretch: var(--wdth-percent);
+  font-variation-settings: "wght" var(--wght), "opsz" var(--opsz), "wdth" var(--wdth);
+  font-optical-sizing: none;
+  font-size: var(--math-size);
+  line-height: 0.45;
+}
+
+.snippet-flow > span {
+  display: inline;
+}
+
+body.somerville-mathml-page.show-grid::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(44, 111, 105, 0.24) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(44, 111, 105, 0.24) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+@media (max-width: 720px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
