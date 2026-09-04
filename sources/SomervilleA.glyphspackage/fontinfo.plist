@@ -615,7 +615,7 @@ MGHT = 900;
 }
 );
 date = "2024-11-05 07:24:09 +0000";
-familyName = Somerville;
+familyName = "Somerville-Math";
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;
@@ -7005,15 +7005,9456 @@ type = variable;
 },
 {
 axesValues = (
-100,
-400,
-600,
-550,
+95,
+360,
+660,
+5,
 5,
 5,
 100,
 100,
 0
+);
+instanceInterpolations = {
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 1;
+};
+name = "Micro SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.07407;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.92593;
+};
+name = "Micro SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.21296;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.78704;
+};
+name = "Micro SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.35185;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.64815;
+};
+name = "Micro SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.53704;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.46296;
+};
+isBold = 1;
+linkStyle = "Micro SemiCondensed";
+name = "Micro SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.72222;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.27778;
+};
+name = "Micro SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 1;
+};
+name = "Micro SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.27778;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.72222;
+};
+name = "Micro SemiLight";
+},
+{
+axesValues = (
+100,
+400,
+700,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.2572;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.0535;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.02058;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.66872;
+};
+name = Micro;
+},
+{
+axesValues = (
+100,
+475,
+775,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.21862;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.15381;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.05916;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.56842;
+};
+name = "Micro Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18004;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25412;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.09774;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.46811;
+};
+name = "Micro SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.1286;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.38786;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.14918;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.33436;
+};
+isBold = 1;
+linkStyle = Micro;
+name = "Micro Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.07716;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.5216;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.20062;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.20062;
+};
+name = "Micro ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.72222;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.27778;
+};
+name = "Micro Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 1;
+};
+name = "Micro SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.92593;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.07407;
+};
+name = "Micro SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.78704;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.21296;
+};
+name = "Micro SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.64815;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.35185;
+};
+name = "Micro SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.46296;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.53704;
+};
+isBold = 1;
+linkStyle = "Micro SemiExpanded";
+name = "Micro SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.27778;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.72222;
+};
+name = "Micro SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 1;
+};
+name = "Micro SemiExpanded Black";
+},
+{
+axesValues = (
+95,
+360,
+660,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.83682;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.16318;
+};
+name = "Minuscule SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.06199;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.77483;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.15109;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.01209;
+};
+name = "Minuscule SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.17821;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.65861;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.12843;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.03475;
+};
+name = "Minuscule SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.29444;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.54238;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.10576;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.05742;
+};
+name = "Minuscule SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.4494;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.38742;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.07555;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.08763;
+};
+isBold = 1;
+linkStyle = "Minuscule SemiCondensed";
+name = "Minuscule SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.60437;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.23245;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.04533;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.11785;
+};
+name = "Minuscule SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.83682;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.16318;
+};
+name = "Minuscule SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.23245;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.04533;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.60437;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.11785;
+};
+name = "Minuscule SemiLight";
+},
+{
+axesValues = (
+100,
+400,
+700,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.21523;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.04477;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.04197;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.00336;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.01722;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.5596;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.10912;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.00873;
+};
+name = Minuscule;
+},
+{
+axesValues = (
+100,
+475,
+775,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18295;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.12871;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.03567;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.00965;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.0495;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.47566;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.09275;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.0251;
+};
+name = "Minuscule Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.15066;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.21265;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.02938;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.01595;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.08179;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.39172;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.07639;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.04147;
+};
+name = "Minuscule SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.10762;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.32457;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.02099;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.02434;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.12483;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.2798;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.05456;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.06329;
+};
+isBold = 1;
+linkStyle = Minuscule;
+name = "Minuscule Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06457;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.43649;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.01259;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.03274;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.16788;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.16788;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.03274;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.08512;
+};
+name = "Minuscule ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.60437;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.04533;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.23245;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.11785;
+};
+name = "Minuscule Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.83682;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.16318;
+};
+name = "Minuscule SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.77483;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.15109;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.01209;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.06199;
+};
+name = "Minuscule SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.65861;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.12843;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.03475;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.17821;
+};
+name = "Minuscule SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.54238;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.10576;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.05742;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.29444;
+};
+name = "Minuscule SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.38742;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.07555;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.08763;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.4494;
+};
+isBold = 1;
+linkStyle = "Minuscule SemiExpanded";
+name = "Minuscule SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.23245;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.04533;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.11785;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.60437;
+};
+name = "Minuscule SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+200,
+112,
+50,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 6;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.16318;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.83682;
+};
+name = "Minuscule SemiExpanded Black";
+},
+{
+axesValues = (
+95,
+360,
+660,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.73222;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.26778;
+};
+name = "Miniature SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.05424;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.67798;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.24795;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.01984;
+};
+name = "Miniature SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.15594;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.57628;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.21075;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.05703;
+};
+name = "Miniature SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25763;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.47459;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.17356;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.09422;
+};
+name = "Miniature SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.39323;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.33899;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.12397;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.14381;
+};
+isBold = 1;
+linkStyle = "Miniature SemiCondensed";
+name = "Miniature SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.52882;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.20339;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.07438;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.1934;
+};
+name = "Miniature SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.73222;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.26778;
+};
+name = "Miniature SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.20339;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.07438;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.52882;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.1934;
+};
+name = "Miniature SemiLight";
+},
+{
+axesValues = (
+100,
+400,
+700,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18833;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03917;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.06887;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.00551;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.01507;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.48965;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.17907;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.01433;
+};
+name = Miniature;
+},
+{
+axesValues = (
+100,
+475,
+775,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.16008;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.11262;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.05854;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.01584;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.04332;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.4162;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.15221;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.04119;
+};
+name = "Miniature Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.13183;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.18607;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.04821;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.02617;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.07156;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.34276;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.12535;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.06805;
+};
+name = "Miniature SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09416;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.284;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.03444;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.03995;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.10923;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.24483;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.08954;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.10386;
+};
+isBold = 1;
+linkStyle = Miniature;
+name = "Miniature Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.0565;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.38193;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.02066;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.05372;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.1469;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.1469;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.05372;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.13968;
+};
+name = "Miniature ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.52882;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.07438;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.20339;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.1934;
+};
+name = "Miniature Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.73222;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.26778;
+};
+name = "Miniature SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.67798;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.24795;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.01984;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.05424;
+};
+name = "Miniature SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.57628;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.21075;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.05703;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.15594;
+};
+name = "Miniature SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.47459;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.17356;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.09422;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.25763;
+};
+name = "Miniature SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.33899;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.12397;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.14381;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.39323;
+};
+isBold = 1;
+linkStyle = "Miniature SemiExpanded";
+name = "Miniature SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.20339;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.07438;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.1934;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.52882;
+};
+name = "Miniature SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+325,
+221,
+114,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 7;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.26778;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.73222;
+};
+name = "Miniature SemiExpanded Black";
+},
+{
+axesValues = (
+95,
+360,
+660,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.66946;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.33054;
+};
+name = "Caption SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.04959;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.61987;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.30606;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.02448;
+};
+name = "Caption SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.14257;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.52689;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.26015;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.07039;
+};
+name = "Caption SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.23555;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.43391;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.21424;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.1163;
+};
+name = "Caption SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.35952;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.30993;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.15303;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.17751;
+};
+isBold = 1;
+linkStyle = "Caption SemiCondensed";
+name = "Caption SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.4835;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.18596;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.09182;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.23873;
+};
+name = "Caption SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.66946;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.33054;
+};
+name = "Caption SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18596;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.09182;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.4835;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.23873;
+};
+name = "Caption SemiLight";
+},
+{
+axesValues = (
+100,
+400,
+700,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.17219;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03581;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.08502;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.0068;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.01377;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.44768;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.22104;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.01768;
+};
+name = Caption;
+},
+{
+axesValues = (
+100,
+475,
+775,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.14636;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.10297;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.07226;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.01955;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.0396;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.38053;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.18789;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.05084;
+};
+name = "Caption Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.12053;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.17012;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.05951;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.03231;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.06543;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.31338;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.15473;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.084;
+};
+name = "Caption SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.08609;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25966;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.04251;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.04931;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.09987;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.22384;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.11052;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.1282;
+};
+isBold = 1;
+linkStyle = Caption;
+name = "Caption Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.05166;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.34919;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.0255;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.06631;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.1343;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.1343;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.06631;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.17241;
+};
+name = "Caption ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.4835;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.09182;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.18596;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.23873;
+};
+name = "Caption Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.66946;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.33054;
+};
+name = "Caption SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.61987;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.30606;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.02448;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.04959;
+};
+name = "Caption SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.52689;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.26015;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.07039;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.14257;
+};
+name = "Caption SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.43391;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.21424;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.1163;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.23555;
+};
+name = "Caption SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.30993;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.15303;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.17751;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.35952;
+};
+isBold = 1;
+linkStyle = "Caption SemiExpanded";
+name = "Caption SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.18596;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.09182;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.23873;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.4835;
+};
+name = "Caption SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+400,
+278,
+165,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 8;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.33054;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.66946;
+};
+name = "Caption SemiExpanded Black";
+},
+{
+axesValues = (
+95,
+360,
+660,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.54393;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.45607;
+};
+name = "Regular SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.04029;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.50364;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.42228;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.03378;
+};
+name = "Regular SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.11584;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.4281;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.35894;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.09713;
+};
+name = "Regular SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.19138;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.35255;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.2956;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.16047;
+};
+name = "Regular SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.29211;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.25182;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.21114;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.24492;
+};
+isBold = 1;
+linkStyle = "Regular SemiCondensed";
+name = "Regular SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.39284;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.15109;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.12669;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.32938;
+};
+name = "Regular SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.54393;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.45607;
+};
+name = "Regular SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.15109;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.12669;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.39284;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.32938;
+};
+name = "Regular SemiLight";
+},
+{
+axesValues = (
+100,
+475,
+775,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11892;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.08366;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.09971;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.02698;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.03218;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.30918;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.25924;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.07015;
+};
+name = "Regular Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09793;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.13822;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.08211;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.04457;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.05316;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.25462;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.21349;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.11589;
+};
+name = "Regular SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06995;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.21097;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.05865;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.06803;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.08114;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.18187;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.15249;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.17689;
+};
+isBold = 1;
+linkStyle = Regular;
+name = "Regular Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04197;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.28372;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.03519;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.09149;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.10912;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.10912;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.09149;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.23789;
+};
+name = "Regular ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.39284;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.12669;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.15109;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.32938;
+};
+name = "Regular Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.54393;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.45607;
+};
+name = "Regular SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.50364;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.42228;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.03378;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.04029;
+};
+name = "Regular SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.4281;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.35894;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.09713;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.11584;
+};
+name = "Regular SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.35255;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.2956;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.16047;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.19138;
+};
+name = "Regular SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.25182;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.21114;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.24492;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.29211;
+};
+isBold = 1;
+linkStyle = "Regular SemiExpanded";
+name = "Regular SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.15109;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.12669;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.32938;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.39284;
+};
+name = "Regular SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.45607;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.54393;
+};
+name = "Regular SemiExpanded Black";
+},
+{
+axesValues = (
+95,
+360,
+660,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.46862;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.53138;
+};
+name = "SubHeading SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03471;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.43391;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.49202;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.03936;
+};
+name = "SubHeading SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.0998;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.36882;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.41822;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.11316;
+};
+name = "SubHeading SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.16488;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.30373;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.34441;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.18697;
+};
+name = "SubHeading SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25167;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.21695;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.24601;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.28537;
+};
+isBold = 1;
+linkStyle = "SubHeading SemiCondensed";
+name = "SubHeading SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.33845;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.13017;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.14761;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.38377;
+};
+name = "SubHeading SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.46862;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.53138;
+};
+name = "SubHeading SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.13017;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.14761;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.33845;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.38377;
+};
+name = "SubHeading SemiLight";
+},
+{
+axesValues = (
+100,
+400,
+700,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.12053;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02507;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.13667;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.01093;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.00964;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.31338;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.35535;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.02843;
+};
+name = SubHeading;
+},
+{
+axesValues = (
+100,
+475,
+775,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.10245;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.07208;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.11617;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.03143;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.02772;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.26637;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.30205;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.08173;
+};
+name = "SubHeading Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.08437;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.11908;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.09567;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.05194;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.0458;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.21936;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.24874;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.13503;
+};
+name = "SubHeading SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06026;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.18176;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.06834;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.07927;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.06991;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.15669;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.17767;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.2061;
+};
+isBold = 1;
+linkStyle = SubHeading;
+name = "SubHeading Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03616;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.24443;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.041;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.1066;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.09401;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.09401;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.1066;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.27717;
+};
+name = "SubHeading ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.33845;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.14761;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.13017;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.38377;
+};
+name = "SubHeading Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.46862;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.53138;
+};
+name = "SubHeading SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.43391;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.49202;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.03936;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.03471;
+};
+name = "SubHeading SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.36882;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.41822;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.11316;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.0998;
+};
+name = "SubHeading SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.30373;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.34441;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.18697;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.16488;
+};
+name = "SubHeading SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.21695;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.24601;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.28537;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.25167;
+};
+isBold = 1;
+linkStyle = "SubHeading SemiExpanded";
+name = "SubHeading SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.13017;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.14761;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.38377;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.33845;
+};
+name = "SubHeading SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+640,
+519,
+384,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 16;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.53138;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.46862;
+};
+name = "SubHeading SemiExpanded Black";
+},
+{
+axesValues = (
+95,
+360,
+660,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.41841;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.58159;
+};
+name = "Trumpet SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03099;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.38742;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.53851;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.04308;
+};
+name = "Trumpet SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.08911;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.3293;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.45773;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.12386;
+};
+name = "Trumpet SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.14722;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.27119;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.37696;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.20463;
+};
+name = "Trumpet SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.2247;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.19371;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.26925;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.31234;
+};
+isBold = 1;
+linkStyle = "Trumpet SemiCondensed";
+name = "Trumpet SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.30219;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.11623;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.16155;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.42004;
+};
+name = "Trumpet SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.41841;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.58159;
+};
+name = "Trumpet SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11623;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.16155;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.30219;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.42004;
+};
+name = "Trumpet SemiLight";
+},
+{
+axesValues = (
+100,
+400,
+700,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.10762;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02238;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.14959;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.01197;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.00861;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.2798;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.38892;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.03111;
+};
+name = Trumpet;
+},
+{
+axesValues = (
+100,
+475,
+775,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09147;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.06435;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.12715;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.0344;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.02475;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.23783;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.33058;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.08945;
+};
+name = "Trumpet Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.07533;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.10632;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.10471;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.05684;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.04089;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.19586;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.27225;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.14779;
+};
+name = "Trumpet SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.05381;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.16228;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.07479;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.08676;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.06242;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.1399;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.19446;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.22558;
+};
+isBold = 1;
+linkStyle = Trumpet;
+name = "Trumpet Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03228;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.21824;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.04488;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.11668;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.08394;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.08394;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.11668;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.30336;
+};
+name = "Trumpet ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.30219;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.16155;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.11623;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.42004;
+};
+name = "Trumpet Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.41841;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.58159;
+};
+name = "Trumpet SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.38742;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.53851;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.04308;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.03099;
+};
+name = "Trumpet SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.3293;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.45773;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.12386;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.08911;
+};
+name = "Trumpet SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.27119;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.37696;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.20463;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.14722;
+};
+name = "Trumpet SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.19371;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.26925;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.31234;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.2247;
+};
+isBold = 1;
+linkStyle = "Trumpet SemiExpanded";
+name = "Trumpet SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11623;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.16155;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.42004;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.30219;
+};
+name = "Trumpet SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+700,
+585,
+451,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 21;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.58159;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.41841;
+};
+name = "Trumpet SemiExpanded Black";
+},
+{
+axesValues = (
+95,
+360,
+660,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.33473;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.66527;
+};
+name = "Headline SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02479;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.30993;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.61599;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.04928;
+};
+name = "Headline SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.07128;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.26344;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.52359;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.14168;
+};
+name = "Headline SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.11777;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.21695;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.43119;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.23408;
+};
+name = "Headline SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.17976;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.15497;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.308;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.35728;
+};
+isBold = 1;
+linkStyle = "Headline SemiCondensed";
+name = "Headline SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.24175;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.09298;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.1848;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.48047;
+};
+name = "Headline SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.33473;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.66527;
+};
+name = "Headline SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09298;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.1848;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.24175;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.48047;
+};
+name = "Headline SemiLight";
+},
+{
+axesValues = (
+100,
+400,
+700,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.08609;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.01791;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.17111;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.01369;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.00689;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.22384;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.44488;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.03559;
+};
+name = Headline;
+},
+{
+axesValues = (
+100,
+475,
+775,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.07318;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.05148;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.14544;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.03936;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.0198;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.19026;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.37815;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.10232;
+};
+name = "Headline Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06026;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.08506;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.11978;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.06502;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.03272;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.15669;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.31142;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.16906;
+};
+name = "Headline SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04305;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.12983;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.08555;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.09924;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.04993;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.11192;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.22244;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.25803;
+};
+isBold = 1;
+linkStyle = Headline;
+name = "Headline Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.02583;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.1746;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.05133;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.13347;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.06715;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.06715;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.13347;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.34701;
+};
+name = "Headline ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.24175;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.1848;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.09298;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.48047;
+};
+name = "Headline Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.33473;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.66527;
+};
+name = "Headline SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.30993;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.61599;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.04928;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.02479;
+};
+name = "Headline SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.26344;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.52359;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.14168;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.07128;
+};
+name = "Headline SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.21695;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.43119;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.23408;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.11777;
+};
+name = "Headline SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.15497;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.308;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.35728;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.17976;
+};
+isBold = 1;
+linkStyle = "Headline SemiExpanded";
+name = "Headline SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09298;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.1848;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.48047;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.24175;
+};
+name = "Headline SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+800,
+700,
+575,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 32;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.66527;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.33473;
+};
+name = "Headline SemiExpanded Black";
+},
+{
+axesValues = (
+95,
+360,
+660,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.25105;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.74895;
+};
+name = "Display SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.0186;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.23245;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.69348;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.05548;
+};
+name = "Display SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.05346;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.19758;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.58945;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.1595;
+};
+name = "Display SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.08833;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.16272;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.48543;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.26352;
+};
+name = "Display SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.13482;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.11623;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.34674;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.40222;
+};
+isBold = 1;
+linkStyle = "Display SemiCondensed";
+name = "Display SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.18131;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.06974;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.20804;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.54091;
+};
+name = "Display SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.25105;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.74895;
+};
+name = "Display SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06974;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.20804;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.18131;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.54091;
+};
+name = "Display SemiLight";
+},
+{
+axesValues = (
+100,
+400,
+700,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06457;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.01343;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.19263;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.01541;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.00517;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.16788;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.50084;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.04007;
+};
+name = Display;
+},
+{
+axesValues = (
+100,
+475,
+775,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.05488;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03861;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.16374;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.04431;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.01485;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.1427;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.42572;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.11519;
+};
+name = "Display Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.0452;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.06379;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.13484;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.0732;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.02454;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.11752;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.35059;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.19032;
+};
+name = "Display SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03228;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.09737;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.09632;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.11173;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.03745;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.08394;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.25042;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.29049;
+};
+isBold = 1;
+linkStyle = Display;
+name = "Display Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.01937;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.13095;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.05779;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.15025;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.05036;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.05036;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.15025;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.39066;
+};
+name = "Display ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.18131;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.20804;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.06974;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.54091;
+};
+name = "Display Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.25105;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.74895;
+};
+name = "Display SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.23245;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.69348;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.05548;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.0186;
+};
+name = "Display SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.19758;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.58945;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.1595;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.05346;
+};
+name = "Display SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.16272;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.48543;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.26352;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.08833;
+};
+name = "Display SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11623;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.34674;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.40222;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.13482;
+};
+isBold = 1;
+linkStyle = "Display SemiExpanded";
+name = "Display SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06974;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.20804;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.54091;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.18131;
+};
+name = "Display SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+900,
+818,
+711,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 48;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.74895;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.25105;
+};
+name = "Display SemiExpanded Black";
+},
+{
+axesValues = (
+95,
+360,
+660,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.1841;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.8159;
+};
+name = "Titling SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.01364;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.17046;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.75546;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.06044;
+};
+name = "Titling SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03921;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.14489;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.64214;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.17376;
+};
+name = "Titling SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.06478;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.11932;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.52882;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.28708;
+};
+name = "Titling SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.09887;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.08523;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.37773;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.43817;
+};
+isBold = 1;
+linkStyle = "Titling SemiCondensed";
+name = "Titling SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.13296;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.05114;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.22664;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.58926;
+};
+name = "Titling SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.1841;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.8159;
+};
+name = "Titling SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.05114;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.22664;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.13296;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.58926;
+};
+name = "Titling SemiLight";
+},
+{
+axesValues = (
+100,
+400,
+700,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04735;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.00985;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.20985;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.01679;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.00379;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.12311;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.54561;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.04365;
+};
+name = Titling;
+},
+{
+axesValues = (
+100,
+475,
+775,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04025;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02832;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.17837;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.04827;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.01089;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.10465;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.46377;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.12549;
+};
+name = "Titling Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03315;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.04678;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.1469;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.07974;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.01799;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.08618;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.38193;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.20733;
+};
+name = "Titling SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.02368;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.07141;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.10493;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.12171;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.02746;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.06156;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.27281;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.31645;
+};
+isBold = 1;
+linkStyle = Titling;
+name = "Titling Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.01421;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.09603;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.06296;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.16368;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.03693;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.03693;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.16368;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.42558;
+};
+name = "Titling ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.13296;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.22664;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.05114;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.58926;
+};
+name = "Titling Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.1841;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.8159;
+};
+name = "Titling SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.17046;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.75546;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.06044;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.01364;
+};
+name = "Titling SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.14489;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.64214;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.17376;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.03921;
+};
+name = "Titling SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11932;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.52882;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.28708;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.06478;
+};
+name = "Titling SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.08523;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.37773;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.43817;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.09887;
+};
+isBold = 1;
+linkStyle = "Titling SemiExpanded";
+name = "Titling SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.05114;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.22664;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.58926;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.13296;
+};
+name = "Titling SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+980,
+916,
+830,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 72;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.8159;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.1841;
+};
+name = "Titling SemiExpanded Black";
+},
+{
+axesValues = (
+95,
+360,
+660,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.15063;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.84937;
+};
+name = "Hairline SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.01116;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.13947;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.78646;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.06292;
+};
+name = "Hairline SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03208;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.11855;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.66849;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.18088;
+};
+name = "Hairline SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.053;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.09763;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.55052;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.29885;
+};
+name = "Hairline SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.08089;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.06974;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.39323;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.45614;
+};
+isBold = 1;
+linkStyle = "Hairline SemiCondensed";
+name = "Hairline SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.10879;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.04184;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.23594;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.61344;
+};
+name = "Hairline SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.15063;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.84937;
+};
+name = "Hairline SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04184;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.23594;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.10879;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.61344;
+};
+name = "Hairline SemiLight";
+},
+{
+axesValues = (
+100,
+400,
+700,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03874;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.00806;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.21846;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.01748;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.0031;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.10073;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.568;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.04544;
+};
+name = Hairline;
+},
+{
+axesValues = (
+100,
+475,
+775,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.03293;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.02317;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.18569;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.05025;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.00891;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.08562;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.4828;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.13064;
+};
+name = "Hairline Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.02712;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.03828;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.15292;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.08301;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.01472;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.07051;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.3976;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.21584;
+};
+name = "Hairline SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.01937;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.05842;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.10923;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.12671;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.02247;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.05036;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.284;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.32944;
+};
+isBold = 1;
+linkStyle = Hairline;
+name = "Hairline Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.01162;
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.07857;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.06554;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.1704;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.03022;
+"7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7" = 0.03022;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.1704;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.44304;
+};
+name = "Hairline ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 0.10879;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.23594;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.04184;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.61344;
+};
+name = "Hairline Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.15063;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.84937;
+};
+name = "Hairline SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.13947;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.78646;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.06292;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.01116;
+};
+name = "Hairline SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.11855;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.66849;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.18088;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.03208;
+};
+name = "Hairline SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.09763;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.55052;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.29885;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.053;
+};
+name = "Hairline SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.06974;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.39323;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.45614;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.08089;
+};
+isBold = 1;
+linkStyle = "Hairline SemiExpanded";
+name = "Hairline SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.04184;
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.23594;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.61344;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.10879;
+};
+name = "Hairline SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+1020,
+966,
+893,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 96;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.84937;
+"58AEE805-6805-4A0B-A273-5ABBCB55D365" = 0.15063;
+};
+name = "Hairline SemiExpanded Black";
+},
+{
+axesValues = (
+95,
+360,
+660,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 1;
+};
+name = "Needlepoint SemiCondensed SemiLight";
+},
+{
+axesValues = (
+95,
+400,
+700,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.92593;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.07407;
+};
+name = "Needlepoint SemiCondensed";
+},
+{
+axesValues = (
+95,
+475,
+775,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.78704;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.21296;
+};
+name = "Needlepoint SemiCondensed Medium";
+},
+{
+axesValues = (
+95,
+550,
+850,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.64815;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.35185;
+};
+name = "Needlepoint SemiCondensed SemiBold";
+},
+{
+axesValues = (
+95,
+650,
+900,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.46296;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.53704;
+};
+isBold = 1;
+linkStyle = "Needlepoint SemiCondensed";
+name = "Needlepoint SemiCondensed Bold";
+},
+{
+axesValues = (
+95,
+750,
+900,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.27778;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.72222;
+};
+name = "Needlepoint SemiCondensed ExtraBold";
+},
+{
+axesValues = (
+95,
+900,
+900,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"F497C50F-30EB-4580-9148-0005B36D0333" = 1;
+};
+name = "Needlepoint SemiCondensed Black";
+},
+{
+axesValues = (
+100,
+360,
+660,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.27778;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.72222;
+};
+name = "Needlepoint SemiLight";
+},
+{
+axesValues = (
+100,
+400,
+700,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.2572;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.02058;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.66872;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.0535;
+};
+name = Needlepoint;
+},
+{
+axesValues = (
+100,
+475,
+775,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.21862;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.05916;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.56842;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.15381;
+};
+name = "Needlepoint Medium";
+},
+{
+axesValues = (
+100,
+550,
+850,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.18004;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.09774;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.46811;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.25412;
+};
+name = "Needlepoint SemiBold";
+},
+{
+axesValues = (
+100,
+650,
+900,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.1286;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.14918;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.33436;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.38786;
+};
+isBold = 1;
+linkStyle = Needlepoint;
+name = "Needlepoint Bold";
+},
+{
+axesValues = (
+100,
+750,
+900,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.07716;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.20062;
+"DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.20062;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.5216;
+};
+name = "Needlepoint ExtraBold";
+},
+{
+axesValues = (
+100,
+900,
+900,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.27778;
+"F497C50F-30EB-4580-9148-0005B36D0333" = 0.72222;
+};
+name = "Needlepoint Black";
+},
+{
+axesValues = (
+113,
+360,
+660,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 1;
+};
+name = "Needlepoint SemiExpanded SemiLight";
+},
+{
+axesValues = (
+113,
+400,
+700,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.92593;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.07407;
+};
+name = "Needlepoint SemiExpanded";
+},
+{
+axesValues = (
+113,
+475,
+775,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.78704;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.21296;
+};
+name = "Needlepoint SemiExpanded Medium";
+},
+{
+axesValues = (
+113,
+550,
+850,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.64815;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.35185;
+};
+name = "Needlepoint SemiExpanded SemiBold";
+},
+{
+axesValues = (
+113,
+650,
+900,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.46296;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.53704;
+};
+isBold = 1;
+linkStyle = "Needlepoint SemiExpanded";
+name = "Needlepoint SemiExpanded Bold";
+},
+{
+axesValues = (
+113,
+750,
+900,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"2AEC198B-4747-4E5F-80A7-B5A71C2761F9" = 0.27778;
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 0.72222;
+};
+name = "Needlepoint SemiExpanded ExtraBold";
+},
+{
+axesValues = (
+113,
+900,
+900,
+1200,
+1150,
+1100,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
+);
+instanceInterpolations = {
+"41FE8A15-28AA-4FFF-A503-D6748EB37864" = 1;
+};
+name = "Needlepoint SemiExpanded Black";
+},
+{
+axesValues = (
+100,
+400,
+700,
+550,
+375,
+246,
+100,
+100,
+0
+);
+customParameters = (
+{
+name = "Axis Location";
+value = (
+{
+Axis = "Optical size";
+Location = 12;
+},
+{
+Axis = ssty1;
+Location = 5;
+},
+{
+Axis = ssty2;
+Location = 5;
+}
+);
+}
 );
 instanceInterpolations = {
 "2895B92B-45F5-4972-B85C-1A160E6E6488" = 0.1399;
@@ -7026,6 +16467,23 @@ instanceInterpolations = {
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.0244;
 };
 name = Regular;
+},
+{
+axesValues = (
+95,
+900,
+900,
+5,
+5,
+5,
+100,
+100,
+0
+);
+instanceInterpolations = {
+"29EF49B2-C370-4E88-B36E-A4ACD23E3F3A" = 1;
+};
+name = Test;
 }
 );
 kerningLTR = {
