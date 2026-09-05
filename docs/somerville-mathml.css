@@ -1,9 +1,6 @@
 @font-face {
   font-family: "SomervilleVF";
-  src:
-    local("Somerville Somerville Variable"),
-    local("SomervilleSomervilleVariable-SomervilleVariable"),
-    url("./SomervilleVF-withMathtable.ttf") format("truetype");
+  src: url("./SomervilleVF-withMathtable.ttf") format("truetype");
   font-weight: 360 900;
   font-stretch: 94% 114%;
   font-style: normal;
