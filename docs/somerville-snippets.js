@@ -95,6 +95,21 @@ $$□^{□^{\mathbf{0123456789}}}$$
     ],
   },
   {
+    title: String.raw`Latin Alphabet Paired SuperSuperscripts`,
+    comment: String.raw``,
+    tex: String.raw`$$\ph$$`,
+    placeholders: [
+      { label: "Upper", value: String.raw`\mathrm{A^{A^{A}}B^{B^{B}}C^{C^{C}}D^{D^{D}}E^{E^{E}}F^{F^{F}}G^{G^{G}}H^{H^{H}}I^{I^{I}}J^{J^{J}}K^{K^{K}}L^{L^{L}}M^{M^{M}}N^{N^{N}}O^{O^{O}}P^{P^{P}}Q^{Q^{Q}}R^{R^{R}}S^{S^{S}}T^{T^{T}}U^{U^{U}}V^{V^{V}}W^{W^{W}}X^{X^{X}}Y^{Y^{Y}}Z^{Z^{Z}}}` },
+      { label: "Lower", value: String.raw`\mathrm{a^{a^{a}}b^{b^{b}}c^{c^{c}}d^{d^{d}}e^{e^{e}}f^{f^{f}}g^{g^{g}}h^{h^{h}}i^{i^{i}}j^{j^{j}}k^{k^{k}}l^{l^{l}}m^{m^{m}}n^{n^{n}}o^{o^{o}}p^{p^{p}}q^{q^{q}}r^{r^{r}}s^{s^{s}}t^{t^{t}}u^{u^{u}}v^{v^{v}}w^{w^{w}}x^{x^{x}}y^{y^{y}}z^{z^{z}}}` },
+      { label: "Italic Upper", value: String.raw`\mathit{A^{A^{A}}B^{B^{B}}C^{C^{C}}D^{D^{D}}E^{E^{E}}F^{F^{F}}G^{G^{G}}H^{H^{H}}I^{I^{I}}J^{J^{J}}K^{K^{K}}L^{L^{L}}M^{M^{M}}N^{N^{N}}O^{O^{O}}P^{P^{P}}Q^{Q^{Q}}R^{R^{R}}S^{S^{S}}T^{T^{T}}U^{U^{U}}V^{V^{V}}W^{W^{W}}X^{X^{X}}Y^{Y^{Y}}Z^{Z^{Z}}}` },
+      { label: "Italic Lower", value: String.raw`\mathit{a^{a^{a}}b^{b^{b}}c^{c^{c}}d^{d^{d}}e^{e^{e}}f^{f^{f}}g^{g^{g}}h^{h^{h}}i^{i^{i}}j^{j^{j}}k^{k^{k}}l^{l^{l}}m^{m^{m}}n^{n^{n}}o^{o^{o}}p^{p^{p}}q^{q^{q}}r^{r^{r}}s^{s^{s}}t^{t^{t}}u^{u^{u}}v^{v^{v}}w^{w^{w}}x^{x^{x}}y^{y^{y}}z^{z^{z}}}` },
+      { label: "Bold Upper", value: String.raw`\mathbf{A}^{\mathbf{A}^{\mathbf{A}}}\mathbf{B}^{\mathbf{B}^{\mathbf{B}}}\mathbf{C}^{\mathbf{C}^{\mathbf{C}}}\mathbf{D}^{\mathbf{D}^{\mathbf{D}}}\mathbf{E}^{\mathbf{E}^{\mathbf{E}}}\mathbf{F}^{\mathbf{F}^{\mathbf{F}}}\mathbf{G}^{\mathbf{G}^{\mathbf{G}}}\mathbf{H}^{\mathbf{H}^{\mathbf{H}}}\mathbf{I}^{\mathbf{I}^{\mathbf{I}}}\mathbf{J}^{\mathbf{J}^{\mathbf{J}}}\mathbf{K}^{\mathbf{K}^{\mathbf{K}}}\mathbf{L}^{\mathbf{L}^{\mathbf{L}}}\mathbf{M}^{\mathbf{M}^{\mathbf{M}}}\mathbf{N}^{\mathbf{N}^{\mathbf{N}}}\mathbf{O}^{\mathbf{O}^{\mathbf{O}}}\mathbf{P}^{\mathbf{P}^{\mathbf{P}}}\mathbf{Q}^{\mathbf{Q}^{\mathbf{Q}}}\mathbf{R}^{\mathbf{R}^{\mathbf{R}}}\mathbf{S}^{\mathbf{S}^{\mathbf{S}}}\mathbf{T}^{\mathbf{T}^{\mathbf{T}}}\mathbf{U}^{\mathbf{U}^{\mathbf{U}}}\mathbf{V}^{\mathbf{V}^{\mathbf{V}}}\mathbf{W}^{\mathbf{W}^{\mathbf{W}}}\mathbf{X}^{\mathbf{X}^{\mathbf{X}}}\mathbf{Y}^{\mathbf{Y}^{\mathbf{Y}}}\mathbf{Z}^{\mathbf{Z}^{\mathbf{Z}}}` },
+      { label: "Bold Lower", value: String.raw`\mathbf{a}^{\mathbf{a}^{\mathbf{a}}}\mathbf{b}^{\mathbf{b}^{\mathbf{b}}}\mathbf{c}^{\mathbf{c}^{\mathbf{c}}}\mathbf{d}^{\mathbf{d}^{\mathbf{d}}}\mathbf{e}^{\mathbf{e}^{\mathbf{e}}}\mathbf{f}^{\mathbf{f}^{\mathbf{f}}}\mathbf{g}^{\mathbf{g}^{\mathbf{g}}}\mathbf{h}^{\mathbf{h}^{\mathbf{h}}}\mathbf{i}^{\mathbf{i}^{\mathbf{i}}}\mathbf{j}^{\mathbf{j}^{\mathbf{j}}}\mathbf{k}^{\mathbf{k}^{\mathbf{k}}}\mathbf{l}^{\mathbf{l}^{\mathbf{l}}}\mathbf{m}^{\mathbf{m}^{\mathbf{m}}}\mathbf{n}^{\mathbf{n}^{\mathbf{n}}}\mathbf{o}^{\mathbf{o}^{\mathbf{o}}}\mathbf{p}^{\mathbf{p}^{\mathbf{p}}}\mathbf{q}^{\mathbf{q}^{\mathbf{q}}}\mathbf{r}^{\mathbf{r}^{\mathbf{r}}}\mathbf{s}^{\mathbf{s}^{\mathbf{s}}}\mathbf{t}^{\mathbf{t}^{\mathbf{t}}}\mathbf{u}^{\mathbf{u}^{\mathbf{u}}}\mathbf{v}^{\mathbf{v}^{\mathbf{v}}}\mathbf{w}^{\mathbf{w}^{\mathbf{w}}}\mathbf{x}^{\mathbf{x}^{\mathbf{x}}}\mathbf{y}^{\mathbf{y}^{\mathbf{y}}}\mathbf{z}^{\mathbf{z}^{\mathbf{z}}}` },
+      { label: "Bold Italic Upper", value: String.raw`\boldsymbol{A}^{\boldsymbol{A}^{\boldsymbol{A}}}\boldsymbol{B}^{\boldsymbol{B}^{\boldsymbol{B}}}\boldsymbol{C}^{\boldsymbol{C}^{\boldsymbol{C}}}\boldsymbol{D}^{\boldsymbol{D}^{\boldsymbol{D}}}\boldsymbol{E}^{\boldsymbol{E}^{\boldsymbol{E}}}\boldsymbol{F}^{\boldsymbol{F}^{\boldsymbol{F}}}\boldsymbol{G}^{\boldsymbol{G}^{\boldsymbol{G}}}\boldsymbol{H}^{\boldsymbol{H}^{\boldsymbol{H}}}\boldsymbol{I}^{\boldsymbol{I}^{\boldsymbol{I}}}\boldsymbol{J}^{\boldsymbol{J}^{\boldsymbol{J}}}\boldsymbol{K}^{\boldsymbol{K}^{\boldsymbol{K}}}\boldsymbol{L}^{\boldsymbol{L}^{\boldsymbol{L}}}\boldsymbol{M}^{\boldsymbol{M}^{\boldsymbol{M}}}\boldsymbol{N}^{\boldsymbol{N}^{\boldsymbol{N}}}\boldsymbol{O}^{\boldsymbol{O}^{\boldsymbol{O}}}\boldsymbol{P}^{\boldsymbol{P}^{\boldsymbol{P}}}\boldsymbol{Q}^{\boldsymbol{Q}^{\boldsymbol{Q}}}\boldsymbol{R}^{\boldsymbol{R}^{\boldsymbol{R}}}\boldsymbol{S}^{\boldsymbol{S}^{\boldsymbol{S}}}\boldsymbol{T}^{\boldsymbol{T}^{\boldsymbol{T}}}\boldsymbol{U}^{\boldsymbol{U}^{\boldsymbol{U}}}\boldsymbol{V}^{\boldsymbol{V}^{\boldsymbol{V}}}\boldsymbol{W}^{\boldsymbol{W}^{\boldsymbol{W}}}\boldsymbol{X}^{\boldsymbol{X}^{\boldsymbol{X}}}\boldsymbol{Y}^{\boldsymbol{Y}^{\boldsymbol{Y}}}\boldsymbol{Z}^{\boldsymbol{Z}^{\boldsymbol{Z}}}` },
+      { label: "Bold Italic Lower", value: String.raw`\boldsymbol{a}^{\boldsymbol{a}^{\boldsymbol{a}}}\boldsymbol{b}^{\boldsymbol{b}^{\boldsymbol{b}}}\boldsymbol{c}^{\boldsymbol{c}^{\boldsymbol{c}}}\boldsymbol{d}^{\boldsymbol{d}^{\boldsymbol{d}}}\boldsymbol{e}^{\boldsymbol{e}^{\boldsymbol{e}}}\boldsymbol{f}^{\boldsymbol{f}^{\boldsymbol{f}}}\boldsymbol{g}^{\boldsymbol{g}^{\boldsymbol{g}}}\boldsymbol{h}^{\boldsymbol{h}^{\boldsymbol{h}}}\boldsymbol{i}^{\boldsymbol{i}^{\boldsymbol{i}}}\boldsymbol{j}^{\boldsymbol{j}^{\boldsymbol{j}}}\boldsymbol{k}^{\boldsymbol{k}^{\boldsymbol{k}}}\boldsymbol{l}^{\boldsymbol{l}^{\boldsymbol{l}}}\boldsymbol{m}^{\boldsymbol{m}^{\boldsymbol{m}}}\boldsymbol{n}^{\boldsymbol{n}^{\boldsymbol{n}}}\boldsymbol{o}^{\boldsymbol{o}^{\boldsymbol{o}}}\boldsymbol{p}^{\boldsymbol{p}^{\boldsymbol{p}}}\boldsymbol{q}^{\boldsymbol{q}^{\boldsymbol{q}}}\boldsymbol{r}^{\boldsymbol{r}^{\boldsymbol{r}}}\boldsymbol{s}^{\boldsymbol{s}^{\boldsymbol{s}}}\boldsymbol{t}^{\boldsymbol{t}^{\boldsymbol{t}}}\boldsymbol{u}^{\boldsymbol{u}^{\boldsymbol{u}}}\boldsymbol{v}^{\boldsymbol{v}^{\boldsymbol{v}}}\boldsymbol{w}^{\boldsymbol{w}^{\boldsymbol{w}}}\boldsymbol{x}^{\boldsymbol{x}^{\boldsymbol{x}}}\boldsymbol{y}^{\boldsymbol{y}^{\boldsymbol{y}}}\boldsymbol{z}^{\boldsymbol{z}^{\boldsymbol{z}}}` },
+    ],
+  },
+  {
     title: String.raw`Primes`,
     comment: String.raw``,
     tex: String.raw`
@@ -423,27 +438,9 @@ We say that $f(x_n)\ph -l$ as $n\ph +A$ and write this as $$\lim_{n\ph A} f(x_n)
   },
   {
     tex: String.raw`
-$$\ph^\ph + \ph_\ph^\ph+M^M + M_M^M + \ph^M + M_{\ph}$$
-    `,
-    placeholders: ["M", "N", "A", "B","C","D"],
-  },
-  {
-    tex: String.raw`
-$$\ph^{\ph^\ph}$$
-    `,
-    placeholders: ["M", "N", "p", "y"],
-  },
-  {
-    tex: String.raw`
 $$\lim_{\ph \to 0} f(\ph ) = 0$$
     `,
     placeholders: ["x", "y", "z"],
-  },
-  {
-    tex: String.raw`
-$$\ph^{\ph^\ph}$$
-    `,
-    placeholders: ["M", "N", "p"],
   },
   {
     tex: String.raw`
