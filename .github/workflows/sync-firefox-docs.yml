@@ -1,0 +1,60 @@
+name: Sync Firefox files to docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'test_documents/Somerville/firefox/**'
+      - '.github/workflows/sync-firefox-docs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-firefox-docs
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # Sync the latest main, including when a previous run was queued.
+          ref: main
+
+      - name: Copy matching Firefox files
+        shell: python
+        run: |
+          from pathlib import Path
+          import shutil
+          import subprocess
+
+          source_root = Path('test_documents/Somerville/firefox')
+          docs_root = Path('docs')
+          # The files already tracked in docs define what is published.
+          # Preserve relative paths, including files inside Temml.
+          tracked = subprocess.check_output(['git', 'ls-files', '-z', '--', 'docs'])
+          for filename in tracked.decode().split('\0'):
+              if not filename:
+                  continue
+              destination = Path(filename)
+              source = source_root / destination.relative_to(docs_root)
+              if not source.is_file():
+                  continue
+              if destination.read_bytes() != source.read_bytes():
+                  shutil.copyfile(source, destination)
+                  print(f'Updated {destination}')
+
+      - name: Commit and push updated docs
+        run: |
+          git add -- docs
+          if git diff --cached --quiet; then
+            echo "Docs already match the Firefox files."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync docs from Firefox test files"
+          git push origin HEAD:main
