@@ -15,7 +15,7 @@ ref = _smart.circle;
 pos = (154,131);
 ref = bullet;
 scale = (0.5,0.5);
-}
+},
 );
 width = 528;
 },
@@ -32,7 +32,7 @@ ref = _smart.circle;
 pos = (201,171);
 ref = bullet;
 scale = (0.5,0.35);
-}
+},
 );
 width = 638;
 },
@@ -49,7 +49,7 @@ ref = _smart.circle;
 pos = (145,131);
 ref = bullet;
 scale = (0.5,0.5);
-}
+},
 );
 width = 551;
 },
@@ -66,7 +66,7 @@ ref = _smart.circle;
 pos = (208,131);
 ref = bullet;
 scale = (0.5,0.5);
-}
+},
 );
 width = 674;
 },
@@ -83,7 +83,7 @@ ref = _smart.circle;
 pos = (189,131);
 ref = bullet;
 scale = (0.5,0.5);
-}
+},
 );
 width = 597;
 },
@@ -100,7 +100,7 @@ ref = _smart.circle;
 pos = (243,131);
 ref = bullet;
 scale = (0.5,0.5);
-}
+},
 );
 width = 721;
 },
@@ -117,7 +117,7 @@ ref = _smart.circle;
 pos = (175,131);
 ref = bullet;
 scale = (0.5,0.5);
-}
+},
 );
 width = 609;
 },
@@ -134,16 +134,16 @@ ref = _smart.circle;
 pos = (211,128);
 ref = bullet;
 scale = (0.5,0.5);
-}
+},
 );
 width = 679;
-}
+},
 );
 unicode = 8857;
 userData = {
 com.nagwa.MATHPlugin.variants = {
 vVariants = (
-operator.circled
+operator.circled,
 );
 };
 com.opentypemathtools.smartComponentVariants = {

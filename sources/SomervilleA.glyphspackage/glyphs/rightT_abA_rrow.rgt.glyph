@@ -19,7 +19,7 @@ ref = ArrowHead;
 {
 pos = (419,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 500;
 },
@@ -39,7 +39,7 @@ ref = ArrowHead;
 {
 pos = (539,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 680;
 },
@@ -59,7 +59,7 @@ ref = ArrowHead;
 {
 pos = (419,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 500;
 },
@@ -79,7 +79,7 @@ ref = ArrowHead;
 {
 pos = (539,1);
 ref = _ArrowTab;
-}
+},
 );
 width = 680;
 },
@@ -99,7 +99,7 @@ ref = ArrowHead;
 {
 pos = (340,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 500;
 },
@@ -119,7 +119,7 @@ ref = ArrowHead;
 {
 pos = (448,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 668;
 },
@@ -139,7 +139,7 @@ ref = ArrowHead;
 {
 pos = (294,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 490;
 },
@@ -159,7 +159,7 @@ ref = ArrowHead;
 {
 pos = (390,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 646;
 },
@@ -175,7 +175,7 @@ coordinates = (
 5,
 0,
 100,
-0
+0,
 );
 };
 layerId = "8C7BBA14-CF0F-4F4D-8A8E-CE50A66D70CE";
@@ -193,7 +193,7 @@ ref = ArrowHead;
 {
 pos = (419,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 500;
 },
@@ -209,7 +209,7 @@ coordinates = (
 5,
 0,
 100,
-0
+0,
 );
 };
 layerId = "F68DAF82-B0EA-45B9-A531-F34E7E884912";
@@ -227,7 +227,7 @@ ref = ArrowHead;
 {
 pos = (539,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 680;
 },
@@ -243,7 +243,7 @@ coordinates = (
 5,
 0,
 100,
-0
+0,
 );
 };
 layerId = "17E7B3BD-5C93-4209-A4EE-463666443483";
@@ -261,7 +261,7 @@ ref = ArrowHead;
 {
 pos = (419,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 500;
 },
@@ -277,7 +277,7 @@ coordinates = (
 5,
 0,
 100,
-0
+0,
 );
 };
 layerId = "F1FF4788-4463-4DA5-9FF2-55B468189FCE";
@@ -295,7 +295,7 @@ ref = ArrowHead;
 {
 pos = (539,1);
 ref = _ArrowTab;
-}
+},
 );
 width = 680;
 },
@@ -311,7 +311,7 @@ coordinates = (
 5,
 0,
 100,
-0
+0,
 );
 };
 layerId = "476C1DCB-F090-4ED0-8CCB-49832EDAE4DF";
@@ -329,7 +329,7 @@ ref = ArrowHead;
 {
 pos = (340,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 500;
 },
@@ -345,7 +345,7 @@ coordinates = (
 5,
 0,
 100,
-0
+0,
 );
 };
 layerId = "352A93D6-322E-474A-BF79-91C63A79BD42";
@@ -363,7 +363,7 @@ ref = ArrowHead;
 {
 pos = (447,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 667;
 },
@@ -379,7 +379,7 @@ coordinates = (
 5,
 0,
 100,
-0
+0,
 );
 };
 layerId = "BB8BD348-1A24-464F-ABD1-EFD6E0793A56";
@@ -397,7 +397,7 @@ ref = ArrowHead;
 {
 pos = (294,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 490;
 },
@@ -413,7 +413,7 @@ coordinates = (
 5,
 0,
 100,
-0
+0,
 );
 };
 layerId = "9BADEA7A-B35F-4DB3-AF7C-6CA42FFC21BC";
@@ -431,10 +431,10 @@ ref = ArrowHead;
 {
 pos = (390,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 646;
-}
+},
 );
 metricLeft = "=rightArrow.rgt";
 subCategory = Arrow;

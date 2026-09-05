@@ -26,7 +26,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (218,0);
 ref = ArrowHead;
-}
+},
 );
 width = 500;
 },
@@ -53,7 +53,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (188,0);
 ref = ArrowHead;
-}
+},
 );
 width = 500;
 },
@@ -80,7 +80,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (265,0);
 ref = ArrowHead;
-}
+},
 );
 width = 671;
 },
@@ -107,7 +107,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (218,0);
 ref = ArrowHead;
-}
+},
 );
 width = 500;
 },
@@ -134,7 +134,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (326,0);
 ref = ArrowHead;
-}
+},
 );
 width = 680;
 },
@@ -161,7 +161,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (326,0);
 ref = ArrowHead;
-}
+},
 );
 width = 680;
 },
@@ -188,7 +188,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (168,0);
 ref = ArrowHead;
-}
+},
 );
 width = 490;
 },
@@ -215,7 +215,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (260,0);
 ref = ArrowHead;
-}
+},
 );
 width = 697;
 },
@@ -231,7 +231,7 @@ coordinates = (
 5,
 200,
 200,
-0
+0,
 );
 };
 layerId = "C10768D3-5582-48CC-955C-D6F28E3BD0C6";
@@ -257,7 +257,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (142,0);
 ref = ArrowHead;
-}
+},
 );
 width = 500;
 },
@@ -273,7 +273,7 @@ coordinates = (
 5,
 200,
 200,
-0
+0,
 );
 };
 layerId = "D8A2108F-75DE-4EC1-88A2-560BDFE304B9";
@@ -299,7 +299,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (268,0);
 ref = ArrowHead;
-}
+},
 );
 width = 680;
 },
@@ -315,7 +315,7 @@ coordinates = (
 5,
 200,
 200,
-0
+0,
 );
 };
 layerId = "A145D878-9C82-4FB9-8EB5-A84812CE0D4B";
@@ -341,7 +341,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (142,0);
 ref = ArrowHead;
-}
+},
 );
 width = 500;
 },
@@ -357,7 +357,7 @@ coordinates = (
 5,
 200,
 200,
-0
+0,
 );
 };
 layerId = "DD00AC8A-664E-42B1-85B9-6A3CBFBA0D91";
@@ -383,7 +383,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (268,0);
 ref = ArrowHead;
-}
+},
 );
 width = 680;
 },
@@ -399,7 +399,7 @@ coordinates = (
 5,
 200,
 200,
-0
+0,
 );
 };
 layerId = "50C9AB0A-F1C0-497E-85CC-6C3A7845C358";
@@ -425,7 +425,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (106,0);
 ref = ArrowHead;
-}
+},
 );
 width = 500;
 },
@@ -441,7 +441,7 @@ coordinates = (
 5,
 200,
 200,
-0
+0,
 );
 };
 layerId = "B6D9908E-F747-4C91-864B-87159251E1B9";
@@ -467,7 +467,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (234,0);
 ref = ArrowHead;
-}
+},
 );
 width = 680;
 },
@@ -483,7 +483,7 @@ coordinates = (
 5,
 200,
 200,
-0
+0,
 );
 };
 layerId = "C8D34337-BD90-4F2E-9443-840AFB563782";
@@ -509,7 +509,7 @@ ref = _smart.Arrow.mid;
 {
 pos = (90,0);
 ref = ArrowHead;
-}
+},
 );
 width = 500;
 },
@@ -525,7 +525,7 @@ coordinates = (
 5,
 200,
 200,
-0
+0,
 );
 };
 layerId = "69562AF1-2E02-45EC-A4F0-14CCC8416F12";
@@ -551,10 +551,10 @@ ref = _smart.Arrow.mid;
 {
 pos = (198,0);
 ref = ArrowHead;
-}
+},
 );
 width = 680;
-}
+},
 );
 metricLeft = "=0";
 metricRight = "=rightArrow.rgt";

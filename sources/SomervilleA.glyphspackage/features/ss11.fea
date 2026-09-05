@@ -1,0 +1,98 @@
+# Widest Latin letters
+
+@Latin100 = [
+    mbold-math
+    Mbold-math
+
+    mbolditalic-math 
+    Mbolditalic-math 
+];
+
+@Latin90 = [
+
+];
+
+
+
+@Latin80 = [
+    wbold-math
+   	Wbold-math
+
+    mbolditalic-math wbolditalic-math
+    Mbolditalic-math Wbolditalic-math
+];
+
+
+# Broad Latin letters
+@Latin70 = [
+    abold-math bbold-math dbold-math gbold-math
+    hbold-math nbold-math obold-math pbold-math
+    qbold-math ubold-math vbold-math xbold-math
+    ybold-math
+
+    Abold-math Bbold-math Cbold-math Dbold-math
+    Gbold-math Hbold-math Kbold-math Nbold-math
+    Obold-math Qbold-math Rbold-math Ubold-math
+    Vbold-math Xbold-math Ybold-math
+
+    abolditalic-math bbolditalic-math dbolditalic-math
+    gbolditalic-math hbolditalic-math nbolditalic-math
+    obolditalic-math pbolditalic-math qbolditalic-math
+    ubolditalic-math vbolditalic-math xbolditalic-math
+    # ybolditalic-math is missing
+
+    Abolditalic-math Bbolditalic-math Cbolditalic-math
+    Dbolditalic-math Gbolditalic-math Hbolditalic-math
+    Kbolditalic-math Nbolditalic-math Obolditalic-math
+    Qbolditalic-math Rbolditalic-math Ubolditalic-math
+    Vbolditalic-math Xbolditalic-math Ybolditalic-math
+];
+
+
+# Medium-width Latin letters
+@Latin60 = [
+    cbold-math ebold-math fbold-math kbold-math
+    rbold-math sbold-math zbold-math
+
+    Ebold-math Fbold-math Lbold-math Pbold-math
+    Sbold-math Tbold-math Zbold-math
+
+    cbolditalic-math ebolditalic-math fbolditalic-math
+    kbolditalic-math rbolditalic-math sbolditalic-math
+    zbolditalic-math
+
+    Ebolditalic-math Fbolditalic-math Lbolditalic-math
+    Pbolditalic-math Sbolditalic-math Tbolditalic-math
+    Zbolditalic-math
+];
+
+
+# Narrowest Latin letters
+@Latin50 = [
+    ibold-math jbold-math lbold-math tbold-math
+
+    Ibold-math Jbold-math
+
+    ibolditalic-math jbolditalic-math
+    lbolditalic-math tbolditalic-math
+
+    Ibolditalic-math Jbolditalic-math
+];
+
+
+@AllMathUnderlineTargets = [
+    @Latin80
+    @Latin70
+    @Latin60
+    @Latin50
+];
+
+
+lookup AddMathUnderline {
+    sub @Latin100 by @Latin100 underlinebold.100;
+    sub @Latin90 by @Latin90 underlinebold.90;
+    sub @Latin80 by @Latin80 underlinebold.80;
+    sub @Latin70 by @Latin70 underlinebold.70;
+    sub @Latin60 by @Latin60 underlinebold.60;
+    sub @Latin50 by @Latin50 underlinebold.50;
+} AddMathUnderline;

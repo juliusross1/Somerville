@@ -1,4 +1,12 @@
 {
+axes = (
+{
+name = NarrowNarrow;
+},
+{
+name = NormalNarrow;
+},
+);
 color = 4;
 export = 0;
 glyphname = "_part.LC-xheight-upper-stem";
@@ -20,13 +28,9 @@ pos = (106,256);
 {
 name = top;
 pos = (151,512);
-}
+},
 );
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
-partSelection = {
-NarrowNarrow = 1;
-NormalNarrow = 1;
-};
 shapes = (
 {
 closed = 1;
@@ -51,9 +55,9 @@ nodes = (
 (41,510,l),
 (89,506,o),
 (106,489,o),
-(106,439,c)
+(106,439,c),
 );
-}
+},
 );
 width = 302;
 },
@@ -74,13 +78,9 @@ pos = (131,256);
 {
 name = top;
 pos = (176,512);
-}
+},
 );
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
-partSelection = {
-NarrowNarrow = 1;
-NormalNarrow = 1;
-};
 shapes = (
 {
 closed = 1;
@@ -105,9 +105,9 @@ nodes = (
 (56,510,l),
 (109,507,o),
 (131,489,o),
-(131,439,c)
+(131,439,c),
 );
-}
+},
 );
 width = 352;
 },
@@ -128,13 +128,9 @@ pos = (76,260);
 {
 name = top;
 pos = (166,520);
-}
+},
 );
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
-partSelection = {
-NarrowNarrow = 1;
-NormalNarrow = 1;
-};
 shapes = (
 {
 closed = 1;
@@ -159,9 +155,9 @@ nodes = (
 (30,518,l),
 (65,514,o),
 (76,496,o),
-(76,447,c)
+(76,447,c),
 );
-}
+},
 );
 width = 332;
 },
@@ -182,13 +178,9 @@ pos = (105,260);
 {
 name = top;
 pos = (195,520);
-}
+},
 );
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-partSelection = {
-NarrowNarrow = 1;
-NormalNarrow = 1;
-};
 shapes = (
 {
 closed = 1;
@@ -213,9 +205,9 @@ nodes = (
 (41,518,l),
 (89,514,o),
 (105,496,o),
-(105,447,c)
+(105,447,c),
 );
-}
+},
 );
 width = 390;
 },
@@ -236,13 +228,9 @@ pos = (176,256);
 {
 name = top;
 pos = (221,512);
-}
+},
 );
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
-partSelection = {
-NarrowNarrow = 1;
-NormalNarrow = 1;
-};
 shapes = (
 {
 closed = 1;
@@ -267,9 +255,9 @@ nodes = (
 (95,437,l),
 (154,432,o),
 (176,411,o),
-(176,350,c)
+(176,350,c),
 );
-}
+},
 );
 width = 442;
 },
@@ -290,13 +278,9 @@ pos = (218,256);
 {
 name = top;
 pos = (263,512);
-}
+},
 );
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-partSelection = {
-NarrowNarrow = 1;
-NormalNarrow = 1;
-};
 shapes = (
 {
 closed = 1;
@@ -321,9 +305,9 @@ nodes = (
 (116,436,l),
 (199,428,o),
 (218,409,o),
-(218,335,c)
+(218,335,c),
 );
-}
+},
 );
 width = 526;
 },
@@ -344,13 +328,9 @@ pos = (106,260);
 {
 name = top;
 pos = (196,520);
-}
+},
 );
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
-partSelection = {
-NarrowNarrow = 1;
-NormalNarrow = 1;
-};
 shapes = (
 {
 closed = 1;
@@ -375,9 +355,9 @@ nodes = (
 (44,447,l),
 (97,440,o),
 (106,429,o),
-(106,383,c)
+(106,383,c),
 );
-}
+},
 );
 width = 392;
 },
@@ -398,13 +378,9 @@ pos = (136,260);
 {
 name = top;
 pos = (226,520);
-}
+},
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
-partSelection = {
-NarrowNarrow = 1;
-NormalNarrow = 1;
-};
 shapes = (
 {
 closed = 1;
@@ -429,9 +405,9 @@ nodes = (
 (64,447,l),
 (119,442,o),
 (136,424,o),
-(136,364,c)
+(136,364,c),
 );
-}
+},
 );
 width = 452;
 },
@@ -452,14 +428,26 @@ pos = (176,256);
 {
 name = top;
 pos = (221,512);
-}
+},
 );
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+50,
+"-",
+);
+};
 layerId = "07187570-147D-443E-8B43-682A65E94C10";
 name = NarrowNarrow;
-partSelection = {
-NarrowNarrow = 2;
-};
 shapes = (
 {
 closed = 1;
@@ -484,9 +472,9 @@ nodes = (
 (104,439,l),
 (157,434,o),
 (176,412,o),
-(176,350,c)
+(176,350,c),
 );
-}
+},
 );
 width = 442;
 },
@@ -507,14 +495,26 @@ pos = (218,256);
 {
 name = top;
 pos = (263,512);
-}
+},
 );
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+50,
+"-",
+);
+};
 layerId = "ACB619D1-EDEC-4BDD-97BD-5FF692497D61";
 name = NarrowNarrow;
-partSelection = {
-NarrowNarrow = 2;
-};
 shapes = (
 {
 closed = 1;
@@ -539,9 +539,9 @@ nodes = (
 (132,440,l),
 (204,434,o),
 (218,409,o),
-(218,335,c)
+(218,335,c),
 );
-}
+},
 );
 width = 526;
 },
@@ -562,14 +562,26 @@ pos = (106,260);
 {
 name = top;
 pos = (196,520);
-}
+},
 );
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+50,
+"-",
+);
+};
 layerId = "83D82A74-17CE-45A1-83F2-966DFFD8B28B";
 name = NarrowNarrow;
-partSelection = {
-NarrowNarrow = 2;
-};
 shapes = (
 {
 closed = 1;
@@ -594,9 +606,9 @@ nodes = (
 (58,448,l),
 (97,442,o),
 (106,431,o),
-(106,383,c)
+(106,383,c),
 );
-}
+},
 );
 width = 392;
 },
@@ -617,14 +629,26 @@ pos = (176,256);
 {
 name = top;
 pos = (221,512);
-}
+},
 );
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+50,
+);
+};
 layerId = "1845F3F5-DAC7-47ED-A163-CE7C5EE539B9";
 name = NormalNarrow;
-partSelection = {
-NormalNarrow = 2;
-};
 shapes = (
 {
 closed = 1;
@@ -649,9 +673,9 @@ nodes = (
 (95,437,l),
 (154,432,o),
 (176,411,o),
-(176,350,c)
+(176,350,c),
 );
-}
+},
 );
 width = 442;
 },
@@ -672,14 +696,26 @@ pos = (218,256);
 {
 name = top;
 pos = (263,512);
-}
+},
 );
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+50,
+);
+};
 layerId = "0849B133-4317-4891-8D32-9DC395E755AA";
 name = NormalNarrow;
-partSelection = {
-NormalNarrow = 2;
-};
 shapes = (
 {
 closed = 1;
@@ -704,9 +740,9 @@ nodes = (
 (116,436,l),
 (199,428,o),
 (218,409,o),
-(218,335,c)
+(218,335,c),
 );
-}
+},
 );
 width = 526;
 },
@@ -727,14 +763,26 @@ pos = (106,260);
 {
 name = top;
 pos = (196,520);
-}
+},
 );
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+50,
+);
+};
 layerId = "1960BE62-4ECC-40C0-9121-A82721BB72B7";
 name = NormalNarrow;
-partSelection = {
-NormalNarrow = 2;
-};
 shapes = (
 {
 closed = 1;
@@ -759,23 +807,11 @@ nodes = (
 (44,447,l),
 (97,440,o),
 (106,429,o),
-(106,383,c)
+(106,383,c),
 );
-}
+},
 );
 width = 392;
-}
-);
-partsSettings = (
-{
-bottomValue = 0;
-name = NarrowNarrow;
-topValue = 50;
 },
-{
-bottomValue = 0;
-name = NormalNarrow;
-topValue = 50;
-}
 );
 }

@@ -9,7 +9,7 @@ anchors = (
 {
 name = "#exit";
 pos = (340,265);
-}
+},
 );
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
@@ -36,7 +36,7 @@ height = 33;
 };
 pos = (88,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 340;
 },
@@ -45,7 +45,7 @@ anchors = (
 {
 name = "#exit";
 pos = (450,265);
-}
+},
 );
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
@@ -73,7 +73,7 @@ height = 33;
 };
 pos = (88,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 450;
 },
@@ -82,14 +82,14 @@ anchors = (
 {
 name = "#exit";
 pos = (340,265);
-}
+},
 );
 annotations = (
 {
 pos = (63.773,564.016);
 text = "Return to fixing this tail once you have decided on the head";
 type = Text;
-}
+},
 );
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
@@ -117,7 +117,7 @@ height = 33;
 };
 pos = (88,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 340;
 },
@@ -126,7 +126,7 @@ anchors = (
 {
 name = "#exit";
 pos = (450,265);
-}
+},
 );
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
@@ -154,7 +154,7 @@ height = 33;
 };
 pos = (88,0);
 ref = _ArrowTab;
-}
+},
 );
 width = 450;
 },
@@ -163,7 +163,7 @@ anchors = (
 {
 name = "#exit";
 pos = (340,265);
-}
+},
 );
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 shapes = (
@@ -191,7 +191,7 @@ height = 33;
 pos = (88,0);
 ref = _ArrowTab;
 scale = (0.8,1);
-}
+},
 );
 width = 340;
 },
@@ -200,7 +200,7 @@ anchors = (
 {
 name = "#exit";
 pos = (450,265);
-}
+},
 );
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
@@ -229,7 +229,7 @@ height = 33;
 pos = (88,0);
 ref = _ArrowTab;
 scale = (0.8,1);
-}
+},
 );
 width = 450;
 },
@@ -238,7 +238,7 @@ anchors = (
 {
 name = "#exit";
 pos = (341,265);
-}
+},
 );
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
@@ -267,7 +267,7 @@ height = 33;
 pos = (88,0);
 ref = _ArrowTab;
 scale = (0.8,1);
-}
+},
 );
 width = 341;
 },
@@ -276,7 +276,7 @@ anchors = (
 {
 name = "#exit";
 pos = (450,265);
-}
+},
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
@@ -304,10 +304,10 @@ height = 33;
 pos = (88,0);
 ref = _ArrowTab;
 scale = (0.8,1);
-}
+},
 );
 width = 450;
-}
+},
 );
 metricLeft = "=_smart.FrombarArrow+20";
 metricRight = "=0";
