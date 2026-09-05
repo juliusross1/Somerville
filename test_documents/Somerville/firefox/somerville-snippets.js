@@ -32,7 +32,7 @@ window.SomervilleSnippets = [
     title: String.raw`Latin Alphabets`,
     comment: String.raw``,
     tex: String.raw`
-$$\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$$
+$$\mathrm{Test ABCDEFGHIJKLMNOPQRSTUVWXYZ}$$
 $$\mathrm{abcdefghijklmnopqrstuvwxyz}$$
 $$ABCDEFGHIJKLMNOPQRSTUVWXYZ$$
 $$abcdefghijklmnopqrstuvwxyz$$
@@ -61,6 +61,14 @@ $$2^{0123456789}$$
 $$2^{\mathbf{0123456789}}$$
     `,
     placeholders: [],
+  },
+  {
+    title: String.raw`Primes`,
+    comment: String.raw``,
+    tex: String.raw`
+$$\ph' + \ph'' + \ph'''$$
+    `,
+    placeholders: ["f", "y", "h", "M"],
   },
   {
     title: String.raw`Greek Alphabet`,
