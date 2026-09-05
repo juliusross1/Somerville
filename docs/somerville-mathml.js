@@ -185,12 +185,8 @@
 
     function getVariationSettings() {
       const { wght, opsz, wdth, MGHT, STYA, STYB, INSL, ARLN, ARHD } = getAxisValues();
-      const compensate = window.SomervilleAvarCompensation?.compensateAxis;
-      const isFirefox = navigator.userAgent.includes("Firefox/");
-      const renderedWght = isFirefox && compensate ? compensate("wght", wght) : wght;
-      const renderedOpsz = isFirefox && compensate ? compensate("opsz", opsz) : opsz;
-      const renderedWdth = isFirefox && compensate ? compensate("wdth", wdth) : wdth;
-      return `"wght" ${renderedWght}, "opsz" ${renderedOpsz}, "wdth" ${renderedWdth}, "MGHT" ${MGHT}, "STYA" ${STYA}, "STYB" ${STYB}, "INSL" ${INSL}, "ARLN" ${ARLN}, "ARHD" ${ARHD}`;
+      // CSS takes external coordinates; the browser applies the font's avar table.
+      return `"wght" ${wght}, "opsz" ${opsz}, "wdth" ${wdth}, "MGHT" ${MGHT}, "STYA" ${STYA}, "STYB" ${STYB}, "INSL" ${INSL}, "ARLN" ${ARLN}, "ARHD" ${ARHD}`;
     }
 
     function applyMathVariations() {
