@@ -7,11 +7,7 @@ Somerville is an experimental variable Math font based on [Playfair](xxx.fortheh
 - Variable math fonts are not supported, but [hopefully may be one day](https://github.com/harfbuzz/boring-expansion-spec/issues/136)
 - The font is very incomplete; in particular there are very few greek letters
 
-One option to experiment with Somerville as a math font is to use the static instances in the /fonts directory (but at the cost of losing some of the variable features).   
-
-The variable font [MayfairVF-withMATHtable.ttf](https://github.com/juliusross1/Somerville/tree/main/test_documents/Somerville/firefox) has an artifical static MATH table which fools luaLaTeX, Firefox and Typst enough so that math is rendered (although there are limitations).   ConTeXt does not do well with SomervilleVF.ttf, even as a text font (I am not sure if ConTeXt supports avar2 and even then I think there are other issues).
-
-On good days the following [test site](https://juliusross1.github.io/Somerville/somerville-mathml.html) shows something with Firefox.  Use the arrow keys (left/right and up/down) to explore.
+One option to experiment with Somerville as a math font is to use the static instances (but at the cost of losing some of the variable features).   The variable font MayfairVF-withMATHtable.ttf has an artifical static MATH table which fools luaLaTeX, Firefox and Typst enough so that math is rendered (although there are limitations).   ConTeXt does not do well with SomervilleVF.ttf, even as a text font (qustion: does ConTeXt support avar2?)
 
 The goal here was to explore and in addition to this experimental font we have
 - Notes on how this font was made [Creation.md](Creation.md)

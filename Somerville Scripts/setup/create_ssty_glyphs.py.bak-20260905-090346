@@ -10,7 +10,6 @@ For example, A.ssty1 uses A as its source, and A.ss01.ssty1 uses A.ss01.
 
 The source optical-size axis is flattened and moved onto the SSTY target axis:
 .ssty1 uses STYA, and .ssty2 uses STYB.
-Math-bold and math-bold-italic targets also retain the source's MGHT layers.
 """
 
 import os
@@ -33,7 +32,7 @@ ROTATION_SOURCE_AXIS_TAG = "opsz"
 ROTATION_SOURCE_BASE_VALUE = 1200
 ROTATION_SOURCE_SMALL_VALUE = 5
 ROTATION_TARGET_VALUE = SSTY_AXIS_MAX_VALUE
-SCRIPT_VERSION = "2026-09-05 preserve-bold-ssty-mght"
+SCRIPT_VERSION = "2026-06-23 10:33 CDT ssty-intermediate-at-1200"
 
 
 def script_directory():
@@ -101,14 +100,6 @@ def target_axis_tag_for_ssty_glyph(glyph_name):
     if suffix is None:
         return None
     return TARGET_AXIS_BY_SUFFIX[suffix]
-
-
-def preserved_axes_for_ssty_glyph(glyph_name):
-    source_name = source_name_for_ssty_glyph(glyph_name)
-    base_name = source_name.split(".", 1)[0] if source_name else ""
-    if base_name.endswith(("bold-math", "bolditalic-math")):
-        return ("MGHT",)
-    return ()
 
 
 def sibling_axis_defaults_for_ssty_glyph(glyph_name):
@@ -185,7 +176,6 @@ def process_target_glyph(font, glyph):
         ROTATION_TARGET_VALUE,
         map_source_axis_coordinates_to_target_axis=True,
         forced_destination_axis_values=sibling_axis_defaults_for_ssty_glyph(glyph.name),
-        preserved_source_axis_tags=preserved_axes_for_ssty_glyph(glyph.name),
     )
 
 
@@ -199,7 +189,6 @@ def run_for_glyphs(font, glyphs, open_tab=False):
     for glyph in glyphs:
         required_target_axes.add(target_axis_tag_for_ssty_glyph(glyph.name))
         required_target_axes.update(sibling_axis_defaults_for_ssty_glyph(glyph.name).keys())
-        required_target_axes.update(preserved_axes_for_ssty_glyph(glyph.name))
     required_target_axes = sorted(required_target_axes)
     missing_target_axes = [
         axis_tag for axis_tag in required_target_axes

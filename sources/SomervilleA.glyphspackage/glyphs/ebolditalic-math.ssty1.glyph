@@ -702,7 +702,7 @@ coordinates = (
 0
 );
 };
-layerId = "B48D40DA-3C79-45D1-942D-912E3A3D84A8";
+layerId = "33A3EEFE-9D17-41F0-B1AF-C654CB8AB962";
 name = "Needlepoint SemiCondensed Upright STYA 1200";
 shapes = (
 {
@@ -798,7 +798,7 @@ coordinates = (
 0
 );
 };
-layerId = "685B8D75-4E8A-4EC0-8BF8-407000E3CE58";
+layerId = "1A0266D4-A6F6-4293-80EB-ADA4C28205EA";
 name = "Needlepoint SemiExpanded Upright STYA 1200";
 shapes = (
 {
@@ -894,7 +894,7 @@ coordinates = (
 0
 );
 };
-layerId = "96DFA72B-E7D7-4F01-A43E-666875E5B9B2";
+layerId = "24E2EFC3-6F2A-493E-B89B-40C350D5A994";
 name = "Needlepoint Black SemiCondensed Upright STYA 1200";
 shapes = (
 {
@@ -990,7 +990,7 @@ coordinates = (
 0
 );
 };
-layerId = "7EAAE3A8-7EF4-42E3-9E5C-2DF5CABC91A6";
+layerId = "149B51C5-34C4-4C88-91E1-6D72AA30735E";
 name = "Needlepoint Black SemiExpanded Upright STYA 1200";
 shapes = (
 {
@@ -1086,7 +1086,7 @@ coordinates = (
 0
 );
 };
-layerId = "E4969B4D-AA2E-447B-9FA2-1EB2F79499FC";
+layerId = "0F8D1AB3-ADEF-45F3-8BCA-317FFF5C5BCF";
 name = "Agate SemiCondensed Upright STYA 1200";
 shapes = (
 {
@@ -1182,7 +1182,7 @@ coordinates = (
 0
 );
 };
-layerId = "F1396191-96F9-4B0D-9200-E377FD745E1A";
+layerId = "FD287191-B557-4A40-8D34-EA05CD014D2A";
 name = "Agate SemiExpanded Upright STYA 1200";
 shapes = (
 {
@@ -1278,7 +1278,7 @@ coordinates = (
 0
 );
 };
-layerId = "23F25BB2-241F-4CCD-B681-524914554922";
+layerId = "C34B9E4F-CA4B-4569-9060-AF4B6DE93141";
 name = "Agate Black SemiCondensed Upright STYA 1200";
 shapes = (
 {
@@ -1374,7 +1374,7 @@ coordinates = (
 0
 );
 };
-layerId = "813A2410-2893-4741-947B-3C8C20ADC874";
+layerId = "0E61678A-85E3-4533-AD0B-B6B10F115BFF";
 name = "Agate Black SemiExpanded Upright STYA 1200";
 shapes = (
 {
@@ -1416,6 +1416,1542 @@ nodes = (
 }
 );
 width = 519;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (214,0);
+},
+{
+name = center;
+pos = (257,260);
+},
+{
+name = math.ta;
+pos = (367,735);
+},
+{
+name = ogonek;
+pos = (309,0);
+},
+{
+name = top;
+pos = (317,520);
+},
+{
+name = top_low_1;
+pos = (311,500);
+},
+{
+name = top_low_2;
+pos = (306,480);
+},
+{
+name = top_low_3;
+pos = (300,460);
+}
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+95,
+360,
+900,
+1200,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "2D34902F-4726-4C86-959E-7215DC83B2B3";
+name = "Needlepoint SemiCondensed Upright STYA 1200.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(323,-14,o),
+(396,41,o),
+(449,155,c),
+(448,155,l),
+(410,77,o),
+(366,43,o),
+(307,43,cs),
+(243,43,o),
+(209,92,o),
+(209,215,cs),
+(209,336,o),
+(284,531,o),
+(335,531,cs),
+(350,531,o),
+(358,508,o),
+(358,463,cs),
+(358,356,o),
+(302,262,o),
+(205,208,c),
+(205,207,l),
+(378,246,o),
+(495,338,o),
+(495,434,cs),
+(495,497,o),
+(446,533,o),
+(358,533,cs),
+(174,533,o),
+(20,377,o),
+(20,191,cs),
+(20,63,o),
+(96,-14,o),
+(221,-14,cs)
+);
+}
+);
+width = 510;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (214,0);
+},
+{
+name = center;
+pos = (257,260);
+},
+{
+name = math.ta;
+pos = (367,735);
+},
+{
+name = ogonek;
+pos = (309,0);
+},
+{
+name = top;
+pos = (317,520);
+},
+{
+name = top_low_1;
+pos = (311,500);
+},
+{
+name = top_low_2;
+pos = (306,480);
+},
+{
+name = top_low_3;
+pos = (300,460);
+}
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+95,
+360,
+900,
+5,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "4BCD486D-AF2A-47FD-846B-DA99055690BD";
+name = "Agate SemiCondensed Upright STYA 1200.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(323,-14,o),
+(396,41,o),
+(449,155,c),
+(448,155,l),
+(410,77,o),
+(366,43,o),
+(307,43,cs),
+(243,43,o),
+(209,92,o),
+(209,215,cs),
+(209,336,o),
+(284,531,o),
+(335,531,cs),
+(350,531,o),
+(358,508,o),
+(358,463,cs),
+(358,356,o),
+(302,262,o),
+(205,208,c),
+(205,207,l),
+(378,246,o),
+(495,338,o),
+(495,434,cs),
+(495,497,o),
+(446,533,o),
+(358,533,cs),
+(174,533,o),
+(20,377,o),
+(20,191,cs),
+(20,63,o),
+(96,-14,o),
+(221,-14,cs)
+);
+}
+);
+width = 510;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-73,0);
+},
+{
+name = bottom;
+pos = (267,0);
+},
+{
+name = center;
+pos = (304,260);
+},
+{
+name = math.ta;
+pos = (418,735);
+},
+{
+name = ogonek;
+pos = (380,0);
+},
+{
+name = top;
+pos = (368,520);
+},
+{
+name = top_low_1;
+pos = (362,500);
+},
+{
+name = top_low_2;
+pos = (357,480);
+},
+{
+name = top_low_3;
+pos = (351,460);
+}
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+113,
+360,
+900,
+1200,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "38518D95-969E-4C15-9641-99E08DA8B9FE";
+name = "Needlepoint SemiExpanded Upright STYA 1200.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(398,-14,o),
+(483,41,o),
+(540,155,c),
+(538,155,l),
+(497,79,o),
+(442,42,o),
+(369,42,cs),
+(276,42,o),
+(224,103,o),
+(224,213,cs),
+(224,358,o),
+(311,531,o),
+(383,531,cs),
+(413,531,o),
+(431,501,o),
+(431,451,cs),
+(431,348,o),
+(354,260,o),
+(218,208,c),
+(218,207,l),
+(434,247,o),
+(573,335,o),
+(573,432,cs),
+(573,496,o),
+(514,533,o),
+(411,533,cs),
+(204,533,o),
+(35,385,o),
+(35,204,cs),
+(35,70,o),
+(128,-14,o),
+(277,-14,cs)
+);
+}
+);
+width = 614;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-73,0);
+},
+{
+name = bottom;
+pos = (267,0);
+},
+{
+name = center;
+pos = (304,260);
+},
+{
+name = math.ta;
+pos = (418,735);
+},
+{
+name = ogonek;
+pos = (380,0);
+},
+{
+name = top;
+pos = (368,520);
+},
+{
+name = top_low_1;
+pos = (362,500);
+},
+{
+name = top_low_2;
+pos = (357,480);
+},
+{
+name = top_low_3;
+pos = (351,460);
+}
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+113,
+360,
+900,
+5,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "D5E5AFE8-8718-458F-970B-56EEE914CC94";
+name = "Agate SemiExpanded Upright STYA 1200.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(398,-14,o),
+(483,41,o),
+(540,155,c),
+(538,155,l),
+(497,79,o),
+(442,42,o),
+(369,42,cs),
+(276,42,o),
+(224,103,o),
+(224,213,cs),
+(224,358,o),
+(311,531,o),
+(383,531,cs),
+(413,531,o),
+(431,501,o),
+(431,451,cs),
+(431,348,o),
+(354,260,o),
+(218,208,c),
+(218,207,l),
+(434,247,o),
+(573,335,o),
+(573,432,cs),
+(573,496,o),
+(514,533,o),
+(411,533,cs),
+(204,533,o),
+(35,385,o),
+(35,204,cs),
+(35,70,o),
+(128,-14,o),
+(277,-14,cs)
+);
+}
+);
+width = 614;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (214,0);
+},
+{
+name = center;
+pos = (257,260);
+},
+{
+name = math.ta;
+pos = (367,735);
+},
+{
+name = ogonek;
+pos = (309,0);
+},
+{
+name = top;
+pos = (317,520);
+},
+{
+name = top_low_1;
+pos = (311,500);
+},
+{
+name = top_low_2;
+pos = (306,480);
+},
+{
+name = top_low_3;
+pos = (300,460);
+}
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+95,
+900,
+900,
+1200,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "5135B67F-DE4A-4651-8193-1942AB94810F";
+name = "Needlepoint Black SemiCondensed Upright STYA 1200.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(323,-14,o),
+(396,41,o),
+(449,155,c),
+(448,155,l),
+(410,77,o),
+(366,43,o),
+(307,43,cs),
+(243,43,o),
+(209,92,o),
+(209,215,cs),
+(209,336,o),
+(284,531,o),
+(335,531,cs),
+(350,531,o),
+(358,508,o),
+(358,463,cs),
+(358,356,o),
+(302,262,o),
+(205,208,c),
+(205,207,l),
+(378,246,o),
+(495,338,o),
+(495,434,cs),
+(495,497,o),
+(446,533,o),
+(358,533,cs),
+(174,533,o),
+(20,377,o),
+(20,191,cs),
+(20,63,o),
+(96,-14,o),
+(221,-14,cs)
+);
+}
+);
+width = 510;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (214,0);
+},
+{
+name = center;
+pos = (257,260);
+},
+{
+name = math.ta;
+pos = (367,735);
+},
+{
+name = ogonek;
+pos = (309,0);
+},
+{
+name = top;
+pos = (317,520);
+},
+{
+name = top_low_1;
+pos = (311,500);
+},
+{
+name = top_low_2;
+pos = (306,480);
+},
+{
+name = top_low_3;
+pos = (300,460);
+}
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+95,
+900,
+900,
+5,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "51EFA06C-7424-4FF5-9890-9CD9D1FEE660";
+name = "Agate Black SemiCondensed Upright STYA 1200.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(323,-14,o),
+(396,41,o),
+(449,155,c),
+(448,155,l),
+(410,77,o),
+(366,43,o),
+(307,43,cs),
+(243,43,o),
+(209,92,o),
+(209,215,cs),
+(209,336,o),
+(284,531,o),
+(335,531,cs),
+(350,531,o),
+(358,508,o),
+(358,463,cs),
+(358,356,o),
+(302,262,o),
+(205,208,c),
+(205,207,l),
+(378,246,o),
+(495,338,o),
+(495,434,cs),
+(495,497,o),
+(446,533,o),
+(358,533,cs),
+(174,533,o),
+(20,377,o),
+(20,191,cs),
+(20,63,o),
+(96,-14,o),
+(221,-14,cs)
+);
+}
+);
+width = 510;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-73,0);
+},
+{
+name = bottom;
+pos = (267,0);
+},
+{
+name = center;
+pos = (304,260);
+},
+{
+name = math.ta;
+pos = (418,735);
+},
+{
+name = ogonek;
+pos = (380,0);
+},
+{
+name = top;
+pos = (368,520);
+},
+{
+name = top_low_1;
+pos = (362,500);
+},
+{
+name = top_low_2;
+pos = (357,480);
+},
+{
+name = top_low_3;
+pos = (351,460);
+}
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+113,
+900,
+900,
+1200,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "3642CB6B-81D5-46EE-A3F3-B50BA58723A3";
+name = "Needlepoint Black SemiExpanded Upright STYA 1200.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(398,-14,o),
+(483,41,o),
+(540,155,c),
+(538,155,l),
+(497,79,o),
+(442,42,o),
+(369,42,cs),
+(276,42,o),
+(224,103,o),
+(224,213,cs),
+(224,358,o),
+(311,531,o),
+(383,531,cs),
+(413,531,o),
+(431,501,o),
+(431,451,cs),
+(431,348,o),
+(354,260,o),
+(218,208,c),
+(218,207,l),
+(434,247,o),
+(573,335,o),
+(573,432,cs),
+(573,496,o),
+(514,533,o),
+(411,533,cs),
+(204,533,o),
+(35,385,o),
+(35,204,cs),
+(35,70,o),
+(128,-14,o),
+(277,-14,cs)
+);
+}
+);
+width = 614;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-73,0);
+},
+{
+name = bottom;
+pos = (267,0);
+},
+{
+name = center;
+pos = (304,260);
+},
+{
+name = math.ta;
+pos = (418,735);
+},
+{
+name = ogonek;
+pos = (380,0);
+},
+{
+name = top;
+pos = (368,520);
+},
+{
+name = top_low_1;
+pos = (362,500);
+},
+{
+name = top_low_2;
+pos = (357,480);
+},
+{
+name = top_low_3;
+pos = (351,460);
+}
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+113,
+900,
+900,
+5,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "EF97BE80-9740-4FCF-896F-EA46DB5CEF68";
+name = "Agate Black SemiExpanded Upright STYA 1200.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(398,-14,o),
+(483,41,o),
+(540,155,c),
+(538,155,l),
+(497,79,o),
+(442,42,o),
+(369,42,cs),
+(276,42,o),
+(224,103,o),
+(224,213,cs),
+(224,358,o),
+(311,531,o),
+(383,531,cs),
+(413,531,o),
+(431,501,o),
+(431,451,cs),
+(431,348,o),
+(354,260,o),
+(218,208,c),
+(218,207,l),
+(434,247,o),
+(573,335,o),
+(573,432,cs),
+(573,496,o),
+(514,533,o),
+(411,533,cs),
+(204,533,o),
+(35,385,o),
+(35,204,cs),
+(35,70,o),
+(128,-14,o),
+(277,-14,cs)
+);
+}
+);
+width = 614;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (252,0);
+},
+{
+name = center;
+pos = (300,260);
+},
+{
+name = math.ta;
+pos = (419,735);
+},
+{
+name = ogonek;
+pos = (331,0);
+},
+{
+name = top;
+pos = (369,520);
+},
+{
+name = top_low_1;
+pos = (363,500);
+},
+{
+name = top_low_2;
+pos = (358,480);
+},
+{
+name = top_low_3;
+pos = (352,460);
+}
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+95,
+360,
+900,
+1200,
+5,
+5,
+200,
+100,
+0
+);
+};
+layerId = "438AD6F0-5C1A-4328-9163-D7163DD451C5";
+name = "Needlepoint SemiCondensed Upright STYA 5.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(365,-14,o),
+(441,35,o),
+(497,138,c),
+(429,138,l),
+(398,100,o),
+(366,83,o),
+(322,83,cs),
+(263,83,o),
+(235,131,o),
+(235,209,cs),
+(235,345,o),
+(318,466,o),
+(395,466,cs),
+(410,466,o),
+(421,457,o),
+(421,428,cs),
+(421,365,o),
+(359,271,o),
+(231,217,c),
+(230,160,l),
+(424,200,o),
+(553,303,o),
+(553,415,cs),
+(553,491,o),
+(498,533,o),
+(396,533,cs),
+(209,533,o),
+(46,375,o),
+(46,192,cs),
+(46,64,o),
+(125,-14,o),
+(256,-14,cs)
+);
+}
+);
+width = 611;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (252,0);
+},
+{
+name = center;
+pos = (300,260);
+},
+{
+name = math.ta;
+pos = (419,735);
+},
+{
+name = ogonek;
+pos = (331,0);
+},
+{
+name = top;
+pos = (369,520);
+},
+{
+name = top_low_1;
+pos = (363,500);
+},
+{
+name = top_low_2;
+pos = (358,480);
+},
+{
+name = top_low_3;
+pos = (352,460);
+}
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+95,
+360,
+900,
+5,
+5,
+5,
+200,
+100,
+0
+);
+};
+layerId = "1376340B-AF09-4C5C-9774-D2D30B89DFED";
+name = "Agate SemiCondensed Upright STYA 5.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(365,-14,o),
+(441,35,o),
+(497,138,c),
+(429,138,l),
+(398,100,o),
+(366,83,o),
+(322,83,cs),
+(263,83,o),
+(235,131,o),
+(235,209,cs),
+(235,345,o),
+(318,466,o),
+(395,466,cs),
+(410,466,o),
+(421,457,o),
+(421,428,cs),
+(421,365,o),
+(359,271,o),
+(231,217,c),
+(230,160,l),
+(424,200,o),
+(553,303,o),
+(553,415,cs),
+(553,491,o),
+(498,533,o),
+(396,533,cs),
+(209,533,o),
+(46,375,o),
+(46,192,cs),
+(46,64,o),
+(125,-14,o),
+(256,-14,cs)
+);
+}
+);
+width = 611;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (318,0);
+},
+{
+name = center;
+pos = (363,260);
+},
+{
+name = math.ta;
+pos = (481,735);
+},
+{
+name = ogonek;
+pos = (424,0);
+},
+{
+name = top;
+pos = (431,520);
+},
+{
+name = top_low_1;
+pos = (425,500);
+},
+{
+name = top_low_2;
+pos = (420,480);
+},
+{
+name = top_low_3;
+pos = (414,460);
+}
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+113,
+360,
+900,
+1200,
+5,
+5,
+200,
+100,
+0
+);
+};
+layerId = "249BE0E5-5A3C-456E-BDEF-FF6FF7ACAC4C";
+name = "Needlepoint SemiExpanded Upright STYA 5.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(458,-14,o),
+(548,36,o),
+(606,138,c),
+(538,138,l),
+(504,103,o),
+(453,83,o),
+(398,83,cs),
+(310,83,o),
+(265,131,o),
+(265,221,cs),
+(265,348,o),
+(357,466,o),
+(458,466,cs),
+(492,466,o),
+(510,452,o),
+(510,424,cs),
+(510,352,o),
+(400,264,o),
+(251,217,c),
+(253,160,l),
+(498,200,o),
+(650,296,o),
+(650,411,cs),
+(650,488,o),
+(581,533,o),
+(464,533,cs),
+(252,533,o),
+(77,385,o),
+(77,204,cs),
+(77,69,o),
+(174,-14,o),
+(333,-14,cs)
+);
+}
+);
+width = 743;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (318,0);
+},
+{
+name = center;
+pos = (363,260);
+},
+{
+name = math.ta;
+pos = (481,735);
+},
+{
+name = ogonek;
+pos = (424,0);
+},
+{
+name = top;
+pos = (431,520);
+},
+{
+name = top_low_1;
+pos = (425,500);
+},
+{
+name = top_low_2;
+pos = (420,480);
+},
+{
+name = top_low_3;
+pos = (414,460);
+}
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+113,
+360,
+900,
+5,
+5,
+5,
+200,
+100,
+0
+);
+};
+layerId = "FF87FDC3-0755-42BA-901E-6CAD7312D7A8";
+name = "Agate SemiExpanded Upright STYA 5.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(458,-14,o),
+(548,36,o),
+(606,138,c),
+(538,138,l),
+(504,103,o),
+(453,83,o),
+(398,83,cs),
+(310,83,o),
+(265,131,o),
+(265,221,cs),
+(265,348,o),
+(357,466,o),
+(458,466,cs),
+(492,466,o),
+(510,452,o),
+(510,424,cs),
+(510,352,o),
+(400,264,o),
+(251,217,c),
+(253,160,l),
+(498,200,o),
+(650,296,o),
+(650,411,cs),
+(650,488,o),
+(581,533,o),
+(464,533,cs),
+(252,533,o),
+(77,385,o),
+(77,204,cs),
+(77,69,o),
+(174,-14,o),
+(333,-14,cs)
+);
+}
+);
+width = 743;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (252,0);
+},
+{
+name = center;
+pos = (300,260);
+},
+{
+name = math.ta;
+pos = (419,735);
+},
+{
+name = ogonek;
+pos = (331,0);
+},
+{
+name = top;
+pos = (369,520);
+},
+{
+name = top_low_1;
+pos = (363,500);
+},
+{
+name = top_low_2;
+pos = (358,480);
+},
+{
+name = top_low_3;
+pos = (352,460);
+}
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+95,
+900,
+900,
+1200,
+5,
+5,
+200,
+100,
+0
+);
+};
+layerId = "A2180DEF-D68D-44CE-B20B-FBB785C5C49B";
+name = "Needlepoint Black SemiCondensed Upright STYA 5.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(365,-14,o),
+(441,35,o),
+(497,138,c),
+(429,138,l),
+(398,100,o),
+(366,83,o),
+(322,83,cs),
+(263,83,o),
+(235,131,o),
+(235,209,cs),
+(235,345,o),
+(318,466,o),
+(395,466,cs),
+(410,466,o),
+(421,457,o),
+(421,428,cs),
+(421,365,o),
+(359,271,o),
+(231,217,c),
+(230,160,l),
+(424,200,o),
+(553,303,o),
+(553,415,cs),
+(553,491,o),
+(498,533,o),
+(396,533,cs),
+(209,533,o),
+(46,375,o),
+(46,192,cs),
+(46,64,o),
+(125,-14,o),
+(256,-14,cs)
+);
+}
+);
+width = 611;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (252,0);
+},
+{
+name = center;
+pos = (300,260);
+},
+{
+name = math.ta;
+pos = (419,735);
+},
+{
+name = ogonek;
+pos = (331,0);
+},
+{
+name = top;
+pos = (369,520);
+},
+{
+name = top_low_1;
+pos = (363,500);
+},
+{
+name = top_low_2;
+pos = (358,480);
+},
+{
+name = top_low_3;
+pos = (352,460);
+}
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+95,
+900,
+900,
+5,
+5,
+5,
+200,
+100,
+0
+);
+};
+layerId = "AD96E91C-E0F5-4691-9278-2ECEA06C730B";
+name = "Agate Black SemiCondensed Upright STYA 5.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(365,-14,o),
+(441,35,o),
+(497,138,c),
+(429,138,l),
+(398,100,o),
+(366,83,o),
+(322,83,cs),
+(263,83,o),
+(235,131,o),
+(235,209,cs),
+(235,345,o),
+(318,466,o),
+(395,466,cs),
+(410,466,o),
+(421,457,o),
+(421,428,cs),
+(421,365,o),
+(359,271,o),
+(231,217,c),
+(230,160,l),
+(424,200,o),
+(553,303,o),
+(553,415,cs),
+(553,491,o),
+(498,533,o),
+(396,533,cs),
+(209,533,o),
+(46,375,o),
+(46,192,cs),
+(46,64,o),
+(125,-14,o),
+(256,-14,cs)
+);
+}
+);
+width = 611;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (318,0);
+},
+{
+name = center;
+pos = (363,260);
+},
+{
+name = math.ta;
+pos = (481,735);
+},
+{
+name = ogonek;
+pos = (424,0);
+},
+{
+name = top;
+pos = (431,520);
+},
+{
+name = top_low_1;
+pos = (425,500);
+},
+{
+name = top_low_2;
+pos = (420,480);
+},
+{
+name = top_low_3;
+pos = (414,460);
+}
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+113,
+900,
+900,
+1200,
+5,
+5,
+200,
+100,
+0
+);
+};
+layerId = "02A9B6A0-F862-469D-B2AA-3EAA9BDB8DA7";
+name = "Needlepoint Black SemiExpanded Upright STYA 5.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(458,-14,o),
+(548,36,o),
+(606,138,c),
+(538,138,l),
+(504,103,o),
+(453,83,o),
+(398,83,cs),
+(310,83,o),
+(265,131,o),
+(265,221,cs),
+(265,348,o),
+(357,466,o),
+(458,466,cs),
+(492,466,o),
+(510,452,o),
+(510,424,cs),
+(510,352,o),
+(400,264,o),
+(251,217,c),
+(253,160,l),
+(498,200,o),
+(650,296,o),
+(650,411,cs),
+(650,488,o),
+(581,533,o),
+(464,533,cs),
+(252,533,o),
+(77,385,o),
+(77,204,cs),
+(77,69,o),
+(174,-14,o),
+(333,-14,cs)
+);
+}
+);
+width = 743;
+},
+{
+anchors = (
+{
+name = "#entry";
+pos = (-72,0);
+},
+{
+name = bottom;
+pos = (318,0);
+},
+{
+name = center;
+pos = (363,260);
+},
+{
+name = math.ta;
+pos = (481,735);
+},
+{
+name = ogonek;
+pos = (424,0);
+},
+{
+name = top;
+pos = (431,520);
+},
+{
+name = top_low_1;
+pos = (425,500);
+},
+{
+name = top_low_2;
+pos = (420,480);
+},
+{
+name = top_low_3;
+pos = (414,460);
+}
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+113,
+900,
+900,
+5,
+5,
+5,
+200,
+100,
+0
+);
+};
+layerId = "44B611DB-1BE8-4CF6-A7A1-7CA243710FCD";
+name = "Agate Black SemiExpanded Upright STYA 5.0 MGHT 900";
+shapes = (
+{
+closed = 1;
+nodes = (
+(458,-14,o),
+(548,36,o),
+(606,138,c),
+(538,138,l),
+(504,103,o),
+(453,83,o),
+(398,83,cs),
+(310,83,o),
+(265,131,o),
+(265,221,cs),
+(265,348,o),
+(357,466,o),
+(458,466,cs),
+(492,466,o),
+(510,452,o),
+(510,424,cs),
+(510,352,o),
+(400,264,o),
+(251,217,c),
+(253,160,l),
+(498,200,o),
+(650,296,o),
+(650,411,cs),
+(650,488,o),
+(581,533,o),
+(464,533,cs),
+(252,533,o),
+(77,385,o),
+(77,204,cs),
+(77,69,o),
+(174,-14,o),
+(333,-14,cs)
+);
+}
+);
+width = 743;
 }
 );
 }
