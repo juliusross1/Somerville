@@ -28901,7 +28901,6 @@ K = 0;
 Z = 0;
 ampersand = -17;
 ampersand.case = 0;
-ampersand.smcp = 0;
 exclam = 0;
 };
 I = {
@@ -29029,27 +29028,6 @@ period = -126;
 "_LC-yat-cy-upper" = {
 "_part.LC-softsign-cy-bowl" = -81;
 };
-"_SMCP-el-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -113;
-};
-"_SMCP-hardsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -123;
-};
-"_SMCP-question-upper" = {
-period = -126;
-};
-"_SMCP-softsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -123;
-};
-"_SMCP-zhe-cy-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhe-cy.loclBGR-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhedescender-cy-wings" = {
-"_part.SMCP-stem" = 0;
-};
 "_UC-El-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -113;
 };
@@ -29101,9 +29079,6 @@ z = 0;
 "_part.LC-xheight-upper-stem" = {
 "_part.LC-baseline-lower-stem" = -94;
 "_part.LC-softsign-cy-bowl" = -94;
-};
-"_part.SMCP-ge-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -129;
 };
 "_part.UC-Ge-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -144;
@@ -29209,10 +29184,6 @@ hyphentwo = -166;
 period = -126;
 slash = -137;
 };
-degree.smcp = {
-comma = -132;
-period = -126;
-};
 divide = {
 parenright = -177;
 };
@@ -29241,12 +29212,10 @@ emdash = -57;
 emdash.case = -120;
 endash = 5;
 endash.case = -120;
-endash.smcp = -79;
 five = 14;
 four = 12;
 hyphen = 60;
 hyphen.case = 31;
-hyphen.smcp = 43;
 hyphentwo = -41;
 hyphentwo.case = -62;
 nine = 0;
@@ -29279,10 +29248,6 @@ questiondown = -202;
 };
 endash.case = {
 eight = -145;
-};
-endash.smcp = {
-eight = -97;
-nine = -82;
 };
 equal = {
 b = -102;
@@ -29338,7 +29303,6 @@ five = {
 degree = -42;
 eight = 24;
 hyphen.case = 49;
-hyphen.smcp = 55;
 percent.lf = -24;
 };
 fiveinferior = {
@@ -29353,15 +29317,12 @@ degree = -54;
 eight = 9;
 emdash = -49;
 emdash.case = -150;
-emdash.smcp = -111;
 endash = 0;
 endash.case = -150;
-endash.smcp = -111;
 five = 0;
 four = 31;
 hyphen = 85;
 hyphen.case = 51;
-hyphen.smcp = 69;
 hyphentwo = -25;
 hyphentwo.case = -75;
 one = 0;
@@ -29413,12 +29374,6 @@ nine = 10;
 pi = 79;
 ringhalfleft = -118;
 };
-hyphen.smcp = {
-Delta = -2;
-Z = -26;
-eight = 30;
-pi = 71;
-};
 hyphentwo = {
 Delta = -64;
 Z = -110;
@@ -29431,10 +29386,6 @@ hyphentwo.case = {
 Delta = -83;
 T = -79;
 Z = -128;
-};
-hyphentwo.smcp = {
-Delta = -72;
-Z = -121;
 };
 i = {
 equal.lf = -63;
@@ -29489,9 +29440,6 @@ comma = -132;
 minute = -37;
 period = -126;
 };
-minute.smcp = {
-minute.smcp = -47;
-};
 mu = {
 comma = -9;
 hyphen = 65;
@@ -29528,12 +29476,10 @@ degree = -33;
 eight = 0;
 emdash = -69;
 endash.case = -70;
-endash.smcp = -72;
 five = 0;
 four = 0;
 hyphen = 46;
 hyphen.case = 51;
-hyphen.smcp = 41;
 hyphentwo = -47;
 nine = 6;
 one = 0;
@@ -29568,17 +29514,14 @@ degree = -36;
 eight = 0;
 emdash = -103;
 emdash.case = -116;
-emdash.smcp = -95;
 endash = -9;
 endash.case = -116;
-endash.smcp = -95;
 five = 0;
 four = -16;
 hyphen = -3;
 hyphen.case = -4;
 hyphentwo = -74;
 hyphentwo.case = -75;
-hyphentwo.smcp = -74;
 one = 0;
 parenright = 0;
 percent.lf = 0;
@@ -29680,7 +29623,6 @@ fivesuperior = -126;
 foursuperior = -126;
 hyphen.case = -98;
 hyphentwo.case = -126;
-hyphentwo.smcp = -126;
 nine = -21;
 ninesuperior = -126;
 onesuperior = -126;
@@ -29713,7 +29655,6 @@ one = -74;
 pi = {
 comma = -19;
 hyphen = 38;
-hyphen.smcp = 22;
 hyphentwo = -60;
 mu = -69;
 parenright = -67;
@@ -29860,9 +29801,7 @@ seven = {
 degree = 15;
 eight = 0;
 hyphen.case = -16;
-hyphen.smcp = -28;
 hyphentwo.case = -99;
-hyphentwo.smcp = -110;
 plus.lf = -130;
 };
 six = {
@@ -29872,11 +29811,9 @@ degree = -28;
 eight = 19;
 emdash = -66;
 endash.case = -97;
-endash.smcp = -78;
 four = 0;
 hyphen = 49;
 hyphen.case = 33;
-hyphen.smcp = 36;
 hyphentwo = -45;
 hyphentwo.case = -54;
 one = 0;
@@ -29903,12 +29840,10 @@ eight = 42;
 emdash = -66;
 emdash.case = -134;
 endash.case = -134;
-endash.smcp = -88;
 five = 14;
 four = 12;
 hyphen = 57;
 hyphen.case = 23;
-hyphen.smcp = 38;
 hyphentwo = -43;
 hyphentwo.case = -69;
 minus.lf = -128;
@@ -29939,9 +29874,7 @@ two = {
 degree = -30;
 eight = 27;
 hyphen.case = -7;
-hyphen.smcp = 15;
 hyphentwo.case = -89;
-hyphentwo.smcp = -105;
 nine = 0;
 percent.lf = 0;
 plus.lf = -114;
@@ -29984,9 +29917,7 @@ zero = {
 degree = -38;
 eight = 4;
 hyphen.case = 51;
-hyphen.smcp = 42;
 hyphentwo.case = -44;
-hyphentwo.smcp = -44;
 percent.lf = 0;
 plus.lf = -74;
 };
@@ -42153,7 +42084,6 @@ K = 0;
 Z = 0;
 ampersand = -9;
 ampersand.case = 0;
-ampersand.smcp = 0;
 exclam = 0;
 };
 I = {
@@ -42281,27 +42211,6 @@ period = -149;
 "_LC-yat-cy-upper" = {
 "_part.LC-softsign-cy-bowl" = -79;
 };
-"_SMCP-el-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -141;
-};
-"_SMCP-hardsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -153;
-};
-"_SMCP-question-upper" = {
-period = -149;
-};
-"_SMCP-softsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -153;
-};
-"_SMCP-zhe-cy-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhe-cy.loclBGR-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhedescender-cy-wings" = {
-"_part.SMCP-stem" = 0;
-};
 "_UC-El-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -141;
 };
@@ -42353,9 +42262,6 @@ z = 0;
 "_part.LC-xheight-upper-stem" = {
 "_part.LC-baseline-lower-stem" = -115;
 "_part.LC-softsign-cy-bowl" = -113;
-};
-"_part.SMCP-ge-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -141;
 };
 "_part.UC-Ge-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -152;
@@ -42461,10 +42367,6 @@ hyphentwo = -196;
 period = -149;
 slash = -174;
 };
-degree.smcp = {
-comma = -157;
-period = -149;
-};
 divide = {
 parenright = -193;
 };
@@ -42493,12 +42395,10 @@ emdash = -43;
 emdash.case = -70;
 endash = 15;
 endash.case = -70;
-endash.smcp = -57;
 five = 9;
 four = 12;
 hyphen = 67;
 hyphen.case = 40;
-hyphen.smcp = 51;
 hyphentwo = -47;
 hyphentwo.case = -67;
 nine = 0;
@@ -42531,10 +42431,6 @@ questiondown = -208;
 };
 endash.case = {
 eight = -87;
-};
-endash.smcp = {
-eight = -70;
-nine = -73;
 };
 equal = {
 b = -87;
@@ -42590,7 +42486,6 @@ five = {
 degree = -48;
 eight = 9;
 hyphen.case = 61;
-hyphen.smcp = 66;
 percent.lf = -28;
 };
 fiveinferior = {
@@ -42605,15 +42500,12 @@ degree = -79;
 eight = 0;
 emdash = -37;
 emdash.case = -85;
-emdash.smcp = -50;
 endash = 40;
 endash.case = -85;
-endash.smcp = -50;
 five = 0;
 four = 23;
 hyphen = 101;
 hyphen.case = 74;
-hyphen.smcp = 86;
 hyphentwo = -17;
 hyphentwo.case = -58;
 one = -10;
@@ -42665,12 +42557,6 @@ nine = 17;
 pi = 100;
 ringhalfleft = -87;
 };
-hyphen.smcp = {
-Delta = -2;
-Z = -14;
-eight = 38;
-pi = 92;
-};
 hyphentwo = {
 Delta = -79;
 Z = -139;
@@ -42683,10 +42569,6 @@ hyphentwo.case = {
 Delta = -103;
 T = -60;
 Z = -129;
-};
-hyphentwo.smcp = {
-Delta = -88;
-Z = -151;
 };
 i = {
 equal.lf = -76;
@@ -42741,9 +42623,6 @@ comma = -157;
 minute = 0;
 period = -149;
 };
-minute.smcp = {
-minute.smcp = -58;
-};
 mu = {
 comma = 0;
 hyphen = 84;
@@ -42780,12 +42659,10 @@ degree = -35;
 eight = 0;
 emdash = -50;
 endash.case = -46;
-endash.smcp = -51;
 five = 0;
 four = 0;
 hyphen = 52;
 hyphen.case = 57;
-hyphen.smcp = 47;
 hyphentwo = -54;
 nine = 0;
 one = 0;
@@ -42820,17 +42697,14 @@ degree = -53;
 eight = 0;
 emdash = -92;
 emdash.case = -92;
-emdash.smcp = -99;
 endash = -4;
 endash.case = -92;
-endash.smcp = -99;
 five = 0;
 four = -24;
 hyphen = -7;
 hyphen.case = -7;
 hyphentwo = -94;
 hyphentwo.case = -94;
-hyphentwo.smcp = -94;
 one = 0;
 parenright = 9;
 percent.lf = 0;
@@ -42932,7 +42806,6 @@ fivesuperior = -149;
 foursuperior = -149;
 hyphen.case = -72;
 hyphentwo.case = -149;
-hyphentwo.smcp = -132;
 nine = -29;
 ninesuperior = -149;
 onesuperior = -149;
@@ -42965,7 +42838,6 @@ one = -72;
 pi = {
 comma = -25;
 hyphen = 50;
-hyphen.smcp = 46;
 hyphentwo = -56;
 mu = -80;
 parenright = -86;
@@ -43112,9 +42984,7 @@ seven = {
 degree = 27;
 eight = 0;
 hyphen.case = -12;
-hyphen.smcp = -26;
 hyphentwo.case = -120;
-hyphentwo.smcp = -135;
 plus.lf = -133;
 };
 six = {
@@ -43124,11 +42994,9 @@ degree = -49;
 eight = 0;
 emdash = -48;
 endash.case = -61;
-endash.smcp = -56;
 four = 0;
 hyphen = 56;
 hyphen.case = 40;
-hyphen.smcp = 43;
 hyphentwo = -52;
 hyphentwo.case = -63;
 one = -25;
@@ -43155,12 +43023,10 @@ eight = 10;
 emdash = -45;
 emdash.case = -74;
 endash.case = -74;
-endash.smcp = -60;
 five = 6;
 four = 8;
 hyphen = 66;
 hyphen.case = 37;
-hyphen.smcp = 49;
 hyphentwo = -48;
 hyphentwo.case = -70;
 minus.lf = -75;
@@ -43191,9 +43057,7 @@ two = {
 degree = -37;
 eight = 9;
 hyphen.case = 0;
-hyphen.smcp = 36;
 hyphentwo.case = -104;
-hyphentwo.smcp = -89;
 nine = 0;
 percent.lf = 0;
 plus.lf = -122;
@@ -43236,9 +43100,7 @@ zero = {
 degree = -43;
 eight = 0;
 hyphen.case = 58;
-hyphen.smcp = 49;
 hyphentwo.case = -50;
-hyphentwo.smcp = -51;
 percent.lf = 0;
 plus.lf = -50;
 };
@@ -55405,7 +55267,6 @@ K = 0;
 Z = 105;
 ampersand = -11;
 ampersand.case = 0;
-ampersand.smcp = 0;
 exclam = 29;
 };
 I = {
@@ -55533,27 +55394,6 @@ period = -141;
 "_LC-yat-cy-upper" = {
 "_part.LC-softsign-cy-bowl" = -182;
 };
-"_SMCP-el-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -139;
-};
-"_SMCP-hardsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -153;
-};
-"_SMCP-question-upper" = {
-period = -141;
-};
-"_SMCP-softsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -153;
-};
-"_SMCP-zhe-cy-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhe-cy.loclBGR-wings" = {
-"_part.SMCP-stem" = 12;
-};
-"_SMCP-zhedescender-cy-wings" = {
-"_part.SMCP-stem" = -5;
-};
 "_UC-El-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -139;
 };
@@ -55605,9 +55445,6 @@ z = 0;
 "_part.LC-xheight-upper-stem" = {
 "_part.LC-baseline-lower-stem" = -86;
 "_part.LC-softsign-cy-bowl" = -86;
-};
-"_part.SMCP-ge-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -225;
 };
 "_part.UC-Ge-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -216;
@@ -55713,10 +55550,6 @@ hyphentwo = -153;
 period = -141;
 slash = -148;
 };
-degree.smcp = {
-comma = -140;
-period = -141;
-};
 divide = {
 parenright = -204;
 };
@@ -55745,12 +55578,10 @@ emdash = -54;
 emdash.case = -101;
 endash = 13;
 endash.case = -90;
-endash.smcp = -85;
 five = 33;
 four = 0;
 hyphen = 52;
 hyphen.case = 43;
-hyphen.smcp = 38;
 hyphentwo = -15;
 hyphentwo.case = -44;
 nine = 26;
@@ -55783,10 +55614,6 @@ questiondown = -259;
 };
 endash.case = {
 eight = -106;
-};
-endash.smcp = {
-eight = -298;
-nine = -323;
 };
 equal = {
 b = -66;
@@ -55842,7 +55669,6 @@ five = {
 degree = -20;
 eight = 45;
 hyphen.case = 47;
-hyphen.smcp = 40;
 percent.lf = 0;
 };
 fiveinferior = {
@@ -55857,15 +55683,12 @@ degree = -43;
 eight = 30;
 emdash = -55;
 emdash.case = -128;
-emdash.smcp = -280;
 endash = 0;
 endash.case = -113;
-endash.smcp = -280;
 five = 11;
 four = 8;
 hyphen = 57;
 hyphen.case = 51;
-hyphen.smcp = 57;
 hyphentwo = -21;
 hyphentwo.case = -45;
 one = 77;
@@ -55917,12 +55740,6 @@ nine = 15;
 pi = 49;
 ringhalfleft = -132;
 };
-hyphen.smcp = {
-Delta = 0;
-Z = 0;
-eight = 36;
-pi = 30;
-};
 hyphentwo = {
 Delta = -59;
 Z = -85;
@@ -55935,10 +55752,6 @@ hyphentwo.case = {
 Delta = -81;
 T = -37;
 Z = -116;
-};
-hyphentwo.smcp = {
-Delta = -66;
-Z = -96;
 };
 i = {
 equal.lf = -64;
@@ -55993,9 +55806,6 @@ comma = -140;
 minute = -34;
 period = -141;
 };
-minute.smcp = {
-minute.smcp = -64;
-};
 mu = {
 comma = 0;
 hyphen = 46;
@@ -56032,12 +55842,10 @@ degree = -34;
 eight = 33;
 emdash = -80;
 endash.case = -58;
-endash.smcp = -83;
 five = 12;
 four = 0;
 hyphen = 29;
 hyphen.case = 33;
-hyphen.smcp = 22;
 hyphentwo = -32;
 nine = 0;
 one = 0;
@@ -56072,17 +55880,14 @@ degree = -34;
 eight = 34;
 emdash = -141;
 emdash.case = -105;
-emdash.smcp = -155;
 endash = -19;
 endash.case = -104;
-endash.smcp = -155;
 five = 12;
 four = -10;
 hyphen = -3;
 hyphen.case = 0;
 hyphentwo = -54;
 hyphentwo.case = -54;
-hyphentwo.smcp = -54;
 one = 0;
 parenright = 42;
 percent.lf = 0;
@@ -56184,7 +55989,6 @@ fivesuperior = -141;
 foursuperior = -141;
 hyphen.case = -36;
 hyphentwo.case = -141;
-hyphentwo.smcp = -141;
 nine = 0;
 ninesuperior = -141;
 onesuperior = -141;
@@ -56217,7 +56021,6 @@ one = -26;
 pi = {
 comma = -13;
 hyphen = 48;
-hyphen.smcp = 40;
 hyphentwo = -30;
 mu = -105;
 parenright = -109;
@@ -56364,9 +56167,7 @@ seven = {
 degree = 12;
 eight = 0;
 hyphen.case = 0;
-hyphen.smcp = -26;
 hyphentwo.case = -113;
-hyphentwo.smcp = -129;
 plus.lf = -175;
 };
 six = {
@@ -56376,11 +56177,9 @@ degree = -25;
 eight = 32;
 emdash = -74;
 endash.case = -90;
-endash.smcp = -95;
 four = 0;
 hyphen = 32;
 hyphen.case = 31;
-hyphen.smcp = 21;
 hyphentwo = -28;
 hyphentwo.case = -42;
 one = 0;
@@ -56407,12 +56206,10 @@ eight = 49;
 emdash = -61;
 emdash.case = -112;
 endash.case = -106;
-endash.smcp = -116;
 five = 32;
 four = 0;
 hyphen = 51;
 hyphen.case = 41;
-hyphen.smcp = 36;
 hyphentwo = -23;
 hyphentwo.case = -49;
 minus.lf = -287;
@@ -56443,9 +56240,7 @@ two = {
 degree = -31;
 eight = 54;
 hyphen.case = 46;
-hyphen.smcp = 52;
 hyphentwo.case = -68;
-hyphentwo.smcp = -34;
 nine = 28;
 percent.lf = 0;
 plus.lf = -156;
@@ -56488,9 +56283,7 @@ zero = {
 degree = -43;
 eight = 33;
 hyphen.case = 34;
-hyphen.smcp = 23;
 hyphentwo.case = -23;
-hyphentwo.smcp = -25;
 percent.lf = 0;
 plus.lf = -70;
 };
@@ -68657,7 +68450,6 @@ K = 0;
 Z = 0;
 ampersand = -13;
 ampersand.case = -30;
-ampersand.smcp = -31;
 exclam = 0;
 };
 I = {
@@ -68785,27 +68577,6 @@ period = -173;
 "_LC-yat-cy-upper" = {
 "_part.LC-softsign-cy-bowl" = -199;
 };
-"_SMCP-el-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -175;
-};
-"_SMCP-hardsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -185;
-};
-"_SMCP-question-upper" = {
-period = -173;
-};
-"_SMCP-softsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -185;
-};
-"_SMCP-zhe-cy-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhe-cy.loclBGR-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhedescender-cy-wings" = {
-"_part.SMCP-stem" = -27;
-};
 "_UC-El-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -175;
 };
@@ -68857,9 +68628,6 @@ z = 0;
 "_part.LC-xheight-upper-stem" = {
 "_part.LC-baseline-lower-stem" = -136;
 "_part.LC-softsign-cy-bowl" = -136;
-};
-"_part.SMCP-ge-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -245;
 };
 "_part.UC-Ge-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -234;
@@ -68965,10 +68733,6 @@ hyphentwo = -148;
 period = -148;
 slash = -148;
 };
-degree.smcp = {
-comma = -148;
-period = -148;
-};
 divide = {
 parenright = -236;
 };
@@ -68997,12 +68761,10 @@ emdash = -96;
 emdash.case = -104;
 endash = 22;
 endash.case = -104;
-endash.smcp = -128;
 five = 22;
 four = 21;
 hyphen = 91;
 hyphen.case = 74;
-hyphen.smcp = 77;
 hyphentwo = -31;
 hyphentwo.case = -55;
 nine = 0;
@@ -69035,10 +68797,6 @@ questiondown = -281;
 };
 endash.case = {
 eight = -160;
-};
-endash.smcp = {
-eight = -46;
-nine = -40;
 };
 equal = {
 b = -109;
@@ -69094,7 +68852,6 @@ five = {
 degree = 0;
 eight = 21;
 hyphen.case = 82;
-hyphen.smcp = 82;
 percent.lf = -25;
 };
 fiveinferior = {
@@ -69109,15 +68866,12 @@ degree = -29;
 eight = 5;
 emdash = -78;
 emdash.case = -135;
-emdash.smcp = -334;
 endash = 0;
 endash.case = -135;
-endash.smcp = -323;
 five = 9;
 four = 36;
 hyphen = 100;
 hyphen.case = 88;
-hyphen.smcp = 89;
 hyphentwo = -18;
 hyphentwo.case = -55;
 one = -2;
@@ -69169,12 +68923,6 @@ nine = 38;
 pi = 71;
 ringhalfleft = -108;
 };
-hyphen.smcp = {
-Delta = 116;
-Z = 88;
-eight = 173;
-pi = 170;
-};
 hyphentwo = {
 Delta = -75;
 Z = -98;
@@ -69187,10 +68935,6 @@ hyphentwo.case = {
 Delta = -90;
 T = -40;
 Z = -114;
-};
-hyphentwo.smcp = {
-Delta = -80;
-Z = -111;
 };
 i = {
 equal.lf = -111;
@@ -69245,9 +68989,6 @@ comma = -169;
 minute = -29;
 period = -173;
 };
-minute.smcp = {
-minute.smcp = -81;
-};
 mu = {
 comma = -4;
 hyphen = 66;
@@ -69284,12 +69025,10 @@ degree = -31;
 eight = 0;
 emdash = -115;
 endash.case = -66;
-endash.smcp = -120;
 five = 0;
 four = 0;
 hyphen = 64;
 hyphen.case = 67;
-hyphen.smcp = 56;
 hyphentwo = -55;
 nine = 0;
 one = 0;
@@ -69324,17 +69063,14 @@ degree = -22;
 eight = 0;
 emdash = -163;
 emdash.case = -125;
-emdash.smcp = -228;
 endash = 0;
 endash.case = -125;
-endash.smcp = -228;
 five = 0;
 four = 0;
 hyphen = 7;
 hyphen.case = 7;
 hyphentwo = -77;
 hyphentwo.case = -77;
-hyphentwo.smcp = -77;
 one = 0;
 parenright = -57;
 percent.lf = -20;
@@ -69436,7 +69172,6 @@ fivesuperior = -173;
 foursuperior = -173;
 hyphen.case = -28;
 hyphentwo.case = -173;
-hyphentwo.smcp = -173;
 nine = 0;
 ninesuperior = -173;
 onesuperior = -173;
@@ -69469,7 +69204,6 @@ one = -48;
 pi = {
 comma = -28;
 hyphen = 66;
-hyphen.smcp = 57;
 hyphentwo = -47;
 mu = -109;
 parenright = -126;
@@ -69616,9 +69350,7 @@ seven = {
 degree = 29;
 eight = -2;
 hyphen.case = -8;
-hyphen.smcp = -25;
 hyphentwo.case = -103;
-hyphentwo.smcp = -118;
 plus.lf = -168;
 };
 six = {
@@ -69628,11 +69360,9 @@ degree = -24;
 eight = 0;
 emdash = -113;
 endash.case = -101;
-endash.smcp = -136;
 four = 0;
 hyphen = 67;
 hyphen.case = 57;
-hyphen.smcp = 55;
 hyphentwo = -52;
 hyphentwo.case = -60;
 one = 0;
@@ -69659,12 +69389,10 @@ eight = 20;
 emdash = -105;
 emdash.case = -125;
 endash.case = -125;
-endash.smcp = -165;
 five = 21;
 four = 23;
 hyphen = 90;
 hyphen.case = 69;
-hyphen.smcp = 74;
 hyphentwo = -35;
 hyphentwo.case = -60;
 minus.lf = -307;
@@ -69695,9 +69423,7 @@ two = {
 degree = -26;
 eight = 21;
 hyphen.case = 81;
-hyphen.smcp = 85;
 hyphentwo.case = -61;
-hyphentwo.smcp = -31;
 nine = 0;
 percent.lf = 0;
 plus.lf = -123;
@@ -69740,9 +69466,7 @@ zero = {
 degree = -42;
 eight = 0;
 hyphen.case = 67;
-hyphen.smcp = 57;
 hyphentwo.case = -46;
-hyphentwo.smcp = -50;
 percent.lf = -12;
 plus.lf = -70;
 };
@@ -81909,7 +81633,6 @@ K = 0;
 Z = 5;
 ampersand = -40;
 ampersand.case = -19;
-ampersand.smcp = -9;
 exclam = -14;
 };
 I = {
@@ -82037,27 +81760,6 @@ period = -157;
 "_LC-yat-cy-upper" = {
 "_part.LC-softsign-cy-bowl" = -220;
 };
-"_SMCP-el-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -272;
-};
-"_SMCP-hardsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -280;
-};
-"_SMCP-question-upper" = {
-period = -157;
-};
-"_SMCP-softsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -270;
-};
-"_SMCP-zhe-cy-wings" = {
-"_part.SMCP-stem" = -31;
-};
-"_SMCP-zhe-cy.loclBGR-wings" = {
-"_part.SMCP-stem" = -11;
-};
-"_SMCP-zhedescender-cy-wings" = {
-"_part.SMCP-stem" = 0;
-};
 "_UC-El-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -268;
 };
@@ -82109,9 +81811,6 @@ z = -10;
 "_part.LC-xheight-upper-stem" = {
 "_part.LC-baseline-lower-stem" = -221;
 "_part.LC-softsign-cy-bowl" = -221;
-};
-"_part.SMCP-ge-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -236;
 };
 "_part.UC-Ge-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -243;
@@ -82217,10 +81916,6 @@ hyphentwo = -166;
 period = -157;
 slash = -112;
 };
-degree.smcp = {
-comma = -163;
-period = -157;
-};
 divide = {
 parenright = -185;
 };
@@ -82249,12 +81944,10 @@ emdash = -61;
 emdash.case = -93;
 endash = 13;
 endash.case = -93;
-endash.smcp = -75;
 five = 25;
 four = 22;
 hyphen = 0;
 hyphen.case = 0;
-hyphen.smcp = 0;
 hyphentwo = -80;
 hyphentwo.case = -106;
 nine = 0;
@@ -82287,10 +81980,6 @@ questiondown = -169;
 };
 endash.case = {
 eight = -89;
-};
-endash.smcp = {
-eight = -73;
-nine = -80;
 };
 equal = {
 b = -87;
@@ -82346,7 +82035,6 @@ five = {
 degree = -19;
 eight = 37;
 hyphen.case = 16;
-hyphen.smcp = 22;
 percent.lf = -38;
 };
 fiveinferior = {
@@ -82361,15 +82049,12 @@ degree = -22;
 eight = 30;
 emdash = -57;
 emdash.case = -90;
-emdash.smcp = -68;
 endash = 33;
 endash.case = -90;
-endash.smcp = -68;
 five = 30;
 four = 22;
 hyphen = 0;
 hyphen.case = 0;
-hyphen.smcp = 0;
 hyphentwo = -65;
 hyphentwo.case = -113;
 one = 0;
@@ -82421,12 +82106,6 @@ nine = 0;
 pi = 35;
 ringhalfleft = -151;
 };
-hyphen.smcp = {
-Delta = 0;
-Z = -25;
-eight = 0;
-pi = 33;
-};
 hyphentwo = {
 Delta = -96;
 Z = -127;
@@ -82439,10 +82118,6 @@ hyphentwo.case = {
 Delta = -112;
 T = -165;
 Z = -181;
-};
-hyphentwo.smcp = {
-Delta = -99;
-Z = -148;
 };
 i = {
 equal.lf = -81;
@@ -82497,9 +82172,6 @@ comma = -155;
 minute = 4;
 period = -155;
 };
-minute.smcp = {
-minute.smcp = 0;
-};
 mu = {
 comma = 23;
 hyphen = 0;
@@ -82536,12 +82208,10 @@ degree = 0;
 eight = 14;
 emdash = -61;
 endash.case = -57;
-endash.smcp = -62;
 five = 30;
 four = 24;
 hyphen = 0;
 hyphen.case = 0;
-hyphen.smcp = 0;
 hyphentwo = -85;
 nine = 18;
 one = 0;
@@ -82576,17 +82246,14 @@ degree = -23;
 eight = 0;
 emdash = -98;
 emdash.case = -97;
-emdash.smcp = -103;
 endash = 0;
 endash.case = -97;
-endash.smcp = -103;
 five = 19;
 four = -3;
 hyphen = 0;
 hyphen.case = -36;
 hyphentwo = -130;
 hyphentwo.case = -137;
-hyphentwo.smcp = -129;
 one = 0;
 parenright = -45;
 percent.lf = -53;
@@ -82688,7 +82355,6 @@ fivesuperior = -157;
 foursuperior = -157;
 hyphen.case = -101;
 hyphentwo.case = -157;
-hyphentwo.smcp = -157;
 nine = -17;
 ninesuperior = -157;
 onesuperior = -157;
@@ -82721,7 +82387,6 @@ one = -69;
 pi = {
 comma = 3;
 hyphen = 0;
-hyphen.smcp = 0;
 hyphentwo = -90;
 mu = -26;
 parenright = -58;
@@ -82868,9 +82533,7 @@ seven = {
 degree = 9;
 eight = 0;
 hyphen.case = -26;
-hyphen.smcp = -54;
 hyphentwo.case = -141;
-hyphentwo.smcp = -157;
 plus.lf = -104;
 };
 six = {
@@ -82880,11 +82543,9 @@ degree = 0;
 eight = 20;
 emdash = -60;
 endash.case = -70;
-endash.smcp = -66;
 four = 24;
 hyphen = 0;
 hyphen.case = 0;
-hyphen.smcp = 0;
 hyphentwo = -84;
 hyphentwo.case = -94;
 one = 0;
@@ -82911,12 +82572,10 @@ eight = 35;
 emdash = -61;
 emdash.case = -85;
 endash.case = -85;
-endash.smcp = -73;
 five = 32;
 four = 31;
 hyphen = 0;
 hyphen.case = 0;
-hyphen.smcp = 0;
 hyphentwo = -81;
 hyphentwo.case = -106;
 minus.lf = -85;
@@ -82947,9 +82606,7 @@ two = {
 degree = 0;
 eight = 36;
 hyphen.case = 0;
-hyphen.smcp = 0;
 hyphentwo.case = -111;
-hyphentwo.smcp = -117;
 nine = 23;
 percent.lf = 0;
 plus.lf = -61;
@@ -82992,9 +82649,7 @@ zero = {
 degree = 0;
 eight = 17;
 hyphen.case = 0;
-hyphen.smcp = 0;
 hyphentwo.case = -85;
-hyphentwo.smcp = -83;
 percent.lf = -20;
 plus.lf = -23;
 };
@@ -95161,7 +94816,6 @@ K = 0;
 Z = 0;
 ampersand = -32;
 ampersand.case = 0;
-ampersand.smcp = 0;
 exclam = -2;
 };
 I = {
@@ -95289,27 +94943,6 @@ period = -184;
 "_LC-yat-cy-upper" = {
 "_part.LC-softsign-cy-bowl" = -201;
 };
-"_SMCP-el-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -264;
-};
-"_SMCP-hardsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -275;
-};
-"_SMCP-question-upper" = {
-period = -184;
-};
-"_SMCP-softsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -275;
-};
-"_SMCP-zhe-cy-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhe-cy.loclBGR-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhedescender-cy-wings" = {
-"_part.SMCP-stem" = 20;
-};
 "_UC-El-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -268;
 };
@@ -95361,9 +94994,6 @@ z = -22;
 "_part.LC-xheight-upper-stem" = {
 "_part.LC-baseline-lower-stem" = -256;
 "_part.LC-softsign-cy-bowl" = -203;
-};
-"_part.SMCP-ge-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -230;
 };
 "_part.UC-Ge-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -228;
@@ -95469,10 +95099,6 @@ hyphentwo = -202;
 period = -184;
 slash = -138;
 };
-degree.smcp = {
-comma = -192;
-period = -184;
-};
 divide = {
 parenright = -163;
 };
@@ -95501,12 +95127,10 @@ emdash = -10;
 emdash.case = -65;
 endash = 0;
 endash.case = -65;
-endash.smcp = -60;
 five = 11;
 four = 17;
 hyphen = -48;
 hyphen.case = -77;
-hyphen.smcp = -57;
 hyphentwo = -61;
 hyphentwo.case = -87;
 nine = 0;
@@ -95539,10 +95163,6 @@ questiondown = -168;
 };
 endash.case = {
 eight = -55;
-};
-endash.smcp = {
-eight = -61;
-nine = -42;
 };
 equal = {
 b = -70;
@@ -95598,7 +95218,6 @@ five = {
 degree = 0;
 eight = 14;
 hyphen.case = -37;
-hyphen.smcp = -30;
 percent.lf = -31;
 };
 fiveinferior = {
@@ -95613,15 +95232,12 @@ degree = -36;
 eight = 10;
 emdash = -33;
 emdash.case = -57;
-emdash.smcp = -46;
 endash = 0;
 endash.case = -57;
-endash.smcp = -46;
 five = 35;
 four = 25;
 hyphen = 0;
 hyphen.case = -55;
-hyphen.smcp = -19;
 hyphentwo = -48;
 hyphentwo.case = -96;
 one = 0;
@@ -95673,12 +95289,6 @@ nine = -68;
 pi = 0;
 ringhalfleft = -187;
 };
-hyphen.smcp = {
-Delta = -77;
-Z = -109;
-eight = -60;
-pi = -5;
-};
 hyphentwo = {
 Delta = -78;
 Z = -134;
@@ -95691,10 +95301,6 @@ hyphentwo.case = {
 Delta = -98;
 T = -88;
 Z = -139;
-};
-hyphentwo.smcp = {
-Delta = -87;
-Z = -158;
 };
 i = {
 equal.lf = -50;
@@ -95749,9 +95355,6 @@ comma = -192;
 minute = 0;
 period = -184;
 };
-minute.smcp = {
-minute.smcp = -35;
-};
 mu = {
 comma = 42;
 hyphen = -13;
@@ -95788,12 +95391,10 @@ degree = 2;
 eight = 0;
 emdash = 0;
 endash.case = 0;
-endash.smcp = -7;
 five = 0;
 four = 31;
 hyphen = -38;
 hyphen.case = -33;
-hyphen.smcp = -40;
 hyphentwo = -59;
 nine = 0;
 one = 0;
@@ -95828,17 +95429,14 @@ degree = -35;
 eight = 0;
 emdash = -86;
 emdash.case = -88;
-emdash.smcp = -94;
 endash = -63;
 endash.case = -88;
-endash.smcp = -94;
 five = 0;
 four = 0;
 hyphen = -108;
 hyphen.case = -110;
 hyphentwo = -126;
 hyphentwo.case = -131;
-hyphentwo.smcp = -126;
 one = 0;
 parenright = -27;
 percent.lf = -60;
@@ -95940,7 +95538,6 @@ fivesuperior = -184;
 foursuperior = -184;
 hyphen.case = -184;
 hyphentwo.case = -184;
-hyphentwo.smcp = -181;
 nine = -21;
 ninesuperior = -184;
 onesuperior = -184;
@@ -95973,7 +95570,6 @@ one = -68;
 pi = {
 comma = 10;
 hyphen = -66;
-hyphen.smcp = -56;
 hyphentwo = -79;
 mu = -49;
 parenright = -69;
@@ -96120,9 +95716,7 @@ seven = {
 degree = 88;
 eight = -9;
 hyphen.case = -104;
-hyphen.smcp = -129;
 hyphentwo.case = -133;
-hyphentwo.smcp = -157;
 plus.lf = -76;
 };
 six = {
@@ -96132,11 +95726,9 @@ degree = 0;
 eight = 0;
 emdash = -8;
 endash.case = -32;
-endash.smcp = -17;
 four = 38;
 hyphen = -43;
 hyphen.case = -56;
-hyphen.smcp = -52;
 hyphentwo = -57;
 hyphentwo.case = -69;
 one = -16;
@@ -96163,12 +95755,10 @@ eight = 0;
 emdash = -10;
 emdash.case = -45;
 endash.case = -45;
-endash.smcp = -44;
 five = 11;
 four = 21;
 hyphen = -48;
 hyphen.case = -71;
-hyphen.smcp = -57;
 hyphentwo = -61;
 hyphentwo.case = -81;
 minus.lf = -59;
@@ -96199,9 +95789,7 @@ two = {
 degree = 3;
 eight = 21;
 hyphen.case = -71;
-hyphen.smcp = -69;
 hyphentwo.case = -90;
-hyphentwo.smcp = -82;
 nine = 0;
 percent.lf = -24;
 plus.lf = -6;
@@ -96244,9 +95832,7 @@ zero = {
 degree = 0;
 eight = 0;
 hyphen.case = -33;
-hyphen.smcp = -36;
 hyphentwo.case = -57;
-hyphentwo.smcp = -57;
 percent.lf = -21;
 plus.lf = 0;
 };
@@ -108413,7 +107999,6 @@ K = 0;
 Z = 9;
 ampersand = -25;
 ampersand.case = -22;
-ampersand.smcp = -43;
 exclam = 0;
 };
 I = {
@@ -108541,27 +108126,6 @@ period = -151;
 "_LC-yat-cy-upper" = {
 "_part.LC-softsign-cy-bowl" = -215;
 };
-"_SMCP-el-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -218;
-};
-"_SMCP-hardsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -227;
-};
-"_SMCP-question-upper" = {
-period = -151;
-};
-"_SMCP-softsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -227;
-};
-"_SMCP-zhe-cy-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhe-cy.loclBGR-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhedescender-cy-wings" = {
-"_part.SMCP-stem" = -16;
-};
 "_UC-El-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -208;
 };
@@ -108613,9 +108177,6 @@ z = 0;
 "_part.LC-xheight-upper-stem" = {
 "_part.LC-baseline-lower-stem" = -196;
 "_part.LC-softsign-cy-bowl" = -184;
-};
-"_part.SMCP-ge-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -250;
 };
 "_part.UC-Ge-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -241;
@@ -108721,10 +108282,6 @@ hyphentwo = -184;
 period = -151;
 slash = -175;
 };
-degree.smcp = {
-comma = -153;
-period = -151;
-};
 divide = {
 parenright = -188;
 };
@@ -108753,12 +108310,10 @@ emdash = -40;
 emdash.case = -78;
 endash = 39;
 endash.case = -78;
-endash.smcp = -63;
 five = 13;
 four = 10;
 hyphen = 43;
 hyphen.case = 27;
-hyphen.smcp = 31;
 hyphentwo = -30;
 hyphentwo.case = -51;
 nine = 0;
@@ -108791,10 +108346,6 @@ questiondown = -210;
 };
 endash.case = {
 eight = -83;
-};
-endash.smcp = {
-eight = -81;
-nine = -89;
 };
 equal = {
 b = -77;
@@ -108851,7 +108402,6 @@ five = {
 degree = -26;
 eight = 16;
 hyphen.case = 39;
-hyphen.smcp = 35;
 percent.lf = -62;
 };
 fiveinferior = {
@@ -108862,26 +108412,17 @@ angstrom = -93;
 e = -71;
 o = -71;
 };
-florin.smcp = {
-angstrom.smcp = -73;
-};
-florin.smcp.cv01 = {
-angstrom.smcp = -115;
-};
 four = {
 degree = -47;
 eight = 19;
 emdash = -42;
 emdash.case = -60;
-emdash.smcp = -63;
 endash = 47;
 endash.case = -60;
-endash.smcp = -63;
 five = 0;
 four = 0;
 hyphen = 48;
 hyphen.case = 36;
-hyphen.smcp = 39;
 hyphentwo = -25;
 hyphentwo.case = -34;
 one = 0;
@@ -108933,12 +108474,6 @@ nine = 0;
 pi = 22;
 ringhalfleft = -128;
 };
-hyphen.smcp = {
-Delta = 0;
-Z = 0;
-eight = 22;
-pi = 20;
-};
 hyphentwo = {
 Delta = -60;
 Z = -89;
@@ -108951,10 +108486,6 @@ hyphentwo.case = {
 Delta = -82;
 T = -80;
 Z = -118;
-};
-hyphentwo.smcp = {
-Delta = -67;
-Z = -100;
 };
 i = {
 equal.lf = -67;
@@ -109009,9 +108540,6 @@ comma = -153;
 minute = -15;
 period = -151;
 };
-minute.smcp = {
-minute.smcp = -62;
-};
 mu = {
 comma = -17;
 hyphen = 10;
@@ -109048,12 +108576,10 @@ degree = -41;
 eight = 0;
 emdash = -45;
 endash.case = -42;
-endash.smcp = -56;
 five = -7;
 four = 3;
 hyphen = 32;
 hyphen.case = 42;
-hyphen.smcp = 29;
 hyphentwo = -40;
 nine = 0;
 one = 0;
@@ -109088,17 +108614,14 @@ degree = -40;
 eight = 0;
 emdash = -73;
 emdash.case = -73;
-emdash.smcp = -79;
 endash = -11;
 endash.case = -73;
-endash.smcp = -79;
 five = 0;
 four = -9;
 hyphen = 0;
 hyphen.case = 0;
 hyphentwo = -74;
 hyphentwo.case = -74;
-hyphentwo.smcp = -74;
 one = 0;
 parenright = -48;
 percent.lf = -58;
@@ -109200,7 +108723,6 @@ fivesuperior = -151;
 foursuperior = -151;
 hyphen.case = -132;
 hyphentwo.case = -151;
-hyphentwo.smcp = -151;
 nine = -9;
 ninesuperior = -151;
 onesuperior = -151;
@@ -109233,7 +108755,6 @@ one = -69;
 pi = {
 comma = -24;
 hyphen = 14;
-hyphen.smcp = 6;
 hyphentwo = -35;
 mu = -106;
 parenright = -100;
@@ -109381,9 +108902,7 @@ seven = {
 degree = 0;
 eight = -26;
 hyphen.case = -37;
-hyphen.smcp = -60;
 hyphentwo.case = -134;
-hyphentwo.smcp = -146;
 plus.lf = -133;
 };
 six = {
@@ -109393,11 +108912,9 @@ degree = -33;
 eight = 9;
 emdash = -43;
 endash.case = -66;
-endash.smcp = -58;
 four = 6;
 hyphen = 29;
 hyphen.case = 16;
-hyphen.smcp = 12;
 hyphentwo = -39;
 hyphentwo.case = -44;
 one = 0;
@@ -109424,12 +108941,10 @@ eight = 31;
 emdash = -44;
 emdash.case = -83;
 endash.case = -83;
-endash.smcp = -69;
 five = 15;
 four = 0;
 hyphen = 43;
 hyphen.case = 24;
-hyphen.smcp = 30;
 hyphentwo = -31;
 hyphentwo.case = -58;
 minus.lf = -87;
@@ -109460,9 +108975,7 @@ two = {
 degree = -38;
 eight = 15;
 hyphen.case = 14;
-hyphen.smcp = 9;
 hyphentwo.case = -84;
-hyphentwo.smcp = -59;
 nine = 0;
 percent.lf = -41;
 plus.lf = -89;
@@ -109505,9 +109018,7 @@ zero = {
 degree = -49;
 eight = 0;
 hyphen.case = 43;
-hyphen.smcp = 34;
 hyphentwo.case = -39;
-hyphentwo.smcp = -39;
 percent.lf = -46;
 plus.lf = -53;
 };
@@ -121674,7 +121185,6 @@ K = 0;
 Z = 0;
 ampersand = -26;
 ampersand.case = -26;
-ampersand.smcp = -32;
 exclam = 0;
 };
 I = {
@@ -121802,27 +121312,6 @@ period = -184;
 "_LC-yat-cy-upper" = {
 "_part.LC-softsign-cy-bowl" = -251;
 };
-"_SMCP-el-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -263;
-};
-"_SMCP-hardsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -280;
-};
-"_SMCP-question-upper" = {
-period = -184;
-};
-"_SMCP-softsign-cy-stem" = {
-"_part.SMCP-softsign-cy-bowl" = -280;
-};
-"_SMCP-zhe-cy-wings" = {
-"_part.SMCP-stem" = 0;
-};
-"_SMCP-zhe-cy.loclBGR-wings" = {
-"_part.SMCP-stem" = -2;
-};
-"_SMCP-zhedescender-cy-wings" = {
-"_part.SMCP-stem" = -4;
-};
 "_UC-El-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -263;
 };
@@ -121874,9 +121363,6 @@ z = 0;
 "_part.LC-xheight-upper-stem" = {
 "_part.LC-baseline-lower-stem" = -219;
 "_part.LC-softsign-cy-bowl" = -205;
-};
-"_part.SMCP-ge-cy-upper" = {
-"_part.SMCP-softsign-cy-bowl" = -281;
 };
 "_part.UC-Ge-cy-upper" = {
 "_part.UC-Softsign-cy-bowl" = -276;
@@ -121982,10 +121468,6 @@ hyphentwo = -228;
 period = -184;
 slash = -216;
 };
-degree.smcp = {
-comma = -188;
-period = -184;
-};
 divide = {
 parenright = -213;
 };
@@ -122014,12 +121496,10 @@ emdash = -48;
 emdash.case = -79;
 endash = 15;
 endash.case = -79;
-endash.smcp = -67;
 five = 18;
 four = 0;
 hyphen = 37;
 hyphen.case = 0;
-hyphen.smcp = 12;
 hyphentwo = -41;
 hyphentwo.case = -54;
 nine = -12;
@@ -122052,10 +121532,6 @@ questiondown = -240;
 };
 endash.case = {
 eight = -79;
-};
-endash.smcp = {
-eight = -88;
-nine = -94;
 };
 equal = {
 b = -71;
@@ -122112,7 +121588,6 @@ five = {
 degree = -40;
 eight = 15;
 hyphen.case = 12;
-hyphen.smcp = 29;
 percent.lf = -60;
 };
 fiveinferior = {
@@ -122123,26 +121598,17 @@ angstrom = 0;
 e = -85;
 o = -85;
 };
-florin.smcp = {
-angstrom.smcp = 0;
-};
-florin.smcp.cv01 = {
-angstrom.smcp = 0;
-};
 four = {
 degree = -70;
 eight = 17;
 emdash = -51;
 emdash.case = -73;
-emdash.smcp = -79;
 endash = 33;
 endash.case = -73;
-endash.smcp = -79;
 five = 8;
 four = 8;
 hyphen = 48;
 hyphen.case = 19;
-hyphen.smcp = 29;
 hyphentwo = -33;
 hyphentwo.case = -41;
 one = -15;
@@ -122194,12 +121660,6 @@ nine = 0;
 pi = 46;
 ringhalfleft = -143;
 };
-hyphen.smcp = {
-Delta = 0;
-Z = 0;
-eight = 0;
-pi = 39;
-};
 hyphentwo = {
 Delta = -79;
 Z = -117;
@@ -122212,10 +121672,6 @@ hyphentwo.case = {
 Delta = -106;
 T = -92;
 Z = -134;
-};
-hyphentwo.smcp = {
-Delta = -87;
-Z = -130;
 };
 i = {
 equal.lf = -70;
@@ -122270,9 +121726,6 @@ comma = -188;
 minute = -46;
 period = -184;
 };
-minute.smcp = {
-minute.smcp = -87;
-};
 mu = {
 comma = -4;
 hyphen = 19;
@@ -122309,12 +121762,10 @@ degree = -53;
 eight = -3;
 emdash = -53;
 endash.case = -51;
-endash.smcp = -61;
 five = 0;
 four = 0;
 hyphen = 31;
 hyphen.case = 33;
-hyphen.smcp = 23;
 hyphentwo = -51;
 nine = -2;
 one = -39;
@@ -122349,17 +121800,14 @@ degree = -53;
 eight = 0;
 emdash = -81;
 emdash.case = -81;
-emdash.smcp = -96;
 endash = -23;
 endash.case = -81;
-endash.smcp = -96;
 five = 0;
 four = 0;
 hyphen = 0;
 hyphen.case = 0;
 hyphentwo = -90;
 hyphentwo.case = -90;
-hyphentwo.smcp = -90;
 one = 0;
 parenright = -55;
 percent.lf = -46;
@@ -122461,7 +121909,6 @@ fivesuperior = -184;
 foursuperior = -184;
 hyphen.case = -58;
 hyphentwo.case = -184;
-hyphentwo.smcp = -115;
 nine = -18;
 ninesuperior = -184;
 onesuperior = -184;
@@ -122494,7 +121941,6 @@ one = -77;
 pi = {
 comma = -20;
 hyphen = 40;
-hyphen.smcp = 40;
 hyphentwo = -42;
 mu = -114;
 parenright = -129;
@@ -122642,9 +122088,7 @@ seven = {
 degree = 0;
 eight = -24;
 hyphen.case = -47;
-hyphen.smcp = -73;
 hyphentwo.case = -160;
-hyphentwo.smcp = -188;
 plus.lf = -131;
 };
 six = {
@@ -122654,11 +122098,9 @@ degree = -48;
 eight = 0;
 emdash = -53;
 endash.case = -76;
-endash.smcp = -67;
 four = 0;
 hyphen = 27;
 hyphen.case = 0;
-hyphen.smcp = 0;
 hyphentwo = -50;
 hyphentwo.case = -57;
 one = -26;
@@ -122685,12 +122127,10 @@ eight = 18;
 emdash = -56;
 emdash.case = -77;
 endash.case = -77;
-endash.smcp = -81;
 five = 17;
 four = 0;
 hyphen = 28;
 hyphen.case = 0;
-hyphen.smcp = 0;
 hyphentwo = -42;
 hyphentwo.case = -63;
 minus.lf = -90;
@@ -122721,9 +122161,7 @@ two = {
 degree = -48;
 eight = 25;
 hyphen.case = 0;
-hyphen.smcp = 7;
 hyphentwo.case = -82;
-hyphentwo.smcp = -71;
 nine = -5;
 percent.lf = -26;
 plus.lf = -56;
@@ -122766,9 +122204,7 @@ zero = {
 degree = -59;
 eight = 0;
 hyphen.case = 34;
-hyphen.smcp = 24;
 hyphentwo.case = -49;
-hyphentwo.smcp = -49;
 percent.lf = -36;
 plus.lf = -44;
 };
