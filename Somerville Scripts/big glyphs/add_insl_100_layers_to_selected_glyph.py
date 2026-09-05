@@ -1,10 +1,12 @@
-#MenuTitle: Add INSL=100 Layers to Selected Glyph
+#MenuTitle: Add INSL=100 Layers to Selected Glyphs
 # -*- coding: utf-8 -*-
 
-"""Add one INSL=100 intermediate per master to the selected glyph.
+"""Add one INSL=100 intermediate per master to each selected glyph.
 
 Each new layer is copied directly from its master layer. Smart-component
 height layers and height pole mappings are intentionally ignored.
+Components in new and existing INSL=100 layers get Integral Slant=100,
+preserving their other smart-component values.
 """
 
 import uuid
@@ -145,11 +147,27 @@ def existing_target(glyph, font, master, coordinates):
     return None
 
 
-def selected_glyph(font):
-    selected_layers = list(font.selectedLayers or [])
-    if not selected_layers:
-        return None
-    return selected_layers[0].parent
+def selected_glyphs(font):
+    glyphs = []
+    seen = set()
+    for layer in font.selectedLayers or []:
+        glyph = layer.parent
+        if glyph is not None and glyph.name not in seen:
+            seen.add(glyph.name)
+            glyphs.append(glyph)
+    return glyphs
+
+
+def set_component_slant(layer, insl_axis_id):
+    updated = 0
+    for component in layer.components:
+        values = dict(component.smartComponentValues or {})
+        if values.get(insl_axis_id) == TARGET_VALUE:
+            continue
+        values[insl_axis_id] = TARGET_VALUE
+        component.smartComponentValues = values
+        updated += 1
+    return updated
 
 
 def main():
@@ -161,9 +179,9 @@ def main():
         Message("No Font Open", "Open a font before running this script.")
         return
 
-    glyph = selected_glyph(font)
-    if glyph is None:
-        Message("No Glyph Selected", "Select a glyph before running this script.")
+    glyphs = selected_glyphs(font)
+    if not glyphs:
+        Message("No Glyph Selected", "Select one or more glyphs before running this script.")
         return
 
     insl_axis = find_axis(font)
@@ -177,49 +195,57 @@ def main():
 
     created = 0
     kept = 0
-    undo_started = False
+    components_updated = 0
     font.disableUpdateInterface()
     try:
-        try:
-            glyph.beginUndo()
-            undo_started = True
-        except Exception:
-            pass
-
-        for master in font.masters:
-            source = glyph.layers[master.id]
-            if source is None:
-                print("SKIPPED %s: no master layer" % master.name)
-                continue
-
-            coordinates = master_coordinates(font, master)
-            coordinates[insl_axis_id] = TARGET_VALUE
-            current = existing_target(glyph, font, master, coordinates)
-            if current is not None:
-                kept += 1
-                print("KEPT %s: %s" % (master.name, current.name or current.layerId))
-                continue
-
-            new_layer = source.copy()
-            new_layer.layerId = str(uuid.uuid4()).upper()
-            new_layer.associatedMasterId = master.id
-            new_layer.name = "%s INSL=100" % master.name
-            set_layer_attribute(new_layer, "coordinates", coordinates)
-            glyph.layers.append(new_layer)
-            created += 1
-            print("CREATED %s" % new_layer.name)
-    finally:
-        if undo_started:
+        for glyph in glyphs:
+            print("GLYPH %s" % glyph.name)
+            undo_started = False
             try:
-                glyph.endUndo()
-            except Exception:
-                pass
+                try:
+                    glyph.beginUndo()
+                    undo_started = True
+                except Exception:
+                    pass
+
+                for master in font.masters:
+                    source = glyph.layers[master.id]
+                    if source is None:
+                        print("SKIPPED %s: no master layer" % master.name)
+                        continue
+
+                    coordinates = master_coordinates(font, master)
+                    coordinates[insl_axis_id] = TARGET_VALUE
+                    current = existing_target(glyph, font, master, coordinates)
+                    if current is not None:
+                        components_updated += set_component_slant(current, insl_axis_id)
+                        kept += 1
+                        print("KEPT %s: %s" % (master.name, current.name or current.layerId))
+                        continue
+
+                    new_layer = source.copy()
+                    new_layer.layerId = str(uuid.uuid4()).upper()
+                    new_layer.associatedMasterId = master.id
+                    new_layer.name = "%s INSL=100" % master.name
+                    set_layer_attribute(new_layer, "coordinates", coordinates)
+                    glyph.layers.append(new_layer)
+                    components_updated += set_component_slant(new_layer, insl_axis_id)
+                    created += 1
+                    print("CREATED %s" % new_layer.name)
+            finally:
+                if undo_started:
+                    try:
+                        glyph.endUndo()
+                    except Exception:
+                        pass
+    finally:
         font.enableUpdateInterface()
 
     Message(
         "INSL=100 Layers",
-        "Created %i layer(s) in %s; %i matching layer(s) already existed."
-        % (created, glyph.name, kept),
+        "Created %i layer(s) across %i selected glyph(s); %i matching layer(s) already existed. "
+        "Set Integral Slant=100 on %i component(s)."
+        % (created, len(glyphs), kept, components_updated),
     )
 
 
