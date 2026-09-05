@@ -32,7 +32,7 @@ window.SomervilleSnippets = [
     title: String.raw`Latin Alphabets`,
     comment: String.raw``,
     tex: String.raw`
-$$\mathrm{Test ABCDEFGHIJKLMNOPQRSTUVWXYZ}$$
+$$\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$$
 $$\mathrm{abcdefghijklmnopqrstuvwxyz}$$
 $$ABCDEFGHIJKLMNOPQRSTUVWXYZ$$
 $$abcdefghijklmnopqrstuvwxyz$$
@@ -49,18 +49,50 @@ $$\mathbf{0123456789}$$
     title: String.raw`Latin Alphabet Superscripts`,
     comment: String.raw``,
     tex: String.raw`
-$$\mathrm{2^{ABCDEFGHIJKLMNOPQRSTUVWXYZ}}$$
-$$\mathrm{2^{abcdefghijklmnopqrstuvwxyz}}$$
-$$2^{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$$
-$$2^{abcdefghijklmnopqrstuvwxyz}$$
-$$2^{\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}}$$
-$$2^{\mathbf{abcdefghijklmnopqrstuvwxyz}}$$
-$$2^{\boldsymbol{ABCDEFGHIJKLMNOPQRSTUVWXYZ}}$$
-$$2^{\boldsymbol{abcdefghijklmnopqrstuvwxyz}}$$
-$$2^{0123456789}$$
-$$2^{\mathbf{0123456789}}$$
+$$\mathrm{□^{ABCDEFGHIJKLMNOPQRSTUVWXYZ}}$$
+$$\mathrm{□^{abcdefghijklmnopqrstuvwxyz}}$$
+$$□^{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$$
+$$□^{abcdefghijklmnopqrstuvwxyz}$$
+$$□^{\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}}$$
+$$□^{\mathbf{abcdefghijklmnopqrstuvwxyz}}$$
+$$□^{\boldsymbol{ABCDEFGHIJKLMNOPQRSTUVWXYZ}}$$
+$$□^{\boldsymbol{abcdefghijklmnopqrstuvwxyz}}$$
+$$□^{0123456789}$$
+$$□^{\mathbf{0123456789}}$$
     `,
     placeholders: [],
+  },
+    {
+    title: String.raw`Latin Alphabet SuperSuperscripts`,
+    comment: String.raw``,
+    tex: String.raw`
+$$\mathrm{□^{□^{ABCDEFGHIJKLMNOPQRSTUVWXYZ}}}$$
+$$\mathrm{□^{□^{abcdefghijklmnopqrstuvwxyz}}}$$
+$$□^{□^{ABCDEFGHIJKLMNOPQRSTUVWXYZ}}$$
+$$□^{□^{abcdefghijklmnopqrstuvwxyz}}$$
+$$□^{□^{\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}}}$$
+$$□^{□^{\mathbf{abcdefghijklmnopqrstuvwxyz}}}$$
+$$□^{□^{\boldsymbol{ABCDEFGHIJKLMNOPQRSTUVWXYZ}}}$$
+$$□^{□^{\boldsymbol{abcdefghijklmnopqrstuvwxyz}}}$$
+$$□^{□^{0123456789}}$$
+$$□^{□^{\mathbf{0123456789}}}$$
+    `,
+    placeholders: [],
+  },
+  {
+    title: String.raw`Latin Alphabet Paired Superscripts`,
+    comment: String.raw``,
+    tex: String.raw`$$\ph$$`,
+    placeholders: [
+      { label: "Upper", value: String.raw`\mathrm{A^{A}B^{B}C^{C}D^{D}E^{E}F^{F}G^{G}H^{H}I^{I}J^{J}K^{K}L^{L}M^{M}N^{N}O^{O}P^{P}Q^{Q}R^{R}S^{S}T^{T}U^{U}V^{V}W^{W}X^{X}Y^{Y}Z^{Z}}` },
+      { label: "Lower", value: String.raw`\mathrm{a^{a}b^{b}c^{c}d^{d}e^{e}f^{f}g^{g}h^{h}i^{i}j^{j}k^{k}l^{l}m^{m}n^{n}o^{o}p^{p}q^{q}r^{r}s^{s}t^{t}u^{u}v^{v}w^{w}x^{x}y^{y}z^{z}}` },
+      { label: "Italic Upper", value: String.raw`\mathit{A^{A}B^{B}C^{C}D^{D}E^{E}F^{F}G^{G}H^{H}I^{I}J^{J}K^{K}L^{L}M^{M}N^{N}O^{O}P^{P}Q^{Q}R^{R}S^{S}T^{T}U^{U}V^{V}W^{W}X^{X}Y^{Y}Z^{Z}}` },
+      { label: "Italic Lower", value: String.raw`\mathit{a^{a}b^{b}c^{c}d^{d}e^{e}f^{f}g^{g}h^{h}i^{i}j^{j}k^{k}l^{l}m^{m}n^{n}o^{o}p^{p}q^{q}r^{r}s^{s}t^{t}u^{u}v^{v}w^{w}x^{x}y^{y}z^{z}}` },
+      { label: "Bold Upper", value: String.raw`\mathbf{A}^{\mathbf{A}}\mathbf{B}^{\mathbf{B}}\mathbf{C}^{\mathbf{C}}\mathbf{D}^{\mathbf{D}}\mathbf{E}^{\mathbf{E}}\mathbf{F}^{\mathbf{F}}\mathbf{G}^{\mathbf{G}}\mathbf{H}^{\mathbf{H}}\mathbf{I}^{\mathbf{I}}\mathbf{J}^{\mathbf{J}}\mathbf{K}^{\mathbf{K}}\mathbf{L}^{\mathbf{L}}\mathbf{M}^{\mathbf{M}}\mathbf{N}^{\mathbf{N}}\mathbf{O}^{\mathbf{O}}\mathbf{P}^{\mathbf{P}}\mathbf{Q}^{\mathbf{Q}}\mathbf{R}^{\mathbf{R}}\mathbf{S}^{\mathbf{S}}\mathbf{T}^{\mathbf{T}}\mathbf{U}^{\mathbf{U}}\mathbf{V}^{\mathbf{V}}\mathbf{W}^{\mathbf{W}}\mathbf{X}^{\mathbf{X}}\mathbf{Y}^{\mathbf{Y}}\mathbf{Z}^{\mathbf{Z}}` },
+      { label: "Bold Lower", value: String.raw`\mathbf{a}^{\mathbf{a}}\mathbf{b}^{\mathbf{b}}\mathbf{c}^{\mathbf{c}}\mathbf{d}^{\mathbf{d}}\mathbf{e}^{\mathbf{e}}\mathbf{f}^{\mathbf{f}}\mathbf{g}^{\mathbf{g}}\mathbf{h}^{\mathbf{h}}\mathbf{i}^{\mathbf{i}}\mathbf{j}^{\mathbf{j}}\mathbf{k}^{\mathbf{k}}\mathbf{l}^{\mathbf{l}}\mathbf{m}^{\mathbf{m}}\mathbf{n}^{\mathbf{n}}\mathbf{o}^{\mathbf{o}}\mathbf{p}^{\mathbf{p}}\mathbf{q}^{\mathbf{q}}\mathbf{r}^{\mathbf{r}}\mathbf{s}^{\mathbf{s}}\mathbf{t}^{\mathbf{t}}\mathbf{u}^{\mathbf{u}}\mathbf{v}^{\mathbf{v}}\mathbf{w}^{\mathbf{w}}\mathbf{x}^{\mathbf{x}}\mathbf{y}^{\mathbf{y}}\mathbf{z}^{\mathbf{z}}` },
+      { label: "Bold Italic Upper", value: String.raw`\boldsymbol{A}^{\boldsymbol{A}}\boldsymbol{B}^{\boldsymbol{B}}\boldsymbol{C}^{\boldsymbol{C}}\boldsymbol{D}^{\boldsymbol{D}}\boldsymbol{E}^{\boldsymbol{E}}\boldsymbol{F}^{\boldsymbol{F}}\boldsymbol{G}^{\boldsymbol{G}}\boldsymbol{H}^{\boldsymbol{H}}\boldsymbol{I}^{\boldsymbol{I}}\boldsymbol{J}^{\boldsymbol{J}}\boldsymbol{K}^{\boldsymbol{K}}\boldsymbol{L}^{\boldsymbol{L}}\boldsymbol{M}^{\boldsymbol{M}}\boldsymbol{N}^{\boldsymbol{N}}\boldsymbol{O}^{\boldsymbol{O}}\boldsymbol{P}^{\boldsymbol{P}}\boldsymbol{Q}^{\boldsymbol{Q}}\boldsymbol{R}^{\boldsymbol{R}}\boldsymbol{S}^{\boldsymbol{S}}\boldsymbol{T}^{\boldsymbol{T}}\boldsymbol{U}^{\boldsymbol{U}}\boldsymbol{V}^{\boldsymbol{V}}\boldsymbol{W}^{\boldsymbol{W}}\boldsymbol{X}^{\boldsymbol{X}}\boldsymbol{Y}^{\boldsymbol{Y}}\boldsymbol{Z}^{\boldsymbol{Z}}` },
+      { label: "Bold Italic Lower", value: String.raw`\boldsymbol{a}^{\boldsymbol{a}}\boldsymbol{b}^{\boldsymbol{b}}\boldsymbol{c}^{\boldsymbol{c}}\boldsymbol{d}^{\boldsymbol{d}}\boldsymbol{e}^{\boldsymbol{e}}\boldsymbol{f}^{\boldsymbol{f}}\boldsymbol{g}^{\boldsymbol{g}}\boldsymbol{h}^{\boldsymbol{h}}\boldsymbol{i}^{\boldsymbol{i}}\boldsymbol{j}^{\boldsymbol{j}}\boldsymbol{k}^{\boldsymbol{k}}\boldsymbol{l}^{\boldsymbol{l}}\boldsymbol{m}^{\boldsymbol{m}}\boldsymbol{n}^{\boldsymbol{n}}\boldsymbol{o}^{\boldsymbol{o}}\boldsymbol{p}^{\boldsymbol{p}}\boldsymbol{q}^{\boldsymbol{q}}\boldsymbol{r}^{\boldsymbol{r}}\boldsymbol{s}^{\boldsymbol{s}}\boldsymbol{t}^{\boldsymbol{t}}\boldsymbol{u}^{\boldsymbol{u}}\boldsymbol{v}^{\boldsymbol{v}}\boldsymbol{w}^{\boldsymbol{w}}\boldsymbol{x}^{\boldsymbol{x}}\boldsymbol{y}^{\boldsymbol{y}}\boldsymbol{z}^{\boldsymbol{z}}` },
+    ],
   },
   {
     title: String.raw`Primes`,
@@ -110,7 +142,14 @@ $$\mathbb{0123456789}$$
     tex: String.raw`
 $$\ph\frac{\ph_{i=0}^n \frac{\ph_{j=0}^m a_n}{\ph_{j=0}^m b_n}}{\ph_{i=0}^n \frac{\ph_{j=0}^m a_n}{\ph_{j=0}^m u_n}}$$
     `,
-    placeholders: ["\\sum","\\bigoplus","\\bigotimes","\\bigodot","\\prod","\\coprod"],
+    placeholders: [
+      { label: "∑", value: "\\sum" },
+      { label: "⨁", value: "\\bigoplus" },
+      { label: "⨂", value: "\\bigotimes" },
+      { label: "⨀", value: "\\bigodot" },
+      { label: "∏", value: "\\prod" },
+      { label: "∐", value: "\\coprod" },
+    ],
   },
 
       {
@@ -128,7 +167,14 @@ $$\prod\frac{\bigodot_{i=0}^n \frac{\ph_{j=0}^m a_n}{\coprod_{j=0}^m b_n}}{\sum_
 
 $$\ph\frac{\bigoplus_{i=0}^n \frac{\sum_{j=0}^m a_n}{\prod_{j=0}^m b_n}}{\bigotimes_{i=0}^n \frac{\bigodot_{j=0}^m a_n}{\ph_{j=0}^m u_n}}\qquad\bigodot\frac{\prod_{i=0}^n \frac{\bigotimes_{j=0}^m a_n}{\ph_{j=0}^m b_n}}{\bigoplus_{i=0}^n \frac{\sum_{j=0}^m a_n}{\coprod_{j=0}^m u_n}}$$
     `,
-    placeholders: ["\\sum","\\bigoplus","\\bigotimes","\\bigodot","\\prod","\\coprod"],
+    placeholders: [
+      { label: "∑", value: "\\sum" },
+      { label: "⨁", value: "\\bigoplus" },
+      { label: "⨂", value: "\\bigotimes" },
+      { label: "⨀", value: "\\bigodot" },
+      { label: "∏", value: "\\prod" },
+      { label: "∐", value: "\\coprod" },
+    ],
   },
   {
     title: String.raw`radicals`,
