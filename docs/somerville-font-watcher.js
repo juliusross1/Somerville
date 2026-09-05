@@ -4,11 +4,11 @@
  * This script keeps the Somerville MathML test page in sync with the local
  * SomervilleVF-withMathtable.ttf file while the page is open.
  *
- * The companion Python server exposes the font's modification time at
- * /__somerville_font_status. This script checks for that endpoint once. When it
- * is available, the script polls it and loads changed fonts through the FontFace
- * API with a cache-busting query string. Otherwise, the page stays in static
- * mode and works with the font supplied by the web server.
+ * Browsers do not let a file:// page watch the filesystem directly, and they
+ * are often aggressive about caching font URLs. The companion Python server
+ * exposes the font's modification time at /__somerville_font_status. This script
+ * polls that endpoint, and when the timestamp changes it loads the font through
+ * the FontFace API with a cache-busting query string.
  *
  * The page is not reloaded. Instead, we install the new font under a versioned
  * family name and ask the existing page code to reapply its current MathML
@@ -30,38 +30,6 @@
   let toastMode = null;
   let lastFailedBuildKey = null;
   let displayedLoadedStatus = false;
-  let onServerUnavailable = null;
-
-  function stopPolling() {
-    if (!pollTimer) {
-      return;
-    }
-
-    window.clearInterval(pollTimer);
-    pollTimer = null;
-  }
-
-  function showStaticMode() {
-    const statusElement = document.getElementById("font-status");
-
-    if (statusElement) {
-      statusElement.textContent = "Font loaded: static mode — automatic updates unavailable";
-    }
-
-    hideBuildRunningToast();
-  }
-
-  function enterStaticMode(error) {
-    stopPolling();
-    window.SomervilleServerAvailable = false;
-    showStaticMode();
-
-    if (typeof onServerUnavailable === "function") {
-      onServerUnavailable();
-    }
-
-    console.info("Somerville companion server is unavailable; continuing in static mode.", error);
-  }
 
   function hideRefreshToast() {
     const toast = document.getElementById("font-refresh-toast");
@@ -311,29 +279,20 @@
 
   async function poll(statusUrl) {
     if (reloadInFlight) {
-      return true;
+      return;
     }
 
     reloadInFlight = true;
 
-    let status;
-
     try {
-      status = await getFontStatus(statusUrl);
-    } catch (error) {
-      reloadInFlight = false;
-      enterStaticMode(error);
-      return false;
-    }
-
-    try {
+      const status = await getFontStatus(statusUrl);
       updateBuildRunningToast(status.build);
       updateBuildFailureToast(status.build);
 
       if (!lastSignature) {
         lastSignature = status.signature;
-        await loadVersionedFont(status);
-        return true;
+        updateStatusDisplay(status, displayedLoadedStatus);
+        return;
       }
 
       if (status.signature !== lastSignature) {
@@ -343,40 +302,32 @@
         updateStatusDisplay(status, displayedLoadedStatus);
       }
     } catch (error) {
-      console.warn("Somerville font watcher could not load the updated font.", error);
+      console.warn("Somerville font watcher could not check for updates.", error);
     } finally {
       reloadInFlight = false;
     }
-
-    return true;
   }
 
-  async function start(options = {}) {
+  function start(options = {}) {
     const statusUrl = options.statusUrl || DEFAULT_STATUS_URL;
     const pollIntervalMs = options.pollIntervalMs || DEFAULT_POLL_INTERVAL_MS;
-    const onServerAvailable = options.onServerAvailable;
-    onServerUnavailable = options.onServerUnavailable;
 
-    stopPolling();
+    if (!("FontFace" in window)) {
+      console.warn("Somerville font watcher needs the FontFace API.");
+      return;
+    }
+
+    if (pollTimer) {
+      window.clearInterval(pollTimer);
+    }
 
     const toast = document.getElementById("font-refresh-toast");
     if (toast) {
       toast.addEventListener("click", hideRefreshToast);
     }
 
-    const serverAvailable = await poll(statusUrl);
-
-    if (!serverAvailable) {
-      return false;
-    }
-
-    window.SomervilleServerAvailable = true;
-    if (typeof onServerAvailable === "function") {
-      onServerAvailable();
-    }
-
+    poll(statusUrl);
     pollTimer = window.setInterval(() => poll(statusUrl), pollIntervalMs);
-    return true;
   }
 
   window.SomervilleFontWatcher = { start };

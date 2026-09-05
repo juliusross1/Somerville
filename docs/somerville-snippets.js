@@ -63,14 +63,6 @@ $$2^{\mathbf{0123456789}}$$
     placeholders: [],
   },
   {
-    title: String.raw`Primes`,
-    comment: String.raw``,
-    tex: String.raw`
-$$\ph' + \ph'' + \ph'''$$
-    `,
-    placeholders: ["f", "y", "h", "M"],
-  },
-  {
     title: String.raw`Greek Alphabet`,
     comment: String.raw``,
     tex: String.raw`

@@ -27,7 +27,7 @@
       <label>
         Optical Size <span class="value"><input id="opsz-value" type="text" inputmode="decimal" value="12" aria-label="Optical Size value"></span>
         <span id="opsz-name" class="axis-name">Regular</span>
-        <input id="opsz" type="range" min="5" max="96" value="12" step="1">
+        <input id="opsz" type="range" min="5" max="1200" value="12" step="1">
       </label>
 
       <label class="lock-control" title="Lock optical size and font size">
@@ -103,7 +103,7 @@
         <input id="grid-size" type="range" min="0.1" max="1" value="1" step="0.01">
       </label>
 
-      <p id="font-status" class="font-status">Font loaded: static mode — automatic updates unavailable</p>
+      <p id="font-status" class="font-status">Font loaded: waiting for server status</p>
     </div>
     <p class="shortcut-help">
       left/right: next snippet · up/down: next placeholder ·   f: first placeholder ·  q/w: weight down/up · a/s: width down/up · z/x: optical size down/up ·
@@ -135,7 +135,6 @@
 
   <script src="./somerville-avar-compensation.js"></script>
   <script src="./somerville-fraction-rule-thickness.js"></script>
-  <script src="./somerville-snippets.js"></script>
   <script src="./somerville-font-watcher.js"></script>
   <script src="./somerville-mathml.js"></script>
 </body>
