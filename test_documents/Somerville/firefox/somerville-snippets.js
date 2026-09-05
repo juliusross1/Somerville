@@ -32,7 +32,7 @@ window.SomervilleSnippets = [
     title: String.raw`Latin Alphabets`,
     comment: String.raw``,
     tex: String.raw`
-$$\mathrm{Test ABCDEFGHIJKLMNOPQRSTUVWXYZ}$$
+$$\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$$
 $$\mathrm{abcdefghijklmnopqrstuvwxyz}$$
 $$ABCDEFGHIJKLMNOPQRSTUVWXYZ$$
 $$abcdefghijklmnopqrstuvwxyz$$
