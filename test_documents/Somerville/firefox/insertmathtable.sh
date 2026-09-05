@@ -14,3 +14,5 @@ cp ~/Documents/Somerville/fonts/Somerville/SomervilleMATH-Regular.ttf .
 ttx -t MATH SomervilleMATH-Regular.ttf 
 ttx -m SomervilleVF.ttf SomervilleMATH-Regular.ttx  -o SomervilleVF-withMathtable.ttf
 rm ./SomervilleMATH-Regular.ttx
+./fix_avar2_overlapping_regions.sh SomervilleVF-withMathtable.ttf SomervilleVF-withMathtable.ttf
+

@@ -241,11 +241,11 @@
       }
     }
 
-    function updatePlaceholderInfo(placeholders) {
+    function updatePlaceholderInfo(placeholders, labels = []) {
       const placeholderInfo = document.getElementById("snippet-placeholders");
       const glyphs = placeholders.map((placeholder, index) => {
         const glyph = document.createElement("span");
-        glyph.textContent = placeholder;
+        glyph.textContent = labels[index] || placeholder;
         glyph.classList.toggle("current-placeholder", index === currentPlaceholderIndex);
         return glyph;
       });
@@ -306,11 +306,17 @@
           const title = typeof snippet?.title === "string" ? snippet.title : "";
           const comment = typeof snippet?.comment === "string" ? snippet.comment : "";
           const stretchy = typeof snippet?.stretchy === "boolean" ? snippet.stretchy : undefined;
-          const placeholders = Array.isArray(snippet?.placeholders)
-            ? snippet.placeholders.filter((placeholder) => typeof placeholder === "string")
-            : defaultPlaceholders;
+          // A placeholder can be a TeX string or { value: TeX, label: text }.
+          const entries = (Array.isArray(snippet?.placeholders)
+            ? snippet.placeholders
+            : defaultPlaceholders)
+            .map((entry) => typeof entry === "string" ? { value: entry } : entry)
+            .filter((entry) => typeof entry?.value === "string");
+          const placeholders = entries.map((entry) => entry.value);
+          const placeholderLabels = entries.map((entry) =>
+            typeof entry.label === "string" && entry.label.trim() ? entry.label : entry.value);
 
-          return { title, comment, tex, mathml, stretchy, placeholders };
+          return { title, comment, tex, mathml, stretchy, placeholders, placeholderLabels };
         })
         .filter((snippet) => snippet.tex || snippet.mathml);
     }
@@ -390,7 +396,7 @@
       flow.classList.toggle("mathml-snippet-flow", Boolean(snippet.mathml));
       document.getElementById("snippet-title").textContent = snippet.title || "";
       document.getElementById("snippet-comment").textContent = snippet.comment || "";
-      updatePlaceholderInfo(placeholders);
+      updatePlaceholderInfo(placeholders, snippet.placeholderLabels);
       if (initializeSnippetOptions && typeof snippet.stretchy === "boolean") {
         document.getElementById("stretchy-toggle").checked = snippet.stretchy;
       }

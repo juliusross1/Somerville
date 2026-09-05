@@ -3,75 +3,187 @@ glyphname = "taubolditalic-math.ssty1";
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
-shapes = (
-{
-ref = tau;
-}
-);
 width = 483;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
-shapes = (
-{
-ref = tau;
-}
-);
-width = 594;
+width = 582;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
-shapes = (
-{
-ref = tau;
-}
-);
-width = 508;
+width = 468;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-shapes = (
-{
-ref = tau;
-}
-);
-width = 595;
+width = 592;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
-shapes = (
-{
-ref = tau;
-}
-);
 width = 483;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-shapes = (
-{
-ref = tau;
-}
-);
 width = 582;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
-shapes = (
-{
-ref = tau;
-}
-);
 width = 468;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
-shapes = (
-{
-ref = tau;
-}
-);
 width = 592;
+},
+{
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+95,
+360,
+360,
+1200,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "C9CA13F9-9698-43CC-A542-E8288644A292";
+name = "Needlepoint SemiCondensed Upright STYA 1200";
+width = 483;
+},
+{
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+113,
+360,
+360,
+1200,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "2FC56B24-3A31-48F5-A053-DEE17FB44AC0";
+name = "Needlepoint SemiExpanded Upright STYA 1200";
+width = 594;
+},
+{
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+95,
+900,
+360,
+1200,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "F291963E-C77F-4F45-98A7-82E56F02AAA1";
+name = "Needlepoint Black SemiCondensed Upright STYA 1200";
+width = 508;
+},
+{
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+113,
+900,
+360,
+1200,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "3A453FC2-F6F8-42C0-B854-B6BDBCC7E942";
+name = "Needlepoint Black SemiExpanded Upright STYA 1200";
+width = 595;
+},
+{
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+95,
+360,
+360,
+5,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "E6209744-8BB4-4DF6-949B-07F5A0219F67";
+name = "Agate SemiCondensed Upright STYA 1200";
+width = 483;
+},
+{
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+113,
+360,
+360,
+5,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "C4CA13B0-8034-4E8F-AB9B-E67BBFDDF272";
+name = "Agate SemiExpanded Upright STYA 1200";
+width = 594;
+},
+{
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+95,
+900,
+360,
+5,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "C276C039-1F41-4846-BB76-D09CF17A26FB";
+name = "Agate Black SemiCondensed Upright STYA 1200";
+width = 508;
+},
+{
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+113,
+900,
+360,
+5,
+1200,
+5,
+200,
+100,
+0
+);
+};
+layerId = "E65AFED7-10A5-4355-BBD8-48421AABC675";
+name = "Agate Black SemiExpanded Upright STYA 1200";
+width = 595;
 }
 );
 }
