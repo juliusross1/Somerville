@@ -6,6 +6,9 @@ layers = (
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
+piece = {
+"Integral Slant" = 0;
+};
 ref = _smart.dblIntegral;
 },
 );
@@ -90,13 +93,16 @@ coordinates = (
 );
 };
 layerId = "CE3FC668-7C42-46E6-BF9D-344BFDBA013D";
-name = "Needlepoint SemiCondensed Upright INSL=100";
+name = "Needlepoint SemiCondensed Upright Slant";
 shapes = (
 {
+piece = {
+"Integral Slant" = 100;
+};
 ref = _smart.dblIntegral;
 },
 );
-width = 772;
+width = 770;
 },
 {
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -114,9 +120,12 @@ coordinates = (
 );
 };
 layerId = "54CEC36F-65E5-4093-88CA-31C4AEDC2CF1";
-name = "Needlepoint SemiExpanded Upright INSL=100";
+name = "Needlepoint SemiExpanded Upright Slant";
 shapes = (
 {
+piece = {
+"Integral Slant" = 100;
+};
 ref = _smart.dblIntegral;
 },
 );
@@ -138,13 +147,16 @@ coordinates = (
 );
 };
 layerId = "7F54C345-5019-4A01-9E42-37D05CFDB543";
-name = "Needlepoint Black SemiCondensed Upright INSL=100";
+name = "Needlepoint Black SemiCondensed Upright Slant";
 shapes = (
 {
+piece = {
+"Integral Slant" = 100;
+};
 ref = _smart.dblIntegral;
 },
 );
-width = 1128;
+width = 1127;
 },
 {
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -162,9 +174,12 @@ coordinates = (
 );
 };
 layerId = "2132BA47-92D3-419B-9D63-EC7D42A9B66C";
-name = "Needlepoint Black SemiExpanded Upright INSL=100";
+name = "Needlepoint Black SemiExpanded Upright Slant";
 shapes = (
 {
+piece = {
+"Integral Slant" = 100;
+};
 ref = _smart.dblIntegral;
 },
 );
@@ -186,9 +201,12 @@ coordinates = (
 );
 };
 layerId = "750BCA85-36C1-4746-89F7-F9DF7D78D8E9";
-name = "Agate SemiCondensed Upright INSL=100";
+name = "Agate SemiCondensed Upright Slant";
 shapes = (
 {
+piece = {
+"Integral Slant" = 100;
+};
 ref = _smart.dblIntegral;
 },
 );
@@ -210,9 +228,12 @@ coordinates = (
 );
 };
 layerId = "7A41B999-B3C6-4547-AD44-A851186943A5";
-name = "Agate SemiExpanded Upright INSL=100";
+name = "Agate SemiExpanded Upright Slant";
 shapes = (
 {
+piece = {
+"Integral Slant" = 100;
+};
 ref = _smart.dblIntegral;
 },
 );
@@ -234,9 +255,12 @@ coordinates = (
 );
 };
 layerId = "C643C592-DABB-4AE5-9731-FA5F2713B52E";
-name = "Agate Black SemiCondensed Upright INSL=100";
+name = "Agate Black SemiCondensed Upright Slant";
 shapes = (
 {
+piece = {
+"Integral Slant" = 100;
+};
 ref = _smart.dblIntegral;
 },
 );
@@ -258,9 +282,12 @@ coordinates = (
 );
 };
 layerId = "D8B95F2C-991B-4B8B-B775-5E14384BFBA2";
-name = "Agate Black SemiExpanded Upright INSL=100";
+name = "Agate Black SemiExpanded Upright Slant";
 shapes = (
 {
+piece = {
+"Integral Slant" = 100;
+};
 ref = _smart.dblIntegral;
 },
 );
