@@ -1,0 +1,434 @@
+% !TEX root = varianttester.tex
+
+
+\usetypescriptfile[somerville]
+\setuppagenumbering[location=]
+%\definepapersize[widepage][width=34cm,height=230cm]
+%\setuppapersize[widepage]
+\define[1]\MarginStyle{\switchtobodyfont[dejavu,6pt] #1}
+
+
+\def\opticalsizesall{needlepoint,hairline,titling,display,headline,trumpet,subheading,regular,caption,miniature,miniscule,micro}
+\def\weightsall{semilight, none, medium, semibold,black}
+\def\widthssall{semicondensed,none,semiexpanded}
+
+
+%
+%
+% SETAXES.  Here we set which fonts we want to see
+%
+%
+
+\def\opticalsizelist{regular,caption}
+%\let\opticalsizelist\opticalsizesall
+
+%\def\weightlist{black}
+\def\weightlist{none,bold} 
+%\let\weightlist\weightsall
+
+\def\widthlist{none}
+%\def\widthlist{semiexpanded}
+%\def\widthlist{semicondensed}
+%\def\widthlist{semiexpanded}
+
+%
+%
+%
+%
+%
+
+
+\def\opticalsizevalue#1{\csname opticalsizevalue:#1\endcsname}
+
+\expandafter\def\csname opticalsizevalue:micro\endcsname{5}
+\expandafter\def\csname opticalsizevalue:mico\endcsname{5}
+\expandafter\def\csname opticalsizevalue:miniscule\endcsname{6}
+\expandafter\def\csname opticalsizevalue:miniature\endcsname{7}
+\expandafter\def\csname opticalsizevalue:minature\endcsname{7}
+\expandafter\def\csname opticalsizevalue:caption\endcsname{8}
+\expandafter\def\csname opticalsizevalue:regular\endcsname{12}
+\expandafter\def\csname opticalsizevalue:subheading\endcsname{16}
+\expandafter\def\csname opticalsizevalue:trumpet\endcsname{21}
+\expandafter\def\csname opticalsizevalue:headline\endcsname{32}
+\expandafter\def\csname opticalsizevalue:display\endcsname{41}
+\expandafter\def\csname opticalsizevalue:titling\endcsname{48}
+\expandafter\def\csname opticalsizevalue:hairline\endcsname{72}
+\expandafter\def\csname opticalsizevalue:needlepoint\endcsname{96}
+
+\def\opticalsizenumber{\opticalsizevalue{\opticalsize}}
+
+\setupmargindata
+  [inmargin]
+  [style=\MarginStyle]
+
+
+
+
+
+\starttext
+
+
+
+
+
+
+\startbuffer[testknuth]
+\m{\showglyphs \sum A + \sum B}
+
+\dm{\showglyphs \sum A + \sum B}
+
+\input{knuth}
+\startformula
+\frac{1}{2\pi i}\oint[bottom=C]{\frac{u(z)dz}{w-z}}= u(w)
+\stopformula
+\stopbuffer
+
+\startbuffer[test]
+
+\m{
+       \dostepwiserecurse{0}{\mathvariantcount "222B}{1} {
+       \char\mathvariantcode "222B #1 
+       }
+ }
+
+\doloopoverlist{.2cm,.8cm,1cm,4cm}{
+\dm{\iint[size=\recursestring,bottom=0,top=1,method=horizontal]{u(x) dx} + \int[size=\recursestring,bottom=0,top=1,method=horizontal]{u(x) dx}  }
+}
+\stopbuffer
+
+\startbuffer[testradical]
+
+   \m{
+      \dostepwiserecurse{0}{\mathvariantcount "2A00}{1} {
+      \char\mathvariantcode "2A00 #1 
+      }
+  }
+
+   Here is some text $\sqrt{2} + \sqrt{x}$ so that I can see how text looks like before I play with mathematics
+   
+   VVV WWWW \m{\odot} \m{\rm \sqrt{2}\sqrt{M}\sqrt{h}\sqrt{L}\sqrt{L^2}}
+
+   \startformula
+   \frac{x}{y} \bigodot \frac{1+2+3}{\pi} \bigodot\bigodot \frac{A+b+E+D}{e+f+g+h}
+   \stopformula
+
+\m{\sqrt[2]{x} \sqrt[n]{x+M}}
+
+\dm{\sqrt[2]{x} \sqrt[n]{x+M}}
+
+\dm{\sqrt[3]{\frac{A}{B}}}
+
+\dm{\sqrt[3]{\frac{A}{\frac{C}{D}}}}
+
+\startformula
+
+\bigodot[bottom=a,top=b]{{ \frac{\int{\sqrt[n]{ \frac{\bigodot u}{77} }+\sum{ \frac{\sum_q^q u}{\sum v} }}}{\bigodot{ \frac{1}{5} }_{i=1}^n} }}
+
+\sqrt[\math{\displaystyle n^m\hskip-0.9em}]{{ \frac{\int{\sum{ \frac{\sum_q^q u}{77} }+\prod{ \frac{\sum_q^q u}{\prod v} }}}{\bigodot{ \frac{1}{5} }_{i=1}^n} }}
+\stopformula
+
+[\hbox to 0pt{\hskip0.5em$A+B$\hss}]
+
+\dm{
+\sqrt[\math{n^m}]{x+y}
+}
+\stopbuffer
+
+\startbuffer[testcirclesimple]
+Here is some text UUUOOOUUU 2036
+
+\startformula%\showglyphs
+\bigodot_{i=1}^n = \sum_{i=1}^n = \int[bottom=0,top=1]{\frac{f(x)}{g(x)}} dx
+\stopformula
+  %  \m{
+  %     \dostepwiserecurse{0}{\mathvariantcount "2A01}{1} {
+  %     \char\mathvariantcode "2A01 #1 
+  %     }
+  % }
+
+     \m{
+      \dostepwiserecurse{0}{\mathvariantcount "2A00}{1} {
+      \char\mathvariantcode "2A02 #1 
+      }
+  }
+
+  %      \m{
+  %     \dostepwiserecurse{0}{\mathvariantcount "2A00}{1} {
+  %     \char\mathvariantcode "2A02 #1 
+  %     }
+  % }
+
+% \m{ \char\mathvariantcode "2A01 0 \char\mathvariantcode "2A01 1 \char\mathvariantcode "2A01 2  \char\mathvariantcode "2A01 20}
+% \m{A \char\mathvariantcode "2A02 0 \char\mathvariantcode "2A02 2  \char\mathvariantcode "2A02 2 \char\mathvariantcode "2A02 20}
+
+\stopbuffer
+
+\startbuffer[testcircle]
+%\startTEXpage
+
+\m{A+B+ C \oplus U \odot A \otimes D \oplus E}
+
+
+
+\dm{A+B+ C \oplus U \odot A \otimes D \oplus E}
+
+   \m{
+      \dostepwiserecurse{0}{\mathvariantcount "2A01}{1} {
+      \char\mathvariantcode "2A02 #1 {\rm U|O}
+      }
+  }
+
+     \m{
+      \dostepwiserecurse{0}{\mathvariantcount "2A00}{1} {
+      \char\mathvariantcode "2A00 #1 {\rm U|O}
+      }
+  }
+
+       \m{
+      \dostepwiserecurse{0}{\mathvariantcount "2A09}{1} {
+      \char\mathvariantcode "2A09 #1 {\rm U|O}
+      }
+  }
+
+
+%  \dm{
+%       \dostepwiserecurse{0}{\mathvariantcount "2AFD}{1} {
+%      a \char\mathvariantcode "2AFD #1 b,
+%       }
+%   }
+
+% \dm{
+%       \dostepwiserecurse{0}{\mathvariantcount "2AFB}{1} {
+%      a \char\mathvariantcode "2AFB #1 b,
+%       }
+%   }
+
+% \startbuffer[allfrac]
+% \getbuffer[tex-frac]
+% %\getbuffer[tex-doublefrac]
+% \stopbuffer
+
+% \startTEXpage[offset=5pt] 
+% \getbuffer[allfrac]
+% \par
+% \getbuffer[allfrac]
+
+\startformula
+\bigtimes = \sum_{i=1}^n
+\stopformula
+
+\startformula
+\bigtimes{ \frac{\sum u}{\sum v} }_{i=1}^n
+\stopformula
+
+\startformula
+\bigotimes[bottom=a,top=b]{\sum[bottom=a,top=b]{ \frac{\int[bottom=a,top=b,method=auto]{\bigtimes{ \frac{\sum_q^q u}{77} }+\sum{ \frac{\sum_q^q u}{\sum v} }}}{\sum{ \frac{1}{5} }_{i=1}^n} }}
+\stopformula
+
+\startformula
+\bigotimes[bottom=a,top=b]{\sum[bottom=a,top=b]{ \frac{\int[bottom=a,top=b,method=auto]{\bigotimes{ \frac{\sum_q^q u}{77} }+\sum{ \frac{\sum_q^q u}{\otimes v} }}}{\sum{ \frac{1}{5} }_{i=1}^n} }}
+\stopformula
+
+
+\startformula
+\bigtimes[bottom={i=1},top={i=n}]{{ \frac{\int{\sum{ \frac{\sum_q^q u}{77} }+\prod{ \frac{\sum_q^q u}{\prod v} }}}{\prod{ \frac{1}{5} }_{i=1}^n} }}
+\stopformula
+%\stopTEXpage
+\stopbuffer
+
+\startbuffer[testintegral]
+\doloopoverlist{.2cm,.5cm,1cm,2.6cm}{
+\m{
+\oint[size=\recursestring,bottom=0,top=1]{u}}}
+\stopbuffer
+
+
+
+
+% \expandafter\def\csname opticalsizevalue:micro\endcsname{5}
+% \expandafter\def\csname opticalsizevalue:miniscule\endcsname{6}
+% \expandafter\def\csname opticalsizevalue:miniature\endcsname{7}
+% \expandafter\def\csname opticalsizevalue:minature\endcsname{7}
+% \expandafter\def\csname opticalsizevalue:caption\endcsname{8}
+% \expandafter\def\csname opticalsizevalue:regular\endcsname{12}
+% \expandafter\def\csname opticalsizevalue:subheading\endcsname{16}
+% \expandafter\def\csname opticalsizevalue:trumpet\endcsname{21}
+% \expandafter\def\csname opticalsizevalue:headline\endcsname{32}
+% \expandafter\def\csname opticalsizevalue:display\endcsname{41}
+% \expandafter\def\csname opticalsizevalue:titling\endcsname{48}
+% \expandafter\def\csname opticalsizevalue:hairline\endcsname{72}
+% \expandafter\def\csname opticalsizevalue:needlepoint\endcsname{96}
+
+
+
+\startbuffer[commutativediagram]
+
+\m{A⇒B⇒C⇒E⇒F⇒G\to H\to I}
+
+\startformula
+\lim_{x⇒ 0} f(x)
+\stopformula
+
+\startMPcode
+%drawarrow (0,0)--(100,0);
+label.rt(textext("\m{\rm 0}"), (100,0));
+label.rt(textext("\m{\rm A}"), (150,0));
+label.rt(textext("\m{\rm B}"), (200,0));
+label.rt(textext("\m{\rm D}"), (250,0));
+label.rt(textext("\m{\rm C}"), (300,0));
+label.rt(textext("\m{\rm 0}"), (350,0));
+
+label.rt(textext("\m{\rm 0}"), (100,50));
+label.rt(textext("\m{\rm E}"), (150,50));
+label.rt(textext("\m{\rm F}"), (200,50));
+label.rt(textext("\m{\rm H}"), (250,50));
+label.rt(textext("\m{\rm G}"), (300,50));
+label.rt(textext("\m{\rm 0}"), (350,50));
+
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8640}"), (115,0));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8594}"), (165,0));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8594}"), (215,0));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8608}"), (265,0));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8649}"), (315,0));
+
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8611}"), (115,50));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8594}"), (165,50));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8608}"), (215,50));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8594}"), (265,50));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8594}"), (315,50));
+
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8594}") rotated 90, (101,25));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8594}") rotated 90, (151,25));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8608}") rotated 90, (201,25));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8611}") rotated 90, (251,25));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8594}") rotated 90, (303,25));
+label.rt(textext("\m{\Uhextensible width 1cm \fam 8594}") rotated 90, (352,25));
+\stopMPcode
+\stopbuffer
+
+
+
+
+\startbuffer[arrowsidebearings]
+
+\m{→⤅}
+%\m{\showglyphs M → M  ← M ↔ M}
+
+\m{\showglyphs M↦M⇥M⤇M}
+
+\stopbuffer
+
+\startbuffer[arrows]
+
+We say that $u$ tends to $0$ as $w$ tends to $0$ (or $u(w)\to 0$ as $w\to 0$) which we also write as 
+\startformula
+\lim_{w\to 0}u(w) =0 
+\stopformula
+
+
+
+ \def\MeasureScratchboxInEm{%
+  \edef\measuredwidth{%
+    \luaexpr{math.floor(1000 * \number\wd\scratchbox
+      / \number\fontdimen6\font + .5) / 1000}%
+  }%
+ }
+ \def\ArrowTableCell#1#2{\noexpand\NC H
+  \noexpand\setbox\noexpand\scratchbox\noexpand\hbox
+    {\noexpand\m{\showglyphs\noexpand\Uhextensible width #2em \noexpand\fam \the\numexpr#1\relax}}%
+  \noexpand\MeasureScratchboxInEm
+  \noexpand\copy\noexpand\scratchbox
+  \noexpand\kern.05em
+  {\noexpand\definedfont[Mono at 2pt]%
+   \noexpand\measuredwidth em}}
+ \starttabulate[|l|l|l|l|l|]
+ \doloopoverlist{10521,11066,10576,10571,10570,10574,10502,10523,10498,10599,10603,10590,10582,10594,10602,10598,10586,10578,10500,11069,11060,10522,10513,10517,10516,10503,10524,10499,10601,10605,10591,10583,10600,10604,10596,10587,10579,10501,10497,10518,10520,10519,10496,8594,8592,8596,8602,8603,8695,8696,8697,8698,8699,8622,8606,8608,8610,8611,8612,8614,8676,8677,8633,8636,8637,8640,8641,8651,8652,8644,8646,8649,8647,8658,8656,8660,8653,8654,8655,10229,10230,10231,10232,10233,10234,10235,10236,10237,10238}{
+  \xdef\arrowcode{\recursestring}
+  \m{ \char\arrowcode\relax } \NC
+%  {\definedfont[name:stixtwomathregular at 12pt]\char\arrowcode\relax} \NC
+  \doloopoverlist{1,2,4,8}{
+   \expanded{\ArrowTableCell{\arrowcode}{\recursestring}}
+  }
+  \NC\NR
+ }
+ \stoptabulate
+
+
+\doloopoverlist{10593,10589,10577,10573,10572,10575,10592,10588,8593,8597,8613,8615,8638,8639,8642,8643,10515,10585,10581,10514,10584,10580}{
+  \edef\arrowcode{\recursestring}
+  \m{\Uvextensible axis height .5em depth .5em \Umathchar 0 \fam \arrowcode}
+}
+
+\doloopoverlist{10593,10589,10577,10573,10572,10575,10592,10588,8593,8597,8613,8615,8638,8639,8642,8643,10515,10585,10581,10514,10584,10580}{
+  \edef\arrowcode{\recursestring}
+  \m{\Uvextensible axis height 1.5em depth 1.5em \Umathchar 0 \fam \arrowcode}
+}
+
+\doloopoverlist{10593,10589,10577,10573,10572,10575,10592,10588,8593,8597,8613,8615,8638,8639,8642,8643,10515,10585,10581,10514,10584,10580}{
+  \edef\arrowcode{\recursestring}
+  \m{\Uvextensible axis height 2.5em depth 2.5em \Umathchar 0 \fam \arrowcode}
+}
+
+\page
+\def\arrowcode{10513}
+
+\dostepwiserecurse{100}{290}{5}{%
+  \edef\currentwidth{\luaexpr{\recurselevel/100}}%
+  \setbox\scratchbox\hbox{%
+    \m{\showglyphs\Uhextensible width \currentwidth em \fam \arrowcode}%
+  }%
+  \MeasureScratchboxInEm
+  \framed
+    [width=\currentwidth em,
+     offset=overlay,
+     rulethickness=.1pt,
+     framecolor=red]
+    {\copy\scratchbox}%
+  \kern.05em
+  {\definedfont[Mono at 2pt]\measuredwidth em}%
+}
+
+\stopbuffer
+
+%
+%
+% The sample buffers are displayed below
+%
+%
+%
+
+
+
+
+\doloopoverlist\opticalsizelist
+{
+\edef\opticalsize{\recursestring}
+\doloopoverlist\weightlist
+{
+  \doifelse{\recursestring}{none}
+    {\def\weightsuffix{}}
+    {\edef\weightsuffix{-\recursestring}}
+\doloopoverlist\widthlist
+{
+  \doifelse{\recursestring}{none}
+    {\def\widthsuffix{}}
+    {\edef\widthsuffix{-\recursestring}}
+\edef\width{\recursestring}
+\blank[5pt]
+\edef\fontchoice{\opticalsize\widthsuffix\weightsuffix}
+
+\inmargin{{\opticalsize\crlf \widthsuffix\crlf \weightsuffix } @ \opticalsizenumber pt}
+{\setupbodyfont[somerville-\fontchoice]
+\def\opticalsizepointsize{\opticalsizenumber pt}
+%% This next line changes the font size if we want that
+%\expanded{\setupbodyfont[\opticalsizepointsize]}
+\getbuffer[test]
+\getbuffer[testcircle]
+\getbuffer[testradical]
+%\getbuffer[arrows]
+}
+}
+}
+}
+
+\stoptext
