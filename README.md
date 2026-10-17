@@ -60,8 +60,8 @@ There are some features in Somerville that are not present in any existing math 
 
 \setupSomerville
   {Width=100,Weight=400,Optical Size=12,Math Weight=660,Arrow Length=200,Arrow Head=100,integral slant=0}
-  {somerville-variable-math} 
-\setupbodyfont[somerville-variable-math,12pt]
+  {somerville-custom} 
+\setupbodyfont[somerville-custom,12pt]
 
 \starttext
 Here is some text {a^2+b^2=c^2} and a formula
