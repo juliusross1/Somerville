@@ -55,11 +55,12 @@ See the [test site](https://juliusross1.github.io/Somerville/somerville-mathml.h
   \definetypeface[#2][mm][math][#2][default]%
 }
 
-%Valid ranges
-% Width: 95..113, Weight:360..900,Math Weight:0..100,Arrow Length:100..200, Arrow Head: 100..200, Integral Slant:0..100
+% Valid ranges:
+% Width: 95..113, Weight:360..900,Math Weight:0..100,Arrow Length:100..200,
+% Arrow Head: 100..200, Integral Slant:0..100
 
 \setupSomerville
-  {Width=100,Weight=400,Optical Size=12,,Math Weight=660,Arrow Length=200,Arrow Head=100,integral slant=0}
+  {Width=100,Weight=400,Optical Size=12,Math Weight=660,Arrow Length=200,Arrow Head=100,integral slant=0}
   {somerville-variable-math} 
 \setupbodyfont[somerville-variable-math,12pt]
 
@@ -74,7 +75,8 @@ Here is some text {a^2+b^2=c^2} and a formula
 To use SomerVille in other typesetting systems, create static fonts with the script below (requires fontTools). Place `SomervilleMathVF.ttf`, `PlayfairRomanVF.ttf`, and `PlayfairItalicVF.ttf` in the same input folder:
 
 ```sh
-python3 instantiate_somerville.py "Weight=700" "Math Weight=900" "Optical Size=12" "Arrow Head=200" "Arrow Length=150" -o Somerville
+python3 instantiate_somerville.py "Weight=700" "Math Weight=900" \
+"Optical Size=12" "Arrow Head=200" "Arrow Length=150" -o Somerville
 ```
 
 `-o` is a filename prefix: this creates `SomervilleRoman.ttf`, `SomervilleItalic.ttf`, and `SomervilleMath.ttf`. 
@@ -85,7 +87,7 @@ python3 instantiate_somerville.py "Weight=700" "Math Weight=900" "Optical Size=1
 
 \setmathfont{SomervilleMath.ttf}
 \setmainfont{SomervilleRoman.ttf}[ItalicFont=SomervilleItalic.ttf]
-%% You can also create versions of BoldFont and BoldItalicFont but that is beyond this example for now
+%% Bold and BoldItalics are not done just yet **fixme**
 \setmathfont{SomervilleMath.ttf}
 
 \begin{document}
