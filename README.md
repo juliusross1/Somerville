@@ -3,7 +3,7 @@
 ## About
 Somerville is an experimental variable mathematics font based on [Playfair](xxx.forthehearts.net).
 
-****Note that Somerville is not meant to be usable as a math font for actual documents because...**  
+**Note that Somerville is not meant to be usable as a math font for actual documents because...**  
 - The font is very incomplete; in particular there are very few greek letters
 - There are lots and lots of things that have not been done, and other bugs
 
