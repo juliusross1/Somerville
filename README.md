@@ -71,7 +71,7 @@ Here is some text {a^2+b^2=c^2} and a formula
 ```
 
 ## Use in other systems (e.g. LuaLaTeX)
-To use SomerVille in other typesetting systems, create static fonts with the script below (requires fontTools). Place `SomervilleMathVF.ttf`, `PlayfairRomanVF.ttf`, and `PlayfairItalicVF.ttf` in the same input folder:
+To use SomerVille in other typesetting systems, create static fonts with the script below (requires [fontTools](https://github.com/fonttools/fonttools)). Place `SomervilleMathVF.ttf`, `PlayfairRomanVF.ttf`, and `PlayfairItalicVF.ttf` in the same input folder:
 
 ```sh
 python3 instantiate_somerville.py "Weight=700" "Math Weight=900" \
