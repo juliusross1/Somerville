@@ -84,7 +84,6 @@ which will create `SomervilleRoman.ttf`, `SomervilleItalic.ttf`, and `Somerville
 \documentclass{article}
 \usepackage{unicode-math}
 
-\setmathfont{SomervilleMath.ttf}
 \setmainfont{SomervilleRoman.ttf}[ItalicFont=SomervilleItalic.ttf]
 %% Bold and BoldItalics are not done just yet **fixme**
 \setmathfont{SomervilleMath.ttf}
