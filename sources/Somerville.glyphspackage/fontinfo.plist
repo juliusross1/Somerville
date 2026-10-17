@@ -19099,50 +19099,10 @@ period.tf.ss14 = -209;
 period = -126;
 period.tf.ss14 = -229;
 };
-_f_adieresis.ligature = {
-b = 0;
-c = 0;
-comma.tf.ss14 = -111;
-d = 0;
-e = 0;
-f = 4;
-h = 5;
-i = 2;
-j = 0;
-k = 5;
-l = 5;
-p = -11;
-period.tf.ss14 = -114;
-t = 0;
-u = -24;
-v = -6;
-w = -11;
-y = 0;
-};
 _f_h.ligature = {
 bracketright.tf.ss14 = -120;
 question = -56;
 trademark = -101;
-};
-_f_i.ligature = {
-b = 0;
-bracketright = -9;
-bracketright.tf.ss14 = -91;
-parenleft = -33;
-parenright = 0;
-question = -8;
-};
-_f_idieresis.ligature = {
-b = 42;
-f = 35;
-k = 43;
-l = 43;
-};
-_f_j.ligature = {
-s = 0;
-};
-_f_j.ligature.cv01 = {
-s = 3;
 };
 _f_k.ligature = {
 bracketright.tf.ss14 = -102;
@@ -19155,62 +19115,10 @@ periodcentered = -56;
 periodcentered.tf.ss14 = -153;
 z = 0;
 };
-_f_odieresis.ligature = {
-b = 0;
-c = 11;
-comma.tf.ss14 = -150;
-d = 11;
-h = 0;
-hyphen = 49;
-k = 0;
-l = 0;
-n = -10;
-period.tf.ss14 = -153;
-s = 10;
-v = -2;
-w = -3;
-y = -2;
-z = 15;
-};
-_f_t.ligature = {
-bracketright = 17;
-bracketright.tf.ss14 = -65;
-equal = -142;
-exclam = 2;
-plus.lf = -117;
-question = -16;
-};
-_f_udieresis.ligature = {
-b = 0;
-c = -15;
-comma.tf.ss14 = -129;
-d = -5;
-e = -16;
-f = 0;
-h = 0;
-j = 0;
-k = 0;
-l = 0;
-p = 0;
-period.tf.ss14 = -130;
-t = 0;
-v = 0;
-y = 0;
-};
-_f_ydieresis.ligature = {
-comma = -62;
-comma.tf.ss14 = -213;
-};
 _longs_h.ligature = {
 bracketright.tf.ss14 = -120;
 question = -56;
 trademark = -101;
-};
-_longs_i.ligature = {
-bracketright = -6;
-bracketright.tf.ss14 = -90;
-parenleft = -33;
-question = 0;
 };
 _longs_k.ligature = {
 bracketright.tf.ss14 = -102;
@@ -19222,14 +19130,6 @@ g = 0;
 periodcentered = -56;
 periodcentered.tf.ss14 = -153;
 z = 0;
-};
-_longs_t.liga = {
-bracketright = 17;
-bracketright.tf.ss14 = -65;
-equal = -142;
-exclam = 2;
-plus.lf = -117;
-question = -16;
 };
 "_part.LC-baseline-lower-stem" = {
 "_part.LC-ka-cy-wings" = -61;
@@ -19539,21 +19439,6 @@ three = 77;
 threesuperior = 131;
 two = 94;
 };
-"f-fina.ligature" = {
-Z = 87;
-asterisk = 83;
-bracketleft = 129;
-bracketright = 72;
-eightsuperior = 103;
-equal = -130;
-exclam = 111;
-fivesuperior = 92;
-ninesuperior = 134;
-question = 131;
-sixsuperior = 125;
-threesuperior = 132;
-twosuperior = 113;
-};
 five = {
 degree = -42;
 eight = 24;
@@ -19688,10 +19573,6 @@ hyphen = 0;
 l = 0;
 periodcentered = -56;
 periodcentered.tf.ss14 = -150;
-};
-"longs-fina.ligature" = {
-i = 65;
-"longs-init.ligature" = 111;
 };
 m = {
 asterisk = -60;
@@ -32712,50 +32593,10 @@ period.tf.ss14 = -250;
 period = -149;
 period.tf.ss14 = -269;
 };
-_f_adieresis.ligature = {
-b = -5;
-c = -10;
-comma.tf.ss14 = -133;
-d = -7;
-e = -9;
-f = 10;
-h = 14;
-i = 11;
-j = -11;
-k = 14;
-l = 14;
-p = -11;
-period.tf.ss14 = -137;
-t = -21;
-u = -32;
-v = -32;
-w = -35;
-y = -8;
-};
 _f_h.ligature = {
 bracketright.tf.ss14 = -147;
 question = -58;
 trademark = -127;
-};
-_f_i.ligature = {
-b = 0;
-bracketright = -8;
-bracketright.tf.ss14 = -144;
-parenleft = -39;
-parenright = 46;
-question = -17;
-};
-_f_idieresis.ligature = {
-b = 46;
-f = 16;
-k = 31;
-l = 31;
-};
-_f_j.ligature = {
-s = 0;
-};
-_f_j.ligature.cv01 = {
-s = 0;
 };
 _f_k.ligature = {
 bracketright.tf.ss14 = -109;
@@ -32768,62 +32609,10 @@ periodcentered = -58;
 periodcentered.tf.ss14 = -184;
 z = 0;
 };
-_f_odieresis.ligature = {
-b = -12;
-c = 0;
-comma.tf.ss14 = -174;
-d = 0;
-h = 0;
-hyphen = 57;
-k = 0;
-l = 0;
-n = -11;
-period.tf.ss14 = -179;
-s = 0;
-v = -15;
-w = -18;
-y = 0;
-z = 0;
-};
-_f_t.ligature = {
-bracketright = 19;
-bracketright.tf.ss14 = -130;
-equal = -26;
-exclam = 0;
-plus.lf = -141;
-question = -39;
-};
-_f_udieresis.ligature = {
-b = -16;
-c = -12;
-comma.tf.ss14 = -150;
-d = -6;
-e = -12;
-f = 2;
-h = 2;
-j = -5;
-k = 2;
-l = 2;
-p = -12;
-period.tf.ss14 = -153;
-t = 0;
-v = -18;
-y = 0;
-};
-_f_ydieresis.ligature = {
-comma = -52;
-comma.tf.ss14 = -249;
-};
 _longs_h.ligature = {
 bracketright.tf.ss14 = -147;
 question = -58;
 trademark = -127;
-};
-_longs_i.ligature = {
-bracketright = -7;
-bracketright.tf.ss14 = -144;
-parenleft = -39;
-question = -15;
 };
 _longs_k.ligature = {
 bracketright.tf.ss14 = -109;
@@ -32835,14 +32624,6 @@ g = 9;
 periodcentered = -58;
 periodcentered.tf.ss14 = -184;
 z = 0;
-};
-_longs_t.liga = {
-bracketright = 19;
-bracketright.tf.ss14 = -130;
-equal = -26;
-exclam = 0;
-plus.lf = -141;
-question = -39;
 };
 "_part.LC-baseline-lower-stem" = {
 "_part.LC-ka-cy-wings" = -51;
@@ -33152,21 +32933,6 @@ three = 77;
 threesuperior = 132;
 two = 97;
 };
-"f-fina.ligature" = {
-Z = 98;
-asterisk = 89;
-bracketleft = 148;
-bracketright = 83;
-eightsuperior = 125;
-equal = -120;
-exclam = 128;
-fivesuperior = 114;
-ninesuperior = 157;
-question = 131;
-sixsuperior = 147;
-threesuperior = 132;
-twosuperior = 121;
-};
 five = {
 degree = -48;
 eight = 9;
@@ -33301,10 +33067,6 @@ hyphen = 0;
 l = 0;
 periodcentered = -58;
 periodcentered.tf.ss14 = -176;
-};
-"longs-fina.ligature" = {
-i = 60;
-"longs-init.ligature" = 84;
 };
 m = {
 asterisk = -62;
@@ -46325,50 +46087,10 @@ period.tf.ss14 = -270;
 period = -141;
 period.tf.ss14 = -271;
 };
-_f_adieresis.ligature = {
-b = 87;
-c = -9;
-comma.tf.ss14 = -160;
-d = 0;
-e = -9;
-f = 99;
-h = 98;
-i = 79;
-j = 83;
-k = 98;
-l = 98;
-p = -15;
-period.tf.ss14 = -159;
-t = 8;
-u = -23;
-v = -47;
-w = -55;
-y = -43;
-};
 _f_h.ligature = {
 bracketright.tf.ss14 = -94;
 question = -31;
 trademark = -102;
-};
-_f_i.ligature = {
-b = 103;
-bracketright = 75;
-bracketright.tf.ss14 = -37;
-parenleft = 0;
-parenright = 93;
-question = 36;
-};
-_f_idieresis.ligature = {
-b = 170;
-f = 152;
-k = 170;
-l = 170;
-};
-_f_j.ligature = {
-s = 0;
-};
-_f_j.ligature.cv01 = {
-s = 0;
 };
 _f_k.ligature = {
 bracketright.tf.ss14 = -65;
@@ -46381,62 +46103,10 @@ periodcentered = -32;
 periodcentered.tf.ss14 = -177;
 z = 0;
 };
-_f_odieresis.ligature = {
-b = 62;
-c = 0;
-comma.tf.ss14 = -181;
-d = 0;
-h = 55;
-hyphen = 30;
-k = 55;
-l = 55;
-n = -12;
-period.tf.ss14 = -180;
-s = 0;
-v = -46;
-w = -47;
-y = -46;
-z = 0;
-};
-_f_t.ligature = {
-bracketright = 107;
-bracketright.tf.ss14 = -24;
-equal = -87;
-exclam = 152;
-plus.lf = -127;
-question = 11;
-};
-_f_udieresis.ligature = {
-b = 80;
-c = -10;
-comma.tf.ss14 = -167;
-d = 0;
-e = -11;
-f = 97;
-h = 81;
-j = 83;
-k = 81;
-l = 81;
-p = 0;
-period.tf.ss14 = -166;
-t = 0;
-v = -24;
-y = -12;
-};
-_f_ydieresis.ligature = {
-comma = -75;
-comma.tf.ss14 = -245;
-};
 _longs_h.ligature = {
 bracketright.tf.ss14 = -94;
 question = -31;
 trademark = -102;
-};
-_longs_i.ligature = {
-bracketright = 56;
-bracketright.tf.ss14 = -44;
-parenleft = -22;
-question = 34;
 };
 _longs_k.ligature = {
 bracketright.tf.ss14 = -65;
@@ -46448,14 +46118,6 @@ g = 0;
 periodcentered = -32;
 periodcentered.tf.ss14 = -177;
 z = 0;
-};
-_longs_t.liga = {
-bracketright = 107;
-bracketright.tf.ss14 = -24;
-equal = -87;
-exclam = 152;
-plus.lf = -127;
-question = 11;
 };
 "_part.LC-baseline-lower-stem" = {
 "_part.LC-ka-cy-wings" = -68;
@@ -46765,21 +46427,6 @@ three = 136;
 threesuperior = 164;
 two = 147;
 };
-"f-fina.ligature" = {
-Z = 177;
-asterisk = 119;
-bracketleft = 191;
-bracketright = 177;
-eightsuperior = 154;
-equal = -68;
-exclam = 194;
-fivesuperior = 141;
-ninesuperior = 190;
-question = 152;
-sixsuperior = 179;
-threesuperior = 166;
-twosuperior = 148;
-};
 five = {
 degree = -20;
 eight = 45;
@@ -46914,10 +46561,6 @@ hyphen = 0;
 l = 0;
 periodcentered = -32;
 periodcentered.tf.ss14 = -166;
-};
-"longs-fina.ligature" = {
-i = 195;
-"longs-init.ligature" = 194;
 };
 m = {
 asterisk = -42;
@@ -59938,50 +59581,10 @@ period.tf.ss14 = -308;
 period = -173;
 period.tf.ss14 = -313;
 };
-_f_adieresis.ligature = {
-b = -2;
-c = 2;
-comma.tf.ss14 = -184;
-d = 2;
-e = 2;
-f = 0;
-h = 0;
-i = 0;
-j = -2;
-k = 0;
-l = 0;
-p = -19;
-period.tf.ss14 = -184;
-t = -13;
-u = -33;
-v = -47;
-w = -55;
-y = -39;
-};
 _f_h.ligature = {
 bracketright.tf.ss14 = -180;
 question = -88;
 trademark = -143;
-};
-_f_i.ligature = {
-b = 0;
-bracketright = -12;
-bracketright.tf.ss14 = -162;
-parenleft = -52;
-parenright = -39;
-question = -23;
-};
-_f_idieresis.ligature = {
-b = 49;
-f = 44;
-k = 51;
-l = 51;
-};
-_f_j.ligature = {
-s = 17;
-};
-_f_j.ligature.cv01 = {
-s = 17;
 };
 _f_k.ligature = {
 bracketright.tf.ss14 = -163;
@@ -59994,62 +59597,10 @@ periodcentered = -60;
 periodcentered.tf.ss14 = -194;
 z = 0;
 };
-_f_odieresis.ligature = {
-b = 2;
-c = 26;
-comma.tf.ss14 = -197;
-d = 29;
-h = 2;
-hyphen = 50;
-k = 2;
-l = 2;
-n = 2;
-period.tf.ss14 = -197;
-s = 33;
-v = -26;
-w = -33;
-y = -26;
-z = 0;
-};
-_f_t.ligature = {
-bracketright = -14;
-bracketright.tf.ss14 = -145;
-equal = -149;
-exclam = 0;
-plus.lf = -142;
-question = -33;
-};
-_f_udieresis.ligature = {
-b = -2;
-c = 0;
-comma.tf.ss14 = -187;
-d = 2;
-e = 0;
-f = 0;
-h = 0;
-j = -2;
-k = 0;
-l = 0;
-p = -10;
-period.tf.ss14 = -186;
-t = -5;
-v = -28;
-y = -11;
-};
-_f_ydieresis.ligature = {
-comma = -91;
-comma.tf.ss14 = -272;
-};
 _longs_h.ligature = {
 bracketright.tf.ss14 = -180;
 question = -88;
 trademark = -143;
-};
-_longs_i.ligature = {
-bracketright = -21;
-bracketright.tf.ss14 = -172;
-parenleft = -58;
-question = -32;
 };
 _longs_k.ligature = {
 bracketright.tf.ss14 = -163;
@@ -60061,14 +59612,6 @@ g = -5;
 periodcentered = -60;
 periodcentered.tf.ss14 = -194;
 z = 0;
-};
-_longs_t.liga = {
-bracketright = -14;
-bracketright.tf.ss14 = -145;
-equal = -149;
-exclam = 0;
-plus.lf = -142;
-question = -33;
 };
 "_part.LC-baseline-lower-stem" = {
 "_part.LC-ka-cy-wings" = -89;
@@ -60378,21 +59921,6 @@ three = 108;
 threesuperior = 136;
 two = 123;
 };
-"f-fina.ligature" = {
-Z = 125;
-asterisk = 112;
-bracketleft = 126;
-bracketright = 104;
-eightsuperior = 145;
-equal = -132;
-exclam = 147;
-fivesuperior = 115;
-ninesuperior = 164;
-question = 129;
-sixsuperior = 156;
-threesuperior = 159;
-twosuperior = 144;
-};
 five = {
 degree = 0;
 eight = 21;
@@ -60527,10 +60055,6 @@ hyphen = 0;
 l = 0;
 periodcentered = -60;
 periodcentered.tf.ss14 = -194;
-};
-"longs-fina.ligature" = {
-i = 111;
-"longs-init.ligature" = 113;
 };
 m = {
 asterisk = -67;
@@ -73551,50 +73075,10 @@ period.tf.ss14 = -213;
 period = -157;
 period.tf.ss14 = -229;
 };
-_f_adieresis.ligature = {
-b = -46;
-c = -31;
-comma.tf.ss14 = -138;
-d = -27;
-e = -31;
-f = 0;
-h = 0;
-i = 0;
-j = -60;
-k = 0;
-l = 0;
-p = -66;
-period.tf.ss14 = -151;
-t = -49;
-u = -72;
-v = -78;
-w = -74;
-y = -59;
-};
 _f_h.ligature = {
 bracketright.tf.ss14 = -157;
 question = -30;
 trademark = -143;
-};
-_f_i.ligature = {
-b = -44;
-bracketright = 7;
-bracketright.tf.ss14 = -142;
-parenleft = -49;
-parenright = -44;
-question = -8;
-};
-_f_idieresis.ligature = {
-b = 0;
-f = 3;
-k = 29;
-l = 29;
-};
-_f_j.ligature = {
-s = 0;
-};
-_f_j.ligature.cv01 = {
-s = 0;
 };
 _f_k.ligature = {
 bracketright.tf.ss14 = -157;
@@ -73607,62 +73091,10 @@ periodcentered = -97;
 periodcentered.tf.ss14 = -222;
 z = -10;
 };
-_f_odieresis.ligature = {
-b = -48;
-c = 13;
-comma.tf.ss14 = -153;
-d = 13;
-h = -19;
-hyphen = 0;
-k = -19;
-l = -19;
-n = 0;
-period.tf.ss14 = -162;
-s = 2;
-v = -20;
-w = -18;
-y = -13;
-z = 0;
-};
-_f_t.ligature = {
-bracketright = -18;
-bracketright.tf.ss14 = -167;
-equal = -92;
-exclam = -18;
-plus.lf = -114;
-question = -35;
-};
-_f_udieresis.ligature = {
-b = -44;
-c = -30;
-comma.tf.ss14 = -142;
-d = -25;
-e = -30;
-f = 0;
-h = 0;
-j = -45;
-k = 0;
-l = 0;
-p = -55;
-period.tf.ss14 = -151;
-t = -35;
-v = -57;
-y = -44;
-};
-_f_ydieresis.ligature = {
-comma = -95;
-comma.tf.ss14 = -255;
-};
 _longs_h.ligature = {
 bracketright.tf.ss14 = -157;
 question = -30;
 trademark = -143;
-};
-_longs_i.ligature = {
-bracketright = 7;
-bracketright.tf.ss14 = -142;
-parenleft = -49;
-question = -8;
 };
 _longs_k.ligature = {
 bracketright.tf.ss14 = -157;
@@ -73674,14 +73106,6 @@ g = -2;
 periodcentered = -97;
 periodcentered.tf.ss14 = -222;
 z = -10;
-};
-_longs_t.liga = {
-bracketright = -18;
-bracketright.tf.ss14 = -167;
-equal = -92;
-exclam = -18;
-plus.lf = -114;
-question = -35;
 };
 "_part.LC-baseline-lower-stem" = {
 "_part.LC-ka-cy-wings" = -107;
@@ -73991,21 +73415,6 @@ three = 58;
 threesuperior = 56;
 two = 38;
 };
-"f-fina.ligature" = {
-Z = 72;
-asterisk = 0;
-bracketleft = 80;
-bracketright = 79;
-eightsuperior = 65;
-equal = -100;
-exclam = 66;
-fivesuperior = 103;
-ninesuperior = 106;
-question = 85;
-sixsuperior = 91;
-threesuperior = 76;
-twosuperior = 52;
-};
 five = {
 degree = -19;
 eight = 37;
@@ -74140,10 +73549,6 @@ hyphen = 0;
 l = 0;
 periodcentered = -97;
 periodcentered.tf.ss14 = -221;
-};
-"longs-fina.ligature" = {
-i = 0;
-"longs-init.ligature" = 0;
 };
 m = {
 asterisk = -116;
@@ -87164,50 +86569,10 @@ period.tf.ss14 = -260;
 period = -184;
 period.tf.ss14 = -283;
 };
-_f_adieresis.ligature = {
-b = -41;
-c = -30;
-comma.tf.ss14 = -141;
-d = -30;
-e = -30;
-f = 0;
-h = 0;
-i = 0;
-j = -46;
-k = 0;
-l = 0;
-p = -70;
-period.tf.ss14 = -156;
-t = -63;
-u = -79;
-v = -81;
-w = -78;
-y = -63;
-};
 _f_h.ligature = {
 bracketright.tf.ss14 = -173;
 question = -32;
 trademark = -161;
-};
-_f_i.ligature = {
-b = -41;
-bracketright = -27;
-bracketright.tf.ss14 = -179;
-parenleft = -69;
-parenright = -48;
-question = -18;
-};
-_f_idieresis.ligature = {
-b = 0;
-f = 0;
-k = 3;
-l = 3;
-};
-_f_j.ligature = {
-s = -32;
-};
-_f_j.ligature.cv01 = {
-s = -32;
 };
 _f_k.ligature = {
 bracketright.tf.ss14 = -171;
@@ -87220,62 +86585,10 @@ periodcentered = -89;
 periodcentered.tf.ss14 = -219;
 z = -22;
 };
-_f_odieresis.ligature = {
-b = -29;
-c = -19;
-comma.tf.ss14 = -176;
-d = -16;
-h = -11;
-hyphen = -48;
-k = -11;
-l = -11;
-n = -19;
-period.tf.ss14 = -182;
-s = -20;
-v = -27;
-w = -23;
-y = -20;
-z = -29;
-};
-_f_t.ligature = {
-bracketright = -67;
-bracketright.tf.ss14 = -190;
-equal = -75;
-exclam = -20;
-plus.lf = -79;
-question = -28;
-};
-_f_udieresis.ligature = {
-b = -51;
-c = -29;
-comma.tf.ss14 = -142;
-d = -29;
-e = -31;
-f = 0;
-h = 0;
-j = -41;
-k = 0;
-l = 0;
-p = -50;
-period.tf.ss14 = -153;
-t = -53;
-v = -72;
-y = -50;
-};
-_f_ydieresis.ligature = {
-comma = -99;
-comma.tf.ss14 = -260;
-};
 _longs_h.ligature = {
 bracketright.tf.ss14 = -173;
 question = -32;
 trademark = -161;
-};
-_longs_i.ligature = {
-bracketright = -27;
-bracketright.tf.ss14 = -179;
-parenleft = -69;
-question = -18;
 };
 _longs_k.ligature = {
 bracketright.tf.ss14 = -171;
@@ -87287,14 +86600,6 @@ g = 0;
 periodcentered = -89;
 periodcentered.tf.ss14 = -219;
 z = -22;
-};
-_longs_t.liga = {
-bracketright = -67;
-bracketright.tf.ss14 = -190;
-equal = -75;
-exclam = -20;
-plus.lf = -79;
-question = -28;
 };
 "_part.LC-baseline-lower-stem" = {
 "_part.LC-ka-cy-wings" = -107;
@@ -87604,21 +86909,6 @@ three = 57;
 threesuperior = 106;
 two = 55;
 };
-"f-fina.ligature" = {
-Z = 93;
-asterisk = 60;
-bracketleft = 71;
-bracketright = 56;
-eightsuperior = 84;
-equal = -72;
-exclam = 62;
-fivesuperior = 116;
-ninesuperior = 127;
-question = 143;
-sixsuperior = 114;
-threesuperior = 125;
-twosuperior = 100;
-};
 five = {
 degree = 0;
 eight = 14;
@@ -87753,10 +87043,6 @@ hyphen = 0;
 l = 0;
 periodcentered = -89;
 periodcentered.tf.ss14 = -219;
-};
-"longs-fina.ligature" = {
-i = 15;
-"longs-init.ligature" = 9;
 };
 m = {
 asterisk = -114;
@@ -100777,50 +100063,10 @@ period.tf.ss14 = -270;
 period = -151;
 period.tf.ss14 = -271;
 };
-_f_adieresis.ligature = {
-b = -12;
-c = -16;
-comma.tf.ss14 = -141;
-d = -8;
-e = -17;
-f = 0;
-h = 0;
-i = 0;
-j = -16;
-k = 0;
-l = 0;
-p = -30;
-period.tf.ss14 = -152;
-t = -25;
-u = -40;
-v = -91;
-w = -86;
-y = -85;
-};
 _f_h.ligature = {
 bracketright.tf.ss14 = -155;
 question = -70;
 trademark = -138;
-};
-_f_i.ligature = {
-b = -3;
-bracketright = 21;
-bracketright.tf.ss14 = -132;
-parenleft = -52;
-parenright = -54;
-question = -47;
-};
-_f_idieresis.ligature = {
-b = 10;
-f = 8;
-k = 15;
-l = 16;
-};
-_f_j.ligature = {
-s = 0;
-};
-_f_j.ligature.cv01 = {
-s = 0;
 };
 _f_k.ligature = {
 bracketright.tf.ss14 = -135;
@@ -100833,62 +100079,10 @@ periodcentered = -72;
 periodcentered.tf.ss14 = -194;
 z = 0;
 };
-_f_odieresis.ligature = {
-b = 0;
-c = 15;
-comma.tf.ss14 = -170;
-d = 18;
-h = 0;
-hyphen = 69;
-k = 0;
-l = 0;
-n = 2;
-period.tf.ss14 = -175;
-s = 0;
-v = -46;
-w = -38;
-y = -46;
-z = 0;
-};
-_f_t.ligature = {
-bracketright = -2;
-bracketright.tf.ss14 = -144;
-equal = -96;
-exclam = 0;
-plus.lf = -95;
-question = -54;
-};
-_f_udieresis.ligature = {
-b = -10;
-c = -5;
-comma.tf.ss14 = -145;
-d = 0;
-e = -11;
-f = 2;
-h = 0;
-j = -21;
-k = 0;
-l = 0;
-p = -20;
-period.tf.ss14 = -156;
-t = 2;
-v = -71;
-y = -51;
-};
-_f_ydieresis.ligature = {
-comma = -108;
-comma.tf.ss14 = -270;
-};
 _longs_h.ligature = {
 bracketright.tf.ss14 = -155;
 question = -70;
 trademark = -138;
-};
-_longs_i.ligature = {
-bracketright = 19;
-bracketright.tf.ss14 = -137;
-parenleft = -54;
-question = -58;
 };
 _longs_k.ligature = {
 bracketright.tf.ss14 = -135;
@@ -100900,14 +100094,6 @@ g = -11;
 periodcentered = -72;
 periodcentered.tf.ss14 = -194;
 z = 0;
-};
-_longs_t.liga = {
-bracketright = -2;
-bracketright.tf.ss14 = -144;
-equal = -96;
-exclam = 0;
-plus.lf = -95;
-question = -54;
 };
 "_part.LC-baseline-lower-stem" = {
 "_part.LC-ka-cy-wings" = -73;
@@ -101218,21 +100404,6 @@ three = 65;
 threesuperior = 80;
 two = 75;
 };
-"f-fina.ligature" = {
-Z = 89;
-asterisk = 32;
-bracketleft = 92;
-bracketright = 110;
-eightsuperior = 98;
-equal = -98;
-exclam = 110;
-fivesuperior = 107;
-ninesuperior = 130;
-question = 64;
-sixsuperior = 128;
-threesuperior = 112;
-twosuperior = 93;
-};
 five = {
 degree = -26;
 eight = 16;
@@ -101374,10 +100545,6 @@ hyphen = 0;
 l = 0;
 periodcentered = -72;
 periodcentered.tf.ss14 = -194;
-};
-"longs-fina.ligature" = {
-i = 60;
-"longs-init.ligature" = 54;
 };
 m = {
 asterisk = -85;
@@ -114405,50 +113572,10 @@ period.tf.ss14 = -320;
 period = -184;
 period.tf.ss14 = -329;
 };
-_f_adieresis.ligature = {
-b = -23;
-c = -6;
-comma.tf.ss14 = -182;
-d = -6;
-e = -7;
-f = 0;
-h = 0;
-i = 0;
-j = -22;
-k = 0;
-l = 0;
-p = -28;
-period.tf.ss14 = -188;
-t = -18;
-u = -44;
-v = -98;
-w = -85;
-y = -74;
-};
 _f_h.ligature = {
 bracketright.tf.ss14 = -199;
 question = -80;
 trademark = -167;
-};
-_f_i.ligature = {
-b = -20;
-bracketright = 42;
-bracketright.tf.ss14 = -206;
-parenleft = -11;
-parenright = -65;
-question = -52;
-};
-_f_idieresis.ligature = {
-b = 64;
-f = 54;
-k = 65;
-l = 67;
-};
-_f_j.ligature = {
-s = -7;
-};
-_f_j.ligature.cv01 = {
-s = -6;
 };
 _f_k.ligature = {
 bracketright.tf.ss14 = -190;
@@ -114461,62 +113588,10 @@ periodcentered = -80;
 periodcentered.tf.ss14 = -230;
 z = 0;
 };
-_f_odieresis.ligature = {
-b = -36;
-c = 5;
-comma.tf.ss14 = -210;
-d = 6;
-h = 2;
-hyphen = 48;
-k = 0;
-l = 2;
-n = 5;
-period.tf.ss14 = -215;
-s = 8;
-v = -62;
-w = -54;
-y = -51;
-z = 14;
-};
-_f_t.ligature = {
-bracketright = 0;
-bracketright.tf.ss14 = -189;
-equal = -68;
-exclam = 0;
-plus.lf = -88;
-question = -45;
-};
-_f_udieresis.ligature = {
-b = -38;
-c = -3;
-comma.tf.ss14 = -188;
-d = -2;
-e = -3;
-f = 4;
-h = 0;
-j = -21;
-k = -2;
-l = 0;
-p = -23;
-period.tf.ss14 = -195;
-t = 0;
-v = -72;
-y = -47;
-};
-_f_ydieresis.ligature = {
-comma = -93;
-comma.tf.ss14 = -307;
-};
 _longs_h.ligature = {
 bracketright.tf.ss14 = -199;
 question = -80;
 trademark = -167;
-};
-_longs_i.ligature = {
-bracketright = 42;
-bracketright.tf.ss14 = -206;
-parenleft = -11;
-question = -52;
 };
 _longs_k.ligature = {
 bracketright.tf.ss14 = -190;
@@ -114528,14 +113603,6 @@ g = -6;
 periodcentered = -80;
 periodcentered.tf.ss14 = -230;
 z = 0;
-};
-_longs_t.liga = {
-bracketright = 0;
-bracketright.tf.ss14 = -189;
-equal = -68;
-exclam = 0;
-plus.lf = -88;
-question = -45;
 };
 "_part.LC-baseline-lower-stem" = {
 "_part.LC-ka-cy-wings" = -81;
@@ -114846,21 +113913,6 @@ three = 100;
 threesuperior = 144;
 two = 118;
 };
-"f-fina.ligature" = {
-Z = 124;
-asterisk = 94;
-bracketleft = 160;
-bracketright = 168;
-eightsuperior = 151;
-equal = -73;
-exclam = 145;
-fivesuperior = 161;
-ninesuperior = 165;
-question = 127;
-sixsuperior = 156;
-threesuperior = 169;
-twosuperior = 144;
-};
 five = {
 degree = -40;
 eight = 15;
@@ -115002,10 +114054,6 @@ hyphen = 0;
 l = 0;
 periodcentered = -80;
 periodcentered.tf.ss14 = -225;
-};
-"longs-fina.ligature" = {
-i = 108;
-"longs-init.ligature" = 96;
 };
 m = {
 asterisk = -93;
