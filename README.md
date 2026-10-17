@@ -27,7 +27,6 @@ There are some features in Somerville that are not present in any existing math 
 - Horizontal arrows have additional variation (Arrow Length axis,  Arrow Head Axis).  
 - Integrals have addition variation (Integral Slant axis).
 
-See the [test site](https://juliusross1.github.io/Somerville/somerville-mathml.html) for a demonstration.  
 
 ## Use in ConTeXt
  Variable math is supported in the most recent versions of ConTeXt.
