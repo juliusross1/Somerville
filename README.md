@@ -78,7 +78,7 @@ python3 instantiate_somerville.py "Weight=700" "Math Weight=900" \
 "Optical Size=12" "Arrow Head=200" "Arrow Length=150" -o Somerville
 ```
 
-which will create `SomervilleRoman.ttf`, `SomervilleItalic.ttf`, and `SomervilleMath.ttf`.   In LuaLaTeX this can be used as follows:
+This will create `SomervilleRoman.ttf`, `SomervilleItalic.ttf`, and `SomervilleMath.ttf`.   In LuaLaTeX this can be used as follows:
 
 ```
 \documentclass{article}
