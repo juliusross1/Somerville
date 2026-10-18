@@ -1,0 +1,326 @@
+{
+color = 1;
+glyphname = integral.s09;
+layers = (
+{
+layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+shapes = (
+{
+piece = {
+height = 45;
+};
+ref = _smart.integral;
+}
+);
+width = 473;
+},
+{
+layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+shapes = (
+{
+piece = {
+height = 45;
+};
+ref = _smart.integral;
+}
+);
+width = 772;
+},
+{
+layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
+shapes = (
+{
+piece = {
+height = 45;
+};
+ref = _smart.integral;
+}
+);
+width = 690;
+},
+{
+layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+shapes = (
+{
+piece = {
+height = 45;
+};
+ref = _smart.integral;
+}
+);
+width = 829;
+},
+{
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+shapes = (
+{
+piece = {
+height = 45;
+};
+ref = _smart.integral;
+}
+);
+width = 592;
+},
+{
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+piece = {
+height = 45;
+};
+ref = _smart.integral;
+}
+);
+width = 694;
+},
+{
+layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+shapes = (
+{
+piece = {
+height = 45;
+};
+ref = _smart.integral;
+}
+);
+width = 634;
+},
+{
+layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+shapes = (
+{
+piece = {
+height = 45;
+};
+ref = _smart.integral;
+}
+);
+width = 828;
+},
+{
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+95,
+360,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "C657D8F6-5CF3-49E7-AF70-1B771F4BD9E8";
+name = "Needlepoint SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 45;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 1436;
+},
+{
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+113,
+360,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "F150647C-2B45-4535-9275-95849D7D1E80";
+name = "Needlepoint SemiExpanded Upright Slant";
+shapes = (
+{
+piece = {
+height = 45;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 1722;
+},
+{
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+95,
+900,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "039460C5-1FC2-44B3-8D97-8800BC84FD67";
+name = "Needlepoint Black SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 45;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 1630;
+},
+{
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+113,
+900,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "3A968F84-B82A-4CDC-9A49-764EE0DCF4B8";
+name = "Needlepoint Black SemiExpanded Upright Slant";
+shapes = (
+{
+piece = {
+height = 45;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 1814;
+},
+{
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+95,
+360,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "46D5F1A7-0DB9-4282-9B7B-D581FC0F3467";
+name = "Agate SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 45;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 598;
+},
+{
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+113,
+360,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "E1D25795-1050-4FED-BF5A-2AC1398EDDBB";
+name = "Agate SemiExpanded Upright Slant";
+shapes = (
+{
+piece = {
+height = 45;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 704;
+},
+{
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+95,
+900,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "8050274F-0660-4092-80E8-2C39D7BCD3CC";
+name = "Agate Black SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 45;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 640;
+},
+{
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+113,
+900,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "B9B2C940-C66D-47B0-AD09-A6586F58B88E";
+name = "Agate Black SemiExpanded Upright Slant";
+shapes = (
+{
+piece = {
+height = 45;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 836;
+}
+);
+}

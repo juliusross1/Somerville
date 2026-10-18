@@ -1,0 +1,328 @@
+{
+color = 1;
+glyphname = integral.s20;
+layers = (
+{
+layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+shapes = (
+{
+piece = {
+height = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 506;
+},
+{
+layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+shapes = (
+{
+piece = {
+height = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 964;
+},
+{
+layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
+shapes = (
+{
+piece = {
+height = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 734;
+},
+{
+layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+shapes = (
+{
+piece = {
+height = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 921;
+},
+{
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+shapes = (
+{
+piece = {
+height = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 592;
+},
+{
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+alignment = -1;
+piece = {
+height = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 694;
+},
+{
+layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+shapes = (
+{
+piece = {
+height = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 634;
+},
+{
+layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+shapes = (
+{
+piece = {
+height = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 828;
+},
+{
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+95,
+360,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "2FD9EB59-98D7-4FB0-B9DC-1378D3A8569C";
+name = "Needlepoint SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 2352;
+},
+{
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+113,
+360,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "B386FEBC-2B59-4C53-B002-98ACB0F5D7C3";
+name = "Needlepoint SemiExpanded Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 2785;
+},
+{
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+95,
+900,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "8D6E2382-C8D4-40F9-AA64-25754E7A1D38";
+name = "Needlepoint Black SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 2558;
+},
+{
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+113,
+900,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "FF0BFC85-3427-4B52-8811-A5E4A353A7C4";
+name = "Needlepoint Black SemiExpanded Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 2845;
+},
+{
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+95,
+360,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "4FF6402B-8C00-471C-A1BB-03DCC36DAE68";
+name = "Agate SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 598;
+},
+{
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+113,
+360,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "BCB41DE8-14A9-46C9-B74E-F6CCA8304625";
+name = "Agate SemiExpanded Upright Slant";
+shapes = (
+{
+alignment = -1;
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 694;
+},
+{
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+95,
+900,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "0206D4E4-8F08-4122-9AD2-0DCE09EE2E43";
+name = "Agate Black SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 640;
+},
+{
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+113,
+900,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "06822AB1-1BC4-4B21-94C0-F85083903A5C";
+name = "Agate Black SemiExpanded Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.integral;
+}
+);
+width = 836;
+}
+);
+}

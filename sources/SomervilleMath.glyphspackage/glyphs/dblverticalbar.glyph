@@ -1,0 +1,157 @@
+{
+glyphname = dblverticalbar;
+layers = (
+{
+layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+shapes = (
+{
+ref = _smart.bar;
+scale = (0.9,1);
+},
+{
+alignment = -1;
+pos = (190,0);
+ref = _smart.bar;
+scale = (0.9,1);
+}
+);
+width = 461;
+},
+{
+layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+shapes = (
+{
+ref = _smart.bar;
+scale = (0.9,1);
+},
+{
+alignment = -1;
+pos = (240,0);
+ref = _smart.bar;
+scale = (0.9,1);
+}
+);
+width = 511;
+},
+{
+layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
+shapes = (
+{
+ref = _smart.bar;
+scale = (0.9,1);
+},
+{
+alignment = -1;
+pos = (280,0);
+ref = _smart.bar;
+scale = (0.9,1);
+}
+);
+width = 632;
+},
+{
+layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+shapes = (
+{
+ref = _smart.bar;
+scale = (0.9,1);
+},
+{
+alignment = -1;
+pos = (330,0);
+ref = _smart.bar;
+scale = (0.9,1);
+}
+);
+width = 682;
+},
+{
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+shapes = (
+{
+ref = _smart.bar;
+scale = (0.9,1);
+},
+{
+alignment = -1;
+pos = (190,0);
+ref = _smart.bar;
+scale = (0.9,1);
+}
+);
+width = 461;
+},
+{
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+ref = _smart.bar;
+scale = (0.9,1);
+},
+{
+alignment = -1;
+pos = (250,0);
+ref = _smart.bar;
+scale = (0.9,1);
+}
+);
+width = 521;
+},
+{
+layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+shapes = (
+{
+ref = _smart.bar;
+scale = (0.9,1);
+},
+{
+alignment = -1;
+pos = (280,0);
+ref = _smart.bar;
+scale = (0.9,1);
+}
+);
+width = 632;
+},
+{
+layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+shapes = (
+{
+ref = _smart.bar;
+scale = (0.9,1);
+},
+{
+alignment = -1;
+pos = (340,0);
+ref = _smart.bar;
+scale = (0.9,1);
+}
+);
+width = 692;
+}
+);
+metricRight = "=100";
+unicode = 8214;
+userData = {
+com.nagwa.MATHPlugin.variants = {
+vVariants = (
+dblverticalbar,
+dblverticalbar.s01,
+dblverticalbar.s02,
+dblverticalbar.s03,
+dblverticalbar.s04,
+dblverticalbar.s05,
+dblverticalbar.s06,
+dblverticalbar.s07,
+dblverticalbar.s08,
+dblverticalbar.s09,
+dblverticalbar.s10
+);
+};
+com.opentypemathtools.smartComponentVariants = {
+N = 10;
+axis = height;
+step = 10;
+};
+};
+}
