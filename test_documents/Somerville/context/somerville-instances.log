@@ -1,0 +1,154 @@
+open source     > level 1, order 1, name 'cont-yes.mkiv'
+system          > 
+system          > ConTeXt  ver: 2026.10.01 18:42 LMTX  fmt: 2026.10.4  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > files > jobname '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances', input '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex', result '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 2, order 3, name '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex'
+fonts           > preloading latin modern fonts (second stage)
+open source     > level 3, order 4, name 'type-imp-somerville.mkxl'
+close source    > level 3, order 4, name 'type-imp-somerville.mkxl'
+fonts           > 'fallback modern rm 12pt' is loaded
+pages           > flushing realpage 1, userpage 1, subpage 1
+close source    > level 2, order 4, name '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex'
+close source    > level 1, order 4, name 'cont-yes.mkiv'
+backend         > xmp > using file '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+backend         > fonts > start embedded fonts
+backend         > fonts >     1 : file 'PlayfairRomanVF.ttf', base 'GYSHBV+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-arrowhead100arrowlength200integralslant0mathweight900opticalsize24weight400width100-0'
+backend         > fonts >     2 : file 'SomervilleMathVF.ttf', base 'XSOPUY+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arrowhead100arrowlength200integralslant0mathweight900opticalsize24weight400width100-0'
+backend         > fonts > stop embedded fonts
+system          > start used files
+system          > text: somerville-instances
+system          > stop used files
+system          > start used files
+system          >    1: filename=cont-yes.mkiv filetype=tex format=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv usedmethod=database
+system          >    2: filename=publ-imp-default.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+system          >    3: filename=cont-new.mkxl filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
+system          >    4: filename=lang-exc.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+system          >    5: filename=lang-us.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+system          >    6: filename=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex format=tex foundname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex usedmethod=direct
+system          >    7: filename=context-libraries.tma filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma usedmethod=database
+system          >    8: filename=type-imp-somerville.mkxl format=tex foundname=type-imp-somerville.mkxl fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/type-imp-somerville.mkxl usedmethod=direct
+system          >    9: filename=SomervilleMathVF.ttf filetype=ttf foundname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.ttf usedmethod=filesystem
+system          >   10: filename=PlayfairRomanVF.ttf filetype=ttf foundname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf usedmethod=filesystem
+system          >   11: filename=PlayfairItalicVF.ttf filetype=ttf foundname=/Users/juliusross/Documents/fontoutputs/PlayfairItalicVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/PlayfairItalicVF.ttf usedmethod=filesystem
+system          >   12: filename=lm.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
+system          >   13: filename=lmroman10-regular filetype=otf format=otf foundname=/Users/juliusross/context/tex/texmf/fonts/data/gust/lm/lmroman10-regular.otf fullname=/Users/juliusross/context/tex/texmf/fonts/data/gust/lm/lmroman10-regular.otf usedmethod=database
+system          >   14: filename=modern-text.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/modern-text.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/modern-text.lfg usedmethod=database
+system          >   15: filename=latinmodern-math.otf filetype=otf format=otf foundname=/Users/juliusross/context/tex/texmf/fonts/data/gust/lm/latinmodern-math.otf fullname=/Users/juliusross/context/tex/texmf/fonts/data/gust/lm/latinmodern-math.otf usedmethod=database
+system          >   16: filename=modern-math.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/modern-math.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/modern-math.lfg usedmethod=database
+system          >   17: filename=common-math.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg usedmethod=database
+system          >   18: filename=latinmodernmathcompanion-regular.otf filetype=otf format=otf foundname=/Users/juliusross/context/tex/texmf/fonts/data/cms/companion/LatinModernMathCompanion-Regular.otf fullname=/Users/juliusross/context/tex/texmf/fonts/data/cms/companion/LatinModernMathCompanion-Regular.otf usedmethod=database
+system          >   19: filename=somerville.lfg foundname=somerville.lfg fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville.lfg usedmethod=direct
+system          >   20: filename=somerville-frysorn.lfg foundname=somerville-frysorn.lfg fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-frysorn.lfg usedmethod=direct
+system          >   21: filename=Frysorn.ttf filetype=ttf format=ttf foundname=/Users/juliusross/Documents/fontoutputs/Frysorn.ttf fullname=/Users/juliusross/Documents/fontoutputs/Frysorn.ttf usedmethod=filesystem
+system          >   22: filename=lpdf-pdx.xml filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
+system          > stop used files
+system          > start commandline options
+system          >   currentrun="1"
+system          >   fulljobname="/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex"
+system          >   input="/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex"
+system          >   kindofrun="1"
+system          >   maxnofruns="9"
+system          >   texmfbinpath="/Users/juliusross/context/tex/texmf-osx-arm64/bin"
+system          > stop commandline options
+system          > start commandline files
+system          >    1: /Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex
+system          > stop commandline files
+modules         > start used modules
+modules         > stop used modules
+system          > 
+system          > status after finishing run
+system          > 
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert        mvl
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500        500
+system          >   min     150000   10000000     150000     150000   10000000    2000000    1000000      10000        500       1000      20000     100000        250        250         50         25         10
+system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250         10
+system          >   stp     100000    1000000     100000     100000    5000000    1000000    1000000      10000        250       1000      10000      10000        250        250         50         25         10
+system          > 
+system          >   mem     150000    1010780     150000              10000000    2000000    1000000      10000        500       1000      20000      10000        250        250         50        500         10
+system          >   itm         16          1         16                     9          8          1         32         32        116          4         16          8          8         28         72        116
+system          >   ext          0          0          0          0       5440          0          0          0          0          0          0          0    2827596         96          0          0          0
+system          >   all    2400000    1010780    2400000          1   90005440   16000000    1000000     320000      16000     116000      80000     160000    2829596       2096       1400      36000       1160
+system          > 
+system          >   ini    2150735     977283          0      53566          0     591100                                                                                       0                                 
+system          >   ptr      54692                  5402      54675                668125          0          0          0          0          0          0         11          1          0         11          0
+system          >   top      54693                495867     262146       6891     707372        206         39          8         12         39        194        250        250         50        500         10
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          > 
+system          >   current input type    : initial
+system          > 
+system          >   approximate memory    : 118561096 (113 MB)
+system          > 
+system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 5
+system          > 
+system          >   luabytecode registers : 1028
+system          >   luabytecode bytes     : 16464 (0 MB)
+system          >   luastate bytes now    : 84917389 (80 MB)
+system          >   luastate bytes max    : 92078822 (87 MB)
+system          > 
+system          >   file callbacks        : 205
+system          >   saved callbacks       : 86
+system          >   direct callbacks      : 5
+system          >   function callbacks    : 969
+system          >   value callbacks       : 12106
+system          >   message callbacks     : 0
+system          >   bytecode callbacks    : 634
+system          > 
+system          >   mp instances          : 0
+system          >   mp estimated memory   : 0 (0 MB)
+system          >   mp file callbacks     : 0
+system          >   mp text callbacks     : 0
+system          >   mp script callbacks   : 0
+system          >   mp log callbacks      : 0
+system          > 
+system          >   total callbacks       : 14005
+system          >   mp total callbacks    : 0
+system          >   backend callbacks     : 0
+system          > 
+system          >   linebreak statistics  : context      calls     first    second     final  passonly   subpass
+system          > 
+system          >   linebreak statistics  : normal           4         4         0         3         0         0
+system          >   linebreak statistics  : vbox             3         3         0         0         0         0
+system          > 
+system          >   linebreak statistics  :                  7         7         0         3         0         0
+system          > 
+system          >   linebreak statistics  : textlines          1
+system          > 
+system          >   hyphenation state     : checked           2
+system          >   hyphenation state     : hyphenated        1
+system          >   hyphenation state     : lists             2
+system          >   hyphenation state     : nothing           1
+system          >   hyphenation state     : words             1
+system          > 
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.007 seconds, 1 scans with scantime 0.004 seconds, 0 shared scans, 22 found files, scanned paths: /Users/juliusross/Documents/Pennstander
+mkxl run stats  > stored bytecode data: 528 modules (0.136 sec), 106 tables (0.007 sec), 634 chunks (0.142 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1907, freed: 0, unreachable: 1907
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 7 lists of 445
+mkxl run stats  > node memory usage: 6 attribute, 3 attributelist, 1 dir, 9 fontspec, 1 glue, 135 gluespec, 1 kern, 661 mathspec, 2 penalty, 56 specification, 2 temp
+mkxl run stats  > node list callback tasks: 17 unique task lists, 11 instances (re)created, 53 calls
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: resumed with value 0.90851917778082758
+mkxl run stats  > jobdata time: 0.001 seconds saving, 0.000 seconds loading
+mkxl run stats  > callbacks: file: 205, saved: 86, direct: 5, function: 969, value: 12106, message: 0, bytecode: 634, late 0, total: 14005 (14005 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > loaded fonts: 6 files: latinmodernmathcompanion-regular.otf, latinmodern-math.otf, lmroman10-regular.otf, frysorn.ttf, playfairromanvf.ttf, somervillemathvf.ttf
+mkxl run stats  > font engine: otf 3.156, afm 1.541, tfm 1.000, 8 instances, 2 shared in backend, 2 common vectors, 0 common hashes, load time 0.059 seconds 
+mkxl run stats  > math tweaking time: 0.021 seconds, 12 math goodie tables
+mkxl run stats  > font embedding time: 0.001 seconds, 2 fonts
+mkxl run stats  > result saved in file: /Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.pdf, compresslevel 1, objectcompresslevel 3, 8 streams, 0 uncompressed, 7 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20260923, format id: 736, memory mode: 1, compiler: clang, cversion: 17
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 54675 control sequences, 262144 hash slots, 5402 misses, approximate memory usage: 113 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 84 MB, ctx: 81 MB, max: 87 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 0.364 seconds, 1 processed pages, 1 shipped pages, 2.750 pages/second

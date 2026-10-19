@@ -1,0 +1,23 @@
+% !TEX root = somerville-instances.tex
+
+\usetypescriptfile[somerville]
+% \setupbodyfont[somerville-caption,12pt]
+
+ \starttext
+% ABCD Normal, {\it italic}, {\bf bold}, and \m{x^2}.
+
+% \switchtobodyfont[somerville-titling,12pt]
+% ABCD Regular text and \m{E=mc^2}.
+
+% \switchtobodyfont[somerville-needlepoint,12pt]
+% ABCD Display text and \m{E=mc^2}.
+
+
+\setupSomerville
+  {Width=100,Weight=400,Optical Size=24,Math Weight=900,Arrow Length=200,Arrow Head=100,Integral Slant=0}
+  {somerville-headings}
+
+\setupbodyfont[somerville-headings]
+ Test the headings \m{E=mc^2}
+
+ \stoptext

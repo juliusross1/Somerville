@@ -1,0 +1,19 @@
+return {
+    name = "somerville-lm-fallback",
+    version = "0.1",
+    comment = "Fill missing math glyphs from Latin Modern; retain Somerville glyphs and constants.",
+    mathematics = {
+        tweaks = {
+            aftercopying = {
+                {
+                    tweak = "replacealphabets",
+                    filename = "latinmodern-math.otf",
+                    keep = true,
+                    list = {
+                        { source = { first = 0x0000, last = 0x1FFFF } },
+                    },
+                },
+            },
+        },
+    },
+}

@@ -1,0 +1,37 @@
+return {
+    name = "somerville-frysorn",
+    version = "0.1",
+    comment = "Use Frysorn for blackboard-bold capitals and digits.",
+    mathematics = {
+        tweaks = {
+            aftercopying = {
+                {
+                    tweak = "replacealphabets",
+                    filename = "Frysorn.ttf",
+                    -- Frysorn uses Windows symbol encoding, not Unicode letters.
+                    -- Named target ranges also handle the legacy Unicode slots
+                    -- for double-struck C, H, N, P, Q, R, and Z.
+                    list = {
+                        {
+                            source = { first = 0xF041, last = 0xF05A },
+                            target = "uppercasedoublestruck",
+                            rscale = 0.8,
+                        },
+                    },
+                },
+                -- Separate tweaks avoid cumulative scaling between ranges.
+                {
+                    tweak = "replacealphabets",
+                    filename = "Frysorn.ttf",
+                    list = {
+                        {
+                            source = { first = 0xF030, last = 0xF039 },
+                            target = "digitsdoublestruck",
+                            rscale = 0.8,
+                        },
+                    },
+                },
+            },
+        },
+    },
+}
