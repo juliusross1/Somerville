@@ -17,6 +17,14 @@ name = bottomright;
 pos = (134,0);
 },
 {
+name = math.br;
+pos = (247,0);
+},
+{
+name = math.tr;
+pos = (217,708);
+},
+{
 name = stem;
 pos = (30,256);
 }
@@ -100,7 +108,7 @@ nodes = (
 );
 }
 );
-width = 227;
+width = 247;
 },
 {
 anchors = (
@@ -115,6 +123,14 @@ pos = (30,256);
 {
 name = bottomright;
 pos = (157,0);
+},
+{
+name = math.br;
+pos = (267,0);
+},
+{
+name = math.tr;
+pos = (197,708);
 },
 {
 name = stem;
@@ -200,7 +216,7 @@ nodes = (
 );
 }
 );
-width = 257;
+width = 307;
 },
 {
 anchors = (
@@ -215,6 +231,14 @@ pos = (30,260);
 {
 name = bottomright;
 pos = (217,0);
+},
+{
+name = math.br;
+pos = (317,0);
+},
+{
+name = math.tr;
+pos = (277,708);
 },
 {
 name = stem;
@@ -300,7 +324,7 @@ nodes = (
 );
 }
 );
-width = 297;
+width = 337;
 },
 {
 anchors = (
@@ -315,6 +339,14 @@ pos = (30,260);
 {
 name = bottomright;
 pos = (245,0);
+},
+{
+name = math.br;
+pos = (346,0);
+},
+{
+name = math.tr;
+pos = (286,708);
 },
 {
 name = stem;
@@ -400,7 +432,7 @@ nodes = (
 );
 }
 );
-width = 336;
+width = 396;
 },
 {
 anchors = (
@@ -415,6 +447,14 @@ pos = (30,256);
 {
 name = bottomright;
 pos = (196,0);
+},
+{
+name = math.br;
+pos = (297,0);
+},
+{
+name = math.tr;
+pos = (217,708);
 },
 {
 name = stem;
@@ -500,7 +540,7 @@ nodes = (
 );
 }
 );
-width = 297;
+width = 317;
 },
 {
 anchors = (
@@ -515,6 +555,14 @@ pos = (30,256);
 {
 name = bottomright;
 pos = (220,0);
+},
+{
+name = math.br;
+pos = (348,0);
+},
+{
+name = math.tr;
+pos = (228,708);
 },
 {
 name = stem;
@@ -600,7 +648,7 @@ nodes = (
 );
 }
 );
-width = 328;
+width = 378;
 },
 {
 anchors = (
@@ -615,6 +663,14 @@ pos = (30,260);
 {
 name = bottomright;
 pos = (297,0);
+},
+{
+name = math.br;
+pos = (409,0);
+},
+{
+name = math.tr;
+pos = (319,708);
 },
 {
 name = stem;
@@ -700,7 +756,7 @@ nodes = (
 );
 }
 );
-width = 369;
+width = 409;
 },
 {
 anchors = (
@@ -715,6 +771,14 @@ pos = (30,260);
 {
 name = bottomright;
 pos = (337,0);
+},
+{
+name = math.br;
+pos = (462,0);
+},
+{
+name = math.tr;
+pos = (312,708);
 },
 {
 name = stem;
@@ -800,7 +864,7 @@ nodes = (
 );
 }
 );
-width = 422;
+width = 482;
 }
 );
 }

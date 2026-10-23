@@ -1,0 +1,204 @@
+PROPOSAL: INDEPENDENT PRESCRIPT CORNER KERNS IN LUAMETATEX
+Saved 21 October 2026
+
+STATUS
+
+This is an experimental proposal, not a validated engine fix. The accompanying
+context-prescript-corner-kerns.patch was generated against the installed source
+at /Users/juliusross/context/tex/texmf-context/source/luametatex.
+It has NOT been applied, compiled, or tested for rendered output. No installed
+ConTeXt sources or Somerville goodies were modified to create this proposal.
+The companion .sha256 file records the exact original contents of the three
+source files against which the patch was generated.
+
+MOTIVATION
+
+Somerville uses one constant mathematical kern per corner. In the exported
+default SomervilleMathVF.ttf inspected during this investigation, italic M
+(U+1D440, source Mitalic-math) has top-left -127, bottom-left 0, no right-corner
+entries, and italic correction 0. Values are font units, not points. Other
+instances can have different top-left values.
+
+The intention is to let an upper-left script tuck into the space beside the
+sloping stroke while keeping a lower-left script clear of the foot. The test
+was M___{\rm{M}} in ConTeXt. Its lower-left script overlapped the base.
+
+ConTeXt's simplifykerns tweak converts OpenType corner tables to simple corner
+fields: the last entry for top corners, the first for bottom corners, and then
+removes the original tables. With one entry per corner it preserves the values.
+
+However, LuaMetaTeX's tex_aux_math_left_kern takes the minimum of the simple
+top-left and bottom-left fields. tex_aux_make_scripts appends that same result
+to BOTH prescript boxes. Thus min(-127, 0) = -127 moves the lower script inward
+as well as the upper script.
+
+Disabling simplifykerns is not an equivalent remedy. The native table path in
+the inspected source finds the most negative value in each left table, reverses
+its sign, and then takes the minimum of those corner results. In the example,
+min(127, 0) = 0. This eliminates the overlap but also the upper-left adjustment.
+
+DESIRED BEHAVIOUR
+
+For a single-glyph base and single-glyph prescripts, use these sums:
+
+  upper-left: base top-left    + script bottom-right
+  lower-left: base bottom-left + script top-right
+
+Scale each contribution at its own glyph's math size before adding. A negative
+sum moves the prescript inward, a positive sum adds separation. Never take a
+minimum between the base's upper-left and lower-left corners.
+
+These are the mirror corner pairs of ordinary right-hand superscript and
+subscript kerning. They also match Typst's choice of corners, though this
+proposal is NOT a complete reproduction of Typst's layout algorithm.
+
+With constant corner values there is no need to evaluate correction heights:
+every height lookup would return the same value. The script's opposite corner
+still matters. A zero base corner does not imply a zero pair adjustment if the
+script has a nonzero opposite corner.
+
+Italic correction is deliberately outside this proposal. Existing moveitalics,
+glyph widths, postscript italic correction, and right-hand script positioning
+remain as they are. Existing goodies can nevertheless influence the corner
+values that the new helper reads, particularly script bottom-right values.
+
+PATCH STRUCTURE
+
+1. source/tex/texmath.h
+   Add math_control_separate_prescript_kerns = 0x04000000. That bit was unused
+   in the inspected source. Do not add it to the default control mask.
+
+2. source/lua/lmttexlib.c
+   Expose the bit as tex.mathcontrolcodes.separateprescriptkerns.
+
+3. source/tex/texmlist.c
+   Add tex_aux_prescript_corner_kern. It reads simple corner fields using
+   tex_aux_math_kern_at(..., 0, 1), scales each contribution, and adds them.
+   Replace maxleftkern in tex_aux_make_scripts with presupkern and presubkern.
+   In the glyph-base branch, test the new font/engine control flag.
+   If enabled, analyse the prescripts and compute the two independent sums.
+   Otherwise, compute the old shared kern and assign it to both variables.
+   Append the appropriate variable to each prescript box.
+
+   If the existing analyser cannot identify a script glyph, the helper falls
+   back to the base's corner alone. Non-glyph bases retain the current absence
+   of this particular adjustment; their corner propagation is not extended.
+
+The old helper remains because the disabled path still needs it. The patch does
+not require changing math-act.lmt: ConTeXt already has a setoptions tweak that
+looks up names in tex.mathcontrolcodes and enables font-specific control.
+
+PROPOSED GOODIE CONFIGURATION
+
+After rebuilding with this engine change, include these entries in
+mathematics.tweaks.aftercopying:
+
+    {
+        tweak = "simplifykerns",
+    },
+    {
+        tweak = "setoptions",
+        set = { "separateprescriptkerns" },
+    },
+
+If a goodie already has a setoptions entry, merge the new name into its set
+list. The current setoptions implementation starts from the global control
+mask, so multiple independent entries can replace earlier choices rather than
+accumulate them. Ensure any later tweak does not overwrite the chosen controls.
+
+The base font selects whether the new behaviour applies. A different script
+font need not independently enable the flag. The script must supply simple
+corner fields for its contribution to be available; a script font retaining
+only native tables is not handled by this simple-field helper.
+
+The new name has no effect on an unmodified engine: the existing setoptions
+implementation skips unrecognised control names. A goodie alone cannot install
+the new layout behaviour.
+
+IMPORTANT IMPLEMENTATION QUESTIONS BEFORE USE
+
+The patch intentionally preserves the proposed approach from the discussion,
+including unresolved areas. It must not be treated as production-ready.
+
+* Script sizes: the proposal uses base_size + 1, capped at scriptscript, as in
+  the ordinary postscript kern routine. Explicit styles, nosupprescript and
+  nosubprescript options, cramped styles, and other style variants require
+  review. Ideally obtain the actual effective size for each script.
+* Glyph analysis: tex_aux_analyze_script obeys existing analysis controls and
+  can identify glyphs inside lists. Verify that the glyph it identifies is the
+  correct right-edge glyph for a prescript. Its existing traversal must NOT be
+  assumed to provide a correct edge glyph for arbitrary multi-character lists.
+  A stricter single-glyph detector may be needed for the advertised fallback.
+* Substitutions: verify script-size alternates and other substitutions are
+  reflected in the analysed glyph and its corner values.
+* Scaling: verify font and math-size scaling independently for base and script,
+  including differently sized or different-font scripts and glyph scaling.
+* Composite bases: accented bases, fences, operators, fractions and grouped
+  nuclei may need a separate policy for inherited corner values. This initial
+  glyph-only branch does not implement it.
+* Layout: adding a kern changes each script box's width. Check the subsequent
+  common-width packing and alignment when both prescripts exist, when their
+  widths differ, and when postscripts coexist.
+* Font controls: the installed helper supports font-specific flags, but comments
+  warn that this mechanism may change. Recheck it against any future version.
+* Flag allocation: verify the bit is still free before rebasing the patch.
+* Compatibility: the disabled path should preserve layout. Its diagnostic kern
+  label changes in this proposal, so log output is not necessarily identical.
+
+VALIDATION PLAN
+
+1. Check patch applicability against an isolated copy of the recorded sources.
+2. Compile that engine separately; do not replace the working binary initially.
+3. With the flag absent, compare original and patched rendering across existing
+   Somerville tests and representative other math fonts.
+4. With the flag enabled, test upper-only, lower-only and simultaneous scripts.
+   Include M with top-left -127 and bottom-left 0, initially with zero script
+   right corners. The expected upper adjustment is -127 scaled at base size,
+   and the expected lower adjustment is zero.
+5. Introduce known nonzero script right corners and verify the scaled sums,
+   including negative, positive and zero values independently at all corners.
+6. Test text, display, script and scriptscript sizes, explicit style overrides,
+   glyph substitutions, differing fonts, unequal widths and both postscripts.
+7. Test empty and composite scripts, accents and grouped bases. Check for crashes,
+   accidental wrong-edge glyph selection, bounding widths and adjacent spacing.
+8. Compare simple constant-corner cases with Typst's rendered output, without
+   assuming the two systems have identical vertical or italic-correction rules.
+
+HOW TO REVISIT THE PATCH
+
+The patch paths are relative to the LuaMetaTeX source root (containing source/).
+Against a separate source checkout, a non-mutating applicability check is:
+
+    git apply --check /absolute/path/context-prescript-corner-kerns.patch
+
+Only when deliberately ready to modify that checkout:
+
+    git apply /absolute/path/context-prescript-corner-kerns.patch
+
+This proposal does not include a build or installation command: inspect the
+build instructions for the selected LuaMetaTeX revision before building it.
+Installed logs during the investigation reported LuaMetaTeX 2.11.10,
+functionality level 20260923. The hashes, rather than that version string alone,
+identify the precise source inputs used to generate this patch.
+
+REFERENCES
+
+Installed engine: source/tex/texmlist.c, particularly tex_aux_math_left_kern,
+tex_aux_math_kern_at, tex_aux_find_math_kern, tex_aux_analyze_script, and
+tex_aux_make_scripts.
+
+ConTeXt: tex/context/base/mkxl/math-act.lmt, particularly simplifykerns and
+setoptions. The kerns tweak itself ignores zero assignments in the inspected
+version; setting topleft = 0 through that tweak does not clear an existing kern.
+
+Typst source inspected during the discussion:
+https://github.com/typst/typst/blob/main/crates/typst-layout/src/math/scripts.rs
+Functions compute_pre_script_widths and math_kern. This main-branch link can
+change. Typst additionally performs height lookups, unlike this proposal.
+
+OpenType MATH specification:
+https://learn.microsoft.com/en-us/typography/opentype/spec/math
+The specification supplies font data and discusses layout algorithms; it is
+not a complete prescript layout specification. Describe this change as support
+for independent constant corner-pair prescript kerning, rather than claiming
+complete OpenType conformance.

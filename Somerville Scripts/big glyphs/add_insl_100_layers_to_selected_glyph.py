@@ -3,7 +3,7 @@
 
 """Add Slant, and where applicable High Slant, layers to selected glyphs.
 
-Integral components in target layers get Integral Slant=100. Existing target
+Integral components in target layers get their smart slant axis set to 100. Existing target
 layers are reused, preserving their outlines and other component settings.
 Smart height layers require Glyphs 4 source format. Save after running.
 """
@@ -133,18 +133,33 @@ def selected_glyphs(font):
     return glyphs
 
 
-def set_component_slant(layer, insl_axis_id):
+def set_component_slant(layer):
     updated = 0
     for component in layer.components:
         if "integral" not in (component.componentName or "").lower():
             continue
+        # The component glyph's smart slant axis is distinct from font INSL.
+        # Glyphs 4 exposes these axes on component.component.axes.
+        smart_glyph = component.component
+        slant_axes = [axis for axis in (smart_glyph.axes if smart_glyph else [])
+                      if axis_name(axis).strip().lower().replace(" ", "")
+                      in ("slant", "integralslant")]
+        if len(slant_axes) != 1:
+            raise RuntimeError("%s: expected one smart slant axis, found %i"
+                               % (component.componentName, len(slant_axes)))
+        slant_id = axis_identifier(slant_axes[0])
+        if not slant_id:
+            raise RuntimeError("%s: smart slant axis has no ID"
+                               % component.componentName)
         current = component.smartComponentValues
         keys = current.keys() if current is not None else None
         values = {key: current[key] for key in (keys or [])}
-        if values.get(insl_axis_id) == TARGET_VALUE:
+        if values.get(slant_id) == TARGET_VALUE:
             continue
-        values[insl_axis_id] = TARGET_VALUE
-        component.smartComponentValues = values
+        component.smartComponentValues[slant_id] = TARGET_VALUE
+        if component.smartComponentValues[slant_id] != TARGET_VALUE:
+            raise RuntimeError("%s: smart slant value did not stick"
+                               % component.componentName)
         updated += 1
     return updated
 
@@ -280,7 +295,7 @@ def main():
                             kept += 1
                         set_coordinates(target, coordinates)
                         target.name = name
-                        components_updated += set_component_slant(target, insl_id)
+                        components_updated += set_component_slant(target)
                         print("SET %s / %s" % (glyph.name, name))
             finally:
                 if undo_started:

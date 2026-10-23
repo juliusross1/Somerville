@@ -1,11 +1,28 @@
 {
+color = 6;
 glyphname = "Hitalic-math";
 layers = (
 {
 anchors = (
 {
+name = math.bl;
+pos = (0,65);
+},
+{
+name = math.br;
+pos = (884,65);
+},
+{
 name = math.ta;
-pos = (553.518,904);
+pos = (654,904);
+},
+{
+name = math.tl;
+pos = (125,512);
+},
+{
+name = math.tr;
+pos = (1009,512);
 }
 );
 background = {
@@ -160,58 +177,74 @@ shapes = (
 ref = "_UC-top-stem-normal-narrow-italic";
 },
 {
-pos = (-1,0);
+pos = (89,0);
 ref = "_UC-H-upper-italic";
 },
 {
-pos = (413,0);
+pos = (533,0);
 ref = "_UC-bottom-stem-narrow-normal-italic";
 }
 );
-width = 749;
+width = 1009;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (0,65);
+},
+{
+name = math.br;
+pos = (1096,65);
+},
+{
 name = math.ta;
-pos = (625.518,904);
+pos = (746,904);
+},
+{
+name = math.tl;
+pos = (125,512);
+},
+{
+name = math.tr;
+pos = (1221,512);
 }
 );
 background = {
 anchors = (
 {
 name = bottom;
-pos = (446,0);
+pos = (466,0);
 },
 {
 name = bottomright;
-pos = (840,0);
+pos = (860,0);
 },
 {
 name = center;
-pos = (589,514);
+pos = (609,514);
 },
 {
 name = top;
-pos = (643,708);
+pos = (663,708);
 }
 );
 guides = (
 {
 angle = 74.4;
-pos = (180,106);
+pos = (200,106);
 },
 {
 angle = 74.4;
-pos = (676,106);
+pos = (696,106);
 },
 {
 angle = 74.4;
-pos = (470,87);
+pos = (490,87);
 },
 {
 angle = 74.4;
-pos = (75,87);
+pos = (95,87);
 }
 );
 hints = (
@@ -264,32 +297,32 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(197,3,l),
-(243,0,l),
-(441,708,l),
-(394,705,l),
-(348,708,l),
-(150,0,l)
+(217,3,l),
+(263,0,l),
+(461,708,l),
+(414,705,l),
+(368,708,l),
+(170,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(779,356,l),
-(779,357,l),
-(303,357,l),
-(303,356,l)
+(799,356,l),
+(799,357,l),
+(323,357,l),
+(323,356,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(694,3,l),
-(740,0,l),
-(938,708,l),
-(891,705,l),
-(845,708,l),
-(647,0,l)
+(714,3,l),
+(760,0,l),
+(958,708,l),
+(911,705,l),
+(865,708,l),
+(667,0,l)
 );
 }
 );
@@ -297,22 +330,22 @@ nodes = (
 guides = (
 {
 angle = 74.4;
-pos = (180,106);
+pos = (200,106);
 },
 {
 angle = 74.4;
-pos = (676,106);
+pos = (696,106);
 },
 {
 angle = 74.4;
-pos = (470,87);
+pos = (490,87);
 },
 {
 angle = 74.4;
-pos = (75,87);
+pos = (95,87);
 },
 {
-pos = (583,250);
+pos = (603,250);
 }
 );
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -321,21 +354,37 @@ shapes = (
 ref = "_UC-top-stem-normal-narrow-italic";
 },
 {
-pos = (2,0);
+pos = (122,0);
 ref = "_UC-H-upper-italic";
 },
 {
-pos = (499,0);
+pos = (639,0);
 ref = "_UC-bottom-stem-narrow-normal-italic";
 }
 );
-width = 891;
+width = 1221;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (0,65);
+},
+{
+name = math.br;
+pos = (984,65);
+},
+{
 name = math.ta;
-pos = (596.374,896);
+pos = (696,896);
+},
+{
+name = math.tl;
+pos = (127,520);
+},
+{
+name = math.tr;
+pos = (1111,520);
 }
 );
 background = {
@@ -466,20 +515,37 @@ shapes = (
 ref = "_UC-top-stem-normal-narrow-italic";
 },
 {
+pos = (100,0);
 ref = "_UC-H-upper-italic";
 },
 {
-pos = (423,0);
+pos = (543,0);
 ref = "_UC-bottom-stem-narrow-normal-italic";
 }
 );
-width = 841;
+width = 1111;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (0,65);
+},
+{
+name = math.br;
+pos = (1231,65);
+},
+{
 name = math.ta;
-pos = (685.374,896);
+pos = (785,896);
+},
+{
+name = math.tl;
+pos = (127,520);
+},
+{
+name = math.tr;
+pos = (1358,520);
 }
 );
 background = {
@@ -626,54 +692,70 @@ shapes = (
 ref = "_UC-top-stem-normal-narrow-italic";
 },
 {
-pos = (-1,0);
+pos = (129,0);
 ref = "_UC-H-upper-italic";
 },
 {
-pos = (532,0);
+pos = (682,0);
 ref = "_UC-bottom-stem-narrow-normal-italic";
 }
 );
-width = 1018;
+width = 1358;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (8,65);
+},
+{
+name = math.br;
+pos = (969,65);
+},
+{
 name = math.ta;
-pos = (645.518,904);
+pos = (706,875);
+},
+{
+name = math.tl;
+pos = (133,512);
+},
+{
+name = math.tr;
+pos = (1094,512);
 }
 );
 background = {
 anchors = (
 {
 name = bottom;
-pos = (523,0);
+pos = (533,0);
 },
 {
 name = bottomright;
-pos = (916,0);
+pos = (926,0);
 },
 {
 name = center;
-pos = (666,514);
+pos = (676,514);
 },
 {
 name = top;
-pos = (720,708);
+pos = (730,708);
 }
 );
 guides = (
 {
 angle = 74.4;
-pos = (298,106);
+pos = (308,106);
 },
 {
 angle = 74.4;
-pos = (712,106);
+pos = (722,106);
 },
 {
 angle = 74.4;
-pos = (547,87);
+pos = (557,87);
 }
 );
 hints = (
@@ -730,32 +812,32 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(314,3,l),
-(360,0,l),
-(558,708,l),
-(511,705,l),
-(465,708,l),
-(267,0,l)
+(324,3,l),
+(370,0,l),
+(568,708,l),
+(521,705,l),
+(475,708,l),
+(277,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(825,321,l),
-(846,391,l),
-(423,391,l),
-(403,321,l)
+(835,321,l),
+(856,391,l),
+(433,391,l),
+(413,321,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(729,3,l),
-(775,0,l),
-(973,708,l),
-(926,705,l),
-(880,708,l),
-(682,0,l)
+(739,3,l),
+(785,0,l),
+(983,708,l),
+(936,705,l),
+(890,708,l),
+(692,0,l)
 );
 }
 );
@@ -763,18 +845,18 @@ nodes = (
 guides = (
 {
 angle = 74.4;
-pos = (298,106);
+pos = (18,106);
 },
 {
 angle = 74.4;
-pos = (712,106);
+pos = (1017,106);
 },
 {
 angle = 74.4;
-pos = (547,87);
+pos = (557,87);
 },
 {
-pos = (656,180);
+pos = (666,180);
 }
 );
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -783,20 +865,37 @@ shapes = (
 ref = "_UC-top-stem-normal-narrow-italic";
 },
 {
+pos = (60,0);
 ref = "_UC-H-upper-italic";
 },
 {
-pos = (451,0);
+pos = (531,0);
 ref = "_UC-bottom-stem-narrow-normal-italic";
 }
 );
-width = 931;
+width = 1121;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (0,65);
+},
+{
+name = math.br;
+pos = (1177,65);
+},
+{
 name = math.ta;
-pos = (747.518,906);
+pos = (848,906);
+},
+{
+name = math.tl;
+pos = (125,512);
+},
+{
+name = math.tr;
+pos = (1302,512);
 }
 );
 background = {
@@ -939,20 +1038,37 @@ shapes = (
 ref = "_UC-top-stem-normal-narrow-italic";
 },
 {
+pos = (70,0);
 ref = "_UC-H-upper-italic";
 },
 {
-pos = (584,0);
+pos = (674,0);
 ref = "_UC-bottom-stem-narrow-normal-italic";
 }
 );
-width = 1142;
+width = 1372;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (0,65);
+},
+{
+name = math.br;
+pos = (1004,65);
+},
+{
 name = math.ta;
-pos = (621.374,896);
+pos = (721,896);
+},
+{
+name = math.tl;
+pos = (127,520);
+},
+{
+name = math.tr;
+pos = (1131,520);
 }
 );
 background = {
@@ -1095,21 +1211,37 @@ shapes = (
 ref = "_UC-top-stem-normal-narrow-italic";
 },
 {
-pos = (-1,0);
+pos = (99,0);
 ref = "_UC-H-upper-italic";
 },
 {
-pos = (461,0);
+pos = (591,0);
 ref = "_UC-bottom-stem-narrow-normal-italic";
 }
 );
-width = 891;
+width = 1161;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (0,65);
+},
+{
+name = math.br;
+pos = (1268,65);
+},
+{
 name = math.ta;
-pos = (748.374,896);
+pos = (858,897);
+},
+{
+name = math.tl;
+pos = (127,520);
+},
+{
+name = math.tr;
+pos = (1395,520);
 }
 );
 background = {
@@ -1255,15 +1387,15 @@ shapes = (
 ref = "_UC-top-stem-normal-narrow-italic";
 },
 {
-pos = (1,0);
+pos = (91,0);
 ref = "_UC-H-upper-italic";
 },
 {
-pos = (601,0);
+pos = (711,0);
 ref = "_UC-bottom-stem-narrow-normal-italic";
 }
 );
-width = 1145;
+width = 1445;
 }
 );
 unicode = 119867;

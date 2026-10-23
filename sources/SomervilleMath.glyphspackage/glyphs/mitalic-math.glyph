@@ -1,4 +1,5 @@
 {
+color = 8;
 glyphname = "mitalic-math";
 layers = (
 {
@@ -8,8 +9,16 @@ name = bottom;
 pos = (387,0);
 },
 {
+name = math.bl;
+pos = (30,0);
+},
+{
 name = math.ta;
-pos = (582.518,740);
+pos = (563,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -68,18 +77,18 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
-pos = (-1,0);
+pos = (39,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 70;
 };
-pos = (160,0);
+pos = (200,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
-pos = (279,0);
+pos = (319,0);
 ref = "_LC-baseline-stem";
 },
 {
@@ -87,16 +96,16 @@ anchor = "#exit";
 piece = {
 Width = 50;
 };
-pos = (440,0);
+pos = (480,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (632,0);
+pos = (672,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 859;
+width = 919;
 },
 {
 anchors = (
@@ -105,8 +114,16 @@ name = bottom;
 pos = (446,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
 name = math.ta;
-pos = (641.518,740);
+pos = (622,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -165,18 +182,18 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
-pos = (-1,0);
+pos = (69,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 80;
 };
-pos = (178,0);
+pos = (248,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
-pos = (333,0);
+pos = (403,0);
 ref = "_LC-baseline-stem";
 },
 {
@@ -184,16 +201,16 @@ anchor = "#exit";
 piece = {
 Width = 60;
 };
-pos = (512,0);
+pos = (582,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (770,0);
+pos = (840,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 1027;
+width = 1147;
 },
 {
 anchors = (
@@ -202,8 +219,16 @@ name = bottom;
 pos = (425,0);
 },
 {
+name = math.bl;
+pos = (20,0);
+},
+{
 name = math.ta;
-pos = (620.374,735);
+pos = (600,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -269,18 +294,18 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
-pos = (-1,0);
+pos = (39,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 90;
 };
-pos = (222,0);
+pos = (262,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
-pos = (306,0);
+pos = (346,0);
 ref = "_LC-baseline-stem";
 },
 {
@@ -288,16 +313,16 @@ anchor = "#exit";
 piece = {
 Width = 70;
 };
-pos = (529,0);
+pos = (569,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (656,0);
+pos = (696,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 953;
+width = 1033;
 },
 {
 anchors = (
@@ -306,8 +331,16 @@ name = bottom;
 pos = (535,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
 name = math.ta;
-pos = (730.374,734);
+pos = (710,734);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -365,6 +398,9 @@ pos = (773,158);
 {
 angle = 74.4;
 pos = (47,0);
+},
+{
+pos = (785,606);
 }
 );
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -373,17 +409,18 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
+pos = (80,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 80;
 };
-pos = (255,0);
+pos = (335,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
-pos = (373,0);
+pos = (453,0);
 ref = "_LC-baseline-stem";
 },
 {
@@ -391,16 +428,16 @@ anchor = "#exit";
 piece = {
 Width = 60;
 };
-pos = (628,0);
+pos = (708,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (828,0);
+pos = (908,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 1164;
+width = 1304;
 },
 {
 anchors = (
@@ -409,8 +446,16 @@ name = bottom;
 pos = (436,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
 name = math.ta;
-pos = (631.518,740);
+pos = (612,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -470,17 +515,18 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
+pos = (20,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 70;
 };
-pos = (220,0);
+pos = (240,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
-pos = (281,0);
+pos = (301,0);
 ref = "_LC-baseline-stem";
 },
 {
@@ -488,16 +534,16 @@ anchor = "#exit";
 piece = {
 Width = 50;
 };
-pos = (501,0);
+pos = (521,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (705,0);
+pos = (725,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 1002;
+width = 1042;
 },
 {
 anchors = (
@@ -506,8 +552,16 @@ name = bottom;
 pos = (521,0);
 },
 {
+name = math.bl;
+pos = (130,0);
+},
+{
 name = math.ta;
-pos = (716.518,740);
+pos = (697,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -558,17 +612,18 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
+pos = (70,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 90;
 };
-pos = (249,0);
+pos = (319,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
-pos = (337,0);
+pos = (407,0);
 ref = "_LC-baseline-stem";
 },
 {
@@ -577,16 +632,16 @@ piece = {
 Thinning = 0;
 Width = 60;
 };
-pos = (586,0);
+pos = (656,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (843,0);
+pos = (913,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 1171;
+width = 1291;
 },
 {
 anchors = (
@@ -595,8 +650,16 @@ name = bottom;
 pos = (504,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
 name = math.ta;
-pos = (699.374,734);
+pos = (679,734);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -655,6 +718,7 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
+pos = (30,0);
 ref = "_LC-baseline-stem";
 },
 {
@@ -662,11 +726,11 @@ anchor = "#exit";
 piece = {
 Width = 120;
 };
-pos = (259,0);
+pos = (289,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
-pos = (328,0);
+pos = (358,0);
 ref = "_LC-baseline-stem";
 },
 {
@@ -674,16 +738,16 @@ anchor = "#exit";
 piece = {
 Width = 105;
 };
-pos = (587,0);
+pos = (617,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (766,0);
+pos = (796,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 1135;
+width = 1205;
 },
 {
 anchors = (
@@ -692,8 +756,16 @@ name = bottom;
 pos = (604,0);
 },
 {
+name = math.bl;
+pos = (120,0);
+},
+{
 name = math.ta;
-pos = (799.374,734);
+pos = (779,734);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -753,7 +825,7 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
-pos = (89,0);
+pos = (169,0);
 ref = "_LC-baseline-stem";
 },
 {
@@ -761,11 +833,11 @@ anchor = "#exit";
 piece = {
 Width = 130;
 };
-pos = (309,0);
+pos = (389,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
-pos = (466,0);
+pos = (546,0);
 ref = "_LC-baseline-stem";
 },
 {
@@ -773,16 +845,16 @@ anchor = "#exit";
 piece = {
 Width = 105;
 };
-pos = (686,0);
+pos = (766,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (918,0);
+pos = (998,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 1340;
+width = 1480;
 },
 {
 anchors = (
@@ -791,8 +863,16 @@ name = bottom;
 pos = (377,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
 name = math.ta;
 pos = (557.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -1058,8 +1138,16 @@ name = bottom;
 pos = (466,0);
 },
 {
+name = math.bl;
+pos = (130,0);
+},
+{
 name = math.ta;
 pos = (643.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -1333,8 +1421,16 @@ name = bottom;
 pos = (377,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
 name = math.ta;
 pos = (555.374,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -1600,8 +1696,16 @@ name = bottom;
 pos = (377,0);
 },
 {
+name = math.bl;
+pos = (120,0);
+},
+{
 name = math.ta;
 pos = (555.374,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;

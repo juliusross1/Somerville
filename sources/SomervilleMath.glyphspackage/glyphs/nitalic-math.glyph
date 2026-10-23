@@ -1,11 +1,24 @@
 {
+color = 8;
 glyphname = "nitalic-math";
 layers = (
 {
 anchors = (
 {
+name = math.bl;
+pos = (30,0);
+},
+{
+name = math.br;
+pos = (659,0);
+},
+{
 name = math.ta;
 pos = (406.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 }
 );
 background = {
@@ -126,29 +139,41 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
-pos = (-1,0);
+pos = (39,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 100;
 };
-pos = (160,0);
+pos = (200,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (372,0);
+pos = (412,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 599;
+width = 659;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (789,0);
+},
+{
 name = math.ta;
 pos = (424.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 }
 );
 background = {
@@ -275,29 +300,41 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
-pos = (-1,0);
+pos = (69,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 100;
 };
-pos = (178,0);
+pos = (248,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (452,0);
+pos = (522,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 709;
+width = 829;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (20,0);
+},
+{
+name = math.br;
+pos = (718,0);
+},
+{
 name = math.ta;
 pos = (423.374,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 }
 );
 background = {
@@ -422,29 +459,41 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
-pos = (-1,0);
+pos = (39,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 100;
 };
-pos = (222,0);
+pos = (262,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (361,0);
+pos = (401,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 658;
+width = 738;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (897,0);
+},
+{
 name = math.ta;
 pos = (483.374,734);
+},
+{
+name = math.tl;
+pos = (0,708);
 }
 );
 background = {
@@ -569,28 +618,41 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
+pos = (80,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 100;
 };
-pos = (255,0);
+pos = (335,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (471,0);
+pos = (551,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 807;
+width = 947;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (753,0);
+},
+{
 name = math.ta;
 pos = (452.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 }
 );
 background = {
@@ -723,28 +785,41 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
+pos = (20,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 80;
 };
-pos = (220,0);
+pos = (240,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (436,0);
+pos = (456,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 733;
+width = 773;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (130,0);
+},
+{
+name = math.br;
+pos = (900,0);
+},
+{
 name = math.ta;
 pos = (495.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 }
 );
 background = {
@@ -869,28 +944,41 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
+pos = (70,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 100;
 };
-pos = (249,0);
+pos = (319,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (522,0);
+pos = (592,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 850;
+width = 970;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (887,0);
+},
+{
 name = math.ta;
 pos = (499.374,734);
+},
+{
+name = math.tl;
+pos = (0,708);
 }
 );
 background = {
@@ -1023,28 +1111,41 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
+pos = (30,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 130;
 };
-pos = (259,0);
+pos = (289,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (458,0);
+pos = (488,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 827;
+width = 897;
 },
 {
 anchors = (
 {
+name = math.bl;
+pos = (120,0);
+},
+{
+name = math.br;
+pos = (1101,0);
+},
+{
 name = math.ta;
 pos = (563.374,734);
+},
+{
+name = math.tl;
+pos = (0,708);
 }
 );
 background = {
@@ -1177,23 +1278,23 @@ shapes = (
 ref = "_LC-xheight-left-instroke";
 },
 {
-pos = (89,0);
+pos = (169,0);
 ref = "_LC-baseline-stem";
 },
 {
 piece = {
 Width = 150;
 };
-pos = (309,0);
+pos = (389,0);
 ref = "_part.LC-n-shoulder-top-italic";
 },
 {
 anchor = "#exit";
-pos = (559,0);
+pos = (639,0);
 ref = "_LC-baseline-outstroke-italic";
 }
 );
-width = 981;
+width = 1121;
 },
 {
 anchors = (
@@ -1202,8 +1303,20 @@ name = bottom;
 pos = (257,0);
 },
 {
+name = math.bl;
+pos = (30,0);
+},
+{
+name = math.br;
+pos = (583,0);
+},
+{
 name = math.ta;
 pos = (404.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -1442,8 +1555,20 @@ name = bottom;
 pos = (257,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (563,0);
+},
+{
 name = math.ta;
 pos = (404.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -1682,8 +1807,20 @@ name = bottom;
 pos = (257,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (543,0);
+},
+{
 name = math.ta;
 pos = (404.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -1922,8 +2059,20 @@ name = bottom;
 pos = (290,0);
 },
 {
+name = math.bl;
+pos = (20,0);
+},
+{
+name = math.br;
+pos = (639,0);
+},
+{
 name = math.ta;
 pos = (418.374,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -2134,8 +2283,20 @@ name = bottom;
 pos = (257,0);
 },
 {
+name = math.bl;
+pos = (130,0);
+},
+{
+name = math.br;
+pos = (513,0);
+},
+{
 name = math.ta;
 pos = (404.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -2374,8 +2535,20 @@ name = bottom;
 pos = (285,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (621,0);
+},
+{
 name = math.ta;
 pos = (408.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -2594,8 +2767,20 @@ name = bottom;
 pos = (334,0);
 },
 {
+name = math.bl;
+pos = (130,0);
+},
+{
+name = math.br;
+pos = (701,0);
+},
+{
 name = math.ta;
 pos = (460.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -2806,8 +2991,20 @@ name = bottom;
 pos = (325,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (701,0);
+},
+{
 name = math.ta;
 pos = (448.518,740);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -3026,8 +3223,20 @@ name = bottom;
 pos = (257,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (593,0);
+},
+{
 name = math.ta;
 pos = (402.374,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -3266,8 +3475,20 @@ name = bottom;
 pos = (285,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (651,0);
+},
+{
 name = math.ta;
 pos = (406.374,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -3486,8 +3707,20 @@ name = bottom;
 pos = (325,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (731,0);
+},
+{
 name = math.ta;
 pos = (446.374,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -3706,8 +3939,20 @@ name = bottom;
 pos = (290,0);
 },
 {
+name = math.bl;
+pos = (50,0);
+},
+{
+name = math.br;
+pos = (599,0);
+},
+{
 name = math.ta;
 pos = (418.374,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -3918,8 +4163,20 @@ name = bottom;
 pos = (257,0);
 },
 {
+name = math.bl;
+pos = (120,0);
+},
+{
+name = math.br;
+pos = (563,0);
+},
+{
 name = math.ta;
 pos = (402.374,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -4158,8 +4415,20 @@ name = bottom;
 pos = (285,0);
 },
 {
+name = math.bl;
+pos = (120,0);
+},
+{
+name = math.br;
+pos = (621,0);
+},
+{
 name = math.ta;
 pos = (406.374,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
@@ -4378,8 +4647,20 @@ name = bottom;
 pos = (325,0);
 },
 {
+name = math.bl;
+pos = (120,0);
+},
+{
+name = math.br;
+pos = (701,0);
+},
+{
 name = math.ta;
 pos = (446.374,735);
+},
+{
+name = math.tl;
+pos = (0,708);
 },
 {
 name = top;
