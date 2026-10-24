@@ -1,0 +1,123 @@
+% !TEX program = context
+% !TEX root = somerville-letter-test.tex
+
+\input type-imp-somerville.mkxl
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupbodyfont[somerville-regular]
+
+\unexpanded\def\LetterTestCell#1{%
+  \bTD
+    \switchtobodyfont[#1]%
+    \getbuffer[lettertest]%
+  \eTD
+}
+
+\unexpanded\def\LetterTestLabel#1{%
+  \bTD
+    \switchtobodyfont[somerville-regular,6pt]%
+    #1%
+  \eTD
+}
+
+\unexpanded\def\LetterTestOpticalTable#1#2{%
+  \begingroup
+  \def\testopticalsize{#1}%
+  \def\testopticalcoordinate{#2}%
+  \getbuffer[lettertest-table]%
+  \blank
+  \endgroup
+}
+
+\startbuffer[lettertest]
+
+\m{ABDTHJL 1c{\rm c}\in x+l\in R + c\in d\in a\in b}
+% \m{|x|.|y|.|{\rm H}|.{|\testletter|}. (\testletter).
+% \testletter___{\rm H}^^^{\rm H}\cdot \testletter^{\rm H}_{\rm H} \cdot \testletter^{\rm H}_{\rm H}^^^{\rm H}___{\rm H}\cdot
+% \testletter___{H}^^^{H}\cdot \testletter^H_H \cdot \testletter^H_H^^^H___H \cdot
+% \testletter^2.\cdot \hat{\testletter} }\crlf
+
+% \doloopoverlist{x,y,u,w,m,n}
+% {\edef\letterA{\recursestring}
+% \doloopoverlist{x,y,u,w,m,n}{
+% \m{\recursestring^{\letterA}\cdot \recursestring_{\letterA} \cdot \recursestring^{\letterA}_{\letterA}\cdot}
+% }
+% }
+% \crlf
+\stopbuffer
+
+\startbuffer[lettertest-table]
+% Rows: SemiLight, Regular, Black.
+% Columns: SemiCondensed, Regular, SemiExpanded.
+\bTABLE[frame=off,align=middle,offset=4pt]
+  \bTR
+    \LetterTestLabel{\testopticalsize\crlf internal opsz: \testopticalcoordinate}
+    \LetterTestLabel{SemiCondensed}
+    \LetterTestLabel{Regular}
+    \LetterTestLabel{SemiExpanded}
+  \eTR
+  \bTR
+    \LetterTestLabel{SemiLight}
+    \LetterTestCell{somerville-\testopticalsize-semicondensed-semilight}
+%    \LetterTestCell{somerville-\testopticalsize-semilight}
+%    \LetterTestCell{somerville-\testopticalsize-semiexpanded-semilight}
+  \eTR
+  \bTR
+    \LetterTestLabel{Regular}
+    \LetterTestCell{somerville-\testopticalsize-semicondensed}
+%    \LetterTestCell{somerville-\testopticalsize}
+%    \LetterTestCell{somerville-\testopticalsize-semiexpanded}
+  \eTR
+  \bTR
+    \LetterTestLabel{Black}
+    \LetterTestCell{somerville-\testopticalsize-semicondensed-black}
+%    \LetterTestCell{somerville-\testopticalsize-black}
+%    \LetterTestCell{somerville-\testopticalsize-semiexpanded-black}
+  \eTR
+\eTABLE
+\stopbuffer
+
+\startbuffer[lettertables-basic]
+\LetterTestOpticalTable{micro}{5}
+\LetterTestOpticalTable{regular}{550}
+\LetterTestOpticalTable{titling}{980}
+\stopbuffer
+
+\startbuffer[lettertables-optical]
+\LetterTestOpticalTable{micro}{5}
+\LetterTestOpticalTable{minuscule}{200}
+\LetterTestOpticalTable{miniature}{325}
+\page
+\LetterTestOpticalTable{caption}{400}
+\LetterTestOpticalTable{regular}{550}
+%\LetterTestOpticalTable{subheading}{640}
+\page
+\LetterTestOpticalTable{trumpet}{700}
+%\LetterTestOpticalTable{headline}{800}
+%\LetterTestOpticalTable{display}{900}
+\page
+\LetterTestOpticalTable{titling}{980}
+%\LetterTestOpticalTable{hairline}{1020}
+%\LetterTestOpticalTable{needlepoint}{1200}
+\stopbuffer
+
+% Optical-size comparison; edit the getbuffer selection below.
+\startbuffer[optical-comparison]
+\begingroup
+% Keep the same typesetting size across all optical instances.
+\switchtobodyfont[somerville-regular,8pt]
+\doloopoverlist{p,m,n,u}{
+\edef\testletter{\recursestring}
+
+% Choose one buffer: lettertables-basic or lettertables-optical.
+\getbuffer[lettertables-basic]
+\page
+}
+\endgroup
+\stopbuffer
+
+\starttext
+\getbuffer[optical-comparison]
+\stoptext

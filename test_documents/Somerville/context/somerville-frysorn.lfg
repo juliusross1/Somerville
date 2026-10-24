@@ -1,19 +1,19 @@
 return {
     name = "somerville-frysorn",
     version = "0.1",
-    comment = "Use Frysorn for blackboard-bold capitals and digits.",
+    comment = "Use Beffle for blackboard-bold capitals and Frysorn for digits.",
     mathematics = {
         tweaks = {
             aftercopying = {
                 {
                     tweak = "replacealphabets",
-                    filename = "Frysorn.ttf",
-                    -- Frysorn uses Windows symbol encoding, not Unicode letters.
+                    filename = "BeffleMedium.otf",
+                    -- Beffle stores its capitals in the ordinary Unicode A-Z slots.
                     -- Named target ranges also handle the legacy Unicode slots
                     -- for double-struck C, H, N, P, Q, R, and Z.
                     list = {
                         {
-                            source = { first = 0xF041, last = 0xF05A },
+                            source = { first = 0x0041, last = 0x005A },
                             target = "uppercasedoublestruck",
                             rscale = 0.8,
                         },

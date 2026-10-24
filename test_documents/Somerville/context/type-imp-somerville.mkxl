@@ -30,7 +30,7 @@ end
 
 \unexpanded\gdef\setupSomerville#1#2{%
   \definefontfeature[#2-math-axes]
-    [axis={#1},goodies={somerville,somerville-frysorn}]%
+    [axis={#1},goodies={somerville,somerville-heavy-regular}]%
     
   \definefontfeature[#2-text-axes][default]
     [axis={#1}]%
@@ -66,75 +66,321 @@ end
 
 
 
-%
-% Typescript definitions for all the instances
-
-
-% #1: typeface; #2/#3/#4: native Roman/Italic/Math instance lookup names.
-\unexpanded\gdef\defineSomervilleTypeface#1#2#3#4{%
-  \starttypescript[serif][#1]
-    \definefontfeature[#1-text][default]
-    \definefontfeature[#1-italic][default]
-    \definefontsynonym[Serif]
-      [name:#2][features=#1-text]
-    \definefontsynonym[SerifItalic]
-      [name:#3][features=#1-italic]
-    % \definefontsynonym[SerifBold]
-    %   [file:PlayfairRomanVF.ttf][features=#1-bold]
-    % \definefontsynonym[SerifBoldItalic]
-    %   [file:PlayfairItalicVF.ttf][features=#1-bolditalic]
+% Explicit named instances, independent of the fonts' fvar instance records.
+% To restore the old discovery implementation, use type-imp-somerville-fvar.mkxl.
+% #1: typeface; #2: math user coordinates; #3: text user coordinates.
+\unexpanded\gdef\defineSomervilleAxisTypeface#1#2#3{%
+  \definefontfeature[#1-math-axes]
+    [axis={#2},goodies={somerville,somerville-heavy-regular}]%
+  \definefontfeature[#1-text-axes][default][axis={#3}]%
+  \starttypescript[serif][#1-text]
+    \definefontsynonym[Serif][file:PlayfairRomanVF.ttf][features=#1-text-axes]
+    \definefontsynonym[SerifItalic][file:PlayfairItalicVF.ttf][features=#1-text-axes]
     \definefontsynonym[SerifSlanted][SerifItalic]
-    % \definefontsynonym[SerifBoldSlanted][SerifBoldItalic]
   \stoptypescript
   \starttypescript[math][#1]
-    \definefontfeature[#1-math]
-      [goodies={somerville,somerville-frysorn}]
-    \definefontsynonym[MathRoman]
-      [name:#4]
-      [features={math\mathsizesuffix,mathextra,#1-math}]
+    \definefontsynonym[MathRoman][file:SomervilleMathVF.ttf]
+      [features={math\mathsizesuffix,mathextra,#1-math-axes}]
   \stoptypescript
-  \starttypescript[#1]
-    \definetypeface[#1][rm][serif][#1][default]
-    \definetypeface[#1][mm][math][#1][default]
-    \definetypeface[#1][ss][sans][modern][default]
-    \definetypeface[#1][tt][mono][modern][default]
-  \stoptypescript
+  \definetypeface[#1][rm][serif][#1-text][default]%
+  \definetypeface[#1][mm][math][#1][default]%
+  \definetypeface[#1][ss][sans][modern][default]%
+  \definetypeface[#1][tt][mono][modern][default]%
 }
 
 \startluacode
-local function clean(name)
-    return string.lower(name):gsub("[^%w]", "")
-end
-local function instances(filename)
-    local path = resolvers.findfile(filename)
-    assert(path and path ~= "", "Cannot find " .. filename)
-    local data = fonts.handlers.otf.load(path)
-    local variable = assert(data.resources.variabledata, "No variation data in " .. filename)
-    local ordered, indexed = {}, {}
-    for _, entry in ipairs(variable.instances) do
-        local item = {
-            name = entry.subfamily,
-            lookup = clean(data.metadata.fullname) .. clean(entry.subfamily),
-        }
-        ordered[#ordered + 1] = item
-        indexed[clean(item.name)] = item
+-- Snapshot of sources/SomervilleMath.glyphspackage/fontinfo.plist.
+-- Internal design coordinates, in source axis order:
+-- name, wdth, wght, MGHT, opsz, STYA, STYB, ARLN, ARHD, INSL.
+-- Roman source instances have the same wdth/wght/opsz coordinates.
+local instances = {
+    { "Micro SemiCondensed SemiLight", 95, 360, 660, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed", 95, 400, 700, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed Medium", 95, 475, 775, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed SemiBold", 95, 550, 850, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed Bold", 95, 650, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed ExtraBold", 95, 750, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed Black", 95, 900, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiLight", 100, 360, 660, 5, 5, 5, 100, 100, 0 },
+    { "Micro", 100, 400, 700, 5, 5, 5, 100, 100, 0 },
+    { "Micro Medium", 100, 475, 775, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiBold", 100, 550, 850, 5, 5, 5, 100, 100, 0 },
+    { "Micro Bold", 100, 650, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro ExtraBold", 100, 750, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro Black", 100, 900, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded SemiLight", 113, 360, 660, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded", 113, 400, 700, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded Medium", 113, 475, 775, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded SemiBold", 113, 550, 850, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded Bold", 113, 650, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded ExtraBold", 113, 750, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded Black", 113, 900, 900, 5, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed SemiLight", 95, 360, 660, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed", 95, 400, 700, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed Medium", 95, 475, 775, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed SemiBold", 95, 550, 850, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed Bold", 95, 650, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed ExtraBold", 95, 750, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed Black", 95, 900, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiLight", 100, 360, 660, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule", 100, 400, 700, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule Medium", 100, 475, 775, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiBold", 100, 550, 850, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule Bold", 100, 650, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule ExtraBold", 100, 750, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule Black", 100, 900, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded SemiLight", 113, 360, 660, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded", 113, 400, 700, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded Medium", 113, 475, 775, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded SemiBold", 113, 550, 850, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded Bold", 113, 650, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded ExtraBold", 113, 750, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded Black", 113, 900, 900, 200, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed SemiLight", 95, 360, 660, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed", 95, 400, 700, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed Medium", 95, 475, 775, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed SemiBold", 95, 550, 850, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed Bold", 95, 650, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed ExtraBold", 95, 750, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed Black", 95, 900, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiLight", 100, 360, 660, 325, 5, 5, 100, 100, 0 },
+    { "Miniature", 100, 400, 700, 325, 5, 5, 100, 100, 0 },
+    { "Miniature Medium", 100, 475, 775, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiBold", 100, 550, 850, 325, 5, 5, 100, 100, 0 },
+    { "Miniature Bold", 100, 650, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature ExtraBold", 100, 750, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature Black", 100, 900, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded SemiLight", 113, 360, 660, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded", 113, 400, 700, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded Medium", 113, 475, 775, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded SemiBold", 113, 550, 850, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded Bold", 113, 650, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded ExtraBold", 113, 750, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded Black", 113, 900, 900, 325, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed SemiLight", 95, 360, 660, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed", 95, 400, 700, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed Medium", 95, 475, 775, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed SemiBold", 95, 550, 850, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed Bold", 95, 650, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed ExtraBold", 95, 750, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed Black", 95, 900, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiLight", 100, 360, 660, 400, 5, 5, 100, 100, 0 },
+    { "Caption", 100, 400, 700, 400, 5, 5, 100, 100, 0 },
+    { "Caption Medium", 100, 475, 775, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiBold", 100, 550, 850, 400, 5, 5, 100, 100, 0 },
+    { "Caption Bold", 100, 650, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption ExtraBold", 100, 750, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption Black", 100, 900, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded SemiLight", 113, 360, 660, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded", 113, 400, 700, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded Medium", 113, 475, 775, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded SemiBold", 113, 550, 850, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded Bold", 113, 650, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded ExtraBold", 113, 750, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded Black", 113, 900, 900, 400, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed SemiLight", 95, 360, 660, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed", 95, 400, 700, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed Medium", 95, 475, 775, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed SemiBold", 95, 550, 850, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed Bold", 95, 650, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed ExtraBold", 95, 750, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed Black", 95, 900, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiLight", 100, 360, 660, 550, 5, 5, 100, 100, 0 },
+    { "Regular", 100, 400, 700, 550, 5, 5, 100, 100, 0 },
+    { "Regular Medium", 100, 475, 775, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiBold", 100, 550, 850, 550, 5, 5, 100, 100, 0 },
+    { "Regular Bold", 100, 650, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular ExtraBold", 100, 750, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular Black", 100, 900, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded SemiLight", 113, 360, 660, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded", 113, 400, 700, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded Medium", 113, 475, 775, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded SemiBold", 113, 550, 850, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded Bold", 113, 650, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded ExtraBold", 113, 750, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded Black", 113, 900, 900, 550, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed SemiLight", 95, 360, 660, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed", 95, 400, 700, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed Medium", 95, 475, 775, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed SemiBold", 95, 550, 850, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed Bold", 95, 650, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed ExtraBold", 95, 750, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed Black", 95, 900, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiLight", 100, 360, 660, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading", 100, 400, 700, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading Medium", 100, 475, 775, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiBold", 100, 550, 850, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading Bold", 100, 650, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading ExtraBold", 100, 750, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading Black", 100, 900, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded SemiLight", 113, 360, 660, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded", 113, 400, 700, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded Medium", 113, 475, 775, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded SemiBold", 113, 550, 850, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded Bold", 113, 650, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded ExtraBold", 113, 750, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded Black", 113, 900, 900, 640, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed SemiLight", 95, 360, 660, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed", 95, 400, 700, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed Medium", 95, 475, 775, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed SemiBold", 95, 550, 850, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed Bold", 95, 650, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed ExtraBold", 95, 750, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed Black", 95, 900, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiLight", 100, 360, 660, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet", 100, 400, 700, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet Medium", 100, 475, 775, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiBold", 100, 550, 850, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet Bold", 100, 650, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet ExtraBold", 100, 750, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet Black", 100, 900, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded SemiLight", 113, 360, 660, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded", 113, 400, 700, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded Medium", 113, 475, 775, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded SemiBold", 113, 550, 850, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded Bold", 113, 650, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded ExtraBold", 113, 750, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded Black", 113, 900, 900, 700, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed SemiLight", 95, 360, 660, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed", 95, 400, 700, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed Medium", 95, 475, 775, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed SemiBold", 95, 550, 850, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed Bold", 95, 650, 900, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed ExtraBold", 95, 750, 900, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed Black", 95, 900, 900, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiLight", 100, 360, 660, 800, 5, 5, 100, 100, 0 },
+    { "Headline", 100, 400, 700, 800, 5, 5, 100, 100, 0 },
+    { "Headline Medium", 100, 475, 775, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiBold", 100, 550, 850, 800, 5, 5, 100, 100, 0 },
+    { "Headline Bold", 100, 650, 900, 800, 5, 5, 100, 100, 0 },
+    { "Headline ExtraBold", 100, 750, 900, 800, 5, 5, 100, 100, 0 },
+    { "Headline Black", 100, 900, 900, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiExpanded SemiLight", 113, 360, 660, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiExpanded", 113, 400, 700, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiExpanded Medium", 113, 475, 775, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiExpanded SemiBold", 113, 550, 850, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiExpanded Bold", 113, 650, 900, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiExpanded ExtraBold", 113, 750, 900, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiExpanded Black", 113, 900, 900, 800, 5, 5, 100, 100, 0 },
+    { "Display SemiCondensed SemiLight", 95, 360, 660, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiCondensed", 95, 400, 700, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiCondensed Medium", 95, 475, 775, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiCondensed SemiBold", 95, 550, 850, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiCondensed Bold", 95, 650, 900, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiCondensed ExtraBold", 95, 750, 900, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiCondensed Black", 95, 900, 900, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiLight", 100, 360, 660, 900, 5, 5, 100, 100, 0 },
+    { "Display", 100, 400, 700, 900, 5, 5, 100, 100, 0 },
+    { "Display Medium", 100, 475, 775, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiBold", 100, 550, 850, 900, 5, 5, 100, 100, 0 },
+    { "Display Bold", 100, 650, 900, 900, 5, 5, 100, 100, 0 },
+    { "Display ExtraBold", 100, 750, 900, 900, 5, 5, 100, 100, 0 },
+    { "Display Black", 100, 900, 900, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiExpanded SemiLight", 113, 360, 660, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiExpanded", 113, 400, 700, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiExpanded Medium", 113, 475, 775, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiExpanded SemiBold", 113, 550, 850, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiExpanded Bold", 113, 650, 900, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiExpanded ExtraBold", 113, 750, 900, 900, 5, 5, 100, 100, 0 },
+    { "Display SemiExpanded Black", 113, 900, 900, 900, 5, 5, 100, 100, 0 },
+    { "Titling SemiCondensed SemiLight", 95, 360, 660, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiCondensed", 95, 400, 700, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiCondensed Medium", 95, 475, 775, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiCondensed SemiBold", 95, 550, 850, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiCondensed Bold", 95, 650, 900, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiCondensed ExtraBold", 95, 750, 900, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiCondensed Black", 95, 900, 900, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiLight", 100, 360, 660, 980, 5, 5, 100, 100, 0 },
+    { "Titling", 100, 400, 700, 980, 5, 5, 100, 100, 0 },
+    { "Titling Medium", 100, 475, 775, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiBold", 100, 550, 850, 980, 5, 5, 100, 100, 0 },
+    { "Titling Bold", 100, 650, 900, 980, 5, 5, 100, 100, 0 },
+    { "Titling ExtraBold", 100, 750, 900, 980, 5, 5, 100, 100, 0 },
+    { "Titling Black", 100, 900, 900, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiExpanded SemiLight", 113, 360, 660, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiExpanded", 113, 400, 700, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiExpanded Medium", 113, 475, 775, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiExpanded SemiBold", 113, 550, 850, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiExpanded Bold", 113, 650, 900, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiExpanded ExtraBold", 113, 750, 900, 980, 5, 5, 100, 100, 0 },
+    { "Titling SemiExpanded Black", 113, 900, 900, 980, 5, 5, 100, 100, 0 },
+    { "Hairline SemiCondensed SemiLight", 95, 360, 660, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiCondensed", 95, 400, 700, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiCondensed Medium", 95, 475, 775, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiCondensed SemiBold", 95, 550, 850, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiCondensed Bold", 95, 650, 900, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiCondensed ExtraBold", 95, 750, 900, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiCondensed Black", 95, 900, 900, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiLight", 100, 360, 660, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline", 100, 400, 700, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline Medium", 100, 475, 775, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiBold", 100, 550, 850, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline Bold", 100, 650, 900, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline ExtraBold", 100, 750, 900, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline Black", 100, 900, 900, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiExpanded SemiLight", 113, 360, 660, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiExpanded", 113, 400, 700, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiExpanded Medium", 113, 475, 775, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiExpanded SemiBold", 113, 550, 850, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiExpanded Bold", 113, 650, 900, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiExpanded ExtraBold", 113, 750, 900, 1020, 5, 5, 100, 100, 0 },
+    { "Hairline SemiExpanded Black", 113, 900, 900, 1020, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiCondensed SemiLight", 95, 360, 660, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiCondensed", 95, 400, 700, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiCondensed Medium", 95, 475, 775, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiCondensed SemiBold", 95, 550, 850, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiCondensed Bold", 95, 650, 900, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiCondensed ExtraBold", 95, 750, 900, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiCondensed Black", 95, 900, 900, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiLight", 100, 360, 660, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint", 100, 400, 700, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint Medium", 100, 475, 775, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiBold", 100, 550, 850, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint Bold", 100, 650, 900, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint ExtraBold", 100, 750, 900, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint Black", 100, 900, 900, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiExpanded SemiLight", 113, 360, 660, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiExpanded", 113, 400, 700, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiExpanded Medium", 113, 475, 775, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiExpanded SemiBold", 113, 550, 850, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiExpanded Bold", 113, 650, 900, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiExpanded ExtraBold", 113, 750, 900, 1200, 5, 5, 100, 100, 0 },
+    { "Needlepoint SemiExpanded Black", 113, 900, 900, 1200, 5, 5, 100, 100, 0 },
+}
+
+-- Convert source design coordinates to the user coordinates expected by the
+-- currently exported fonts. ConTeXt then applies the fonts' avar mappings.
+-- Endpoint weights use 360 (the exported minimum), rather than source label 300.
+-- Math and Playfair have different exported width mappings.
+local weight = { {360,360}, {400,400}, {475,500}, {550,600},
+                 {650,700}, {750,800}, {900,900} }
+local optical = { {5,5}, {200,6}, {325,7}, {400,8}, {550,12},
+                  {640,16}, {700,21}, {800,32}, {860,41}, {900,48},
+                  {980,72}, {1020,96}, {1200,1200} }
+local textwidth = { {95,88}, {100,100}, {113,112.5} }
+local function mapped(value, mapping)
+    if value <= mapping[1][1] then return mapping[1][2] end
+    for j=2,#mapping do
+        local a,b = mapping[j-1],mapping[j]
+        if value <= b[1] then
+            return a[2] + (value-a[1])*(b[2]-a[2])/(b[1]-a[1])
+        end
     end
-    return ordered, indexed
+    return mapping[#mapping][2]
 end
-local mathinstances = instances("SomervilleMathVF.ttf")
-local _, roman = instances("PlayfairRomanVF.ttf")
-local _, italic = instances("PlayfairItalicVF.ttf")
-context.starttypescriptcollection { "somerville" }
-for _, entry in ipairs(mathinstances) do
-    local key = clean(entry.name)
-    local r = assert(roman[key], "Missing Playfair Roman instance: " .. entry.name)
-    local ikey = key == "regular" and "italic" or key:gsub("^regular", "") .. "italic"
-    local i = assert(italic[ikey] or italic[key:gsub("^regular", "italic") .. "italic"] or italic[key .. "italic"], "Missing Playfair Italic instance: " .. entry.name)
-    local name = "somerville-" .. string.lower(entry.name):gsub("%s+", "-")
-    context.defineSomervilleTypeface(name, r.lookup, i.lookup, entry.lookup)
-    if key == "regular" then
-        context.defineSomervilleTypeface("somerville", r.lookup, i.lookup, entry.lookup)
+for _, entry in ipairs(instances) do
+    local name = "somerville-" .. string.lower(entry[1]):gsub("%s+", "-")
+    local wght = mapped(entry[3],weight)
+    local opsz = mapped(entry[5],optical)
+    local mathaxes = string.format(
+        "wdth=%g,wght=%g,MGHT=%g,opsz=%g,STYA=%g,STYB=%g,ARLN=%g,ARHD=%g,INSL=%g",
+        entry[2],wght,mapped(entry[4],weight),opsz,
+        entry[6],entry[7],entry[8],entry[9],entry[10])
+    local textaxes = string.format("wdth=%g,wght=%g,opsz=%g",
+        mapped(entry[2],textwidth),wght,opsz)
+    context.defineSomervilleAxisTypeface(name,mathaxes,textaxes)
+    if entry[1] == "Regular" then
+        context.defineSomervilleAxisTypeface("somerville",mathaxes,textaxes)
     end
 end
-context.stoptypescriptcollection()
 \stopluacode

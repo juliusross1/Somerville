@@ -1,6 +1,6 @@
 open source     > level 1, order 1, name 'cont-yes.mkiv'
 system          > 
-system          > ConTeXt  ver: 2026.10.01 18:42 LMTX  fmt: 2026.10.4  int: english/english
+system          > ConTeXt  ver: 2026.10.01 18:42 LMTX  fmt: 2026.10.22  int: english/english
 system          > 
 system          > 'cont-new.mkxl' loaded
 open source     > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
@@ -12,143 +12,628 @@ languages       > language 'en' is active
 open source     > level 2, order 3, name '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex'
 fonts           > preloading latin modern fonts (second stage)
 open source     > level 3, order 4, name 'type-imp-somerville.mkxl'
-close source    > level 3, order 4, name 'type-imp-somerville.mkxl'
-fonts           > 'fallback modern rm 12pt' is loaded
-pages           > flushing realpage 1, userpage 1, subpage 1
-close source    > level 2, order 4, name '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex'
-close source    > level 1, order 4, name 'cont-yes.mkiv'
-backend         > xmp > using file '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
-backend         > fonts > start embedded fonts
-backend         > fonts >     1 : file 'PlayfairRomanVF.ttf', base 'GYSHBV+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-arrowhead100arrowlength200integralslant0mathweight900opticalsize24weight400width100-0'
-backend         > fonts >     2 : file 'SomervilleMathVF.ttf', base 'XSOPUY+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arrowhead100arrowlength200integralslant0mathweight900opticalsize24weight400width100-0'
-backend         > fonts > stop embedded fonts
-system          > start used files
-system          > text: somerville-instances
-system          > stop used files
-system          > start used files
-system          >    1: filename=cont-yes.mkiv filetype=tex format=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv usedmethod=database
-system          >    2: filename=publ-imp-default.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
-system          >    3: filename=cont-new.mkxl filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
-system          >    4: filename=lang-exc.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
-system          >    5: filename=lang-us.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
-system          >    6: filename=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex format=tex foundname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex usedmethod=direct
-system          >    7: filename=context-libraries.tma filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma usedmethod=database
-system          >    8: filename=type-imp-somerville.mkxl format=tex foundname=type-imp-somerville.mkxl fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/type-imp-somerville.mkxl usedmethod=direct
-system          >    9: filename=SomervilleMathVF.ttf filetype=ttf foundname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.ttf usedmethod=filesystem
-system          >   10: filename=PlayfairRomanVF.ttf filetype=ttf foundname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf usedmethod=filesystem
-system          >   11: filename=PlayfairItalicVF.ttf filetype=ttf foundname=/Users/juliusross/Documents/fontoutputs/PlayfairItalicVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/PlayfairItalicVF.ttf usedmethod=filesystem
-system          >   12: filename=lm.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
-system          >   13: filename=lmroman10-regular filetype=otf format=otf foundname=/Users/juliusross/context/tex/texmf/fonts/data/gust/lm/lmroman10-regular.otf fullname=/Users/juliusross/context/tex/texmf/fonts/data/gust/lm/lmroman10-regular.otf usedmethod=database
-system          >   14: filename=modern-text.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/modern-text.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/modern-text.lfg usedmethod=database
-system          >   15: filename=latinmodern-math.otf filetype=otf format=otf foundname=/Users/juliusross/context/tex/texmf/fonts/data/gust/lm/latinmodern-math.otf fullname=/Users/juliusross/context/tex/texmf/fonts/data/gust/lm/latinmodern-math.otf usedmethod=database
-system          >   16: filename=modern-math.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/modern-math.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/modern-math.lfg usedmethod=database
-system          >   17: filename=common-math.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg usedmethod=database
-system          >   18: filename=latinmodernmathcompanion-regular.otf filetype=otf format=otf foundname=/Users/juliusross/context/tex/texmf/fonts/data/cms/companion/LatinModernMathCompanion-Regular.otf fullname=/Users/juliusross/context/tex/texmf/fonts/data/cms/companion/LatinModernMathCompanion-Regular.otf usedmethod=database
-system          >   19: filename=somerville.lfg foundname=somerville.lfg fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville.lfg usedmethod=direct
-system          >   20: filename=somerville-frysorn.lfg foundname=somerville-frysorn.lfg fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-frysorn.lfg usedmethod=direct
-system          >   21: filename=Frysorn.ttf filetype=ttf format=ttf foundname=/Users/juliusross/Documents/fontoutputs/Frysorn.ttf fullname=/Users/juliusross/Documents/fontoutputs/Frysorn.ttf usedmethod=filesystem
-system          >   22: filename=lpdf-pdx.xml filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
-system          > stop used files
-system          > start commandline options
-system          >   currentrun="1"
-system          >   fulljobname="/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex"
-system          >   input="/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex"
-system          >   kindofrun="1"
-system          >   maxnofruns="9"
-system          >   texmfbinpath="/Users/juliusross/context/tex/texmf-osx-arm64/bin"
-system          > stop commandline options
-system          > start commandline files
-system          >    1: /Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.tex
-system          > stop commandline files
-modules         > start used modules
-modules         > stop used modules
-system          > 
-system          > status after finishing run
-system          > 
-system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert        mvl
-system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500        500
-system          >   min     150000   10000000     150000     150000   10000000    2000000    1000000      10000        500       1000      20000     100000        250        250         50         25         10
-system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250         10
-system          >   stp     100000    1000000     100000     100000    5000000    1000000    1000000      10000        250       1000      10000      10000        250        250         50         25         10
-system          > 
-system          >   mem     150000    1010780     150000              10000000    2000000    1000000      10000        500       1000      20000      10000        250        250         50        500         10
-system          >   itm         16          1         16                     9          8          1         32         32        116          4         16          8          8         28         72        116
-system          >   ext          0          0          0          0       5440          0          0          0          0          0          0          0    2827596         96          0          0          0
-system          >   all    2400000    1010780    2400000          1   90005440   16000000    1000000     320000      16000     116000      80000     160000    2829596       2096       1400      36000       1160
-system          > 
-system          >   ini    2150735     977283          0      53566          0     591100                                                                                       0                                 
-system          >   ptr      54692                  5402      54675                668125          0          0          0          0          0          0         11          1          0         11          0
-system          >   top      54693                495867     262146       6891     707372        206         39          8         12         39        194        250        250         50        500         10
-system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-system          > 
-system          >   current input type    : initial
-system          > 
-system          >   approximate memory    : 118561096 (113 MB)
-system          > 
-system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 5
-system          > 
-system          >   luabytecode registers : 1028
-system          >   luabytecode bytes     : 16464 (0 MB)
-system          >   luastate bytes now    : 84917389 (80 MB)
-system          >   luastate bytes max    : 92078822 (87 MB)
-system          > 
-system          >   file callbacks        : 205
-system          >   saved callbacks       : 86
-system          >   direct callbacks      : 5
-system          >   function callbacks    : 969
-system          >   value callbacks       : 12106
-system          >   message callbacks     : 0
-system          >   bytecode callbacks    : 634
-system          > 
-system          >   mp instances          : 0
-system          >   mp estimated memory   : 0 (0 MB)
-system          >   mp file callbacks     : 0
-system          >   mp text callbacks     : 0
-system          >   mp script callbacks   : 0
-system          >   mp log callbacks      : 0
-system          > 
-system          >   total callbacks       : 14005
-system          >   mp total callbacks    : 0
-system          >   backend callbacks     : 0
-system          > 
-system          >   linebreak statistics  : context      calls     first    second     final  passonly   subpass
-system          > 
-system          >   linebreak statistics  : normal           4         4         0         3         0         0
-system          >   linebreak statistics  : vbox             3         3         0         0         0         0
-system          > 
-system          >   linebreak statistics  :                  7         7         0         3         0         0
-system          > 
-system          >   linebreak statistics  : textlines          1
-system          > 
-system          >   hyphenation state     : checked           2
-system          >   hyphenation state     : hyphenated        1
-system          >   hyphenation state     : lists             2
-system          >   hyphenation state     : nothing           1
-system          >   hyphenation state     : words             1
-system          > 
-mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
-mkxl run stats  > used cache path: /Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
-mkxl run stats  > resource resolver: loadtime 0.007 seconds, 1 scans with scantime 0.004 seconds, 0 shared scans, 22 found files, scanned paths: /Users/juliusross/Documents/Pennstander
-mkxl run stats  > stored bytecode data: 528 modules (0.136 sec), 106 tables (0.007 sec), 634 chunks (0.142 sec)
-mkxl run stats  > traced context lua functions: maxstack: 1907, freed: 0, unreachable: 1907
-mkxl run stats  > cleaned up reserved nodes: 80 nodes, 7 lists of 445
-mkxl run stats  > node memory usage: 6 attribute, 3 attributelist, 1 dir, 9 fontspec, 1 glue, 135 gluespec, 1 kern, 661 mathspec, 2 penalty, 56 specification, 2 temp
-mkxl run stats  > node list callback tasks: 17 unique task lists, 11 instances (re)created, 53 calls
-mkxl run stats  > used backend: pdf
-mkxl run stats  > randomizer: resumed with value 0.90851917778082758
-mkxl run stats  > jobdata time: 0.001 seconds saving, 0.000 seconds loading
-mkxl run stats  > callbacks: file: 205, saved: 86, direct: 5, function: 969, value: 12106, message: 0, bytecode: 634, late 0, total: 14005 (14005 per page)
-mkxl run stats  > loaded patterns: en::1, load time: 0.000
-mkxl run stats  > loaded fonts: 6 files: latinmodernmathcompanion-regular.otf, latinmodern-math.otf, lmroman10-regular.otf, frysorn.ttf, playfairromanvf.ttf, somervillemathvf.ttf
-mkxl run stats  > font engine: otf 3.156, afm 1.541, tfm 1.000, 8 instances, 2 shared in backend, 2 common vectors, 0 common hashes, load time 0.059 seconds 
-mkxl run stats  > math tweaking time: 0.021 seconds, 12 math goodie tables
-mkxl run stats  > font embedding time: 0.001 seconds, 2 fonts
-mkxl run stats  > result saved in file: /Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-instances.pdf, compresslevel 1, objectcompresslevel 3, 8 streams, 0 uncompressed, 7 compressed, 1 not compressed, threshold 40
-mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
-mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
-mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20260923, format id: 736, memory mode: 1, compiler: clang, cversion: 17
-mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 54675 control sequences, 262144 hash slots, 5402 misses, approximate memory usage: 113 MB
-mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 84 MB, ctx: 81 MB, max: 87 MB, symbol mask: utf (τεχ)
-mkxl run stats  > runtime: 0.364 seconds, 1 processed pages, 1 shipped pages, 2.750 pages/second
+open source     > level 4, order 5, name 'type-imp-somerville.mkxl'
+open source     > level 5, order 6, name 'type-imp-somerville.mkxl'
+open source     > level 6, order 7, name 'type-imp-somerville.mkxl'
+open source     > level 7, order 8, name 'type-imp-somerville.mkxl'
+open source     > level 8, order 9, name 'type-imp-somerville.mkxl'
+open source     > level 9, order 10, name 'type-imp-somerville.mkxl'
+open source     > level 10, order 11, name 'type-imp-somerville.mkxl'
+open source     > level 11, order 12, name 'type-imp-somerville.mkxl'
+open source     > level 12, order 13, name 'type-imp-somerville.mkxl'
+open source     > level 13, order 14, name 'type-imp-somerville.mkxl'
+open source     > level 14, order 15, name 'type-imp-somerville.mkxl'
+open source     > level 15, order 16, name 'type-imp-somerville.mkxl'
+open source     > level 16, order 17, name 'type-imp-somerville.mkxl'
+open source     > level 17, order 18, name 'type-imp-somerville.mkxl'
+open source     > level 18, order 19, name 'type-imp-somerville.mkxl'
+open source     > level 19, order 20, name 'type-imp-somerville.mkxl'
+open source     > level 20, order 21, name 'type-imp-somerville.mkxl'
+open source     > level 21, order 22, name 'type-imp-somerville.mkxl'
+open source     > level 22, order 23, name 'type-imp-somerville.mkxl'
+open source     > level 23, order 24, name 'type-imp-somerville.mkxl'
+open source     > level 24, order 25, name 'type-imp-somerville.mkxl'
+open source     > level 25, order 26, name 'type-imp-somerville.mkxl'
+open source     > level 26, order 27, name 'type-imp-somerville.mkxl'
+open source     > level 27, order 28, name 'type-imp-somerville.mkxl'
+open source     > level 28, order 29, name 'type-imp-somerville.mkxl'
+open source     > level 29, order 30, name 'type-imp-somerville.mkxl'
+open source     > level 30, order 31, name 'type-imp-somerville.mkxl'
+open source     > level 31, order 32, name 'type-imp-somerville.mkxl'
+open source     > level 32, order 33, name 'type-imp-somerville.mkxl'
+open source     > level 33, order 34, name 'type-imp-somerville.mkxl'
+open source     > level 34, order 35, name 'type-imp-somerville.mkxl'
+open source     > level 35, order 36, name 'type-imp-somerville.mkxl'
+open source     > level 36, order 37, name 'type-imp-somerville.mkxl'
+open source     > level 37, order 38, name 'type-imp-somerville.mkxl'
+open source     > level 38, order 39, name 'type-imp-somerville.mkxl'
+open source     > level 39, order 40, name 'type-imp-somerville.mkxl'
+open source     > level 40, order 41, name 'type-imp-somerville.mkxl'
+open source     > level 41, order 42, name 'type-imp-somerville.mkxl'
+open source     > level 42, order 43, name 'type-imp-somerville.mkxl'
+open source     > level 43, order 44, name 'type-imp-somerville.mkxl'
+open source     > level 44, order 45, name 'type-imp-somerville.mkxl'
+open source     > level 45, order 46, name 'type-imp-somerville.mkxl'
+open source     > level 46, order 47, name 'type-imp-somerville.mkxl'
+open source     > level 47, order 48, name 'type-imp-somerville.mkxl'
+open source     > level 48, order 49, name 'type-imp-somerville.mkxl'
+open source     > level 49, order 50, name 'type-imp-somerville.mkxl'
+open source     > level 50, order 51, name 'type-imp-somerville.mkxl'
+open source     > level 51, order 52, name 'type-imp-somerville.mkxl'
+open source     > level 52, order 53, name 'type-imp-somerville.mkxl'
+open source     > level 53, order 54, name 'type-imp-somerville.mkxl'
+open source     > level 54, order 55, name 'type-imp-somerville.mkxl'
+open source     > level 55, order 56, name 'type-imp-somerville.mkxl'
+open source     > level 56, order 57, name 'type-imp-somerville.mkxl'
+open source     > level 57, order 58, name 'type-imp-somerville.mkxl'
+open source     > level 58, order 59, name 'type-imp-somerville.mkxl'
+open source     > level 59, order 60, name 'type-imp-somerville.mkxl'
+open source     > level 60, order 61, name 'type-imp-somerville.mkxl'
+open source     > level 61, order 62, name 'type-imp-somerville.mkxl'
+open source     > level 62, order 63, name 'type-imp-somerville.mkxl'
+open source     > level 63, order 64, name 'type-imp-somerville.mkxl'
+open source     > level 64, order 65, name 'type-imp-somerville.mkxl'
+open source     > level 65, order 66, name 'type-imp-somerville.mkxl'
+open source     > level 66, order 67, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=16000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=2000000 | min=2000000 | ptr=2000001 | set=10000000 | stp=1000000 | top=2000000
+open source     > level 67, order 68, name 'type-imp-somerville.mkxl'
+open source     > level 68, order 69, name 'type-imp-somerville.mkxl'
+open source     > level 69, order 70, name 'type-imp-somerville.mkxl'
+open source     > level 70, order 71, name 'type-imp-somerville.mkxl'
+open source     > level 71, order 72, name 'type-imp-somerville.mkxl'
+open source     > level 72, order 73, name 'type-imp-somerville.mkxl'
+open source     > level 73, order 74, name 'type-imp-somerville.mkxl'
+open source     > level 74, order 75, name 'type-imp-somerville.mkxl'
+open source     > level 75, order 76, name 'type-imp-somerville.mkxl'
+open source     > level 76, order 77, name 'type-imp-somerville.mkxl'
+open source     > level 77, order 78, name 'type-imp-somerville.mkxl'
+open source     > level 78, order 79, name 'type-imp-somerville.mkxl'
+open source     > level 79, order 80, name 'type-imp-somerville.mkxl'
+open source     > level 80, order 81, name 'type-imp-somerville.mkxl'
+open source     > level 81, order 82, name 'type-imp-somerville.mkxl'
+open source     > level 82, order 83, name 'type-imp-somerville.mkxl'
+open source     > level 83, order 84, name 'type-imp-somerville.mkxl'
+open source     > level 84, order 85, name 'type-imp-somerville.mkxl'
+open source     > level 85, order 86, name 'type-imp-somerville.mkxl'
+open source     > level 86, order 87, name 'type-imp-somerville.mkxl'
+open source     > level 87, order 88, name 'type-imp-somerville.mkxl'
+open source     > level 88, order 89, name 'type-imp-somerville.mkxl'
+open source     > level 89, order 90, name 'type-imp-somerville.mkxl'
+open source     > level 90, order 91, name 'type-imp-somerville.mkxl'
+open source     > level 91, order 92, name 'type-imp-somerville.mkxl'
+open source     > level 92, order 93, name 'type-imp-somerville.mkxl'
+open source     > level 93, order 94, name 'type-imp-somerville.mkxl'
+open source     > level 94, order 95, name 'type-imp-somerville.mkxl'
+open source     > level 95, order 96, name 'type-imp-somerville.mkxl'
+open source     > level 96, order 97, name 'type-imp-somerville.mkxl'
+open source     > level 97, order 98, name 'type-imp-somerville.mkxl'
+open source     > level 98, order 99, name 'type-imp-somerville.mkxl'
+open source     > level 99, order 100, name 'type-imp-somerville.mkxl'
+open source     > level 100, order 101, name 'type-imp-somerville.mkxl'
+open source     > level 101, order 102, name 'type-imp-somerville.mkxl'
+open source     > level 102, order 103, name 'type-imp-somerville.mkxl'
+open source     > level 103, order 104, name 'type-imp-somerville.mkxl'
+open source     > level 104, order 105, name 'type-imp-somerville.mkxl'
+open source     > level 105, order 106, name 'type-imp-somerville.mkxl'
+open source     > level 106, order 107, name 'type-imp-somerville.mkxl'
+open source     > level 107, order 108, name 'type-imp-somerville.mkxl'
+open source     > level 108, order 109, name 'type-imp-somerville.mkxl'
+open source     > level 109, order 110, name 'type-imp-somerville.mkxl'
+open source     > level 110, order 111, name 'type-imp-somerville.mkxl'
+open source     > level 111, order 112, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=24000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=3000000 | min=2000000 | ptr=3000001 | set=10000000 | stp=1000000 | top=3000000
+open source     > level 112, order 113, name 'type-imp-somerville.mkxl'
+open source     > level 113, order 114, name 'type-imp-somerville.mkxl'
+open source     > level 114, order 115, name 'type-imp-somerville.mkxl'
+open source     > level 115, order 116, name 'type-imp-somerville.mkxl'
+open source     > level 116, order 117, name 'type-imp-somerville.mkxl'
+open source     > level 117, order 118, name 'type-imp-somerville.mkxl'
+open source     > level 118, order 119, name 'type-imp-somerville.mkxl'
+open source     > level 119, order 120, name 'type-imp-somerville.mkxl'
+open source     > level 120, order 121, name 'type-imp-somerville.mkxl'
+open source     > level 121, order 122, name 'type-imp-somerville.mkxl'
+open source     > level 122, order 123, name 'type-imp-somerville.mkxl'
+open source     > level 123, order 124, name 'type-imp-somerville.mkxl'
+open source     > level 124, order 125, name 'type-imp-somerville.mkxl'
+open source     > level 125, order 126, name 'type-imp-somerville.mkxl'
+open source     > level 126, order 127, name 'type-imp-somerville.mkxl'
+open source     > level 127, order 128, name 'type-imp-somerville.mkxl'
+open source     > level 128, order 129, name 'type-imp-somerville.mkxl'
+open source     > level 129, order 130, name 'type-imp-somerville.mkxl'
+open source     > level 130, order 131, name 'type-imp-somerville.mkxl'
+open source     > level 131, order 132, name 'type-imp-somerville.mkxl'
+open source     > level 132, order 133, name 'type-imp-somerville.mkxl'
+open source     > level 133, order 134, name 'type-imp-somerville.mkxl'
+open source     > level 134, order 135, name 'type-imp-somerville.mkxl'
+open source     > level 135, order 136, name 'type-imp-somerville.mkxl'
+open source     > level 136, order 137, name 'type-imp-somerville.mkxl'
+open source     > level 137, order 138, name 'type-imp-somerville.mkxl'
+open source     > level 138, order 139, name 'type-imp-somerville.mkxl'
+open source     > level 139, order 140, name 'type-imp-somerville.mkxl'
+open source     > level 140, order 141, name 'type-imp-somerville.mkxl'
+open source     > level 141, order 142, name 'type-imp-somerville.mkxl'
+open source     > level 142, order 143, name 'type-imp-somerville.mkxl'
+open source     > level 143, order 144, name 'type-imp-somerville.mkxl'
+open source     > level 144, order 145, name 'type-imp-somerville.mkxl'
+open source     > level 145, order 146, name 'type-imp-somerville.mkxl'
+open source     > level 146, order 147, name 'type-imp-somerville.mkxl'
+open source     > level 147, order 148, name 'type-imp-somerville.mkxl'
+open source     > level 148, order 149, name 'type-imp-somerville.mkxl'
+open source     > level 149, order 150, name 'type-imp-somerville.mkxl'
+open source     > level 150, order 151, name 'type-imp-somerville.mkxl'
+open source     > level 151, order 152, name 'type-imp-somerville.mkxl'
+open source     > level 152, order 153, name 'type-imp-somerville.mkxl'
+open source     > level 153, order 154, name 'type-imp-somerville.mkxl'
+open source     > level 154, order 155, name 'type-imp-somerville.mkxl'
+open source     > level 155, order 156, name 'type-imp-somerville.mkxl'
+open source     > level 156, order 157, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=32000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=4000000 | min=2000000 | ptr=4000001 | set=10000000 | stp=1000000 | top=4000000
+open source     > level 157, order 158, name 'type-imp-somerville.mkxl'
+open source     > level 158, order 159, name 'type-imp-somerville.mkxl'
+open source     > level 159, order 160, name 'type-imp-somerville.mkxl'
+open source     > level 160, order 161, name 'type-imp-somerville.mkxl'
+open source     > level 161, order 162, name 'type-imp-somerville.mkxl'
+open source     > level 162, order 163, name 'type-imp-somerville.mkxl'
+open source     > level 163, order 164, name 'type-imp-somerville.mkxl'
+open source     > level 164, order 165, name 'type-imp-somerville.mkxl'
+open source     > level 165, order 166, name 'type-imp-somerville.mkxl'
+open source     > level 166, order 167, name 'type-imp-somerville.mkxl'
+open source     > level 167, order 168, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'file' succeeded, details: all=24000 | ext=0 | ini=-1 | itm=32 | max=2000 | mem=750 | min=500 | ptr=501 | set=2000 | stp=250 | top=501
+open source     > level 168, order 169, name 'type-imp-somerville.mkxl'
+open source     > level 169, order 170, name 'type-imp-somerville.mkxl'
+open source     > level 170, order 171, name 'type-imp-somerville.mkxl'
+open source     > level 171, order 172, name 'type-imp-somerville.mkxl'
+open source     > level 172, order 173, name 'type-imp-somerville.mkxl'
+open source     > level 173, order 174, name 'type-imp-somerville.mkxl'
+open source     > level 174, order 175, name 'type-imp-somerville.mkxl'
+open source     > level 175, order 176, name 'type-imp-somerville.mkxl'
+open source     > level 176, order 177, name 'type-imp-somerville.mkxl'
+open source     > level 177, order 178, name 'type-imp-somerville.mkxl'
+open source     > level 178, order 179, name 'type-imp-somerville.mkxl'
+open source     > level 179, order 180, name 'type-imp-somerville.mkxl'
+open source     > level 180, order 181, name 'type-imp-somerville.mkxl'
+open source     > level 181, order 182, name 'type-imp-somerville.mkxl'
+open source     > level 182, order 183, name 'type-imp-somerville.mkxl'
+open source     > level 183, order 184, name 'type-imp-somerville.mkxl'
+open source     > level 184, order 185, name 'type-imp-somerville.mkxl'
+open source     > level 185, order 186, name 'type-imp-somerville.mkxl'
+open source     > level 186, order 187, name 'type-imp-somerville.mkxl'
+open source     > level 187, order 188, name 'type-imp-somerville.mkxl'
+open source     > level 188, order 189, name 'type-imp-somerville.mkxl'
+open source     > level 189, order 190, name 'type-imp-somerville.mkxl'
+open source     > level 190, order 191, name 'type-imp-somerville.mkxl'
+open source     > level 191, order 192, name 'type-imp-somerville.mkxl'
+open source     > level 192, order 193, name 'type-imp-somerville.mkxl'
+open source     > level 193, order 194, name 'type-imp-somerville.mkxl'
+open source     > level 194, order 195, name 'type-imp-somerville.mkxl'
+open source     > level 195, order 196, name 'type-imp-somerville.mkxl'
+open source     > level 196, order 197, name 'type-imp-somerville.mkxl'
+open source     > level 197, order 198, name 'type-imp-somerville.mkxl'
+open source     > level 198, order 199, name 'type-imp-somerville.mkxl'
+open source     > level 199, order 200, name 'type-imp-somerville.mkxl'
+open source     > level 200, order 201, name 'type-imp-somerville.mkxl'
+open source     > level 201, order 202, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=40000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=5000000 | min=2000000 | ptr=5000001 | set=10000000 | stp=1000000 | top=5000000
+open source     > level 202, order 203, name 'type-imp-somerville.mkxl'
+open source     > level 203, order 204, name 'type-imp-somerville.mkxl'
+open source     > level 204, order 205, name 'type-imp-somerville.mkxl'
+open source     > level 205, order 206, name 'type-imp-somerville.mkxl'
+open source     > level 206, order 207, name 'type-imp-somerville.mkxl'
+open source     > level 207, order 208, name 'type-imp-somerville.mkxl'
+open source     > level 208, order 209, name 'type-imp-somerville.mkxl'
+open source     > level 209, order 210, name 'type-imp-somerville.mkxl'
+open source     > level 210, order 211, name 'type-imp-somerville.mkxl'
+open source     > level 211, order 212, name 'type-imp-somerville.mkxl'
+open source     > level 212, order 213, name 'type-imp-somerville.mkxl'
+open source     > level 213, order 214, name 'type-imp-somerville.mkxl'
+open source     > level 214, order 215, name 'type-imp-somerville.mkxl'
+open source     > level 215, order 216, name 'type-imp-somerville.mkxl'
+open source     > level 216, order 217, name 'type-imp-somerville.mkxl'
+open source     > level 217, order 218, name 'type-imp-somerville.mkxl'
+open source     > level 218, order 219, name 'type-imp-somerville.mkxl'
+open source     > level 219, order 220, name 'type-imp-somerville.mkxl'
+open source     > level 220, order 221, name 'type-imp-somerville.mkxl'
+open source     > level 221, order 222, name 'type-imp-somerville.mkxl'
+open source     > level 222, order 223, name 'type-imp-somerville.mkxl'
+open source     > level 223, order 224, name 'type-imp-somerville.mkxl'
+open source     > level 224, order 225, name 'type-imp-somerville.mkxl'
+open source     > level 225, order 226, name 'type-imp-somerville.mkxl'
+open source     > level 226, order 227, name 'type-imp-somerville.mkxl'
+open source     > level 227, order 228, name 'type-imp-somerville.mkxl'
+open source     > level 228, order 229, name 'type-imp-somerville.mkxl'
+open source     > level 229, order 230, name 'type-imp-somerville.mkxl'
+open source     > level 230, order 231, name 'type-imp-somerville.mkxl'
+open source     > level 231, order 232, name 'type-imp-somerville.mkxl'
+open source     > level 232, order 233, name 'type-imp-somerville.mkxl'
+open source     > level 233, order 234, name 'type-imp-somerville.mkxl'
+open source     > level 234, order 235, name 'type-imp-somerville.mkxl'
+open source     > level 235, order 236, name 'type-imp-somerville.mkxl'
+open source     > level 236, order 237, name 'type-imp-somerville.mkxl'
+open source     > level 237, order 238, name 'type-imp-somerville.mkxl'
+open source     > level 238, order 239, name 'type-imp-somerville.mkxl'
+open source     > level 239, order 240, name 'type-imp-somerville.mkxl'
+open source     > level 240, order 241, name 'type-imp-somerville.mkxl'
+open source     > level 241, order 242, name 'type-imp-somerville.mkxl'
+open source     > level 242, order 243, name 'type-imp-somerville.mkxl'
+open source     > level 243, order 244, name 'type-imp-somerville.mkxl'
+open source     > level 244, order 245, name 'type-imp-somerville.mkxl'
+open source     > level 245, order 246, name 'type-imp-somerville.mkxl'
+open source     > level 246, order 247, name 'type-imp-somerville.mkxl'
+open source     > level 247, order 248, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=48000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=6000000 | min=2000000 | ptr=6000001 | set=10000000 | stp=1000000 | top=6000000
+open source     > level 248, order 249, name 'type-imp-somerville.mkxl'
+open source     > level 249, order 250, name 'type-imp-somerville.mkxl'
+open source     > level 250, order 251, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'file' succeeded, details: all=32000 | ext=0 | ini=-1 | itm=32 | max=2000 | mem=1000 | min=500 | ptr=751 | set=2000 | stp=250 | top=751
+open source     > level 251, order 252, name 'type-imp-somerville.mkxl'
+open source     > level 252, order 253, name 'type-imp-somerville.mkxl'
+open source     > level 253, order 254, name 'type-imp-somerville.mkxl'
+open source     > level 254, order 255, name 'type-imp-somerville.mkxl'
+open source     > level 255, order 256, name 'type-imp-somerville.mkxl'
+open source     > level 256, order 257, name 'type-imp-somerville.mkxl'
+open source     > level 257, order 258, name 'type-imp-somerville.mkxl'
+open source     > level 258, order 259, name 'type-imp-somerville.mkxl'
+open source     > level 259, order 260, name 'type-imp-somerville.mkxl'
+open source     > level 260, order 261, name 'type-imp-somerville.mkxl'
+open source     > level 261, order 262, name 'type-imp-somerville.mkxl'
+open source     > level 262, order 263, name 'type-imp-somerville.mkxl'
+open source     > level 263, order 264, name 'type-imp-somerville.mkxl'
+open source     > level 264, order 265, name 'type-imp-somerville.mkxl'
+open source     > level 265, order 266, name 'type-imp-somerville.mkxl'
+open source     > level 266, order 267, name 'type-imp-somerville.mkxl'
+open source     > level 267, order 268, name 'type-imp-somerville.mkxl'
+open source     > level 268, order 269, name 'type-imp-somerville.mkxl'
+open source     > level 269, order 270, name 'type-imp-somerville.mkxl'
+open source     > level 270, order 271, name 'type-imp-somerville.mkxl'
+open source     > level 271, order 272, name 'type-imp-somerville.mkxl'
+open source     > level 272, order 273, name 'type-imp-somerville.mkxl'
+open source     > level 273, order 274, name 'type-imp-somerville.mkxl'
+open source     > level 274, order 275, name 'type-imp-somerville.mkxl'
+open source     > level 275, order 276, name 'type-imp-somerville.mkxl'
+open source     > level 276, order 277, name 'type-imp-somerville.mkxl'
+open source     > level 277, order 278, name 'type-imp-somerville.mkxl'
+open source     > level 278, order 279, name 'type-imp-somerville.mkxl'
+open source     > level 279, order 280, name 'type-imp-somerville.mkxl'
+open source     > level 280, order 281, name 'type-imp-somerville.mkxl'
+open source     > level 281, order 282, name 'type-imp-somerville.mkxl'
+open source     > level 282, order 283, name 'type-imp-somerville.mkxl'
+open source     > level 283, order 284, name 'type-imp-somerville.mkxl'
+open source     > level 284, order 285, name 'type-imp-somerville.mkxl'
+open source     > level 285, order 286, name 'type-imp-somerville.mkxl'
+open source     > level 286, order 287, name 'type-imp-somerville.mkxl'
+open source     > level 287, order 288, name 'type-imp-somerville.mkxl'
+open source     > level 288, order 289, name 'type-imp-somerville.mkxl'
+open source     > level 289, order 290, name 'type-imp-somerville.mkxl'
+open source     > level 290, order 291, name 'type-imp-somerville.mkxl'
+open source     > level 291, order 292, name 'type-imp-somerville.mkxl'
+open source     > level 292, order 293, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=56000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=7000000 | min=2000000 | ptr=7000001 | set=10000000 | stp=1000000 | top=7000000
+open source     > level 293, order 294, name 'type-imp-somerville.mkxl'
+open source     > level 294, order 295, name 'type-imp-somerville.mkxl'
+open source     > level 295, order 296, name 'type-imp-somerville.mkxl'
+open source     > level 296, order 297, name 'type-imp-somerville.mkxl'
+open source     > level 297, order 298, name 'type-imp-somerville.mkxl'
+open source     > level 298, order 299, name 'type-imp-somerville.mkxl'
+open source     > level 299, order 300, name 'type-imp-somerville.mkxl'
+open source     > level 300, order 301, name 'type-imp-somerville.mkxl'
+open source     > level 301, order 302, name 'type-imp-somerville.mkxl'
+open source     > level 302, order 303, name 'type-imp-somerville.mkxl'
+open source     > level 303, order 304, name 'type-imp-somerville.mkxl'
+open source     > level 304, order 305, name 'type-imp-somerville.mkxl'
+open source     > level 305, order 306, name 'type-imp-somerville.mkxl'
+open source     > level 306, order 307, name 'type-imp-somerville.mkxl'
+open source     > level 307, order 308, name 'type-imp-somerville.mkxl'
+open source     > level 308, order 309, name 'type-imp-somerville.mkxl'
+open source     > level 309, order 310, name 'type-imp-somerville.mkxl'
+open source     > level 310, order 311, name 'type-imp-somerville.mkxl'
+open source     > level 311, order 312, name 'type-imp-somerville.mkxl'
+open source     > level 312, order 313, name 'type-imp-somerville.mkxl'
+open source     > level 313, order 314, name 'type-imp-somerville.mkxl'
+open source     > level 314, order 315, name 'type-imp-somerville.mkxl'
+open source     > level 315, order 316, name 'type-imp-somerville.mkxl'
+open source     > level 316, order 317, name 'type-imp-somerville.mkxl'
+open source     > level 317, order 318, name 'type-imp-somerville.mkxl'
+open source     > level 318, order 319, name 'type-imp-somerville.mkxl'
+open source     > level 319, order 320, name 'type-imp-somerville.mkxl'
+open source     > level 320, order 321, name 'type-imp-somerville.mkxl'
+open source     > level 321, order 322, name 'type-imp-somerville.mkxl'
+open source     > level 322, order 323, name 'type-imp-somerville.mkxl'
+open source     > level 323, order 324, name 'type-imp-somerville.mkxl'
+open source     > level 324, order 325, name 'type-imp-somerville.mkxl'
+open source     > level 325, order 326, name 'type-imp-somerville.mkxl'
+open source     > level 326, order 327, name 'type-imp-somerville.mkxl'
+open source     > level 327, order 328, name 'type-imp-somerville.mkxl'
+open source     > level 328, order 329, name 'type-imp-somerville.mkxl'
+open source     > level 329, order 330, name 'type-imp-somerville.mkxl'
+open source     > level 330, order 331, name 'type-imp-somerville.mkxl'
+open source     > level 331, order 332, name 'type-imp-somerville.mkxl'
+open source     > level 332, order 333, name 'type-imp-somerville.mkxl'
+open source     > level 333, order 334, name 'type-imp-somerville.mkxl'
+open source     > level 334, order 335, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'file' succeeded, details: all=40000 | ext=0 | ini=-1 | itm=32 | max=2000 | mem=1250 | min=500 | ptr=1001 | set=2000 | stp=250 | top=1001
+open source     > level 335, order 336, name 'type-imp-somerville.mkxl'
+open source     > level 336, order 337, name 'type-imp-somerville.mkxl'
+open source     > level 337, order 338, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=64000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=8000000 | min=2000000 | ptr=8000001 | set=10000000 | stp=1000000 | top=8000000
+open source     > level 338, order 339, name 'type-imp-somerville.mkxl'
+open source     > level 339, order 340, name 'type-imp-somerville.mkxl'
+open source     > level 340, order 341, name 'type-imp-somerville.mkxl'
+open source     > level 341, order 342, name 'type-imp-somerville.mkxl'
+open source     > level 342, order 343, name 'type-imp-somerville.mkxl'
+open source     > level 343, order 344, name 'type-imp-somerville.mkxl'
+open source     > level 344, order 345, name 'type-imp-somerville.mkxl'
+open source     > level 345, order 346, name 'type-imp-somerville.mkxl'
+open source     > level 346, order 347, name 'type-imp-somerville.mkxl'
+open source     > level 347, order 348, name 'type-imp-somerville.mkxl'
+open source     > level 348, order 349, name 'type-imp-somerville.mkxl'
+open source     > level 349, order 350, name 'type-imp-somerville.mkxl'
+open source     > level 350, order 351, name 'type-imp-somerville.mkxl'
+open source     > level 351, order 352, name 'type-imp-somerville.mkxl'
+open source     > level 352, order 353, name 'type-imp-somerville.mkxl'
+open source     > level 353, order 354, name 'type-imp-somerville.mkxl'
+open source     > level 354, order 355, name 'type-imp-somerville.mkxl'
+open source     > level 355, order 356, name 'type-imp-somerville.mkxl'
+open source     > level 356, order 357, name 'type-imp-somerville.mkxl'
+open source     > level 357, order 358, name 'type-imp-somerville.mkxl'
+open source     > level 358, order 359, name 'type-imp-somerville.mkxl'
+open source     > level 359, order 360, name 'type-imp-somerville.mkxl'
+open source     > level 360, order 361, name 'type-imp-somerville.mkxl'
+open source     > level 361, order 362, name 'type-imp-somerville.mkxl'
+open source     > level 362, order 363, name 'type-imp-somerville.mkxl'
+open source     > level 363, order 364, name 'type-imp-somerville.mkxl'
+open source     > level 364, order 365, name 'type-imp-somerville.mkxl'
+open source     > level 365, order 366, name 'type-imp-somerville.mkxl'
+open source     > level 366, order 367, name 'type-imp-somerville.mkxl'
+open source     > level 367, order 368, name 'type-imp-somerville.mkxl'
+open source     > level 368, order 369, name 'type-imp-somerville.mkxl'
+open source     > level 369, order 370, name 'type-imp-somerville.mkxl'
+open source     > level 370, order 371, name 'type-imp-somerville.mkxl'
+open source     > level 371, order 372, name 'type-imp-somerville.mkxl'
+open source     > level 372, order 373, name 'type-imp-somerville.mkxl'
+open source     > level 373, order 374, name 'type-imp-somerville.mkxl'
+open source     > level 374, order 375, name 'type-imp-somerville.mkxl'
+open source     > level 375, order 376, name 'type-imp-somerville.mkxl'
+open source     > level 376, order 377, name 'type-imp-somerville.mkxl'
+open source     > level 377, order 378, name 'type-imp-somerville.mkxl'
+open source     > level 378, order 379, name 'type-imp-somerville.mkxl'
+open source     > level 379, order 380, name 'type-imp-somerville.mkxl'
+open source     > level 380, order 381, name 'type-imp-somerville.mkxl'
+open source     > level 381, order 382, name 'type-imp-somerville.mkxl'
+open source     > level 382, order 383, name 'type-imp-somerville.mkxl'
+open source     > level 383, order 384, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=72000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=9000000 | min=2000000 | ptr=9000001 | set=10000000 | stp=1000000 | top=9000000
+open source     > level 384, order 385, name 'type-imp-somerville.mkxl'
+open source     > level 385, order 386, name 'type-imp-somerville.mkxl'
+open source     > level 386, order 387, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'save' succeeded, details: all=320000 | ext=0 | ini=-1 | itm=16 | max=500000 | mem=20000 | min=100000 | ptr=10001 | set=500000 | stp=10000 | top=10001
+open source     > level 387, order 388, name 'type-imp-somerville.mkxl'
+open source     > level 388, order 389, name 'type-imp-somerville.mkxl'
+open source     > level 389, order 390, name 'type-imp-somerville.mkxl'
+open source     > level 390, order 391, name 'type-imp-somerville.mkxl'
+open source     > level 391, order 392, name 'type-imp-somerville.mkxl'
+open source     > level 392, order 393, name 'type-imp-somerville.mkxl'
+open source     > level 393, order 394, name 'type-imp-somerville.mkxl'
+open source     > level 394, order 395, name 'type-imp-somerville.mkxl'
+open source     > level 395, order 396, name 'type-imp-somerville.mkxl'
+open source     > level 396, order 397, name 'type-imp-somerville.mkxl'
+open source     > level 397, order 398, name 'type-imp-somerville.mkxl'
+open source     > level 398, order 399, name 'type-imp-somerville.mkxl'
+open source     > level 399, order 400, name 'type-imp-somerville.mkxl'
+open source     > level 400, order 401, name 'type-imp-somerville.mkxl'
+open source     > level 401, order 402, name 'type-imp-somerville.mkxl'
+open source     > level 402, order 403, name 'type-imp-somerville.mkxl'
+open source     > level 403, order 404, name 'type-imp-somerville.mkxl'
+open source     > level 404, order 405, name 'type-imp-somerville.mkxl'
+open source     > level 405, order 406, name 'type-imp-somerville.mkxl'
+open source     > level 406, order 407, name 'type-imp-somerville.mkxl'
+open source     > level 407, order 408, name 'type-imp-somerville.mkxl'
+open source     > level 408, order 409, name 'type-imp-somerville.mkxl'
+open source     > level 409, order 410, name 'type-imp-somerville.mkxl'
+open source     > level 410, order 411, name 'type-imp-somerville.mkxl'
+open source     > level 411, order 412, name 'type-imp-somerville.mkxl'
+open source     > level 412, order 413, name 'type-imp-somerville.mkxl'
+open source     > level 413, order 414, name 'type-imp-somerville.mkxl'
+open source     > level 414, order 415, name 'type-imp-somerville.mkxl'
+open source     > level 415, order 416, name 'type-imp-somerville.mkxl'
+open source     > level 416, order 417, name 'type-imp-somerville.mkxl'
+open source     > level 417, order 418, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'file' succeeded, details: all=48000 | ext=0 | ini=-1 | itm=32 | max=2000 | mem=1500 | min=500 | ptr=1251 | set=2000 | stp=250 | top=1251
+open source     > level 418, order 419, name 'type-imp-somerville.mkxl'
+open source     > level 419, order 420, name 'type-imp-somerville.mkxl'
+open source     > level 420, order 421, name 'type-imp-somerville.mkxl'
+open source     > level 421, order 422, name 'type-imp-somerville.mkxl'
+open source     > level 422, order 423, name 'type-imp-somerville.mkxl'
+open source     > level 423, order 424, name 'type-imp-somerville.mkxl'
+open source     > level 424, order 425, name 'type-imp-somerville.mkxl'
+open source     > level 425, order 426, name 'type-imp-somerville.mkxl'
+open source     > level 426, order 427, name 'type-imp-somerville.mkxl'
+open source     > level 427, order 428, name 'type-imp-somerville.mkxl'
+open source     > level 428, order 429, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' failed, details: all=80000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=10000000 | min=2000000 | ptr=10000001 | set=10000000 | stp=1000000 | top=10000000
+We ran into troubles absorbing something.
+
+-- Snapshot of sources/SomervilleMath.glyphspackage/fontinfo.plist.-- Internal design coordinates, in source axis order:-- name, wdth, wght, MGHT, opsz, STYA, STYB, ARLN, ARHD, INSL.-- Roman source instances have the same wdth/wght/opsz coordinates.local instances = {    { "Micro SemiCondensed SemiLight", 95, 360, 660, 5, 5, 5, 100, 100, 0 },    { "Micro SemiCondensed", 95, 400, 700, 5, 5, 5, 100, 100, 0 },    { "Micro SemiCondensed Medium", 95, 475, 775, 5, 5, 5, 100, 100, 0 },    { "Micro SemiCondensed SemiBold", 95, 550, 850, 5, 5, 5, 100, 100, 0 },    { "Micro SemiCondensed Bold", 95, 650, 900, 5, 5, 5, 100, 100, 0 },    { "Micro SemiCondensed ExtraBold", 95, 750, 900, 5, 5, 5, 100, 100, 0 },    { "Micro SemiCondensed Black", 95, 900, 900, 5, 5, 5, 100, 100, 0 },    { "Micro SemiLight", 100, 360, 660, 5, 5, 5, 100, 100, 0 },    { "Micro", 100, 400, 700, 5, 5, 5, 100, 100, 0 },    { "Micro Medium", 100, 475, 775, 5, 5, 5, 100, 100, 0 },    { "Micro SemiBold", 100, 550, 850, 5, 5, 5, 100, 100, 0 },    { "Micro Bold", 100, 650, 900, 5, 5, 5, 100, 100, 0 },    { "Micro ExtraBold", 100, 750, 900, 5, 5, 5, 100, 100, 0 },    { "Micro Black", 100, 900, 900, 5, 5, 5, 100, 100, 0 },    { "Micro SemiExpanded SemiLight", 113, 360, 660, 5, 5, 5, 100, 100, 0 },    { "Micro SemiExpanded", 113, 400, 700, 5, 5, 5, 100, 100, 0 },    { "Micro SemiExpanded Medium", 113, 475, 775, 5, 5, 5, 100, 100, 0 },    { "Micro SemiExpanded SemiBold", 113, 550, 850, 5, 5, 5, 100, 100, 0 },    { "Micro SemiExpanded Bold", 113, 650, 900, 5, 5, 5, 100, 100, 0 },    { "Micro SemiExpanded ExtraBold", 113, 750, 900, 5, 5, 5, 100, 100, 0 },    { "Micro SemiExpanded Black", 113, 900, 900, 5, 5, 5, 100, 100, 0 },    { "Minuscule SemiCondensed SemiLight", 95, 360, 660, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiCondensed", 95, 400, 700, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiCondensed Medium", 95, 475, 775, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiCondensed SemiBold", 95, 550, 850, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiCondensed Bold", 95, 650, 900, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiCondensed ExtraBold", 95, 750, 900, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiCondensed Black", 95, 900, 900, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiLight", 100, 360, 660, 200, 5, 5, 100, 100, 0 },    { "Minuscule", 100, 400, 700, 200, 5, 5, 100, 100, 0 },    { "Minuscule Medium", 100, 475, 775, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiBold", 100, 550, 850, 200, 5, 5, 100, 100, 0 },    { "Minuscule Bold", 100, 650, 900, 200, 5, 5, 100, 100, 0 },    { "Minuscule ExtraBold", 100, 750, 900, 200, 5, 5, 100, 100, 0 },    { "Minuscule Black", 100, 900, 900, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiExpanded SemiLight", 113, 360, 660, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiExpanded", 113, 400, 700, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiExpanded Medium", 113, 475, 775, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiExpanded SemiBold", 113, 550, 850, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiExpanded Bold", 113, 650, 900, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiExpanded ExtraBold", 113, 750, 900, 200, 5, 5, 100, 100, 0 },    { "Minuscule SemiExpanded Black", 113, 900, 900, 200, 5, 5, 100, 100, 0 },    { "Miniature SemiCondensed SemiLight", 95, 360, 660, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiCondensed", 95, 400, 700, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiCondensed Medium", 95, 475, 775, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiCondensed SemiBold", 95, 550, 850, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiCondensed Bold", 95, 650, 900, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiCondensed ExtraBold", 95, 750, 900, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiCondensed Black", 95, 900, 900, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiLight", 100, 360, 660, 325, 5, 5, 100, 100, 0 },    { "Miniature", 100, 400, 700, 325, 5, 5, 100, 100, 0 },    { "Miniature Medium", 100, 475, 775, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiBold", 100, 550, 850, 325, 5, 5, 100, 100, 0 },    { "Miniature Bold", 100, 650, 900, 325, 5, 5, 100, 100, 0 },    { "Miniature ExtraBold", 100, 750, 900, 325, 5, 5, 100, 100, 0 },    { "Miniature Black", 100, 900, 900, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiExpanded SemiLight", 113, 360, 660, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiExpanded", 113, 400, 700, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiExpanded Medium", 113, 475, 775, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiExpanded SemiBold", 113, 550, 850, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiExpanded Bold", 113, 650, 900, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiExpanded ExtraBold", 113, 750, 900, 325, 5, 5, 100, 100, 0 },    { "Miniature SemiExpanded Black", 113, 900, 900, 325, 5, 5, 100, 100, 0 },    { "Caption SemiCondensed SemiLight", 95, 360, 660, 400, 5, 5, 100, 100, 0 },    { "Caption SemiCondensed", 95, 400, 700, 400, 5, 5, 100, 100, 0 },    { "Caption SemiCondensed Medium", 95, 475, 775, 400, 5, 5, 100, 100, 0 },    { "Caption SemiCondensed SemiBold", 95, 550, 850, 400, 5, 5, 100, 100, 0 },    { "Caption SemiCondensed Bold", 95, 650, 900, 400, 5, 5, 100, 100, 0 },    { "Caption SemiCondensed ExtraBold", 95, 750, 900, 400, 5, 5, 100, 100, 0 },    { "Caption SemiCondensed Black", 95, 900, 900, 400, 5, 5, 100, 100, 0 },    { "Caption SemiLight", 100, 360, 660, 400, 5, 5, 100, 100, 0 },    { "Caption", 100, 400, 700, 400, 5, 5, 100, 100, 0 },    { "Caption Medium", 100, 475, 775, 400, 5, 5, 100, 100, 0 },    { "Caption SemiBold", 100, 550, 850, 400, 5, 5, 100, 100, 0 },    { "Caption Bold", 100, 650, 900, 400, 5, 5, 100, 100, 0 },    { "Caption ExtraBold", 100, 750, 900, 400, 5, 5, 100, 100, 0 },    { "Caption Black", 100, 900, 900, 400, 5, 5, 100, 100, 0 },    { "Caption SemiExpanded SemiLight", 113, 360, 660, 400, 5, 5, 100, 100, 0 },    { "Caption SemiExpanded", 113, 400, 700, 400, 5, 5, 100, 100, 0 },    { "Caption SemiExpanded Medium", 113, 475, 775, 400, 5, 5, 100, 100, 0 },    { "Caption SemiExpanded SemiBold", 113, 550, 850, 400, 5, 5, 100, 100, 0 },    { "Caption SemiExpanded Bold", 113, 650, 900, 400, 5, 5, 100, 100, 0 },    { "Caption SemiExpanded ExtraBold", 113, 750, 900, 400, 5, 5, 100, 100, 0 },    { "Caption SemiExpanded Black", 113, 900, 900, 400, 5, 5, 100, 100, 0 },    { "Regular SemiCondensed SemiLight", 95, 360, 660, 550, 5, 5, 100, 100, 0 },    { "Regular SemiCondensed", 95, 400, 700, 550, 5, 5, 100, 100, 0 },    { "Regular SemiCondensed Medium", 95, 475, 775, 550, 5, 5, 100, 100, 0 },    { "Regular SemiCondensed SemiBold", 95, 550, 850, 550, 5, 5, 100, 100, 0 },    { "Regular SemiCondensed Bold", 95, 650, 900, 550, 5, 5, 100, 100, 0 },    { "Regular SemiCondensed ExtraBold", 95, 750, 900, 550, 5, 5, 100, 100, 0 },    { "Regular SemiCondensed Black", 95, 900, 900, 550, 5, 5, 100, 100, 0 },    { "Regular SemiLight", 100, 360, 660, 550, 5, 5, 100, 100, 0 },    { "Regular", 100, 400, 700, 550, 5, 5, 100, 100, 0 },    { "Regular Medium", 100, 475, 775, 550, 5, 5, 100, 100, 0 },    { "Regular SemiBold", 100, 550, 850, 550, 5, 5, 100, 100, 0 },    { "Regular Bold", 100, 650, 900, 550, 5, 5, 100, 100, 0 },    { "Regular ExtraBold", 100, 750, 900, 550, 5, 5, 100, 100, 0 },    { "Regular Black", 100, 900, 900, 550, 5, 5, 100, 100, 0 },    { "Regular SemiExpanded SemiLight", 113, 360, 660, 550, 5, 5, 100, 100, 0 },    { "Regular SemiExpanded", 113, 400, 700, 550, 5, 5, 100, 100, 0 },    { "Regular SemiExpanded Medium", 113, 475, 775, 550, 5, 5, 100, 100, 0 },    { "Regular SemiExpanded SemiBold", 113, 550, 850, 550, 5, 5, 100, 100, 0 },    { "Regular SemiExpanded Bold", 113, 650, 900, 550, 5, 5, 100, 100, 0 },    { "Regular SemiExpanded ExtraBold", 113, 750, 900, 550, 5, 5, 100, 100, 0 },    { "Regular SemiExpanded Black", 113, 900, 900, 550, 5, 5, 100, 100, 0 },    { "SubHeading SemiCondensed SemiLight", 95, 360, 660, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiCondensed", 95, 400, 700, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiCondensed Medium", 95, 475, 775, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiCondensed SemiBold", 95, 550, 850, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiCondensed Bold", 95, 650, 900, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiCondensed ExtraBold", 95, 750, 900, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiCondensed Black", 95, 900, 900, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiLight", 100, 360, 660, 640, 5, 5, 100, 100, 0 },    { "SubHeading", 100, 400, 700, 640, 5, 5, 100, 100, 0 },    { "SubHeading Medium", 100, 475, 775, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiBold", 100, 550, 850, 640, 5, 5, 100, 100, 0 },    { "SubHeading Bold", 100, 650, 900, 640, 5, 5, 100, 100, 0 },    { "SubHeading ExtraBold", 100, 750, 900, 640, 5, 5, 100, 100, 0 },    { "SubHeading Black", 100, 900, 900, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiExpanded SemiLight", 113, 360, 660, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiExpanded", 113, 400, 700, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiExpanded Medium", 113, 475, 775, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiExpanded SemiBold", 113, 550, 850, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiExpanded Bold", 113, 650, 900, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiExpanded ExtraBold", 113, 750, 900, 640, 5, 5, 100, 100, 0 },    { "SubHeading SemiExpanded Black", 113, 900, 900, 640, 5, 5, 100, 100, 0 },    { "Trumpet SemiCondensed SemiLight", 95, 360, 660, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiCondensed", 95, 400, 700, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiCondensed Medium", 95, 475, 775, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiCondensed SemiBold", 95, 550, 850, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiCondensed Bold", 95, 650, 900, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiCondensed ExtraBold", 95, 750, 900, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiCondensed Black", 95, 900, 900, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiLight", 100, 360, 660, 700, 5, 5, 100, 100, 0 },    { "Trumpet", 100, 400, 700, 700, 5, 5, 100, 100, 0 },    { "Trumpet Medium", 100, 475, 775, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiBold", 100, 550, 850, 700, 5, 5, 100, 100, 0 },    { "Trumpet Bold", 100, 650, 900, 700, 5, 5, 100, 100, 0 },    { "Trumpet ExtraBold", 100, 750, 900, 700, 5, 5, 100, 100, 0 },    { "Trumpet Black", 100, 900, 900, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiExpanded SemiLight", 113, 360, 660, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiExpanded", 113, 400, 700, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiExpanded Medium", 113, 475, 775, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiExpanded SemiBold", 113, 550, 850, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiExpanded Bold", 113, 650, 900, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiExpanded ExtraBold", 113, 750, 900, 700, 5, 5, 100, 100, 0 },    { "Trumpet SemiExpanded Black", 113, 900, 900, 700, 5, 5, 100, 100, 0 },    { "Headline SemiCondensed SemiLight", 95, 360, 660, 800, 5, 5, 100, 100, 0 },    { "Headline SemiCondensed", 95, 400, 700, 800, 5, 5, 100, 100, 0 },    { "Headline SemiCondensed Medium", 95, 475, 775, 800, 5, 5, 100, 100, 0 },    { "Headline SemiCondensed SemiBold", 95, 550, 850, 800, 5, 5, 100, 100, 0 },    { "Headline SemiCondens
+tex error       > tex error on line 386 in file type-imp-somerville.mkxl: TeX capacity exceeded, sorry [token memory size=10000000]
+-- Snapshot of sources/SomervilleMath.glyphspackage/fontinfo.plist.
+-- Internal design coordinates, in source axis order:
+-- name, wdth, wght, MGHT, opsz, STYA, STYB, ARLN, ARHD, INSL.
+-- Roman source instances have the same wdth/wght/opsz coordinates.
+local instances = {
+    { "Micro SemiCondensed SemiLight", 95, 360, 660, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed", 95, 400, 700, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed Medium", 95, 475, 775, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed SemiBold", 95, 550, 850, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed Bold", 95, 650, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed ExtraBold", 95, 750, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiCondensed Black", 95, 900, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiLight", 100, 360, 660, 5, 5, 5, 100, 100, 0 },
+    { "Micro", 100, 400, 700, 5, 5, 5, 100, 100, 0 },
+    { "Micro Medium", 100, 475, 775, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiBold", 100, 550, 850, 5, 5, 5, 100, 100, 0 },
+    { "Micro Bold", 100, 650, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro ExtraBold", 100, 750, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro Black", 100, 900, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded SemiLight", 113, 360, 660, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded", 113, 400, 700, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded Medium", 113, 475, 775, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded SemiBold", 113, 550, 850, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded Bold", 113, 650, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded ExtraBold", 113, 750, 900, 5, 5, 5, 100, 100, 0 },
+    { "Micro SemiExpanded Black", 113, 900, 900, 5, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed SemiLight", 95, 360, 660, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed", 95, 400, 700, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed Medium", 95, 475, 775, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed SemiBold", 95, 550, 850, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed Bold", 95, 650, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed ExtraBold", 95, 750, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiCondensed Black", 95, 900, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiLight", 100, 360, 660, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule", 100, 400, 700, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule Medium", 100, 475, 775, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiBold", 100, 550, 850, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule Bold", 100, 650, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule ExtraBold", 100, 750, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule Black", 100, 900, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded SemiLight", 113, 360, 660, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded", 113, 400, 700, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded Medium", 113, 475, 775, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded SemiBold", 113, 550, 850, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded Bold", 113, 650, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded ExtraBold", 113, 750, 900, 200, 5, 5, 100, 100, 0 },
+    { "Minuscule SemiExpanded Black", 113, 900, 900, 200, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed SemiLight", 95, 360, 660, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed", 95, 400, 700, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed Medium", 95, 475, 775, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed SemiBold", 95, 550, 850, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed Bold", 95, 650, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed ExtraBold", 95, 750, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiCondensed Black", 95, 900, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiLight", 100, 360, 660, 325, 5, 5, 100, 100, 0 },
+    { "Miniature", 100, 400, 700, 325, 5, 5, 100, 100, 0 },
+    { "Miniature Medium", 100, 475, 775, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiBold", 100, 550, 850, 325, 5, 5, 100, 100, 0 },
+    { "Miniature Bold", 100, 650, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature ExtraBold", 100, 750, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature Black", 100, 900, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded SemiLight", 113, 360, 660, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded", 113, 400, 700, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded Medium", 113, 475, 775, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded SemiBold", 113, 550, 850, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded Bold", 113, 650, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded ExtraBold", 113, 750, 900, 325, 5, 5, 100, 100, 0 },
+    { "Miniature SemiExpanded Black", 113, 900, 900, 325, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed SemiLight", 95, 360, 660, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed", 95, 400, 700, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed Medium", 95, 475, 775, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed SemiBold", 95, 550, 850, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed Bold", 95, 650, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed ExtraBold", 95, 750, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiCondensed Black", 95, 900, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiLight", 100, 360, 660, 400, 5, 5, 100, 100, 0 },
+    { "Caption", 100, 400, 700, 400, 5, 5, 100, 100, 0 },
+    { "Caption Medium", 100, 475, 775, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiBold", 100, 550, 850, 400, 5, 5, 100, 100, 0 },
+    { "Caption Bold", 100, 650, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption ExtraBold", 100, 750, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption Black", 100, 900, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded SemiLight", 113, 360, 660, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded", 113, 400, 700, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded Medium", 113, 475, 775, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded SemiBold", 113, 550, 850, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded Bold", 113, 650, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded ExtraBold", 113, 750, 900, 400, 5, 5, 100, 100, 0 },
+    { "Caption SemiExpanded Black", 113, 900, 900, 400, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed SemiLight", 95, 360, 660, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed", 95, 400, 700, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed Medium", 95, 475, 775, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed SemiBold", 95, 550, 850, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed Bold", 95, 650, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed ExtraBold", 95, 750, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiCondensed Black", 95, 900, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiLight", 100, 360, 660, 550, 5, 5, 100, 100, 0 },
+    { "Regular", 100, 400, 700, 550, 5, 5, 100, 100, 0 },
+    { "Regular Medium", 100, 475, 775, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiBold", 100, 550, 850, 550, 5, 5, 100, 100, 0 },
+    { "Regular Bold", 100, 650, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular ExtraBold", 100, 750, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular Black", 100, 900, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded SemiLight", 113, 360, 660, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded", 113, 400, 700, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded Medium", 113, 475, 775, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded SemiBold", 113, 550, 850, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded Bold", 113, 650, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded ExtraBold", 113, 750, 900, 550, 5, 5, 100, 100, 0 },
+    { "Regular SemiExpanded Black", 113, 900, 900, 550, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed SemiLight", 95, 360, 660, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed", 95, 400, 700, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed Medium", 95, 475, 775, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed SemiBold", 95, 550, 850, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed Bold", 95, 650, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed ExtraBold", 95, 750, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiCondensed Black", 95, 900, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiLight", 100, 360, 660, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading", 100, 400, 700, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading Medium", 100, 475, 775, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiBold", 100, 550, 850, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading Bold", 100, 650, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading ExtraBold", 100, 750, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading Black", 100, 900, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded SemiLight", 113, 360, 660, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded", 113, 400, 700, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded Medium", 113, 475, 775, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded SemiBold", 113, 550, 850, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded Bold", 113, 650, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded ExtraBold", 113, 750, 900, 640, 5, 5, 100, 100, 0 },
+    { "SubHeading SemiExpanded Black", 113, 900, 900, 640, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed SemiLight", 95, 360, 660, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed", 95, 400, 700, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed Medium", 95, 475, 775, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed SemiBold", 95, 550, 850, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed Bold", 95, 650, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed ExtraBold", 95, 750, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiCondensed Black", 95, 900, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiLight", 100, 360, 660, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet", 100, 400, 700, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet Medium", 100, 475, 775, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiBold", 100, 550, 850, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet Bold", 100, 650, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet ExtraBold", 100, 750, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet Black", 100, 900, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded SemiLight", 113, 360, 660, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded", 113, 400, 700, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded Medium", 113, 475, 775, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded SemiBold", 113, 550, 850, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded Bold", 113, 650, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded ExtraBold", 113, 750, 900, 700, 5, 5, 100, 100, 0 },
+    { "Trumpet SemiExpanded Black", 113, 900, 900, 700, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed SemiLight", 95, 360, 660, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed", 95, 400, 700, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed Medium", 95, 475, 775, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed SemiBold", 95, 550, 850, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondens
+<argument> 
+    ...", 95, 400, 700, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed Medium", 95, 475, 775, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondensed SemiBold", 95, 550, 850, 800, 5, 5, 100, 100, 0 },
+    { "Headline SemiCondense
+    d Bold", 95,  ...
+<macro> \luat_start_lua_code_indeed 
+    #1\stopluacode ->\directlua {#1
+    \beginlocalcontrol \endgroup \endlocalcontrol }
+<line 1282.386> 
+    \stopluacode
+376             "wdth=%g,wght=%g,MGHT=%g,opsz=%g,STYA=%g,STYB=%g,ARLN=%g,ARHD=%g,INSL=%g",
+377             entry[2],wght,mapped(entry[4],weight),opsz,
+378             entry[6],entry[7],entry[8],entry[9],entry[10])
+379         local textaxes = string.format("wdth=%g,wght=%g,opsz=%g",
+380             mapped(entry[2],textwidth),wght,opsz)
+381         context.defineSomervilleAxisTypeface(name,mathaxes,textaxes)
+382         if entry[1] == "Regular" then
+383             context.defineSomervilleAxisTypeface("somerville",mathaxes,textaxes)
+384         end
+385     end
+386 >>  \stopluacode
+387     
+If you really absolutely need more capacity, you can ask a wizard to enlarge me.
+

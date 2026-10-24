@@ -1,0 +1,56 @@
+-- Use the regular upright alphabet from a heavier Somerville instance.
+-- This changes wght, not the separate MGHT/bold-math alphabet.
+local weightincrease = 300
+local serial = 0
+
+mathematics.tweaks.somervilleheavyregular = function(target, original)
+    local normal = target.specification.features.normal
+    local axes = type(normal.axis) == "table" and table.copy(normal.axis)
+        or utilities.parsers.settings_to_hash(normal.axis or "")
+    local weightkey, weight = "wght", 360
+    for key, value in pairs(axes) do
+        local normalized = key:lower():gsub("%s+", "")
+        if normalized == "weight" or normalized == "wght" then
+            weightkey, weight = key, assert(tonumber(value))
+        end
+    end
+    axes[weightkey] = math.min(weight + weightincrease, 900)
+    local assignments = { }
+    for key, value in pairs(axes) do
+        assignments[#assignments + 1] = key .. "=" .. tostring(value)
+    end
+    table.sort(assignments)
+    local features = table.copy(normal)
+    features.axis = table.concat(assignments, ",")
+    -- The donor must not run this replacement recursively.
+    features.goodies = nil
+    serial = serial + 1
+    local feature = "somerville-heavy-regular-" .. serial
+    fonts.specifiers.presetcontext(feature, "", features)
+    local filename = "file:SomervilleMathVF.ttf*" .. feature
+    for _, range in ipairs {
+        { 0x0041, 0x005A, "uppercasedoublestruck" },
+        { 0x0061, 0x007A, "lowercasedoublestruck" },
+        { 0x0030, 0x0039, "digitsdoublestruck" },
+    } do
+        mathematics.tweaks.replacealphabets(target, original, {
+            filename = filename,
+            list = { {
+                source = { first = range[1], last = range[2] },
+                target = range[3],
+                rscale = 1,
+            } },
+        })
+    end
+end
+
+return {
+    name = "somerville-heavy-regular",
+    version = "0.1",
+    comment = "Regular upright Somerville glyphs at a heavier Weight for mathbb.",
+    mathematics = {
+        tweaks = {
+            aftercopying = { { tweak = "somervilleheavyregular" } },
+        },
+    },
+}

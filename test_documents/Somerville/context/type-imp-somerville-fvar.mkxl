@@ -1,0 +1,140 @@
+% Custom-axis setup, available after loading this typescript file.
+% Todo: fix up textbold and textitalic
+%
+
+\startluacode
+userdata = userdata or {}
+
+-- Custom-axis text bold weight: min(Weight + 300, 900).
+-- All other axis assignments are preserved.
+function userdata.somervilleboldaxes(axes)
+    local settings = utilities.parsers.settings_to_hash(axes)
+    local result = {}
+
+    for key, value in pairs(settings) do
+        local normalized = key:lower():gsub("%s+", "")
+        if normalized == "weight" or normalized == "wght" then
+            value = math.min(
+                assert(tonumber(value), "Weight must be numeric") + 300,
+                900
+            )
+        end
+        result[#result + 1] = key .. "=" .. tostring(value)
+    end
+
+    table.sort(result)
+    return table.concat(result, ",")
+end
+\stopluacode
+
+
+\unexpanded\gdef\setupSomerville#1#2{%
+  \definefontfeature[#2-math-axes]
+    [axis={#1},goodies={somerville,somerville-frysorn}]%
+    
+  \definefontfeature[#2-text-axes][default]
+    [axis={#1}]%
+  \definefontfeature[#2-bold-axes][default]
+    [axis={\cldcontext{
+      userdata.somervilleboldaxes("\luaescapestring{#1}")
+    }}]%
+  \starttypescript[serif][#2-text]
+    \definefontsynonym[Serif]
+      [file:PlayfairRomanVF.ttf]
+      [features=#2-text-axes]
+    \definefontsynonym[SerifItalic]
+      [file:PlayfairItalicVF.ttf]
+      [features=#2-text-axes]
+    \definefontsynonym[SerifBold]
+      [file:PlayfairRomanVF.ttf]
+      [features=#2-bold-axes]
+    \definefontsynonym[SerifBoldItalic]
+      [file:PlayfairItalicVF.ttf]
+      [features=#2-bold-axes]
+    \definefontsynonym[SerifSlanted][SerifItalic]
+    \definefontsynonym[SerifBoldSlanted][SerifBoldItalic]
+  \stoptypescript
+  \starttypescript[math][#2]
+    \definefontsynonym[MathRoman]
+      [file:SomervilleMathVF.ttf]
+      [features={math\mathsizesuffix,mathextra,#2-math-axes}]
+  \stoptypescript
+  \definetypeface[#2][rm][serif][#2-text][default]%
+  \definetypeface[#2][tt][mono][modern][default]%
+  \definetypeface[#2][mm][math][#2][default]%
+}
+
+
+
+%
+% Typescript definitions for all the instances
+
+
+% #1: typeface; #2/#3/#4: native Roman/Italic/Math instance lookup names.
+\unexpanded\gdef\defineSomervilleTypeface#1#2#3#4{%
+  \starttypescript[serif][#1]
+    \definefontfeature[#1-text][default]
+    \definefontfeature[#1-italic][default]
+    \definefontsynonym[Serif]
+      [name:#2][features=#1-text]
+    \definefontsynonym[SerifItalic]
+      [name:#3][features=#1-italic]
+    % \definefontsynonym[SerifBold]
+    %   [file:PlayfairRomanVF.ttf][features=#1-bold]
+    % \definefontsynonym[SerifBoldItalic]
+    %   [file:PlayfairItalicVF.ttf][features=#1-bolditalic]
+    \definefontsynonym[SerifSlanted][SerifItalic]
+    % \definefontsynonym[SerifBoldSlanted][SerifBoldItalic]
+  \stoptypescript
+  \starttypescript[math][#1]
+    \definefontfeature[#1-math]
+      [goodies={somerville,somerville-frysorn}]
+    \definefontsynonym[MathRoman]
+      [name:#4]
+      [features={math\mathsizesuffix,mathextra,#1-math}]
+  \stoptypescript
+  \starttypescript[#1]
+    \definetypeface[#1][rm][serif][#1][default]
+    \definetypeface[#1][mm][math][#1][default]
+    \definetypeface[#1][ss][sans][modern][default]
+    \definetypeface[#1][tt][mono][modern][default]
+  \stoptypescript
+}
+
+\startluacode
+local function clean(name)
+    return string.lower(name):gsub("[^%w]", "")
+end
+local function instances(filename)
+    local path = resolvers.findfile(filename)
+    assert(path and path ~= "", "Cannot find " .. filename)
+    local data = fonts.handlers.otf.load(path)
+    local variable = assert(data.resources.variabledata, "No variation data in " .. filename)
+    local ordered, indexed = {}, {}
+    for _, entry in ipairs(variable.instances) do
+        local item = {
+            name = entry.subfamily,
+            lookup = clean(data.metadata.fullname) .. clean(entry.subfamily),
+        }
+        ordered[#ordered + 1] = item
+        indexed[clean(item.name)] = item
+    end
+    return ordered, indexed
+end
+local mathinstances = instances("SomervilleMathVF.ttf")
+local _, roman = instances("PlayfairRomanVF.ttf")
+local _, italic = instances("PlayfairItalicVF.ttf")
+context.starttypescriptcollection { "somerville" }
+for _, entry in ipairs(mathinstances) do
+    local key = clean(entry.name)
+    local r = assert(roman[key], "Missing Playfair Roman instance: " .. entry.name)
+    local ikey = key == "regular" and "italic" or key:gsub("^regular", "") .. "italic"
+    local i = assert(italic[ikey] or italic[key:gsub("^regular", "italic") .. "italic"] or italic[key .. "italic"], "Missing Playfair Italic instance: " .. entry.name)
+    local name = "somerville-" .. string.lower(entry.name):gsub("%s+", "-")
+    context.defineSomervilleTypeface(name, r.lookup, i.lookup, entry.lookup)
+    if key == "regular" then
+        context.defineSomervilleTypeface("somerville", r.lookup, i.lookup, entry.lookup)
+    end
+end
+context.stoptypescriptcollection()
+\stopluacode

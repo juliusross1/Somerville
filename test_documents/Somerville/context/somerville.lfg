@@ -31,8 +31,11 @@ return {
                 presets.moveintegrals        { },
                 --presets.wipeitalics          { },
                 {
-                    -- needed for stupid corner kerns
                     tweak = "simplifykerns",
+                },
+                {
+                tweak = "setoptions",
+                set = { "separateprescriptkerns" }, -- this uses a private patch to test prescripts
                 },
                 --{
                 --    tweak = "checkaccents",

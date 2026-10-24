@@ -1,0 +1,127 @@
+% !TEX root = somerville-avar2-superscripts.tex
+% !TEX program = context
+% Compare explicit axis settings, independently of fvar named instances.
+% Without avar v2: STYA/STYB equal the target internal opsz coordinate.
+% With avar v2: STYA/STYB inputs remain 5; avar v2 drives their outputs.
+
+\setuppapersize[A4][A4]
+\setuplayout[backspace=15mm,topspace=15mm,width=middle,height=middle,
+  header=0pt,footer=8mm]
+\setupbodyfont[modern,12pt]
+\setupinteraction[state=start,title={Somerville avar 2 italic H script comparison}]
+
+\unexpanded\def\AvarFace#1#2#3{%
+  \definefontfeature[#1-axes][axis={#3},goodies={somerville}]%
+  \starttypescript[math][#1]
+    \definefontsynonym[MathRoman][file:#2]
+      [features={math\mathsizesuffix,mathextra,#1-axes}]
+  \stoptypescript
+  \definetypeface[#1][rm][serif][modern][default]%
+  \definetypeface[#1][mm][math][#1][default]%
+}
+
+% Align each formula separately at its left edge and math baseline, before
+% scaling. Different script widths cannot shift the next comparison pair.
+\definecolor[avar-without][r=1,a=1,t=.5]
+\definecolor[avar-with][s=0,a=1,t=.5]
+
+\unexpanded\def\AvarOverlayFormula#1#2#3{%
+  \hbox to 27mm{%
+    \scale[sx=1.5,sy=1.5]{\hbox{%
+      \rlap{\begingroup\switchtobodyfont[#1,12pt]%
+        \color[avar-without]{\m{#3}}\endgroup}%
+      \begingroup\switchtobodyfont[#2,12pt]%
+        \color[avar-with]{\m{#3}}\endgroup}}%
+    \hss}%
+}
+
+\unexpanded\def\AvarOverlay#1#2{%
+  \vbox{%
+    \hbox{\AvarOverlayFormula{#1}{#2}{H^H}%
+           \AvarOverlayFormula{#1}{#2}{H_H}%
+           \AvarOverlayFormula{#1}{#2}{H^H_H}}%
+    \kern5mm
+    \hbox{\AvarOverlayFormula{#1}{#2}{H^{H^H}}%
+           \AvarOverlayFormula{#1}{#2}{H_{H_H}}%
+           \AvarOverlayFormula{#1}{#2}{H^{H_H}_{H^H}}}}%
+}
+
+\unexpanded\def\AvarRow#1#2#3{%
+  \bTR
+    \bTD #1\eTD
+    \bTD \AvarOverlay{#2}{#3}\eTD
+  \eTR
+}
+
+\startluacode
+userdata = userdata or {}
+local folder = os.getenv("HOME") .. "/Documents/fontoutputs/"
+local files = {
+    on = folder .. "SomervilleMathVF.ttf",
+    off = folder .. "SomervilleMathVF-withoutavar2.ttf",
+}
+for _, path in pairs(files) do
+    assert(lfs.isfile(path), "Missing comparison font: " .. path)
+end
+userdata.avaropticals = {
+    {"Micro", 5, 5, 5, 5},
+    {"Caption", 8, 400, 278, 165},
+    {"Regular", 12, 550, 375, 246},
+    {"Subheading", 21, 700, 585, 451},
+    {"Display", 48, 900, 818, 711},
+    {"Needlepoint", 1200, 1200, 1150, 1100},
+}
+userdata.avarweights = {
+    {"Semilight", 360}, {"Regular", 400}, {"Bold", 700},
+}
+for i, optical in ipairs(userdata.avaropticals) do
+    for j, weight in ipairs(userdata.avarweights) do
+        for _, variant in ipairs({"off", "on"}) do
+            local name = string.format("avar-%s-%d-%d",variant,i,j)
+            local scriptoptical = variant == "off" and optical[3] or 5
+            local axes = string.format(
+                "wdth=100,wght=%g,MGHT=%g,opsz=%g,STYA=%g,STYB=%g,ARLN=100,ARHD=100,INSL=0",
+                weight[2], math.min(weight[2]+300,900), optical[2],
+                scriptoptical, scriptoptical)
+            context.AvarFace(name,files[variant],axes)
+        end
+    end
+end
+\stopluacode
+
+\starttext
+\startluacode
+for i, optical in ipairs(userdata.avaropticals) do
+    context.bf()
+    context("Somerville italic H scripts: " .. optical[1])
+    context.tf()
+    context.blank()
+    context(string.format("User opsz: %g. Target internal opsz: %g.", optical[2],optical[3]))
+    context.par()
+    context(string.format("With avar 2: target STYA=%g, STYB=%g. Without: STYA=STYB=%g (target internal opsz).",optical[4],optical[5],optical[3]))
+    context.par()
+    context("With avar 2, STYA/STYB inputs remain 5. Set at 12pt, enlarged 1.5 times.")
+    context.par()
+    context("All bases and scripts use italic H. First row: superscript, subscript, both. Second row: nested scripts testing the second script level.")
+    context.par()
+    context("Internal targets are approximate because of avar rounding.")
+    context.par()
+    context("Overlay: red = without avar 2; black = with avar 2, both at 50 percent opacity. Each formula shares the same origin and baseline.")
+    context.blank({"big"})
+    context.bTABLE({frame="off",offset="3mm"})
+    context.bTR()
+    for _, title in ipairs({"Weight (user wght)","Without / with avar 2 overlay"}) do
+        context.bTD() context(title) context.eTD()
+    end
+    context.eTR()
+    for j, weight in ipairs(userdata.avarweights) do
+        context.AvarRow(string.format("%s (%g)",weight[1],weight[2]),
+            string.format("avar-off-%d-%d",i,j),string.format("avar-on-%d-%d",i,j))
+    end
+    context.eTABLE()
+    context.blank({"big"})
+    context("Fonts: SomervilleMathVF-withoutavar2.ttf and SomervilleMathVF.ttf.")
+    if i < #userdata.avaropticals then context.page() end
+end
+\stopluacode
+\stoptext

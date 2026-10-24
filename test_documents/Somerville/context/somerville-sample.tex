@@ -1,6 +1,7 @@
+% !TEX program = context
 % !TEX root = somerville-sample.tex
 
-\input somerville-font-setup.tex
+\input type-imp-somerville.mkxl
 
 \setupbodyfontenvironment[default][em=italic]
 
@@ -44,7 +45,7 @@ Comparisons
 
 For \m{a = b = l} \m{f'u'=g'=h'=u'=y'} \m{a,b,c\in\mathbb{R}}, the identity \m{a^2+b^2=c^2} sits
 alongside fractions \m{\frac{1}{2}} and radicals \m{\sqrt{2}}.
-Nested scripts: \m{|x| = x_i^2+x_{i_j}^{n+1}+e^{x^2}}.
+Nested scripts: \m{|z|=|y|=|f| = f_i^2+x_{i_j}^{n+1}+e^{x^2}}.
 
 \subject{Fractions and radicals: \m{\sqrt{1+x^2}}}
 \startformula
@@ -119,11 +120,11 @@ The identical limit letters make horizontal shifts easier to compare.
 \IntegralCorrectionTest{48pt}
 
 \page
-
-
+\setupbodyfont[somerville-regular-black]
 \subject{Miscellanea \emph{mathematica}: \m{e^{ip}+1=0}}
 
-Lorem ipsum dolor sit amet, \m{x\in\mathbb{R}} consectetur adipiscing elit.
+
+Lorem ipsum dolor sit amet, \m{x\in{R}} consectetur adipiscing elit.
 Sed vestibulum \m{[0,1]}, ut \m{e>0} fermentum \emph{aculis ornare}.
 Curabitur consequat \m{a_n=1/(n+1)} neque vitae sollicitudin;
 pellentesque habitant \m{b_n=(-1)^n a_n} morbi tristique senectus et netus.
@@ -148,12 +149,12 @@ quisque consequat \m{\frac{p}{q}} vitae facilisis
 \m{\sqrt{1+\sqrt{1+x^2}}}. Sed posuere, nunc et semper, consequat
 urna consectetur, aliquam erat volutpat, etiam porta tellus.
 \startformula
-  f(a+h)=f(a)+hf'(a)+\frac{h^2}{2!}f''(a)
+  u'(a) = f(a+h)=f(a)+hf'(a)+\frac{h^2}{2!}f''(a)
   +\frac{1}{2}\int{(h-t)^2f'''(a+t)\,\mathrm{d}t}_{0}^{h}.
 \stopformula
 
 Integer pretium \m{(m,n)\in\mathbb{Z}^2} vestibulum magna, dictum
-viverra \m{w_{m,n}=e^{-(m^2+n^2)}} semper aliquam.
+viverra {\m{w_{m,n}=e^{-(m^2+n^2)}} }semper aliquam.
 Praesent commodo nunc vel nulla malesuada, et consectetur
 purus elementum. Hic \m{|z|<1}, illic
 \m{\mathop{\mathrm{Re}}(s)>1}, atque interdum sollicitudin
