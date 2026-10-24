@@ -1,0 +1,749 @@
+/*
+    See license.txt in the root of this project.
+*/
+
+/*tex
+
+    Here we implement sparse arrays with an embedded save stack. These functions are called very
+    often but a few days of experimenting proved that there is not much to gain (if at all) from
+    using macros or optimizations like pre-allocating and fast access to the first 128 entries. In
+    practice the overhead is mostly in accessing memory and not in (probably inlined) calls. So, we
+    should accept fate and wait for faster memory. It's the price we pay for being unicode on the
+    one hand and sparse on the other.
+
+*/
+
+/*  
+    
+    We could do this (actually done via macros now):
+
+        v // 4  v % 4  =>  v >> 2  v & 3
+
+    but let's just assume that the compiler optimizes it. 
+
+    We could also pack the catcodes in single bytes but then we need to work with 
+    
+        nn = odd(n) ? n + 1 : n; 
+
+    and things like:
+
+        >> 1 
+        & 0xF
+
+    and for the setter that is more work because we need to overwrite the existing byte that now has
+    two values and we also have the stack to deal with. We would save some memory but not that much. 
+
+*/
+
+/* 
+ 
+    We don't need to test if a tree is defined because we assume that this happens in the callers 
+    which saves some overhead here. (See older code for commented tests.)
+
+ */
+
+# include "luametatex.h"
+
+sparse_state_info lmt_sparse_state = {
+    .sparse_data = {
+        .minimum   = memory_data_unset,
+        .maximum   = memory_data_unset,
+        .size      = memory_data_unset,
+        .step      = memory_data_unset,
+        .allocated = 0,
+        .itemsize  = 1,
+        .top       = memory_data_unset,
+        .ptr       = memory_data_unset,
+        .initial   = memory_data_unset,
+        .offset    = 0,
+        .extra     = 0, 
+    }
+};
+
+void *sa_fatal_error(void)
+{
+    tex_normal_error("sa tree","unable to allocate memory");
+    return NULL;
+}
+
+void *sa_malloc_array(int recordsize, int size)
+{
+    int allocated = recordsize * size;
+    lmt_sparse_state.sparse_data.allocated += allocated;
+    void *result = lmt_memory_malloc((size_t) allocated);
+    return result ? result : sa_fatal_error();
+}
+
+void *sa_realloc_array(void *p, int recordsize, int size, int step)
+{
+    int deallocated = recordsize * size;
+    int allocated = recordsize * (size + step);
+    lmt_sparse_state.sparse_data.allocated += (allocated - deallocated);
+    void *result = lmt_memory_realloc(p, (size_t) allocated);
+    return result ? result : sa_fatal_error();
+}
+
+void *sa_calloc_array(int recordsize, int size)
+{
+    int allocated = recordsize * size;
+    lmt_sparse_state.sparse_data.allocated += allocated;
+    void *result = lmt_memory_calloc((size_t) size, recordsize);
+    return result ? result : sa_fatal_error();
+}
+
+void sa_wipe_array(void *head, int recordsize, int size)
+{
+    memset(head, 0, (size_t) recordsize * (size_t) size);
+}
+
+void *sa_free_array(void *p)
+{
+    lmt_memory_free(p);
+    return NULL;
+}
+
+/*tex
+
+    Once we have two variants allocated we can dump and undump a |LOWPART| array in one go. But
+    not yet. Currently the waste of one extra dummy int is cheaper than multiple functions. We 
+    anyway only save when needed (which saves 4 million stores on the mathincontext manual which 
+    is actually not noticeable in performance at all). 
+
+*/
+
+static void sa_aux_store_stack(const sa_tree head, int n, const sa_tree_item v1, const sa_tree_item v2, int gl)
+{
+    sa_stack_item st = {
+        .code    = n,
+        .value_1 = v1,
+        .value_2 = v2,
+        .level   = gl
+    };
+    if (! head->stack) {
+        head->stack = sa_malloc_array(sizeof(sa_stack_item), head->sa_stack_size);
+    }
+    if (((head->sa_stack_ptr) + 1) >= head->sa_stack_size) {
+        head->stack = sa_realloc_array(head->stack, sizeof(sa_stack_item), head->sa_stack_size, head->sa_stack_step);
+        head->sa_stack_size += head->sa_stack_step;
+     // printf("bumping %i stack to %i\n",head->identifier,head->sa_stack_size);
+    }
+    (head->sa_stack_ptr)++;
+ // printf("store %i @ %i: code %i, v1 %i, v2 %i, level %i\n",head->identifier,head->sa_stack_ptr,st.code,st.value_1.int_value,st.value_2.int_value,st.level);
+    head->stack[head->sa_stack_ptr] = st;
+}
+
+static void sa_aux_skip_in_stack(const sa_tree head, int n)
+{
+    if (head->stack) {
+        int p = head->sa_stack_ptr;
+        while (p > 0) {
+            if (head->stack[p].code == n && head->stack[p].level > 0) {
+                head->stack[p].level = -(head->stack[p].level);
+            }
+         // printf("skip %i: code %i, v1 %i, v2 %i, level %i\n",head->identifier,head->stack[p].code,head->stack[p].value_1.int_value,head->stack[p].value_2.int_value,head->stack[p].level);
+            p--;
+        }
+    }
+}
+
+// int sa_get_item_0(const sa_tree head, int n)
+// {
+//     int h = LMT_SA_H_PART(n);
+//     if (head->tree[h]) {
+//         int m = LMT_SA_M_PART(n);
+//         if (head->tree[h][m]) {
+//             return get_nibble(head->tree[h][m][sa_index_8(LMT_SA_L_PART(n))].uint_value, n);
+//         }
+//     }
+//     return (int) get_nibble(head->dflt.uint_value, 0);
+// }
+
+// int sa_get_item_1(const sa_tree head, int n)
+// {
+//     int h = LMT_SA_H_PART(n);
+//     if (head->tree[h]) {
+//         int m = LMT_SA_M_PART(n);
+//         if (head->tree[h][m]) {
+//             return head->tree[h][m][sa_index_4(LMT_SA_L_PART(n))].uchar_value[sa_value_4(n)];
+//         }
+//     }
+//     return (int) head->dflt.uchar_value[0];
+// }
+
+// int sa_get_item_2(const sa_tree head, int n)
+// {
+//     int h = LMT_SA_H_PART(n);
+//     if (head->tree[h]) {
+//         int m = LMT_SA_M_PART(n);
+//         if (head->tree[h][m]) {
+//             return head->tree[h][m][sa_index_2(LMT_SA_L_PART(n))].ushort_value[sa_value_2(n)];
+//         }
+//     }
+//     return (int) head->dflt.ushort_value[0];
+// }
+
+int sa_get_item_4(const sa_tree head, int n, sa_tree_item *v)
+{
+    int h = LMT_SA_H_PART(n);
+    if (head->tree[h]) {
+        int m = LMT_SA_M_PART(n);
+        if (head->tree[h][m]) {
+            *v = head->tree[h][m][LMT_SA_L_PART(n)];
+            return 1;
+        }
+    }
+    *v = head->dflt;
+    return 0;
+}
+
+int sa_get_item_8(const sa_tree head, int n, sa_tree_item *v1, sa_tree_item *v2)
+{
+    int h = LMT_SA_H_PART(n);
+    if (head->tree[h]) {
+        int m = LMT_SA_M_PART(n);
+        if (head->tree[h][m]) {
+            int l = sa_index_0(LMT_SA_L_PART(n));
+            *v1 = head->tree[h][m][l];
+            *v2 = head->tree[h][m][l+1];
+            return 1;
+        }
+    }
+    *v1 = head->dflt;
+    *v2 = head->dflt;
+    return 0;
+}
+
+void sa_set_item_0(const sa_tree head, int n, int v, int gl)
+{
+    int h = LMT_SA_H_PART(n);
+    int m = LMT_SA_M_PART(n);
+    int l = LMT_SA_L_PART(n);
+    if (! head->tree[h]) {
+        head->tree[h] = (sa_tree_item **) sa_calloc_array(sizeof(sa_tree_item *), LMT_SA_MIDPART);
+    }
+    if (! head->tree[h][m]) {
+        head->tree[h][m] = (sa_tree_item *) sa_malloc_array(sizeof(sa_tree_item), sa_index_8(LMT_SA_LOWPART));
+        for (int i = 0; i < sa_index_8(LMT_SA_LOWPART); i++) {
+            head->tree[h][m][i] = head->dflt;
+        }
+    }
+    if (gl <= 1) {
+        sa_aux_skip_in_stack(head, n);
+    } else if (get_nibble(head->tree[h][m][sa_index_8(l)].uint_value, n) != (unsigned int) v) {
+        sa_aux_store_stack(head, n, head->tree[h][m][sa_index_8(l)], (sa_tree_item) { .uint_value = 0 }, gl);
+    } else { 
+        /*tex There is no change so we don't need to save the old value. */
+    }
+    head->tree[h][m][sa_index_8(l)].uint_value = set_nibble(head->tree[h][m][sa_index_8(l)].uint_value, n, v);
+}
+
+void sa_set_item_1(const sa_tree head, int n, int v, int gl)
+{
+    int h = LMT_SA_H_PART(n);
+    int m = LMT_SA_M_PART(n);
+    int l = LMT_SA_L_PART(n);
+    if (! head->tree[h]) {
+        head->tree[h] = (sa_tree_item **) sa_calloc_array(sizeof(sa_tree_item *), LMT_SA_MIDPART);
+    }
+    if (! head->tree[h][m]) {
+        head->tree[h][m] = (sa_tree_item *) sa_malloc_array(sizeof(sa_tree_item), sa_index_4(LMT_SA_LOWPART));
+        for (int i = 0; i < sa_index_4(LMT_SA_LOWPART); i++) {
+            head->tree[h][m][i] = head->dflt;
+        }
+    }
+    if (gl <= 1) {
+        sa_aux_skip_in_stack(head, n);
+    } else if (head->tree[h][m][sa_index_4(l)].uchar_value[sa_value_4(n)] != v) {
+        sa_aux_store_stack(head, n, head->tree[h][m][sa_index_4(l)], (sa_tree_item) { .uint_value = 0 }, gl);
+    } else { 
+        /*tex There is no change so we don't need to save the old value. */
+    }
+    head->tree[h][m][sa_index_4(l)].uchar_value[sa_value_4(n)] = (unsigned char) v;
+}
+
+void sa_set_item_2(const sa_tree head, int n, int v, int gl)
+{
+    int h = LMT_SA_H_PART(n);
+    int m = LMT_SA_M_PART(n);
+    int l = LMT_SA_L_PART(n);
+    if (! head->tree[h]) {
+        head->tree[h] = (sa_tree_item **) sa_calloc_array(sizeof(sa_tree_item *), LMT_SA_MIDPART);
+    }
+    if (! head->tree[h][m]) {
+        head->tree[h][m] = (sa_tree_item *) sa_malloc_array(sizeof(sa_tree_item), sa_index_2(LMT_SA_LOWPART));
+        for (int i = 0; i < sa_index_2(LMT_SA_LOWPART); i++) {
+            head->tree[h][m][i] = head->dflt;
+        }
+    }
+    if (gl <= 1) {
+        sa_aux_skip_in_stack(head, n);
+    } else if (head->tree[h][m][sa_index_2(l)].ushort_value[sa_value_2(n)] != v) {
+        sa_aux_store_stack(head, n, head->tree[h][m][sa_index_2(l)], (sa_tree_item) { .uint_value = 0 }, gl);
+    } else { 
+        /*tex There is no change so we don't need to save the old value. */
+    }
+    head->tree[h][m][sa_index_2(l)].ushort_value[sa_value_2(n)] = (unsigned short) v;
+}
+
+void sa_set_item_4(const sa_tree head, int n, const sa_tree_item v, int gl)
+{
+    int h = LMT_SA_H_PART(n);
+    int m = LMT_SA_M_PART(n);
+    int l = LMT_SA_L_PART(n);
+    if (! head->tree[h]) {
+        head->tree[h] = (sa_tree_item **) sa_calloc_array(sizeof(sa_tree_item *), LMT_SA_MIDPART);
+    }
+    if (! head->tree[h][m]) {
+        head->tree[h][m] = (sa_tree_item *) sa_malloc_array(sizeof(sa_tree_item), LMT_SA_LOWPART);
+        for (int i = 0; i < LMT_SA_LOWPART; i++) {
+            head->tree[h][m][i] = head->dflt;
+        }
+    }
+    if (gl <= 1) {
+        sa_aux_skip_in_stack(head, n);
+    } else if (head->tree[h][m][l].uint_value != v.uint_value) {
+        sa_aux_store_stack(head, n, head->tree[h][m][l], (sa_tree_item) { .uint_value = 0 }, gl);
+    } else { 
+        /*tex There is no change so we don't need to save the old value. */
+    }
+    head->tree[h][m][l] = v;
+}
+
+void sa_set_item_8(const sa_tree head, int n, const sa_tree_item v1, const sa_tree_item v2, int gl)
+{
+    int h = LMT_SA_H_PART(n);
+    int m = LMT_SA_M_PART(n);
+    int l = sa_index_0(LMT_SA_L_PART(n));
+    if (! head->tree[h]) {
+        head->tree[h] = (sa_tree_item **) sa_calloc_array(sizeof(sa_tree_item *), LMT_SA_MIDPART);
+    }
+    if (! head->tree[h][m]) {
+        head->tree[h][m] = (sa_tree_item *) sa_malloc_array(sizeof(sa_tree_item), 2 * LMT_SA_LOWPART);
+        for (int i = 0; i < 2 * LMT_SA_LOWPART; i++) {
+            head->tree[h][m][i] = head->dflt;
+        }
+    }
+    if (gl <= 1) {
+        sa_aux_skip_in_stack(head, n);
+    } else if (head->tree[h][m][l].uint_value != v1.uint_value || head->tree[h][m][l+1].uint_value != v2.uint_value) {
+        sa_aux_store_stack(head, n, head->tree[h][m][l], head->tree[h][m][l+1], gl);
+    } else { 
+        /*tex There is no change so we don't need to save the old value. */
+    }
+    head->tree[h][m][l] = v1;
+    head->tree[h][m][l+1] = v2;
+}
+
+void sa_set_item_n(const sa_tree head, int n, int v, int gl)
+{
+    int h = LMT_SA_H_PART(n);
+    int m = LMT_SA_M_PART(n);
+    int l = LMT_SA_L_PART(n);
+    int d = head->bytes == 0 ? 8 : (head->bytes == 1 ? 4 : (head->bytes == 2 ? 2 : 1));
+    if (! head->tree[h]) {
+        head->tree[h] = (sa_tree_item **) sa_calloc_array(sizeof(sa_tree_item *), LMT_SA_MIDPART);
+    }
+    if (! head->tree[h][m]) {
+        head->tree[h][m] = (sa_tree_item *) sa_malloc_array(sizeof(sa_tree_item), LMT_SA_LOWPART/d);
+        for (int i = 0; i < LMT_SA_LOWPART/d; i++) {
+            head->tree[h][m][i] = head->dflt;
+        }
+    }
+    if (gl <= 1) {
+        sa_aux_skip_in_stack(head, n);
+ // } else {
+        /* no test on change here */
+    } else if (head->tree[h][m][l/d].int_value != v) {
+        sa_aux_store_stack(head, n, head->tree[h][m][l/d], (sa_tree_item) { .uint_value = 0 }, gl);
+    }
+    switch (head->bytes) {
+        case 0:
+            head->tree[h][m][sa_index_8(l)].uint_value = set_nibble(head->tree[h][m][sa_index_8(l)].uint_value, n, v);
+            break;
+        case 1:
+            head->tree[h][m][sa_index_4(l)].uchar_value[sa_value_4(n)] = (unsigned char) (v < 0 ? 0 : (v > 0xFF ? 0xFF : v));
+            break;
+        case 2:
+            head->tree[h][m][sa_index_2(l)].ushort_value[sa_value_2(n)] = (unsigned short) (v < 0 ? 0 : (v > 0xFFFF ? 0xFFFF : v));
+            break;
+        case 4:
+            head->tree[h][m][sa_index_1(l)].int_value = v;
+            break;
+    }
+}
+
+int sa_get_item_n(const sa_tree head, int n)
+{
+    int h = LMT_SA_H_PART(n);
+    if (head->tree[h]) {
+        int m = LMT_SA_M_PART(n);
+        if (head->tree[h][m]) {
+            switch (head->bytes) {
+                case 0 : return (int) get_nibble(head->tree[h][m][sa_index_8(LMT_SA_L_PART(n))].uint_value, n);
+                case 1 : return (int)            head->tree[h][m][sa_index_4(LMT_SA_L_PART(n))].uchar_value[sa_value_4(n)];
+                case 2 : return (int)            head->tree[h][m][sa_index_2(LMT_SA_L_PART(n))].ushort_value[sa_value_2(n)];
+                case 4 : return (int)            head->tree[h][m][sa_index_1(LMT_SA_L_PART(n))].int_value;
+            }
+        }
+    }
+    switch (head->bytes) {
+        case 0 : return (int) get_nibble(head->dflt.uint_value, 0);
+        case 1 : return (int)            head->dflt.uchar_value[0];
+        case 2 : return (int)            head->dflt.ushort_value[0];
+        case 4 : return (int)            head->dflt.int_value;
+        default: return 0;
+    }
+}
+
+void sa_clear_stack(const sa_tree a)
+{
+    if (a) {
+        a->stack = sa_free_array(a->stack);
+        a->sa_stack_ptr = 0;
+        a->sa_stack_size = a->sa_stack_step;
+    }
+}
+
+void sa_destroy_tree(sa_tree a)
+{
+    if (a) {
+        for (int h = 0; h < LMT_SA_HIGHPART; h++) {
+            if (a->tree[h]) {
+                for (int m = 0; m < LMT_SA_MIDPART; m++) {
+                    a->tree[h][m] = sa_free_array(a->tree[h][m]);
+                }
+                a->tree[h] = sa_free_array(a->tree[h]);
+            }
+        }
+        a->stack = sa_free_array(a->stack);
+        sa_free_array(a);
+    }
+}
+
+sa_tree sa_copy_tree(const sa_tree b)
+{
+    sa_tree a = (sa_tree) sa_malloc_array(sizeof(sa_tree_head), 1);
+    a->sa_stack_step = b->sa_stack_step;
+    a->sa_stack_size = b->sa_stack_size;
+    a->bytes = b->bytes;
+    a->identifier = b->identifier;
+    a->dflt = b->dflt;
+    a->stack = NULL;
+    a->sa_stack_ptr = 0;
+    sa_wipe_array(a->tree, sizeof(sa_tree_item *), LMT_SA_HIGHPART);
+    for (int h = 0; h < LMT_SA_HIGHPART; h++) {
+        if (b->tree[h]) {
+            int slide = LMT_SA_LOWPART;
+            switch (b->bytes) {
+                case 0: slide = sa_index_8(LMT_SA_LOWPART); break;
+                case 1: slide = sa_index_4(LMT_SA_LOWPART); break;
+                case 2: slide = sa_index_2(LMT_SA_LOWPART); break;
+                case 4: slide = sa_index_1(LMT_SA_LOWPART); break;
+                case 8: slide = sa_index_0(LMT_SA_LOWPART); break;
+            }
+            a->tree[h] = (sa_tree_item **) sa_calloc_array(sizeof(void *), LMT_SA_MIDPART);
+            for (int m = 0; m < LMT_SA_MIDPART; m++) {
+                if (b->tree[h][m]) {
+                    a->tree[h][m] = sa_malloc_array(sizeof(sa_tree_item), slide);
+                    memcpy(a->tree[h][m], b->tree[h][m], sizeof(sa_tree_item) * slide);
+                }
+            }
+        }
+    }
+    return a;
+}
+
+/*tex
+
+    The main reason to fill in the lowest entry branches here immediately is that most of the sparse
+    arrays have a bias toward \ASCII\ values. Allocating those here immediately improves the chance
+    of the structure |a->tree[0][0][x]| being close together in actual memory locations. We could
+    save less for type 0 stacks.
+
+*/
+
+sa_tree sa_new_tree(int identifier, int stacksize, int stackstep, int bytes, const sa_tree_item dflt)
+{
+    sa_tree_head *a = (sa_tree_head *) lmt_memory_malloc(sizeof(sa_tree_head));
+    a->dflt = dflt;
+    a->stack = NULL;
+    sa_wipe_array(a->tree, sizeof(sa_tree_item *), LMT_SA_HIGHPART);
+    a->tree[0] = (sa_tree_item **) sa_calloc_array(sizeof(sa_tree_item *), LMT_SA_MIDPART);
+    a->sa_stack_size = stacksize;
+    a->sa_stack_step = stackstep;
+    a->bytes = bytes;
+    a->identifier = identifier;
+    a->sa_stack_ptr = 0;
+    return (sa_tree) a;
+}
+
+void sa_restore_stack(const sa_tree head, int gl)
+{
+    if (head->stack) {
+        while (head->sa_stack_ptr > 0 && abs(head->stack[head->sa_stack_ptr].level) >= gl) {
+            sa_stack_item st = head->stack[head->sa_stack_ptr];
+            if (st.level > 0) {
+                int code = st.code;
+                switch (head->bytes) {
+                    case 0:
+                        {
+                            int i = sa_index_8(LMT_SA_L_PART(code));
+                            head->tree[LMT_SA_H_PART(code)][LMT_SA_M_PART(code)][i].uint_value =
+                                set_nibble(
+                                    head->tree[LMT_SA_H_PART(code)][LMT_SA_M_PART(code)][i].uint_value,
+                                    code,
+                                    get_nibble(st.value_1.uint_value,code)
+                                );
+                        }
+                        break;
+                    case 1:
+                        {
+                            int c = (sa_value_4(code));
+                            head->tree[LMT_SA_H_PART(code)][LMT_SA_M_PART(code)][sa_index_4(LMT_SA_L_PART(code))].uchar_value[c] =
+                                st.value_1.uchar_value[c];
+                        }
+                        break;
+                    case 2:
+                        {
+                            int c = sa_value_2(code);
+                            head->tree[LMT_SA_H_PART(code)][LMT_SA_M_PART(code)][sa_index_2(LMT_SA_L_PART(code))].ushort_value[c] =
+                                st.value_1.ushort_value[c];
+                        }
+                        break;
+                    case 4:
+                        {
+                            head->tree[LMT_SA_H_PART(code)][LMT_SA_M_PART(code)][sa_index_1(LMT_SA_L_PART(code))] =
+                                st.value_1;
+                        }
+                        break;
+                    case 8:
+                        {
+                            int l = sa_index_0(LMT_SA_L_PART(code));
+                            head->tree[LMT_SA_H_PART(code)][LMT_SA_M_PART(code)][l] =
+                                st.value_1;
+                            head->tree[LMT_SA_H_PART(code)][LMT_SA_M_PART(code)][l+1] =
+                                st.value_2;
+                        }
+                        break;
+
+                }
+            }
+            --head->sa_stack_ptr;
+        }
+    }
+}
+
+void sa_reinit_stack(const sa_tree head, int level)
+{
+    if (head->stack) {
+        /*tex Stack slot 0 is a dummy. */
+        for (int i = head->sa_stack_ptr; i > 0 ; i--) {
+            sa_stack_item st = head->stack[i];
+            if (st.level > 0) {
+             // printf("reinit %i: code %i, v1 %i, v2 %i, level %i\n",head->identifier,st.code,st.value_1.int_value,st.value_2.int_value,st.level);
+                switch (head->bytes) {
+                    case 0 : sa_set_item_0(head, st.code, st.value_1.uint_value, level); break;
+                    case 1 : sa_set_item_1(head, st.code, st.value_1.uchar_value[sa_value_4(st.code)], level); break;
+                    case 2 : sa_set_item_2(head, st.code, st.value_1.ushort_value[sa_value_2(st.code)], level); break;
+                    case 4 : sa_set_item_4(head, st.code, st.value_1, level); break;
+                }
+            }
+        }
+    }
+}
+
+void sa_show_stack(const sa_tree head)
+{
+    if (head->stack) {
+        /*tex Stack slot 0 is a dummy. */
+        tex_print_format("[codestack %i, size %i]\n", head->identifier, head->sa_stack_ptr);
+        for (int i = 1; i <= head->sa_stack_ptr; i++) {
+            sa_stack_item st = head->stack[i];
+            int value = 0;
+            switch (head->bytes) {
+                case 0 : value = get_nibble(st.value_1.int_value, st.code); break;
+                case 1 : value = st.value_1.uchar_value[sa_value_4(st.code)]; break;
+                case 2 : value = st.value_1.ushort_value[sa_value_2(st.code)]; break;
+                case 4 : value = st.value_1.int_value; break;
+            }
+            tex_print_format("%l[%i: level %i, code %i, value %i]\n",i, st.level,st.code,value);
+        }
+        tex_print_format("%l[codestack %i bottom]\n", head->identifier);
+    }
+}
+
+void sa_dump_tree(dumpstream f, sa_tree a)
+{
+    unsigned char bytes = (unsigned char) a->bytes;
+    dump_int(f, a->identifier);
+    dump_int(f, a->sa_stack_step);
+    dump_int(f, a->dflt.int_value);
+    /*tex A marker: */
+    dump_via_uchar(f, 1);
+    dump_via_uchar(f, bytes);
+    for (int h = 0; h < LMT_SA_HIGHPART; h++) {
+        if (a->tree[h]) {
+            for (int m = 0; m < LMT_SA_MIDPART; m++) {
+                if (a->tree[h][m]) {
+                    /*tex
+                        It happens a lot that the value is the same as the index, for instance
+                        with case mappings.
+
+                        Using mode 3 for the case where all values are the default value saves
+                        In \CONTEXT\ some 128 * 5 dumps which is not worth the trouble but it
+                        is neat anyway.
+
+                        1 : values are kind of unique
+                        2 : for all values : value == self
+                        3 : for all values : value == default
+
+                        Actually, we could decide not to save at all in the third mode because
+                        unset equals default.
+                    */
+                    unsigned char mode = 1;
+                    if (bytes != 8) {
+                        /*tex Check for default values. */
+                        int slide = bytes == 0 ? sa_index_8(LMT_SA_LOWPART) : (bytes == 1 ? sa_index_4(LMT_SA_LOWPART) : (bytes == 2 ? sa_index_2(LMT_SA_LOWPART) : sa_index_1(LMT_SA_LOWPART)));
+                        mode = 3;
+                        for (int l = 0; l < slide; l++) {
+                            if (a->tree[h][m][l].uint_value != a->dflt.uint_value) {
+                                mode = 1;
+                                break;
+                            }
+                        }
+                    }
+                    if (mode == 1 && bytes == 4) {
+                        /*tex Check for identity values. */
+                        unsigned int hm = (unsigned int) (h * LMT_SA_MIDPART * LMT_SA_LOWPART + m * LMT_SA_LOWPART);
+                        mode = 2;
+                        for (int l = 0; l < LMT_SA_LOWPART; l++) {
+                            if (a->tree[h][m][l].uint_value == hm) {
+                                hm++;
+                            } else {
+                                mode = 1;
+                                break;
+                            }
+                        }
+                    }
+                    dump_via_uchar(f, (unsigned char) h);
+                    dump_via_uchar(f, (unsigned char) m);
+                    dump_uchar(f, mode);
+                    if (mode == 1) {
+                        /*tex
+                            We have unique values. By avoiding this branch we save some 85 Kb
+                            on the \CONTEXT\ format. We could actually save this property in
+                            the tree but there is not that much to gain.
+                        */
+                        int slide = LMT_SA_LOWPART;
+                        switch (bytes) {
+                            case 0: slide = sa_index_8(LMT_SA_LOWPART); break;
+                            case 1: slide = sa_index_4(LMT_SA_LOWPART); break;
+                            case 2: slide = sa_index_2(LMT_SA_LOWPART); break;
+                            case 4: slide = sa_index_1(LMT_SA_LOWPART); break;
+                            case 8: slide = sa_index_0(LMT_SA_LOWPART); break;
+                        }
+                        dump_items(f, &a->tree[h][m][0], sizeof(sa_tree_item), slide);
+                    } else {
+                        /*tex We have a self value or defaults. */
+                    }
+                }
+            }
+        }
+    }
+    dump_via_uchar(f, 0xFF);
+    dump_via_uchar(f, 0xFF);
+    dump_via_uchar(f, 0xFF);
+}
+
+sa_tree sa_undump_tree(dumpstream f)
+{
+    unsigned char marker;
+    sa_tree a = (sa_tree) sa_malloc_array(sizeof(sa_tree_head), 1);
+    undump_int(f, a->identifier);
+    undump_int(f, a->sa_stack_step);
+    undump_int(f, a->dflt.int_value);
+    a->sa_stack_size = a->sa_stack_step;
+    a->stack = sa_calloc_array(sizeof(sa_stack_item), a->sa_stack_size);
+    a->sa_stack_ptr = 0;
+    sa_wipe_array(a->tree, sizeof(sa_tree_item *), LMT_SA_HIGHPART);
+    /*tex The marker: */
+    undump_uchar(f, marker);
+    if (marker != 0) {
+        unsigned char bytes;
+        undump_uchar(f, bytes);
+        a->bytes = bytes;
+        while (1) {
+            unsigned char h = 0; 
+            unsigned char m = 0; 
+            unsigned char mode;
+            undump_uchar(f, h);
+            undump_uchar(f, m);
+            undump_uchar(f, mode);
+            if (mode == 0xFF) {
+                if (h != 0xFF || m != 0xFF) {
+                    printf("\nfatal format error, mode %i, bytes %i, high %i, middle %i\n", mode, bytes, h, m);
+                    tex_fatal_undump_error("bad sa tree");
+                }
+                break;
+            } else { 
+                if (! a->tree[h]) {
+                    a->tree[h] = (sa_tree_item **) sa_calloc_array(sizeof(void *), LMT_SA_MIDPART);
+                }
+                switch (mode) {
+                    case 1:
+                        /*tex
+                            We have a unique values.
+                        */
+                        {
+                            int slide = LMT_SA_LOWPART;
+                            switch (bytes) {
+                                case 0: slide = sa_index_8(LMT_SA_LOWPART); break;
+                                case 1: slide = sa_index_4(LMT_SA_LOWPART); break;
+                                case 2: slide = sa_index_2(LMT_SA_LOWPART); break;
+                                case 4: slide = sa_index_1(LMT_SA_LOWPART); break;
+                                case 8: slide = sa_index_0(LMT_SA_LOWPART) ; break;
+                            }
+                            if (! a->tree[h][m]) {
+                                a->tree[h][m] = sa_calloc_array(sizeof(sa_tree_item), slide);
+                            }
+                            undump_items(f, &a->tree[h][m][0], sizeof(sa_tree_item), slide);
+                        }
+                        break;
+                    case 2:
+                        /*tex
+                            We have a self value. We only have this when we have integers. Other
+                            cases are math anyway, so not much to gain.
+                        */
+                        {
+                            if (bytes == 4) {
+                                unsigned int hm = (unsigned int) (h * LMT_SA_MIDPART * LMT_SA_LOWPART + m * LMT_SA_LOWPART);
+                                if (! a->tree[h][m]) {
+                                    a->tree[h][m] = sa_malloc_array(sizeof(sa_tree_item), LMT_SA_LOWPART);
+                                }
+                                for (int l = 0; l < LMT_SA_LOWPART; l++) {
+                                    a->tree[h][m][l].int_value = hm;
+                                    hm++;
+                                }
+                            } else {
+                                printf("\nfatal format error, mode %i, bytes %i\n", mode, bytes);
+                                tex_fatal_undump_error("bad sa tree");
+                            }
+                        }
+                        break;
+                    case 3:
+                        /*tex
+                            We have all default values. so no need to set them. In fact, we
+                            cannot even end up here.
+                        */
+                        break;
+                    default:
+                        /*tex
+                            We have no values set.
+                        */
+                        break;
+                }
+            }
+        }
+    }
+    return a;
+}

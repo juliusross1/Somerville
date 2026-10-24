@@ -1,0 +1,201 @@
+open source     > level 1, order 1, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv'
+system          > 
+system          > ConTeXt  ver: 2026.10.01 18:42 LMTX  fmt: 2026.10.22  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 2, order 2, name '/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 2, order 2, name '/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname './fence-tests', input './fence-tests.tex', result './fence-tests'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 2, order 3, name './fence-tests.tex'
+fonts           > preloading modern (mono)
+fonts           > 'fallback modern tt 12pt' is loaded
+fonts           > otf loading > loading '/private/tmp/somerville-fenced-prescripts/runtime/texmf/fonts/data/gust/lm/lmroman10-regular.otf', hash 'lmroman10-regular'
+otf reader      > cff > missing .notdef, using a rectangle instead
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/private/tmp/somerville-fenced-prescripts/runtime/texmf/fonts/data/gust/lm/lmroman10-regular.otf' in cache
+system          > lua > compiling '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/lmroman10-regular.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/lmroman10-regular.tmd'
+system          > lua > dumping '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/lmroman10-regular.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/lmroman10-regular.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.034
+fonts           > otf loading > loading 'FenceProbe.ttf', hash 'fenceprobe'
+otf reader      > discarding 26 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving 'FenceProbe.ttf' in cache
+system          > lua > compiling '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/fenceprobe.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/fenceprobe.tmd'
+system          > lua > dumping '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/fenceprobe.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/fenceprobe.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.036
+RESULT off-parenthesis-1-upper 1716595 
+RESULT off-parenthesis-1-lower 1716595 
+RESULT off-parenthesis-1-both 1716595 
+RESULT off-parenthesis-1-multi 2214596 
+RESULT off-parenthesis-1-posts 2170160 -44436,-44436
+RESULT off-bracket-1-upper 1451247 
+RESULT off-bracket-1-lower 1451247 
+RESULT off-bracket-1-both 1451247 
+RESULT off-bracket-1-multi 1949248 
+RESULT off-bracket-1-posts 1949248 
+RESULT off-brace-1-upper 1406811 
+RESULT off-brace-1-lower 1406811 
+RESULT off-brace-1-both 1406811 
+RESULT off-brace-1-multi 1904812 
+RESULT off-brace-1-posts 1904812 
+RESULT off-parenthesis-5-upper 2291723 
+RESULT off-parenthesis-5-lower 2291723 
+RESULT off-parenthesis-5-both 2291723 
+RESULT off-parenthesis-5-multi 2789724 
+RESULT off-parenthesis-5-posts 2567544 -222180,-222180
+RESULT off-bracket-5-upper 1451247 
+RESULT off-bracket-5-lower 1451247 
+RESULT off-bracket-5-both 1451247 
+RESULT off-bracket-5-multi 1949248 
+pages           > flushing realpage 1, userpage 1, subpage 1
+RESULT off-bracket-5-posts 1949248 
+RESULT off-brace-5-upper 1406811 
+RESULT off-brace-5-lower 1406811 
+RESULT off-brace-5-both 1406811 
+RESULT off-brace-5-multi 1904812 
+RESULT off-brace-5-posts 1904812 
+RESULT off-parenthesis-10-upper 3010317 
+RESULT off-parenthesis-10-lower 3010317 
+RESULT off-parenthesis-10-both 3010317 
+RESULT off-parenthesis-10-multi 3508318 
+RESULT off-parenthesis-10-posts 3063958 -444360,-444360
+pages           > flushing realpage 2, userpage 2, subpage 2
+RESULT off-bracket-10-upper 1451247 
+RESULT off-bracket-10-lower 1451247 
+RESULT off-bracket-10-both 1451247 
+RESULT off-bracket-10-multi 1949248 
+RESULT off-bracket-10-posts 1949248 
+RESULT off-brace-10-upper 1406811 
+RESULT off-brace-10-lower 1406811 
+RESULT off-brace-10-both 1406811 
+pages           > flushing realpage 3, userpage 3, subpage 3
+RESULT off-brace-10-multi 1904812 
+RESULT off-brace-10-posts 1904812 
+RESULT off-parenthesis-20-upper 3010317 
+RESULT off-parenthesis-20-lower 3010317 
+RESULT off-parenthesis-20-both 3010317 
+RESULT off-parenthesis-20-multi 3508318 
+RESULT off-parenthesis-20-posts 3063958 -444360,-444360
+RESULT off-bracket-20-upper 1451247 
+pages           > flushing realpage 4, userpage 4, subpage 4
+RESULT off-bracket-20-lower 1451247 
+RESULT off-bracket-20-both 1451247 
+RESULT off-bracket-20-multi 1949248 
+RESULT off-bracket-20-posts 1949248 
+RESULT off-brace-20-upper 1406811 
+RESULT off-brace-20-lower 1406811 
+RESULT off-brace-20-both 1406811 
+RESULT off-brace-20-multi 1904812 
+pages           > flushing realpage 5, userpage 5, subpage 5
+RESULT off-brace-20-posts 1904812 
+RESULT off-glyph 1121374 -80620,-80620
+RESULT off-nested 3993082 
+RESULT off-invisible 4596143 
+RESULT off-scriptstyle 2271573 
+RESULT on-parenthesis-1-upper 1383325 -333270
+RESULT on-parenthesis-1-lower 1684855 -31740
+RESULT on-parenthesis-1-both 1684855 -333270,-31740
+RESULT on-parenthesis-1-multi 2087636 -380880,-126960
+RESULT on-parenthesis-1-posts 2138420 -333270,-31740,-44436,-44436
+RESULT on-bracket-1-upper 1117977 -333270
+RESULT on-bracket-1-lower 1419507 -31740
+RESULT on-bracket-1-both 1419507 -333270,-31740
+RESULT on-bracket-1-multi 1822288 -380880,-126960
+RESULT on-bracket-1-posts 1917508 -333270,-31740
+pages           > flushing realpage 6, userpage 6, subpage 6
+RESULT on-brace-1-upper 1073541 -333270
+RESULT on-brace-1-lower 1375071 -31740
+RESULT on-brace-1-both 1375071 -333270,-31740
+RESULT on-brace-1-multi 1777852 -380880,-126960
+RESULT on-brace-1-posts 1873072 -333270,-31740
+RESULT on-parenthesis-5-upper 1958453 -333270
+RESULT on-parenthesis-5-lower 2259983 -31740
+RESULT on-parenthesis-5-both 2259983 -333270,-31740
+RESULT on-parenthesis-5-multi 2662764 -380880,-126960
+RESULT on-parenthesis-5-posts 2535804 -333270,-31740,-222180,-222180
+RESULT on-bracket-5-upper 1117977 -333270
+RESULT on-bracket-5-lower 1419507 -31740
+RESULT on-bracket-5-both 1419507 -333270,-31740
+RESULT on-bracket-5-multi 1822288 -380880,-126960
+RESULT on-bracket-5-posts 1917508 -333270,-31740
+RESULT on-brace-5-upper 1073541 -333270
+RESULT on-brace-5-lower 1375071 -31740
+pages           > flushing realpage 7, userpage 7, subpage 7
+RESULT on-brace-5-both 1375071 -333270,-31740
+RESULT on-brace-5-multi 1777852 -380880,-126960
+RESULT on-brace-5-posts 1873072 -333270,-31740
+RESULT on-parenthesis-10-upper 2677047 -333270
+RESULT on-parenthesis-10-lower 2978577 -31740
+RESULT on-parenthesis-10-both 2978577 -333270,-31740
+RESULT on-parenthesis-10-multi 3381358 -380880,-126960
+RESULT on-parenthesis-10-posts 3032218 -333270,-31740,-444360,-444360
+RESULT on-bracket-10-upper 1117977 -333270
+RESULT on-bracket-10-lower 1419507 -31740
+pages           > flushing realpage 8, userpage 8, subpage 8
+RESULT on-bracket-10-both 1419507 -333270,-31740
+RESULT on-bracket-10-multi 1822288 -380880,-126960
+RESULT on-bracket-10-posts 1917508 -333270,-31740
+RESULT on-brace-10-upper 1073541 -333270
+RESULT on-brace-10-lower 1375071 -31740
+RESULT on-brace-10-both 1375071 -333270,-31740
+RESULT on-brace-10-multi 1777852 -380880,-126960
+RESULT on-brace-10-posts 1873072 -333270,-31740
+pages           > flushing realpage 9, userpage 9, subpage 9
+RESULT on-parenthesis-20-upper 2677047 -333270
+RESULT on-parenthesis-20-lower 2978577 -31740
+RESULT on-parenthesis-20-both 2978577 -333270,-31740
+RESULT on-parenthesis-20-multi 3381358 -380880,-126960
+RESULT on-parenthesis-20-posts 3032218 -333270,-31740,-444360,-444360
+RESULT on-bracket-20-upper 1117977 -333270
+RESULT on-bracket-20-lower 1419507 -31740
+RESULT on-bracket-20-both 1419507 -333270,-31740
+pages           > flushing realpage 10, userpage 10, subpage 10
+RESULT on-bracket-20-multi 1822288 -380880,-126960
+RESULT on-bracket-20-posts 1917508 -333270,-31740
+RESULT on-brace-20-upper 1073541 -333270
+RESULT on-brace-20-lower 1375071 -31740
+RESULT on-brace-20-both 1375071 -333270,-31740
+RESULT on-brace-20-multi 1777852 -380880,-126960
+RESULT on-brace-20-posts 1873072 -333270,-31740
+RESULT on-glyph 1297214 -33010,95220
+pages           > flushing realpage 11, userpage 11, subpage 11
+RESULT on-nested 3866122 -380880,-126960
+RESULT on-invisible 4596143 
+RESULT on-scriptstyle 2250371 -248651,-21202
+pages           > flushing realpage 12, userpage 12, subpage 12
+close source    > level 2, order 3, name './fence-tests.tex'
+close source    > level 1, order 3, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv'
+backend         > xmp > using file '/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+otf reader      > discarding 26 self referencing vertical variant entries
+system          > lua > compiling '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/fenceprobettf-1-0-0.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/fenceprobettf-1-0-0.tmd'
+system          > lua > dumping '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/fenceprobettf-1-0-0.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/fenceprobettf-1-0-0.tmd' stripped
+system          > lua > compiling '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/lmroman10regularotf-1-0-0.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/lmroman10regularotf-1-0-0.tmd'
+system          > lua > dumping '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/lmroman10regularotf-1-0-0.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/lmroman10regularotf-1-0-0.tmd' stripped
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.004 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 16 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 528 modules (0.122 sec), 106 tables (0.008 sec), 634 chunks (0.129 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1907, freed: 0, unreachable: 1907
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 7 lists of 445
+mkxl run stats  > node memory usage: 6 attribute, 3 attributelist, 1 dir, 9 fontspec, 1 glue, 135 gluespec, 1 kern, 661 mathspec, 2 penalty, 56 specification, 2 temp
+mkxl run stats  > node list callback tasks: 17 unique task lists, 11 instances (re)created, 1288 calls
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: resumed with value 0.52786931471644982
+mkxl run stats  > jobdata time: 0.000 seconds saving, 0.000 seconds loading
+mkxl run stats  > callbacks: file: 201, saved: 1304, direct: 131, function: 1555, value: 744, message: 0, bytecode: 634, late 0, total: 4569 (381 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > loaded fonts: 2 files: lmroman10-regular.otf, fenceprobe.ttf
+mkxl run stats  > font engine: otf 3.156, afm 1.541, tfm 1.000, 3 instances, 1 shared in backend, 1 common vectors, 0 common hashes, load time 0.084 seconds 
+mkxl run stats  > math tweaking time: 0.001 seconds, 12 math goodie tables
+mkxl run stats  > font embedding time: 0.056 seconds, 2 fonts
+mkxl run stats  > result saved in file: fence-tests.pdf, compresslevel 1, objectcompresslevel 3, 19 streams, 0 uncompressed, 18 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20260923, format id: 736, memory mode: 1, compiler: clang, cversion: 23
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 54350 control sequences, 262144 hash slots, 5320 misses, approximate memory usage: 110 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 45 MB, ctx: 42 MB, max: 58 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 0.343 seconds, 12 processed pages, 12 shipped pages, 35.002 pages/second

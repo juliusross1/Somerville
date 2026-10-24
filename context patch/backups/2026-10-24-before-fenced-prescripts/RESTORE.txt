@@ -1,0 +1,23 @@
+Backup of the working glyph-only prescript patch, before fence support.
+
+To roll back, restore these four files from source-tree/ to the corresponding
+paths under /Users/juliusross/context/tex/texmf-context/source/luametatex/:
+
+    source/tex/texmath.h
+    source/lua/lmttexlib.c
+    source/tex/texmlist.h
+    source/tex/texmlist.c
+
+Restore this directory's luametatex binary to:
+    /Users/juliusross/context/tex/texmf-osx-arm64/bin/luametatex
+
+The source-tree is a snapshot of the entire source tree except its generated
+top-level build directory. The four files above are the only source files
+changed by the fence extension. The backed-up executable is the working engine
+from before the extension, so restoring it needs no rebuild.
+
+The original patch, notes, and baseline hash file are alongside this file.
+Restore those to context patch/ as well if reverting the recorded patch version.
+The pre-install letter-test PDF, log and tuc are also saved here.
+
+sha256.json records the backed-up source, binary and original artifacts.

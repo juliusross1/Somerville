@@ -1,0 +1,67 @@
+[  2%] Built target luarest
+[  6%] Built target luasocket
+[ 11%] Built target mp
+[ 22%] Built target luaoptional
+[ 29%] Built target lua
+[ 29%] Built target miniz
+[ 35%] Built target pplib
+[ 35%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/s_addMagsP32.c.o
+[ 35%] Building C object CMakeFiles/potrace.dir/source/libraries/potrace/src/potracelib.c.o
+[ 36%] Building C object CMakeFiles/qrcodegen.dir/source/libraries/qrcodegen/qrcodegen.c.o
+[ 37%] Building C object CMakeFiles/nanojpeg.dir/source/libraries/nanojpeg/nanojpeg.c.o
+[ 58%] Built target filib
+[ 58%] Building C object CMakeFiles/triangles.dir/source/libraries/triangles/triangles.c.o
+[ 87%] Built target tex
+[ 88%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/s_subMagsP32.c.o
+[ 88%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_to_ui32.c.o
+[ 88%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/s_mulAddP32.c.o
+[ 89%] Building C object CMakeFiles/potrace.dir/source/libraries/potrace/src/curve.c.o
+[ 90%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_to_ui64.c.o
+[ 90%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_to_i32.c.o
+[ 90%] Building C object CMakeFiles/potrace.dir/source/libraries/potrace/src/decompose.c.o
+[ 90%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_to_i64.c.o
+[ 90%] Building C object CMakeFiles/potrace.dir/source/libraries/potrace/src/trace.c.o
+[ 90%] Linking C static library libnanojpeg.a
+[ 90%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_roundToInt.c.o
+[ 90%] Linking C static library libqrcodegen.a
+[ 91%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_add.c.o
+[ 91%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_sub.c.o
+[ 91%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_mul.c.o
+[ 92%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_mulAdd.c.o
+[ 92%] Built target qrcodegen
+[ 92%] Built target nanojpeg
+[ 92%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_div.c.o
+[ 92%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_eq.c.o
+[ 93%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_le.c.o
+[ 93%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_lt.c.o
+[ 93%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/p32_sqrt.c.o
+[ 94%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/ui32_to_p32.c.o
+[ 94%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/ui64_to_p32.c.o
+[ 94%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/i32_to_p32.c.o
+[ 95%] Linking C static library libpotrace.a
+[ 96%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/i64_to_p32.c.o
+[ 96%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/s_approxRecipSqrt_1Ks.c.o
+[ 96%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/c_convertDecToPosit8.c.o
+[ 96%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/c_convertPosit8ToDec.c.o
+/tmp/somerville-fenced-prescripts/revised/source/libraries/softposit/source/c_convertDecToPosit8.c:175:18: warning: overlapping comparisons always evaluate to true [-Wtautological-overlap-compare]
+  175 |         else if (f8 < 1 || f8 > -1 ){
+      |                  ~~~~~~~^~~~~~~~~~
+[ 97%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/c_convertDecToPosit32.c.o
+[ 97%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/c_convertPosit32ToDec.c.o
+1 warning generated.
+[ 97%] Built target potrace
+[ 97%] Building C object CMakeFiles/softposit.dir/source/libraries/softposit/source/c_int.c.o
+/tmp/somerville-fenced-prescripts/revised/source/libraries/softposit/source/c_convertDecToPosit32.c:618:19: warning: overlapping comparisons always evaluate to true [-Wtautological-overlap-compare]
+  618 |         else if (f32 < 1 || f32 > -1 ){
+      |                  ~~~~~~~~^~~~~~~~~~~
+/tmp/somerville-fenced-prescripts/revised/source/libraries/softposit/source/c_convertDecToPosit32.c:803:19: warning: overlapping comparisons always evaluate to true [-Wtautological-overlap-compare]
+  803 |         else if (f32 < 1 || f32 > -1 ){
+      |                  ~~~~~~~~^~~~~~~~~~~
+2 warnings generated.
+[ 98%] Linking C static library libsoftposit.a
+[ 98%] Built target softposit
+[ 99%] Linking C static library libtriangles.a
+[ 99%] Built target triangles
+[100%] Building C object CMakeFiles/luametatex.dir/source/luametatex.c.o
+[100%] Linking C executable luametatex
+[100%] Built target luametatex

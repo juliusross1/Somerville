@@ -1,0 +1,113 @@
+--- a/source/tex/texmath.h
++++ b/source/tex/texmath.h
+@@ -770,7 +770,8 @@
+     math_control_ignore_kern_dimensions      = 0x0400000, /* for bad fonts (like xits fence depths) */
+     math_control_ignore_flat_accents         = 0x0800000, 
+     math_control_extend_accents              = 0x1000000, 
+-    math_control_extend_delimiters           = 0x2000000, 
++    math_control_extend_delimiters           = 0x2000000,
++    math_control_separate_prescript_kerns    = 0x4000000, 
+ } math_control_codes;
+ 
+ /*tex This is what we use for \OPENTYPE\ in \CONTEXT: */
+--- a/source/lua/lmttexlib.c
++++ b/source/lua/lmttexlib.c
+@@ -6963,6 +6963,7 @@
+     lua_set_string_by_index(L, math_control_ignore_flat_accents,         "ignoreflataccents");
+     lua_set_string_by_index(L, math_control_extend_accents,              "extendaccents");
+     lua_set_string_by_index(L, math_control_extend_delimiters,           "extenddelimiters");
++    lua_set_string_by_index(L, math_control_separate_prescript_kerns,    "separateprescriptkerns");
+     return 1;
+ }
+ 
+--- a/source/tex/texmlist.c
++++ b/source/tex/texmlist.c
+@@ -5901,6 +5901,28 @@
+ 
+ */
+ 
++/* Experimental opt-in constant corner kerning for prescripts.
++   Requires simple corner fields (e.g. ConTeXt's simplifykerns tweak).
++   This is not a height-dependent OpenType kerning implementation. */
++static scaled tex_aux_prescript_corner_kern(
++    halfword base_font, int base_char, halfword base_size,
++    const scriptdata *script, halfword script_size, int upper)
++{
++    int base_corner = upper ? top_left_kern : bottom_left_kern;
++    int script_corner = upper ? bottom_right_kern : top_right_kern;
++    scaled kern = tex_aux_math_x_size_scaled(
++        base_font,
++        tex_aux_math_kern_at(base_font, base_char, base_corner, 0, 1),
++        base_size);
++    if (script->node && tex_char_exists(script->fnt, script->chr)) {
++        kern += tex_aux_math_x_size_scaled(
++            script->fnt,
++            tex_aux_math_kern_at(script->fnt, script->chr, script_corner, 0, 1),
++            script_size);
++    }
++    return kern;
++}
++
+ static void tex_aux_make_scripts(halfword target, halfword kernel, scaled italic, int style, scaled supshift, scaled subshift, scaled supdrop, kernset *kerns, halfword single)
+ {
+     halfword result = null;
+@@ -5916,7 +5938,8 @@
+     scriptdata presubdata  = { .node = null, .fnt = null_font, .chr = 0, .box = null, .kern = 0, .slack = 0, .shifted = 0, .whatever = 0 };
+     scriptdata presupdata  = { .node = null, .fnt = null_font, .chr = 0, .box = null, .kern = 0, .slack = 0, .shifted = 0, .whatever = 0 };
+     scriptdata primedata   = { .node = null, .fnt = null_font, .chr = 0, .box = null, .kern = 0, .slack = 0, .shifted = 0, .whatever = 0 };
+-    halfword maxleftkern = 0;
++    scaled presupkern = 0;
++    scaled presubkern = 0;
+  // halfword maxrightkern = 0;
+     scaled leftslack = 0;
+     scaled rightslack = 0;
+@@ -6012,9 +6035,24 @@
+             postsubdata.node = tex_aux_analyze_script(noad_subscr(target), &postsubdata);
+             postsupdata.node = tex_aux_analyze_script(noad_supscr(target), &postsupdata);
+             primedata.node = tex_aux_analyze_script(noad_prime(target), &primedata);
+-            maxleftkern = tex_aux_math_left_kern(glyph_font(kernel), glyph_character(kernel));
+-         // maxrightkern = tex_aux_math_right_kern(glyph_font(kernel), glyph_character(kernel));
+-            maxleftkern = tex_aux_math_x_size_scaled(glyph_font(kernel), maxleftkern, lmt_math_state.size);
++            if (tex_aux_math_engine_control(glyph_font(kernel), math_control_separate_prescript_kerns)) {
++                halfword base_size = lmt_math_state.size;
++                /* Ordinary script sizes only; explicit style overrides need review. */
++                halfword script_size = base_size < 2 ? base_size + 1 : base_size;
++                presupdata.node = tex_aux_analyze_script(noad_supprescr(target), &presupdata);
++                presubdata.node = tex_aux_analyze_script(noad_subprescr(target), &presubdata);
++                presupkern = tex_aux_prescript_corner_kern(
++                    glyph_font(kernel), glyph_character(kernel), base_size,
++                    &presupdata, script_size, 1);
++                presubkern = tex_aux_prescript_corner_kern(
++                    glyph_font(kernel), glyph_character(kernel), base_size,
++                    &presubdata, script_size, 0);
++            } else {
++                scaled sharedkern = tex_aux_math_left_kern(glyph_font(kernel), glyph_character(kernel));
++                sharedkern = tex_aux_math_x_size_scaled(glyph_font(kernel), sharedkern, lmt_math_state.size);
++                presupkern = sharedkern;
++                presubkern = sharedkern;
++            }
+             prime_up = 0;
+             shift_up = 0;
+             shift_down = 0;
+@@ -6189,8 +6227,8 @@
+         presupdata.slack = tex_get_math_x_parameter_checked(style, math_parameter_extra_superprescript_space);
+         presupdata.slack += tex_round_xn_over_d(tex_get_math_x_parameter_default(style, math_parameter_space_before_script, 0), script_space_before_factor_par, scaling_factor);
+         presupdata.box = tex_aux_clean_box(noad_supprescr(target), (has_noad_option_nosupprescript(target) ? style : tex_math_style_variant(style, math_parameter_superscript_variant)), style, math_sup_list, 0, NULL);
+-        if (maxleftkern) {
+-            tex_aux_append_hkern_to_box_list(presupdata.box, maxleftkern, math_shape_kern_subtype, "max left shape");
++        if (presupkern) {
++            tex_aux_append_hkern_to_box_list(presupdata.box, presupkern, math_shape_kern_subtype, "pre sup corner");
+         }
+         if (extra) {
+             box_height(presupdata.box) += extra;
+@@ -6208,8 +6246,8 @@
+         presubdata.slack = tex_get_math_x_parameter_checked(style, math_parameter_extra_subprescript_space);
+         presubdata.slack += tex_round_xn_over_d(tex_get_math_x_parameter_default(style, math_parameter_space_before_script, 0), script_space_before_factor_par, scaling_factor);
+         presubdata.box = tex_aux_clean_box(noad_subprescr(target), (has_noad_option_nosubprescript(target) ? style : tex_math_style_variant(style, math_parameter_subscript_variant)), style, math_sub_list, 0, NULL);
+-        if (maxleftkern) {
+-            tex_aux_append_hkern_to_box_list(presubdata.box, maxleftkern, math_shape_kern_subtype, "max left shape");
++        if (presubkern) {
++            tex_aux_append_hkern_to_box_list(presubdata.box, presubkern, math_shape_kern_subtype, "pre sub corner");
+         }
+         if (extra) {
+             box_depth(presubdata.box) += extra;

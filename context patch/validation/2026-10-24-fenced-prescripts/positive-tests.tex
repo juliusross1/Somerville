@@ -1,0 +1,159 @@
+\definefontfeature[on][goodies={somerville,probe-on}]
+\starttypescript[math][probe-on]
+\definefontsynonym[MathRoman][file:positiveProbe.ttf][features={math\mathsizesuffix,mathextra,on}]
+\stoptypescript
+\definetypeface[probe-on][rm][serif][modern][default]
+\definetypeface[probe-on][mm][math][probe-on][default]
+\definefontfeature[off][goodies={somerville,probe-off}]
+\starttypescript[math][probe-off]
+\definefontsynonym[MathRoman][file:positiveProbe.ttf][features={math\mathsizesuffix,mathextra,off}]
+\stoptypescript
+\definetypeface[probe-off][rm][serif][modern][default]
+\definetypeface[probe-off][mm][math][probe-off][default]
+\setupbodyfont[probe-on,12pt]
+\startluacode
+userdata.probe = function(label)
+ local kerns={}
+ local function walk(head)
+  for n in node.traverse(head) do
+   if node.type(n.id)=='kern' and n.subtype==11 then kerns[#kerns+1]=n.kern end
+   if n.list then walk(n.list) end
+  end
+ end
+ walk(tex.box[0].list)
+ texio.write_nl('term and log','RESULT '..label..' '..tostring(tex.box[0].width)..' '..table.concat(kerns,','))
+end
+\stopluacode
+\def\Probe#1#2{\setbox0=\hbox{\m{#2}}\ctxlua{userdata.probe("#1")}\dontleavehmode\box0\par}
+\starttext
+\switchtobodyfont[probe-off,12pt]
+\Probe{off-parenthesis-1-upper}{\fenced[parenthesis][size=1]{x}^^^{\rm M}}
+\Probe{off-parenthesis-1-lower}{\fenced[parenthesis][size=1]{x}___{\rm M}}
+\Probe{off-parenthesis-1-both}{\fenced[parenthesis][size=1]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-parenthesis-1-multi}{\fenced[parenthesis][size=1]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-parenthesis-1-posts}{\fenced[parenthesis][size=1]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-bracket-1-upper}{\fenced[bracket][size=1]{x}^^^{\rm M}}
+\Probe{off-bracket-1-lower}{\fenced[bracket][size=1]{x}___{\rm M}}
+\Probe{off-bracket-1-both}{\fenced[bracket][size=1]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-bracket-1-multi}{\fenced[bracket][size=1]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-bracket-1-posts}{\fenced[bracket][size=1]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-brace-1-upper}{\fenced[brace][size=1]{x}^^^{\rm M}}
+\Probe{off-brace-1-lower}{\fenced[brace][size=1]{x}___{\rm M}}
+\Probe{off-brace-1-both}{\fenced[brace][size=1]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-brace-1-multi}{\fenced[brace][size=1]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-brace-1-posts}{\fenced[brace][size=1]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-parenthesis-5-upper}{\fenced[parenthesis][size=5]{x}^^^{\rm M}}
+\Probe{off-parenthesis-5-lower}{\fenced[parenthesis][size=5]{x}___{\rm M}}
+\Probe{off-parenthesis-5-both}{\fenced[parenthesis][size=5]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-parenthesis-5-multi}{\fenced[parenthesis][size=5]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-parenthesis-5-posts}{\fenced[parenthesis][size=5]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-bracket-5-upper}{\fenced[bracket][size=5]{x}^^^{\rm M}}
+\Probe{off-bracket-5-lower}{\fenced[bracket][size=5]{x}___{\rm M}}
+\Probe{off-bracket-5-both}{\fenced[bracket][size=5]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-bracket-5-multi}{\fenced[bracket][size=5]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-bracket-5-posts}{\fenced[bracket][size=5]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-brace-5-upper}{\fenced[brace][size=5]{x}^^^{\rm M}}
+\Probe{off-brace-5-lower}{\fenced[brace][size=5]{x}___{\rm M}}
+\Probe{off-brace-5-both}{\fenced[brace][size=5]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-brace-5-multi}{\fenced[brace][size=5]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-brace-5-posts}{\fenced[brace][size=5]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-parenthesis-10-upper}{\fenced[parenthesis][size=10]{x}^^^{\rm M}}
+\Probe{off-parenthesis-10-lower}{\fenced[parenthesis][size=10]{x}___{\rm M}}
+\Probe{off-parenthesis-10-both}{\fenced[parenthesis][size=10]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-parenthesis-10-multi}{\fenced[parenthesis][size=10]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-parenthesis-10-posts}{\fenced[parenthesis][size=10]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-bracket-10-upper}{\fenced[bracket][size=10]{x}^^^{\rm M}}
+\Probe{off-bracket-10-lower}{\fenced[bracket][size=10]{x}___{\rm M}}
+\Probe{off-bracket-10-both}{\fenced[bracket][size=10]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-bracket-10-multi}{\fenced[bracket][size=10]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-bracket-10-posts}{\fenced[bracket][size=10]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-brace-10-upper}{\fenced[brace][size=10]{x}^^^{\rm M}}
+\Probe{off-brace-10-lower}{\fenced[brace][size=10]{x}___{\rm M}}
+\Probe{off-brace-10-both}{\fenced[brace][size=10]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-brace-10-multi}{\fenced[brace][size=10]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-brace-10-posts}{\fenced[brace][size=10]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-parenthesis-20-upper}{\fenced[parenthesis][size=20]{x}^^^{\rm M}}
+\Probe{off-parenthesis-20-lower}{\fenced[parenthesis][size=20]{x}___{\rm M}}
+\Probe{off-parenthesis-20-both}{\fenced[parenthesis][size=20]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-parenthesis-20-multi}{\fenced[parenthesis][size=20]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-parenthesis-20-posts}{\fenced[parenthesis][size=20]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-bracket-20-upper}{\fenced[bracket][size=20]{x}^^^{\rm M}}
+\Probe{off-bracket-20-lower}{\fenced[bracket][size=20]{x}___{\rm M}}
+\Probe{off-bracket-20-both}{\fenced[bracket][size=20]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-bracket-20-multi}{\fenced[bracket][size=20]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-bracket-20-posts}{\fenced[bracket][size=20]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-brace-20-upper}{\fenced[brace][size=20]{x}^^^{\rm M}}
+\Probe{off-brace-20-lower}{\fenced[brace][size=20]{x}___{\rm M}}
+\Probe{off-brace-20-both}{\fenced[brace][size=20]{x}___{\rm M}^^^{\rm M}}
+\Probe{off-brace-20-multi}{\fenced[brace][size=20]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{off-brace-20-posts}{\fenced[brace][size=20]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{off-glyph}{M___{\rm M}^^^{\rm M}}
+\Probe{off-nested}{\fenced[parenthesis][size=20]{\fenced[brace][size=5]{x}}___{\rm MM}^^^{\rm MM}}
+\Probe{off-invisible}{\left.\fenced[parenthesis][size=20]{x}\right)___{\rm MM}^^^{\rm MM}}
+\Probe{off-scriptstyle}{\scriptstyle\fenced[parenthesis][size=20]{x}___{\rm M}^^^{\rm M}}
+\switchtobodyfont[probe-on,12pt]
+\Probe{on-parenthesis-1-upper}{\fenced[parenthesis][size=1]{x}^^^{\rm M}}
+\Probe{on-parenthesis-1-lower}{\fenced[parenthesis][size=1]{x}___{\rm M}}
+\Probe{on-parenthesis-1-both}{\fenced[parenthesis][size=1]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-parenthesis-1-multi}{\fenced[parenthesis][size=1]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-parenthesis-1-posts}{\fenced[parenthesis][size=1]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-bracket-1-upper}{\fenced[bracket][size=1]{x}^^^{\rm M}}
+\Probe{on-bracket-1-lower}{\fenced[bracket][size=1]{x}___{\rm M}}
+\Probe{on-bracket-1-both}{\fenced[bracket][size=1]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-bracket-1-multi}{\fenced[bracket][size=1]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-bracket-1-posts}{\fenced[bracket][size=1]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-brace-1-upper}{\fenced[brace][size=1]{x}^^^{\rm M}}
+\Probe{on-brace-1-lower}{\fenced[brace][size=1]{x}___{\rm M}}
+\Probe{on-brace-1-both}{\fenced[brace][size=1]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-brace-1-multi}{\fenced[brace][size=1]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-brace-1-posts}{\fenced[brace][size=1]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-parenthesis-5-upper}{\fenced[parenthesis][size=5]{x}^^^{\rm M}}
+\Probe{on-parenthesis-5-lower}{\fenced[parenthesis][size=5]{x}___{\rm M}}
+\Probe{on-parenthesis-5-both}{\fenced[parenthesis][size=5]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-parenthesis-5-multi}{\fenced[parenthesis][size=5]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-parenthesis-5-posts}{\fenced[parenthesis][size=5]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-bracket-5-upper}{\fenced[bracket][size=5]{x}^^^{\rm M}}
+\Probe{on-bracket-5-lower}{\fenced[bracket][size=5]{x}___{\rm M}}
+\Probe{on-bracket-5-both}{\fenced[bracket][size=5]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-bracket-5-multi}{\fenced[bracket][size=5]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-bracket-5-posts}{\fenced[bracket][size=5]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-brace-5-upper}{\fenced[brace][size=5]{x}^^^{\rm M}}
+\Probe{on-brace-5-lower}{\fenced[brace][size=5]{x}___{\rm M}}
+\Probe{on-brace-5-both}{\fenced[brace][size=5]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-brace-5-multi}{\fenced[brace][size=5]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-brace-5-posts}{\fenced[brace][size=5]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-parenthesis-10-upper}{\fenced[parenthesis][size=10]{x}^^^{\rm M}}
+\Probe{on-parenthesis-10-lower}{\fenced[parenthesis][size=10]{x}___{\rm M}}
+\Probe{on-parenthesis-10-both}{\fenced[parenthesis][size=10]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-parenthesis-10-multi}{\fenced[parenthesis][size=10]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-parenthesis-10-posts}{\fenced[parenthesis][size=10]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-bracket-10-upper}{\fenced[bracket][size=10]{x}^^^{\rm M}}
+\Probe{on-bracket-10-lower}{\fenced[bracket][size=10]{x}___{\rm M}}
+\Probe{on-bracket-10-both}{\fenced[bracket][size=10]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-bracket-10-multi}{\fenced[bracket][size=10]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-bracket-10-posts}{\fenced[bracket][size=10]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-brace-10-upper}{\fenced[brace][size=10]{x}^^^{\rm M}}
+\Probe{on-brace-10-lower}{\fenced[brace][size=10]{x}___{\rm M}}
+\Probe{on-brace-10-both}{\fenced[brace][size=10]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-brace-10-multi}{\fenced[brace][size=10]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-brace-10-posts}{\fenced[brace][size=10]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-parenthesis-20-upper}{\fenced[parenthesis][size=20]{x}^^^{\rm M}}
+\Probe{on-parenthesis-20-lower}{\fenced[parenthesis][size=20]{x}___{\rm M}}
+\Probe{on-parenthesis-20-both}{\fenced[parenthesis][size=20]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-parenthesis-20-multi}{\fenced[parenthesis][size=20]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-parenthesis-20-posts}{\fenced[parenthesis][size=20]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-bracket-20-upper}{\fenced[bracket][size=20]{x}^^^{\rm M}}
+\Probe{on-bracket-20-lower}{\fenced[bracket][size=20]{x}___{\rm M}}
+\Probe{on-bracket-20-both}{\fenced[bracket][size=20]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-bracket-20-multi}{\fenced[bracket][size=20]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-bracket-20-posts}{\fenced[bracket][size=20]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-brace-20-upper}{\fenced[brace][size=20]{x}^^^{\rm M}}
+\Probe{on-brace-20-lower}{\fenced[brace][size=20]{x}___{\rm M}}
+\Probe{on-brace-20-both}{\fenced[brace][size=20]{x}___{\rm M}^^^{\rm M}}
+\Probe{on-brace-20-multi}{\fenced[brace][size=20]{x}___{\rm MM}^^^{\rm MM}}
+\Probe{on-brace-20-posts}{\fenced[brace][size=20]{x}_{\rm M}^{\rm M}___{\rm M}^^^{\rm M}}
+\Probe{on-glyph}{M___{\rm M}^^^{\rm M}}
+\Probe{on-nested}{\fenced[parenthesis][size=20]{\fenced[brace][size=5]{x}}___{\rm MM}^^^{\rm MM}}
+\Probe{on-invisible}{\left.\fenced[parenthesis][size=20]{x}\right)___{\rm MM}^^^{\rm MM}}
+\Probe{on-scriptstyle}{\scriptstyle\fenced[parenthesis][size=20]{x}___{\rm M}^^^{\rm M}}
+\stoptext

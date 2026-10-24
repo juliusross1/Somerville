@@ -1,0 +1,125 @@
+/*
+    See license.txt in the root of this project.
+*/
+
+# ifndef LMT_PRINTING_H
+# define LMT_PRINTING_H
+
+/*tex
+
+    Printing in \TEX\ is hybrid: in the enumeration below you see the targets. Traditionally \TEX\
+    is rather character based, probably because collecting string was costly and because flushing
+    to a modem (termimal) can make a printer follow. Anyway, because in \LUAMETATEX, we have much
+    more (detailed) logging, the overhead of logging and serializing becomes noticeable. Not all
+    low down comes from \TEX: there can be huge differences between consoles, tracing in editors,
+    etc.
+
+    It is for this reason that the printing mechanism evolved over years. Sometimes the gains are
+    huge, for instance when we're tacing linebreaks or math, so begin August 2026 I decided to
+    make it a bit more efficient: we let the formatter collect more and for critital prints also
+    pass the length (because in the end \TEX\ meeds it anyway). We only use direct serializers when
+    we need extreme performance.
+
+    It's not always pretty but at least we try to be consistent. Occasionally I spend some time on
+    making it nicer, so we might see more formatters.
+
+*/
+
+typedef enum selector_settings {
+    no_print_selector_code,             /*tex |selector| setting that makes data disappear */
+    terminal_selector_code,             /*tex printing is destined for the terminal only */
+    logfile_selector_code,              /*tex printing is destined for the transcript file only */
+    terminal_and_logfile_selector_code, /*tex normal |selector| setting */
+    pseudo_selector_code,               /*tex special |selector| setting for |show_context| */
+    new_string_selector_code,           /*tex printing is deflected to the string pool */
+    luabuffer_selector_code,
+} selector_settings;
+
+typedef struct print_state_info {
+    FILE          *logfile;
+    char          *loggable_info;
+    int            selector;
+    int            terminal_offset;
+    int            logfile_offset;
+    int            new_string_line;
+    int            tally;
+    unsigned char  trick_buffer[max_error_line + 1]; /* padded */
+    int            trick_count;
+    int            first_count;
+    int            saved_selector;
+    int            font_in_short_display; /*tex an internal font number */
+    FILE          *saved_logfile;
+    int            saved_logfile_offset;
+    int            nesting_depth;
+} print_state_info;
+
+extern print_state_info lmt_print_state;
+
+typedef enum spec_units {
+    no_unit,
+    pt_unit,
+    mu_unit,
+ // fi_unit,    /* todo */
+ // fil_unit,
+ // fill_unit,
+ // filll_unit,
+ // filll_unit,
+} spec_units;
+
+/*tex
+    Some of these can go away because we stepwise implement usage of |tex_print_format| instead of
+    a multitude of specific calls. It's one of these thing I do when I'm bored.
+
+    todo : check tex_print_ln
+    todo : check tex_print_nl
+    todo : check tex_print_str_nl
+
+*/
+
+extern void        tex_print_ln               (void);   /* always forces a newline */
+extern void        tex_print_char             (int s);
+extern void        tex_print_tex_str          (int s);
+//     void        tex_print_tex_str_esc      (strnumber s);
+extern void        tex_print_nlp              (void);   /* flushes a line if we're doing one */
+extern void        tex_print_banner           (void);
+extern void        tex_print_log_banner       (void);
+extern void        tex_print_version_banner   (void);
+extern void        tex_print_int              (int n);
+extern void        tex_print_hex              (long long n);
+//     void        tex_print_uhex             (long long n);
+//     void        tex_print_qhex             (long long n);
+extern void        tex_print_roman_int        (int n, int numerical);
+extern void        tex_print_cs_checked       (halfword p);                       /*tex Also does the |IMPOSSIBLE| etc. */
+extern void        tex_print_cs               (halfword p);                       /*tex Only does the undefined case. */
+extern void        tex_print_cs_name          (halfword p);                       /*tex Only prints known ones. */
+extern void        tex_print_str              (const char *s);
+extern void        tex_print_str_len          (const char *s, int len);
+//     void        tex_print_str_esc          (const char *s);
+extern void        tex_print_posit            (halfword d); 
+extern void        tex_print_posit_5          (halfword d); 
+extern void        tex_print_dimension        (scaled d, int unit);               /*tex prints a dimension with pt */
+extern void        tex_print_sparse_dimension (scaled d, int unit);               /*tex prints a dimension with pt */
+extern void        tex_print_unit             (int unit);                         /*tex prints a glue component */
+extern void        tex_print_glue             (scaled d, int order, int unit);    /*tex prints a glue component */
+extern void        tex_print_glue_set         (halfword p);
+extern void        tex_print_spec             (int p, int unit);                  /*tex prints a glue specification */
+extern void        tex_print_fontspec         (int p);
+extern void        tex_print_mathspec         (int p);
+extern void        tex_print_font_identifier  (halfword f);
+extern void        tex_print_font_specifier   (halfword e);                       /*tex this is an eq table entry */
+extern void        tex_print_font             (halfword f);
+extern void        tex_print_char_identifier  (halfword c);
+extern void        tex_print_token_list       (const char *s, halfword p);        /*tex prints token list data in braces */
+//     void        tex_print_rule_dimension   (scaled d);                         /*tex prints dimension in rule node */
+//     void        tex_print_group            (int e);
+//     void        tex_print_group_count      (int n);
+extern void        tex_print_format           (const char *format, ...);          /*tex similar to the one we use for errors */
+extern const char *tex_print_format_args      (const char *format, va_list args); /*tex only for error message */
+extern void        tex_begin_diagnostic       (void);
+extern void        tex_print_levels           (void);
+extern void        tex_end_diagnostic         (void);
+extern void        tex_show_box               (halfword p);
+extern void        tex_short_display          (halfword p);                       /*tex prints highlights of list |p| */
+extern void        tex_print_message          (const char *s);
+
+# endif

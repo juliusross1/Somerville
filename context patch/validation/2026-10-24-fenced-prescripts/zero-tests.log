@@ -1,0 +1,167 @@
+open source     > level 1, order 1, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv'
+system          > 
+system          > ConTeXt  ver: 2026.10.01 18:42 LMTX  fmt: 2026.10.22  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 2, order 2, name '/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 2, order 2, name '/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname './zero-tests', input './zero-tests.tex', result './zero-tests'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 2, order 3, name './zero-tests.tex'
+fonts           > preloading modern (mono)
+fonts           > 'fallback modern tt 12pt' is loaded
+fonts           > otf loading > loading 'zeroProbe.ttf', hash 'zeroprobe'
+otf reader      > discarding 26 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving 'zeroProbe.ttf' in cache
+system          > lua > compiling '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/zeroprobe.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/zeroprobe.tmd'
+system          > lua > dumping '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/zeroprobe.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/zeroprobe.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.036
+pages           > flushing realpage 1, userpage 1, subpage 1
+pages           > flushing realpage 2, userpage 2, subpage 2
+pages           > flushing realpage 3, userpage 3, subpage 3
+pages           > flushing realpage 4, userpage 4, subpage 4
+pages           > flushing realpage 5, userpage 5, subpage 5
+pages           > flushing realpage 6, userpage 6, subpage 6
+pages           > flushing realpage 7, userpage 7, subpage 7
+pages           > flushing realpage 8, userpage 8, subpage 8
+pages           > flushing realpage 9, userpage 9, subpage 9
+pages           > flushing realpage 10, userpage 10, subpage 10
+pages           > flushing realpage 11, userpage 11, subpage 11
+pages           > flushing realpage 12, userpage 12, subpage 12
+close source    > level 2, order 3, name './zero-tests.tex'
+close source    > level 1, order 3, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv'
+backend         > xmp > using file '/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+backend         > fonts > start embedded fonts
+backend         > fonts >     1 : file 'lmroman10-regular.otf', base 'WXOSAX+LMRoman10-Regular', instance 'lmroman10regularotf-1-0-0'
+backend         > fonts >     2 : file 'zeroProbe.ttf', base 'YFVHVO+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'zeroprobettf-1-0-0'
+backend         > fonts > stop embedded fonts
+otf reader      > discarding 26 self referencing vertical variant entries
+system          > lua > compiling '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/zeroprobettf-1-0-0.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/zeroprobettf-1-0-0.tmd'
+system          > lua > dumping '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/zeroprobettf-1-0-0.tma' into '/private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/zeroprobettf-1-0-0.tmd' stripped
+system          > start used files
+system          > text: zero-tests
+system          > stop used files
+system          > start used files
+system          >    1: filename=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv format=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv usedmethod=direct
+system          >    2: filename=publ-imp-default.lua filetype=lua foundname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+system          >    3: filename=cont-new.mkxl filetype=tex foundname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
+system          >    4: filename=lang-exc.lua filetype=lua foundname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+system          >    5: filename=lang-us.lua filetype=lua foundname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+system          >    6: filename=/private/tmp/somerville-fenced-prescripts/tests/zero-tests.tex format=tex foundname=/private/tmp/somerville-fenced-prescripts/tests/zero-tests.tex fullname=/private/tmp/somerville-fenced-prescripts/tests/zero-tests.tex usedmethod=direct
+system          >    7: filename=context-libraries.tma filetype=lua foundname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkxl/context-libraries.tma fullname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkxl/context-libraries.tma usedmethod=database
+system          >    8: filename=lm.lfg filetype=tex foundname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
+system          >    9: filename=lmroman10-regular filetype=otf format=otf foundname=/private/tmp/somerville-fenced-prescripts/runtime/texmf/fonts/data/gust/lm/lmroman10-regular.otf fullname=/private/tmp/somerville-fenced-prescripts/runtime/texmf/fonts/data/gust/lm/lmroman10-regular.otf usedmethod=database
+system          >   10: filename=modern-text.lfg filetype=tex foundname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/fonts/mkiv/modern-text.lfg fullname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/fonts/mkiv/modern-text.lfg usedmethod=database
+system          >   11: filename=zeroProbe.ttf format=ttf foundname=zeroProbe.ttf fullname=/private/tmp/somerville-fenced-prescripts/tests/zeroProbe.ttf usedmethod=direct
+system          >   12: filename=somerville.lfg foundname=somerville.lfg fullname=/private/tmp/somerville-fenced-prescripts/tests/somerville.lfg usedmethod=direct
+system          >   13: filename=common-math.lfg filetype=tex foundname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/fonts/mkiv/common-math.lfg fullname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/fonts/mkiv/common-math.lfg usedmethod=database
+system          >   14: filename=probe-on.lfg foundname=probe-on.lfg fullname=/private/tmp/somerville-fenced-prescripts/tests/probe-on.lfg usedmethod=direct
+system          >   15: filename=probe-off.lfg foundname=probe-off.lfg fullname=/private/tmp/somerville-fenced-prescripts/tests/probe-off.lfg usedmethod=direct
+system          >   16: filename=lpdf-pdx.xml filetype=tex foundname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/private/tmp/somerville-fenced-prescripts/runtime/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
+system          > stop used files
+system          > start commandline options
+system          >   batchmode="true"
+system          >   currentrun="1"
+system          >   fulljobname="./zero-tests.tex"
+system          >   input="./zero-tests.tex"
+system          >   kindofrun="3"
+system          >   maxnofruns="1"
+system          >   once="true"
+system          >   texmfbinpath="/Users/juliusross/context/tex/texmf-osx-arm64/bin"
+system          > stop commandline options
+system          > start commandline files
+system          >    1: ./zero-tests.tex
+system          > stop commandline files
+modules         > start used modules
+modules         > stop used modules
+system          > 
+system          > status after finishing run
+system          > 
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert        mvl
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500        500
+system          >   min     150000   10000000     150000     150000   10000000    2000000    1000000      10000        500       1000      20000     100000        250        250         50         25         10
+system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250         10
+system          >   stp     100000    1000000     100000     100000    5000000    1000000    1000000      10000        250       1000      10000      10000        250        250         50         25         10
+system          > 
+system          >   mem     150000     998503     150000              10000000    2000000    1000000      10000        500       1000      20000      10000        250        250         50        500         10
+system          >   itm         16          1         16                     9          8          1         32         32        116          4         16          8          8         28         72        116
+system          >   ext          0          0          0          0       5440          0          0          0          0          0          0          0     420568         96          0          0          0
+system          >   all    2400000     998503    2400000          1   90005440   16000000    1000000     320000      16000     116000      80000     160000     422568       2096       1400      36000       1160
+system          > 
+system          >   ini    2150736     977320          0      53567          0     591100                                                                                       0                                 
+system          >   ptr      54367                  5320      54350                601888          0          0          0          0          0          0          3          1          0         11          0
+system          >   top      54368                495867     262146      20426     602960        256         36          6         12         36        194        250        250         50        500         10
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          > 
+system          >   current input type    : initial
+system          > 
+system          >   approximate memory    : 116013535 (110 MB)
+system          > 
+system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 5
+system          > 
+system          >   luabytecode registers : 1028
+system          >   luabytecode bytes     : 16464 (0 MB)
+system          >   luastate bytes now    : 48454738 (46 MB)
+system          >   luastate bytes max    : 61274819 (58 MB)
+system          > 
+system          >   file callbacks        : 201
+system          >   saved callbacks       : 1304
+system          >   direct callbacks      : 131
+system          >   function callbacks    : 1555
+system          >   value callbacks       : 744
+system          >   message callbacks     : 0
+system          >   bytecode callbacks    : 634
+system          > 
+system          >   mp instances          : 0
+system          >   mp estimated memory   : 0 (0 MB)
+system          >   mp file callbacks     : 0
+system          >   mp text callbacks     : 0
+system          >   mp script callbacks   : 0
+system          >   mp log callbacks      : 0
+system          > 
+system          >   total callbacks       : 4569
+system          >   mp total callbacks    : 0
+system          >   backend callbacks     : 0
+system          > 
+system          >   linebreak statistics  : context      calls     first    second     final  passonly   subpass
+system          > 
+system          >   linebreak statistics  : normal         164       164         0        36         0         0
+system          >   linebreak statistics  : vbox            36        36         0         0         0         0
+system          > 
+system          >   linebreak statistics  :                200       200         0        36         0         0
+system          > 
+system          > 
+system          >   hyphenation state     : checked         140
+system          >   hyphenation state     : lists           140
+system          >   hyphenation state     : nothing         140
+system          > 
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /private/tmp/somerville-fenced-prescripts/runtime/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.007 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 16 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 528 modules (0.142 sec), 106 tables (0.007 sec), 634 chunks (0.149 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1907, freed: 0, unreachable: 1907
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 7 lists of 445
+mkxl run stats  > node memory usage: 6 attribute, 3 attributelist, 1 dir, 9 fontspec, 1 glue, 135 gluespec, 1 kern, 661 mathspec, 2 penalty, 56 specification, 2 temp
+mkxl run stats  > node list callback tasks: 17 unique task lists, 11 instances (re)created, 1288 calls
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: initialized with value 0.54998083421999733
+mkxl run stats  > jobdata time: 0.001 seconds saving, 0.000 seconds loading
+mkxl run stats  > callbacks: file: 201, saved: 1304, direct: 131, function: 1555, value: 744, message: 0, bytecode: 634, late 0, total: 4569 (0 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > loaded fonts: 2 files: lmroman10-regular.otf, zeroprobe.ttf
+mkxl run stats  > font engine: otf 3.156, afm 1.541, tfm 1.000, 3 instances, 1 shared in backend, 1 common vectors, 0 common hashes, load time 0.050 seconds 
+mkxl run stats  > math tweaking time: 0.001 seconds, 12 math goodie tables
+mkxl run stats  > font embedding time: 0.041 seconds, 2 fonts
+mkxl run stats  > result saved in file: zero-tests.pdf, compresslevel 1, objectcompresslevel 3, 19 streams, 0 uncompressed, 18 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20260923, format id: 736, memory mode: 1, compiler: clang, cversion: 23
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 54350 control sequences, 262144 hash slots, 5320 misses, approximate memory usage: 110 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 48 MB, ctx: 46 MB, max: 58 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 0.321 seconds, 12 processed pages, 12 shipped pages, 37.333 pages/second

@@ -1,0 +1,402 @@
+/*
+    See license.txt in the root of this project.
+*/
+
+# include "luametatex.h"
+
+/*tex
+
+    We support the traditional math codes as well as larger ones suitable for \UNICODE\ input and
+    fonts.
+
+*/
+
+/*tex the |0xFFFFFFFF| is a flag value. */
+
+# define MATHCODESTACK   8
+# define MATHCODESTEP    8
+# define MATHCODEDEFAULT 0xFFFFFFFF
+# define MATHCODEACTIVE  0xFFFFFFFE
+
+/*tex Delcodes are also went larger. */
+
+# define DELCODESTACK   4
+# define DELCODESTEP    4
+# define DELCODEDEFAULT 0xFFFFFFFF
+
+typedef struct mathcode_state_info {
+    sa_tree mathcode_head;
+    sa_tree delcode_head;
+} mathcode_state_info;
+
+static mathcode_state_info lmt_mathcode_state = {
+    .mathcode_head = NULL,
+    .delcode_head  = NULL,
+};
+
+/*tex
+
+    We now get lots of helpers for definitions and printing. The storage model that we use is
+    different because we can have many more so we need to be sparse. Therefore we use trees.
+
+*/
+
+static inline void print_hex_digit_one(uint8_t nibble)
+{
+    nibble &= 0x0F;
+    tex_print_char(nibble < 10 ? '0' + nibble : 'A' + (nibble - 10));
+}
+
+static inline void print_hex_digit_two(uint8_t value)
+{
+    print_hex_digit_one(value >> 4);
+    print_hex_digit_one(value     );
+}
+
+// static inline void print_hex_digit_four(uint16_t value)
+// {
+//     print_hex_digit_two((uint8_t) (value >> 8));
+//     print_hex_digit_two((uint8_t)  value      );
+// }
+
+static inline void print_hex_digit_six(uint32_t value)
+{
+    print_hex_digit_two((uint8_t) (value >> 16));
+    print_hex_digit_two((uint8_t) (value >>  8));
+    print_hex_digit_two((uint8_t)  value       );
+}
+
+/* 0xFFFFF is plenty for math */
+
+mathcodeval tex_mathchar_from_integer(int value, int extcode)
+{
+    mathcodeval mval;
+    if (extcode == tex_mathcode) {
+        mval.class_value = math_old_class_part(value);
+        mval.family_value = math_old_family_part(value);
+        mval.character_value = math_old_character_part(value);
+    } else {
+        mval.class_value = math_class_part(value);
+        mval.family_value = math_family_part(value);
+        mval.character_value = math_character_part(value);
+    }
+    return mval;
+}
+
+mathcodeval tex_mathchar_from_spec(int value)
+{
+    mathcodeval mval = tex_no_math_code();
+    if (value) {
+        mval.class_value = math_spec_class(value);
+        mval.family_value = math_spec_family(value);
+        mval.character_value = math_spec_character(value);
+    }
+    return mval;
+}
+
+void tex_show_mathcode_value(mathcodeval mval, int extcode) /* todo: format option */
+{
+    tex_print_char('"');
+    if (extcode == tex_mathcode) {
+        print_hex_digit_one((uint8_t) math_old_class_mask(mval.class_value));
+        print_hex_digit_one((uint8_t) math_old_family_mask(mval.family_value));
+        print_hex_digit_two((uint8_t) math_old_character_mask(mval.character_value));
+    } else {
+        print_hex_digit_two((uint8_t) mval.class_value);
+        tex_print_char('"');
+        print_hex_digit_two((uint8_t) mval.family_value);
+        tex_print_char('"');
+        print_hex_digit_six(mval.character_value);
+    }
+}
+
+static void tex_aux_show_mathcode(int n)
+{
+    mathcodeval mval = tex_get_math_code(n);
+    tex_print_format("%eUmathcode%i=", n);
+    tex_show_mathcode_value(mval, umath_mathcode);
+}
+
+static void tex_aux_unsave_mathcode(int level)
+{
+    if (lmt_mathcode_state.mathcode_head->stack) {
+        while (lmt_mathcode_state.mathcode_head->sa_stack_ptr > 0 && abs(lmt_mathcode_state.mathcode_head->stack[lmt_mathcode_state.mathcode_head->sa_stack_ptr].level) >= level) {
+            sa_stack_item item = lmt_mathcode_state.mathcode_head->stack[lmt_mathcode_state.mathcode_head->sa_stack_ptr];
+            if (item.level > 0) {
+                sa_rawset_item_4(lmt_mathcode_state.mathcode_head, item.code, item.value_1);
+                if (tracing_restores_par > 1) {
+                    tex_begin_diagnostic();
+                    tex_print_format("%l{restoring ");
+                    tex_aux_show_mathcode(item.code);
+                    tex_print_char('}');
+                    tex_end_diagnostic();
+                }
+            }
+            (lmt_mathcode_state.mathcode_head->sa_stack_ptr)--;
+        }
+    }
+}
+
+mathcodeval tex_no_math_code(void)
+{
+    return (mathcodeval) { 0, 0, 0 };
+}
+
+static int tex_aux_valid_math_code(int n, mathcodeval v)
+{
+    if (v.class_value < 0 || v.class_value > max_math_class_code || v.family_value < 0 || v.family_value > max_math_family_index || v.character_value < 0) {
+        tex_handle_error(
+            normal_error_type,
+            "Invalid math code%h",
+            "I'm going to use 0 instead of that illegal code value."
+        );
+        return 0;
+    }
+    if (v.character_value > max_math_character_code && ! (v.class_value == 0 && v.family_value == 0 && v.character_value == n)) {
+        tex_handle_error(
+            normal_error_type,
+            "Invalid math character%h",
+            "The sparse math-code table stores characters in the range 0..0xFFFFF; I'm going to use 0."
+        );
+        return 0;
+    }
+    if (v.class_value == active_math_class_value && v.family_value == 0 && v.character_value == 0) {
+        return 1;
+    }
+    {
+        unsigned int packed = math_packed_character(v.class_value, v.family_value, v.character_value);
+        if (packed == MATHCODEDEFAULT || packed == MATHCODEACTIVE) {
+            tex_handle_error(
+                normal_error_type,
+                "Reserved math code%h",
+                "I'm going to use 0 instead of a value that conflicts with the sparse table markers."
+            );
+            return 0;
+        }
+    }
+    return 1;
+}
+
+void tex_set_math_code(int n, mathcodeval v, int level)
+{
+    sa_tree_item item;
+    if (! tex_aux_valid_math_code(n, v)) {
+        v = tex_no_math_code();
+    }
+    if (v.class_value == active_math_class_value && v.family_value == 0 && v.character_value == 0) {
+        item.uint_value = MATHCODEACTIVE;
+    } else if (v.class_value == 0 && v.family_value == 0 && v.character_value == n) {
+        /* The default marker is key-relative, so it is safe only for an identity mapping. */
+        item.uint_value = MATHCODEDEFAULT;
+    } else {
+        item.uint_value = 0;
+        item.math_code_value.class_value = v.class_value;
+        item.math_code_value.family_value = v.family_value;
+        item.math_code_value.character_value = v.character_value;
+    }
+    sa_set_item_4(lmt_mathcode_state.mathcode_head, n, item, level);
+    if (tracing_assigns_par > 1) {
+        tex_begin_diagnostic();
+        tex_print_format("%l{assigning ");
+        tex_aux_show_mathcode(n);
+        tex_print_char('}');
+        tex_end_diagnostic();
+    }
+}
+
+mathcodeval tex_get_math_code(int n)
+{
+    sa_tree_item item;
+    mathcodeval m = tex_no_math_code();
+    sa_get_item_4(lmt_mathcode_state.mathcode_head, n, &item);
+    if (item.uint_value == MATHCODEDEFAULT) {
+        m.character_value = n;
+    } else if (item.uint_value == MATHCODEACTIVE) {
+        m.class_value = active_math_class_value;
+    } else {
+        m.class_value = (short) item.math_code_value.class_value;
+        m.family_value = (short) item.math_code_value.family_value;
+        m.character_value = item.math_code_value.character_value;
+    }
+    return m;
+}
+
+unsigned int tex_get_math_code_number(int n)
+{
+    mathcodeval d = tex_get_math_code(n);
+    return math_packed_character(d.class_value, d.family_value, d.character_value);
+}
+
+static void tex_aux_initialize_mathcode(void)
+{
+    lmt_mathcode_state.mathcode_head = sa_new_tree(mathcode_sparse_identifier, MATHCODESTACK, MATHCODESTEP, 4, (sa_tree_item) { .uint_value = MATHCODEDEFAULT });
+}
+
+static void tex_aux_dump_mathcode(dumpstream f)
+{
+    sa_dump_tree(f, lmt_mathcode_state.mathcode_head);
+}
+
+static void tex_aux_undump_mathcode(dumpstream f)
+{
+    lmt_mathcode_state.mathcode_head = sa_undump_tree(f);
+}
+
+static void tex_aux_show_delcode(int n)
+{
+    delcodeval dval = tex_get_del_code(n);
+    tex_print_format("%eUdelcode=", n);
+    if (tex_has_del_code(dval)) {
+        tex_print_char('"');
+        print_hex_digit_two((uint8_t) dval.small.family_value);
+        print_hex_digit_six(dval.small.character_value);
+    } else {
+        tex_print_str_len("-1", 2);
+    }
+}
+
+static void tex_aux_unsave_delcode(int level)
+{
+    if (lmt_mathcode_state.delcode_head->stack) {
+        while (lmt_mathcode_state.delcode_head->sa_stack_ptr > 0 && abs(lmt_mathcode_state.delcode_head->stack[lmt_mathcode_state.delcode_head->sa_stack_ptr].level) >= level) {
+            sa_stack_item item = lmt_mathcode_state.delcode_head->stack[lmt_mathcode_state.delcode_head->sa_stack_ptr];
+            if (item.level > 0) {
+                sa_rawset_item_8(lmt_mathcode_state.delcode_head, item.code, item.value_1, item.value_2);
+                if (tracing_restores_par > 1) {
+                    tex_begin_diagnostic();
+                    tex_print_format("%l{restoring ");
+                    tex_aux_show_delcode(item.code);
+                    tex_print_char('}');
+                    tex_end_diagnostic();
+                }
+            }
+            (lmt_mathcode_state.delcode_head->sa_stack_ptr)--;
+        }
+    }
+}
+
+void tex_set_del_code(int n, delcodeval v, int level)
+{
+    sa_tree_item v1, v2; /* seldom all zero */
+    if (v.small.class_value < 0 || v.small.class_value > max_math_class_code || v.small.family_value < 0 || v.small.family_value > max_math_family_index || v.small.character_value < 0 || v.small.character_value > max_math_character_code ||
+        v.large.class_value < 0 || v.large.class_value > max_math_class_code || v.large.family_value < 0 || v.large.family_value > max_math_family_index || v.large.character_value < 0 || v.large.character_value > max_math_character_code ||
+        math_packed_character(v.small.class_value, v.small.family_value, v.small.character_value) == DELCODEDEFAULT) {
+        tex_handle_error(
+            normal_error_type,
+            "Invalid delimiter code%h",
+            "The sparse delimiter-code table stores characters in the range 0..0xFFFFF; I'm going to use 0."
+        );
+        v = (delcodeval) { { 0, 0, 0 }, { 0, 0, 0 } };
+    }
+    v1.uint_value = 0;
+    v2.uint_value = 0;
+    v1.math_code_value.class_value = v.small.class_value;
+    v1.math_code_value.family_value = v.small.family_value;
+    v1.math_code_value.character_value = v.small.character_value;
+    v2.math_code_value.class_value = v.large.class_value;
+    v2.math_code_value.family_value = v.large.family_value;
+    v2.math_code_value.character_value = v.large.character_value;
+    /*tex Always global! */
+    sa_set_item_8(lmt_mathcode_state.delcode_head, n, v1, v2, level);
+    if (tracing_assigns_par > 1) {
+        tex_begin_diagnostic();
+        tex_print_format("%l{assigning ");
+        tex_aux_show_delcode(n);
+        tex_print_char('}');
+        tex_end_diagnostic();
+    }
+}
+
+int tex_has_del_code(delcodeval d)
+{
+    return d.small.family_value >= 0;
+}
+
+delcodeval tex_no_del_code(void)
+{
+    return (delcodeval) { { 0, -1, 0 }, { 0, 0, 0 } };
+}
+
+delcodeval tex_get_del_code(int n)
+{
+    sa_tree_item v1, v2;
+    delcodeval d = { { 0, -1, 0 }, { 0, 0, 0} };
+    sa_get_item_8(lmt_mathcode_state.delcode_head, n, &v1, &v2);
+    if (v1.uint_value != DELCODEDEFAULT) {
+        d.small.class_value = (short) v1.math_code_value.class_value;
+        d.small.family_value = (short) v1.math_code_value.family_value;
+        d.small.character_value = v1.math_code_value.character_value;
+        d.large.class_value = (short) v2.math_code_value.class_value;
+        d.large.family_value = (short) v2.math_code_value.family_value;
+        d.large.character_value = v2.math_code_value.character_value;
+    }
+    return d;
+}
+
+/*tex */
+
+mathdictval tex_no_dict_code(void) 
+{
+    return (mathdictval) { 0, 0, 0 };
+}
+
+
+/*tex  This really only works for old-style delcodes! */
+
+int tex_get_del_code_number(int n)
+{
+    delcodeval d = tex_get_del_code(n);
+    if (tex_has_del_code(d)) {
+        return ((d.small.family_value * 256  + d.small.character_value) * 4096 +
+                (d.large.family_value * 256) + d.large.character_value);
+    } else {
+        return -1;
+    }
+}
+
+static void tex_aux_initialize_delcode(void)
+{
+    lmt_mathcode_state.delcode_head = sa_new_tree(delcode_sparse_identifier, DELCODESTACK, DELCODESTEP, 8, (sa_tree_item) { .uint_value = DELCODEDEFAULT });
+}
+
+static void tex_aux_dump_delcode(dumpstream f)
+{
+    sa_dump_tree(f, lmt_mathcode_state.delcode_head);
+}
+
+static void tex_aux_undump_delcode(dumpstream f)
+{
+    lmt_mathcode_state.delcode_head = sa_undump_tree(f);
+}
+
+void tex_unsave_math_codes(int grouplevel)
+{
+    tex_aux_unsave_mathcode(grouplevel);
+    tex_aux_unsave_delcode(grouplevel);
+}
+
+void tex_initialize_math_codes(void)
+{
+    tex_aux_initialize_mathcode();
+    tex_aux_initialize_delcode();
+    /*tex This might become optional: */
+    tex_set_default_math_codes();
+}
+
+void tex_free_math_codes(void)
+{
+    sa_destroy_tree(lmt_mathcode_state.mathcode_head);
+    sa_destroy_tree(lmt_mathcode_state.delcode_head);
+}
+
+void tex_dump_math_codes(dumpstream f)
+{
+    tex_aux_dump_mathcode(f);
+    tex_aux_dump_delcode(f);
+}
+
+void tex_undump_math_codes(dumpstream f)
+{
+    tex_aux_undump_mathcode(f);
+    tex_aux_undump_delcode(f);
+}

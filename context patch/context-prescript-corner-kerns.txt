@@ -1,15 +1,43 @@
-PROPOSAL: INDEPENDENT PRESCRIPT CORNER KERNS IN LUAMETATEX
+INDEPENDENT PRESCRIPT CORNER KERNS IN LUAMETATEX
 Saved 21 October 2026
+Status updated 24 October 2026
 
 STATUS
 
-This is an experimental proposal, not a validated engine fix. The accompanying
-context-prescript-corner-kerns.patch was generated against the installed source
-at /Users/juliusross/context/tex/texmf-context/source/luametatex.
-It has NOT been applied, compiled, or tested for rendered output. No installed
-ConTeXt sources or Somerville goodies were modified to create this proposal.
-The companion .sha256 file records the exact original contents of the three
-source files against which the patch was generated.
+The original glyph-base patch was applied and in use. On 24 October 2026,
+Julius confirmed that it was working well in his Somerville tests.
+
+A replacement patch extending the same opt-in behavior to fenced expressions
+was developed, built, tested, and installed on 24 October 2026. The source tree
+and installed binary are at:
+
+    /Users/juliusross/context/tex/texmf-context/source/luametatex
+    /Users/juliusross/context/tex/texmf-osx-arm64/bin/luametatex
+
+The replacement includes the original glyph-base changes; it is not an
+additional patch to apply on top of that version. Its four source files match
+the installed source. A reverse dry run succeeds against the installed tree.
+The companion .sha256 records the unpatched baseline, including texmlist.h.
+The recovered original three files matched the previously recorded hashes.
+
+The source tree, previous working engine, original patch, notes, hashes, and
+pre-install letter-test outputs are backed up at:
+
+    context patch/backups/2026-10-24-before-fenced-prescripts/
+
+The backup source-tree omits only the top-level generated build directory.
+The source library's required softposit/build files are included. sha256.json
+records the backup file hashes. The separate development/build tree is at:
+
+    /tmp/somerville-fenced-prescripts/
+
+Validation fixtures, numeric assertions, logs, the test PDF, and the tested new
+binary are saved at:
+
+    context patch/validation/2026-10-24-fenced-prescripts/
+
+The Somerville goodie enables simplifykerns and separateprescriptkerns.
+Named anchors are represented by simple corner fields after simplifykerns.
 
 MOTIVATION
 
@@ -37,7 +65,7 @@ the inspected source finds the most negative value in each left table, reverses
 its sign, and then takes the minimum of those corner results. In the example,
 min(127, 0) = 0. This eliminates the overlap but also the upper-left adjustment.
 
-DESIRED BEHAVIOUR
+IMPLEMENTED BEHAVIOUR
 
 For a single-glyph base and single-glyph prescripts, use these sums:
 
@@ -56,6 +84,19 @@ With constant corner values there is no need to evaluate correction heights:
 every height lookup would return the same value. The script's opposite corner
 still matters. A zero base corner does not imply a zero pair adjustment if the
 script has a nonzero opposite corner.
+
+For fenced expressions, use the carried top-left and bottom-left kerns of the
+selected left delimiter, with separate source fonts for option checks. These
+values are already scaled; do not scale them a second time. A single-character
+prescript adds its opposite right corner at the script's effective size. As
+requested by Julius, a multi-character or otherwise complex prescript uses
+only the delimiter's kern: no first-character/right-edge guess is made.
+
+Both a selected larger variant and a multi-piece delimiter assembly are
+supported. For an assembly, the top-left corner comes from the top component
+and the bottom-left corner from the bottom component. An invisible left fence
+contributes no inherited delimiter kern. Existing carry-over class options and
+the source font's separateprescriptkerns flag must permit each corner.
 
 Italic correction is deliberately outside this proposal. Existing moveitalics,
 glyph widths, postscript italic correction, and right-hand script positioning
@@ -81,14 +122,27 @@ PATCH STRUCTURE
    Append the appropriate variable to each prescript box.
 
    If the existing analyser cannot identify a script glyph, the helper falls
-   back to the base's corner alone. Non-glyph bases retain the current absence
-   of this particular adjustment; their corner propagation is not extended.
+   back to the base's corner alone. The existing glyph-base path is preserved.
+
+   Add tex_aux_single_prescript_character and tex_aux_fenced_prescript_kern.
+   In the non-glyph branch, handle fenced_noad_subtype using carried corners.
+   Calculate upper and lower script sizes through the same style variants and
+   nosupprescript/nosubprescript choices used to build the script boxes.
+   Append to the existing independent presupkern/presubkern variables.
+
+   Extend fence finishing to record the font supplying each left corner and
+   clear that provenance for an invisible left fence. Extend kernset wiping
+   and copying to initialize and propagate these fields.
+
+4. source/tex/texmlist.h
+   Add lefttopfont and leftbottomfont to kernset. These fields are separate
+   from its existing shared font field, which also serves dimension handling.
 
 The old helper remains because the disabled path still needs it. The patch does
 not require changing math-act.lmt: ConTeXt already has a setoptions tweak that
 looks up names in tex.mathcontrolcodes and enables font-specific control.
 
-PROPOSED GOODIE CONFIGURATION
+GOODIE CONFIGURATION IN USE
 
 After rebuilding with this engine change, include these entries in
 mathematics.tweaks.aftercopying:
@@ -115,15 +169,16 @@ The new name has no effect on an unmodified engine: the existing setoptions
 implementation skips unrecognised control names. A goodie alone cannot install
 the new layout behaviour.
 
-IMPORTANT IMPLEMENTATION QUESTIONS BEFORE USE
+REMAINING IMPLEMENTATION QUESTIONS
 
-The patch intentionally preserves the proposed approach from the discussion,
-including unresolved areas. It must not be treated as production-ready.
+The current implementation is working in Julius's tests. The following areas
+remain to be reviewed or covered by broader regression tests.
 
 * Script sizes: the proposal uses base_size + 1, capped at scriptscript, as in
-  the ordinary postscript kern routine. Explicit styles, nosupprescript and
-  nosubprescript options, cramped styles, and other style variants require
-  review. Ideally obtain the actual effective size for each script.
+  the ordinary postscript kern routine. This remains unchanged for glyph bases.
+  The new fence path derives its script size from the effective script style,
+  including nosupprescript/nosubprescript. Explicit style nodes inside complex
+  script lists use the delimiter-only fallback.
 * Glyph analysis: tex_aux_analyze_script obeys existing analysis controls and
   can identify glyphs inside lists. Verify that the glyph it identifies is the
   correct right-edge glyph for a prescript. Its existing traversal must NOT be
@@ -133,9 +188,12 @@ including unresolved areas. It must not be treated as production-ready.
   reflected in the analysed glyph and its corner values.
 * Scaling: verify font and math-size scaling independently for base and script,
   including differently sized or different-font scripts and glyph scaling.
-* Composite bases: accented bases, fences, operators, fractions and grouped
-  nuclei may need a separate policy for inherited corner values. This initial
-  glyph-only branch does not implement it.
+* Composite bases: fences are now implemented and tested. Accented bases,
+  operators, fractions and arbitrary grouped nuclei are outside this extension.
+* Fence script analysis: only a direct math character or a single unscripted
+  character noad qualifies for an opposite script-corner contribution. Lists
+  containing style changes, boxes or multiple noads conservatively receive
+  the delimiter contribution alone.
 * Layout: adding a kern changes each script box's width. Check the subsequent
   common-width packing and alignment when both prescripts exist, when their
   widths differ, and when postscripts coexist.
@@ -145,7 +203,39 @@ including unresolved areas. It must not be treated as production-ready.
 * Compatibility: the disabled path should preserve layout. Its diagnostic kern
   label changes in this proposal, so log output is not necessarily identical.
 
-VALIDATION PLAN
+COMPLETED VALIDATION FOR THE FENCE EXTENSION
+
+* Built separately with AppleClang/CMake Release, LMT_NOOPTIMIZE=ON (-O2
+  compilation retained; link-time optimization disabled). No warnings arose
+  from the changed engine code; softposit emitted existing comparison warnings.
+* 128 named cases compared with the previous working engine. All 64 cases
+  with the option disabled matched exactly. The existing glyph-base case
+  also matched exactly with the option enabled.
+* Numeric assertions verified independent negative top/bottom corner values,
+  opposite-corner additions for single-character scripts, delimiter-only values
+  for multi-character scripts, and no double scaling.
+* Another 128 cases each tested zero and positive delimiter corners.
+* An assembly document ran 131 cases with a modified Latin Modern test font,
+  including forced multi-piece parentheses, square brackets and braces.
+* Nested fences, an invisible left delimiter, script style and simultaneous
+  prescripts/postscripts compiled; numeric assertions cover the nested,
+  invisible and script-style cases.
+* The copied Somerville letter-test compiled into four pages with the separate
+  new engine before installation. The installed engine also ran the 128-case
+  comparison suite and matched the separately tested new engine. The original
+  letter-test document was then recompiled successfully with the installed
+  engine (four pages, 315 x 297 mm).
+* Both the original-baseline applicability dry run and installed-source reverse
+  dry run passed. Applying the replacement to a clean baseline reproduces the
+  installed source files exactly.
+
+These checks extend Julius's successful testing of the original glyph-base
+patch. They do not claim that every broader regression item below is complete.
+
+BROADER VALIDATION PLAN
+
+Successful user testing is recorded in STATUS above. The following is the
+broader regression plan, not a list of checks already completed.
 
 1. Check patch applicability against an isolated copy of the recorded sources.
 2. Compile that engine separately; do not replace the working binary initially.
@@ -166,8 +256,17 @@ VALIDATION PLAN
 
 HOW TO REVISIT THE PATCH
 
+Leave the working installation in place while developing a revision. Back up
+the current patched source and engine binary, copy the source to a separate
+working directory, and reverse the old patch there to recover the baseline.
+Check the recovered files against the companion .sha256 before making changes.
+Develop and test the revision with a separately built engine, then generate one
+replacement patch against that baseline. When installing the validated revision,
+reverse the old patch before applying the replacement; do not apply a complete
+replacement patch on top of the old one.
+
 The patch paths are relative to the LuaMetaTeX source root (containing source/).
-Against a separate source checkout, a non-mutating applicability check is:
+For a Git checkout of the unpatched sources, an applicability check is:
 
     git apply --check /absolute/path/context-prescript-corner-kerns.patch
 
@@ -175,7 +274,12 @@ Only when deliberately ready to modify that checkout:
 
     git apply /absolute/path/context-prescript-corner-kerns.patch
 
-This proposal does not include a build or installation command: inspect the
+The installed source directory is not a Git repository; use patch there or in
+its copied working directory. A non-mutating check of the applied patch is:
+
+    patch --dry-run -R -p1 -i /absolute/path/context-prescript-corner-kerns.patch
+
+These notes do not include a build or installation command: inspect the
 build instructions for the selected LuaMetaTeX revision before building it.
 Installed logs during the investigation reported LuaMetaTeX 2.11.10,
 functionality level 20260923. The hashes, rather than that version string alone,

@@ -1,0 +1,6 @@
+mathematics.tweaks.probeoff = function(target)
+ local code=tex.mathcontrolcodes
+ local control=(tex.get("mathfontcontrol") & (~code.separateprescriptkerns)) | code.usefontcontrol
+ target.mathcontrol=control; target.properties.mathcontrol=control
+end
+return {name="probe-off",mathematics={tweaks={aftercopying={{tweak="probeoff"}}}}}

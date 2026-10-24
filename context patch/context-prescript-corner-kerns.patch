@@ -20,9 +20,38 @@
      return 1;
  }
  
+--- a/source/tex/texmlist.h
++++ b/source/tex/texmlist.h
+@@ -18,6 +18,8 @@
+     halfword font;
+     halfword character; 
+     halfword padding;
++    halfword lefttopfont;    /* source of carried fence top-left kern */
++    halfword leftbottomfont; /* source of carried fence bottom-left kern */
+ } kernset; 
+ 
+ typedef enum mlist_to_hlist_contexts { 
 --- a/source/tex/texmlist.c
 +++ b/source/tex/texmlist.c
-@@ -5901,6 +5901,28 @@
+@@ -322,6 +322,8 @@
+         kerns->font = null_font;
+         kerns->character = 0;
+         kerns->padding = 0;
++        kerns->lefttopfont = null_font;
++        kerns->leftbottomfont = null_font;
+     }
+ }
+ 
+@@ -340,6 +342,8 @@
+         kerns->font = parent->font;
+         kerns->character = parent->character;
+         kerns->padding = parent->padding;
++        kerns->lefttopfont = parent->lefttopfont;
++        kerns->leftbottomfont = parent->leftbottomfont;
+     }
+ }
+ 
+@@ -5901,6 +5905,70 @@
  
  */
  
@@ -48,10 +77,52 @@
 +    return kern;
 +}
 +
++/* Only a genuinely single-character script supplies an opposite corner.
++   Complex scripts use the delimiter's carried kern alone. Do not let the
++   general analyzer choose the first character of a multi-character list. */
++static int tex_aux_single_prescript_character(halfword script)
++{
++    if (! script) {
++        return 0;
++    }
++    if (node_type(script) == math_char_node) {
++        return 1;
++    }
++    if (node_type(script) == sub_mlist_node) {
++        halfword list = math_kernel_list(script);
++        return list && ! node_next(list) && node_type(list) == simple_noad
++            && ! noad_has_scripts(list) && noad_nucleus(list)
++            && node_type(noad_nucleus(list)) == math_char_node;
++    }
++    return 0;
++}
++
++static scaled tex_aux_fenced_prescript_kern(
++    scaled base_kern, halfword base_font, halfword script,
++    halfword script_size, int upper)
++{
++    if (! base_font || base_kern == MATH_KERN_NOT_FOUND
++        || ! tex_aux_math_engine_control(base_font, math_control_separate_prescript_kerns)) {
++        return 0;
++    }
++    /* Already scaled when the selected delimiter's corners were carried. */
++    scaled kern = base_kern;
++    if (tex_aux_single_prescript_character(script)) {
++        scriptdata data = { 0 };
++        data.node = tex_aux_analyze_script(script, &data);
++        if (data.node && tex_char_exists(data.fnt, data.chr)) {
++            int corner = upper ? bottom_right_kern : top_right_kern;
++            kern += tex_aux_math_x_size_scaled(
++                data.fnt, tex_aux_math_kern_at(data.fnt, data.chr, corner, 0, 1), script_size);
++        }
++    }
++    return kern;
++}
++
  static void tex_aux_make_scripts(halfword target, halfword kernel, scaled italic, int style, scaled supshift, scaled subshift, scaled supdrop, kernset *kerns, halfword single)
  {
      halfword result = null;
-@@ -5916,7 +5938,8 @@
+@@ -5916,7 +5984,8 @@
      scriptdata presubdata  = { .node = null, .fnt = null_font, .chr = 0, .box = null, .kern = 0, .slack = 0, .shifted = 0, .whatever = 0 };
      scriptdata presupdata  = { .node = null, .fnt = null_font, .chr = 0, .box = null, .kern = 0, .slack = 0, .shifted = 0, .whatever = 0 };
      scriptdata primedata   = { .node = null, .fnt = null_font, .chr = 0, .box = null, .kern = 0, .slack = 0, .shifted = 0, .whatever = 0 };
@@ -61,7 +132,7 @@
   // halfword maxrightkern = 0;
      scaled leftslack = 0;
      scaled rightslack = 0;
-@@ -6012,9 +6035,24 @@
+@@ -6012,14 +6081,45 @@
              postsubdata.node = tex_aux_analyze_script(noad_subscr(target), &postsubdata);
              postsupdata.node = tex_aux_analyze_script(noad_supscr(target), &postsupdata);
              primedata.node = tex_aux_analyze_script(noad_prime(target), &primedata);
@@ -89,7 +160,28 @@
              prime_up = 0;
              shift_up = 0;
              shift_down = 0;
-@@ -6189,8 +6227,8 @@
+             break;
+         default:
++            if (kerns && node_type(target) == simple_noad && node_subtype(target) == fenced_noad_subtype) {
++                if (noad_supprescr(target)) {
++                    halfword script_style = has_noad_option_nosupprescript(target)
++                        ? style : tex_math_style_variant(style, math_parameter_superscript_variant);
++                    presupkern = tex_aux_fenced_prescript_kern(
++                        kerns->topleft, kerns->lefttopfont, noad_supprescr(target),
++                        tex_aux_set_style_to_size(script_style), 1);
++                }
++                if (noad_subprescr(target)) {
++                    halfword script_style = has_noad_option_nosubprescript(target)
++                        ? style : tex_math_style_variant(style, math_parameter_subscript_variant);
++                    presubkern = tex_aux_fenced_prescript_kern(
++                        kerns->bottomleft, kerns->leftbottomfont, noad_subprescr(target),
++                        tex_aux_set_style_to_size(script_style), 0);
++                }
++            }
+             if (has_noad_option_single(target) || tex_aux_singled(target, kernelsize, style, single)) {
+                 prime_up = 0;
+                 shift_up = 0;
+@@ -6189,8 +6289,8 @@
          presupdata.slack = tex_get_math_x_parameter_checked(style, math_parameter_extra_superprescript_space);
          presupdata.slack += tex_round_xn_over_d(tex_get_math_x_parameter_default(style, math_parameter_space_before_script, 0), script_space_before_factor_par, scaling_factor);
          presupdata.box = tex_aux_clean_box(noad_supprescr(target), (has_noad_option_nosupprescript(target) ? style : tex_math_style_variant(style, math_parameter_superscript_variant)), style, math_sup_list, 0, NULL);
@@ -100,7 +192,7 @@
          }
          if (extra) {
              box_height(presupdata.box) += extra;
-@@ -6208,8 +6246,8 @@
+@@ -6208,8 +6308,8 @@
          presubdata.slack = tex_get_math_x_parameter_checked(style, math_parameter_extra_subprescript_space);
          presubdata.slack += tex_round_xn_over_d(tex_get_math_x_parameter_default(style, math_parameter_space_before_script, 0), script_space_before_factor_par, scaling_factor);
          presubdata.box = tex_aux_clean_box(noad_subprescr(target), (has_noad_option_nosubprescript(target) ? style : tex_math_style_variant(style, math_parameter_subscript_variant)), style, math_sub_list, 0, NULL);
@@ -111,3 +203,25 @@
          }
          if (extra) {
              box_depth(presubdata.box) += extra;
+@@ -7272,14 +7372,21 @@
+ {
+     delimiterextremes extremes = { .tfont = null_font, .tchar = 0, .bfont = null_font, .bchar = 0, .height = 0, .depth = 0 };
+     noad_analyzed(current) = (singleword) tex_aux_make_left_right(current, main_style, max_depth, max_height, main_size, &extremes);
++    if (kerns && (node_subtype(current) == left_fence_side || node_subtype(current) == extended_left_fence_side)) {
++        /* An invisible left fence must not inherit an inner fence's provenance. */
++        kerns->lefttopfont = null_font;
++        kerns->leftbottomfont = null_font;
++    }
+     if (kerns && extremes.tfont) {
+         switch (node_subtype(current)) {
+             case left_fence_side:
+             case extended_left_fence_side:
+                 if (tex_math_has_class_option(fenced_noad_subtype, carry_over_left_top_kern_class_option)) {
++                     kerns->lefttopfont = extremes.tfont;
+                      kerns->topleft = tex_aux_math_x_size_scaled(extremes.tfont, tex_char_top_left_kern_from_font(extremes.tfont, extremes.tchar), main_size);
+                 }
+                 if (tex_math_has_class_option(fenced_noad_subtype, carry_over_left_bottom_kern_class_option)) {
++                     kerns->leftbottomfont = extremes.bfont;
+                      kerns->bottomleft = tex_aux_math_x_size_scaled(extremes.bfont, tex_char_bottom_left_kern_from_font(extremes.bfont, extremes.bchar), main_size);
+                 }
+                 if (tex_math_has_class_option(fenced_noad_subtype, prefer_delimiter_dimensions_class_option)) {

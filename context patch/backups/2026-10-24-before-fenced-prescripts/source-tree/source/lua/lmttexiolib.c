@@ -1,0 +1,393 @@
+/*
+    See license.txt in the root of this project.
+*/
+
+/*tex
+
+    This is a small module that deals with logging. We inherit from \TEX\ the dualistic model
+    of console (terminal) and log file. One can write to one of them or both at the same time.
+    We also inherit most of the logic that deals with going to a new line but we don't have the
+    escaping with |^^| any longer: we live in \UNICODE\ times now. Because \TEX\ itself often
+    outputs single characters and/or small strings, the console actually can have some real
+    impact on performance: updating the display, rendering with complex fonts, intercepting
+    \ANSI\ control sequences, scrolling, etc.
+
+*/
+
+# include "luametatex.h"
+
+# define file_mt_method 1
+
+# if file_mt_method == 1
+
+    static const void *G_FILEHANDLE_METATABLE_PTR = NULL;
+
+    FILE *lmt_valid_file(lua_State *L)
+    {
+        luaL_Stream *p = (luaL_Stream *) lua_touserdata(L, 1);
+        if (p && lua_getmetatable(L, 1)) {
+            if (lua_topointer(L, -1) != G_FILEHANDLE_METATABLE_PTR) {
+                p = NULL;
+            }
+            lua_pop(L, 1);
+            return (p && p->closef) ? p->f : NULL;
+        }
+        return NULL;
+    }
+
+# else
+
+    FILE *lmt_valid_file(lua_State *L)
+    {
+        luaL_Stream *p = (luaL_Stream *) lua_touserdata(L, 1);
+        if (p && lua_getmetatable(L, 1)) {
+         // luaL_getmetatable(L, LUA_FILEHANDLE);
+            lua_get_metatablelua(file_handle_instance);
+            if (! lua_rawequal(L, -1, -2)) {
+                p = NULL;
+            }
+            lua_pop(L, 2);
+            return (p && (p)->closef) ? p->f : NULL;
+        }
+        return NULL;
+    }
+
+# endif
+
+typedef void (*texio_printer_len) (const char *s, int len);
+
+static int texiolib_getselectorvalues(lua_State *L)
+{
+    lua_createtable(L, 3, 0);
+    lua_push_key_at_index(L, logfile,              terminal_selector_code            );
+    lua_push_key_at_index(L, terminal,             logfile_selector_code             );
+    lua_push_key_at_index(L, terminal_and_logfile, terminal_and_logfile_selector_code);
+    return 1;
+}
+
+static inline int texiolib_aux_get_selector_value(lua_State *L, int i, int *l, int dflt)
+{
+    switch (lua_type(L, i)) {
+        case LUA_TSTRING:
+            {
+                const char *s = lua_tostring(L, i);
+                if (lua_key_eq(s, logfile)) {
+                    *l = logfile_selector_code;
+                } else if (lua_key_eq(s, terminal)) {
+                    *l = terminal_selector_code;
+                } else if (lua_key_eq(s, terminal_and_logfile)) {
+                    *l = terminal_and_logfile_selector_code;
+                } else {
+                    *l = dflt;
+                }
+                return 1;
+            }
+        case LUA_TNUMBER:
+            {
+                int n = lmt_tointeger(L, i);
+                *l = n >= terminal_selector_code && n <= terminal_and_logfile_selector_code ? n : dflt;
+                return 1;
+            }
+        default:
+            return luaL_error(L, "(first) argument is not 'terminal_and_logfile', 'terminal' or 'logfile'");
+    }
+}
+
+static void texiolib_aux_print(lua_State *L, int n, texio_printer_len printfunction, const char *dflt, int dflt_len)
+{
+    int i = 1;
+    int saved_selector = lmt_print_state.selector;
+    if (n > 1 && texiolib_aux_get_selector_value(L, i, &lmt_print_state.selector, terminal_selector_code)) {
+        i++;
+    }
+    switch (lmt_print_state.selector) {
+        case terminal_and_logfile_selector_code:
+        case logfile_selector_code:
+        case terminal_selector_code:
+            if (i <= n) {
+                do {
+                    switch (lua_type(L, i)) {
+                        case LUA_TNIL:
+                            break;
+                        case LUA_TBOOLEAN:
+                        case LUA_TNUMBER:
+                        case LUA_TSTRING:
+                            {
+                                size_t len = 0;
+                                const char *s = lua_tolstring(L, i, &len);
+                                if (s && len > 0) {
+                                    printfunction(s, (int) len);
+                                }
+                            }
+                            break;
+                        default:
+                            luaL_error(L, "argument is not a string, number or boolean");
+                    }
+                    i++;
+                } while (i <= n);
+            } else if (dflt && dflt_len > 0) {
+                printfunction(dflt, dflt_len);
+            }
+            break;
+    }
+    lmt_print_state.selector = saved_selector;
+}
+
+static void texiolib_aux_print_selector(lua_State *L, int n, texio_printer_len printfunction, const char *dflt, int dflt_len)
+{
+    int saved_selector = lmt_print_state.selector;
+    texiolib_aux_get_selector_value(L, 1, &lmt_print_state.selector, no_print_selector_code);
+    switch (lmt_print_state.selector) {
+        case terminal_and_logfile_selector_code:
+        case logfile_selector_code:
+        case terminal_selector_code:
+            {
+                if (n > 1) {
+                    /*tex In \CONTEXT\ in most cases we have one string. */
+                    for (int i = 2; i <= n; i++) {
+                        switch (lua_type(L, i)) {
+                            case LUA_TNIL:
+                                break;
+                            case LUA_TBOOLEAN:
+                            case LUA_TNUMBER:
+                            case LUA_TSTRING:
+                                {
+                                    size_t len = 0;
+                                    const char *s = lua_tolstring(L, i, &len);
+                                    if (s && len > 0) {
+                                        printfunction(s, (int) len);
+                                    }
+                                }
+                                break;
+                            default:
+                                luaL_error(L, "argument is not a string, number or boolean");
+                        }
+                    };
+                } else if (dflt && dflt_len > 0) {
+                    printfunction(dflt, dflt_len);
+                }
+                break;
+            }
+    }
+    lmt_print_state.selector = saved_selector;
+}
+
+static void texiolib_aux_print_stdout(lua_State *L, const char *extra, int extra_len)
+{
+    int i = 1;
+    int l = terminal_and_logfile_selector_code;
+    int n = lua_gettop(L);
+    if (n > 1 && texiolib_aux_get_selector_value(L, i, &l, terminal_selector_code)) {
+        i++;
+    }
+    for (; i <= n; i++) {
+        if (lua_isstring(L, i)) { /* or number */
+            size_t s_len = 0;
+            const char *s = lua_tolstring(L, i, &s_len);
+            if (l == terminal_and_logfile_selector_code || l == terminal_selector_code) {
+                if (extra_len > 0) {
+                    fwrite(extra, 1, (size_t) extra_len, stdout);
+                }
+                if (s_len > 0) {
+                    fwrite(s, 1, s_len, stdout);
+                }
+            }
+            if (l == terminal_and_logfile_selector_code || l == logfile_selector_code) {
+                if (lmt_print_state.loggable_info) {
+                    size_t info_len = strlen(lmt_print_state.loggable_info);
+                    char *v = (char*) lmt_memory_malloc(info_len + (size_t) extra_len + s_len + 1);
+                    if (v) {
+                        memcpy(v, lmt_print_state.loggable_info, info_len);
+                        if (extra_len > 0) {
+                            memcpy(v + info_len, extra, (size_t) extra_len);
+                        }
+                        if (s_len > 0) {
+                            memcpy(v + info_len + extra_len, s, s_len);
+                        }
+                        v[info_len + extra_len + s_len] = '\0';
+                    }
+                    lmt_memory_free(lmt_print_state.loggable_info);
+                    lmt_print_state.loggable_info = v;
+                } else {
+                    lmt_print_state.loggable_info = lmt_memory_strdup(s);
+                }
+            }
+        }
+    }
+}
+
+static void texiolib_aux_print_nlp_str_len(const char *s, int len)
+{
+    tex_print_nlp();
+    tex_print_str_len(s, len);
+}
+
+static int texiolib_write(lua_State *L)
+{
+    if (lmt_main_state.ready_already == output_disabled_state || ! lmt_fileio_state.job_name) {
+        texiolib_aux_print_stdout(L, "", 0);
+    } else {
+        int n = lua_gettop(L);
+        if (n > 0) {
+            texiolib_aux_print(L, n, tex_print_str_len, NULL, 0);
+        } else {
+            /*tex We silently ignore bogus calls. */
+        }
+    }
+    return 0;
+}
+
+static int texiolib_write_nl(lua_State *L)
+{
+    if (lmt_main_state.ready_already == output_disabled_state || ! lmt_fileio_state.job_name) {
+        texiolib_aux_print_stdout(L, "\n", 1);
+    } else {
+        int n = lua_gettop(L);
+        if (n > 0) {
+            texiolib_aux_print(L, n, texiolib_aux_print_nlp_str_len, "\n", 1);
+        } else {
+            /*tex We silently ignore bogus calls. */
+        }
+    }
+    return 0;
+}
+
+static int texiolib_write_selector(lua_State *L)
+{
+    if (lmt_main_state.ready_already == output_disabled_state || ! lmt_fileio_state.job_name) {
+        texiolib_aux_print_stdout(L, "", 0);
+    } else {
+        int n = lua_gettop(L);
+        if (n > 1) {
+            texiolib_aux_print_selector(L, n, tex_print_str_len, NULL, 0);
+        } else {
+            /*tex We silently ignore bogus calls. */
+        }
+    }
+    return 0;
+}
+
+static int texiolib_write_selector_nl(lua_State *L)
+{
+    if (lmt_main_state.ready_already == output_disabled_state || ! lmt_fileio_state.job_name) {
+        texiolib_aux_print_stdout(L, "\n", 1);
+    } else {
+        int n = lua_gettop(L);
+        if (n > 1) {
+            texiolib_aux_print_selector(L, n, texiolib_aux_print_nlp_str_len, "", 0);
+        } else {
+            /*tex We silently ignore bogus calls. */
+        }
+    }
+    return 0;
+}
+
+static int texiolib_write_selector_lf(lua_State *L)
+{
+    if (lmt_main_state.ready_already == output_disabled_state || ! lmt_fileio_state.job_name) {
+        texiolib_aux_print_stdout(L, "\n", 1);
+    } else {
+        int n = lua_gettop(L);
+        if (n >= 1) {
+            texiolib_aux_print_selector(L, n, texiolib_aux_print_nlp_str_len, "", 0);
+        } else {
+            /*tex We silently ignore bogus calls. */
+        }
+    }
+    return 0;
+}
+
+/*tex At the point this function is called, the selector is log_only. */
+
+static int texiolib_closeinput(lua_State *L)
+{
+    (void) (L);
+    if (lmt_input_state.cur_input.index > 0) {
+        tex_end_token_list();
+        tex_end_file_reading();
+    }
+    return 0 ;
+}
+
+static int texiolib_getinputindex(lua_State *L)
+{
+    lua_pushinteger(L, lmt_input_state.cur_input.index);
+    return 1;
+}
+
+static int texiolib_getsourcefilename(lua_State *L)
+{
+    lua_pushstring(L, lmt_input_state.in_stack[lmt_input_state.in_stack_data.ptr].full_source_filename);
+    return 1;
+}
+
+/*tex
+    This is a private hack, handy for testing runtime math font patches in lfg files with a bit of
+    low level tracing. Setting the logfile is already handles by a callback so we don't support
+    string argument here because we'd end up in that callback which then returns the same logfile
+    name as we already had.
+*/
+
+static int texiolib_setlogfile(lua_State *L)
+{
+    FILE *f = lmt_valid_file(L);
+    if (f) {
+        /* If not writeable then all goes into the void. */
+        if (! lmt_print_state.logfile) {
+            lmt_print_state.saved_logfile = lmt_print_state.logfile;
+            lmt_print_state.saved_logfile_offset = lmt_print_state.logfile_offset;
+
+        }
+        lmt_print_state.logfile = f;
+        lmt_print_state.logfile_offset = 0;
+    } else if (lmt_print_state.logfile) {
+        lmt_print_state.logfile = lmt_print_state.saved_logfile;
+        lmt_print_state.logfile_offset = lmt_print_state.saved_logfile_offset;
+    }
+    return 0;
+}
+
+static int texiolib_forceendoffile(lua_State *L)
+{
+    (void) L;
+    lmt_token_state.force_eof = 1;
+    return 0;
+}
+
+static const struct luaL_Reg texiolib_function_list[] = {
+    { "write",             texiolib_write             },
+    { "writenl",           texiolib_write_nl          },
+    { "write_nl",          texiolib_write_nl          }, /*tex undocumented, depricated */
+    { "writeselector",     texiolib_write_selector    },
+    { "writeselectornl",   texiolib_write_selector_nl },
+    { "writeselectorlf",   texiolib_write_selector_lf },
+    { "closeinput",        texiolib_closeinput        },
+    { "setlogfile",        texiolib_setlogfile        },
+    { "getinputindex",     texiolib_getinputindex     }, /*tex temporary, testing only */
+    { "getsourcefilename", texiolib_getsourcefilename }, /*tex temporary, testing only */
+    { "forceendoffile",    texiolib_forceendoffile    }, /*tex temporary, testing only */
+    { "getselectorvalues", texiolib_getselectorvalues },
+    { NULL,                NULL                       },
+};
+
+static const struct luaL_Reg texiolib_function_list_only[] = {
+    { "write",           texiolib_write             },
+    { "writenl",         texiolib_write_nl          },
+    { "write_nl",        texiolib_write_nl          }, /*tex undocumented, depricated */
+    { "writeselector",   texiolib_write_selector    },
+    { "writeselectornl", texiolib_write_selector_nl },
+    { "writeselectorlf", texiolib_write_selector_lf },
+    { NULL,              NULL                       },
+};
+
+int luaopen_texio(lua_State *L)
+{
+    lua_newtable(L);
+    luaL_setfuncs(L, lmt_engine_state.lua_only ? texiolib_function_list_only : texiolib_function_list, 0);
+# if file_mt_method == 1
+    luaL_getmetatable(L, LUA_FILEHANDLE);
+    G_FILEHANDLE_METATABLE_PTR = lua_topointer(L, -1);
+    lua_pop(L, 1);
+# endif
+    return 1;
+}

@@ -1,0 +1,103 @@
+/*
+    See license.txt in the root of this project.
+*/
+
+# ifndef LMT_TEXLANG_H
+# define LMT_TEXLANG_H
+
+/*tex We resolve the properties beforehand and store them in a struct. */
+
+typedef struct tex_language_data {
+    halfword        pre_hyphen_char;
+    halfword        post_hyphen_char;
+    halfword        pre_exhyphen_char;
+    halfword        post_exhyphen_char;
+    halfword        hyphenation_min;
+    halfword        id;
+    hjn_dictionary *patterns;
+    int             exceptions;
+    int             wordhandler;
+    sa_tree         hjcode_head;
+} tex_language_data;
+
+typedef tex_language_data * tex_language;
+
+typedef struct language_state_info {
+    tex_language         *languages;
+    memory_data           language_data;
+    lua_Integer           handler_table_id;
+    int                   handler_count;
+    int                   list_count; 
+    int                   word_count; 
+    int                   checked_count;
+    int                   exceptions_count;
+    int                   hyphenated_count;
+    int                   nothing_count;
+    /*tex We keep thse in the heap instead of on stack: */
+    unsigned char         shared_word_buffer[max_size_of_word_buffer];  /*tex Work buffer for bytes (can be \UTF8): */
+    unsigned              shared_uword_buffer[max_size_of_word_buffer]; /*tex Work buffer for \UNICODE\ (often too large): */
+} language_state_info;
+
+extern language_state_info lmt_language_state;
+
+typedef struct language_variables {
+    halfword pre_hyphen_char;
+    halfword post_hyphen_char;
+    halfword pre_exhyphen_char;
+    halfword post_exhyphen_char;
+} language_variables;
+
+extern tex_language  tex_new_language           (halfword n);
+extern tex_language  tex_get_language           (halfword n);
+/*     void          tex_free_languages         (void); */
+
+extern void          tex_load_patterns          (tex_language lang, const unsigned char *buf);
+extern void          tex_load_hyphenation       (tex_language lang, const unsigned char *buf);
+
+extern void          tex_handle_hyphenation     (halfword h, halfword t);
+extern void          tex_clear_patterns         (tex_language lang);
+extern void          tex_clear_hyphenation      (tex_language lang);
+extern const char   *tex_clean_hyphenation      (halfword id, const char *buffer, char **cleaned);
+
+extern void          tex_hyphenate_list         (halfword head, halfword tail);
+extern int           tex_collapse_list          (halfword head, halfword c1, halfword c2, halfword c3, halfword c4);
+
+extern void          tex_set_pre_hyphen_char    (halfword lan, halfword val);
+extern void          tex_set_post_hyphen_char   (halfword lan, halfword val);
+extern halfword      tex_get_pre_hyphen_char    (halfword lan);
+extern halfword      tex_get_post_hyphen_char   (halfword lan);
+
+extern void          tex_set_pre_exhyphen_char  (halfword lan, halfword val);
+extern void          tex_set_post_exhyphen_char (halfword lan, halfword val);
+extern halfword      tex_get_pre_exhyphen_char  (halfword lan);
+extern halfword      tex_get_post_exhyphen_char (halfword lan);
+
+extern void          tex_set_hyphenation_min    (halfword lan, halfword val);
+extern halfword      tex_get_hyphenation_min    (halfword lan);
+
+extern void          tex_dump_language_data     (dumpstream f);
+extern void          tex_undump_language_data   (dumpstream f);
+
+/*     char         *tex_get_exception_strings  (tex_language lang); */
+
+extern void          tex_load_tex_patterns      (halfword curlang, halfword head);
+extern void          tex_load_tex_hyphenation   (halfword curlang, halfword head);
+
+extern void          tex_initialize_languages   (void);
+extern int           tex_is_valid_language      (halfword n);
+
+extern halfword      tex_glyph_to_discretionary (halfword glyph, quarterword code, int keepkern);
+
+/*
+void tex_hnj_hyphen_hyphenate(
+    HyphenDict     *dict,
+    halfword        first,
+    halfword        last,
+    int             size,
+    halfword        left,
+    halfword        right,
+    lang_variables *lan
+);
+*/
+
+# endif
