@@ -508,8 +508,7 @@ tag = ss02;
 },
 {
 automatic = 1;
-code = "sub gitalic-math by gitalic-math.ss05;
-sub gbolditalic-math by gbolditalic-math.ss05;
+code = "sub gbolditalic-math by gbolditalic-math.ss05;
 ";
 labels = (
 {
@@ -741,9 +740,7 @@ pos = -3191;
 pos = 3782;
 },
 {
-pos = 771;
-},
-{
+pos = 782;
 },
 {
 pos = 3704;
@@ -1094,9 +1091,7 @@ pos = -3191;
 pos = 3782;
 },
 {
-pos = 771;
-},
-{
+pos = 782;
 },
 {
 pos = 3704;
@@ -1258,7 +1253,6 @@ UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
-visible = 1;
 },
 {
 axesValues = (
@@ -1441,9 +1435,7 @@ pos = -3191;
 pos = 3782;
 },
 {
-pos = 771;
-},
-{
+pos = 782;
 },
 {
 pos = 3704;
@@ -1797,9 +1789,7 @@ pos = -3191;
 pos = 3782;
 },
 {
-pos = 771;
-},
-{
+pos = 782;
 },
 {
 pos = 3704;
@@ -2142,11 +2132,10 @@ pos = -191;
 pos = -3191;
 },
 {
-},
-{
-},
-{
 pos = 3782;
+},
+{
+pos = 782;
 },
 {
 pos = 3704;
@@ -2508,11 +2497,10 @@ pos = -191;
 pos = -3191;
 },
 {
-},
-{
-},
-{
 pos = 3782;
+},
+{
+pos = 782;
 },
 {
 pos = 3704;
@@ -2690,6 +2678,7 @@ UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -2877,11 +2866,10 @@ pos = -191;
 pos = -3191;
 },
 {
-},
-{
-},
-{
 pos = 3782;
+},
+{
+pos = 782;
 },
 {
 pos = 3704;
@@ -3249,11 +3237,10 @@ pos = -191;
 pos = -3191;
 },
 {
-},
-{
-},
-{
 pos = 3782;
+},
+{
+pos = 782;
 },
 {
 pos = 3704;
@@ -118702,9 +118689,6 @@ name = "Fence higher extreme";
 name = "Fence higher";
 },
 {
-name = "Fence Higher Extreme";
-},
-{
 name = "Large Operator High";
 },
 {
@@ -118882,15 +118866,6 @@ UUID0 = {
 KernOnKerningWeightLimit = 64000;
 KernOnRegenerateGroups = 1;
 KernOnVersion = "1.33";
-MoveOnAxisHiddenAxes = (
-ARHD,
-ARLN,
-MGHT,
-STYA,
-STYB,
-wdth,
-wght
-);
 };
 versionMajor = 0;
 versionMinor = 1;
