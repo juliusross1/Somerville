@@ -1,4 +1,5 @@
 {
+color = 0;
 glyphname = j;
 kernLeft = KO_j;
 kernRight = KO_j;
@@ -16,12 +17,13 @@ shapes = (
 ref = jdotless;
 },
 {
+alignment = -1;
 anchor = top;
-pos = (175,256);
+pos = (24,0);
 ref = dotaccentcomb;
 }
 );
-width = 414;
+width = 293;
 },
 {
 anchors = (
@@ -36,8 +38,9 @@ shapes = (
 ref = jdotless;
 },
 {
+alignment = -1;
 anchor = top;
-pos = (75,0);
+pos = (38,0);
 ref = dotaccentcomb;
 }
 );
@@ -56,12 +59,13 @@ shapes = (
 ref = jdotless;
 },
 {
+alignment = -1;
 anchor = top;
-pos = (308,256);
+pos = (46,0);
 ref = dotaccentcomb;
 }
 );
-width = 640;
+width = 505;
 },
 {
 anchors = (
@@ -76,8 +80,9 @@ shapes = (
 ref = jdotless;
 },
 {
+alignment = -1;
 anchor = top;
-pos = (26,0);
+pos = (13,0);
 ref = dotaccentcomb;
 }
 );
@@ -96,8 +101,9 @@ shapes = (
 ref = jdotless;
 },
 {
+alignment = -1;
 anchor = top;
-pos = (22,0);
+pos = (7,0);
 ref = dotaccentcomb;
 }
 );
@@ -116,8 +122,9 @@ shapes = (
 ref = jdotless;
 },
 {
+alignment = -1;
 anchor = top;
-pos = (36,0);
+pos = (19,0);
 ref = dotaccentcomb;
 }
 );
@@ -136,8 +143,9 @@ shapes = (
 ref = jdotless;
 },
 {
+alignment = -1;
 anchor = top;
-pos = (36,0);
+pos = (10,0);
 ref = dotaccentcomb;
 }
 );
@@ -156,8 +164,9 @@ shapes = (
 ref = jdotless;
 },
 {
+alignment = -1;
 anchor = top;
-pos = (42,0);
+pos = (19,0);
 ref = dotaccentcomb;
 }
 );
