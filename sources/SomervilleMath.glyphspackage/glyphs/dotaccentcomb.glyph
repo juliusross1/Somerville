@@ -5,40 +5,12 @@ layers = (
 {
 anchors = (
 {
-name = _left;
-pos = (120,458);
+name = "#entry";
+pos = (20,0);
 },
 {
-name = _top;
-pos = (120,512);
-},
-{
-name = math.ta;
-pos = (120,708);
-},
-{
-name = top;
-pos = (120,712);
-},
-{
-name = top_low_1;
-pos = (120,692);
-},
-{
-name = top_low_2;
-pos = (120,672);
-},
-{
-name = top_low_3;
-pos = (120,652);
-},
-{
-name = top_low_4;
-pos = (120,632);
-},
-{
-name = top_low_5;
-pos = (120,612);
+name = "#exit";
+pos = (219,0);
 }
 );
 guides = (
@@ -75,40 +47,12 @@ width = 239;
 {
 anchors = (
 {
-name = _left;
-pos = (147,458);
+name = "#entry";
+pos = (35,0);
 },
 {
-name = _top;
-pos = (147,512);
-},
-{
-name = math.ta;
-pos = (147,708);
-},
-{
-name = top;
-pos = (147,712);
-},
-{
-name = top_low_1;
-pos = (147,692);
-},
-{
-name = top_low_2;
-pos = (147,672);
-},
-{
-name = top_low_3;
-pos = (147,652);
-},
-{
-name = top_low_4;
-pos = (147,632);
-},
-{
-name = top_low_5;
-pos = (147,612);
+name = "#exit";
+pos = (259,0);
 }
 );
 guides = (
@@ -145,40 +89,12 @@ width = 294;
 {
 anchors = (
 {
-name = _left;
-pos = (166,458);
+name = "#entry";
+pos = (19,0);
 },
 {
-name = _top;
-pos = (166,512);
-},
-{
-name = math.ta;
-pos = (166,708);
-},
-{
-name = top;
-pos = (166,712);
-},
-{
-name = top_low_1;
-pos = (166,692);
-},
-{
-name = top_low_2;
-pos = (166,672);
-},
-{
-name = top_low_3;
-pos = (166,652);
-},
-{
-name = top_low_4;
-pos = (166,632);
-},
-{
-name = top_low_5;
-pos = (166,612);
+name = "#exit";
+pos = (310,0);
 }
 );
 guides = (
@@ -218,40 +134,11 @@ width = 332;
 {
 anchors = (
 {
-name = _left;
-pos = (141,458);
+name = "#entry";
 },
 {
-name = _top;
-pos = (141,520);
-},
-{
-name = math.ta;
-pos = (141,708);
-},
-{
-name = top;
-pos = (141,720);
-},
-{
-name = top_low_1;
-pos = (141,700);
-},
-{
-name = top_low_2;
-pos = (141,680);
-},
-{
-name = top_low_3;
-pos = (141,660);
-},
-{
-name = top_low_4;
-pos = (141,640);
-},
-{
-name = top_low_5;
-pos = (141,620);
+name = "#exit";
+pos = (282,0);
 }
 );
 guides = (
@@ -288,40 +175,12 @@ width = 282;
 {
 anchors = (
 {
-name = _left;
-pos = (171,458);
+name = "#entry";
+pos = (15,0);
 },
 {
-name = _top;
-pos = (171,520);
-},
-{
-name = math.ta;
-pos = (171,708);
-},
-{
-name = top;
-pos = (171,720);
-},
-{
-name = top_low_1;
-pos = (171,700);
-},
-{
-name = top_low_2;
-pos = (171,680);
-},
-{
-name = top_low_3;
-pos = (171,660);
-},
-{
-name = top_low_4;
-pos = (171,640);
-},
-{
-name = top_low_5;
-pos = (171,620);
+name = "#exit";
+pos = (327,0);
 }
 );
 guides = (
@@ -364,40 +223,11 @@ width = 342;
 {
 anchors = (
 {
-name = _left;
-pos = (140,458);
+name = "#entry";
 },
 {
-name = _top;
-pos = (140,512);
-},
-{
-name = math.ta;
-pos = (140,708);
-},
-{
-name = top;
-pos = (140,712);
-},
-{
-name = top_low_1;
-pos = (140,692);
-},
-{
-name = top_low_2;
-pos = (140,672);
-},
-{
-name = top_low_3;
-pos = (140,652);
-},
-{
-name = top_low_4;
-pos = (140,632);
-},
-{
-name = top_low_5;
-pos = (140,612);
+name = "#exit";
+pos = (280,0);
 }
 );
 guides = (
@@ -437,40 +267,12 @@ width = 280;
 {
 anchors = (
 {
-name = _left;
-pos = (161,458);
+name = "#entry";
+pos = (5,0);
 },
 {
-name = _top;
-pos = (161,520);
-},
-{
-name = math.ta;
-pos = (161,708);
-},
-{
-name = top;
-pos = (161,720);
-},
-{
-name = top_low_1;
-pos = (161,700);
-},
-{
-name = top_low_2;
-pos = (161,680);
-},
-{
-name = top_low_3;
-pos = (161,660);
-},
-{
-name = top_low_4;
-pos = (161,640);
-},
-{
-name = top_low_5;
-pos = (161,620);
+name = "#exit";
+pos = (316,0);
 }
 );
 guides = (
@@ -510,40 +312,11 @@ width = 322;
 {
 anchors = (
 {
-name = _left;
-pos = (184,458);
+name = "#entry";
 },
 {
-name = _top;
-pos = (184,520);
-},
-{
-name = math.ta;
-pos = (184,708);
-},
-{
-name = top;
-pos = (184,720);
-},
-{
-name = top_low_1;
-pos = (184,700);
-},
-{
-name = top_low_2;
-pos = (184,680);
-},
-{
-name = top_low_3;
-pos = (184,660);
-},
-{
-name = top_low_4;
-pos = (184,640);
-},
-{
-name = top_low_5;
-pos = (184,620);
+name = "#exit";
+pos = (368,0);
 }
 );
 guides = (
