@@ -11,6 +11,9 @@
   <string>Recipe Constants</string>
   <key>constants</key>
   <dict>
+    <!-- Number of .sXX variants for recipes that use SizeVariantCount. -->
+    <key>SizeVariantCount</key>
+    <integer>20</integer>
     <key>ARLNmaximum</key>
     <integer>200</integer>
     <key>DoublePairedArrowGap</key>

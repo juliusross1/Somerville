@@ -3,15 +3,15 @@
 
 import uuid
 
-from GlyphsApp import Glyphs, GSSmartComponentAxis
+from GlyphsApp import Glyphs, GSAxis
 
 
-SCRIPT_VERSION = "2026-07-03 00:00 CDT create-wide-layers-smart-width-poles"
+SCRIPT_VERSION = "2026-10-26 create-wide-layers-glyphs4-coordinates"
 SMART_AXIS_NAME = "width"
 SMART_AXIS_BOTTOM_VALUE = 0
 SMART_AXIS_TOP_VALUE = 100
-SMART_MASTER_SELECTION_VALUE = 1
-SMART_WIDE_SELECTION_VALUE = 2
+SMART_MASTER_SELECTION_VALUE = SMART_AXIS_BOTTOM_VALUE
+SMART_WIDE_SELECTION_VALUE = SMART_AXIS_TOP_VALUE
 
 
 def print_warning(message):
@@ -184,29 +184,12 @@ def axis_identifier(axis):
 
 
 def glyph_smart_axes(glyph):
-    try:
-        return list(glyph.smartComponentAxes or [])
-    except Exception:
-        return []
+    return list(glyph.axes)
 
 
 def append_smart_axis(glyph, axis):
-    try:
-        glyph.smartComponentAxes.append(axis)
-        return True
-    except Exception:
-        pass
-
-    try:
-        axes = list(glyph.smartComponentAxes or [])
-    except Exception:
-        axes = []
-    axes.append(axis)
-    try:
-        glyph.smartComponentAxes = axes
-        return True
-    except Exception:
-        return False
+    glyph.axes.append(axis)
+    return True
 
 
 def ensure_width_smart_axis(glyph):
@@ -218,61 +201,27 @@ def ensure_width_smart_axis(glyph):
 
     created = False
     if width_axis is None:
-        width_axis = GSSmartComponentAxis()
-        set_object_attribute(width_axis, "name", SMART_AXIS_NAME)
+        width_axis = GSAxis()
+        width_axis.name = SMART_AXIS_NAME
+        width_axis.axisTag = "WDTH"
+        width_axis.setDefaultValue_(SMART_AXIS_BOTTOM_VALUE)
         if not append_smart_axis(glyph, width_axis):
             print_warning("%s: could not add smart glyph axis %s." % (glyph.name, SMART_AXIS_NAME))
             return None, False
         created = True
 
-    set_object_attribute(width_axis, "name", SMART_AXIS_NAME)
-    set_object_attribute(width_axis, "bottomValue", SMART_AXIS_BOTTOM_VALUE)
-    set_object_attribute(width_axis, "topValue", SMART_AXIS_TOP_VALUE)
     return width_axis, created
 
 
-def set_smart_component_pole_mapping(layer, axis, selection_value):
+def set_width_layer_properties(layer, axis, selection_value):
+    """Set a Glyphs 4 design coordinate, preserving other local axes."""
     axis_id = axis_identifier(axis)
     if axis_id is None:
-        return False
-
-    mapping = getattr(layer, "smartComponentPoleMapping", None)
-    if mapping is not None:
-        try:
-            mapping[axis_id] = selection_value
-            return True
-        except Exception:
-            pass
-
-        try:
-            mapping = dict(mapping or {})
-            mapping[axis_id] = selection_value
-            layer.smartComponentPoleMapping = mapping
-            return True
-        except Exception:
-            pass
-
-    try:
-        mapping = dict(layer_attribute(layer, "smartComponentPoleMapping") or {})
-    except Exception:
-        mapping = {}
-    mapping[axis_id] = selection_value
-    return set_layer_attribute(layer, "smartComponentPoleMapping", mapping)
-
-
-def set_width_layer_properties(layer, axis, selection_value):
-    try:
-        part_selection = dict(layer_attribute(layer, "partSelection") or {})
-    except Exception:
-        part_selection = {}
-    part_selection[SMART_AXIS_NAME] = selection_value
-
-    changed = False
-    if set_layer_attribute(layer, "partSelection", part_selection):
-        changed = True
-    if set_smart_component_pole_mapping(layer, axis, selection_value):
-        changed = True
-    return changed
+        raise ValueError("Width axis has no axisId.")
+    coordinates = dict(layer.attributes["coordinates"] or {})
+    coordinates[axis_id] = selection_value
+    layer.attributes["coordinates"] = coordinates
+    return True
 
 
 def set_master_width_layer_properties(glyph, axis):
@@ -384,8 +333,8 @@ else:
             SMART_AXIS_BOTTOM_VALUE,
             SMART_AXIS_TOP_VALUE,
         ))
-        print("Set %s=off on %i master layer(s)." % (SMART_AXIS_NAME, master_property_count))
+        print("Set %s=%s on %i master layer(s)." % (SMART_AXIS_NAME, SMART_AXIS_BOTTOM_VALUE, master_property_count))
         print("Set %s=%s on %i High layer(s)." % (SMART_AXIS_NAME, SMART_AXIS_BOTTOM_VALUE, high_width_low_count))
-        print("Set %s=on on %i Wide layer(s)." % (SMART_AXIS_NAME, created_count))
+        print("Set %s=%s on %i Wide layer(s)." % (SMART_AXIS_NAME, SMART_AXIS_TOP_VALUE, created_count))
         print("Removed %i existing matching Wide layer(s)." % removed_existing_count)
         print("Done. Created %i Wide layer(s)." % created_count)

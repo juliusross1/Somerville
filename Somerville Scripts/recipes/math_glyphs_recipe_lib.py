@@ -2,6 +2,7 @@
 
 """Shared helpers for plist-driven Glyphs recipe scripts."""
 
+import math
 import os
 import plistlib
 import re
@@ -15,11 +16,12 @@ from GlyphsApp import (
     GSComponent,
     GSGlyphReference,
     GSSmartComponentAxis,
+    GSAxis,
 )
 from AppKit import NSMakePoint, NSPoint
 
 
-SCRIPT_VERSION = "2026-08-04 per-master-recipe-constants"
+SCRIPT_VERSION = "2026-10-28 glyphs4-smart-layer-coordinates"
 DEFAULT_RECIPE_FILE = "triple_integral_recipe.plist"
 VERBOSE = True
 VARIABLE_PATTERN = re.compile(r"\$\{([^}]+)\}")
@@ -1419,14 +1421,23 @@ def ensure_smart_axis(glyph, axis_name_value, bottom_value=0, top_value=100):
     axis = smart_axis_for_name(glyph, axis_name_value)
     created = False
     if axis is None:
-        axis = GSSmartComponentAxis()
+        axis = GSAxis() if uses_glyphs4_coordinates() else GSSmartComponentAxis()
+        set_object_attribute(axis, "name", axis_name_value)
         if not append_smart_axis(glyph, axis):
             raise RuntimeError("%s: could not add smart axis %s." % (glyph.name, axis_name_value))
         created = True
     set_object_attribute(axis, "name", axis_name_value)
-    set_object_attribute(axis, "bottomValue", bottom_value)
-    set_object_attribute(axis, "topValue", top_value)
+    if uses_glyphs4_coordinates():
+        set_object_attribute(axis, "axisTag", "HGHT" if axis_name_value == "height" else "WDTH")
+        axis.setDefaultValue_(clean_number(bottom_value))
+    else:
+        set_object_attribute(axis, "bottomValue", bottom_value)
+        set_object_attribute(axis, "topValue", top_value)
     return axis, created
+
+
+def uses_glyphs4_coordinates():
+    return float(safe_call(getattr(Glyphs, "versionNumber", 0), 0)) >= 4
 
 
 def set_smart_component_pole_mapping(layer, axis, selection_value):
@@ -1457,7 +1468,16 @@ def set_smart_component_pole_mapping(layer, axis, selection_value):
     return set_layer_attribute(layer, "smartComponentPoleMapping", mapping)
 
 
-def set_height_layer_properties(layer, axis_name_value, axis, selection_value):
+def set_height_layer_properties(layer, axis_name_value, axis, selection_value, coordinate_value=None):
+    if uses_glyphs4_coordinates():
+        axis_id = axis_identifier(axis)
+        if axis_id is None:
+            raise RuntimeError("Smart axis %s has no axisId." % axis_name_value)
+        coordinates = dict(layer_attribute(layer, "coordinates") or {})
+        coordinates[axis_id] = clean_number(coordinate_value)
+        if not set_layer_attribute(layer, "coordinates", coordinates):
+            raise RuntimeError("Could not set smart layer coordinates for %s." % axis_name_value)
+        return True
     try:
         part_selection = dict(layer_attribute(layer, "partSelection") or {})
     except Exception:
@@ -1540,7 +1560,7 @@ def component_axis_value(font, component, axis_name_value):
             value = numeric_value(values[key])
             if value is not None:
                 return value
-    for attribute_name in ("bottomValue", "topValue"):
+    for attribute_name in (("defaultValue",) if uses_glyphs4_coordinates() else ("bottomValue", "topValue")):
         value = numeric_value(safe_call(getattr(axis, attribute_name, None)))
         if value is not None:
             return value
@@ -2011,20 +2031,26 @@ def action_disable_component_alignment(font, verbose=False, glyph=None, componen
     return changed
 
 
-def action_enable_component_alignment(font, verbose=False, glyph=None, components=None, **_kwargs):
-    target_glyph = glyph_for_name(font, glyph)
-    if target_glyph is None:
-        raise RuntimeError("Missing glyph: %s" % glyph)
+def action_enable_component_alignment(font, verbose=False, glyph=None, components=None, variantCount=0, **_kwargs):
+    count = float(variantCount)
+    if not math.isfinite(count) or count < 0 or not count.is_integer():
+        raise RuntimeError("%s: variantCount must be a non-negative integer." % glyph)
+    names = variant_names(glyph, int(count))
+    targets = [glyph_for_name(font, name) for name in names]
+    for name, target in zip(names, targets):
+        if target is None:
+            raise RuntimeError("Missing glyph: %s" % name)
     if isinstance(components, str):
         components = [components]
     wanted_components = set(components or [])
     changed = 0
-    for layer in target_glyph.layers:
-        for component in layer_components(layer):
-            if wanted_components and component_name(component) not in wanted_components:
-                continue
-            if enable_component_alignment(component):
-                changed += 1
+    for target_glyph in targets:
+        for layer in target_glyph.layers:
+            for component in layer_components(layer):
+                if wanted_components and component_name(component) not in wanted_components:
+                    continue
+                if enable_component_alignment(component):
+                    changed += 1
     log("%s: enabled automatic alignment on %i component(s)%s." % (
         glyph,
         changed,
@@ -2964,24 +2990,37 @@ def action_flip_components(font, verbose=False, glyph=None, components=None, **_
     return changed
 
 
-def action_flip_components_across_y_axis(font, verbose=False, glyph=None, components=None, **_kwargs):
-    target_glyph = glyph_for_name(font, glyph)
-    if target_glyph is None:
-        raise RuntimeError("Missing glyph: %s" % glyph)
+def action_flip_components_across_y_axis(font, verbose=False, glyph=None, components=None, variantCount=0, requireAll=False, **_kwargs):
+    """Mirror components left-to-right, optionally including .sXX variants.
+
+    Run after setting smart values, so each component is reflected about its
+    own final bounds rather than inheriting the base glyph's reflection centre.
+    """
+    count = float(variantCount)
+    if not math.isfinite(count) or count < 0 or not count.is_integer():
+        raise RuntimeError("%s: variantCount must be a non-negative integer." % glyph)
+    names = variant_names(glyph, int(count))
+    targets = [glyph_for_name(font, name) for name in names]
+    for name, target in zip(names, targets):
+        if target is None:
+            raise RuntimeError("Missing glyph: %s" % name)
     if isinstance(components, str):
         components = [components]
     wanted_components = set(components or [])
     changed = 0
     skipped = 0
-    for layer in target_glyph.layers:
-        for component in layer_components(layer):
-            if wanted_components and component_name(component) not in wanted_components:
-                continue
-            disable_component_alignment(component)
-            if flip_component_across_vertical_center(component):
-                changed += 1
-            else:
-                skipped += 1
+    for target_glyph in targets:
+        for layer in target_glyph.layers:
+            for component in layer_components(layer):
+                if wanted_components and component_name(component) not in wanted_components:
+                    continue
+                disable_component_alignment(component)
+                if flip_component_across_vertical_center(component):
+                    changed += 1
+                else:
+                    skipped += 1
+    if boolean_value(requireAll) and skipped:
+        raise RuntimeError("%s: could not mirror %i component(s)." % (glyph, skipped))
     log("%s: flipped %i component(s) across the y-axis%s." % (
         glyph,
         changed,
@@ -3529,7 +3568,7 @@ def action_create_high_layers(font, verbose=False, glyph=None, axis="height", lo
     height_axis, created_axis = ensure_smart_axis(target_glyph, axis, lowValue, highValue)
     master_properties = 0
     for layer in target_glyph.layers:
-        if is_master_layer(layer) and set_height_layer_properties(layer, axis, height_axis, SMART_MASTER_SELECTION_VALUE):
+        if is_master_layer(layer) and set_height_layer_properties(layer, axis, height_axis, SMART_MASTER_SELECTION_VALUE, lowValue):
             master_properties += 1
     created_layers = 0
     removed_layers = 0
@@ -3542,7 +3581,7 @@ def action_create_high_layers(font, verbose=False, glyph=None, axis="height", lo
         high_layer.layerId = str(uuid.uuid4()).upper()
         set_associated_master_id(high_layer, master.id)
         high_layer.name = high_layer_name(master)
-        set_height_layer_properties(high_layer, axis, height_axis, SMART_HIGH_SELECTION_VALUE)
+        set_height_layer_properties(high_layer, axis, height_axis, SMART_HIGH_SELECTION_VALUE, highValue)
         target_glyph.layers.insert(layer_index(target_glyph, master_layer) + 1, high_layer)
         created_layers += 1
     log("%s: %s smart axis %s, set %i master layer(s), created %i High layer(s), removed %i old High layer(s)." % (
@@ -3886,15 +3925,29 @@ def action_set_horizontal_scale(
     return changed
 
 
-def action_create_smart_component_variants(font, verbose=False, glyph=None, values=None, N=None, step=None, axis="height", color=None, overwrite=False, startNumber=1, **_kwargs):
+def action_create_smart_component_variants(font, verbose=False, glyph=None, values=None, N=None, step=None, axis="height", color=None, overwrite=False, startNumber=1, endValue=None, category=None, subCategory=None, **_kwargs):
+    """Create variants, optionally overriding their inherited glyph categories."""
     source_glyph = glyph_for_name(font, glyph)
     if source_glyph is None:
         raise RuntimeError("Missing glyph: %s" % glyph)
     variant_values = number_list(values)
     if variant_values is None:
-        variant_count = int(N if N is not None else 1)
-        step = float(step if step is not None else 1)
-        variant_values = [0] + [clean_number(number * step) for number in range(1, variant_count + 1)]
+        if endValue is not None:
+            count = float(N if N is not None else 1)
+            end_value = float(endValue)
+            if not math.isfinite(count) or count < 1 or not count.is_integer():
+                raise RuntimeError("%s: N must be a positive integer when using endValue." % glyph)
+            if not math.isfinite(end_value):
+                raise RuntimeError("%s: endValue must be finite." % glyph)
+            if step is not None:
+                raise RuntimeError("%s: specify either step or endValue, not both." % glyph)
+            variant_count = int(count)
+            variant_values = [clean_number(end_value * number / variant_count)
+                              for number in range(variant_count + 1)]
+        else:
+            variant_count = int(N if N is not None else 1)
+            step = float(step if step is not None else 1)
+            variant_values = [0] + [clean_number(number * step) for number in range(1, variant_count + 1)]
     if not variant_values:
         raise RuntimeError("%s: createSmartComponentVariants needs at least one value." % glyph)
     base_value = variant_values[0]
@@ -3920,6 +3973,9 @@ def action_create_smart_component_variants(font, verbose=False, glyph=None, valu
             clear_glyph(target_glyph)
             set_glyph_color(target_glyph, color)
         populate_variant_from_source(font, source_glyph, target_glyph, axis, value - base_value)
+        if category is not None or subCategory is not None:
+            action_set_glyph_metadata(font, verbose=verbose, glyph=target_name,
+                                      category=category, subCategory=subCategory)
         if did_create:
             created += 1
         else:
@@ -4025,6 +4081,90 @@ def glyph_names_touched_by_action(action):
     return []
 
 
+def glyph_names_affected_by_action(action):
+    """Include edited existing glyphs as well as newly generated variants.
+
+    Keep this separate from the generated-glyph list used to open result tabs.
+    """
+    if action.get("type") != "call":
+        return []
+    arguments = action.get("arguments", {})
+    glyph_name = arguments.get("glyph")
+    names = [glyph_name] if glyph_name else []
+    names.extend(glyph_names_touched_by_action(action))
+    if glyph_name and arguments.get("variantCount") is not None:
+        names.extend(variant_names(glyph_name, arguments["variantCount"]))
+    return unique_strings(names)
+
+
+def refresh_recipe_spacing(font, glyph_names, verbose=False):
+    """Refresh caches after all recipe edits, with component sources first.
+
+    Respect automatic alignment, but do not apply metrics keys or assign saved
+    LSB/RSB values: the purpose is to measure the final geometry afresh.
+    """
+    glyphs = {}
+    layers = {}
+    for name in unique_strings(glyph_names):
+        glyph = glyph_for_name(font, name)
+        if glyph is None:
+            continue
+        glyphs[name] = glyph
+        stored_layers = list(glyph.layers)
+        layers[name] = list(stored_layers)
+        for layer in stored_layers:
+            if safe_call(getattr(layer, "hasBackground", False), False):
+                background = safe_call(getattr(layer, "background", None))
+                if background is not None:
+                    layers[name].append(background)
+
+    ordered = []
+    done = set()
+    visiting = set()
+
+    def visit(name):
+        if name in done:
+            return
+        if name in visiting:
+            raise RuntimeError("Spacing refresh: component dependency cycle at %s." % name)
+        visiting.add(name)
+        for layer in layers[name]:
+            for component in layer_components(layer):
+                source_name = component_name(component)
+                if source_name in glyphs:
+                    visit(source_name)
+        visiting.remove(name)
+        done.add(name)
+        ordered.append(name)
+
+    for name in glyphs:
+        visit(name)
+
+    refreshed = 0
+    for name in ordered:
+        for layer in layers[name]:
+            try:
+                components = layer_components(layer)
+                for component in components:
+                    component.baseGlyphsHasChanged()
+                layer.setNeedUpdateShapes()
+                if components:
+                    layer.setNeedsAlignment()
+                    layer.doAlignComponents()
+                layer.setNeedUpdateMetrics()
+                layer.updateMetrics()
+                # Materialize both public values before returning to the caller.
+                float(layer.LSB)
+                float(layer.RSB)
+                refreshed += 1
+            except Exception as error:
+                raise RuntimeError("Could not refresh spacing on %s / %s [%s]: %s"
+                                   % (name, layer_name(layer), layer_id(layer), error)) from error
+    log("Refreshed LSB/RSB on %i layer(s) in %i affected glyph(s)."
+        % (refreshed, len(glyphs)), verbose)
+    return refreshed
+
+
 def run_recipe(recipe_file=DEFAULT_RECIPE_FILE, verbose=VERBOSE, overwrite_glyphs=False):
     font = Glyphs.font
     if font is None:
@@ -4039,12 +4179,15 @@ def run_recipe(recipe_file=DEFAULT_RECIPE_FILE, verbose=VERBOSE, overwrite_glyph
     log("Overwrite glyphs: %s" % ("yes" if overwrite_glyphs else "no"), verbose)
     log("", verbose)
     touched_glyphs = []
+    affected_glyphs = []
     font.disableUpdateInterface()
     try:
         for index, action in enumerate(actions, 1):
             log("%i. %s" % (index, action.get("function")), verbose)
             run_action(font, action, verbose=verbose, overwrite_glyphs=overwrite_glyphs)
             touched_glyphs.extend(glyph_names_touched_by_action(action))
+            affected_glyphs.extend(glyph_names_affected_by_action(action))
+        refresh_recipe_spacing(font, affected_glyphs, verbose=verbose)
     finally:
         font.enableUpdateInterface()
     log("", verbose)

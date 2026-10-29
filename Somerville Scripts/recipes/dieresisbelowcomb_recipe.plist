@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Run dotbelowcomb_recipe.plist first to supply horizontal entry/exit anchors.
+     All components have automatic alignment enabled. -->
+<plist version="1.0">
+<dict>
+	<key>formatVersion</key>
+	<integer>1</integer>
+	<key>kind</key>
+	<string>recipe</string>
+	<key>constants</key>
+	<string>recipe_constants.plist</string>
+	<key>name</key>
+	<string>dieresisbelowcomb (U+0324)</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>createGlyph</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>dieresisbelowcomb</string>
+				<key>export</key>
+				<true/>
+				<key>color</key>
+				<string>${GeneratedColor}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>setGlyphMetadata</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>dieresisbelowcomb</string>
+				<key>category</key>
+				<string>Mark</string>
+				<key>subCategory</key>
+				<string>Nonspacing</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>addComponents</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>dieresisbelowcomb</string>
+				<key>components</key>
+				<array>
+					<string>dotbelowcomb</string>
+					<string>dotbelowcomb</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>enableComponentAlignment</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>dieresisbelowcomb</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

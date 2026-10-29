@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Requires _smart.tildecomb with a glyph-local width axis.
+  Base glyph: _smart.tildecomb at width 0.
+  Variant .sNN: the same component at width 100 * NN / SizeVariantCount.
+  SizeVariantCount lives in recipe_constants.plist; the last variant is 100.
+  Register horizontal MATH variants and enable automatic alignment throughout.
+  Base: Mark/Nonspacing. Variants: Mark/Spacing for nonzero exported advances.
+-->
+<plist version="1.0">
+<dict>
+  <key>formatVersion</key>
+  <integer>1</integer>
+  <key>kind</key>
+  <string>recipe</string>
+  <key>constants</key>
+  <string>recipe_constants.plist</string>
+  <key>name</key>
+  <string>tildecomb</string>
+  <key>actions</key>
+  <array>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createGlyph</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>tildecomb</string>
+        <key>export</key>
+        <true/>
+        <key>color</key>
+        <string>${GeneratedColor}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setGlyphMetadata</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>tildecomb</string>
+        <key>category</key>
+        <string>Mark</string>
+        <key>subCategory</key>
+        <string>Nonspacing</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>addComponent</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>tildecomb</string>
+        <key>component</key>
+        <string>_smart.tildecomb</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>setComponentAxisValue</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>tildecomb</string>
+        <key>axis</key>
+        <string>width</string>
+        <key>value</key>
+        <integer>0</integer>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>createSmartComponentVariants</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>tildecomb</string>
+        <key>axis</key>
+        <string>width</string>
+        <key>N</key>
+        <string>${SizeVariantCount}</string>
+        <key>endValue</key>
+        <integer>100</integer>
+        <key>category</key>
+        <string>Mark</string>
+        <key>subCategory</key>
+        <string>Spacing</string>
+        <key>color</key>
+        <string>${GeneratedColor}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>enableComponentAlignment</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>tildecomb</string>
+        <key>variantCount</key>
+        <string>${SizeVariantCount}</string>
+      </dict>
+    </dict>
+  </array>
+</dict>
+</plist>

@@ -1,7 +1,7 @@
 #MenuTitle: Add Missing Math Corner Anchors to Current Glyph
 # -*- coding: utf-8 -*-
 
-"""Add missing math.bl, math.tl, math.tr and math.br on every glyph layer.
+"""Choose which missing math corner anchors to add on every glyph layer.
 
 Uses the first selected layer's parent as the current glyph. Includes master,
 intermediate, alternate and backup layers in glyph.layers. Existing anchors
@@ -13,6 +13,9 @@ top is the layer's associated master cap height, falling back to the selected
 font master if a layer has no associated master.
 """
 
+import traceback
+
+import vanilla
 from GlyphsApp import Glyphs, GSAnchor
 
 
@@ -29,7 +32,7 @@ def cap_height_for_layer(font, layer):
     return master.capHeight
 
 
-def main():
+def add_missing_anchors(selected_names):
     font = Glyphs.font
     if font is None:
         Glyphs.showMacroWindow()
@@ -60,6 +63,8 @@ def main():
             ("math.br", (layer.width, 0)),
         )
         for name, position in positions:
+            if name not in selected_names:
+                continue
             if layer.anchors[name] is not None:
                 kept += 1
             else:
@@ -82,7 +87,59 @@ def main():
 
     print("%s: added %i math corner anchors across %i layers; kept %i existing."
           % (glyph.name, len(additions), layer_count, kept))
+    return "%s: added %i; kept %i existing." % (glyph.name, len(additions), kept)
+
+
+class MathCornerAnchorDialog:
+    def __init__(self):
+        self.w = vanilla.FloatingWindow((390, 245), "Add Missing Math Corner Anchors")
+        self.w.info = vanilla.TextBox(
+            (15, 15, -15, 40),
+            "Add checked corners on every layer of the current glyph. Existing anchors stay in place.",
+        )
+        self.checkboxes = {}
+        for name, label, x, y in (
+            ("math.tl", "Top left (math.tl)", 15, 65),
+            ("math.tr", "Top right (math.tr)", 205, 65),
+            ("math.bl", "Bottom left (math.bl)", 15, 100),
+            ("math.br", "Bottom right (math.br)", 205, 100),
+        ):
+            checkbox = vanilla.CheckBox(
+                (x, y, 175, 22), label, value=True, callback=self.selection_changed
+            )
+            setattr(self.w, name.replace(".", "_"), checkbox)
+            self.checkboxes[name] = checkbox
+        self.w.cancel = vanilla.Button(
+            (15, 145, 100, 28), "Close", callback=self.close
+        )
+        self.w.add = vanilla.Button(
+            (135, 145, -15, 28), "Add Missing Anchors", callback=self.add
+        )
+        self.w.status = vanilla.TextBox((15, 190, -15, 40), "")
+        self.w.setDefaultButton(self.w.add)
+        self.w.open()
+
+    def selected_names(self):
+        return {name for name, checkbox in self.checkboxes.items() if checkbox.get()}
+
+    def selection_changed(self, sender):
+        self.w.add.enable(bool(self.selected_names()))
+
+    def close(self, sender):
+        self.w.close()
+
+    def add(self, sender):
+        names = self.selected_names()
+        if not names:
+            return
+        try:
+            result = add_missing_anchors(names)
+            self.w.status.set(result or "Select a glyph in an open font first.")
+        except Exception:
+            Glyphs.showMacroWindow()
+            traceback.print_exc()
+            self.w.status.set("Could not add anchors. See the Macro window.")
 
 
 if __name__ == "__main__":
-    main()
+    math_corner_anchor_dialog = MathCornerAnchorDialog()
