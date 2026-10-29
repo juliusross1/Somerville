@@ -3106,24 +3106,33 @@ def action_flip_components_across_horizontal_line(
     return changed
 
 
-def action_rotate_components(font, verbose=False, glyph=None, components=None, degrees=0, **_kwargs):
-    target_glyph = glyph_for_name(font, glyph)
-    if target_glyph is None:
-        raise RuntimeError("Missing glyph: %s" % glyph)
+def action_rotate_components(font, verbose=False, glyph=None, components=None, degrees=0, variantCount=0, requireAll=False, **_kwargs):
+    """Rotate each component about its final bounds, optionally including .sXX variants."""
+    count = float(variantCount)
+    if not math.isfinite(count) or count < 0 or not count.is_integer():
+        raise RuntimeError("%s: variantCount must be a non-negative integer." % glyph)
+    names = variant_names(glyph, int(count))
+    targets = [glyph_for_name(font, name) for name in names]
+    for name, target in zip(names, targets):
+        if target is None:
+            raise RuntimeError("Missing glyph: %s" % name)
     if isinstance(components, str):
         components = [components]
     wanted_components = set(components or [])
     changed = 0
     skipped = 0
-    for layer in target_glyph.layers:
-        for component in layer_components(layer):
-            if wanted_components and component_name(component) not in wanted_components:
-                continue
-            disable_component_alignment(component)
-            if set_component_rotation_preserving_bbox_center(component, degrees):
-                changed += 1
-            else:
-                skipped += 1
+    for target_glyph in targets:
+        for layer in target_glyph.layers:
+            for component in layer_components(layer):
+                if wanted_components and component_name(component) not in wanted_components:
+                    continue
+                disable_component_alignment(component)
+                if set_component_rotation_preserving_bbox_center(component, degrees):
+                    changed += 1
+                else:
+                    skipped += 1
+    if boolean_value(requireAll) and skipped:
+        raise RuntimeError("%s: could not rotate %i component(s)." % (glyph, skipped))
     log("%s: rotated %i component(s) by %s degrees%s." % (
         glyph,
         changed,
