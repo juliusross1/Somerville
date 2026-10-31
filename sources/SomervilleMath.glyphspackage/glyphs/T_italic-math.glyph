@@ -1,4 +1,5 @@
 {
+color = 8;
 glyphname = "Titalic-math";
 layers = (
 {
@@ -12,8 +13,23 @@ name = center;
 pos = (356,354);
 },
 {
+name = math.bl;
+},
+{
+name = math.br;
+pos = (539,0);
+},
+{
 name = math.ta;
-pos = (507.518,969);
+pos = (488,969);
+},
+{
+name = math.tl;
+pos = (20,708);
+},
+{
+name = math.tr;
+pos = (729,708);
 },
 {
 name = shortstroke;
@@ -161,15 +177,15 @@ ref = "_UC-T-top-stroke-swash";
 piece = {
 Asymmetry = 100;
 };
-pos = (253,0);
+pos = (203,0);
 ref = "_part.UC-T-upper-stroke";
 },
 {
-pos = (152,0);
+pos = (102,0);
 ref = "_part.UC-T-lower-stem-italic";
 }
 );
-width = 659;
+width = 729;
 },
 {
 anchors = (
@@ -182,8 +198,23 @@ name = center;
 pos = (420,354);
 },
 {
+name = math.bl;
+},
+{
+name = math.br;
+pos = (774,0);
+},
+{
 name = math.ta;
-pos = (569.518,969);
+pos = (550,969);
+},
+{
+name = math.tl;
+pos = (20,708);
+},
+{
+name = math.tr;
+pos = (964,708);
 },
 {
 name = shortstroke;
@@ -323,7 +354,7 @@ pos = (196,0);
 ref = "_part.UC-T-lower-stem-italic";
 }
 );
-width = 784;
+width = 964;
 },
 {
 anchors = (
@@ -336,8 +367,23 @@ name = center;
 pos = (374,354);
 },
 {
+name = math.bl;
+},
+{
+name = math.br;
+pos = (605,0);
+},
+{
 name = math.ta;
-pos = (521.374,960);
+pos = (501,960);
+},
+{
+name = math.tl;
+pos = (20,708);
+},
+{
+name = math.tr;
+pos = (795,708);
 },
 {
 name = shortstroke;
@@ -461,15 +507,15 @@ ref = "_UC-T-top-stroke-swash";
 piece = {
 Asymmetry = 100;
 };
-pos = (217,0);
+pos = (187,0);
 ref = "_part.UC-T-upper-stroke";
 },
 {
-pos = (105,0);
+pos = (75,0);
 ref = "_part.UC-T-lower-stem-italic";
 }
 );
-width = 695;
+width = 795;
 },
 {
 anchors = (
@@ -482,8 +528,23 @@ name = center;
 pos = (461,354);
 },
 {
+name = math.bl;
+},
+{
+name = math.br;
+pos = (857,0);
+},
+{
 name = math.ta;
-pos = (610.374,960);
+pos = (591,960);
+},
+{
+name = math.tl;
+pos = (20,708);
+},
+{
+name = math.tr;
+pos = (1047,708);
 },
 {
 name = shortstroke;
@@ -615,15 +676,15 @@ ref = "_UC-T-top-stroke-swash";
 piece = {
 Asymmetry = 100;
 };
-pos = (303,0);
+pos = (313,0);
 ref = "_part.UC-T-upper-stroke";
 },
 {
-pos = (173,0);
+pos = (183,0);
 ref = "_part.UC-T-lower-stem-italic";
 }
 );
-width = 867;
+width = 1047;
 },
 {
 anchors = (
@@ -636,8 +697,23 @@ name = center;
 pos = (358,354);
 },
 {
+name = math.bl;
+},
+{
+name = math.br;
+pos = (589,0);
+},
+{
 name = math.ta;
-pos = (507.518,969);
+pos = (488,969);
+},
+{
+name = math.tl;
+pos = (20,708);
+},
+{
+name = math.tr;
+pos = (779,708);
 },
 {
 name = shortstroke;
@@ -783,15 +859,15 @@ ref = "_UC-T-top-stroke-swash";
 piece = {
 Asymmetry = 100;
 };
-pos = (254,0);
+pos = (244,0);
 ref = "_part.UC-T-upper-stroke";
 },
 {
-pos = (94,0);
+pos = (84,0);
 ref = "_part.UC-T-lower-stem-italic";
 }
 );
-width = 659;
+width = 779;
 },
 {
 anchors = (
@@ -804,8 +880,23 @@ name = center;
 pos = (419,354);
 },
 {
+name = math.bl;
+},
+{
+name = math.br;
+pos = (734,0);
+},
+{
 name = math.ta;
-pos = (569.518,970);
+pos = (550,970);
+},
+{
+name = math.tl;
+pos = (20,708);
+},
+{
+name = math.tr;
+pos = (924,708);
 },
 {
 name = shortstroke;
@@ -969,7 +1060,7 @@ pos = (128,0);
 ref = "_part.UC-T-lower-stem-italic";
 }
 );
-width = 784;
+width = 924;
 },
 {
 anchors = (
@@ -982,8 +1073,23 @@ name = center;
 pos = (396,354);
 },
 {
+name = math.bl;
+},
+{
+name = math.br;
+pos = (683,0);
+},
+{
 name = math.ta;
-pos = (544.374,960);
+pos = (524,960);
+},
+{
+name = math.tl;
+pos = (20,708);
+},
+{
+name = math.tr;
+pos = (873,708);
 },
 {
 name = shortstroke;
@@ -1129,7 +1235,7 @@ pos = (97,0);
 ref = "_part.UC-T-lower-stem-italic";
 }
 );
-width = 733;
+width = 873;
 },
 {
 anchors = (
@@ -1142,8 +1248,23 @@ name = center;
 pos = (480,354);
 },
 {
+name = math.bl;
+},
+{
+name = math.br;
+pos = (898,0);
+},
+{
 name = math.ta;
-pos = (630.374,960);
+pos = (610,960);
+},
+{
+name = math.tl;
+pos = (20,708);
+},
+{
+name = math.tr;
+pos = (1088,708);
 },
 {
 name = shortstroke;
@@ -1289,15 +1410,15 @@ ref = "_UC-T-top-stroke-swash";
 piece = {
 Asymmetry = 100;
 };
-pos = (323,0);
+pos = (343,0);
 ref = "_part.UC-T-upper-stroke";
 },
 {
-pos = (144,0);
+pos = (164,0);
 ref = "_part.UC-T-lower-stem-italic";
 }
 );
-width = 898;
+width = 1088;
 }
 );
 unicode = 119879;

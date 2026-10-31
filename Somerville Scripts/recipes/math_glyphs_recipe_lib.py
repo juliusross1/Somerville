@@ -1913,6 +1913,9 @@ def action_set_glyph_metadata(
         if value is None:
             continue
         try:
+            # Glyphs only persists custom classifications with storage enabled.
+            store_attribute = "store" + attribute_name[0].upper() + attribute_name[1:]
+            setattr(target_glyph, store_attribute, True)
             setattr(target_glyph, attribute_name, str(value))
             changed.append(attribute_name)
         except Exception as error:
@@ -3777,7 +3780,8 @@ def math_assembly_entry(entry, connector_width=None):
     ]
 
 
-def action_set_math_plugin_assembly(font, verbose=False, glyph=None, direction="h", entries=None, **_kwargs):
+def action_set_math_plugin_assembly(font, verbose=False, glyph=None, direction="h", entries=None, connectorWidth=None, **_kwargs):
+    """Store an assembly, optionally deriving connector lengths from part outlines."""
     target_glyph = glyph_for_name(font, glyph)
     if target_glyph is None:
         raise RuntimeError("Missing glyph: %s" % glyph)
@@ -3785,7 +3789,12 @@ def action_set_math_plugin_assembly(font, verbose=False, glyph=None, direction="
         raise RuntimeError("%s: assembly entries are required." % glyph)
 
     assembly_key = "vAssembly" if str(direction).lower().startswith("v") else "hAssembly"
+    if connectorWidth not in (None, "bounds", "minimumMasterBounds"):
+        raise RuntimeError("%s: connectorWidth must be 'bounds' or 'minimumMasterBounds' when specified." % glyph)
+    if connectorWidth is not None and assembly_key != "hAssembly":
+        raise RuntimeError("%s: outline connector widths require a horizontal assembly." % glyph)
     mid_glyphs = {}
+    bounds_glyphs = {}
     if assembly_key == "hAssembly":
         for entry in entries:
             if isinstance(entry, dict):
@@ -3793,12 +3802,37 @@ def action_set_math_plugin_assembly(font, verbose=False, glyph=None, direction="
             else:
                 values = list(entry or [])
                 part_name = values[0] if values else None
+            if connectorWidth in ("bounds", "minimumMasterBounds"):
+                part_glyph = glyph_for_name(font, part_name)
+                if part_glyph is None:
+                    raise RuntimeError("Missing assembly glyph: %s" % part_name)
+                bounds_glyphs[part_name] = part_glyph
+                continue
             if ".mid" not in part_name or part_name in mid_glyphs:
                 continue
             mid_glyph = glyph_for_name(font, part_name)
             if mid_glyph is None:
                 raise RuntimeError("Missing assembly middle glyph: %s" % part_name)
             mid_glyphs[part_name] = mid_glyph
+    minimum_widths = {}
+    if connectorWidth == "minimumMasterBounds":
+        for part_name, part_glyph in bounds_glyphs.items():
+            widths = []
+            for master in font.masters:
+                try:
+                    part_layer = part_glyph.layers[master.id]
+                except Exception:
+                    part_layer = None
+                min_x, max_x, _center_x = bounds_x_values(part_layer)
+                if min_x is None or max_x is None or not math.isfinite(max_x - min_x) or max_x <= min_x:
+                    raise RuntimeError(
+                        "%s: no positive %s outline width for master %s"
+                        % (glyph, part_name, master.id)
+                    )
+                widths.append(max_x - min_x)
+            if not widths:
+                raise RuntimeError("%s: no masters available for connector widths." % glyph)
+            minimum_widths[part_name] = clean_number(min(widths))
     changed = 0
     for layer in target_glyph.layers:
         layer_entries = resolve_master_value(entries, font, layer)
@@ -3807,8 +3841,20 @@ def action_set_math_plugin_assembly(font, verbose=False, glyph=None, direction="
         for raw_entry, parsed_entry in zip(layer_entries, parsed_layer_entries):
             part_name = parsed_entry[0]
             connector_width = None
+            part_glyph = bounds_glyphs.get(part_name)
             mid_glyph = mid_glyphs.get(part_name)
-            if mid_glyph is not None:
+            if part_name in minimum_widths:
+                connector_width = minimum_widths[part_name]
+            elif part_glyph is not None:
+                part_layer = matching_layer(part_glyph, layer)
+                min_x, max_x, _center_x = bounds_x_values(part_layer)
+                if min_x is None or max_x is None or max_x <= min_x:
+                    raise RuntimeError(
+                        "%s: no positive %s outline width for layer %s"
+                        % (glyph, part_name, layer_label(layer))
+                    )
+                connector_width = clean_number(max_x - min_x)
+            elif mid_glyph is not None:
                 mid_layer = matching_layer(mid_glyph, layer)
                 connector_width = layer_width(mid_layer)
                 if connector_width is None:

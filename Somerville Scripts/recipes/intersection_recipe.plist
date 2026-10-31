@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Creates intersection (U+2229, math command \cap) from union (U+222A, \cup).
+     Flip the component vertically about its own outline bounds center on every
+     layer, preserving its vertical extent and horizontal orientation.
+     Disable automatic alignment during the flip to preserve its placement.
+     Inherit union's advance width and sidebearing keys. The union source may
+     remain non-exporting; intersection itself is exported. -->
+<plist version="1.0">
+<dict>
+	<key>formatVersion</key>
+	<integer>1</integer>
+	<key>kind</key>
+	<string>recipe</string>
+	<key>constants</key>
+	<string>recipe_constants.plist</string>
+	<key>name</key>
+	<string>intersection (U+2229)</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>createGlyph</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>intersection</string>
+				<key>export</key>
+				<true/>
+				<key>color</key>
+				<string>${GeneratedColor}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>setGlyphMetadata</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>intersection</string>
+				<key>category</key>
+				<string>Symbol</string>
+				<key>subCategory</key>
+				<string>Math</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>addComponent</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>intersection</string>
+				<key>component</key>
+				<string>union</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>flipComponents</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>intersection</string>
+				<key>components</key>
+				<array>
+					<string>union</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>setWidthFromComponent</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>intersection</string>
+				<key>componentIndex</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>setSideMetricKeys</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>intersection</string>
+				<key>left</key>
+				<string>=union</string>
+				<key>right</key>
+				<string>=union</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>updateMetrics</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>intersection</string>
+				<key>mastersOnly</key>
+				<false/>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
