@@ -3,7 +3,8 @@
 
 """Choose which missing math corner anchors to add on every glyph layer.
 
-Uses the first selected layer's parent as the current glyph. Includes master,
+Resolves the first selected layer's glyph name in the document font, including
+when the displayed layer is an interpolated preview. Includes master,
 intermediate, alternate and backup layers in glyph.layers. Existing anchors
 are never moved. Backgrounds are not separate entries in glyph.layers.
 
@@ -32,21 +33,23 @@ def cap_height_for_layer(font, layer):
     return master.capHeight
 
 
-def add_missing_anchors(selected_names):
-    font = Glyphs.font
+def add_missing_anchors(selected_names, selection=None):
+    if selection is not None:
+        font, glyph = selection()
+    else:
+        font = Glyphs.font
+        glyph = None
+        if font is not None and font.selectedLayers:
+            displayed_glyph = font.selectedLayers[0].parent
+            if displayed_glyph is not None:
+                glyph = font.glyphForName_(displayed_glyph.name)
     if font is None:
         Glyphs.showMacroWindow()
         print("Open a font first.")
         return
-    if not font.selectedLayers:
-        Glyphs.showMacroWindow()
-        print("Select a glyph first.")
-        return
-
-    glyph = font.selectedLayers[0].parent
     if glyph is None:
         Glyphs.showMacroWindow()
-        print("The selected layer has no parent glyph.")
+        print("Select a glyph with an editable source first.")
         return
 
     # Resolve positions before making any edits.
@@ -91,7 +94,9 @@ def add_missing_anchors(selected_names):
 
 
 class MathCornerAnchorDialog:
-    def __init__(self):
+    def __init__(self, on_added=None, selection=None):
+        self.on_added = on_added
+        self.selection = selection
         self.w = vanilla.FloatingWindow((390, 245), "Add Missing Math Corner Anchors")
         self.w.info = vanilla.TextBox(
             (15, 15, -15, 40),
@@ -133,8 +138,10 @@ class MathCornerAnchorDialog:
         if not names:
             return
         try:
-            result = add_missing_anchors(names)
+            result = add_missing_anchors(names, selection=self.selection)
             self.w.status.set(result or "Select a glyph in an open font first.")
+            if result is not None and self.on_added is not None:
+                self.on_added(result)
         except Exception:
             Glyphs.showMacroWindow()
             traceback.print_exc()

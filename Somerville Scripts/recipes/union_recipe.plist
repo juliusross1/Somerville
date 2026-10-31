@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Creates union (U+222A, math command \cup) from _smart.union.
+     Sets the smart height axis to 0 and enables automatic alignment.
+     Only the base glyph is created; no size variants are generated. -->
+<plist version="1.0">
+<dict>
+	<key>formatVersion</key>
+	<integer>1</integer>
+	<key>kind</key>
+	<string>recipe</string>
+	<key>constants</key>
+	<string>recipe_constants.plist</string>
+	<key>name</key>
+	<string>union (U+222A)</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>createGlyph</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>union</string>
+				<key>export</key>
+				<true/>
+				<key>color</key>
+				<string>${GeneratedColor}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>setGlyphMetadata</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>union</string>
+				<key>category</key>
+				<string>Symbol</string>
+				<key>subCategory</key>
+				<string>Math</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>addComponent</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>union</string>
+				<key>component</key>
+				<string>_smart.union</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>setComponentAxisValue</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>union</string>
+				<key>axis</key>
+				<string>height</string>
+				<key>value</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>enableComponentAlignment</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>union</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -14,6 +14,9 @@
     <!-- Number of .sXX variants for recipes that use SizeVariantCount. -->
     <key>SizeVariantCount</key>
     <integer>20</integer>
+    <!-- Component weight at the largest size in Black optical corrections. -->
+    <key>blackweightadjustment</key>
+    <integer>600</integer>
     <key>ARLNmaximum</key>
     <integer>200</integer>
     <key>DoublePairedArrowGap</key>

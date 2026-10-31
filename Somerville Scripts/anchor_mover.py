@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 """Move anchors and adjust Somerville sidebearings on the current glyph.
 
-Anchor arrows move anchors on every layer. Sidebearing grids address the eight
+The selection is resolved by name in the document font, so an interpolated
+preview never becomes an edit target. Anchor arrows move anchors on every layer.
+Sidebearing grids address the eight
 Agate/Needlepoint, SemiLight/Black, SemiCondensed/SemiExpanded masters by axis
 coordinates, independent of axis order or master names. Cell, row and column
 buttons change the chosen bearing by 10 font units on those masters and every
@@ -13,6 +15,8 @@ component layers are changed only once per click. Undo belongs to edited glyphs.
 """
 
 import math
+import os
+import runpy
 import traceback
 
 import vanilla
@@ -29,6 +33,28 @@ STEP = 10
 OPTICAL_SIZES = (("Agate", 5), ("Needlepoint", 1200))
 WEIGHTS = (("SemiLight", 360), ("Black", 900))
 WIDTHS = (("SemiCondensed", 95), ("SemiExpanded", 113))
+
+
+def corner_anchor_script_path():
+    """Find the shared dialog when Glyphs runs menu scripts without __file__."""
+    directories = []
+    filename = globals().get("__file__")
+    if filename:
+        directories.append(os.path.dirname(os.path.realpath(filename)))
+    for version in ("4", "3"):
+        directories.append(os.path.expanduser(
+            "~/Library/Application Support/Glyphs %s/Scripts/Somerville Scripts" % version
+        ))
+    for directory in directories:
+        path = os.path.realpath(os.path.join(
+            directory, "setup", "add_missing_math_corner_anchors.py"
+        ))
+        if os.path.isfile(path):
+            return path
+    raise FileNotFoundError(
+        "Cannot find setup/add_missing_math_corner_anchors.py beside this script "
+        "or in the installed Somerville Scripts folder."
+    )
 
 
 def master_grid(font):
@@ -400,7 +426,14 @@ def component_users(font):
     """Index direct component users across all stored layers, including backups."""
     users = {}
     if font is not None:
-        for glyph in font.glyphs:
+        try:
+            glyphs = list(font.glyphs)
+        except AttributeError:
+            # Some Glyphs wrappers call a missing native `glyphs` selector.
+            # Bypass the collection proxy, including its broken len/index path.
+            count = font.countOfGlyphs()
+            glyphs = [font.glyphAtIndex_(index) for index in range(count)]
+        for glyph in glyphs:
             for layer in glyph.layers:
                 for component in layer.components:
                     users.setdefault(component.componentName, set()).add(glyph.name)
@@ -430,13 +463,19 @@ class AnchorMover:
         self.preview_signature = None
         self.users_selection = None
         self.users_index = {}
+        self.users_error = None
+        self.corner_anchor_dialog = None
         self.w = vanilla.FloatingWindow((800, 666), "adjust math spacing")
         self.w.glyphName = vanilla.TextBox((12, 12, 305, 20), "")
         self.w.previewTitle = vanilla.TextBox((12, 36, 305, 18), "Spacing sources across both grids", sizeStyle="small")
         self.w.usersTitle = vanilla.TextBox((12, 304, 224, 18), "Glyphs using these sources (incl. nested)", sizeStyle="small")
         self.w.refreshUsers = vanilla.Button((244, 300, 73, 22), "Refresh", sizeStyle="small", callback=self.refresh_users)
         self.w.hint = vanilla.TextBox(
-            (12, 430, 305, 20), "Anchors: selected glyph, 10 units on all layers.", sizeStyle="small"
+            (176, 432, 141, 20), "Move 10 units; all layers.", sizeStyle="small"
+        )
+        self.w.insertCorners = vanilla.Button(
+            (12, 430, 154, 22), "Add Corner Anchors…", sizeStyle="small",
+            callback=self.open_corner_anchor_dialog,
         )
         self.w.bearingTitle = vanilla.TextBox((336, 12, -12, 20), "Sidebearings: 10 font units per click")
         self.w.bearingHint = vanilla.TextBox(
@@ -492,13 +531,19 @@ class AnchorMover:
         font = Glyphs.font
         if font is None or not font.selectedLayers:
             return None, None
-        return font, font.selectedLayers[0].parent
+        displayed_glyph = font.selectedLayers[0].parent
+        if displayed_glyph is None:
+            return font, None
+        # An axis-preview layer belongs to a temporary interpolated glyph.
+        # Always edit the stored glyph and its real master/special layers.
+        return font, font.glyphForName_(displayed_glyph.name)
 
     def refresh(self, sender=None):
         if self.busy:
             return
         font, glyph = self.selection()
         self.w.glyphName.set(glyph.name if glyph is not None else "Select a glyph.")
+        self.w.insertCorners.enable(glyph is not None)
         names = {
             anchor.name
             for layer in glyph.layers
@@ -510,7 +555,7 @@ class AnchorMover:
         layers_signature = tuple((layer.layerId, layer.associatedMasterId) for layer in glyph.layers) if glyph else ()
         signature = (font, glyph, tuple(ordered), grid_signature, layers_signature)
         self.cells = cells
-        self.refresh_sidebearings(glyph)
+        self.refresh_sidebearings(font, glyph)
         if signature == self.signature:
             return
         self.signature = signature
@@ -538,9 +583,9 @@ class AnchorMover:
             (12, 456, 305, -54), rows.getNSView(), hasHorizontalScroller=False
         )
 
-    def refresh_sidebearings(self, glyph):
+    def refresh_sidebearings(self, font, glyph):
         master_ids = set().union(*self.cells.values())
-        self.refresh_previews(glyph, master_ids)
+        self.refresh_previews(font, glyph, master_ids)
         for key, label in self.cell_labels.items():
             masters = [layer for layer in glyph.layers if layer.layerId in self.cells[key]] if glyph else []
             if not masters:
@@ -559,13 +604,20 @@ class AnchorMover:
         self.preview_signature = None
         self.refresh()
 
-    def refresh_previews(self, glyph, master_ids):
-        font = glyph.parent if glyph is not None else None
+    def refresh_previews(self, font, glyph, master_ids):
         targets, errors = spacing_preview_targets(glyph, master_ids)
         selection = (font, glyph, tuple(name for name, _, _ in targets))
         if selection != self.users_selection:
-            self.users_index = component_users(font)
+            self.users_error = None
+            try:
+                self.users_index = component_users(font)
+            except Exception as error:
+                self.users_index = {}
+                self.users_error = "Component users unavailable: %s" % error
+                traceback.print_exc()
             self.users_selection = selection
+        if self.users_error:
+            errors.append(self.users_error)
         signature = (selection, tuple((name, layer.layerId, bearings)
                                      for name, layer, bearings in targets), tuple(errors))
         if signature != self.preview_signature:
@@ -600,7 +652,8 @@ class AnchorMover:
                 label.getNSTextField().setToolTip_(name)
                 setattr(user_rows, "source%d" % index, label)
                 y += 20
-                names = all_component_users(self.users_index, name)
+                names = (["(Component lookup unavailable)"] if self.users_error
+                         else all_component_users(self.users_index, name))
                 for number, user in enumerate(names or ["(No component users)"]):
                     control = vanilla.TextBox((10, y, 273, 16), user, sizeStyle="small")
                     control.getNSTextField().setToolTip_(user)
@@ -758,7 +811,37 @@ class AnchorMover:
                               % (glyph.name, bearing, delta, len(roots),
                                  ", ".join(owner.name for owner in edited_glyphs)))
 
+    def open_corner_anchor_dialog(self, sender):
+        font, glyph = self.selection()
+        if glyph is None:
+            self.w.status.set("Select a glyph in an open font first.")
+            return
+        try:
+            dialog = self.corner_anchor_dialog
+            if dialog is not None and getattr(dialog.w, "_window", None) is not None:
+                dialog.w.show()
+                dialog.w.getNSWindow().makeKeyAndOrderFront_(None)
+                return
+            path = corner_anchor_script_path()
+            namespace = runpy.run_path(path, run_name="somerville_math_corner_anchors")
+            self.corner_anchor_dialog = namespace["MathCornerAnchorDialog"](
+                on_added=self.corner_anchors_added, selection=self.selection
+            )
+        except Exception:
+            Glyphs.showMacroWindow()
+            traceback.print_exc()
+            self.w.status.set("Could not open corner anchor selector. See Macro Window.")
+
+    def corner_anchors_added(self, message):
+        self.refresh()
+        self.w.status.set(message)
+        Glyphs.redraw()
+
     def close(self, sender):
+        dialog = self.corner_anchor_dialog
+        if dialog is not None and getattr(dialog.w, "_window", None) is not None:
+            dialog.w.close()
+        self.corner_anchor_dialog = None
         Glyphs.removeCallback(self.refresh)
 
 

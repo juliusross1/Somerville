@@ -21,7 +21,7 @@ from GlyphsApp import (
 from AppKit import NSMakePoint, NSPoint
 
 
-SCRIPT_VERSION = "2026-10-28 glyphs4-smart-layer-coordinates"
+SCRIPT_VERSION = "2026-10-31 component-axis-variant-interpolation"
 DEFAULT_RECIPE_FILE = "triple_integral_recipe.plist"
 VERBOSE = True
 VARIABLE_PATTERN = re.compile(r"\$\{([^}]+)\}")
@@ -1542,6 +1542,12 @@ def smart_axis_id_for_component(font, component, axis_name_value):
     if glyph is None:
         return None
     axis = smart_axis_for_name(glyph, axis_name_value)
+    # Glyphs 4 component settings can also override a font axis, such as Weight.
+    if axis is None and uses_glyphs4_coordinates():
+        for font_axis in font.axes:
+            if smart_axis_name(font_axis) == axis_name_value:
+                axis = font_axis
+                break
     return axis_identifier(axis) if axis is not None else None
 
 
@@ -2967,24 +2973,33 @@ def action_align_component_pairs_by_anchors(
     return changed
 
 
-def action_flip_components(font, verbose=False, glyph=None, components=None, **_kwargs):
-    target_glyph = glyph_for_name(font, glyph)
-    if target_glyph is None:
-        raise RuntimeError("Missing glyph: %s" % glyph)
+def action_flip_components(font, verbose=False, glyph=None, components=None, variantCount=0, requireAll=False, **_kwargs):
+    """Flip vertically about final bounds, optionally including .sXX variants."""
+    count = float(variantCount)
+    if not math.isfinite(count) or count < 0 or not count.is_integer():
+        raise RuntimeError("%s: variantCount must be a non-negative integer." % glyph)
+    names = variant_names(glyph, int(count))
+    targets = [glyph_for_name(font, name) for name in names]
+    for name, target in zip(names, targets):
+        if target is None:
+            raise RuntimeError("Missing glyph: %s" % name)
     if isinstance(components, str):
         components = [components]
     wanted_components = set(components or [])
     changed = 0
     skipped = 0
-    for layer in target_glyph.layers:
-        for component in layer_components(layer):
-            if wanted_components and component_name(component) not in wanted_components:
-                continue
-            disable_component_alignment(component)
-            if flip_component_across_horizontal_center(component):
-                changed += 1
-            else:
-                skipped += 1
+    for target_glyph in targets:
+        for layer in target_glyph.layers:
+            for component in layer_components(layer):
+                if wanted_components and component_name(component) not in wanted_components:
+                    continue
+                disable_component_alignment(component)
+                if flip_component_across_horizontal_center(component):
+                    changed += 1
+                else:
+                    skipped += 1
+    if boolean_value(requireAll) and skipped:
+        raise RuntimeError("%s: could not flip %i component(s)." % (glyph, skipped))
     log("%s: flipped %i component(s)%s." % (
         glyph,
         changed,
@@ -3507,18 +3522,24 @@ def action_align_component_left_bounds_and_set_metrics(
     return changed_layers
 
 
-def action_set_side_metric_keys(font, verbose=False, glyph=None, left=None, right=None, **_kwargs):
-    target_glyph = glyph_for_name(font, glyph)
-    if target_glyph is None:
-        raise RuntimeError("Missing glyph: %s" % glyph)
+def action_set_side_metric_keys(font, verbose=False, glyph=None, left=None, right=None, variantCount=0, **_kwargs):
+    count = float(variantCount)
+    if not math.isfinite(count) or count < 0 or not count.is_integer():
+        raise RuntimeError("%s: variantCount must be a non-negative integer." % glyph)
+    names = variant_names(glyph, int(count))
+    targets = [glyph_for_name(font, name) for name in names]
+    for name, target in zip(names, targets):
+        if target is None:
+            raise RuntimeError("Missing glyph: %s" % name)
     changed = 0
     layer_count = 0
-    for layer in target_glyph.layers:
-        layer_count += 1
-        if left is not None and set_layer_metrics_key(layer, "leftMetricsKey", left):
-            changed += 1
-        if right is not None and set_layer_metrics_key(layer, "rightMetricsKey", right):
-            changed += 1
+    for target_glyph in targets:
+        for layer in target_glyph.layers:
+            layer_count += 1
+            if left is not None and set_layer_metrics_key(layer, "leftMetricsKey", left):
+                changed += 1
+            if right is not None and set_layer_metrics_key(layer, "rightMetricsKey", right):
+                changed += 1
     log("%s: set LSB key %s and RSB key %s on %i layer(s)." % (
         glyph,
         left,
@@ -3547,24 +3568,30 @@ def sync_layer_metrics(layer):
     return False
 
 
-def action_update_metrics(font, verbose=False, glyph=None, mastersOnly=True, enabled=True, **_kwargs):
+def action_update_metrics(font, verbose=False, glyph=None, mastersOnly=True, enabled=True, variantCount=0, **_kwargs):
     if not boolean_value(enabled):
         log("%s: metrics update skipped." % glyph, verbose)
         return 0
 
-    target_glyph = glyph_for_name(font, glyph)
-    if target_glyph is None:
-        raise RuntimeError("Missing glyph: %s" % glyph)
+    count = float(variantCount)
+    if not math.isfinite(count) or count < 0 or not count.is_integer():
+        raise RuntimeError("%s: variantCount must be a non-negative integer." % glyph)
+    names = variant_names(glyph, int(count))
+    targets = [glyph_for_name(font, name) for name in names]
+    for name, target in zip(names, targets):
+        if target is None:
+            raise RuntimeError("Missing glyph: %s" % name)
 
     changed = 0
     skipped = 0
-    for layer in target_glyph.layers:
-        if boolean_value(mastersOnly) and not is_master_layer(layer):
-            continue
-        if sync_layer_metrics(layer):
-            changed += 1
-        else:
-            skipped += 1
+    for target_glyph in targets:
+        for layer in target_glyph.layers:
+            if boolean_value(mastersOnly) and not is_master_layer(layer):
+                continue
+            if sync_layer_metrics(layer):
+                changed += 1
+            else:
+                skipped += 1
     log("%s: updated metrics on %i layer(s)%s." % (
         glyph,
         changed,
@@ -3657,36 +3684,63 @@ def action_set_component_axis_value(
     value=0,
     componentFilter=None,
     requirePositive=False,
+    variantCount=0,
+    endValue=None,
+    masterNames=None,
     **_kwargs
 ):
-    target_glyph = glyph_for_name(font, glyph)
-    if target_glyph is None:
-        raise RuntimeError("Missing glyph: %s" % glyph)
+    """Set an axis, optionally interpolating across .sXX variants in selected masters."""
+    count = float(variantCount)
+    if not math.isfinite(count) or count < 0 or not count.is_integer():
+        raise RuntimeError("%s: variantCount must be a non-negative integer." % glyph)
+    count = int(count)
+    if endValue is not None and count == 0:
+        raise RuntimeError("%s: endValue requires a positive variantCount." % glyph)
+    names = variant_names(glyph, count)
+    targets = [glyph_for_name(font, name) for name in names]
+    for name, target in zip(names, targets):
+        if target is None:
+            raise RuntimeError("Missing glyph: %s" % name)
+    if isinstance(masterNames, str):
+        masterNames = [masterNames]
+    wanted_masters = set(masterNames or [])
     changed = 0
     skipped = 0
-    for layer in target_glyph.layers:
-        layer_value = resolve_master_value(value, font, layer)
-        if boolean_value(requirePositive) and clean_number(layer_value) <= 0:
-            raise RuntimeError(
-                "%s/%s: calculated %s value must be positive; got %s."
-                % (glyph, layer_label(layer), axis, layer_value)
-            )
-        for component in layer_components(layer):
-            if not component_matches_filter(component, componentFilter):
-                continue
-            axis_id = smart_axis_id_for_component(font, component, axis)
-            if axis_id is None:
-                skipped += 1
-                continue
-            if set_component_smart_value(component, axis_id, layer_value):
-                changed += 1
-            else:
-                skipped += 1
-    log("%s: set %s=%s on %i component(s)%s." % (
+    for number, target_glyph in enumerate(targets):
+        for layer in target_glyph.layers:
+            if wanted_masters:
+                master = master_for_layer(font, layer)
+                name = str(safe_call(getattr(master, "name", None), "") or "")
+                if name not in wanted_masters:
+                    continue
+            layer_value = resolve_master_value(value, font, layer)
+            if endValue is not None:
+                end_value = resolve_master_value(endValue, font, layer)
+                layer_value = clean_number(
+                    float(layer_value) + (float(end_value) - float(layer_value)) * number / count
+                )
+            if boolean_value(requirePositive) and clean_number(layer_value) <= 0:
+                raise RuntimeError(
+                    "%s/%s: calculated %s value must be positive; got %s."
+                    % (target_glyph.name, layer_label(layer), axis, layer_value)
+                )
+            for component in layer_components(layer):
+                if not component_matches_filter(component, componentFilter):
+                    continue
+                axis_id = smart_axis_id_for_component(font, component, axis)
+                if axis_id is None:
+                    skipped += 1
+                    continue
+                if set_component_smart_value(component, axis_id, layer_value):
+                    changed += 1
+                else:
+                    skipped += 1
+    log("%s: set %s=%s on %i component(s) across %i glyph(s)%s." % (
         glyph,
         axis,
         value,
         changed,
+        len(targets),
         "; skipped %i" % skipped if skipped else "",
     ), verbose)
     return changed
