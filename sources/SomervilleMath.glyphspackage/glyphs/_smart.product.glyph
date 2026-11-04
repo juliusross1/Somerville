@@ -1213,8 +1213,8 @@ nodes = (
 width = 4817;
 }
 );
-metricLeft = "=_smart.union";
-metricRight = "=_smart.union";
+metricLeft = "=_smart.naryunion";
+metricRight = "=_smart.naryunion";
 partsSettings = (
 {
 bottomValue = 0;

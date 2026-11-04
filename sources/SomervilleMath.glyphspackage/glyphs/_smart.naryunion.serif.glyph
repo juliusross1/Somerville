@@ -1,6 +1,6 @@
 {
 export = 0;
-glyphname = _smart.union;
+glyphname = _smart.naryunion.serif;
 layers = (
 {
 anchors = (
@@ -804,7 +804,6 @@ nodes = (
 );
 }
 );
-visible = 1;
 width = 6224;
 },
 {

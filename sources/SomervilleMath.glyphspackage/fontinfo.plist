@@ -609,6 +609,19 @@ value = "";
 }
 );
 tag = ss13;
+},
+{
+automatic = 1;
+code = "sub naryintersection by naryintersection.ss15;
+sub naryunion by naryunion.ss15;
+";
+labels = (
+{
+language = dflt;
+value = "Serif Symbols";
+}
+);
+tag = ss15;
 }
 );
 fontMaster = (

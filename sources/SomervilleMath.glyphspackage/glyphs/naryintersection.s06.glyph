@@ -5,42 +5,42 @@ glyphname = naryintersection.s06;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
-metricLeft = "=union";
-metricRight = "=union";
+metricLeft = "=union.ss15";
+metricRight = "=union.ss15";
 shapes = (
 {
 alignment = -1;
 piece = {
 height = 30;
 };
-pos = (-81,451);
-ref = _smart.union;
+pos = (-141,451);
+ref = _smart.naryunion;
 scale = (1,-1);
 }
 );
-width = 2022;
+width = 1742;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
-metricLeft = "=union";
-metricRight = "=union";
+metricLeft = "=union.ss15";
+metricRight = "=union.ss15";
 shapes = (
 {
 alignment = -1;
 piece = {
 height = 30;
 };
-pos = (-116,448);
-ref = _smart.union;
+pos = (-206,448);
+ref = _smart.naryunion;
 scale = (1,-1);
 }
 );
-width = 2705;
+width = 2252;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
-metricLeft = "=union";
-metricRight = "=union";
+metricLeft = "=union.ss15";
+metricRight = "=union.ss15";
 shapes = (
 {
 alignment = -1;
@@ -48,17 +48,17 @@ piece = {
 Weight = 900;
 height = 30;
 };
-pos = (-51,443);
-ref = _smart.union;
+pos = (-135,443);
+ref = _smart.naryunion;
 scale = (1,-1);
 }
 );
-width = 2025;
+width = 1776;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-metricLeft = "=union";
-metricRight = "=union";
+metricLeft = "=union.ss15";
+metricRight = "=union.ss15";
 shapes = (
 {
 alignment = -1;
@@ -66,51 +66,51 @@ piece = {
 Weight = 900;
 height = 30;
 };
-pos = (-66,438);
-ref = _smart.union;
+pos = (-164,438);
+ref = _smart.naryunion;
 scale = (1,-1);
 }
 );
-width = 2683;
+width = 2287;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
-metricLeft = "=union";
-metricRight = "=union";
+metricLeft = "=union.ss15";
+metricRight = "=union.ss15";
 shapes = (
 {
 alignment = -1;
 piece = {
 height = 30;
 };
-pos = (-51,457);
-ref = _smart.union;
+pos = (-110,457);
+ref = _smart.naryunion;
 scale = (1,-1);
 }
 );
-width = 1859;
+width = 1741;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-metricLeft = "=union";
-metricRight = "=union";
+metricLeft = "=union.ss15";
+metricRight = "=union.ss15";
 shapes = (
 {
 alignment = -1;
 piece = {
 height = 30;
 };
-pos = (-116,455);
-ref = _smart.union;
+pos = (-175,455);
+ref = _smart.naryunion;
 scale = (1,-1);
 }
 );
-width = 2587;
+width = 2309;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
-metricLeft = "=union";
-metricRight = "=union";
+metricLeft = "=union.ss15";
+metricRight = "=union.ss15";
 shapes = (
 {
 alignment = -1;
@@ -118,17 +118,17 @@ piece = {
 Weight = 900;
 height = 30;
 };
-pos = (-51,468);
-ref = _smart.union;
+pos = (-124,468);
+ref = _smart.naryunion;
 scale = (1,-1);
 }
 );
-width = 1962;
+width = 1815;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
-metricLeft = "=union";
-metricRight = "=union";
+metricLeft = "=union.ss15";
+metricRight = "=union.ss15";
 shapes = (
 {
 alignment = -1;
@@ -136,15 +136,15 @@ piece = {
 Weight = 900;
 height = 30;
 };
-pos = (-116,444);
-ref = _smart.union;
+pos = (-189,444);
+ref = _smart.naryunion;
 scale = (1,-1);
 }
 );
-width = 2585;
+width = 2348;
 }
 );
-metricLeft = "=union";
-metricRight = "=union";
+metricLeft = "=union.ss15";
+metricRight = "=union.ss15";
 subCategory = Math;
 }
