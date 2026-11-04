@@ -10,12 +10,15 @@ metricRight = "=union";
 shapes = (
 {
 alignment = -1;
-pos = (0,594);
-ref = union;
+piece = {
+height = 0;
+};
+pos = (-30,475);
+ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 768;
+width = 976;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -24,12 +27,15 @@ metricRight = "=union";
 shapes = (
 {
 alignment = -1;
-pos = (0,584);
-ref = union;
+piece = {
+height = 0;
+};
+pos = (-50,473);
+ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 909;
+width = 1311;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -38,12 +44,15 @@ metricRight = "=union";
 shapes = (
 {
 alignment = -1;
-pos = (0,594);
-ref = union;
+piece = {
+height = 0;
+};
+pos = (0,465);
+ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 859;
+width = 979;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -52,12 +61,15 @@ metricRight = "=union";
 shapes = (
 {
 alignment = -1;
-pos = (0,594);
-ref = union;
+piece = {
+height = 0;
+};
+pos = (0,457);
+ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 964;
+width = 1324;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -66,12 +78,15 @@ metricRight = "=union";
 shapes = (
 {
 alignment = -1;
-pos = (0,594);
-ref = union;
+piece = {
+height = 0;
+};
+pos = (0,464);
+ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 743;
+width = 828;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -80,12 +95,15 @@ metricRight = "=union";
 shapes = (
 {
 alignment = -1;
-pos = (0,594);
-ref = union;
+piece = {
+height = 0;
+};
+pos = (-50,465);
+ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 863;
+width = 1176;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -94,12 +112,15 @@ metricRight = "=union";
 shapes = (
 {
 alignment = -1;
-pos = (0,594);
-ref = union;
+piece = {
+height = 0;
+};
+pos = (0,466);
+ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 813;
+width = 968;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -108,12 +129,15 @@ metricRight = "=union";
 shapes = (
 {
 alignment = -1;
-pos = (0,594);
-ref = union;
+piece = {
+height = 0;
+};
+pos = (-50,466);
+ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 898;
+width = 1168;
 }
 );
 subCategory = Math;

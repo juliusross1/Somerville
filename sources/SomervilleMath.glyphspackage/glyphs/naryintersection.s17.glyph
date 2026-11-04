@@ -11,14 +11,14 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 85.75;
+height = 85;
 };
-pos = (0,3266);
+pos = (-175,405);
 ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 4084;
+width = 3940;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -28,14 +28,14 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 85.75;
+height = 85;
 };
-pos = (0,3266);
+pos = (-237,403);
 ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 4706;
+width = 5260;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -45,14 +45,15 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 85.75;
+Weight = 900;
+height = 85;
 };
-pos = (0,3266);
+pos = (-145,402);
 ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 4116;
+width = 3941;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -62,14 +63,15 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 85.75;
+Weight = 900;
+height = 85;
 };
-pos = (0,3266);
+pos = (-187,403);
 ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 4841;
+width = 5175;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -79,14 +81,14 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 85.75;
+height = 85;
 };
-pos = (0,3266);
+pos = (-145,444);
 ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 3952;
+width = 3750;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -96,14 +98,14 @@ shapes = (
 {
 alignment = -1;
 piece = {
-height = 85.75;
+height = 85;
 };
-pos = (0,3266);
+pos = (-237,436);
 ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 4663;
+width = 5173;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -113,15 +115,15 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Weight = 645;
-height = 85.75;
+Weight = 900;
+height = 85;
 };
-pos = (0,3266);
+pos = (-145,470);
 ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 3947;
+width = 3783;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -131,15 +133,15 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Weight = 645;
-height = 85.75;
+Weight = 900;
+height = 85;
 };
-pos = (0,3266);
+pos = (-237,402);
 ref = _smart.union;
 scale = (1,-1);
 }
 );
-width = 4760;
+width = 5182;
 }
 );
 metricLeft = "=union";
