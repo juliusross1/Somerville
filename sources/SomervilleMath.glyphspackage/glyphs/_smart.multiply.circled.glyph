@@ -15,20 +15,17 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
 piece = {
-height = 3.7668;
+height = 8.46188;
 };
-pos = (96,0);
+pos = (205,0);
 ref = _smart.multiply;
 }
 );
-width = 528;
+width = 1136;
 },
 {
 attr = {
@@ -42,20 +39,17 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
 piece = {
-height = 4.33196;
+height = 8.24806;
 };
-pos = (104,0);
+pos = (241,0);
 ref = _smart.multiply;
 }
 );
-width = 638;
+width = 1276;
 },
 {
 attr = {
@@ -69,219 +63,17 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
 piece = {
-height = 3.72063;
+height = 6.9864;
 };
-pos = (100,0);
+pos = (209,0);
 ref = _smart.multiply;
 }
 );
-width = 551;
-},
-{
-attr = {
-partSelection = {
-height = 1;
-};
-};
-layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-partSelection = {
-height = 1;
-};
-shapes = (
-{
-piece = {
-height = 5;
-};
-ref = _smart.circle;
-},
-{
-piece = {
-height = 3.94873;
-};
-pos = (134,0);
-ref = _smart.multiply;
-}
-);
-width = 674;
-},
-{
-attr = {
-partSelection = {
-height = 1;
-};
-};
-layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
-partSelection = {
-height = 1;
-};
-shapes = (
-{
-piece = {
-height = 5;
-};
-ref = _smart.circle;
-},
-{
-piece = {
-height = 3.92011;
-thin = 30;
-};
-pos = (101,-44);
-ref = _smart.multiply;
-}
-);
-width = 597;
-},
-{
-attr = {
-partSelection = {
-height = 1;
-};
-};
-layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
-partSelection = {
-height = 1;
-};
-shapes = (
-{
-piece = {
-height = 5;
-};
-ref = _smart.circle;
-},
-{
-piece = {
-height = 4.50651;
-thin = 30;
-};
-pos = (116,-48);
-ref = _smart.multiply;
-}
-);
-width = 721;
-},
-{
-attr = {
-partSelection = {
-height = 1;
-};
-};
-layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
-partSelection = {
-height = 1;
-};
-shapes = (
-{
-piece = {
-height = 5;
-};
-ref = _smart.circle;
-},
-{
-piece = {
-height = 3.97089;
-thin = 50;
-};
-pos = (93,0);
-ref = _smart.multiply;
-}
-);
-width = 609;
-},
-{
-attr = {
-partSelection = {
-height = 1;
-};
-};
-layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
-partSelection = {
-height = 1;
-};
-shapes = (
-{
-piece = {
-height = 5;
-};
-ref = _smart.circle;
-},
-{
-piece = {
-height = 4.21653;
-thin = 50;
-};
-pos = (98,-3);
-ref = _smart.multiply;
-}
-);
-width = 679;
-},
-{
-associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
-attr = {
-partSelection = {
-"0BC4E629-0B3A-4CEE-9A89-AA73FFBA0182" = 1;
-height = 2;
-};
-};
-layerId = "56D39D3A-8E59-499A-8327-385FCEBB2D64";
-name = "Needlepoint SemiCondensed Upright High";
-partSelection = {
-height = 2;
-};
-shapes = (
-{
-piece = {
-height = 90;
-};
-ref = _smart.circle;
-},
-{
-piece = {
-height = 57.75247;
-};
-pos = (1107,0);
-ref = _smart.multiply;
-}
-);
-width = 6956;
-},
-{
-associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
-attr = {
-partSelection = {
-"0BC4E629-0B3A-4CEE-9A89-AA73FFBA0182" = 1;
-height = 2;
-};
-};
-layerId = "62C860D7-D36F-48A4-AE70-28AAC2D6FEAD";
-name = "Needlepoint SemiExpanded Upright High";
-partSelection = {
-height = 2;
-};
-shapes = (
-{
-piece = {
-height = 90;
-};
-ref = _smart.circle;
-},
-{
-piece = {
-height = 62.67269;
-};
-pos = (1085,0);
-ref = _smart.multiply;
-}
-);
-width = 7944;
+width = 1043;
 },
 {
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -299,19 +91,203 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
 piece = {
-height = 57.0571;
+height = 68.26221;
 };
-pos = (1378,0);
+pos = (1103,0);
 ref = _smart.multiply;
 }
 );
-width = 7544;
+width = 7957;
+},
+{
+attr = {
+partSelection = {
+height = 1;
+};
+};
+layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+partSelection = {
+height = 1;
+};
+shapes = (
+{
+ref = _smart.circle;
+},
+{
+piece = {
+height = 7.51763;
+};
+pos = (249,0);
+ref = _smart.multiply;
+}
+);
+width = 1232;
+},
+{
+attr = {
+partSelection = {
+height = 1;
+};
+};
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+partSelection = {
+height = 1;
+};
+shapes = (
+{
+ref = _smart.circle;
+},
+{
+piece = {
+height = 7.75606;
+thin = 30;
+};
+pos = (211,-42);
+ref = _smart.multiply;
+}
+);
+width = 1136;
+},
+{
+attr = {
+partSelection = {
+height = 1;
+};
+};
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+partSelection = {
+height = 1;
+};
+shapes = (
+{
+ref = _smart.circle;
+},
+{
+piece = {
+height = 8.27901;
+thin = 30;
+};
+pos = (217,-47);
+ref = _smart.multiply;
+}
+);
+width = 1276;
+},
+{
+attr = {
+partSelection = {
+height = 1;
+};
+};
+layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+partSelection = {
+height = 1;
+};
+shapes = (
+{
+ref = _smart.circle;
+},
+{
+piece = {
+height = 6.33338;
+thin = 50;
+};
+pos = (259,0);
+ref = _smart.multiply;
+}
+);
+width = 1138;
+},
+{
+attr = {
+partSelection = {
+height = 1;
+};
+};
+layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+partSelection = {
+height = 1;
+};
+shapes = (
+{
+ref = _smart.circle;
+},
+{
+piece = {
+height = 7.65455;
+thin = 50;
+};
+pos = (235,0);
+ref = _smart.multiply;
+}
+);
+width = 1276;
+},
+{
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+partSelection = {
+"0BC4E629-0B3A-4CEE-9A89-AA73FFBA0182" = 1;
+height = 2;
+};
+};
+layerId = "56D39D3A-8E59-499A-8327-385FCEBB2D64";
+name = "Needlepoint SemiCondensed Upright High";
+partSelection = {
+height = 2;
+};
+shapes = (
+{
+piece = {
+height = 100;
+};
+ref = _smart.circle;
+},
+{
+piece = {
+height = 65.15611;
+};
+pos = (1001,0);
+ref = _smart.multiply;
+}
+);
+width = 7349;
+},
+{
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+partSelection = {
+"0BC4E629-0B3A-4CEE-9A89-AA73FFBA0182" = 1;
+height = 2;
+};
+};
+layerId = "62C860D7-D36F-48A4-AE70-28AAC2D6FEAD";
+name = "Needlepoint SemiExpanded Upright High";
+partSelection = {
+height = 2;
+};
+shapes = (
+{
+piece = {
+height = 100;
+};
+ref = _smart.circle;
+},
+{
+piece = {
+height = 62.67269;
+};
+pos = (1305,0);
+ref = _smart.multiply;
+}
+);
+width = 8383;
 },
 {
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -329,19 +305,19 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
 piece = {
-height = 62.86015;
+height = 71.81802;
 };
-pos = (1361,0);
+pos = (1385,0);
 ref = _smart.multiply;
 }
 );
-width = 8527;
+width = 9397;
 },
 {
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -359,19 +335,19 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
 piece = {
-height = 57.81989;
+height = 60.00759;
 };
-pos = (1154,-19);
+pos = (1101,-18);
 ref = _smart.multiply;
 }
 );
-width = 7112;
+width = 7183;
 },
 {
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -389,19 +365,19 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
 piece = {
-height = 63.12426;
+height = 65.302;
 };
-pos = (1174,-19);
+pos = (1138,-18);
 ref = _smart.multiply;
 }
 );
-width = 8257;
+width = 8383;
 },
 {
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -419,19 +395,19 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
 piece = {
-height = 58.56697;
+height = 64.04462;
 };
-pos = (1181,0);
+pos = (728,0);
 ref = _smart.multiply;
 }
 );
-width = 7236;
+width = 6775;
 },
 {
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -449,19 +425,19 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
 piece = {
-height = 62.90356;
+height = 69.35646;
 };
-pos = (1162,0);
+pos = (899,0);
 ref = _smart.multiply;
 }
 );
-width = 8180;
+width = 8243;
 }
 );
 partsSettings = (

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- Creates naryunion (U+22C3) and naryunion.sNN from _smart.union.
-     Base smart height: 5.
-     Variant height: 5 + 95 * NN / SizeVariantCount; the final height is 100.
-     createSmartComponentVariants adds increments to the source component's
-     height, so endValue is the 95-unit increment range, not the final height.
+<!-- Creates naryunion (U+22C3) and naryunion.sNN from _smart.naryunion.
+     Base smart height: 0.
+     Variant height: NN * 100 / SizeVariantCount; the final height is 100.
+     createSmartComponentVariants divides the 100-unit increment range by
+     SizeVariantCount.
      SizeVariantCount comes from recipe_constants.plist (currently 20).
-     In the two Agate Black masters, interpolate component Weight from 900
-     on the base to blackweightadjustment on the last variant.
+     In all Black masters, keep component Weight at 900
+     on the base and every variant.
      Register vertical MATH variants and enable alignment on base and variants. -->
 <plist version="1.0">
 <dict>
@@ -61,7 +61,7 @@
 				<key>glyph</key>
 				<string>naryunion</string>
 				<key>component</key>
-				<string>_smart.union</string>
+				<string>_smart.naryunion</string>
 			</dict>
 		</dict>
 		<dict>
@@ -76,7 +76,7 @@
 				<key>axis</key>
 				<string>height</string>
 				<key>value</key>
-				<integer>5</integer>
+				<integer>0</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -93,7 +93,7 @@
 				<key>N</key>
 				<string>${SizeVariantCount}</string>
 				<key>endValue</key>
-				<integer>95</integer>
+				<integer>100</integer>
 				<key>category</key>
 				<string>Symbol</string>
 				<key>subCategory</key>
@@ -115,19 +115,19 @@
 				<string>Weight</string>
 				<key>value</key>
 				<integer>900</integer>
-				<key>endValue</key>
-				<string>${blackweightadjustment}</string>
 				<key>variantCount</key>
 				<string>${SizeVariantCount}</string>
 				<key>masterNames</key>
 				<array>
+					<string>Needlepoint Black SemiCondensed Upright</string>
+					<string>Needlepoint Black SemiExpanded Upright</string>
 					<string>Agate Black SemiCondensed Upright</string>
 					<string>Agate Black SemiExpanded Upright</string>
 				</array>
 				<key>componentFilter</key>
 				<dict>
 					<key>component</key>
-					<string>_smart.union</string>
+					<string>_smart.naryunion</string>
 				</dict>
 			</dict>
 		</dict>

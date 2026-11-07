@@ -614,6 +614,8 @@ tag = ss13;
 automatic = 1;
 code = "sub naryintersection by naryintersection.ss15;
 sub naryunion by naryunion.ss15;
+sub intersection by intersection.ss15;
+sub union by union.ss15;
 ";
 labels = (
 {
@@ -622,6 +624,17 @@ value = "Serif Symbols";
 }
 );
 tag = ss15;
+},
+{
+automatic = 1;
+code = "lookup ccmp_DFLT_1 {
+	@CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb dieresiscomb dotaccentcomb gravecomb hookabovecomb macroncomb ringcomb tildecomb];
+	lookupflag UseMarkFilteringSet @CombiningTopAccents;
+	sub i' @CombiningTopAccents by idotless;
+	sub j' @CombiningTopAccents by jdotless;
+} ccmp_DFLT_1;
+";
+tag = ccmp;
 }
 );
 fontMaster = (

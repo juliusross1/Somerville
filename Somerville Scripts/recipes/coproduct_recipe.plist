@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
   "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Flip the smart product without moving it to the baseline.
+     Restore automatic alignment on all smart layers, the base and 20 variants. -->
 <plist version="1.0">
 <dict>
   <key>formatVersion</key>
@@ -160,6 +162,18 @@
       <key>type</key>
       <string>call</string>
       <key>function</key>
+      <string>enableComponentAlignment</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.coproduct</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
       <string>createGlyph</string>
       <key>arguments</key>
       <dict>
@@ -201,6 +215,20 @@
         <string>${axis}</string>
         <key>color</key>
         <string>${color}</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>enableComponentAlignment</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>coproduct</string>
+        <key>variantCount</key>
+        <integer>20</integer>
       </dict>
     </dict>
   </array>

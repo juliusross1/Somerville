@@ -21,7 +21,7 @@ from GlyphsApp import (
 from AppKit import NSMakePoint, NSPoint
 
 
-SCRIPT_VERSION = "2026-10-31 component-axis-variant-interpolation"
+SCRIPT_VERSION = "2026-10-31 component-baseline-variant-alignment"
 DEFAULT_RECIPE_FILE = "triple_integral_recipe.plist"
 VERBOSE = True
 VARIABLE_PATTERN = re.compile(r"\$\{([^}]+)\}")
@@ -2775,8 +2775,62 @@ def action_align_component_bottom_to_descender(
     return changed
 
 
-def action_align_component_bottom_to_baseline(*args, **kwargs):
-    return action_align_component_bottom_to_descender(*args, **kwargs)
+def action_align_component_bottom_to_baseline(
+    font,
+    verbose=False,
+    glyph=None,
+    components=None,
+    baseline=0,
+    variantCount=0,
+    enabled=True,
+    disableAlignment=True,
+    requireAll=False,
+    **_kwargs
+):
+    """Translate final component bounds to the baseline, including size variants."""
+    if not boolean_value(enabled):
+        return 0
+    count = float(variantCount)
+    if not math.isfinite(count) or count < 0 or not count.is_integer():
+        raise RuntimeError("%s: variantCount must be a non-negative integer." % glyph)
+    names = variant_names(glyph, int(count))
+    targets = [glyph_for_name(font, name) for name in names]
+    for name, target in zip(names, targets):
+        if target is None:
+            raise RuntimeError("Missing glyph: %s" % name)
+    if isinstance(components, str):
+        components = [components]
+    wanted_components = set(components or [])
+    changed = 0
+    skipped = 0
+    for target_glyph in targets:
+        for layer in target_glyph.layers:
+            layer_baseline = float(resolve_master_value(baseline, font, layer))
+            for component in layer_components(layer):
+                if wanted_components and component_name(component) not in wanted_components:
+                    continue
+                if boolean_value(disableAlignment):
+                    disable_component_alignment(component)
+                min_y, _max_y, _center_y = bounds_y_values(component)
+                if min_y is None:
+                    skipped += 1
+                    continue
+                dy = layer_baseline - min_y
+                if abs(dy) < 0.0001:
+                    continue
+                if translate_component_y(component, dy):
+                    changed += 1
+                else:
+                    skipped += 1
+    if boolean_value(requireAll) and skipped:
+        raise RuntimeError("%s: could not align %i component(s) to the baseline." % (glyph, skipped))
+    log("%s: moved %i component(s) so bounds bottoms sit on baseline %s%s." % (
+        glyph,
+        changed,
+        baseline,
+        "; skipped %i" % skipped if skipped else "",
+    ), verbose)
+    return changed
 
 
 def action_align_component_bottom_to_baseline_and_anchor_x(

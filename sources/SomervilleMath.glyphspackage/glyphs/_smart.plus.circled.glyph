@@ -15,21 +15,18 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
 piece = {
-Height = 43.78139;
-Width = 36.83695;
+Height = 85.33903;
+Width = 74.38605;
 };
-pos = (42,0);
+pos = (118,0);
 ref = _smart.plus;
 }
 );
-width = 528;
+width = 1136;
 },
 {
 attr = {
@@ -43,21 +40,18 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
 piece = {
-Height = 45.7;
-Width = 46.85653;
+Height = 82.70909;
+Width = 84.78986;
 };
-pos = (37,0);
+pos = (125,0);
 ref = _smart.plus;
 }
 );
-width = 638;
+width = 1276;
 },
 {
 attr = {
@@ -71,21 +65,18 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
 piece = {
-Height = 43.10727;
-Width = 35.18395;
+Height = 76.9;
+Width = 72.68875;
 };
-pos = (52,0);
+pos = (32,0);
 ref = _smart.plus;
 }
 );
-width = 551;
+width = 970;
 },
 {
 attr = {
@@ -100,14 +91,14 @@ height = 1;
 shapes = (
 {
 piece = {
-height = 5;
+height = 0;
 };
 ref = _smart.circle;
 },
 {
 alignment = -1;
 piece = {
-Height = 43.1;
+Height = 44.96643;
 Width = 40.36458;
 };
 pos = (85,0);
@@ -128,9 +119,6 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
@@ -139,11 +127,11 @@ Height = 43.91991;
 Width = 43.49512;
 thin = 40;
 };
-pos = (3,0);
+pos = (243,0);
 ref = _smart.plus;
 }
 );
-width = 597;
+width = 1082;
 },
 {
 attr = {
@@ -157,9 +145,6 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
@@ -168,11 +153,11 @@ Height = 43.31044;
 Width = 47.13357;
 thin = 35;
 };
-pos = (43,0);
+pos = (317,0);
 ref = _smart.plus;
 }
 );
-width = 721;
+width = 1276;
 },
 {
 attr = {
@@ -186,22 +171,19 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
 piece = {
-Height = 40.68779;
-Width = 40.16142;
+Height = 70.7625;
+Width = 66.33796;
 thin = 60;
 };
-pos = (13,0);
+pos = (118,0);
 ref = _smart.plus;
 }
 );
-width = 609;
+width = 1138;
 },
 {
 attr = {
@@ -215,9 +197,6 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
@@ -226,11 +205,11 @@ Height = 42.93182;
 Width = 46.95811;
 thin = 60;
 };
-pos = (15,-3);
+pos = (310,0);
 ref = _smart.plus;
 }
 );
-width = 679;
+width = 1276;
 },
 {
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -248,20 +227,20 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
 piece = {
-Height = 608.41455;
-Width = 559.20325;
+Height = 675.80396;
+Width = 627.05405;
 };
-pos = (121,0);
+pos = (-90,0);
 ref = _smart.plus;
 }
 );
-width = 6956;
+width = 7349;
 },
 {
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -279,20 +258,20 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
 piece = {
 Height = 607.61115;
-Width = 632.52625;
+Width = 666.64711;
 };
-pos = (177,0);
+pos = (192,0);
 ref = _smart.plus;
 }
 );
-width = 7944;
+width = 8383;
 },
 {
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -310,20 +289,20 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
 piece = {
-Height = 622.36816;
-Width = 556.69141;
+Height = 684.5066;
+Width = 668.14651;
 };
-pos = (382,0);
+pos = (-103,0);
 ref = _smart.plus;
 }
 );
-width = 7544;
+width = 7957;
 },
 {
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -341,7 +320,7 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
@@ -350,11 +329,11 @@ piece = {
 Height = 622.30347;
 Width = 641.01288;
 };
-pos = (413,0);
+pos = (848,0);
 ref = _smart.plus;
 }
 );
-width = 8527;
+width = 9397;
 },
 {
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -372,7 +351,7 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
@@ -381,11 +360,11 @@ piece = {
 Height = 592.07855;
 Width = 573.85858;
 };
-pos = (95,0);
+pos = (132,0);
 ref = _smart.plus;
 }
 );
-width = 7112;
+width = 7183;
 },
 {
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -403,7 +382,7 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
@@ -412,11 +391,11 @@ piece = {
 Height = 592.1524;
 Width = 658.19855;
 };
-pos = (137,0);
+pos = (201,0);
 ref = _smart.plus;
 }
 );
-width = 8257;
+width = 8383;
 },
 {
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -434,7 +413,7 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
@@ -443,11 +422,11 @@ piece = {
 Height = 598.43195;
 Width = 578.10657;
 };
-pos = (124,0);
+pos = (-106,0);
 ref = _smart.plus;
 }
 );
-width = 7236;
+width = 6775;
 },
 {
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -465,20 +444,20 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
 piece = {
-Height = 600.46356;
-Width = 651.30023;
+Height = 665.11072;
+Width = 725.60747;
 };
-pos = (161,0);
+pos = (-248,0);
 ref = _smart.plus;
 }
 );
-width = 8180;
+width = 8243;
 }
 );
 partsSettings = (

@@ -16,18 +16,15 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
-pos = (154,131);
+pos = (428,131);
 ref = bullet;
 scale = (0.5,0.5);
 }
 );
-width = 528;
+width = 1082;
 },
 {
 attr = {
@@ -42,18 +39,15 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
-pos = (166,131);
+pos = (494,131);
 ref = bullet;
-scale = (0.65,0.5);
+scale = (0.6,0.5);
 }
 );
-width = 638;
+width = 1276;
 },
 {
 attr = {
@@ -68,18 +62,15 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
-pos = (145,131);
+pos = (349,131);
 ref = bullet;
 scale = (0.5,0.5);
 }
 );
-width = 551;
+width = 970;
 },
 {
 attr = {
@@ -94,18 +85,15 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
-pos = (208,131);
+pos = (488,131);
 ref = bullet;
 scale = (0.5,0.5);
 }
 );
-width = 674;
+width = 1232;
 },
 {
 attr = {
@@ -120,18 +108,15 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
-pos = (189,131);
+pos = (428,131);
 ref = bullet;
 scale = (0.5,0.5);
 }
 );
-width = 597;
+width = 1082;
 },
 {
 attr = {
@@ -146,18 +131,15 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
-pos = (243,131);
+pos = (493,131);
 ref = bullet;
-scale = (0.5,0.5);
+scale = (0.6,0.5);
 }
 );
-width = 721;
+width = 1276;
 },
 {
 attr = {
@@ -172,18 +154,15 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
-pos = (175,131);
+pos = (437,131);
 ref = bullet;
 scale = (0.5,0.5);
 }
 );
-width = 609;
+width = 1138;
 },
 {
 attr = {
@@ -198,18 +177,15 @@ height = 1;
 };
 shapes = (
 {
-piece = {
-height = 5;
-};
 ref = _smart.circle;
 },
 {
-pos = (211,128);
+pos = (507,131);
 ref = bullet;
 scale = (0.5,0.5);
 }
 );
-width = 679;
+width = 1276;
 },
 {
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -228,17 +204,16 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
-pos = (3147,-138);
+pos = (3453,-4);
 ref = bullet;
-scale = (1.5,1.5);
 }
 );
-width = 6956;
+width = 7349;
 },
 {
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -257,17 +232,17 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
-pos = (3549,-138);
+pos = (3898,-4);
 ref = bullet;
-scale = (1.8,1.5);
+scale = (1.25,1);
 }
 );
-width = 7944;
+width = 8383;
 },
 {
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -286,17 +261,16 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
-pos = (3341,-138);
+pos = (3652,-4);
 ref = bullet;
-scale = (1.5,1.5);
 }
 );
-width = 7544;
+width = 7957;
 },
 {
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -315,17 +289,16 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
-pos = (3225,-138);
+pos = (3141,-4);
 ref = bullet;
-scale = (1.5,1.5);
 }
 );
-width = 7112;
+width = 6721;
 },
 {
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -344,17 +317,17 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
-pos = (3774,-138);
+pos = (3897,-4);
 ref = bullet;
-scale = (1.5,1.5);
+scale = (1.25,1);
 }
 );
-width = 8257;
+width = 8383;
 },
 {
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -373,17 +346,17 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
-pos = (3233,-138);
+pos = (3080,-58);
 ref = bullet;
-scale = (1.5,1.5);
+scale = (1.2,1.2);
 }
 );
-width = 7236;
+width = 6775;
 },
 {
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -402,17 +375,17 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
-pos = (3704,-139);
+pos = (3762,-58);
 ref = bullet;
-scale = (1.5,1.5);
+scale = (1.4,1.2);
 }
 );
-width = 8180;
+width = 8243;
 },
 {
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -431,17 +404,17 @@ height = 2;
 shapes = (
 {
 piece = {
-height = 90;
+height = 100;
 };
 ref = _smart.circle;
 },
 {
-pos = (3878,-138);
+pos = (4377,-4);
 ref = bullet;
-scale = (1.5,1.5);
+scale = (1.25,1);
 }
 );
-width = 8527;
+width = 9397;
 }
 );
 partsSettings = (

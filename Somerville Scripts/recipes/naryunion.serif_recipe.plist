@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Creates naryunion.ss15 and its .sNN variants
+     from _smart.naryunion.serif.
+     Base smart height: 0.
+     Variant height: NN * 100 / SizeVariantCount; the final height is 100.
+     createSmartComponentVariants divides the 100-unit increment range by
+     SizeVariantCount.
+     SizeVariantCount comes from recipe_constants.plist (currently 20).
+     In all Black masters, keep component Weight at 900
+     on the base and every variant.
+     Register vertical MATH variants and enable alignment on base and variants. -->
+<plist version="1.0">
+<dict>
+	<key>formatVersion</key>
+	<integer>1</integer>
+	<key>kind</key>
+	<string>recipe</string>
+	<key>constants</key>
+	<string>recipe_constants.plist</string>
+	<key>name</key>
+	<string>naryunion (serif alternate)</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>createGlyph</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>naryunion.ss15</string>
+				<key>export</key>
+				<true/>
+				<key>color</key>
+				<string>${GeneratedColor}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>setGlyphMetadata</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>naryunion.ss15</string>
+				<key>category</key>
+				<string>Symbol</string>
+				<key>subCategory</key>
+				<string>Math</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>addComponent</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>naryunion.ss15</string>
+				<key>component</key>
+				<string>_smart.naryunion.serif</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>setComponentAxisValue</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>naryunion.ss15</string>
+				<key>axis</key>
+				<string>height</string>
+				<key>value</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>createSmartComponentVariants</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>naryunion.ss15</string>
+				<key>axis</key>
+				<string>height</string>
+				<key>N</key>
+				<string>${SizeVariantCount}</string>
+				<key>endValue</key>
+				<integer>100</integer>
+				<key>category</key>
+				<string>Symbol</string>
+				<key>subCategory</key>
+				<string>Math</string>
+				<key>color</key>
+				<string>${GeneratedColor}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>setComponentAxisValue</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>naryunion.ss15</string>
+				<key>axis</key>
+				<string>Weight</string>
+				<key>value</key>
+				<integer>900</integer>
+				<key>variantCount</key>
+				<string>${SizeVariantCount}</string>
+				<key>masterNames</key>
+				<array>
+					<string>Needlepoint Black SemiCondensed Upright</string>
+					<string>Needlepoint Black SemiExpanded Upright</string>
+					<string>Agate Black SemiCondensed Upright</string>
+					<string>Agate Black SemiExpanded Upright</string>
+				</array>
+				<key>componentFilter</key>
+				<dict>
+					<key>component</key>
+					<string>_smart.naryunion.serif</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>enableComponentAlignment</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>naryunion.ss15</string>
+				<key>variantCount</key>
+				<string>${SizeVariantCount}</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- Creates union (U+222A, math command \cup) from _smart.union.
-     Sets the smart height axis to 0 and enables automatic alignment.
+<!-- Creates intersection.uv001 from union.uv001.
+     Flip the component vertically about its own outline bounds center on every
+     layer, preserving its vertical extent and horizontal orientation.
+     The flip disables automatic alignment to preserve the reflected placement.
+     Copy the source union alternate's width and match its LSB and RSB, then sync metrics.
      Only the base glyph is created; no size variants are generated. -->
 <plist version="1.0">
 <dict>
@@ -12,7 +15,7 @@
 	<key>constants</key>
 	<string>recipe_constants.plist</string>
 	<key>name</key>
-	<string>union (U+222A)</string>
+	<string>intersection (serif alternate)</string>
 	<key>actions</key>
 	<array>
 		<dict>
@@ -23,7 +26,7 @@
 			<key>arguments</key>
 			<dict>
 				<key>glyph</key>
-				<string>union</string>
+				<string>intersection.uv001</string>
 				<key>export</key>
 				<true/>
 				<key>color</key>
@@ -38,7 +41,7 @@
 			<key>arguments</key>
 			<dict>
 				<key>glyph</key>
-				<string>union</string>
+				<string>intersection.uv001</string>
 				<key>category</key>
 				<string>Symbol</string>
 				<key>subCategory</key>
@@ -53,23 +56,38 @@
 			<key>arguments</key>
 			<dict>
 				<key>glyph</key>
-				<string>union</string>
+				<string>intersection.uv001</string>
 				<key>component</key>
-				<string>_smart.union</string>
+				<string>union.uv001</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>type</key>
 			<string>call</string>
 			<key>function</key>
-			<string>setComponentAxisValue</string>
+			<string>flipComponents</string>
 			<key>arguments</key>
 			<dict>
 				<key>glyph</key>
-				<string>union</string>
-				<key>axis</key>
-				<string>height</string>
-				<key>value</key>
+				<string>intersection.uv001</string>
+				<key>components</key>
+				<array>
+					<string>union.uv001</string>
+				</array>
+				<key>requireAll</key>
+				<true/>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>setWidthFromComponent</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>intersection.uv001</string>
+				<key>componentIndex</key>
 				<integer>0</integer>
 			</dict>
 		</dict>
@@ -77,11 +95,28 @@
 			<key>type</key>
 			<string>call</string>
 			<key>function</key>
-			<string>enableComponentAlignment</string>
+			<string>setSideMetricKeys</string>
 			<key>arguments</key>
 			<dict>
 				<key>glyph</key>
-				<string>union</string>
+				<string>intersection.uv001</string>
+				<key>left</key>
+				<string>=union.uv001</string>
+				<key>right</key>
+				<string>=union.uv001</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>updateMetrics</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>intersection.uv001</string>
+				<key>mastersOnly</key>
+				<false/>
 			</dict>
 		</dict>
 	</array>

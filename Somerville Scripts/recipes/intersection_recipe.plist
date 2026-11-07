@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- Creates intersection (U+2229, math command \cap) from _smart.union.
-     Set smart height to 0, matching the base union recipe.
+<!-- Creates intersection (U+2229, math command \cap) from union.
      Flip the component vertically about its own outline bounds center on every
      layer, preserving its vertical extent and horizontal orientation.
-     Disable automatic alignment during the flip to preserve its placement.
-     Match union's LSB and RSB using metrics keys after the flip.
-     Only the base glyph is created; intersection itself is exported. -->
+     The flip disables automatic alignment to preserve the reflected placement.
+     Copy union's width and match its LSB and RSB, then sync metrics.
+     Only the base glyph is created; no size variants are generated. -->
 <plist version="1.0">
 <dict>
 	<key>formatVersion</key>
@@ -59,22 +58,7 @@
 				<key>glyph</key>
 				<string>intersection</string>
 				<key>component</key>
-				<string>_smart.union</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>call</string>
-			<key>function</key>
-			<string>setComponentAxisValue</string>
-			<key>arguments</key>
-			<dict>
-				<key>glyph</key>
-				<string>intersection</string>
-				<key>axis</key>
-				<string>height</string>
-				<key>value</key>
-				<integer>0</integer>
+				<string>union</string>
 			</dict>
 		</dict>
 		<dict>
@@ -88,8 +72,10 @@
 				<string>intersection</string>
 				<key>components</key>
 				<array>
-					<string>_smart.union</string>
+					<string>union</string>
 				</array>
+				<key>requireAll</key>
+				<true/>
 			</dict>
 		</dict>
 		<dict>
