@@ -7,6 +7,7 @@ import os
 import plistlib
 import re
 import uuid
+from decimal import Decimal
 from fnmatch import fnmatchcase
 
 from GlyphsApp import (
@@ -19,6 +20,7 @@ from GlyphsApp import (
     GSAxis,
 )
 from AppKit import NSMakePoint, NSPoint
+from Foundation import NSMutableDictionary
 
 
 SCRIPT_VERSION = "2026-10-31 component-baseline-variant-alignment"
@@ -201,12 +203,16 @@ def set_glyph_color(glyph, color=None):
     color = color_value(color)
     if color is None:
         return False
+    if not isinstance(color, int):
+        raise RuntimeError("Invalid glyph label color %r; check recipe parameter expansion." % (color,))
     try:
         glyph.color = color
         return True
     except Exception:
         pass
-    method = getattr(glyph, "setColor_", None)
+    # setColor_ expects NSColor, not an index/string. It can accept a bridged
+    # string without complaint and leave a glyph that crashes during saving.
+    method = getattr(glyph, "setColorIndex_", None)
     if method is not None:
         try:
             method(color)
@@ -1308,6 +1314,10 @@ def layer_attribute(layer, key):
 
 def set_layer_attribute(layer, key, value):
     value = copied_value(value)
+    # Glyphs mutates coordinate dictionaries while serializing. A bridged
+    # Python dict raises on removing absent keys, unlike NSMutableDictionary.
+    if isinstance(value, dict):
+        value = NSMutableDictionary.dictionaryWithDictionary_(value)
     for method_name in ("setAttribute_forKey_", "setValue_forKey_"):
         method = getattr(layer, method_name, None)
         if method is None:
@@ -1793,22 +1803,30 @@ def load_recipe_constants(recipe):
     return constants
 
 
-def expand_value(value, parameters):
+def expand_value(value, parameters, _resolving=()):
     if isinstance(value, dict):
-        return {key: expand_value(item, parameters) for key, item in value.items()}
+        return {key: expand_value(item, parameters, _resolving) for key, item in value.items()}
     if isinstance(value, list):
-        return [expand_value(item, parameters) for item in value]
+        return [expand_value(item, parameters, _resolving) for item in value]
     if not isinstance(value, str):
         return value
 
     whole_match = WHOLE_VARIABLE_PATTERN.match(value)
     if whole_match:
         key = whole_match.group(1)
-        return parameters.get(key, value)
+        if key not in parameters:
+            return value
+        if key in _resolving:
+            raise RuntimeError("Circular recipe parameter: %s" % " -> ".join(_resolving + (key,)))
+        return expand_value(parameters[key], parameters, _resolving + (key,))
 
     def replace(match):
         key = match.group(1)
-        replacement = parameters.get(key, match.group(0))
+        if key not in parameters:
+            return match.group(0)
+        if key in _resolving:
+            raise RuntimeError("Circular recipe parameter: %s" % " -> ".join(_resolving + (key,)))
+        replacement = expand_value(parameters[key], parameters, _resolving + (key,))
         if isinstance(replacement, MasterScopedValue):
             raise RuntimeError(
                 "Per-master constant %s must occupy the complete value, not part of a string."
@@ -1897,6 +1915,124 @@ def action_create_glyph(font, verbose=False, glyph=None, export=True, overwrite=
     font.glyphs.append(new_glyph)
     log("Created glyph %s export=%s." % (glyph, bool(export)), verbose)
     return new_glyph
+
+
+def action_copy_smart_glyph_with_component_offsets(
+    font, verbose=False, glyph=None, sourceGlyph=None, component=None,
+    axes=None, regularOffset=0, highOffset=0, highAxis="height", highValue=100,
+    overwrite=False, export=None, **_kwargs
+):
+    """Copy every layer and smart axis, then offset selected component settings.
+
+    Components remain components. All edits are prepared on a detached copy;
+    the source is never modified. Existing target glyph/axis identities survive
+    an overwrite so references to the target continue to work.
+    """
+    source = glyph_for_name(font, sourceGlyph)
+    existing = glyph_for_name(font, glyph)
+    if source is None:
+        raise RuntimeError("Missing source glyph: %s" % sourceGlyph)
+    if not glyph or glyph == sourceGlyph:
+        raise RuntimeError("Copy requires a different target glyph name.")
+    if existing is not None and not overwrite and not glyph_is_empty(existing):
+        raise RecipeStopped("Glyph %s already exists. Enable 'Overwrite glyphs' to replace it." % glyph)
+    # Masters + special + backup + background + undo manager + editing extras.
+    copied = source.copyWithOptions_(63)
+    copied.name = glyph
+    # Resolve nested components while preparing the copy, before registering it.
+    copied.parent = font
+    source_axes = glyph_smart_axes(source)
+    copied_axes = glyph_smart_axes(copied)
+    if (len(copied.layers) != len(source.layers)
+            or [smart_axis_name(a) for a in copied_axes] != [smart_axis_name(a) for a in source_axes]):
+        raise RuntimeError("%s: could not copy every layer and smart axis." % glyph)
+    height_axis = smart_axis_for_name(source, highAxis)
+    height_id = axis_identifier(height_axis) if height_axis is not None else None
+    edited = high_count = 0
+    wanted_axes = list(axes or [])
+    if not component or not wanted_axes:
+        raise RuntimeError("Copy requires a component name and axis names.")
+    for layer in copied.layers:
+        coordinates = layer_attribute(layer, "coordinates")
+        if coordinates is not None and hasattr(coordinates, "keys") and height_id in coordinates:
+            high = abs(float(coordinates[height_id]) - float(highValue)) < 0.000001
+        elif uses_glyphs4_coordinates():
+            high = "high" in layer_name(layer).lower()
+        else:
+            poles = dict(layer.smartComponentPoleMapping or {})
+            high = poles.get(height_id) == 2 or "high" in layer_name(layer).lower()
+        offset = float(highOffset if high else regularOffset)
+        layer.stopUpdates()
+        try:
+            for item in layer_components(layer):
+                if component_name(item) != component:
+                    continue
+                for name in wanted_axes:
+                    axis_id = smart_axis_id_for_component(font, item, name)
+                    current = component_axis_value(font, item, name)
+                    if axis_id is None or current is None:
+                        raise RuntimeError("%s/%s: component %s has no axis %s."
+                                           % (glyph, layer_name(layer) or layer_id(layer), component, name))
+                    adjusted = float(Decimal(str(current)) + Decimal(str(offset)))
+                    if not math.isfinite(adjusted) or not set_component_smart_value(item, axis_id, adjusted):
+                        raise RuntimeError("%s/%s: could not adjust %s." % (glyph, layer_name(layer) or layer_id(layer), name))
+                    actual = component_axis_value(font, item, name)
+                    if actual is None or abs(float(actual) - adjusted) > 0.000001:
+                        raise RuntimeError("%s/%s: %s did not retain its adjusted value."
+                                           % (glyph, layer_name(layer) or layer_id(layer), name))
+                edited += 1
+                high_count += int(high)
+        finally:
+            layer.enableFutureUpdates()
+    if not edited:
+        raise RuntimeError("%s: no %s components found." % (sourceGlyph, component))
+    if export is not None:
+        copied.export = boolean_value(export)
+    if existing is None:
+        font.glyphs.append(copied)
+        result = copied
+    else:
+        old_axes = glyph_smart_axes(existing)
+        if old_axes and {smart_axis_name(a) for a in old_axes} != {smart_axis_name(a) for a in copied_axes}:
+            raise RuntimeError("%s: existing smart axes differ from the source." % glyph)
+        old_by_name = {smart_axis_name(a): a for a in old_axes}
+        id_map = {axis_identifier(a): axis_identifier(old_by_name.get(smart_axis_name(a), a))
+                  for a in copied_axes}
+        for layer in copied.layers:
+            mapping_keys = ("coordinates",) if uses_glyphs4_coordinates() else ("partSelection", "smartComponentPoleMapping")
+            for key in mapping_keys:
+                mapping = layer_attribute(layer, key)
+                if mapping is not None and hasattr(mapping, "keys"):
+                    set_layer_attribute(layer, key, {id_map.get(str(k), str(k)): mapping[k]
+                                                     for k in mapping.keys()})
+            if not uses_glyphs4_coordinates():
+                layer.smartComponentPoleMapping = {
+                    id_map.get(str(k), str(k)): v for k, v in dict(layer.smartComponentPoleMapping or {}).items()}
+        for axis in copied_axes:
+            axis_id = axis_identifier(old_by_name.get(smart_axis_name(axis), axis))
+            if uses_glyphs4_coordinates():
+                axis.setAxisId_(axis_id)
+            else:
+                axis.setId_(axis_id)
+        old_layers = list(existing.layers)
+        try:
+            if uses_glyphs4_coordinates():
+                existing.axes = copied_axes
+            else:
+                existing.smartComponentAxes = copied_axes
+            existing.layers = list(copied.layers)
+        except Exception:
+            if uses_glyphs4_coordinates():
+                existing.axes = old_axes
+            else:
+                existing.smartComponentAxes = old_axes
+            existing.layers = old_layers
+            raise
+        copy_glyph_metadata(copied, existing)
+        result = existing
+    log("%s: copied %i layers and %i smart axes from %s; adjusted %i %s component(s), %i High."
+        % (glyph, len(result.layers), len(copied_axes), sourceGlyph, edited, component, high_count), verbose)
+    return result
 
 
 def action_set_glyph_metadata(
@@ -4156,6 +4292,7 @@ def action_create_smart_component_variants(font, verbose=False, glyph=None, valu
 
 ACTION_REGISTRY = {
     "createGlyph": action_create_glyph,
+    "copySmartGlyphWithComponentOffsets": action_copy_smart_glyph_with_component_offsets,
     "setGlyphMetadata": action_set_glyph_metadata,
     "addComponent": action_add_component,
     "addComponents": action_add_components,
@@ -4205,7 +4342,7 @@ def run_action(font, action, verbose=False, overwrite_glyphs=False):
     if function is None:
         raise RuntimeError("Unknown recipe function: %s" % function_name)
     arguments = dict(action.get("arguments", {}))
-    if function_name in ("createGlyph", "createSmartComponentVariants"):
+    if function_name in ("createGlyph", "createSmartComponentVariants", "copySmartGlyphWithComponentOffsets"):
         arguments["overwrite"] = bool(overwrite_glyphs)
     return function(font, verbose=verbose, **arguments)
 
@@ -4216,7 +4353,7 @@ def glyph_names_touched_by_action(action):
 
     function_name = action.get("function")
     arguments = dict(action.get("arguments", {}))
-    if function_name == "createGlyph":
+    if function_name in ("createGlyph", "copySmartGlyphWithComponentOffsets"):
         glyph_name = arguments.get("glyph")
         return [glyph_name] if glyph_name else []
 

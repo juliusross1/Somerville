@@ -1,14 +1,25 @@
 #MenuTitle: Move Smart Circle Design from Width 95 to 100
 # -*- coding: utf-8 -*-
 
-"""Recalculate _smart.circle's Width=95 layers, keeping Width=113 fixed.
+"""Build _smart.circle from _smart.circle.uncentered, moving Width 95 to 100.
 
-Run in Glyphs with the intended font open. Only _smart.circle is affected;
-the script does not save the font. The original Width=95 result is moved to
-Width=100 at every smart height, weight, and optical size. Node X/Y, anchors,
-and advance widths are recalculated without rounding:
+Run in Glyphs with the intended font open and both glyphs present. All target
+layers are replaced; the source glyph is never modified. The script does not
+save the font. The ideal Width=95 adjustment would move the source design to
+Width=100 at every smart height, weight, and optical size:
 
     new95 = (18 * old95 - 5 * old113) / 13
+
+The result is constrained and rounded to whole units. On-curve nodes move
+only horizontally. Each off-curve handle moves along one axis, preserving
+existing horizontal/vertical tangents at smooth nodes. Diagonal handles at
+smooth nodes follow their endpoint horizontally. Other handles use whichever
+rounded single-axis move best approximates the ideal result. Existing locked
+coordinates stay exactly as in the source, even if already fractional.
+Anchors and advance widths use the rounded ideal result. A newly added layer
+uses the rounded original Width=95 sample as its reference geometry.
+Interpolation error is reported rather than rejected; layer read-back and
+movement constraints are still checked strictly.
 
 Each pair must agree on EVERY other font axis. Height is the glyph's one
 local smart axis, not a font axis. Missing counterparts are sampled from the
@@ -16,21 +27,23 @@ ORIGINAL combined font-axis/smart-height interpolation, using Glyphs' native
 VarLibModel. This accounts for sparse intermediates affecting other masters.
 Missing Width=95 height layers are added where necessary.
 For the original Somerville source this updates nine layers and adds one:
-Agate Black SemiCondensed at smart height 30. Width=113 is never written.
+Agate Black SemiCondensed at smart height 30. Source Width=113 is copied exactly.
 
 Requires Glyphs' native VarLibModel class. Reads legacy pole mappings and
 one-element smart coordinates as well as Glyphs 4 coordinate dictionaries.
 Unrecognized or ambiguous setups,
 incompatible paths, components, and unsupported font-width locations abort
 before edits. All interpolation and layer creation are prepared and checked
-first. Read-back verification follows the edits; failure restores the old
-layers and removes new layers. The operation is one glyph undo group. Layer
+first. Read-back verification follows the edits; failure restores all old
+target layers. The operation is one glyph undo group. Layer
 copies are positioned through the unrounded native API, then installed by ID;
-the font grid is not changed. Existing layer IDs and metadata are retained.
+the font grid is not changed. Target glyph identity, metadata, and smart-axis
+IDs are retained; copied layer coordinates are remapped to the target axes.
 
-A persistent userData marker prevents accidentally applying this twice.
-Undo removes that marker too. A full original glyph copy is retained for the
-current session via glyph.tempDataForKey_(BACKUP_KEY). It is not saved to disk.
+Every run starts from the unmodified source, so rerunning replaces the target
+without compounding the adjustment. A full copy of the previous target is
+retained for the current session via target.tempDataForKey_(BACKUP_KEY).
+It is not saved to disk.
 For a read-only report from the Macro window:
 
     report = recenter(Glyphs.font, dry_run=True)
@@ -43,6 +56,7 @@ import uuid
 
 
 GLYPH_NAME = "_smart.circle"
+SOURCE_GLYPH_NAME = "_smart.circle.uncentered"
 OLD_WIDTH = 95.0
 NEW_WIDTH = 100.0
 FIXED_WIDTH = 113.0
@@ -185,12 +199,98 @@ def blend(first, second, factor):
     }
 
 
-def assert_geometry(actual, expected, label):
+def nearest_unit(number):
+    """Round half units away from zero, consistently on either side of zero."""
+    return math.floor(number + 0.5) if number >= 0 else math.ceil(number - 0.5)
+
+
+def rounded_geometry(data):
+    return {"topology": data["topology"],
+            "points": tuple(tuple(nearest_unit(v) for v in p) for p in data["points"]),
+            "anchors": {name: tuple(nearest_unit(v) for v in p)
+                        for name, p in data["anchors"].items()},
+            "width": nearest_unit(data["width"])}
+
+
+def is_handle(kind):
+    return str(kind).lower() in ("offcurve", "o", "65")
+
+
+def constrained_geometry(baseline, ideal):
+    """Project onto allowed moves while keeping smooth tangents aligned."""
+    blend(baseline, ideal, 0.0)  # Validate correspondence first.
+    projected = []
+    offset = 0
+    for closed, nodes in baseline["topology"]:
+        count = len(nodes)
+        original = baseline["points"][offset:offset + count]
+        desired = ideal["points"][offset:offset + count]
+        points = [(nearest_unit(p[0]), old[1]) if not is_handle(kind) else None
+                  for (kind, smooth), old, p in zip(nodes, original, desired)]
+        for index, ((kind, smooth), old, wanted) in enumerate(zip(nodes, original, desired)):
+            if not is_handle(kind):
+                continue
+            previous = (index - 1) % count if index or closed else None
+            following = (index + 1) % count if index + 1 < count or closed else None
+            endpoint = next((i for i in (previous, following)
+                             if i is not None and not is_handle(nodes[i][0])), None)
+            if endpoint is None:
+                raise ValueError("An off-curve handle has no adjacent on-curve endpoint.")
+            horizontal = (nearest_unit(wanted[0]), old[1])
+            vertical = (old[0], nearest_unit(wanted[1]))
+            if nodes[endpoint][1]:
+                anchor, moved = original[endpoint], points[endpoint]
+                if close(old[1], anchor[1]):
+                    # A horizontal tangent cannot change its handle's Y.
+                    point = horizontal
+                elif close(old[0], anchor[0]):
+                    # A vertical tangent must follow its endpoint's X first.
+                    point = vertical if close(moved[0], old[0]) else (moved[0], old[1])
+                else:
+                    point = (nearest_unit(old[0] + moved[0] - anchor[0]), old[1])
+            else:
+                def error(point):
+                    return (point[0] - wanted[0]) ** 2 + (point[1] - wanted[1]) ** 2
+                point = min((horizontal, vertical), key=error)
+            points[index] = point
+        projected.extend(points)
+        offset += count
+    result = rounded_geometry(ideal)
+    result["points"] = tuple(projected)
+    assert_movement_constraints(result, baseline)
+    return result
+
+
+def assert_movement_constraints(actual, baseline):
+    for (kind, smooth), point, old in zip(
+            (node for closed, nodes in baseline["topology"] for node in nodes),
+            actual["points"], baseline["points"]):
+        dx, dy = point[0] - old[0], point[1] - old[1]
+        if (not is_handle(kind) and not close(dy, 0.0)) or (
+                is_handle(kind) and not close(dx, 0.0) and not close(dy, 0.0)):
+            raise ValueError("A node or handle moved along a forbidden axis.")
+        for coordinate, before in zip(point, old):
+            if not close(coordinate, before) and not close(coordinate, nearest_unit(coordinate)):
+                raise ValueError("A moved coordinate was not rounded to a whole unit.")
+    if any(not close(v, nearest_unit(v)) for p in actual["anchors"].values() for v in p):
+        raise ValueError("An anchor was not rounded to a whole unit.")
+    if not close(actual["width"], nearest_unit(actual["width"])):
+        raise ValueError("The advance width was not rounded to a whole unit.")
+
+
+def geometry_error(actual, expected, label):
     if (actual["topology"] != expected["topology"]
             or set(actual["anchors"]) != set(expected["anchors"])):
         raise ValueError("Structure changed: %s." % label)
     error = max(abs(a - b) for a, b in zip(numbers(actual), numbers(expected)))
-    if not math.isfinite(error) or error > EPSILON:
+    if not math.isfinite(error):
+        raise ValueError("Non-finite interpolation error: %s." % label)
+    return error
+
+
+def assert_geometry(actual, expected, label):
+    error = geometry_error(actual, expected, label)
+    if error > EPSILON:
         raise ValueError("%s differs by %g units." % (label, error))
     return error
 
@@ -351,7 +451,7 @@ def original_model(font, glyph, groups, factory):
 
 
 def verify_models(original, changed):
-    """Check every cell's corners and interiors in all non-width dimensions."""
+    """Measure approximation error across design-space cells; allow finite error."""
     choices = []
     for index in range(len(original.axis_order)):
         if index == original.width_index:
@@ -366,10 +466,10 @@ def verify_models(original, changed):
         old_location = list(location)
         new_location = list(location)
         new_location[original.width_index] = NEW_WIDTH
-        maximum_error = max(maximum_error, assert_geometry(
+        maximum_error = max(maximum_error, geometry_error(
             changed.at(new_location), original.at(old_location), "Width 100 reconstruction"))
         old_location[original.width_index] = FIXED_WIDTH
-        maximum_error = max(maximum_error, assert_geometry(
+        maximum_error = max(maximum_error, geometry_error(
             changed.at(old_location), original.at(old_location), "Width 113 curve preservation"))
     return maximum_error
 
@@ -385,7 +485,10 @@ def prepare(font, glyph, model_factory=native_model):
             location[-1] = height
             expanded_location = list(location)
             expanded_location[original.width_index] = FIXED_WIDTH
-            data = blend(original.at(location), original.at(expanded_location), factor)
+            ideal = blend(original.at(location), original.at(expanded_location), factor)
+            baseline = (group[OLD_WIDTH][height]["data"] if height in group[OLD_WIDTH]
+                        else rounded_geometry(original.at(location)))
+            data = constrained_geometry(baseline, ideal)
             if height in group[OLD_WIDTH]:
                 source = group[OLD_WIDTH][height]["layer"]
                 layer = source.copy()
@@ -414,6 +517,7 @@ def prepare(font, glyph, model_factory=native_model):
             layer.parent = None
             changes.append({"layer": layer, "added": added, "height": height,
                             "data": data, "location": tuple(location),
+                            "baseline": baseline,
                             "label": layer.name or group[OLD_WIDTH][0.0]["master"].name})
     candidate = original.with_records(changes + [record for group in groups.values()
                                                 for record in group[FIXED_WIDTH].values()])
@@ -436,21 +540,75 @@ def set_geometry(layer, data):
     layer.setNeedUpdateMetrics()
 
 
+def remap_smart_axis(layer, source_axis, target_axis):
+    """Keep dependent components' existing target smart-axis identifier valid."""
+    source_id, target_id = identifier(source_axis), identifier(target_axis)
+    if source_id == target_id:
+        return
+
+    def remap(mapping):
+        result = {str(key): mapping[key] for key in mapping.keys()}
+        if source_id in result:
+            item = result.pop(source_id)
+            if target_id in result and result[target_id] != item:
+                raise ValueError("Conflicting source/target smart-axis coordinates.")
+            result[target_id] = item
+        return result
+
+    for name in ("coordinates", "partSelection", "axisRules"):
+        mapping = attribute(layer, name)
+        if mapping is not None and hasattr(mapping, "keys"):
+            layer.attributes[name] = remap(mapping)
+    try:
+        mapping = layer.smartComponentPoleMapping
+    except (AttributeError, NotImplementedError):
+        mapping = None
+    if mapping is not None and source_id in mapping.keys():
+        layer.smartComponentPoleMapping = remap(mapping)
+
+
 def recenter(font, dry_run=False, model_factory=native_model):
     if font is None:
         raise ValueError("Open the intended Somerville font first.")
     glyph = font.glyphs[GLYPH_NAME]
     if glyph is None:
         raise ValueError("The open font has no %s glyph." % GLYPH_NAME)
-    if glyph.userData[MARKER_KEY]:
-        raise ValueError("This adjustment has already been applied. Undo it before running again.")
-    groups, changes, error, original = prepare(font, glyph, model_factory)
+    source = font.glyphs[SOURCE_GLYPH_NAME]
+    if source is None:
+        raise ValueError("The open font has no %s glyph." % SOURCE_GLYPH_NAME)
+    if source is glyph:
+        raise ValueError("Source and target must be different glyphs.")
+    source_axis, unused_source_modern = smart_axis(source)
+    target_axis, unused_target_modern = smart_axis(glyph)
+    groups, changes, error, original = prepare(font, source, model_factory)
+
+    # Rebuild ALL target layers from the source, including unchanged expanded
+    # layers and any ordinary backup layers. Old target-only layers are removed.
+    changed_by_id = {str(change["layer"].layerId): change for change in changes
+                     if not change["added"]}
+    replacements = []
+    for source_layer in source.layers:
+        change = changed_by_id.get(str(source_layer.layerId))
+        layer = change["layer"] if change else source_layer.copy()
+        layer.layerId = str(source_layer.layerId)
+        layer.parent = None
+        replacements.append(layer)
+    replacements.extend(change["layer"] for change in changes if change["added"])
+    for layer in replacements:
+        remap_smart_axis(layer, source_axis, target_axis)
+    replacement_ids = {str(layer.layerId) for layer in replacements}
+    if len(replacement_ids) != len(replacements):
+        raise ValueError("Source layers have duplicate identifiers.")
     report = {
+        "source": SOURCE_GLYPH_NAME,
+        "target": GLYPH_NAME,
         "updated": sum(not change["added"] for change in changes),
         "added": sum(change["added"] for change in changes),
         "unchanged_expanded": sum(len(group[FIXED_WIDTH]) for group in groups.values()),
         "maximum_error": error,
+        "approximate": True,
         "dry_run": dry_run,
+        "target_layers": len(replacements),
     }
     for change in changes:
         print("%s: %s; smart height %g; new advance %.10g" % (
@@ -464,27 +622,31 @@ def recenter(font, dry_run=False, model_factory=native_model):
     for change in changes:
         set_geometry(change["layer"], change["data"])
         assert_geometry(geometry(change["layer"]), change["data"], "Prepared precise layer")
+        assert_movement_constraints(geometry(change["layer"]), change["baseline"])
 
-    # Keep the untouched original layer objects for exact rollback.
-    originals = [record["layer"]
-                 for group in groups.values() for record in group[OLD_WIDTH].values()]
+    # Keep EVERY original target layer for exact rollback, regardless of shape.
+    originals = list(glyph.layers)
+    original_ids = {str(layer.layerId) for layer in originals}
+    previous_marker = glyph.userData[MARKER_KEY]
     backup = glyph.copy()
     # GSGlyph.tempData is a native selector in Glyphs 4, not a Python dict proxy.
     # Store the backup before edits, so a storage error cannot change the font.
     glyph.setTempData_forKey_(backup, BACKUP_KEY)
-    added_ids = []
     font.disableUpdateInterface()
     undo_open = False
     try:
         glyph.beginUndo()
         undo_open = True
-        for change in changes:
-            layer = change["layer"]
-            if change["added"]:
-                added_ids.append(str(layer.layerId))
-            # append() assigns a fresh ID in Glyphs 4; retain all existing IDs.
+        for layer in replacements:
+            # append() assigns a fresh ID in Glyphs 4; use source layer IDs.
             glyph.layers[str(layer.layerId)] = layer
+        for layer in originals:
+            if str(layer.layerId) not in replacement_ids:
+                del glyph.layers[str(layer.layerId)]
+        for change in changes:
+            layer = glyph.layers[str(change["layer"].layerId)]
             assert_geometry(geometry(layer), change["data"], "Written layer %r" % layer.name)
+            assert_movement_constraints(geometry(layer), change["baseline"])
         after, unused_axis, unused_modern, unused_width = collect(font, glyph)
         if set(after) != set(groups):
             raise ValueError("Font-axis grouping changed during the operation.")
@@ -496,15 +658,18 @@ def recenter(font, dry_run=False, model_factory=native_model):
                                 "Unchanged expanded layer")
         report["maximum_error"] = verify_models(original, original.with_records(model_records(after)))
         glyph.userData[MARKER_KEY] = {"date": datetime.now().isoformat(),
+                                     "source": SOURCE_GLYPH_NAME,
                                      "from": OLD_WIDTH, "to": NEW_WIDTH,
                                      "fixed": FIXED_WIDTH}
     except Exception:
-        for layer_id in added_ids:
-            if glyph.layers[layer_id] is not None:
-                del glyph.layers[layer_id]
+        for layer in list(glyph.layers):
+            if str(layer.layerId) not in original_ids:
+                del glyph.layers[str(layer.layerId)]
         for layer in originals:
             glyph.layers[str(layer.layerId)] = layer
-        if glyph.userData[MARKER_KEY]:
+        if previous_marker is not None:
+            glyph.userData[MARKER_KEY] = previous_marker
+        elif glyph.userData[MARKER_KEY]:
             del glyph.userData[MARKER_KEY]
         raise
     finally:

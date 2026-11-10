@@ -17,6 +17,11 @@
     <!-- Component weight at the largest size in Black optical corrections. -->
     <key>blackweightadjustment</key>
     <integer>600</integer>
+    <!-- Plus component offsets for the n-ary circled plus white rim. -->
+    <key>NAryCircledPlusWhiteRimSmallHeightOffset</key>
+    <integer>-20</integer>
+    <key>NAryCircledPlusWhiteRimLargeHeightOffset</key>
+    <integer>-100</integer>
     <key>ARLNmaximum</key>
     <integer>200</integer>
     <key>DoublePairedArrowGap</key>

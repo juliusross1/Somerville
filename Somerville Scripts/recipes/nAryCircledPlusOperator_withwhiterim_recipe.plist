@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>formatVersion</key>
+	<integer>1</integer>
+	<key>kind</key>
+	<string>recipe</string>
+	<key>constants</key>
+	<string>recipe_constants.plist</string>
+	<key>name</key>
+	<string>_smart.nAryCircledPlusOperator.withwhiterim</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>copySmartGlyphWithComponentOffsets</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>_smart.nAryCircledPlusOperator.withwhiterim</string>
+				<key>sourceGlyph</key>
+				<string>_smart.nAryCircledPlusOperator</string>
+				<key>component</key>
+				<string>_smart.plus</string>
+				<key>axes</key>
+				<array>
+					<string>Height</string>
+					<string>Width</string>
+				</array>
+				<key>regularOffset</key>
+				<string>${NAryCircledPlusWhiteRimSmallHeightOffset}</string>
+				<key>highOffset</key>
+				<string>${NAryCircledPlusWhiteRimLargeHeightOffset}</string>
+				<key>highAxis</key>
+				<string>height</string>
+				<key>highValue</key>
+				<integer>100</integer>
+				<key>export</key>
+				<false/>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>enableComponentAlignment</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>_smart.nAryCircledPlusOperator.withwhiterim</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
