@@ -445,6 +445,7 @@ feature ss07;
 feature ss12;
 feature ss13;
 feature ss15;
+feature ss16;
 ";
 tag = aalt;
 },
@@ -624,6 +625,10 @@ tag = ss13;
 {
 automatic = 1;
 code = "sub narymultisetmultiplication by narymultisetmultiplication.ss15;
+sub nArySquareIntersectionOperator by nArySquareIntersectionOperator.ss15;
+sub nArySquareUnionOperator by nArySquareUnionOperator.ss15;
+sub nAryUnionOperatorWithDot by nAryUnionOperatorWithDot.ss15;
+sub nAryUnionOperatorWithPlus by nAryUnionOperatorWithPlus.ss15;
 sub naryintersection by naryintersection.ss15;
 sub naryunion by naryunion.ss15;
 sub intersection by intersection.ss15;
@@ -640,6 +645,7 @@ tag = ss15;
 {
 automatic = 1;
 code = "sub nAryCircledPlusOperator by nAryCircledPlusOperator.ss16;
+sub nAryCircledTimesOperator by nAryCircledTimesOperator.ss16;
 ";
 labels = (
 {
@@ -945,7 +951,7 @@ com.nagwa.MATHPlugin.constants = {
 AccentBaseHeight = 550;
 AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1503;
-DisplayOperatorMinHeight = 1500;
+DisplayOperatorMinHeight = 1450;
 FlattenedAccentBaseHeight = 708;
 FractionDenomDisplayStyleGapMin = 90;
 FractionDenominatorDisplayStyleShiftDown = 225;
@@ -1272,7 +1278,7 @@ com.nagwa.MATHPlugin.constants = {
 AccentBaseHeight = 550;
 AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1503;
-DisplayOperatorMinHeight = 1500;
+DisplayOperatorMinHeight = 1450;
 FlattenedAccentBaseHeight = 708;
 FractionDenomDisplayStyleGapMin = 90;
 FractionDenominatorDisplayStyleShiftDown = 225;
@@ -1615,7 +1621,7 @@ com.nagwa.MATHPlugin.constants = {
 AccentBaseHeight = 550;
 AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1503;
-DisplayOperatorMinHeight = 1500;
+DisplayOperatorMinHeight = 1450;
 FlattenedAccentBaseHeight = 708;
 FractionDenomDisplayStyleGapMin = 90;
 FractionDenominatorDisplayStyleShiftDown = 225;
@@ -1968,7 +1974,7 @@ com.nagwa.MATHPlugin.constants = {
 AccentBaseHeight = 550;
 AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1503;
-DisplayOperatorMinHeight = 1500;
+DisplayOperatorMinHeight = 1450;
 FlattenedAccentBaseHeight = 708;
 FractionDenomDisplayStyleGapMin = 90;
 FractionDenominatorDisplayStyleShiftDown = 225;
@@ -2337,7 +2343,7 @@ com.nagwa.MATHPlugin.constants = {
 AccentBaseHeight = 550;
 AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1506;
-DisplayOperatorMinHeight = 1500;
+DisplayOperatorMinHeight = 1450;
 FlattenedAccentBaseHeight = 708;
 FractionDenomDisplayStyleGapMin = 100;
 FractionDenominatorDisplayStyleShiftDown = 425;
@@ -2697,7 +2703,7 @@ com.nagwa.MATHPlugin.constants = {
 AccentBaseHeight = 550;
 AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1506;
-DisplayOperatorMinHeight = 1500;
+DisplayOperatorMinHeight = 1450;
 FlattenedAccentBaseHeight = 708;
 FractionDenomDisplayStyleGapMin = 100;
 FractionDenominatorDisplayStyleShiftDown = 425;
@@ -2753,6 +2759,7 @@ UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -3071,7 +3078,7 @@ com.nagwa.MATHPlugin.constants = {
 AccentBaseHeight = 550;
 AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1506;
-DisplayOperatorMinHeight = 1500;
+DisplayOperatorMinHeight = 1450;
 FlattenedAccentBaseHeight = 708;
 FractionDenomDisplayStyleGapMin = 100;
 FractionDenominatorDisplayStyleShiftDown = 425;
@@ -3453,7 +3460,7 @@ com.nagwa.MATHPlugin.constants = {
 AccentBaseHeight = 550;
 AxisHeight = 265;
 DelimitedSubFormulaMinHeight = 1506;
-DisplayOperatorMinHeight = 1500;
+DisplayOperatorMinHeight = 1450;
 FlattenedAccentBaseHeight = 708;
 FractionDenomDisplayStyleGapMin = 100;
 FractionDenominatorDisplayStyleShiftDown = 425;

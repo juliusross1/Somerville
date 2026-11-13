@@ -23,7 +23,7 @@ height = 100;
 ref = _smart.contourIntegral;
 }
 );
-width = 964;
+width = 854;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -47,7 +47,7 @@ height = 100;
 ref = _smart.contourIntegral;
 }
 );
-width = 921;
+width = 911;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -65,7 +65,6 @@ width = 592;
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
 {
-alignment = -1;
 piece = {
 height = 100;
 };
@@ -97,6 +96,230 @@ ref = _smart.contourIntegral;
 }
 );
 width = 828;
+},
+{
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+95,
+360,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "F9D574BF-071D-433B-A050-6E0179BEE211";
+name = "Needlepoint SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.contourIntegral;
+}
+);
+width = 2402;
+},
+{
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+113,
+360,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "01757063-AA50-4E52-B0C8-23F50C9996B0";
+name = "Needlepoint SemiExpanded Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.contourIntegral;
+}
+);
+width = 2785;
+},
+{
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+95,
+900,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "50626879-C706-4356-B0AE-470D61BD6822";
+name = "Needlepoint Black SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.contourIntegral;
+}
+);
+width = 2558;
+},
+{
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+113,
+900,
+360,
+1200,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "AF379CF3-C134-46A1-BA7A-B8EB47520378";
+name = "Needlepoint Black SemiExpanded Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.contourIntegral;
+}
+);
+width = 2845;
+},
+{
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+95,
+360,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "3020F747-CA83-427F-B08E-603028621C06";
+name = "Agate SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.contourIntegral;
+}
+);
+width = 2451;
+},
+{
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+113,
+360,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "2EAABC2B-0E46-4D9A-9F1C-EDEC21BE644C";
+name = "Agate SemiExpanded Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.contourIntegral;
+}
+);
+width = 2603;
+},
+{
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+95,
+900,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "599F54FB-BB38-4495-9B19-B3148C4A76C6";
+name = "Agate Black SemiCondensed Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.contourIntegral;
+}
+);
+width = 2466;
+},
+{
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+113,
+900,
+360,
+5,
+5,
+5,
+200,
+100,
+100
+);
+};
+layerId = "C98FDCC4-804C-4CF2-B6FE-483663AEE963";
+name = "Agate Black SemiExpanded Upright Slant";
+shapes = (
+{
+piece = {
+height = 100;
+slant = 100;
+};
+ref = _smart.contourIntegral;
+}
+);
+width = 2639;
 }
 );
 }

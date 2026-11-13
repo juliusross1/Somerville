@@ -1,103 +1,120 @@
 {
+category = Symbol;
+color = 1;
 glyphname = nAryTimesOperator.s16;
 layers = (
 {
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+metricLeft = "=_smart.nAryTimesOperator";
+metricRight = "=_smart.nAryTimesOperator";
 shapes = (
 {
 piece = {
-height = 88;
+height = 80;
 };
-ref = _smart.multiply;
+ref = _smart.nAryTimesOperator;
 }
 );
-width = 7207;
+width = 5218;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+metricLeft = "=_smart.nAryTimesOperator";
+metricRight = "=_smart.nAryTimesOperator";
 shapes = (
 {
 piece = {
-height = 89;
+height = 80;
 };
-ref = _smart.multiply;
+ref = _smart.nAryTimesOperator;
 }
 );
-width = 8185;
+width = 7412;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
+metricLeft = "=_smart.nAryTimesOperator";
+metricRight = "=_smart.nAryTimesOperator";
 shapes = (
 {
 piece = {
-height = 88;
+height = 80;
 };
-ref = _smart.multiply;
+ref = _smart.nAryTimesOperator;
 }
 );
-width = 7221;
+width = 5254;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+metricLeft = "=_smart.nAryTimesOperator";
+metricRight = "=_smart.nAryTimesOperator";
 shapes = (
 {
 piece = {
-height = 89;
+height = 80;
 };
-ref = _smart.multiply;
+ref = _smart.nAryTimesOperator;
 }
 );
-width = 8199;
+width = 7442;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+metricLeft = "=_smart.nAryTimesOperator";
+metricRight = "=_smart.nAryTimesOperator";
 shapes = (
 {
 piece = {
-height = 88;
-thin = 7;
+height = 80;
 };
-ref = _smart.multiply;
+ref = _smart.nAryTimesOperator;
 }
 );
-width = 7260;
+width = 5272;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+metricLeft = "=_smart.nAryTimesOperator";
+metricRight = "=_smart.nAryTimesOperator";
 shapes = (
 {
 piece = {
-height = 89;
-thin = 0;
+height = 80;
 };
-ref = _smart.multiply;
+ref = _smart.nAryTimesOperator;
 }
 );
-width = 8237;
+width = 7533;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+metricLeft = "=_smart.nAryTimesOperator";
+metricRight = "=_smart.nAryTimesOperator";
 shapes = (
 {
 piece = {
-height = 88;
+height = 80;
 };
-ref = _smart.multiply;
+ref = _smart.nAryTimesOperator;
 }
 );
-width = 7273;
+width = 2062;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+metricLeft = "=_smart.nAryTimesOperator";
+metricRight = "=_smart.nAryTimesOperator";
 shapes = (
 {
 piece = {
-height = 89;
+height = 80;
 };
-ref = _smart.multiply;
+ref = _smart.nAryTimesOperator;
 }
 );
-width = 8245;
+width = 2727;
 }
 );
+subCategory = Math;
 }

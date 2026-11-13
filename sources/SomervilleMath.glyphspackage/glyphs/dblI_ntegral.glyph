@@ -54,7 +54,7 @@ shapes = (
 ref = _smart.dblIntegral;
 }
 );
-width = 1188;
+width = 1158;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -63,7 +63,7 @@ shapes = (
 ref = _smart.dblIntegral;
 }
 );
-width = 1088;
+width = 1118;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -72,7 +72,7 @@ shapes = (
 ref = _smart.dblIntegral;
 }
 );
-width = 1446;
+width = 1416;
 },
 {
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -93,10 +93,13 @@ layerId = "CE3FC668-7C42-46E6-BF9D-344BFDBA013D";
 name = "Needlepoint SemiCondensed Upright INSL=100";
 shapes = (
 {
+piece = {
+slant = 100;
+};
 ref = _smart.dblIntegral;
 }
 );
-width = 772;
+width = 1070;
 },
 {
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -117,10 +120,13 @@ layerId = "54CEC36F-65E5-4093-88CA-31C4AEDC2CF1";
 name = "Needlepoint SemiExpanded Upright INSL=100";
 shapes = (
 {
+piece = {
+slant = 100;
+};
 ref = _smart.dblIntegral;
 }
 );
-width = 1108;
+width = 1347;
 },
 {
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -141,10 +147,13 @@ layerId = "7F54C345-5019-4A01-9E42-37D05CFDB543";
 name = "Needlepoint Black SemiCondensed Upright INSL=100";
 shapes = (
 {
+piece = {
+slant = 100;
+};
 ref = _smart.dblIntegral;
 }
 );
-width = 1128;
+width = 1345;
 },
 {
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -165,10 +174,13 @@ layerId = "2132BA47-92D3-419B-9D63-EC7D42A9B66C";
 name = "Needlepoint Black SemiExpanded Upright INSL=100";
 shapes = (
 {
+piece = {
+slant = 100;
+};
 ref = _smart.dblIntegral;
 }
 );
-width = 1394;
+width = 1611;
 },
 {
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -189,10 +201,13 @@ layerId = "750BCA85-36C1-4746-89F7-F9DF7D78D8E9";
 name = "Agate SemiCondensed Upright INSL=100";
 shapes = (
 {
+piece = {
+slant = 100;
+};
 ref = _smart.dblIntegral;
 }
 );
-width = 974;
+width = 1181;
 },
 {
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -213,10 +228,13 @@ layerId = "7A41B999-B3C6-4547-AD44-A851186943A5";
 name = "Agate SemiExpanded Upright INSL=100";
 shapes = (
 {
+piece = {
+slant = 100;
+};
 ref = _smart.dblIntegral;
 }
 );
-width = 1188;
+width = 1365;
 },
 {
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -237,10 +255,13 @@ layerId = "C643C592-DABB-4AE5-9731-FA5F2713B52E";
 name = "Agate Black SemiCondensed Upright INSL=100";
 shapes = (
 {
+piece = {
+slant = 100;
+};
 ref = _smart.dblIntegral;
 }
 );
-width = 1088;
+width = 1338;
 },
 {
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -261,10 +282,13 @@ layerId = "D8B95F2C-991B-4B8B-B775-5E14384BFBA2";
 name = "Agate Black SemiExpanded Upright INSL=100";
 shapes = (
 {
+piece = {
+slant = 100;
+};
 ref = _smart.dblIntegral;
 }
 );
-width = 1446;
+width = 1635;
 }
 );
 unicode = 8748;
