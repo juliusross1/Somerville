@@ -1893,28 +1893,181 @@ def expanded_actions_from_recipe(recipe_file):
     return recipe, recipe, parameters, actions, recipe_path_value, recipe_path_value
 
 
-def action_create_glyph(font, verbose=False, glyph=None, export=True, overwrite=False, color=None, **_kwargs):
+def action_create_glyph(font, verbose=False, glyph=None, export=True, overwrite=False, color=None, layerSource=None, **_kwargs):
+    # Alternates can inherit a complete master/intermediate-layer setup before
+    # addComponents builds their outlines. Prepare copies before editing a target.
+    source = glyph_for_name(font, layerSource) if layerSource else None
+    source_layers = None
+    if layerSource:
+        if source is None:
+            raise RuntimeError("Missing layer source glyph: %s" % layerSource)
+        if layerSource == glyph:
+            raise RuntimeError("Layer source must differ from the target glyph.")
+        source_layers = [layer.copy() for layer in source.layers]
+        for layer in source_layers:
+            for proxy_name in ("shapes", "components", "paths"):
+                clear_proxy(getattr(layer, proxy_name, None))
+
+    def configure(target):
+        if source_layers is not None:
+            target.layers = source_layers
+            copy_glyph_metadata(source, target)
+            for key in source.userData.keys():
+                target.userData[key] = source.userData[key]
+        target.export = bool(export)
+        set_glyph_color(target, color)
+        return target
+
     existing = glyph_for_name(font, glyph)
     if existing is not None:
         if overwrite:
             clear_glyph(existing)
-            existing.export = bool(export)
-            set_glyph_color(existing, color)
+            configure(existing)
             log("Overwrote existing glyph %s." % glyph, verbose)
             return existing
         if glyph_is_empty(existing):
             clear_glyph(existing)
-            existing.export = bool(export)
-            set_glyph_color(existing, color)
+            configure(existing)
             log("Using existing empty glyph %s." % glyph, verbose)
             return existing
         raise RecipeStopped("Glyph %s already exists. Enable 'Overwrite glyphs' to replace it." % glyph)
     new_glyph = GSGlyph(glyph)
-    new_glyph.export = bool(export)
-    set_glyph_color(new_glyph, color)
+    configure(new_glyph)
     font.glyphs.append(new_glyph)
     log("Created glyph %s export=%s." % (glyph, bool(export)), verbose)
     return new_glyph
+
+
+def action_copy_glyph_with_component_replacements(
+    font, verbose=False, glyph=None, sourceGlyph=None, componentReplacements=None,
+    glyphReplacements=None, overwrite=False, onlyIfMissing=False, **_kwargs
+):
+    """Copy a glyph's complete layer structure, replacing named dependencies only.
+
+    Used by parallel docked arrow recipes: outlines, nesting, smart values and
+    transforms come from the source, rather than being reconstructed or flattened.
+    """
+    source = glyph_for_name(font, sourceGlyph)
+    existing = glyph_for_name(font, glyph)
+    if source is None:
+        raise RuntimeError("Missing source glyph: %s" % sourceGlyph)
+    if not glyph or glyph == sourceGlyph:
+        raise RuntimeError("Copy requires a different target glyph name.")
+    if existing is not None and not glyph_is_empty(existing):
+        if boolean_value(onlyIfMissing):
+            log("Keeping existing dependency %s." % glyph, verbose)
+            return existing
+        if not overwrite:
+            raise RecipeStopped("Glyph %s already exists. Enable 'Overwrite glyphs' to replace it." % glyph)
+    replacements = dict(componentReplacements or {})
+    metadata_replacements = dict(glyphReplacements or replacements)
+    metadata_replacements[sourceGlyph] = glyph
+    for old_name, new_name in replacements.items():
+        if old_name != new_name and glyph_for_name(font, new_name) is None:
+            raise RuntimeError("%s: missing docked dependency %s." % (glyph, new_name))
+    pattern = re.compile(
+        r"(?<![A-Za-z0-9_.])(?:%s)(?![A-Za-z0-9_.])"
+        % "|".join(re.escape(name) for name in sorted(metadata_replacements, key=len, reverse=True))
+    )
+
+    def replace_string(value):
+        return pattern.sub(lambda match: metadata_replacements[match.group(0)], str(value))
+
+    def replace_metadata(value):
+        if isinstance(value, GSGlyphReference):
+            referenced = safe_call(getattr(value, "glyph", None))
+            old_name = safe_call(getattr(referenced, "name", None))
+            if old_name in metadata_replacements:
+                new_name = metadata_replacements[old_name]
+                target = (existing if existing is not None else copied) if new_name == glyph else glyph_for_name(font, new_name)
+                if target is None:
+                    raise RuntimeError("%s: missing metadata dependency %s." % (glyph, new_name))
+                return GSGlyphReference(target)
+            return value
+        if isinstance(value, str):
+            return replace_string(value)
+        if isinstance(value, dict) or hasattr(value, "allKeys"):
+            return {replace_metadata(key): replace_metadata(value[key]) for key in value.keys()}
+        if isinstance(value, (list, tuple)) or hasattr(value, "objectAtIndex_"):
+            return [replace_metadata(item) for item in value]
+        return value
+
+    def replace_user_data(owner):
+        data = owner.userData
+        for key in list(data.keys()):
+            data[key] = replace_metadata(data[key])
+
+    def replace_metric_keys(owner):
+        for key in ("leftMetricsKey", "rightMetricsKey", "widthMetricsKey"):
+            value = safe_call(getattr(owner, key, None))
+            if value:
+                setattr(owner, key, replace_string(value))
+
+    def replace_components(owner):
+        changed_count = 0
+        for component in layer_components(owner):
+            old_name = component_name(component)
+            if old_name not in replacements:
+                continue
+            transform = transform_values(component)
+            alignment = safe_call(getattr(component, "alignment", None))
+            component.componentName = replacements[old_name]
+            if transform_values(component) != transform:
+                if not set_component_transform(component, transform):
+                    raise RuntimeError("%s: could not preserve a component transform." % glyph)
+            if alignment is not None and safe_call(getattr(component, "alignment", None)) != alignment:
+                component.alignment = alignment
+            if component_name(component) != replacements[old_name]:
+                raise RuntimeError("%s: component replacement did not persist." % glyph)
+            changed_count += 1
+        return changed_count
+
+    # The native glyph copy also preserves backgrounds, paths, layer attributes,
+    # anchors, hints, smart axes and per-layer MATH assembly data.
+    copied = source.copyWithOptions_(63)
+    copied.name = glyph
+    copied.unicodes = []
+    copied.parent = font
+    if len(copied.layers) != len(source.layers):
+        raise RuntimeError("%s: could not copy every source layer." % glyph)
+    changed = 0
+    for layer in copied.layers:
+        layer.stopUpdates()
+        try:
+            changed += replace_components(layer)
+            replace_user_data(layer)
+            replace_metric_keys(layer)
+            if safe_call(getattr(layer, "hasBackground", False), False):
+                background = safe_call(getattr(layer, "background", None))
+                if background is not None:
+                    replace_components(background)
+                    replace_user_data(background)
+                    replace_metric_keys(background)
+        finally:
+            layer.enableFutureUpdates()
+    replace_user_data(copied)
+    replace_metric_keys(copied)
+    if replacements and not changed:
+        raise RuntimeError("%s: none of its expected source components were found." % glyph)
+    if existing is None:
+        font.glyphs.append(copied)
+        result = copied
+    else:
+        existing.layers = list(copied.layers)
+        copy_glyph_metadata(copied, existing)
+        for key in list(existing.userData.keys()):
+            del existing.userData[key]
+        for key in copied.userData.keys():
+            existing.userData[key] = copied.userData[key]
+        existing.unicodes = []
+        try:
+            existing.color = copied.color
+        except Exception:
+            pass
+        result = existing
+    log("%s: copied all %i layers from %s; replaced %i component references."
+        % (glyph, len(result.layers), sourceGlyph, changed), verbose)
+    return result
 
 
 def action_copy_smart_glyph_with_component_offsets(
@@ -4292,6 +4445,7 @@ def action_create_smart_component_variants(font, verbose=False, glyph=None, valu
 
 ACTION_REGISTRY = {
     "createGlyph": action_create_glyph,
+    "copyGlyphWithComponentReplacements": action_copy_glyph_with_component_replacements,
     "copySmartGlyphWithComponentOffsets": action_copy_smart_glyph_with_component_offsets,
     "setGlyphMetadata": action_set_glyph_metadata,
     "addComponent": action_add_component,
@@ -4342,7 +4496,7 @@ def run_action(font, action, verbose=False, overwrite_glyphs=False):
     if function is None:
         raise RuntimeError("Unknown recipe function: %s" % function_name)
     arguments = dict(action.get("arguments", {}))
-    if function_name in ("createGlyph", "createSmartComponentVariants", "copySmartGlyphWithComponentOffsets"):
+    if function_name in ("createGlyph", "createSmartComponentVariants", "copySmartGlyphWithComponentOffsets", "copyGlyphWithComponentReplacements"):
         arguments["overwrite"] = bool(overwrite_glyphs)
     return function(font, verbose=verbose, **arguments)
 
@@ -4353,7 +4507,7 @@ def glyph_names_touched_by_action(action):
 
     function_name = action.get("function")
     arguments = dict(action.get("arguments", {}))
-    if function_name in ("createGlyph", "copySmartGlyphWithComponentOffsets"):
+    if function_name in ("createGlyph", "copySmartGlyphWithComponentOffsets", "copyGlyphWithComponentReplacements"):
         glyph_name = arguments.get("glyph")
         return [glyph_name] if glyph_name else []
 
@@ -4397,7 +4551,7 @@ def glyph_names_affected_by_action(action):
     return unique_strings(names)
 
 
-def refresh_recipe_spacing(font, glyph_names, verbose=False):
+def refresh_recipe_spacing(font, glyph_names, verbose=False, metrics_masters_only=False):
     """Refresh caches after all recipe edits, with component sources first.
 
     Respect automatic alignment, but do not apply metrics keys or assign saved
@@ -4444,6 +4598,14 @@ def refresh_recipe_spacing(font, glyph_names, verbose=False):
     for name in ordered:
         for layer in layers[name]:
             try:
+                if metrics_masters_only and not is_master_layer(layer):
+                    # Full-coordinate intermediate layers can make metrics-key
+                    # synchronization recursively interpolate a deep component
+                    # tree. Invalidate them for normal on-demand updates instead.
+                    layer.setNeedUpdateShapes()
+                    layer.setNeedsAlignment()
+                    layer.setNeedUpdateMetrics()
+                    continue
                 components = layer_components(layer)
                 for component in components:
                     component.baseGlyphsHasChanged()
@@ -4484,10 +4646,20 @@ def run_recipe(recipe_file=DEFAULT_RECIPE_FILE, verbose=VERBOSE, overwrite_glyph
     try:
         for index, action in enumerate(actions, 1):
             log("%i. %s" % (index, action.get("function")), verbose)
+            arguments = action.get("arguments", {})
+            existing = None
+            if (action.get("function") == "copyGlyphWithComponentReplacements"
+                    and boolean_value(arguments.get("onlyIfMissing", False))):
+                existing = glyph_for_name(font, arguments.get("glyph"))
+            kept_dependency = existing is not None and not glyph_is_empty(existing)
             run_action(font, action, verbose=verbose, overwrite_glyphs=overwrite_glyphs)
             touched_glyphs.extend(glyph_names_touched_by_action(action))
-            affected_glyphs.extend(glyph_names_affected_by_action(action))
-        refresh_recipe_spacing(font, affected_glyphs, verbose=verbose)
+            if not kept_dependency:
+                affected_glyphs.extend(glyph_names_affected_by_action(action))
+        refresh_recipe_spacing(
+            font, affected_glyphs, verbose=verbose,
+            metrics_masters_only=boolean_value(recipe.get("refreshMetricsMastersOnly", False)),
+        )
     finally:
         font.enableUpdateInterface()
     log("", verbose)

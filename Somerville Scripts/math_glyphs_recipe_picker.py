@@ -163,7 +163,7 @@ def created_glyph_names(file_name):
             continue
         function_name = action.get("function")
         arguments = dict(action.get("arguments", {}))
-        if function_name in ("createGlyph", "copySmartGlyphWithComponentOffsets"):
+        if function_name in ("createGlyph", "copySmartGlyphWithComponentOffsets", "copyGlyphWithComponentReplacements"):
             glyph_name = arguments.get("glyph")
             if glyph_name:
                 names.append(glyph_name)

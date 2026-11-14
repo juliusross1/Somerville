@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>RightTabArrow Docked</string>
+	<key>kind</key>
+	<string>recipe</string>
+	<key>description</key>
+	<string>Mirror every layer of rightTabArrow as rightTabArrow.ss17, preserving its component hierarchy, transforms, smart values, anchors and MATH data. Create missing docked dependencies first.</string>
+	<key>constants</key>
+	<string>docked_arrow_constants.plist</string>
+	<key>refreshMetricsMastersOnly</key>
+	<true/>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>copyGlyphWithComponentReplacements</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>rightTabArrow.ss17</string>
+				<key>sourceGlyph</key>
+				<string>rightTabArrow</string>
+				<key>componentReplacements</key>
+				<dict>
+					<key>rightArrow.lft</key>
+					<string>rightArrow.lft.docked</string>
+				</dict>
+				<key>glyphReplacements</key>
+				<string>${DockedArrowGlyphMap}</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
