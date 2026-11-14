@@ -1,14 +1,43 @@
 # Docked arrow recipes
 
-Run **All Docked Arrows** in the Math Glyphs Recipe Picker to build the full family.
+Run **All Docked Arrows** in the Math Glyphs Recipe Picker to build the original family.
 Individual entries, such as **LeftArrow Docked**, create their missing docked
 dependencies first. Reopen the picker after updating these scripts so it reloads
 the shared recipe engine.
 
+For the arrows that use `_smart.ArrowTail`, run **All Docked Tail Arrows**
+(`docked_tail_arrows_recipe.plist`). This separate batch creates 12 `.ss17`
+variants using the existing `_smart.ArrowTail.docked`, through
+`ArrowEnd.lft.docked` and `leftTailArrow.rgt.docked`. The supplied smart component
+must already exist and is never recreated or overwritten. These recipes cover
+`leftTailArrow`, `rightTailArrow`, and the single- and
+two-headed arrows with tails and vertical strokes, in both directions.
+
+Each of the 12 variants and two shared components also has an individual
+**Docked** recipe. Individual recipes create missing dependencies first and
+preserve existing dependencies, including when **Overwrite glyphs** is enabled.
+To rebuild a shared component, select its own recipe with **Overwrite glyphs**.
+The tail recipes use `docked_tail_arrow_constants.plist` and preserve every layer,
+width, transform, smart value, anchor, background and MATH assembly reference
+from the current original glyphs. They clear Unicode assignments on the copies.
+Like the original batch, they refresh metrics on master layers only.
+
+For the double arrows that use `DoubleArrowEnd.lft`, run **All Docked Double
+Arrows** (`docked_double_arrows_recipe.plist`). It creates eight `.ss17` variants:
+`leftDoubleArrow`, `rightDoubleArrow`, `leftDoubleStrokeArrow`,
+`rightDoubleStrokeArrow`, `leftDoubleArrowWithVerticalStroke`,
+`rightDoubleArrowWithVerticalStroke`, `leftLongDoubleArrow` and
+`rightLongDoubleArrow`. The existing `DoubleArrowEnd.lft.docked` is required
+and is never recreated or overwritten. The batch creates
+`leftDoubleArrow.rgt.docked` only if missing. Each variant and the shared
+component also has an individual **Docked** recipe, with the same preservation
+and overwrite behavior as the tail recipes. Their mapping is in
+`docked_double_arrow_constants.plist`.
+
 The base `rightArrow.lft.docked` must already exist. The existing
 **RightArrow Docked** recipe is retained without changes; the batch also leaves
-an existing `rightArrow.ss17` alone. The new set adds 82 individual recipes and
-one batch recipe, covering 55 `.ss17` arrow names (including `rightArrow.ss17`)
+an existing `rightArrow.ss17` alone. The family has individual recipes and
+one batch recipe, covering 53 `.ss17` arrow names (including `rightArrow.ss17`)
 and 29 `.docked` component names (including the existing base).
 
 Each new recipe copies its original glyph **as it currently exists in the open
@@ -48,7 +77,6 @@ caused the earlier beachball.
 | `downTwoheadedArrow` | `downTwoheadedArrow.ss17` |
 | `leftAndRightArrow` | `leftAndRightArrow.ss17` |
 | `leftArrow` | `leftArrow.ss17` |
-| `leftArrowTail` | `leftArrowTail.ss17` |
 | `leftBarbDownHarpoon` | `leftBarbDownHarpoon.ss17` |
 | `leftBarbUpHarpoon` | `leftBarbUpHarpoon.ss17` |
 | `leftDoublePairedArrow` | `leftDoublePairedArrow.ss17` |
@@ -69,7 +97,6 @@ caused the earlier beachball.
 | `leftTwoheadedArrow` | `leftTwoheadedArrow.ss17` |
 | `leftVerticalStrokeArrow` | `leftVerticalStrokeArrow.ss17` |
 | `rightArrow` | `rightArrow.ss17` |
-| `rightArrowTail` | `rightArrowTail.ss17` |
 | `rightBarbUpHarpoon` | `rightBarbUpHarpoon.ss17` |
 | `rightBarbdownHarpoon` | `rightBarbdownHarpoon.ss17` |
 | `rightDoublePairedArrow` | `rightDoublePairedArrow.ss17` |
@@ -136,6 +163,8 @@ Run the standalone tests from the project root:
 
 ```sh
 python3 "Somerville Scripts/tests/test_docked_arrow_recipes.py"
+python3 "Somerville Scripts/tests/test_docked_arrowtail_recipes.py"
+python3 "Somerville Scripts/tests/test_docked_double_arrow_recipes.py"
 ```
 
 The tests exercise the real recipe action and expansion functions outside

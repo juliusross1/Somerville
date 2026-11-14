@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[2]
 RECIPES = ROOT / 'Somerville Scripts/recipes'
 GLYPHS = ROOT / 'sources/SomervilleMath.glyphspackage/glyphs'
 MAPPING = plistlib.loads((RECIPES / 'docked_arrow_constants.plist').read_bytes())['constants']['DockedArrowGlyphMap']
+EXCLUDED_ORIGINALS = {'leftArrowTail', 'rightArrowTail'}
 
 
 def parse_openstep(text):
@@ -173,6 +174,7 @@ class Layer:
 
 class Glyph:
     name = dictionary_property('glyphname')
+    productionName = dictionary_property('production')
     export = dictionary_property('export', True)
     color = dictionary_property('color')
     category = dictionary_property('category')
@@ -285,14 +287,14 @@ class DockedArrowTests(unittest.TestCase):
             if found == expanded:
                 break
             found = expanded
-        self.assertEqual(found, set(MAPPING))
-        self.assertEqual(len(found), 84)
-        self.assertEqual(sum(n.endswith('.ss17') for n in MAPPING.values()), 55)
+        self.assertEqual(found - EXCLUDED_ORIGINALS, set(MAPPING))
+        self.assertEqual(len(MAPPING), 82)
+        self.assertEqual(sum(n.endswith('.ss17') for n in MAPPING.values()), 53)
 
     def test_batch_preserves_every_layer_and_original(self):
         original = {n: g.snapshot() for n, g in self.font.glyphs.items()}
         batch = actions('docked_arrows_recipe.plist')
-        self.assertEqual(len(batch), 83)
+        self.assertEqual(len(batch), 81)
         made = set()
         for action in batch:
             args = action['arguments']
@@ -382,7 +384,7 @@ class DockedArrowTests(unittest.TestCase):
         before = existing.snapshot()
         ENGINE.Glyphs.font = self.font
         result = ENGINE.run_recipe('docked_arrows_recipe.plist', verbose=False)
-        self.assertEqual(len(result['glyphs']), 83)
+        self.assertEqual(len(result['glyphs']), 81)
         self.assertEqual(existing.snapshot(), before)
         self.assertEqual(existing.layers[0].calls, [])
         for original in MAPPING:

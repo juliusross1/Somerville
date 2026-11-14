@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>RightLongDoubleArrow Docked</string>
+	<key>kind</key>
+	<string>recipe</string>
+	<key>description</key>
+	<string>Copy every layer of rightLongDoubleArrow to rightLongDoubleArrow.ss17, using the existing DoubleArrowEnd.lft.docked. Create missing docked dependencies first and preserve existing dependencies. Preserve original glyphs, layer geometry, transforms, smart values, widths, anchors and MATH data.</string>
+	<key>constants</key>
+	<string>docked_double_arrow_constants.plist</string>
+	<key>refreshMetricsMastersOnly</key>
+	<true/>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>copyGlyphWithComponentReplacements</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>rightLongDoubleArrow.ss17</string>
+				<key>sourceGlyph</key>
+				<string>rightLongDoubleArrow</string>
+				<key>componentReplacements</key>
+				<dict>
+					<key>DoubleArrowEnd.lft</key>
+					<string>DoubleArrowEnd.lft.docked</string>
+				</dict>
+				<key>glyphReplacements</key>
+				<string>${DockedDoubleArrowGlyphMap}</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

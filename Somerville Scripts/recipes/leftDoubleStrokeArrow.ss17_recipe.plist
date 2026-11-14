@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>LeftArrowTail Docked</string>
+	<string>LeftDoubleStrokeArrow Docked</string>
 	<key>kind</key>
 	<string>recipe</string>
 	<key>description</key>
-	<string>Mirror every layer of leftArrowTail as leftArrowTail.ss17, preserving its component hierarchy, transforms, smart values, anchors and MATH data. Create missing docked dependencies first.</string>
+	<string>Copy every layer of leftDoubleStrokeArrow to leftDoubleStrokeArrow.ss17, using the existing DoubleArrowEnd.lft.docked. Create missing docked dependencies first and preserve existing dependencies. Preserve original glyphs, layer geometry, transforms, smart values, widths, anchors and MATH data.</string>
 	<key>constants</key>
-	<string>docked_arrow_constants.plist</string>
+	<string>docked_double_arrow_constants.plist</string>
 	<key>refreshMetricsMastersOnly</key>
 	<true/>
 	<key>actions</key>
@@ -22,16 +22,16 @@
 			<key>arguments</key>
 			<dict>
 				<key>glyph</key>
-				<string>leftArrow.rgt.docked</string>
+				<string>leftDoubleArrow.rgt.docked</string>
 				<key>sourceGlyph</key>
-				<string>leftArrow.rgt</string>
+				<string>leftDoubleArrow.rgt</string>
 				<key>componentReplacements</key>
 				<dict>
-					<key>rightArrow.lft</key>
-					<string>rightArrow.lft.docked</string>
+					<key>DoubleArrowEnd.lft</key>
+					<string>DoubleArrowEnd.lft.docked</string>
 				</dict>
 				<key>glyphReplacements</key>
-				<string>${DockedArrowGlyphMap}</string>
+				<string>${DockedDoubleArrowGlyphMap}</string>
 				<key>onlyIfMissing</key>
 				<true/>
 			</dict>
@@ -44,16 +44,16 @@
 			<key>arguments</key>
 			<dict>
 				<key>glyph</key>
-				<string>leftArrowTail.ss17</string>
+				<string>leftDoubleStrokeArrow.ss17</string>
 				<key>sourceGlyph</key>
-				<string>leftArrowTail</string>
+				<string>leftDoubleStrokeArrow</string>
 				<key>componentReplacements</key>
 				<dict>
-					<key>leftArrow.rgt</key>
-					<string>leftArrow.rgt.docked</string>
+					<key>leftDoubleArrow.rgt</key>
+					<string>leftDoubleArrow.rgt.docked</string>
 				</dict>
 				<key>glyphReplacements</key>
-				<string>${DockedArrowGlyphMap}</string>
+				<string>${DockedDoubleArrowGlyphMap}</string>
 			</dict>
 		</dict>
 	</array>

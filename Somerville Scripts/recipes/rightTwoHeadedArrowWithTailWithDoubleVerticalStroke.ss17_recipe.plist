@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>RightTwoHeadedArrowWithTailWithDoubleVerticalStroke Docked</string>
+	<key>kind</key>
+	<string>recipe</string>
+	<key>description</key>
+	<string>Copy every layer of rightTwoHeadedArrowWithTailWithDoubleVerticalStroke to rightTwoHeadedArrowWithTailWithDoubleVerticalStroke.ss17, using the existing _smart.ArrowTail.docked. Create missing docked dependencies first; preserve existing dependencies and all original glyphs. Preserve geometry, transforms, smart values, anchors and MATH data.</string>
+	<key>constants</key>
+	<string>docked_tail_arrow_constants.plist</string>
+	<key>refreshMetricsMastersOnly</key>
+	<true/>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>copyGlyphWithComponentReplacements</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>ArrowEnd.lft.docked</string>
+				<key>sourceGlyph</key>
+				<string>ArrowEnd.lft</string>
+				<key>componentReplacements</key>
+				<dict>
+					<key>_smart.ArrowTail</key>
+					<string>_smart.ArrowTail.docked</string>
+				</dict>
+				<key>glyphReplacements</key>
+				<string>${DockedTailArrowGlyphMap}</string>
+				<key>onlyIfMissing</key>
+				<true/>
+			</dict>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>call</string>
+			<key>function</key>
+			<string>copyGlyphWithComponentReplacements</string>
+			<key>arguments</key>
+			<dict>
+				<key>glyph</key>
+				<string>rightTwoHeadedArrowWithTailWithDoubleVerticalStroke.ss17</string>
+				<key>sourceGlyph</key>
+				<string>rightTwoHeadedArrowWithTailWithDoubleVerticalStroke</string>
+				<key>componentReplacements</key>
+				<dict>
+					<key>ArrowEnd.lft</key>
+					<string>ArrowEnd.lft.docked</string>
+				</dict>
+				<key>glyphReplacements</key>
+				<string>${DockedTailArrowGlyphMap}</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

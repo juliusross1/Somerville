@@ -2028,6 +2028,7 @@ def action_copy_glyph_with_component_replacements(
     copied.name = glyph
     copied.unicodes = []
     copied.parent = font
+    production_name = safe_call(getattr(copied, "productionName", None))
     if len(copied.layers) != len(source.layers):
         raise RuntimeError("%s: could not copy every source layer." % glyph)
     changed = 0
@@ -2065,6 +2066,8 @@ def action_copy_glyph_with_component_replacements(
         except Exception:
             pass
         result = existing
+    if production_name:
+        result.productionName = replace_string(production_name)
     log("%s: copied all %i layers from %s; replaced %i component references."
         % (glyph, len(result.layers), sourceGlyph, changed), verbose)
     return result

@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>RightArrowTail Docked</string>
+	<string>ArrowEnd.lft Docked</string>
 	<key>kind</key>
 	<string>recipe</string>
 	<key>description</key>
-	<string>Mirror every layer of rightArrowTail as rightArrowTail.ss17, preserving its component hierarchy, transforms, smart values, anchors and MATH data. Create missing docked dependencies first.</string>
+	<string>Copy every layer of ArrowEnd.lft to ArrowEnd.lft.docked, using the existing _smart.ArrowTail.docked. Create missing docked dependencies first; preserve existing dependencies and all original glyphs. Preserve geometry, transforms, smart values, anchors and MATH data.</string>
 	<key>constants</key>
-	<string>docked_arrow_constants.plist</string>
+	<string>docked_tail_arrow_constants.plist</string>
 	<key>refreshMetricsMastersOnly</key>
 	<true/>
 	<key>actions</key>
@@ -22,16 +22,16 @@
 			<key>arguments</key>
 			<dict>
 				<key>glyph</key>
-				<string>rightArrowTail.ss17</string>
+				<string>ArrowEnd.lft.docked</string>
 				<key>sourceGlyph</key>
-				<string>rightArrowTail</string>
+				<string>ArrowEnd.lft</string>
 				<key>componentReplacements</key>
 				<dict>
-					<key>rightArrow.lft</key>
-					<string>rightArrow.lft.docked</string>
+					<key>_smart.ArrowTail</key>
+					<string>_smart.ArrowTail.docked</string>
 				</dict>
 				<key>glyphReplacements</key>
-				<string>${DockedArrowGlyphMap}</string>
+				<string>${DockedTailArrowGlyphMap}</string>
 			</dict>
 		</dict>
 	</array>

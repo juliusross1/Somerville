@@ -116,7 +116,11 @@ shapes = (
 ref = equal;
 },
 {
-pos = (-325,1);
+anchor = top;
+piece = {
+height = -100;
+};
+pos = (-181,683);
 ref = _smart.circle;
 }
 );
