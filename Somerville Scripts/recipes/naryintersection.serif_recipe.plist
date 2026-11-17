@@ -9,6 +9,8 @@
      Generate and align all sizes before flipping each component vertically
      about its own final outline bounds center on every layer.
      The final flip disables alignment to preserve the reflected placement.
+     Capture each component's bounds before disabling alignment; reflect across
+     its horizontal midpoint and correct its vertical position to retain those bounds.
      Set LSB and RSB on the base and every variant to match union, then sync.
      createSmartComponentVariants registers the vertical MATH variant chain. -->
 <plist version="1.0">
@@ -153,6 +155,8 @@
 			<string>flipComponents</string>
 			<key>arguments</key>
 			<dict>
+				<key>preserveVerticalPosition</key>
+				<true/>
 				<key>glyph</key>
 				<string>naryintersection.ss15</string>
 				<key>components</key>

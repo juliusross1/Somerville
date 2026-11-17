@@ -19,10 +19,12 @@ name = "Optical size";
 tag = opsz;
 },
 {
+hidden = 1;
 name = ssty1;
 tag = STYA;
 },
 {
+hidden = 1;
 name = ssty2;
 tag = STYB;
 },
@@ -446,6 +448,7 @@ feature ss12;
 feature ss13;
 feature ss15;
 feature ss16;
+feature ss17;
 ";
 tag = aalt;
 },
@@ -726,6 +729,11 @@ value = "Docked Arrows";
 }
 );
 tag = ss17;
+},
+{
+automatic = 1;
+code = "";
+tag = kern;
 }
 );
 fontMaster = (
@@ -3684,27 +3692,27 @@ integral.s20,
 dblIntegral,
 summation,
 plus.circled,
-nAryCircledPlusOperator,
-nAryCircledPlusOperator.s01,
-nAryCircledPlusOperator.s02,
-nAryCircledPlusOperator.s03,
-nAryCircledPlusOperator.s04,
-nAryCircledPlusOperator.s05,
-nAryCircledPlusOperator.s06,
-nAryCircledPlusOperator.s07,
-nAryCircledPlusOperator.s08,
-nAryCircledPlusOperator.s09,
-nAryCircledPlusOperator.s10,
-nAryCircledPlusOperator.s11,
-nAryCircledPlusOperator.s12,
-nAryCircledPlusOperator.s13,
-nAryCircledPlusOperator.s14,
-nAryCircledPlusOperator.s15,
-nAryCircledPlusOperator.s16,
-nAryCircledPlusOperator.s17,
-nAryCircledPlusOperator.s18,
-nAryCircledPlusOperator.s19,
-nAryCircledPlusOperator.s20,
+nAryCircledPludOperator,
+nAryCircledPludOperator.s01,
+nAryCircledPludOperator.s02,
+nAryCircledPludOperator.s03,
+nAryCircledPludOperator.s04,
+nAryCircledPludOperator.s05,
+nAryCircledPludOperator.s06,
+nAryCircledPludOperator.s07,
+nAryCircledPludOperator.s08,
+nAryCircledPludOperator.s09,
+nAryCircledPludOperator.s10,
+nAryCircledPludOperator.s11,
+nAryCircledPludOperator.s12,
+nAryCircledPludOperator.s13,
+nAryCircledPludOperator.s14,
+nAryCircledPludOperator.s15,
+nAryCircledPludOperator.s16,
+nAryCircledPludOperator.s17,
+nAryCircledPludOperator.s18,
+nAryCircledPludOperator.s19,
+nAryCircledPludOperator.s20,
 nAryCircledTimesOperator,
 nAryCircledTimesOperator.s01,
 nAryCircledTimesOperator.s02,
@@ -3896,6 +3904,67 @@ nAryCircledDotOperator.s18,
 nAryCircledDotOperator.s19,
 nAryCircledDotOperator.s20
 );
+},
+{
+name = "Decompose Glyphs";
+value = (
+nAryCircledPludOperator,
+nAryCircledPludOperator.s01,
+nAryCircledPludOperator.s02,
+nAryCircledPludOperator.s03,
+nAryCircledPludOperator.s04,
+nAryCircledPludOperator.s05,
+nAryCircledPludOperator.s06,
+nAryCircledPludOperator.s07,
+nAryCircledPludOperator.s08,
+nAryCircledPludOperator.s09,
+nAryCircledPludOperator.s10,
+nAryCircledPludOperator.s11,
+nAryCircledPludOperator.s12,
+nAryCircledPludOperator.s13,
+nAryCircledPludOperator.s14,
+nAryCircledPludOperator.s15,
+nAryCircledPludOperator.s16,
+nAryCircledPludOperator.s17,
+nAryCircledPludOperator.s18,
+nAryCircledPludOperator.s19,
+nAryCircledPludOperator.s20
+);
+},
+{
+name = "Decompose Glyphs";
+value = (
+nAryCircledPludOperator,
+nAryCircledPludOperator.s01,
+nAryCircledPludOperator.s02,
+nAryCircledPludOperator.s03,
+nAryCircledPludOperator.s04,
+nAryCircledPludOperator.s05,
+nAryCircledPludOperator.s06,
+nAryCircledPludOperator.s07,
+nAryCircledPludOperator.s08,
+nAryCircledPludOperator.s09,
+nAryCircledPludOperator.s10,
+nAryCircledPludOperator.s11,
+nAryCircledPludOperator.s12,
+nAryCircledPludOperator.s13,
+nAryCircledPludOperator.s14,
+nAryCircledPludOperator.s15,
+nAryCircledPludOperator.s16,
+nAryCircledPludOperator.s17,
+nAryCircledPludOperator.s18,
+nAryCircledPludOperator.s19,
+nAryCircledPludOperator.s20
+);
+},
+{
+name = Filter;
+value = "RemoveOverlap;include:nAryCircledPlusOperator.
+nAryCircledPlusOperator.s01
+nAryCircledPlusOperator.s02
+nAryCircledPlusOperator.s03
+nAryCircledPlusOperator.s04
+nAryCircledPlusOperator.s05";
 },
 {
 disabled = 1;
@@ -7086,7 +7155,6 @@ instanceInterpolations = {
 "DF17D77B-A5C4-4843-826A-BC0F1C4CB224" = 0.07555;
 "F497C50F-30EB-4580-9148-0005B36D0333" = 0.08763;
 };
-linkStyle = "Minuscule SemiCondensed";
 name = "Minuscule SemiCondensed Bold";
 visible = 0;
 weightClass = 700;
@@ -20173,6 +20241,7 @@ kerningLTR = {
 "@MMK_R_KO_x" = 0;
 "@MMK_R_KO_y" = 0;
 "@MMK_R_KO_z" = 0;
+"yitalic-math" = -100;
 };
 "@MMK_L_KO_l.smcp" = {
 "@MMK_R_KO_A" = 12;
@@ -33402,6 +33471,7 @@ percent.lf = 0;
 "@MMK_R_KO_x" = 0;
 "@MMK_R_KO_y" = 0;
 "@MMK_R_KO_z" = 0;
+"yitalic-math" = -100;
 };
 "@MMK_L_KO_l.smcp" = {
 "@MMK_R_KO_A" = 37;
@@ -46634,6 +46704,7 @@ percent.lf = 0;
 "@MMK_R_KO_x" = 6;
 "@MMK_R_KO_y" = -17;
 "@MMK_R_KO_z" = 0;
+"yitalic-math" = -50;
 };
 "@MMK_L_KO_l.smcp" = {
 "@MMK_R_KO_A" = 0;
@@ -59863,6 +59934,7 @@ percent.lf = 0;
 "@MMK_R_KO_x" = 0;
 "@MMK_R_KO_y" = -11;
 "@MMK_R_KO_z" = 0;
+"yitalic-math" = -50;
 };
 "@MMK_L_KO_l.smcp" = {
 "@MMK_R_KO_A" = 11;
@@ -73092,6 +73164,7 @@ percent.lf = -12;
 "@MMK_R_KO_x" = -2;
 "@MMK_R_KO_y" = -48;
 "@MMK_R_KO_z" = -10;
+"yitalic-math" = -80;
 };
 "@MMK_L_KO_l.smcp" = {
 "@MMK_R_KO_A" = 0;
@@ -86321,6 +86394,7 @@ percent.lf = -20;
 "@MMK_R_KO_x" = 2;
 "@MMK_R_KO_y" = -58;
 "@MMK_R_KO_z" = -21;
+"yitalic-math" = -70;
 };
 "@MMK_L_KO_l.smcp" = {
 "@MMK_R_KO_A" = 0;
@@ -99550,6 +99624,7 @@ percent.lf = -21;
 "@MMK_R_KO_x" = 0;
 "@MMK_R_KO_y" = -51;
 "@MMK_R_KO_z" = 0;
+"yitalic-math" = -70;
 };
 "@MMK_L_KO_l.smcp" = {
 "@MMK_R_KO_A" = 0;
@@ -112785,6 +112860,7 @@ percent.lf = -46;
 "@MMK_R_KO_x" = 0;
 "@MMK_R_KO_y" = -47;
 "@MMK_R_KO_z" = 0;
+"yitalic-math" = -100;
 };
 "@MMK_L_KO_l.smcp" = {
 "@MMK_R_KO_A" = 0;

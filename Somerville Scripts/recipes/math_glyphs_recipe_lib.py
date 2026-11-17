@@ -888,8 +888,10 @@ def translate_component_y(component, dy):
     return False
 
 
-def flip_component_across_horizontal_center(component):
-    old_min_y, old_max_y, center_y = bounds_y_values(component)
+def flip_component_across_horizontal_center(component, original_bounds=None):
+    old_min_y, old_max_y, center_y = (
+        bounds_y_values(component) if original_bounds is None else original_bounds
+    )
     if center_y is None:
         return False
     a, b, c, d, tx, ty = transform_values(component)
@@ -3319,7 +3321,7 @@ def action_align_component_pairs_by_anchors(
     return changed
 
 
-def action_flip_components(font, verbose=False, glyph=None, components=None, variantCount=0, requireAll=False, **_kwargs):
+def action_flip_components(font, verbose=False, glyph=None, components=None, variantCount=0, requireAll=False, preserveVerticalPosition=False, **_kwargs):
     """Flip vertically about final bounds, optionally including .sXX variants."""
     count = float(variantCount)
     if not math.isfinite(count) or count < 0 or not count.is_integer():
@@ -3339,8 +3341,11 @@ def action_flip_components(font, verbose=False, glyph=None, components=None, var
             for component in layer_components(layer):
                 if wanted_components and component_name(component) not in wanted_components:
                     continue
+                # Disabling automatic alignment can move the component. Capture
+                # its original center first when the recipe must retain placement.
+                original_bounds = bounds_y_values(component) if boolean_value(preserveVerticalPosition) else None
                 disable_component_alignment(component)
-                if flip_component_across_horizontal_center(component):
+                if flip_component_across_horizontal_center(component, original_bounds):
                     changed += 1
                 else:
                     skipped += 1
