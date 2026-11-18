@@ -3213,6 +3213,7 @@ UpperLimitBaselineRiseMin = 60;
 UpperLimitGapMin = 160;
 };
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -6602,6 +6603,10 @@ Arrow.mid.ShortShort.FloorB,
 Arrow.mid.ShortShort.FloorC,
 DoubleArrow.mid.ShortShort.Floor
 );
+},
+{
+name = "Optimize Variable Deltas";
+value = 0;
 }
 );
 name = "SomervilleMath Variable";
