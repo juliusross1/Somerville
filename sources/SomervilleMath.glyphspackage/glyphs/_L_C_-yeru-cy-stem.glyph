@@ -9,7 +9,7 @@ anchors = (
 {
 name = "#entry";
 pos = (30,0);
-}
+},
 );
 shapes = (
 {
@@ -44,9 +44,9 @@ nodes = (
 (106,20,o),
 (88,3,o),
 (30,1,c),
-(30,0,l)
+(30,0,l),
 );
-}
+},
 );
 };
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -57,7 +57,7 @@ ref = "_part.LC-xheight-upper-stem";
 {
 anchor = stem;
 ref = "_part.LC-baseline-lower-stem";
-}
+},
 );
 width = 302;
 },
@@ -67,7 +67,7 @@ anchors = (
 {
 name = "#entry";
 pos = (36,0);
-}
+},
 );
 shapes = (
 {
@@ -102,9 +102,9 @@ nodes = (
 (131,21,o),
 (110,5,o),
 (36,1,c),
-(36,0,l)
+(36,0,l),
 );
-}
+},
 );
 };
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -115,7 +115,7 @@ ref = "_part.LC-xheight-upper-stem";
 {
 anchor = stem;
 ref = "_part.LC-baseline-lower-stem";
-}
+},
 );
 width = 352;
 },
@@ -125,7 +125,7 @@ anchors = (
 {
 name = "#entry";
 pos = (20,0);
-}
+},
 );
 shapes = (
 {
@@ -160,9 +160,9 @@ nodes = (
 (76,20,o),
 (63,3,o),
 (20,1,c),
-(20,0,l)
+(20,0,l),
 );
-}
+},
 );
 };
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -173,7 +173,7 @@ ref = "_part.LC-xheight-upper-stem";
 {
 anchor = stem;
 ref = "_part.LC-baseline-lower-stem";
-}
+},
 );
 width = 332;
 },
@@ -183,7 +183,7 @@ anchors = (
 {
 name = "#entry";
 pos = (30,0);
-}
+},
 );
 shapes = (
 {
@@ -218,9 +218,9 @@ nodes = (
 (105,22,o),
 (85,3,o),
 (30,1,c),
-(30,0,l)
+(30,0,l),
 );
-}
+},
 );
 };
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -231,7 +231,7 @@ ref = "_part.LC-xheight-upper-stem";
 {
 anchor = stem;
 ref = "_part.LC-baseline-lower-stem";
-}
+},
 );
 width = 390;
 },
@@ -241,7 +241,7 @@ anchors = (
 {
 name = "#entry";
 pos = (40,0);
-}
+},
 );
 shapes = (
 {
@@ -276,9 +276,9 @@ nodes = (
 (176,89,o),
 (143,71,o),
 (40,71,c),
-(40,0,l)
+(40,0,l),
 );
-}
+},
 );
 };
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -289,7 +289,7 @@ ref = "_part.LC-xheight-upper-stem";
 {
 anchor = stem;
 ref = "_part.LC-baseline-lower-stem";
-}
+},
 );
 width = 442;
 },
@@ -299,7 +299,7 @@ anchors = (
 {
 name = "#entry";
 pos = (55,0);
-}
+},
 );
 shapes = (
 {
@@ -334,9 +334,9 @@ nodes = (
 (218,94,o),
 (186,71,o),
 (55,71,c),
-(55,0,l)
+(55,0,l),
 );
-}
+},
 );
 };
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -347,7 +347,7 @@ ref = "_part.LC-xheight-upper-stem";
 {
 anchor = stem;
 ref = "_part.LC-baseline-lower-stem";
-}
+},
 );
 width = 526;
 },
@@ -357,7 +357,7 @@ anchors = (
 {
 name = "#entry";
 pos = (20,0);
-}
+},
 );
 shapes = (
 {
@@ -392,9 +392,9 @@ nodes = (
 (106,87,o),
 (83,71,o),
 (20,71,c),
-(20,0,l)
+(20,0,l),
 );
-}
+},
 );
 };
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -405,7 +405,7 @@ ref = "_part.LC-xheight-upper-stem";
 {
 anchor = stem;
 ref = "_part.LC-baseline-lower-stem";
-}
+},
 );
 width = 392;
 },
@@ -415,7 +415,7 @@ anchors = (
 {
 name = "#entry";
 pos = (32,0);
-}
+},
 );
 shapes = (
 {
@@ -450,9 +450,9 @@ nodes = (
 (136,87,o),
 (112,71,o),
 (32,71,c),
-(32,0,l)
+(32,0,l),
 );
-}
+},
 );
 };
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -463,10 +463,10 @@ ref = "_part.LC-xheight-upper-stem";
 {
 anchor = stem;
 ref = "_part.LC-baseline-lower-stem";
-}
+},
 );
 width = 452;
-}
+},
 );
 userData = {
 KernOnSpecialSpacing = {

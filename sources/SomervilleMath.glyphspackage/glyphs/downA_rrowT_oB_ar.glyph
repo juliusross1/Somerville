@@ -16,7 +16,7 @@ ref = downArrow.top;
 {
 pos = (0,260);
 ref = downArrowToBar.bot;
-}
+},
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
@@ -25,20 +25,20 @@ vAssembly = (
 downArrowToBar.bot,
 0,
 0,
-30
+30,
 ),
 (
 VerticalArrow.mid,
 1,
 450,
-450
+450,
 ),
 (
 downArrow.top,
 0,
 30,
-0
-)
+0,
+),
 );
 };
 };
@@ -57,7 +57,7 @@ ref = downArrow.top;
 {
 pos = (0,208);
 ref = downArrowToBar.bot;
-}
+},
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
@@ -66,20 +66,20 @@ vAssembly = (
 downArrowToBar.bot,
 0,
 0,
-30
+30,
 ),
 (
 VerticalArrow.mid,
 1,
 450,
-450
+450,
 ),
 (
 downArrow.top,
 0,
 30,
-0
-)
+0,
+),
 );
 };
 };
@@ -98,7 +98,7 @@ ref = downArrow.top;
 {
 pos = (0,260);
 ref = downArrowToBar.bot;
-}
+},
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
@@ -107,20 +107,20 @@ vAssembly = (
 downArrowToBar.bot,
 0,
 0,
-30
+30,
 ),
 (
 VerticalArrow.mid,
 1,
 450,
-450
+450,
 ),
 (
 downArrow.top,
 0,
 30,
-0
-)
+0,
+),
 );
 };
 };
@@ -139,7 +139,7 @@ ref = downArrow.top;
 {
 pos = (1,-275);
 ref = downArrowToBar.bot;
-}
+},
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
@@ -148,20 +148,20 @@ vAssembly = (
 downArrowToBar.bot,
 0,
 0,
-30
+30,
 ),
 (
 VerticalArrow.mid,
 1,
 450,
-450
+450,
 ),
 (
 downArrow.top,
 0,
 30,
-0
-)
+0,
+),
 );
 };
 };
@@ -180,7 +180,7 @@ ref = downArrow.top;
 {
 pos = (0,244);
 ref = downArrowToBar.bot;
-}
+},
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
@@ -189,20 +189,20 @@ vAssembly = (
 downArrowToBar.bot,
 0,
 0,
-30
+30,
 ),
 (
 VerticalArrow.mid,
 1,
 450,
-450
+450,
 ),
 (
 downArrow.top,
 0,
 30,
-0
-)
+0,
+),
 );
 };
 };
@@ -221,7 +221,7 @@ ref = downArrow.top;
 {
 pos = (0,169);
 ref = downArrowToBar.bot;
-}
+},
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
@@ -230,20 +230,20 @@ vAssembly = (
 downArrowToBar.bot,
 0,
 0,
-30
+30,
 ),
 (
 VerticalArrow.mid,
 1,
 450,
-450
+450,
 ),
 (
 downArrow.top,
 0,
 30,
-0
-)
+0,
+),
 );
 };
 };
@@ -262,7 +262,7 @@ ref = downArrow.top;
 {
 pos = (0,279);
 ref = downArrowToBar.bot;
-}
+},
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
@@ -271,20 +271,20 @@ vAssembly = (
 downArrowToBar.bot,
 0,
 0,
-30
+30,
 ),
 (
 VerticalArrow.mid,
 1,
 450,
-450
+450,
 ),
 (
 downArrow.top,
 0,
 30,
-0
-)
+0,
+),
 );
 };
 };
@@ -303,7 +303,7 @@ type = Text;
 {
 pos = (338.696,254.116);
 type = Text;
-}
+},
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
@@ -317,7 +317,7 @@ ref = downArrow.top;
 {
 pos = (0,168);
 ref = downArrowToBar.bot;
-}
+},
 );
 userData = {
 com.nagwa.MATHPlugin.variants = {
@@ -326,25 +326,25 @@ vAssembly = (
 downArrowToBar.bot,
 0,
 0,
-30
+30,
 ),
 (
 VerticalArrow.mid,
 1,
 450,
-450
+450,
 ),
 (
 downArrow.top,
 0,
 30,
-0
-)
+0,
+),
 );
 };
 };
 width = 600;
-}
+},
 );
 unicode = 10515;
 }
