@@ -73,14 +73,14 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Thickness = 60;
+Thickness = 80;
 size = 100;
 };
-pos = (475,0);
+pos = (482,0);
 ref = _smart.times;
 },
 );
-width = 950;
+width = 964;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -88,7 +88,7 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Thickness = 60;
+Thickness = 75;
 size = 100;
 };
 pos = (545,0);
@@ -183,11 +183,11 @@ piece = {
 Thickness = 77;
 size = 935;
 };
-pos = (4528,0);
+pos = (4524,0);
 ref = _smart.times;
 },
 );
-width = 9056;
+width = 9048;
 },
 {
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -245,11 +245,11 @@ piece = {
 Thickness = 140;
 size = 935;
 };
-pos = (4546,0);
+pos = (4543,0);
 ref = _smart.times;
 },
 );
-width = 9092;
+width = 9086;
 },
 {
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -273,14 +273,14 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Thickness = 88;
+Thickness = 102;
 size = 770;
 };
-pos = (3180,0);
+pos = (3185,0);
 ref = _smart.times;
 },
 );
-width = 6360;
+width = 6370;
 },
 {
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -304,7 +304,7 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Thickness = 88;
+Thickness = 110;
 size = 945;
 };
 pos = (4575,0);
@@ -335,14 +335,14 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Thickness = 160;
+Thickness = 210;
 size = 770;
 };
-pos = (3211,0);
+pos = (3225,0);
 ref = _smart.times;
 },
 );
-width = 6422;
+width = 6450;
 },
 {
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -366,14 +366,14 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Thickness = 150;
+Thickness = 210;
 size = 935;
 };
-pos = (4449,0);
+pos = (4565,0);
 ref = _smart.times;
 },
 );
-width = 8898;
+width = 9130;
 },
 );
 metricLeft = "=50";

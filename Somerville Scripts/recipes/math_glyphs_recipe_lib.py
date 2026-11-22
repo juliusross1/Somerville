@@ -1940,6 +1940,49 @@ def action_create_glyph(font, verbose=False, glyph=None, export=True, overwrite=
     return new_glyph
 
 
+def replace_smart_glyph_axes_and_layers(existing, copied):
+    old_axes = glyph_smart_axes(existing)
+    copied_axes = glyph_smart_axes(copied)
+    old_by_name = {smart_axis_name(axis): axis for axis in old_axes}
+    if old_axes and old_by_name.keys() != {smart_axis_name(axis) for axis in copied_axes}:
+        raise RuntimeError("%s: existing smart axes differ from the source." % existing.name)
+
+    glyphs4 = uses_glyphs4_coordinates()
+    id_map = {axis_identifier(axis): axis_identifier(old_by_name.get(smart_axis_name(axis), axis))
+              for axis in copied_axes}
+    mapping_keys = ("coordinates",) if glyphs4 else ("partSelection", "smartComponentPoleMapping")
+    for layer in copied.layers:
+        for key in mapping_keys:
+            mapping = layer_attribute(layer, key)
+            if mapping is not None and hasattr(mapping, "keys"):
+                set_layer_attribute(layer, key, {id_map.get(str(k), str(k)): mapping[k]
+                                                 for k in mapping.keys()})
+        if not glyphs4:
+            layer.smartComponentPoleMapping = {
+                id_map.get(str(k), str(k)): v for k, v in dict(layer.smartComponentPoleMapping or {}).items()}
+    for axis in copied_axes:
+        axis_id = id_map[axis_identifier(axis)]
+        if glyphs4:
+            axis.setAxisId_(axis_id)
+        else:
+            axis.setId_(axis_id)
+
+    old_layers = list(existing.layers)
+    try:
+        if glyphs4:
+            existing.axes = copied_axes
+        else:
+            existing.smartComponentAxes = copied_axes
+        existing.layers = list(copied.layers)
+    except Exception:
+        if glyphs4:
+            existing.axes = old_axes
+        else:
+            existing.smartComponentAxes = old_axes
+        existing.layers = old_layers
+        raise
+
+
 def action_copy_glyph_with_component_replacements(
     font, verbose=False, glyph=None, sourceGlyph=None, componentReplacements=None,
     glyphReplacements=None, overwrite=False, onlyIfMissing=False, **_kwargs
@@ -2056,7 +2099,10 @@ def action_copy_glyph_with_component_replacements(
         font.glyphs.append(copied)
         result = copied
     else:
-        existing.layers = list(copied.layers)
+        if glyph_smart_axes(copied):
+            replace_smart_glyph_axes_and_layers(existing, copied)
+        else:
+            existing.layers = list(copied.layers)
         copy_glyph_metadata(copied, existing)
         for key in list(existing.userData.keys()):
             del existing.userData[key]
@@ -2150,42 +2196,7 @@ def action_copy_smart_glyph_with_component_offsets(
         font.glyphs.append(copied)
         result = copied
     else:
-        old_axes = glyph_smart_axes(existing)
-        if old_axes and {smart_axis_name(a) for a in old_axes} != {smart_axis_name(a) for a in copied_axes}:
-            raise RuntimeError("%s: existing smart axes differ from the source." % glyph)
-        old_by_name = {smart_axis_name(a): a for a in old_axes}
-        id_map = {axis_identifier(a): axis_identifier(old_by_name.get(smart_axis_name(a), a))
-                  for a in copied_axes}
-        for layer in copied.layers:
-            mapping_keys = ("coordinates",) if uses_glyphs4_coordinates() else ("partSelection", "smartComponentPoleMapping")
-            for key in mapping_keys:
-                mapping = layer_attribute(layer, key)
-                if mapping is not None and hasattr(mapping, "keys"):
-                    set_layer_attribute(layer, key, {id_map.get(str(k), str(k)): mapping[k]
-                                                     for k in mapping.keys()})
-            if not uses_glyphs4_coordinates():
-                layer.smartComponentPoleMapping = {
-                    id_map.get(str(k), str(k)): v for k, v in dict(layer.smartComponentPoleMapping or {}).items()}
-        for axis in copied_axes:
-            axis_id = axis_identifier(old_by_name.get(smart_axis_name(axis), axis))
-            if uses_glyphs4_coordinates():
-                axis.setAxisId_(axis_id)
-            else:
-                axis.setId_(axis_id)
-        old_layers = list(existing.layers)
-        try:
-            if uses_glyphs4_coordinates():
-                existing.axes = copied_axes
-            else:
-                existing.smartComponentAxes = copied_axes
-            existing.layers = list(copied.layers)
-        except Exception:
-            if uses_glyphs4_coordinates():
-                existing.axes = old_axes
-            else:
-                existing.smartComponentAxes = old_axes
-            existing.layers = old_layers
-            raise
+        replace_smart_glyph_axes_and_layers(existing, copied)
         copy_glyph_metadata(copied, existing)
         result = existing
     log("%s: copied %i layers and %i smart axes from %s; adjusted %i %s component(s), %i High."

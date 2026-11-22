@@ -466,7 +466,7 @@ file = ss01.fea;
 labels = (
 {
 language = dflt;
-value = "";
+value = "Alternate p";
 },
 );
 tag = ss01;
@@ -477,7 +477,7 @@ file = ss02.fea;
 labels = (
 {
 language = dflt;
-value = "";
+value = "Alternate E";
 },
 );
 tag = ss02;
@@ -488,7 +488,7 @@ file = ss05.fea;
 labels = (
 {
 language = dflt;
-value = "";
+value = "Alternate g";
 },
 );
 tag = ss05;
@@ -499,7 +499,7 @@ file = ss06.fea;
 labels = (
 {
 language = dflt;
-value = "";
+value = "Alternate y";
 },
 );
 tag = ss06;
@@ -510,7 +510,7 @@ file = ss07.fea;
 labels = (
 {
 language = dflt;
-value = "";
+value = "Alternate T";
 },
 );
 tag = ss07;
@@ -521,7 +521,7 @@ file = ss12.fea;
 labels = (
 {
 language = dflt;
-value = "";
+value = "Alternate Z";
 },
 );
 tag = ss12;
@@ -532,7 +532,7 @@ file = ss13.fea;
 labels = (
 {
 language = dflt;
-value = "";
+value = "Alternate X";
 },
 );
 tag = ss13;
@@ -554,7 +554,7 @@ file = ss16.fea;
 labels = (
 {
 language = dflt;
-value = "";
+value = "White Rim Alternates";
 },
 );
 tag = ss16;
@@ -748,6 +748,10 @@ pos = 3704;
 },
 {
 pos = -3174;
+},
+{
+},
+{
 },
 );
 name = "Needlepoint SemiCondensed Upright";
@@ -1100,6 +1104,10 @@ pos = 3704;
 {
 pos = -3174;
 },
+{
+},
+{
+},
 );
 name = "Needlepoint SemiExpanded Upright";
 stemValues = (
@@ -1443,6 +1451,10 @@ pos = 3704;
 },
 {
 pos = -3174;
+},
+{
+},
+{
 },
 );
 name = "Needlepoint Black SemiCondensed Upright";
@@ -1798,6 +1810,10 @@ pos = 3704;
 {
 pos = -3174;
 },
+{
+},
+{
+},
 );
 name = "Needlepoint Black SemiExpanded Upright";
 stemValues = (
@@ -2143,6 +2159,12 @@ pos = 3704;
 },
 {
 pos = -3174;
+},
+{
+pos = 885;
+},
+{
+pos = 635;
 },
 );
 name = "Agate SemiCondensed Upright";
@@ -2508,6 +2530,12 @@ pos = 3704;
 },
 {
 pos = -3174;
+},
+{
+pos = 885;
+},
+{
+pos = 635;
 },
 );
 name = "Agate SemiExpanded Upright";
@@ -2876,6 +2904,12 @@ pos = 3704;
 },
 {
 pos = -3174;
+},
+{
+pos = 885;
+},
+{
+pos = 635;
 },
 );
 name = "Agate Black SemiCondensed Upright";
@@ -3247,6 +3281,12 @@ pos = 3704;
 },
 {
 pos = -3174;
+},
+{
+pos = 885;
+},
+{
+pos = 635;
 },
 );
 name = "Agate Black SemiExpanded Upright";
@@ -15035,6 +15075,12 @@ name = "Large Operator High";
 },
 {
 name = "Large Operator Baseline";
+},
+{
+name = naryOperatorTop;
+},
+{
+name = naryoperatortoplowered;
 },
 );
 properties = (

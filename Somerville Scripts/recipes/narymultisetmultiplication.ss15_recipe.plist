@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
   "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- Uses the existing _smart.narymultisetmultiplication.serif component.
+<!-- Uses the existing _smart.narymultisetmultiplication.slab component.
      Base height is 0; variant .sNN height is NN * 100 / SizeVariantCount.
      With SizeVariantCount = 20, .s01 is 5 and .s20 is 100. -->
 <plist version="1.0">
@@ -56,7 +56,7 @@
         <key>glyph</key>
         <string>narymultisetmultiplication.ss15</string>
         <key>component</key>
-        <string>_smart.narymultisetmultiplication.serif</string>
+        <string>_smart.narymultisetmultiplication.slab</string>
       </dict>
     </dict>
     <dict>

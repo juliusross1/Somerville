@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>formatVersion</key>
+  <integer>1</integer>
+  <key>kind</key>
+  <string>recipe</string>
+  <key>name</key>
+  <string>_smart.narymultisetmultiplication.slab</string>
+  <key>description</key>
+  <string>Copy the regular smart glyph and its High layers. Use the slab union component and retain the bullet on each layer.</string>
+  <key>actions</key>
+  <array>
+    <dict>
+      <key>type</key>
+      <string>call</string>
+      <key>function</key>
+      <string>copyGlyphWithComponentReplacements</string>
+      <key>arguments</key>
+      <dict>
+        <key>glyph</key>
+        <string>_smart.narymultisetmultiplication.slab</string>
+        <key>sourceGlyph</key>
+        <string>_smart.narymultisetmultiplication</string>
+        <key>componentReplacements</key>
+        <dict>
+          <key>_smart.naryunion</key>
+          <string>_smart.naryunion.slab</string>
+        </dict>
+      </dict>
+    </dict>
+  </array>
+</dict>
+</plist>
