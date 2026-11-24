@@ -380,8 +380,14 @@ Usual build process (no need to describe)
 Stems slightly thicker at height
 **todo: return to the serifs at high**
 
+** naryoperators: need them to all the the same height, so it cannot interpolate with the standard ones.  e.g. union is not part of the naryunion sequence.  Could do this with intermediate layers, but it is no easier."
+
 ** for plus**
 
+
+union.uv001 and intersection.uv001 just have the ss15 variants (bit of a waste but this is small)
+
+serif versions of naryunionoperators
 
 ****For bigdot***
 Create _smart.operator.circled

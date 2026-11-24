@@ -1,78 +1,183 @@
 #!/usr/bin/env python3
-"""Create matching static Roman, Italic, and Math fonts.
+r"""Create static SomervilleMath fonts and matching LuaLaTeX fontspec configurations.
 
-Resolve GDEF-backed MATH variation references before fontTools instantiates
-the rest of the font. This preserves variable math constants, italic
-corrections, accent attachments, kerns, and assembly values in the static font.
-The BASE (baseline) table is omitted by default because current Somerville
-exports contain malformed baseline data. Use --keep-base to preserve it.
-The input font is not modified.
+Description:
+  Resolve GDEF-backed MATH variation references before fontTools instantiates
+  the rest of the font. This preserves math constants, italic corrections,
+  accent attachments, kerns, and assembly values. The input is not modified.
 
-Requires fontTools (tested with 4.63.0). From this directory:
-    python3 instantiate_somerville.py
+  The BASE table is omitted by default because current Somerville exports
+  contain malformed baseline data. Use --keep-base to retain a valid table.
+
+Instance names:
+  Names follow somerville-OPTICALSIZE[-WIDTH][-WEIGHT], as in the guide.
+  Names are case-insensitive. The alias somerville selects somerville-regular.
+  Legacy names such as "Caption Bold" and unprefixed names such as caption-bold
+  are also accepted. Available instances and coordinates come from fvar.
+
+  Without --instance, axis values start from the named Regular instance.
+  Explicit AXIS=VALUE assignments override the selected instance's coordinates.
+  For a batch, overrides apply to every instance. Stored instance coordinates
+  are used exactly as recorded in fvar.
+
+Axis values:
+  Values may be numbers or case-insensitive names from the guide, for example
+  Weight=Bold, "Optical Size"=Micro, or "Arrow Head"=Large (200, also Largest).
+  Quote assignments containing spaces. Unknown value names are rejected.
+  Tags are case-sensitive; axis names are case-insensitive. An axis may be
+  specified only once, even when mixing its tag and name.
+
+  --list-axes shows visible axes, user-space ranges, font defaults, and accepted
+  value names. Hidden automatic script axes are omitted. Axes are read from
+  the input font, including wdth, wght, MGHT, opsz, STYA, STYB, ARLN, ARHD,
+  and INSL. Coordinates are user-space values; avar remapping, including v2,
+  is applied during instancing. Independent user coordinates may therefore
+  produce coupled internal values.
+
+Output files:
+  -o NAME produces SomervilleMathNAME.ttf and SomervilleNAME.fontspec. For a
+  batch, each instance's style is appended to NAME. Internal font names are
+  unchanged. NAME may have a directory component unless --output-dir is used.
+
+  Without -o, --instance and --allinstances use standard filenames, such as
+  SomervilleMathCaptionBold.ttf and SomervilleCaptionBold.fontspec. Axis
+  overrides always require -o. An export without --instance or --allinstances
+  also requires -o. Neither listing option requires -o or writes files.
+
+  The original PlayfairRomanVF.ttf and PlayfairItalicVF.ttf must be beside the
+  input math font, or supplied via --playfair-dir DIR. They are read only to
+  calculate matching variable text coordinates; no static Playfair fonts are
+  created. Listing axes or instances does not need the Playfair files.
+
+  Paths are relative to the working directory. Use -i to select an input font
+  elsewhere. --output-dir DIR creates and uses a destination directory; when
+  combining it with -o, NAME must have no directory component.
+
+  Keep the generated pair and the two original Playfair variable fonts together
+  in the LaTeX working directory or font search path. For example, after an
+  export with -o Custom, use this LuaLaTeX preamble:
+    \usepackage{unicode-math}
+    \setmainfont{SomervilleCustom}
+  fontspec loads SomervilleCustom.fontspec automatically. It configures upright,
+  italic, bold, and bold italic Playfair, and selects SomervilleMathCustom.ttf
+  before the document starts. Text width and optical size match mathematics;
+  bold text weight matches the effective internal MGHT coordinate, including
+  weight-dependent avar v2 mappings. Each Playfair avar map is inverted to find
+  the appropriate user coordinates. Playfair inputs must use avar v1 or no avar.
+  Playfair axis values written to the fontspec are rounded to the nearest integer.
+  Text uses the HarfBuzz renderer for variable font interpolation and lining
+  figures to match the mathematics font. The standard upright, italic, and
+  bold mathematics alphabet commands use the SomervilleMath glyphs.
+
+  Both filenames are checked before exports begin. Each pair is saved after
+  optional font validation. Completed exports remain if a later export fails.
+  --validate reopens and structurally validates the static math font before
+  publication; it is off by default. --overwrite is required if either output
+  file already exists.
+
+Examples:
+  Export a named instance with its automatic filename:
+    python3 instantiate_somerville.py --instance somerville-caption-bold
+    Output: SomervilleMathCaptionBold.ttf and SomervilleCaptionBold.fontspec
+
+  Export all named instances with their standard filenames:
+    python3 instantiate_somerville.py --allinstances --output-dir ./static-fonts
+
+  List the available instance names:
     python3 instantiate_somerville.py --list-instances
-    python3 instantiate_somerville.py --instances "Caption Bold" INSL=100 -o CaptionBold
-    python3 instantiate_somerville.py wght=700 MGHT=900 opsz=12 INSL=100 -o SomervilleBold
-    python3 instantiate_somerville.py Weight=700 "Math Weight=900" "Optical Size=12"
 
-Axes accept their case-sensitive tags or their names from the input font.
-Names are case-insensitive; quote assignments containing spaces.
-Current names and tags:
-    Width          wdth       Weight         wght
-    Math Weight    MGHT       Optical size   opsz
-    ssty1          STYA       ssty2          STYB
-    Arrow Length   ARLN       Arrow Head     ARHD
-    Integral Slant INSL
-Tags and names can be mixed, but each axis may be specified only once.
+  List axes, ranges, and named values:
+    python3 instantiate_somerville.py --list-axes
 
-Use --list-instances to print all fvar instance names without axis values.
-Use --allinstances to export every named instance in the math font's fvar table.
-Use --instances "Caption Bold" to select one (names are case-insensitive).
-Explicit AXIS=VALUE assignments override the selected instance's coordinates.
-Instantiation warns if the corresponding Playfair instances are absent or
-differ in shared axis coordinates; math coordinates remain authoritative.
-Without --instances, unspecified axes use the named Regular instance. Axis overrides
-are independent: changing wght does not automatically change MGHT.
-Axes are read from the input font: wdth, wght, MGHT, opsz, STYA, STYB,
-ARLN, ARHD, and INSL in the current SomervilleMathVF. Values are user-space
-coordinates; avar remapping (including v2) is handled during instancing.
-Named-instance coordinates are used exactly as stored in fvar.
-PlayfairRomanVF.ttf and PlayfairItalicVF.ttf are read alongside the math input.
-Both receive the resolved math wdth, wght, and opsz coordinates, including
-Regular defaults for omitted axes. Each font applies its own avar mapping;
-any other text-font axes (such as ital) are pinned at their defaults.
+  Choose a custom output name:
+    python3 instantiate_somerville.py --instance somerville-micro-black -o Custom
+    Output: SomervilleMathCustom.ttf and SomervilleCustom.fontspec
 
--o NAME is a path/filename prefix, not a .ttf filename.
-It creates NAMERoman.ttf, NAMEItalic.ttf, and NAMEMath.ttf.
-Without -o, --instances "Caption Bold" creates PlayfairRomanCaptionBold.ttf,
-PlayfairItalicCaptionBold.ttf, and SomervilleMathCaptionBold.ttf.
-For multiple instances with -o NAME, outputs use NAMERomanSTYLE.ttf,
-NAMEItalicSTYLE.ttf, and NAMEMathSTYLE.ttf. Without either option, the prefix remains Somerville. Internal font names
-are unchanged. Each font is published as soon as it is saved. Use --validate
-to reopen and structurally validate each export before publishing it (off by
-default). Earlier exports remain if a later export fails.
---overwrite is required if any destination exists.
+  Set custom axes by tag (requires -o):
+    python3 instantiate_somerville.py wght=700 MGHT=100 opsz=12 INSL=100 \
+      -o CustomTwo
+    Output: SomervilleMathCustomTwo.ttf and SomervilleCustomTwo.fontspec
 
-Input and output paths are relative to the working directory. Use -i to
-select a variable font elsewhere. Use --output-dir DIR to create and write
-to a destination directory; when combined with -o, supply a filename prefix
-without a directory component.
-Written with ChatGPT.
+  Set custom axes by name (requires -o):
+    python3 instantiate_somerville.py Weight=700 "Math Weight"=100 \
+      "Optical Size"=12 -o CustomThree
+    Output: SomervilleMathCustomThree.ttf and SomervilleCustomThree.fontspec
+
+  Override a named instance using a named axis value (requires -o):
+    python3 instantiate_somerville.py --instance somerville-regular-bold \
+      "Arrow Head"=Large -o CustomFour
+    Output: SomervilleMathCustomFour.ttf and SomervilleCustomFour.fontspec
+
+Requirements:
+  Python 3 and fontTools (tested with fontTools 4.63.0).
+
+Credits:
+  Written with ChatGPT.
 """
 
-from contextlib import ExitStack
 import argparse
 import math
 import os
-import sys
 from pathlib import Path
 import tempfile
+from contextlib import ExitStack
 
 from fontTools.misc.roundTools import otRound
 from fontTools.ttLib import TTFont
 from fontTools.ttLib.tables.otTables import Device, MathValueRecord
 from fontTools.varLib.instancer import AxisLimits, instantiateVariableFont
 from fontTools.varLib.varStore import VarStoreInstancer
+
+
+AXIS_VALUE_NAMES = {
+    "wdth": {"SemiCondensed": 88, "Regular": 100, "SemiExpanded": 113},
+    "wght": {"SemiLight": 360, "Regular": 400, "Medium": 500,
+             "SemiBold": 600, "Bold": 700, "ExtraBold": 800, "Black": 900},
+    "MGHT": {"None": 0, "Lighter": 25, "Regular": 50, "Heavier": 75, "Heaviest": 100},
+    "opsz": {"Micro": 5, "Minuscule": 6, "Miniature": 7, "Caption": 8,
+             "Regular": 12, "SubHeading": 16, "Trumpet": 21, "Headline": 32,
+             "Display": 48, "Titling": 72, "Hairline": 96, "Needlepoint": 1200},
+    "INSL": {"Regular": 0, "SemiSlanted": 50, "Slanted": 100},
+    "ARLN": {"Shortest": 0, "Short": 50, "Regular": 100, "Long": 150, "Longest": 200},
+    "ARHD": {"Regular": 100, "Larger": 150, "Largest": 200, "Large": 200},
+}
+
+
+def axis_value(tag, raw):
+    """Resolve a numeric value or a guide label, retaining strict validation."""
+    try:
+        return float(raw)
+    except ValueError:
+        names = AXIS_VALUE_NAMES.get(tag, {})
+        normalized = "".join(raw.casefold().split()).replace("-", "").replace("_", "")
+        for name, value in names.items():
+            if name.casefold() == normalized:
+                return value
+        choices = "a number or " + ", ".join(names) if names else "a number"
+        raise ValueError(f"Unknown value {raw!r} for {tag}; use {choices}.") from None
+
+
+def print_axes(font):
+    """Show actual user-space ranges and names accepted for this input font."""
+    if "fvar" not in font:
+        raise ValueError("Input font is not variable (no fvar table).")
+    for axis in font["fvar"].axes:
+        if axis.flags & 1:  # Automatic script axes are hidden from users.
+            continue
+        name = font["name"].getDebugName(axis.axisNameID) or axis.axisTag
+        print(f"\n{name} ({axis.axisTag}): {axis.minValue:g}..{axis.maxValue:g}"
+              f" (font default {axis.defaultValue:g})")
+        choices = {name: value for name, value in AXIS_VALUE_NAMES.get(axis.axisTag, {}).items()
+                   if axis.minValue <= value <= axis.maxValue}
+        if not choices:
+            print("  Numeric values only.")
+            continue
+        width = max(map(len, choices))
+        seen = {}
+        for label, value in choices.items():
+            alias = f" (alias of {seen[value]})" if value in seen else ""
+            print(f"  {label:<{width}} = {value:g}{alias}")
+            seen.setdefault(value, label)
 
 
 def walk_tables(root):
@@ -93,6 +198,11 @@ def walk_tables(root):
             stack.extend(vars(obj).values())
 
 
+def guide_instance_name(name):
+    """Use the guide's somerville-OPTICALSIZE[-WIDTH][-WEIGHT] convention."""
+    return "somerville-" + "-".join(name.strip().casefold().split())
+
+
 def named_instances(font):
     """Return display names, localized aliases, and full fvar coordinates."""
     if "fvar" not in font:
@@ -106,6 +216,10 @@ def named_instances(font):
             record.toUnicode().strip().casefold()
             for record in font["name"].names if record.nameID == name_id
         }
+        guide_name = guide_instance_name(name)
+        aliases.update((name.strip().casefold(), guide_name, guide_name.removeprefix("somerville-")))
+        if guide_name == "somerville-regular":
+            aliases.add("somerville")
         result.append((name, aliases, {**defaults, **instance.coordinates}))
     return result
 
@@ -124,31 +238,81 @@ def regular_coordinates(font):
     return instance_coordinates(font, "Regular")
 
 
-def warn_instance_mismatch(font, path, name, math_coords, italic=False):
-    """Compare stored instances before intentional command-line overrides."""
-    key = name.strip().casefold()
-    entries = named_instances(font)
-    # Italic families conventionally append Italic, with Regular -> Italic.
-    preferred = ("italic" if key == "regular" else key + " italic") if italic else key
-    matches = [entry for entry in entries if preferred in entry[1]]
-    if not matches and preferred != key:
-        matches = [entry for entry in entries if key in entry[1]]
-    if len(matches) != 1:
-        reason = "no matching instance" if not matches else "multiple matching instances"
-        detail = f"{reason} for {name!r}"
-    else:
-        label, _, coords = matches[0]
-        differences = []
-        for tag in ("wdth", "wght", "opsz"):
-            if tag not in coords or tag not in math_coords:
-                differences.append(f"{tag}: missing axis")
-            elif not math.isclose(coords[tag], math_coords[tag], rel_tol=0, abs_tol=1e-5):
-                differences.append(f"{tag}: Playfair={coords[tag]:g}, math={math_coords[tag]:g}")
-        if not differences:
-            return
-        detail = f"instance {label!r} differs from math instance {name!r}: " + "; ".join(differences)
-    print(f"Warning: {path.name}: {detail}. "
-          "Continuing with the math coordinates plus explicit axis overrides.", file=sys.stderr)
+def normalized_coordinates(font, coordinates):
+    """Use exactly the normalization used when baking the static math font."""
+    return AxisLimits(coordinates).limitAxesAndPopulateDefaults(font).normalize(font).pinnedLocation()
+
+
+def inverse_segment_map(value, segments):
+    """Invert a monotone avar1 map, choosing the first point on a plateau."""
+    points = sorted(segments.items())
+    if any(a[1] > b[1] for a, b in zip(points, points[1:])):
+        raise ValueError("Playfair axis mappings must be monotone.")
+    for (x0, y0), (x1, y1) in zip(points, points[1:]):
+        if y0 <= value <= y1:
+            return x0 if y0 == y1 else x0 + (value - y0) * (x1 - x0) / (y1 - y0)
+    raise ValueError(f"Cannot match internal text coordinate {value:g}.")
+
+
+def matching_text_coordinates(font, location, bold=False):
+    """Match design-space wdth/opsz, and wght (upright) or MGHT (bold).
+
+    Somerville and Playfair share the underlying design scales. Their user
+    coordinates can differ, notably for width, so invert each text font's avar.
+    """
+    if "fvar" not in font:
+        raise ValueError("Playfair inputs must be variable fonts.")
+    if "avar" in font and font['avar'].majorVersion != 1:
+        raise ValueError("Matching Playfair text currently requires avar v1 mappings.")
+    axes = {a.axisTag: a for a in font['fvar'].axes}
+    coordinates = {tag: a.defaultValue for tag, a in axes.items()}
+    for tag in ('wdth', 'wght', 'opsz'):
+        if tag not in axes:
+            raise ValueError(f"Playfair font is missing the {tag} axis.")
+        source = 'MGHT' if bold and tag == 'wght' else tag
+        if source not in location:
+            raise ValueError(f"Math font is missing the {source} axis.")
+        target = location[source]
+        segments = font['avar'].segments[tag] if 'avar' in font else {-1: -1, 0: 0, 1: 1}
+        normalized = inverse_segment_map(target, segments)
+        a = axes[tag]
+        span = a.defaultValue - a.minValue if normalized < 0 else a.maxValue - a.defaultValue
+        coordinates[tag] = a.defaultValue + normalized * span
+    actual = font.normalizeLocation(coordinates)
+    for tag in ('wdth', 'wght', 'opsz'):
+        source = 'MGHT' if bold and tag == 'wght' else tag
+        if abs(actual.get(tag, 0) - location[source]) > 2 / 16384:
+            raise ValueError(f"Playfair cannot match the math font's internal {source} coordinate.")
+    return coordinates
+
+
+def fontspec_contents(family, math_filename, text_coordinates, coordinates):
+    """A standard fontspec family configuration, plus deferred math setup."""
+    if any(c in family + math_filename for c in '\\{}%#[],\n\r'):
+        raise ValueError("Output names contain characters that cannot be used in a fontspec configuration.")
+    if any(c.isspace() for c in family):
+        raise ValueError("Output names for fontspec configurations must not contain whitespace.")
+    lines = [
+        '% Generated by instantiate_somerville.py.',
+        '% Keep this file, the math font, PlayfairRomanVF.ttf, and PlayfairItalicVF.ttf together.',
+        '% LuaLaTeX preamble:',
+        r'%   \usepackage{unicode-math}',
+        rf'%   \setmainfont{{{family}}}',
+        '% Math user coordinates: ' + ', '.join(f'{k}={v:g}' for k, v in coordinates.items()),
+        rf'\defaultfontfeatures[{family}]{{',
+        '  Renderer=HarfBuzz,',
+        '  Numbers=Lining,',
+    ]
+    for shape, filename in [('Upright', 'PlayfairRomanVF.ttf'), ('Italic', 'PlayfairItalicVF.ttf'),
+                            ('Bold', 'PlayfairRomanVF.ttf'), ('BoldItalic', 'PlayfairItalicVF.ttf')]:
+        axes = ','.join(f'{tag}={round(value)}' for tag, value in text_coordinates[shape].items())
+        lines.extend([f'  {shape}Font={{{filename}}},',
+                      f'  {shape}Features={{RawAxis={{{axes}}}}},'])
+    lines.extend(['}', '% Set math after fontspec has finished loading this text family.',
+                  rf'\AddToHook{{begindocument/before}}[{family}]{{%',
+                  r'  \unimathsetup{mathrm=sym,mathit=sym,mathbf=sym}%',
+                  rf'  \setmathfont{{{math_filename}}}%', '}', ''])
+    return '\n'.join(lines)
 
 
 def instantiate_math(font, coordinates):
@@ -171,8 +335,7 @@ def instantiate_math(font, coordinates):
     store = getattr(font["GDEF"].table, "VarStore", None) if "GDEF" in font else None
     if store is None:
         raise ValueError("MATH has variation references but GDEF has no variation store.")
-    limits = AxisLimits(coordinates).limitAxesAndPopulateDefaults(font)
-    location = limits.normalize(font).pinnedLocation()
+    location = normalized_coordinates(font, coordinates)
     instancer = VarStoreInstancer(store, font["fvar"].axes, location)
     for record in records:
         device = record.DeviceTable
@@ -228,7 +391,7 @@ def resolve_coordinates(font, assignments, instance_name="Regular"):
         if tag in supplied:
             raise ValueError(f"Axis {tag} was specified twice.")
         supplied.add(tag)
-        value = float(raw)
+        value = axis_value(tag, raw)
         axis = axes[tag]
         if not math.isfinite(value) or not axis.minValue <= value <= axis.maxValue:
             raise ValueError(f"{tag} must be between {axis.minValue:g} and {axis.maxValue:g}.")
@@ -256,41 +419,34 @@ def prepare_font(font, drop_base, path):
             raise ValueError(f"Cannot decode {path} {tag} table: {exc}.{hint}") from exc
 
 
-def text_coordinates(font, shared, path):
-    if "fvar" not in font:
-        raise ValueError(f"Input font is not variable: {path}")
-    axes = {axis.axisTag: axis for axis in font["fvar"].axes}
-    coords = {tag: axis.defaultValue for tag, axis in axes.items()}
-    for tag in ("wdth", "wght", "opsz"):
-        if tag not in axes or tag not in shared:
-            raise ValueError(f"Shared axis {tag} is missing from {path} or the math font.")
-        value = shared[tag]
-        axis = axes[tag]
-        if not axis.minValue <= value <= axis.maxValue:
-            raise ValueError(f"{path.name}: {tag}={value:g} is outside "
-                             f"{axis.minValue:g}..{axis.maxValue:g}.")
-        coords[tag] = value
-    return coords
-
-
 def main():
-    parser = argparse.ArgumentParser(description=__doc__,
-                                     formatter_class=argparse.RawDescriptionHelpFormatter)
+    description, _, details = __doc__.strip().partition("\n\n")
+    parser = argparse.ArgumentParser(
+        description=description,
+        epilog=details,
+        usage="%(prog)s [OPTIONS] [AXIS=VALUE ...]",
+        formatter_class=lambda prog: argparse.RawDescriptionHelpFormatter(
+            prog, width=88, max_help_position=30),
+    )
     parser.add_argument("axes", nargs="*", metavar="AXIS=VALUE",
-                        help='Override by tag or name, e.g. wght=700 or "Math Weight=900".')
-    parser.add_argument("-i", "--input", type=Path, default=Path("SomervilleMathVF.ttf"),
-                        help="Input math font; Playfair variable fonts must be alongside it (default: %(default)s).")
-    parser.add_argument("-o", "--output", type=Path,
-                        help="Explicit prefix: NAMERoman.ttf, NAMEItalic.ttf, NAMEMath.ttf. Default with --instances: PlayfairRomanSTYLE, PlayfairItalicSTYLE, SomervilleMathSTYLE; otherwise Somerville.")
+                        help='Override an axis by tag or name, using a number or label (e.g. wght=700 or "Arrow Head"=Large).')
+    parser.add_argument("-i", "--input", type=Path, metavar="FONT", default=Path("SomervilleMathVF.ttf"),
+                        help="Input variable math font (default: %(default)s).")
+    parser.add_argument("-o", "--output", type=Path, metavar="NAME",
+                        help="Output name: SomervilleMathNAME.ttf and SomervilleNAME.fontspec. Required for axis overrides or when no instance selection is given.")
+    parser.add_argument("--playfair-dir", type=Path, metavar="DIR",
+                        help="Read the original Playfair variable fonts from DIR (default: beside the input math font).")
     parser.add_argument("--output-dir", type=Path, metavar="DIR",
-                        help="Save fonts in DIR, creating it if needed. With this option, -o must be a filename prefix without a directory.")
+                        help="Save font/configuration pairs in DIR, creating it if needed. With this option, -o must have no directory component.")
     selection = parser.add_mutually_exclusive_group()
+    selection.add_argument("--list-axes", action="store_true",
+                           help="List visible axis ranges and accepted value names, then exit without writing fonts.")
     selection.add_argument("--list-instances", action="store_true",
-                           help="List fvar instance names only, then exit without writing fonts.")
-    selection.add_argument("--instances", nargs="+", metavar="NAME",
-                           help="One or more named fvar instances (case-insensitive; default: Regular). Axis overrides apply to every instance.")
+                           help="List guide-style instance names only, then exit without writing fonts.")
+    selection.add_argument("--instance", nargs="+", metavar="NAME",
+                           help="Select named instances (case-insensitive). Axis overrides apply to every instance.")
     selection.add_argument("--allinstances", action="store_true",
-                           help="Export every named fvar instance, using style-specific filenames. Axis overrides apply to all instances.")
+                           help="Export every named fvar instance. Uses standard filenames unless -o is given; axis overrides require -o.")
     parser.add_argument("--validate", action="store_true",
                         help="Reopen and structurally validate each saved font before publishing it (default: off).")
     parser.add_argument("--overwrite", action="store_true",
@@ -302,13 +458,20 @@ def main():
                               help="Preserve the BASE table; it must be valid.")
     args = parser.parse_args()
     # nargs='+' also consumes trailing AXIS=VALUE tokens; retain that familiar syntax.
-    if args.instances is not None:
-        args.axes.extend(item for item in args.instances if "=" in item)
-        args.instances = [item for item in args.instances if "=" not in item]
-        if not args.instances:
-            parser.error("--instances requires at least one instance name")
+    if args.instance is not None:
+        args.axes.extend(item for item in args.instance if "=" in item)
+        args.instance = [item for item in args.instance if "=" not in item]
+        if not args.instance:
+            parser.error("--instance requires at least one instance name")
     staged = []
     try:
+        if args.list_axes:
+            if args.axes:
+                raise ValueError("Axis assignments cannot be combined with --list-axes.")
+            with TTFont(args.input, lazy=True) as font:
+                print(f"{args.input}: axis ranges (user coordinates)")
+                print_axes(font)
+            return
         if args.list_instances:
             if args.axes:
                 raise ValueError("Axis assignments cannot be combined with --list-instances.")
@@ -316,91 +479,107 @@ def main():
                 entries = named_instances(font)
                 print(f"{args.input}: {len(entries)} named instances (fvar)")
                 for name, _, _ in entries:
-                    print(name)
+                    print(guide_instance_name(name))
             return
+        if args.output is None and (args.axes or (args.instance is None and not args.allinstances)):
+            raise ValueError("-o is required unless --instance or --allinstances is supplied without axis overrides.")
         if args.output is not None and args.output.suffix.lower() == ".ttf":
-            raise ValueError("-o takes a prefix, not a .ttf filename; use -o Somerville.")
+            raise ValueError("-o takes a name, not a .ttf filename; use -o Custom.")
         if args.output_dir is not None and args.output is not None and args.output.parent != Path("."):
-            raise ValueError("With --output-dir, -o must be a filename prefix without a directory.")
-        inputs = [args.input.parent / "PlayfairRomanVF.ttf",
-                  args.input.parent / "PlayfairItalicVF.ttf", args.input]
-        requests = args.instances if args.instances is not None else ["Regular"]
+            raise ValueError("With --output-dir, -o must be a name without a directory.")
+        requests = args.instance if args.instance is not None else ["somerville-regular"]
+        playfair_dir = args.playfair_dir if args.playfair_dir is not None else args.input.parent
+        text_paths = {'Roman': playfair_dir / 'PlayfairRomanVF.ttf',
+                      'Italic': playfair_dir / 'PlayfairItalicVF.ttf'}
         jobs = []
-        with TTFont(args.input, lazy=True) as font:
+        with ExitStack() as stack:
+            font = stack.enter_context(TTFont(args.input, lazy=True))
+            text_fonts = {key: stack.enter_context(TTFont(path, lazy=True)) for key, path in text_paths.items()}
             entries = named_instances(font)
             if args.allinstances:
                 requests = [name for name, _, _ in entries]
                 if not requests:
                     raise ValueError("Input font has no named fvar instances.")
             for requested in requests:
-                shared = resolve_coordinates(font, args.axes, requested)
+                coordinates = resolve_coordinates(font, args.axes, requested)
                 canonical = next(name for name, aliases, _ in entries
                                  if requested.strip().casefold() in aliases)
                 style = "".join(c for c in canonical if c.isalnum())
                 if not style:
                     raise ValueError("Instance name cannot form a filename.")
-                if args.output is None and (args.instances is not None or args.allinstances):
-                    outputs = [Path(f"{family}{style}.ttf")
-                               for family in ("PlayfairRoman", "PlayfairItalic", "SomervilleMath")]
+                if args.output is None:
+                    output = Path(f"SomervilleMath{style}.ttf")
+                    family = f"Somerville{style}"
                 else:
-                    prefix = args.output if args.output is not None else Path("Somerville")
+                    prefix = args.output
                     suffix_style = style if len(requests) > 1 else ""
-                    outputs = [prefix.with_name(prefix.name + suffix + suffix_style + ".ttf")
-                               for suffix in ("Roman", "Italic", "Math")]
+                    family = 'Somerville' + prefix.name + suffix_style
+                    output = prefix.with_name('SomervilleMath' + prefix.name + suffix_style + '.ttf')
                 if args.output_dir is not None:
-                    outputs = [args.output_dir / output.name for output in outputs]
-                jobs.append((canonical, shared, outputs))
-        all_outputs = [output for _, _, outputs in jobs for output in outputs]
+                    output = args.output_dir / output.name
+                setup = output.with_name(family + '.fontspec')
+                location = normalized_coordinates(font, coordinates)
+                text_axes = {
+                    'Upright': matching_text_coordinates(text_fonts['Roman'], location),
+                    'Italic': matching_text_coordinates(text_fonts['Italic'], location),
+                    'Bold': matching_text_coordinates(text_fonts['Roman'], location, bold=True),
+                    'BoldItalic': matching_text_coordinates(text_fonts['Italic'], location, bold=True),
+                }
+                contents = fontspec_contents(family, output.name, text_axes, coordinates)
+                jobs.append((canonical, coordinates, output, setup, contents))
+        all_outputs = [path for _, _, output, setup, _ in jobs for path in (output, setup)]
         if len({str(p.resolve()).casefold() for p in all_outputs}) != len(all_outputs):
             raise ValueError("Duplicate instances or colliding output filenames in this batch.")
-        input_paths = {path.resolve() for path in inputs}
         for output in all_outputs:
-            if output.resolve() in input_paths or any(
-                output.exists() and source.exists() and os.path.samefile(output, source)
-                for source in inputs
-            ):
+            inputs = [args.input, *text_paths.values()]
+            if any(output.resolve() == source.resolve() or (
+                output.exists() and os.path.samefile(output, source)
+            ) for source in inputs):
                 raise ValueError(f"Output would replace an input font: {output}")
             if os.path.lexists(output) and not args.overwrite:
                 raise ValueError(f"Output already exists: {output}. Use --overwrite to replace it.")
         if args.output_dir is not None:
             args.output_dir.mkdir(parents=True, exist_ok=True)
-        for instance_name, shared, outputs in jobs:
-            with ExitStack() as stack:
-                fonts = [stack.enter_context(TTFont(path)) for path in inputs]
-                for font, path in zip(fonts, inputs):
-                    prepare_font(font, args.drop_base, path)
-                stored = instance_coordinates(fonts[2], instance_name)
-                for index in (0, 1):
-                    warn_instance_mismatch(fonts[index], inputs[index], instance_name,
-                                           stored, italic=index == 1)
-                print(f"Selected instance: {instance_name} (explicit axis overrides applied below)")
-                coordinates = [text_coordinates(fonts[0], shared, inputs[0]),
-                               text_coordinates(fonts[1], shared, inputs[1]), shared]
-                for font, coords, source, output in zip(fonts, coordinates, inputs, outputs):
-                    print(f"{source.name}: " + " ".join(
-                        f"{tag}={value:g}" for tag, value in coords.items()))
-                    is_math = output == outputs[2]
-                    count = instantiate_math(font, coords) if is_math or "MATH" in font else 0
-                    instance = instantiateVariableFont(font, coords, inplace=True)
-                    validate = validate_static_math if is_math or "MATH" in font else validate_static
-                    with tempfile.NamedTemporaryFile(dir=output.parent, suffix=".ttf", delete=False) as tmp:
-                        temporary = Path(tmp.name)
-                    staged.append((temporary, output))
-                    instance.save(temporary)
-                    if args.validate:
-                        with TTFont(temporary) as check:
-                            validate(check)
-                        print(f"Validated: {output}")
-                    if is_math:
-                        print(f"Resolved {count:,} MATH variation references.")
-                    if args.overwrite:
-                        os.replace(temporary, output)
-                    else:
-                        # Never replace a destination created while we were building.
-                        os.link(temporary, output)
-                        temporary.unlink()
-                    print(f"Saved: {output}")
-                    staged.pop()
+        for instance_name, coordinates, output, setup, contents in jobs:
+            with TTFont(args.input) as font:
+                prepare_font(font, args.drop_base, args.input)
+                print(f"Selected instance: {guide_instance_name(instance_name)} (explicit axis overrides applied below)")
+                print(f"{args.input.name}: " + " ".join(
+                    f"{tag}={value:g}" for tag, value in coordinates.items()))
+                count = instantiate_math(font, coordinates)
+                instance = instantiateVariableFont(font, coordinates, inplace=True)
+                with tempfile.NamedTemporaryFile(dir=output.parent, suffix=".ttf", delete=False) as tmp:
+                    temporary = Path(tmp.name)
+                staged.append((temporary, output))
+                instance.save(temporary)
+                with tempfile.NamedTemporaryFile(dir=setup.parent, suffix='.fontspec',
+                                                 mode='w', encoding='utf-8', delete=False) as tmp:
+                    temporary_setup = Path(tmp.name)
+                    staged.append((temporary_setup, setup))
+                    tmp.write(contents)
+                if args.validate:
+                    with TTFont(temporary) as check:
+                        validate_static_math(check)
+                    print(f"Validated: {output}")
+                print(f"Resolved {count:,} MATH variation references.")
+                published = []
+                try:
+                    for temporary_path, destination in ((temporary, output), (temporary_setup, setup)):
+                        if args.overwrite:
+                            os.replace(temporary_path, destination)
+                        else:
+                            # Never replace a destination created while building.
+                            os.link(temporary_path, destination)
+                            published.append(destination)
+                            temporary_path.unlink()
+                except OSError:
+                    # Roll back a newly published pair if its second file failed.
+                    for destination in published:
+                        destination.unlink(missing_ok=True)
+                    raise
+                print(f"Saved: {output}")
+                print(f"Saved: {setup}")
+                del staged[-2:]
     except (OSError, ValueError) as exc:
         parser.exit(1, f"Error: {exc}\n")
     finally:
