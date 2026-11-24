@@ -1,0 +1,1052 @@
+local utilitydata = { }
+
+utilitydata.comment={
+ ["escape"]="[===[ ... ]===]",
+ ["file"]="somerville-arrows-axis-check",
+ ["format"]="cont-en",
+ ["stamp"]="2026.10.01 18:42",
+ ["version"]=0x1.547ae147ae148p+0,
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.variables then utilitydata.job.variables = { } end
+
+utilitydata.job.variables.checksums={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.variables then utilitydata.job.variables = { } end
+
+utilitydata.job.variables.collected={
+ ["macros"]={},
+ ["randomseed"]=0x1.ef86d9c7d4d0ep-1,
+ ["sectionblockorder"]={},
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.structure then utilitydata.job.structure = { } end
+
+utilitydata.job.structure.collected={
+ ["branches"]={},
+ ["name"]="",
+ ["type"]="text",
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.positions then utilitydata.job.positions = { } end
+
+utilitydata.job.positions.collected={
+ ["shared"]={
+  ["x_h_d"]={},
+  ["x_h_d_hs"]={},
+  ["x_y_w_h"]={},
+  ["y_w_h_d"]={},
+ },
+ ["user"]={},
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.datasets then utilitydata.job.datasets = { } end
+
+utilitydata.job.datasets.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.pagestates then utilitydata.job.pagestates = { } end
+
+utilitydata.job.pagestates.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.specials then utilitydata.structures.specials = { } end
+
+utilitydata.structures.specials.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.sections then utilitydata.structures.sections = { } end
+
+utilitydata.structures.sections.collected={
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Characters",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=1,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=2,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=3,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=4,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=5,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=6,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=7,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Characters",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=8,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=9,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=10,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=11,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=12,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=13,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=14,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Characters",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=15,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=16,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=17,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversion"]="Romannumerals",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=18,
+  ["segments"]="current",
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.counters then utilitydata.structures.counters = { } end
+
+utilitydata.structures.counters.collected={
+ ["chemical"]={
+  { 0 },
+ },
+ ["combination"]={
+  { 0 },
+ },
+ ["endnote"]={
+  { 0 },
+ },
+ ["figure"]={
+  { 0 },
+ },
+ ["float"]={
+  { 0 },
+ },
+ ["footnote"]={
+  { 1 },
+ },
+ ["formula"]={
+  { 0 },
+ },
+ ["graphic"]={
+  { 0 },
+ },
+ ["intermezzo"]={
+  { 0 },
+ },
+ ["itemgroup:itemize"]={
+  { 0, 4, 3 },
+ },
+ ["itemgroup:itemize:note"]={
+  { 0 },
+ },
+ ["linenote"]={
+  { 0 },
+ },
+ ["mathnote"]={
+  { 0 },
+ },
+ ["paragraph"]={
+  { 0 },
+ },
+ ["publicationnote"]={
+  { 0 },
+ },
+ ["realpage"]={
+  { 15 },
+ },
+ ["subpage"]={
+  { 15 },
+ },
+ ["table"]={
+  { 0 },
+ },
+ ["textnote:note"]={
+  { 0 },
+ },
+ ["userpage"]={
+  { 14 },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
+
+utilitydata.structures.lists.collected={
+ {
+  ["metadata"]=19,
+  ["numberdata"]=20,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=1,
+   ["realpage"]=3,
+   ["section"]=1,
+  },
+  ["titledata"]={
+   ["title"]="Variation",
+  },
+ },
+ {
+  ["metadata"]=21,
+  ["numberdata"]=22,
+  ["prefixdata"]=23,
+  ["references"]={
+   ["block"]="bodypart",
+   ["delay"]="page",
+   ["internal"]=2,
+   ["order"]=1,
+   ["realpage"]=3,
+   ["section"]=1,
+  },
+  ["titledata"]={
+   ["title"]="It is noted that variable mathematics fonts is not an Opentype standard",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=25,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=3,
+   ["realpage"]=4,
+   ["section"]=2,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Width",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=26,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=4,
+   ["realpage"]=5,
+   ["section"]=3,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Weight",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=27,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=5,
+   ["realpage"]=7,
+   ["section"]=4,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Optical Size",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=28,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=6,
+   ["realpage"]=9,
+   ["section"]=5,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Integrals",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=29,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=7,
+   ["realpage"]=10,
+   ["section"]=6,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Arrows",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=30,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=8,
+   ["realpage"]=10,
+   ["section"]=7,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Mathematics Weight",
+  },
+ },
+ {
+  ["metadata"]=19,
+  ["numberdata"]=31,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=9,
+   ["realpage"]=11,
+   ["section"]=8,
+  },
+  ["titledata"]={
+   ["title"]="Symbols",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=32,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=10,
+   ["realpage"]=11,
+   ["section"]=9,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Big Operators",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=33,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=11,
+   ["realpage"]=11,
+   ["section"]=10,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Serif Alternates",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=34,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=12,
+   ["realpage"]=11,
+   ["section"]=11,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="White Rim Alternates",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=35,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=13,
+   ["realpage"]=11,
+   ["section"]=12,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Radicals",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=36,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=14,
+   ["realpage"]=12,
+   ["section"]=13,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Accents",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=37,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=15,
+   ["realpage"]=12,
+   ["section"]=14,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Mathematical Alphabets",
+  },
+ },
+ {
+  ["metadata"]=19,
+  ["numberdata"]=38,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=16,
+   ["realpage"]=13,
+   ["section"]=15,
+  },
+  ["titledata"]={
+   ["title"]="Usage",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=39,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=17,
+   ["realpage"]=13,
+   ["section"]=16,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Instances in ConTeXt",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=40,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=18,
+   ["realpage"]=13,
+   ["section"]=17,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Custom Variation in ConTeXt",
+  },
+ },
+ {
+  ["metadata"]=24,
+  ["numberdata"]=41,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=19,
+   ["realpage"]=14,
+   ["section"]=18,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="{Other Typesetting Systems}",
+  },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.pages then utilitydata.structures.pages = { } end
+
+utilitydata.structures.pages.collected={
+ {
+  ["block"]="bodypart",
+  ["number"]=1,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="stop",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=1,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=2,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=3,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=4,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=5,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=6,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=7,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=8,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=9,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=10,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=11,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=12,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=13,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=14,
+  ["numberdata"]=42,
+  ["prefixdata"]=43,
+  ["state"]="start",
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.references then utilitydata.structures.references = { } end
+
+utilitydata.structures.references.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.references then utilitydata.structures.references = { } end
+
+utilitydata.structures.references.referred={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.parwrappers then utilitydata.job.parwrappers = { } end
+
+utilitydata.job.parwrappers.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.objects then utilitydata.job.objects = { } end
+
+utilitydata.job.objects.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.itemgroups then utilitydata.structures.itemgroups = { } end
+
+utilitydata.structures.itemgroups.collected={
+ ["itemize"]={
+  {
+   { 4, 0 },
+  },
+  {
+   { 3, 0 },
+  },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.synonyms then utilitydata.structures.synonyms = { } end
+
+utilitydata.structures.synonyms.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.registers then utilitydata.structures.registers = { } end
+
+utilitydata.structures.registers.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.blocks then utilitydata.structures.blocks = { } end
+
+utilitydata.structures.blocks.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.linkedlists then utilitydata.job.linkedlists = { } end
+
+utilitydata.job.linkedlists.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.files then utilitydata.job.files = { } end
+
+utilitydata.job.files.collected={
+}
+
+if not utilitydata.publications then utilitydata.publications = { } end
+
+utilitydata.publications.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.meshedup then utilitydata.job.meshedup = { } end
+
+utilitydata.job.meshedup.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.fileobjreferences then utilitydata.job.fileobjreferences = { } end
+
+utilitydata.job.fileobjreferences.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.embedded then utilitydata.job.embedded = { } end
+
+utilitydata.job.embedded.collected={
+}
+
+utilitydata.job.packed={
+ ["index"]={
+  { 1 },
+  { 1, 0, 1 },
+  { 1, 0, 2 },
+  { 1, 0, 3 },
+  { 1, 0, 4 },
+  { 1, 0, 5 },
+  { 1, 0, 6 },
+  { 2 },
+  { 2, 0, 1 },
+  { 2, 0, 2 },
+  { 2, 0, 3 },
+  { 2, 0, 4 },
+  { 2, 0, 5 },
+  { 2, 0, 6 },
+  { 3 },
+  { 3, 0, 1 },
+  { 3, 0, 2 },
+  { 3, 0, 3 },
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
+   ["increment"]="yes",
+   ["kind"]="section",
+   ["level"]=1,
+   ["name"]="part",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Characters",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=1,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["catcodes"]=9,
+   ["detail"]="footnote",
+   ["kind"]="construction",
+   ["level"]=1,
+   ["name"]="footnote",
+  },
+  {
+   ["conversionset"]="number",
+   ["numbers"]=1,
+  },
+  {
+   ["connector"]=".",
+   ["prefix"]="no",
+   ["segments"]="2:2",
+  },
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
+   ["increment"]="yes",
+   ["kind"]="section",
+   ["level"]=3,
+   ["name"]="section",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=2,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=3,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=4,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=5,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=6,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=7,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Characters",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=8,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=9,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=10,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=11,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=12,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=13,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=14,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Characters",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=15,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=16,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=17,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversion"]="Romannumerals",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=18,
+   ["segments"]="current",
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["conversionset"]="pagenumber",
+  },
+  {
+   ["connector"]="–",
+   ["prefix"]="no",
+   ["set"]="part",
+  },
+ },
+ ["keys"]={
+  ["directives"]=true,
+  ["metadata"]=true,
+  ["numberdata"]=true,
+  ["numbers"]=true,
+  ["ownnumbers"]=true,
+  ["pagedata"]=true,
+  ["prefixdata"]=true,
+  ["processors"]=true,
+  ["sectiondata"]=true,
+  ["specification"]=true,
+ },
+ ["skip"]={
+  ["datasets"]=true,
+  ["positions"]=true,
+  ["userdata"]=true,
+ },
+ ["version"]=0x1.051eb851eb852p+0,
+}
+
+return utilitydata

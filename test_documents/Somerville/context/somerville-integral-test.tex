@@ -1,0 +1,197 @@
+% !TEX program = context
+% !TEX root = somerville-integral-test.tex
+
+%\definepapersize[somerville-wide][width=315mm,height=297mm]
+%\setuppapersize[somerville-wide][somerville-wide]
+\definefontfeature[mathextra][{ss15=no}]
+
+\input type-imp-somerville.mkxl
+
+% Override Integral Slant in every named math instance in this test only.
+% Preserve each instance's other axes and math goodies (including italic corrections).
+\startluacode
+for name, feature in table.sortedhash(fonts.specifiers.contextsetups) do
+    if name:match("^somerville.*%-math%-axes$") and type(feature.axis) == "string" then
+        local axes, count = feature.axis:gsub("[Ii][Nn][Ss][Ll]=[^,]+", "INSL=100")
+        assert(count == 1, "Missing Integral Slant coordinate in " .. name)
+        context.definefontfeature({ name }, { axis = axes, goodies = feature.goodies })
+    end
+end
+\stopluacode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupbodyfont[somerville-regular]
+\setupinteraction[state=start,color=,contrastcolor=,style=]
+
+\startluacode
+local references = structures.references
+references.specials.lettertestview = function(var)
+    local entries = references.collected[""] or { }
+    local entry = entries[var.operation]
+    local page = entry and entry.references.realpage
+    if page then
+        return lpdf.dictionary {
+            S = lpdf.constant("GoTo"),
+            D = lpdf.array {
+                lpdf.reference(lpdf.pagereference(page)),
+                lpdf.constant("XYZ"), lpdf.null(), lpdf.null(), lpdf.null(),
+            },
+        }
+    end
+end
+\stopluacode
+
+% Weight rows, in display order. Edit this comma-separated list.
+% Available: SemiLight, Regular, Medium, SemiBold, Bold, ExtraBold, Black.
+\def\LetterTestWeights{SemiLight,Regular,Bold,Black}
+%\def\LetterTestWeights{SemiLight}
+
+% Optical-size tables, in display order. Edit this comma-separated list.
+% Available: micro, minuscule, miniature, caption, regular, subheading,
+% trumpet, headline, display, titling, hairline, needlepoint.
+\def\LetterTestOpticalSizes{micro,regular,titling,needlepoint}
+%\def\LetterTestOpticalSizes{micro}
+
+% Internal coordinates for the table labels; changing the list needs no edits here.
+\getparameters[LetterTestOpticalCoordinate]
+  [micro=5,minuscule=200,miniature=325,caption=400,regular=550,
+   subheading=640,trumpet=700,headline=800,display=900,titling=980,
+   hairline=1020,needlepoint=1200]
+
+% Derive navigation from the selected lists, including their endpoints.
+\unexpanded\def\LetterTestRegisterNeighbor#1{%
+  \setxvalue{LetterTestPrevious\testnavigationprefix:#1}{\testprevious}%
+  \setvalue{LetterTestNext\testnavigationprefix:#1}{}%
+  \ifx\testprevious\empty\else
+    \setvalue{LetterTestNext\testnavigationprefix:\testprevious}{#1}%
+  \fi
+  \edef\testprevious{#1}%
+}
+\def\testnavigationprefix{Weight}
+\let\testprevious\empty
+\processcommacommand[\LetterTestWeights]\LetterTestRegisterNeighbor
+\def\testnavigationprefix{Optical}
+\let\testprevious\empty
+\processcommacommand[\LetterTestOpticalSizes]\LetterTestRegisterNeighbor
+
+% Draw arrows independently of the test font's glyph coverage.
+\startuniqueMPgraphic{LetterTestUpArrow}
+  drawarrow (0,0)--(0,5pt) withpen pencircle scaled .35pt;
+  setbounds currentpicture to unitsquare xscaled 4pt yscaled 6pt
+    shifted (-2pt,-.5pt);
+\stopuniqueMPgraphic
+\startuniqueMPgraphic{LetterTestDownArrow}
+  drawarrow (0,5pt)--(0,0) withpen pencircle scaled .35pt;
+  setbounds currentpicture to unitsquare xscaled 4pt yscaled 6pt
+    shifted (-2pt,-.5pt);
+\stopuniqueMPgraphic
+
+\unexpanded\def\LetterTestNavigation#1#2#3{%
+  \edef\testnext{\getvalue{LetterTestNext#1:#2}}%
+  \edef\testprevious{\getvalue{LetterTestPrevious#1:#2}}%
+  \ifx\testnext\empty\else
+    \doifelse{#1}{Weight}
+      {\edef\testdestination{lettertest:\testopticalsize:\testnext}}
+      {\edef\testdestination{lettertest:\testnext:\testweight}}%
+    \goto{\uniqueMPgraphic{LetterTestUpArrow}}[lettertestview(\testdestination)]\hskip.4em\relax%
+  \fi
+  #3%
+  \ifx\testprevious\empty\else
+    \doifelse{#1}{Weight}
+      {\edef\testdestination{lettertest:\testopticalsize:\testprevious}}
+      {\edef\testdestination{lettertest:\testprevious:\testweight}}%
+    \hskip.4em\goto{\uniqueMPgraphic{LetterTestDownArrow}}[lettertestview(\testdestination)]%
+  \fi
+}
+
+\unexpanded\def\LetterTestCell#1{%
+  \bTD
+    \switchtobodyfont[#1]%
+    \getbuffer[lettertest]%
+  \eTD
+}
+
+\unexpanded\def\LetterTestLabel#1{%
+  \bTD
+    \switchtobodyfont[somerville-regular,6pt]%
+    #1%
+  \eTD
+}
+
+\unexpanded\def\LetterTestWeightRow#1{%
+  \lowercase{\def\testweightsuffix{-#1}}%
+  \doif{#1}{Regular}{\let\testweightsuffix\empty}%
+  \bTR
+    \LetterTestLabel{\LetterTestNavigation{Weight}{#1}{#1}}%
+    \expanded{\LetterTestCell{somerville-\testopticalsize-semicondensed\testweightsuffix}}%
+    \expanded{\LetterTestCell{somerville-\testopticalsize\testweightsuffix}}%
+    \expanded{\LetterTestCell{somerville-\testopticalsize-semiexpanded\testweightsuffix}}%
+  \eTR
+}
+
+% One weight per page keeps each optical-size header's links tied to that weight.
+\unexpanded\def\LetterTestWeightTable#1{%
+  \def\testweight{#1}%
+  \pagereference[lettertest:\testopticalsize:#1]%
+  \getbuffer[lettertest-table]%
+%  \page
+}
+
+\unexpanded\def\LetterTestOpticalTable#1#2{%
+  \begingroup
+  \def\testopticalsize{#1}%
+  \def\testopticalcoordinate{#2}%
+  \processcommacommand[\LetterTestWeights]\LetterTestWeightTable
+  \endgroup
+}
+
+\unexpanded\def\LetterTestNamedOpticalTable#1{%
+  \LetterTestOpticalTable{#1}{\getvalue{LetterTestOpticalCoordinate#1}}%
+}
+
+\startbuffer[lettertest]
+\dm{ \int[size=0,bottom={\rm H},top={\rm H}] \int[size=10pt,bottom={\rm H},top={\rm H}] \int[size=80pt,bottom={\rm H},top={\rm H}]}
+\stopbuffer
+
+\startbuffer[lettertest-table]
+% Rows follow \LetterTestWeights above.
+% Columns: SemiCondensed, Regular, SemiExpanded.
+\bTABLE[frame=off,align=middle,offset=4pt,split=repeat]
+  \bTABLEhead
+  \bTR
+    \LetterTestLabel{\LetterTestNavigation{Optical}{\testopticalsize}{\testopticalsize}%
+      \crlf internal opsz: \testopticalcoordinate}
+    \LetterTestLabel{SemiCondensed}
+    \LetterTestLabel{Regular}
+    \LetterTestLabel{SemiExpanded}
+  \eTR
+  \eTABLEhead
+  \bTABLEbody
+  \expanded{\LetterTestWeightRow{\testweight}}%
+  \eTABLEbody
+\eTABLE
+\stopbuffer
+
+\startbuffer[lettertables]
+\processcommacommand[\LetterTestOpticalSizes]\LetterTestNamedOpticalTable
+\stopbuffer
+
+% Optical-size comparison; edit \LetterTestOpticalSizes above.
+\startbuffer[optical-comparison]
+\begingroup
+% Keep the same typesetting size across all optical instances.
+\switchtobodyfont[somerville-regular,8pt]
+\doloopoverlist{s}{
+\edef\testletter{\recursestring}
+\getbuffer[lettertables]
+\page
+}
+\endgroup
+\stopbuffer
+
+\starttext
+\getbuffer[optical-comparison]
+\stoptext
+

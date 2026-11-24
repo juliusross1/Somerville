@@ -1,0 +1,115 @@
+% !TEX program = context
+% !TEX root = somerville-naryunion-sizes.tex
+
+% Allow the specimen to use the reduced big-operator export.
+\definefontfeature[mathematics][mathematics][mathexpansion=no]
+\definefontfeature[math][math][mathexpansion=no]
+\definefontfeature[math-text][math-text][mathexpansion=no]
+\definefontfeature[math-script][math-script][mathexpansion=no]
+\definefontfeature[math-scriptscript][math-scriptscript][mathexpansion=no]
+
+\input type-imp-somerville.mkxl
+
+% Exported user coordinates for the Agate SemiCondensed Upright master.
+\defineSomervilleAxisTypeface{somerville-agate-proof}
+  {wdth=88,wght=900,MGHT=0,opsz=5,STYA=5,STYB=5,ARLN=200,ARHD=100,INSL=0}
+  {wdth=88,wght=900,opsz=5}
+\setupbodyfont[somerville-agate-proof,18pt]
+\setuppapersize[A4]
+\setuplayout[backspace=24mm,topspace=22mm,width=middle,height=middle,header=0pt,footer=0pt]
+\setuppagenumbering[location=none]
+
+\definefont[NaryUnionLabel][Serif at 10pt]
+\definefont[NaryUnionTitle][Serif at 25pt]
+\definefont[NaryUnionIndexFont][Serif at 5pt]
+\definecolor[NaryUnionIndexColor][s=0.75]
+\unexpanded\def\NaryUnionNumber#1{%
+  {\NaryUnionIndexFont\color[NaryUnionIndexColor]{#1}}%
+}
+
+% ConTeXt numbers the base glyph as 1; the sample indices are 0–20.
+\unexpanded\def\NaryUnionSample#1{%
+  \vbox{%
+    \offinterlineskip
+    \hbox to \NaryUnionColumnWidth{\hss
+      \m{\textstyle\Umathchar 0 0
+        \getmathvariant\numexpr#1+1\relax
+        "22C3\relax}%
+      \hss}%
+    \vskip 0.7mm
+    \hbox to \NaryUnionColumnWidth{\hss\NaryUnionNumber{#1}\hss}%
+  }%
+}
+
+\unexpanded\def\NaryUnionColumn#1#2{%
+  \bTD
+    \vbox{%
+      \offinterlineskip
+      \def\NaryUnionColumnWidth{#1}%
+      \def\NaryUnionGap{}%
+      \processcommalist[#2]\NaryUnionStackItem
+    }%
+  \eTD
+}
+
+\unexpanded\def\NaryUnionStackItem#1{%
+  \NaryUnionGap
+  \NaryUnionSample{#1}%
+  \def\NaryUnionGap{\vskip 0.7mm}%
+}
+
+\starttext
+\midaligned{\NaryUnionTitle N-ary union}
+\blank[small]
+\midaligned{\NaryUnionLabel Somerville Agate SemiCondensed}
+\blank[big]
+
+\startalignment[middle]
+\bTABLE[frame=off,align={middle,lohi},offset=0pt,distance=0.5mm]
+  \bTR
+    \NaryUnionColumn{15mm}{0,13}
+    \NaryUnionColumn{21mm}{20,1}
+    \NaryUnionColumn{15mm}{12,1}
+    \NaryUnionColumn{20mm}{2,18}
+    \NaryUnionColumn{15mm}{2,11}
+    \NaryUnionColumn{19mm}{16,0}
+  \eTR
+\eTABLE
+\blank[1mm]
+\bTABLE[frame=off,align={middle,lohi},offset=0pt,distance=0.5mm]
+  \bTR
+    \NaryUnionColumn{18mm}{1,15}
+    \NaryUnionColumn{13mm}{10,3}
+    \NaryUnionColumn{19mm}{17,0}
+    \NaryUnionColumn{12mm}{4,9}
+    \NaryUnionColumn{20mm}{2,19}
+    \NaryUnionColumn{11mm}{8,5}
+    \NaryUnionColumn{17mm}{14,1}
+    \NaryUnionColumn{11mm}{6,7}
+  \eTR
+\eTABLE
+\stopalignment
+
+\startbuffer[naryunion-prose]
+\startalignment[flushleft,verytolerant]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+\stopalignment
+\stopbuffer
+
+\blank[big]
+\doloopoverlist{0,1,2,3,4,5,8,10,15,20}{%
+  \edef\NaryUnionSize{\recursestring}%
+  \getbuffer[naryunion-prose]\par
+  \startformula
+    \dorecurse{\ifnum\NaryUnionSize>10 3\else 5\fi}{%
+      \ifnum\recurselevel>1 \thinspace\fi
+      {\rm ABC} \Umathchar 0 0 \getmathvariant\numexpr\NaryUnionSize+1\relax
+        "22C3\relax
+    }%
+    \quad\hbox{\NaryUnionNumber{\NaryUnionSize}}%
+  \stopformula
+}
+
+\stoptext

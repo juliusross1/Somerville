@@ -4,15 +4,14 @@ utilitydata.comment={
  ["escape"]="[===[ ... ]===]",
  ["file"]="somerville-letter-test",
  ["format"]="cont-en",
- ["stamp"]="2026.10.01 18:42",
+ ["stamp"]="2026.10.31 00:52",
  ["version"]=0x1.547ae147ae148p+0,
 }
 
 if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.variables then utilitydata.job.variables = { } end
 
-utilitydata.job.variables.checksums={
-}
+utilitydata.job.variables.checksums={}
 
 if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.variables then utilitydata.job.variables = { } end
@@ -42,32 +41,27 @@ utilitydata.job.positions.collected={
   ["x_y_w_h"]={},
   ["y_w_h_d"]={},
  },
- ["user"]={},
 }
 
 if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.datasets then utilitydata.job.datasets = { } end
 
-utilitydata.job.datasets.collected={
-}
+utilitydata.job.datasets.collected={}
 
 if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.pagestates then utilitydata.job.pagestates = { } end
 
-utilitydata.job.pagestates.collected={
-}
+utilitydata.job.pagestates.collected={}
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.specials then utilitydata.structures.specials = { } end
 
-utilitydata.structures.specials.collected={
-}
+utilitydata.structures.specials.collected={}
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.sections then utilitydata.structures.sections = { } end
 
-utilitydata.structures.sections.collected={
-}
+utilitydata.structures.sections.collected={}
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.counters then utilitydata.structures.counters = { } end
@@ -119,10 +113,10 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["realpage"]={
-  { 4 },
+  { 12 },
  },
  ["subpage"]={
-  { 4 },
+  { 12 },
  },
  ["table"]={
   { 0 },
@@ -131,15 +125,14 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["userpage"]={
-  { 4 },
+  { 12 },
  },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
 
-utilitydata.structures.lists.collected={
-}
+utilitydata.structures.lists.collected={}
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.pages then utilitydata.structures.pages = { } end
@@ -173,90 +166,282 @@ utilitydata.structures.pages.collected={
   ["prefixdata"]=2,
   ["state"]="start",
  },
+ {
+  ["block"]="bodypart",
+  ["number"]=5,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=6,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=7,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=8,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=9,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=10,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=11,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=12,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.references then utilitydata.structures.references = { } end
 
 utilitydata.structures.references.collected={
+ [""]={
+  ["lettertest:hairline:Black"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=12,
+    ["realpage"]=12,
+    ["reference"]="lettertest:hairline:Black",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:hairline:Bold"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=11,
+    ["realpage"]=11,
+    ["reference"]="lettertest:hairline:Bold",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:hairline:Regular"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=10,
+    ["realpage"]=10,
+    ["reference"]="lettertest:hairline:Regular",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:hairline:SemiLight"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=9,
+    ["realpage"]=9,
+    ["reference"]="lettertest:hairline:SemiLight",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:micro:Black"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=4,
+    ["realpage"]=4,
+    ["reference"]="lettertest:micro:Black",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:micro:Bold"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=3,
+    ["realpage"]=3,
+    ["reference"]="lettertest:micro:Bold",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:micro:Regular"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=2,
+    ["realpage"]=2,
+    ["reference"]="lettertest:micro:Regular",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:micro:SemiLight"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=1,
+    ["realpage"]=1,
+    ["reference"]="lettertest:micro:SemiLight",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:regular:Black"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=8,
+    ["realpage"]=8,
+    ["reference"]="lettertest:regular:Black",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:regular:Bold"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=7,
+    ["realpage"]=7,
+    ["reference"]="lettertest:regular:Bold",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:regular:Regular"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=6,
+    ["realpage"]=6,
+    ["reference"]="lettertest:regular:Regular",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:regular:SemiLight"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=5,
+    ["realpage"]=5,
+    ["reference"]="lettertest:regular:SemiLight",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+ },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.references then utilitydata.structures.references = { } end
 
 utilitydata.structures.references.referred={
+ { 1, 1 },
+ { 1, 7 },
+ { 2, 11 },
+ { 2, 18 },
+ { 3, 30 },
+ { 4, 39 },
+ { 5, 50 },
+ { 6, 65 },
+ { 7, 81 },
+ { 8, 94 },
+ { 9, 103 },
+ { 10, 114 },
+ { 11, 126 },
+ { 12, 135 },
 }
 
 if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.parwrappers then utilitydata.job.parwrappers = { } end
 
-utilitydata.job.parwrappers.collected={
-}
+utilitydata.job.parwrappers.collected={}
 
 if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.objects then utilitydata.job.objects = { } end
 
-utilitydata.job.objects.collected={
-}
+utilitydata.job.objects.collected={}
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.itemgroups then utilitydata.structures.itemgroups = { } end
 
-utilitydata.structures.itemgroups.collected={
-}
+utilitydata.structures.itemgroups.collected={}
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.synonyms then utilitydata.structures.synonyms = { } end
 
-utilitydata.structures.synonyms.collected={
-}
+utilitydata.structures.synonyms.collected={}
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.registers then utilitydata.structures.registers = { } end
 
-utilitydata.structures.registers.collected={
-}
+utilitydata.structures.registers.collected={}
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.blocks then utilitydata.structures.blocks = { } end
 
-utilitydata.structures.blocks.collected={
-}
+utilitydata.structures.blocks.collected={}
 
 if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.linkedlists then utilitydata.job.linkedlists = { } end
 
-utilitydata.job.linkedlists.collected={
-}
+utilitydata.job.linkedlists.collected={}
 
 if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.files then utilitydata.job.files = { } end
 
-utilitydata.job.files.collected={
-}
+utilitydata.job.files.collected={}
 
 if not utilitydata.publications then utilitydata.publications = { } end
 
-utilitydata.publications.collected={
-}
+utilitydata.publications.collected={}
 
 if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.meshedup then utilitydata.job.meshedup = { } end
 
-utilitydata.job.meshedup.collected={
-}
+utilitydata.job.meshedup.collected={}
 
 if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.fileobjreferences then utilitydata.job.fileobjreferences = { } end
 
-utilitydata.job.fileobjreferences.collected={
-}
+utilitydata.job.fileobjreferences.collected={}
 
 if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.embedded then utilitydata.job.embedded = { } end
 
-utilitydata.job.embedded.collected={
-}
+utilitydata.job.embedded.collected={}
 
 utilitydata.job.packed={
  ["index"]={
@@ -267,6 +452,9 @@ utilitydata.job.packed={
    ["connector"]="–",
    ["prefix"]="no",
    ["set"]="part",
+  },
+  {
+   ["kind"]="page",
   },
  },
  ["keys"]={

@@ -1,0 +1,171 @@
+% Shape-dependent spacing for integrals and parentheses.
+% This document-local prototype does not redefine \int or change ConTeXt.
+%
+% \bubbleintegral{\int[method=horizontal,top=1,bottom=0]{}}{f(x)\,dx}
+% \bubbleint[lower=0,upper=1,size=12,strength=.5]{\frac{1}{1+x^2}\,dx}
+% \showbubbleintegralprofiles
+% \bubbleparentheses[strength=.5]{\frac{1}{1+x^2}}
+% \showbubbleparenthesisprofiles
+%
+% size=0 uses native automatic integral sizing; size=N requests MATH variant N+1.
+% method=profile uses the occupied shape; method=bbox is a comparison mode.
+% Integral limits are included in the measured operator shape.
+% strength=0 emits the ordinary construction; strength=1 is the full profile fit.
+
+\registerctxluafile{bubble-integrals}{}
+
+\newbox\bubbleintegraloperatorbox
+\newbox\bubbleintegralbodybox
+\newbox\bubbleintegralordinarybox
+\newdimen\bubbleintegralgap
+\newdimen\bubbleintegralordinarygap
+\newdimen\bubbleintegralclearance
+\newdimen\bubbleintegralpadding
+\newdimen\bubbleintegralstep
+
+\unexpanded\def\BubbleIntegralSettings#1{%
+  \getparameters[BubbleIntegral]
+    [lower={},upper={},limits=no,size=0,
+     clearance=.12em,padding=.03em,step=.04em,
+     trace=no,method=profile,strength=1,#1]%
+}
+
+\unexpanded\def\BubbleIntegralTypeset#1#2#3{%
+  \ifdim\BubbleIntegralstrength pt=0pt\relax
+    % Bypass the boxing/fitting path entirely at zero: this is the original
+    % math construction, including the engine's limits and spacing decisions.
+    #3%
+  \else
+  % \frac also consults ConTeXt's display-mode conditional; opening the inline
+  % math inside mathstylehbox resets it even though the style number survives.
+  \ifconditional\indisplaymath
+    \def\BubbleIntegralRestoreDisplay{\indisplaymath\conditionaltrue}%
+  \else
+    \def\BubbleIntegralRestoreDisplay{\indisplaymath\conditionalfalse}%
+  \fi
+  \setbox\bubbleintegraloperatorbox\mathstylehbox{\BubbleIntegralRestoreDisplay#1}%
+  \setbox\bubbleintegralbodybox\mathstylehbox{\BubbleIntegralRestoreDisplay#2}%
+  \setbox\bubbleintegralordinarybox\mathstylehbox{\BubbleIntegralRestoreDisplay#3}%
+  \bubbleintegralordinarygap\dimexpr\wd\bubbleintegralordinarybox
+    -\wd\bubbleintegraloperatorbox-\wd\bubbleintegralbodybox\relax
+  \bubbleintegralclearance\BubbleIntegralclearance\relax
+  \bubbleintegralpadding\BubbleIntegralpadding\relax
+  \bubbleintegralstep\BubbleIntegralstep\relax
+  \ctxlua{userdata.bubbleintegrals.fit(
+    \number\bubbleintegraloperatorbox,
+    \number\bubbleintegralbodybox,
+    \number\bubbleintegralclearance,
+    \number\bubbleintegralpadding,
+    \number\bubbleintegralstep,
+    "\luaescapestring{\BubbleIntegralmethod}",
+    "\luaescapestring{\BubbleIntegraltrace}",
+    \number\bubbleintegralordinarygap,
+    \BubbleIntegralstrength
+  )}%
+  % Join the finished boxes before returning them to the surrounding math list,
+  % so no further automatic math glue is inserted inside the measured pair.
+  \mathatom
+    leftclass \mathintegralcode
+    rightclass \mathordinarycode
+    {\hbox{\copy\bubbleintegraloperatorbox
+           \kern\bubbleintegralgap
+           \copy\bubbleintegralbodybox}}%
+  \fi
+}
+
+\unexpanded\def\bubbleintegral{\dosingleempty\BubbleIntegralCommand}
+\unexpanded\def\BubbleIntegralCommand[#1]#2#3{%
+  \begingroup
+  \BubbleIntegralSettings{#1}%
+  \BubbleIntegralTypeset{#2}{#3}{#2#3}%
+  \endgroup
+}
+
+\unexpanded\def\BubbleIntegralOperator#1{%
+  % Use the same native operator machinery as current ConTeXt's \int. In
+  % particular, limits are arguments of the operator, not scripts on a box.
+  \ifnum\BubbleIntegralsize>0\relax
+    \edef\BubbleIntegralGlyph{\number\getmathvariant\numexpr\BubbleIntegralsize+1\relax "222B\relax}%
+    \let\BubbleIntegralAuto\empty
+  \else
+    \def\BubbleIntegralGlyph{"222B}%
+    \def\BubbleIntegralAuto{auto }%
+  \fi
+  \doifelse{\BubbleIntegrallimits}{yes}
+    {\def\BubbleIntegralMethod{limits }}{\def\BubbleIntegralMethod{nolimits }}%
+  \Uoperator \BubbleIntegralMethod \BubbleIntegralAuto class \mathintegralcode
+  \Umathchar \mathintegralcode \fam \BubbleIntegralGlyph\relax
+  {\doifnotempty{\BubbleIntegralupper}{\mathstrut\BubbleIntegralupper}}%
+  {\doifnotempty{\BubbleIntegrallower}{\mathstrut\BubbleIntegrallower}}%
+  {#1}\Uright rightclass \mathintegralcode .%
+}
+
+\unexpanded\def\bubbleint{\dosingleempty\BubbleIntCommand}
+\unexpanded\def\BubbleIntCommand[#1]#2{%
+  \begingroup
+  \BubbleIntegralSettings{#1}%
+  \BubbleIntegralTypeset{\BubbleIntegralOperator{}}{#2}{\BubbleIntegralOperator{#2}}%
+  \endgroup
+}
+
+% Show the profiles recorded by the most recent integral in a separate figure.
+\unexpanded\def\showbubbleintegralprofiles{%
+  \ctxlua{userdata.bubbleintegrals.trace()}%
+}
+
+\newbox\bubbleparenthesisnativebox
+\newbox\bubbleparenthesisleftbox
+\newbox\bubbleparenthesisbodybox
+\newbox\bubbleparenthesisrightbox
+\newdimen\bubbleparenthesisleftgap
+\newdimen\bubbleparenthesisrightgap
+
+\unexpanded\def\bubbleparentheses{\dosingleempty\BubbleParenthesisCommand}
+\unexpanded\def\BubbleParenthesisCommand[#1]#2{%
+  \begingroup
+  \getparameters[BubbleParenthesis]
+    [strength=1,clearance=.12em,padding=.03em,step=.04em,
+     method=profile,trace=no,#1]%
+  \ifdim\BubbleParenthesisstrength pt=0pt\relax
+    \left(#2\right)%
+  \else
+    \ifconditional\indisplaymath
+      \def\BubbleParenthesisRestoreDisplay{\indisplaymath\conditionaltrue}%
+    \else
+      \def\BubbleParenthesisRestoreDisplay{\indisplaymath\conditionalfalse}%
+    \fi
+    \setbox\bubbleparenthesisnativebox\mathstylehbox
+      {\BubbleParenthesisRestoreDisplay\left(#2\right)}%
+    \bubbleintegralclearance\BubbleParenthesisclearance\relax
+    \bubbleintegralpadding\BubbleParenthesispadding\relax
+    \bubbleintegralstep\BubbleParenthesisstep\relax
+    \ctxlua{
+      local m = userdata.bubbleintegrals
+      m.splitparentheses(\number\bubbleparenthesisnativebox,
+        \number\bubbleparenthesisleftbox,\number\bubbleparenthesisbodybox,
+        \number\bubbleparenthesisrightbox)
+      m.fitparentheses(\number\bubbleparenthesisleftbox,
+        \number\bubbleparenthesisbodybox,\number\bubbleparenthesisrightbox,
+        \number\bubbleintegralclearance,\number\bubbleintegralpadding,
+        \number\bubbleintegralstep,"\luaescapestring{\BubbleParenthesismethod}",
+        "\luaescapestring{\BubbleParenthesistrace}",\BubbleParenthesisstrength)
+    }%
+    \mathatom leftclass \mathopencode rightclass \mathclosecode
+      {\hbox{\copy\bubbleparenthesisleftbox
+             \kern\bubbleparenthesisleftgap
+             \copy\bubbleparenthesisbodybox
+             \kern\bubbleparenthesisrightgap
+             \copy\bubbleparenthesisrightbox}}%
+  \fi
+  \endgroup
+}
+
+\aliased\let\bubbleparen\bubbleparentheses
+\unexpanded\def\showbubbleparenthesisprofiles{%
+  \ctxlua{userdata.bubbleintegrals.traceparentheses()}%
+}
+\unexpanded\def\showbubbleparenthesismetrics{%
+  \ctxlua{userdata.bubbleintegrals.parenthesismetrics()}%
+}
+
+\endinput

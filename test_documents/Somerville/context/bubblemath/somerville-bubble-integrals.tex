@@ -1,0 +1,418 @@
+% !TEX program = context
+% !TEX root = somerville-bubble-integrals.tex
+% Run here: context somerville-bubble-integrals.tex
+\input type-imp-somerville.mkxl
+\input bubble-integrals.mkxl
+
+% Somerville Regular: user coordinates, with the integral-slant axis at 100.
+% Its source MGHT=700 maps to user MGHT=750 in type-imp-somerville.mkxl.
+\defineSomervilleAxisTypeface{somerville-bubble-test}
+  {wdth=100,wght=400,MGHT=750,opsz=12,STYA=5,STYB=5,ARLN=100,ARHD=100,INSL=100}
+  {wdth=100,wght=400,opsz=12}
+% Override the general typescript's goodie list for this test: somerville.lfg only.
+\definefontfeature[somerville-bubble-test-math-axes]
+  [axis={wdth=100,wght=400,MGHT=750,opsz=12,STYA=5,STYB=5,ARLN=100,ARHD=100,INSL=100},
+   goodies={somerville}]
+\setupbodyfont[somerville-bubble-test,12pt]
+\setuppapersize[A4]
+\setuplayout[backspace=18mm,topspace=16mm,width=middle,height=middle,
+  header=0pt,footer=9mm]
+\setupinteraction[state=start,title={Somerville: contour-aware integral and parenthesis spacing}]
+\setuphead[chapter][style=\bfb,after={\blank[medium]}]
+\setuphead[section][style=\bf,after={\blank[small]}]
+\newbox\BubbleReferenceBox
+\newbox\BubbleZeroBox
+
+% Native ConTeXt operator, with an exact MATH variant for reproducible tests.
+% Arguments: size index, limits/nolimits, upper limit, lower limit.
+\unexpanded\def\TestFullIntegral#1#2#3#4#5{%
+  \Uoperator #2 class \mathintegralcode
+  \Umathchar \mathintegralcode \fam
+    \getmathvariant\numexpr#1+1\relax "222B\relax
+    {\doifnotempty{#3}{\mathstrut#3}}%
+    {\doifnotempty{#4}{\mathstrut#4}}%
+    {#5}\Uright rightclass \mathintegralcode .%
+}
+\unexpanded\def\TestIntegral#1#2#3#4{\TestFullIntegral{#1}{#2}{#3}{#4}{}}
+
+\unexpanded\def\IntegralTest#1#2#3{%
+  \startsection[title={#1}]
+  \noindent Ordinary spacing:
+  \startformula
+    #2#3
+  \stopformula
+  \noindent Profile spacing:
+  \startformula
+    \bubbleintegral[trace=yes]{#2}{#3}
+  \stopformula
+  \stopsection
+}
+
+\starttext
+\ctxlua{userdata.bubbleintegrals.selftest()}
+\startchapter[title={Integral spacing by shape}]
+Somerville Regular, 12pt optical design, integral slant 100.
+The second version in each pair uses the actual outlines of the integral,
+its limits, and the integrand. The first version uses normal ConTeXt spacing.
+
+\IntegralTest{Short integrand}{\int[top=1,bottom=0]{}}{f(x)\,dx}
+\IntegralTest{Fraction with a wide denominator}
+  {\TestIntegral{8}{nolimits}{}{}}
+  {\frac{1}{1+x+x^2+x^3}\,dx}
+\IntegralTest{Fraction with a wide numerator}
+  {\TestIntegral{8}{nolimits}{}{}}
+  {\frac{1+x+x^2+x^3}{1}\,dx}
+\stopchapter
+
+\startchapter[title={Limits and nested constructions}]
+\IntegralTest{Side limits participate in the profile}
+  {\TestIntegral{12}{nolimits}{c+d}{a+b}}
+  {\frac{\sqrt{1+x^2}}{1+x}\,dx}
+\IntegralTest{Stacked limits participate in the profile}
+  {\TestIntegral{12}{limits}{c+d}{a+b}}
+  {\left(\frac{1}{1+\frac{x}{1+x}}\right)^2\,dx}
+\IntegralTest{Tall integral with side limits}
+  {\TestIntegral{16}{nolimits}{1}{0}}
+  {\frac{x^2}{1+x^4}\,dx}
+\stopchapter
+
+\startchapter[title={Inspecting the envelopes}]
+Grey lines show the actual glyph outlines and rules. Red shows the integral's
+right-facing padded profile; blue shows the integrand's left-facing padded
+profile. The profiles are compared over their full shared height.
+
+\startformula
+  \bubbleint[size=12,trace=yes]{\frac{1}{1+x+x^2+x^3}\,dx}
+\stopformula
+\midaligned{\scale[sx=2,sy=2]{\showbubbleintegralprofiles}}
+\blank[big]
+\startformula
+  \bubbleint[size=12,trace=yes]{\frac{1+x+x^2+x^3}{1}\,dx}
+\stopformula
+\midaligned{\scale[sx=2,sy=2]{\showbubbleintegralprofiles}}
+\stopchapter
+
+\startchapter[title={Using the module}]
+\starttyping
+\input bubble-integrals.mkxl
+\bubbleint[lower=0,upper=1]{f(x)\,dx}
+\bubbleint[size=12]{\frac{1}{1+x^2}\,dx}
+\bubbleintegral{\int[method=vertical,top=1,bottom=0]{}}{f(x)\,dx}
+\stoptyping
+The integrand is explicitly grouped and the resulting construction is
+unbreakable. Ordinary \type{\int} remains available. This prototype targets
+left-to-right mathematics made from glyphs and rules.
+
+\startsection[title={Style and nesting checks}]
+Inline: \m{\bubbleint[lower=0,upper=1]{f(x)\,dx}=1}.
+\blank
+Script: \m{X^{\bubbleint[lower=0,upper=1]{f(x)\,dx}}}.
+\blank
+Inline fraction: \m{\bubbleint{\frac{1}{1+x^2}\,dx}}.
+\blank
+Script fraction: \m{X^{\bubbleint{\frac{1}{1+x^2}\,dx}}}.
+\blank
+Nested:
+\startformula
+\bubbleint[lower=0,upper=1]
+  {\bubbleint[lower=0,upper=x]{f(x,y)\,dy}\,dx}
+\stopformula
+\stopsection
+\startsection[title={Bounding-box comparison}]
+The first fit below uses the complete rectangular ink bounds; the second uses
+the profiles. Both request the same clearance and padding.
+\startformula
+\bubbleint[size=12,method=bbox,trace=yes]{\frac{1}{1+x+x^2+x^3}\,dx}
+\stopformula
+\startformula
+\bubbleint[size=12,trace=yes]{\frac{1}{1+x+x^2+x^3}\,dx}
+\stopformula
+\ctxlua{
+  local m = userdata.bubbleintegrals
+  local previous = m.history[rawlen(m.history)-1]
+  assert(m.last.origin < previous.origin, "Profile fit should improve on the bounding-box fit")
+  for fontid in pairs(m.last.left.fonts) do
+    local font = fonts.hashes.identifiers[fontid]
+    local instance = tostring(font.properties.instance)
+    logs.report("bubble integral test", "operator instance: " .. instance)
+    assert(instance:find("insl100",1,true) or instance:find("insl=100",1,true),
+      "Test integral must use the INSL=100 instance")
+  end
+}
+\stopsection
+\stopchapter
+
+\startchapter[title={Adjusting the strength}]
+\type{strength=0} uses ordinary ConTeXt spacing. A value between 0 and 1
+interpolates the horizontal position; \type{strength=1} applies the full
+profile fit. The integral and its limits are unchanged by this parameter.
+
+\startsection[title={Native integral, without the module}]
+\startformula
+\setbox\BubbleReferenceBox\mathstylehbox
+  {\indisplaymath\conditionaltrue
+   \TestFullIntegral{12}{limits}{1}{0}{\frac{1}{1+x^2}\,dx}}%
+\setbox\BubbleZeroBox\mathstylehbox
+  {\indisplaymath\conditionaltrue
+   \bubbleint[strength=0,limits=yes,lower=0,upper=1,size=12]{\frac{1}{1+x^2}\,dx}}%
+\ctxlua{
+  local a,b = tex.getbox(\number\BubbleReferenceBox),tex.getbox(\number\BubbleZeroBox)
+  assert(a.width==b.width and a.height==b.height and a.depth==b.depth,
+    "Strength zero must preserve native layout dimensions")
+  logs.report("bubble integral test","strength zero matches native layout dimensions")
+}
+\TestFullIntegral{12}{limits}{1}{0}{\frac{1}{1+x^2}\,dx}
+\stopformula
+\stopsection
+\startsection[title={Strength 0: ordinary spacing}]
+\startformula
+\bubbleint[strength=0,limits=yes,lower=0,upper=1,size=12]{\frac{1}{1+x^2}\,dx}
+\stopformula
+\stopsection
+\startsection[title={Strength 0.5: halfway}]
+\startformula
+\bubbleint[strength=.5,limits=yes,lower=0,upper=1,size=12,trace=yes]{\frac{1}{1+x^2}\,dx}
+\stopformula
+\ctxlua{
+  local t = userdata.bubbleintegrals.last
+  assert(math.abs(t.origin-(t.ordinaryorigin+t.targetorigin)/2) <= 1,
+    "Half-strength must interpolate the horizontal position")
+}
+\stopsection
+\startsection[title={Strength 1: full profile spacing}]
+\startformula
+\bubbleint[strength=1,limits=yes,lower=0,upper=1,size=12,trace=yes]{\frac{1}{1+x^2}\,dx}
+\stopformula
+\stopsection
+\stopchapter
+% Append before \stoptext in somerville-bubble-integrals.tex.
+% The module and Somerville test face are already loaded by that document.
+\unexpanded\def\ParenthesisPairTest#1#2#3{%
+  \startsection[title={#1}]
+  \noindent Ordinary spacing:
+  \startformula
+    #2
+  \stopformula
+  \noindent Profile spacing:
+  \startformula
+    #3
+  \stopformula
+  \noindent\showbubbleparenthesismetrics\par
+  \stopsection
+}
+\unexpanded\def\ParenthesisTest#1#2{%
+  \ParenthesisPairTest{#1}
+    {\left(#2\right)}
+    {\bubbleparentheses[trace=yes]{#2}}%
+}
+
+\startchapter[title={Parentheses: short expressions}]
+The upper version of every pair uses ordinary automatically sized
+parentheses. The lower version fits both parentheses to the expression's
+profiles. The font, expression, and mathematical style remain the same.
+The small figures give the changes from native spacing at the two joins.
+A negative change brings the pieces closer; a positive change opens the gap.
+
+\ParenthesisTest{A single letter}{x}
+\ParenthesisTest{Italic stems and a descender}{f(x)+g(y)}
+\ParenthesisTest{Subscripts and superscripts}{y_0^2+x_i^{n+1}}
+\stopchapter
+
+\startchapter[title={Parentheses: asymmetric fractions}]
+These examples put the widest part of the expression at different heights.
+The left and right sides are fitted independently.
+
+\ParenthesisTest{Wide denominator}{\frac{1}{1+x+x^2+x^3}}
+\ParenthesisTest{Wide numerator}{\frac{1+x+x^2+x^3}{1}}
+\ParenthesisTest{Different shapes on the two sides}
+  {\frac{x}{1+x^2}+\frac{1+x+x^2}{x}}
+\stopchapter
+
+\startchapter[title={Parentheses: radicals and scripts}]
+Radicals and scripts contribute their occupied shapes. Rectangular bounds
+alone do not describe how they fit against a parenthesis.
+
+\ParenthesisTest{A square root}{\sqrt{1+x^2}}
+\ParenthesisTest{Radicals of different heights}
+  {\sqrt{\frac{1+x}{1-x}}+\sqrt{x}}
+\ParenthesisTest{Scripts on both sides of a letter}
+  {{}^{a+b}_{i+j}f(x)^{c+d}_{k+l}}
+\stopchapter
+
+\startchapter[title={Parentheses: nested constructions}]
+The third pair has fitted inner parentheses in both versions, so the
+comparison isolates the fit of the outer pair.
+
+\ParenthesisTest{Nested fractions}{\frac{1}{1+\frac{x}{1+x}}}
+\ParenthesisTest{An inner ordinary pair}
+  {\left(\frac{1+x}{1-x}\right)^2+\frac{1}{x}}
+\ParenthesisTest{An inner fitted pair}
+  {\bubbleparentheses{\frac{1+x}{1-x}}^2+\frac{1}{x}}
+\stopchapter
+
+\startchapter[title={Parentheses: matrices and operators}]
+These expressions have several separated regions of ink. Empty regions
+between rows and between limits should not become solid rectangles.
+
+\ParenthesisTest{A two by two matrix}
+  {\startmatrix
+     \NC a \NC b^2 \NR
+     \NC c_i \NC d \NR
+   \stopmatrix}
+\ParenthesisTest{A column with an unusually wide middle row}
+  {\startmatrix
+     \NC x \NR
+     \NC 1+x+x^2+x^3 \NR
+     \NC 1 \NR
+   \stopmatrix}
+\ParenthesisTest{An integral and its stacked limits}
+  {\int[method=vertical,top=1,bottom=0,size=24pt]
+     {\frac{1}{1+x^2}\,dx}}
+\stopchapter
+
+\startchapter[title={Parentheses: integrals and empty regions}]
+The first comparison changes the parentheses inside a fitted integral.
+The remaining cases distinguish invisible size-setting material from ink.
+
+\ParenthesisPairTest{Fitted parentheses inside a fitted integral}
+  {\bubbleint[size=12]{\left(\frac{1+x}{1-x}\right)^2\,dx}}
+  {\bubbleint[size=12]{\bubbleparentheses{\frac{1+x}{1-x}}^2\,dx}}
+\ParenthesisTest{A short letter with a tall invisible strut}
+  {x\vphantom{\frac{\frac{1}{1+x}}{\frac{1}{1+x}}}}
+\ParenthesisPairTest{Empty and phantom-only parentheses}
+  {\left(\right)\qquad
+   \left(\vphantom{\frac{1}{1+x^2}}\right)}
+  {\bubbleparentheses{}\qquad
+   \bubbleparentheses{\vphantom{\frac{1}{1+x^2}}}}
+\stopchapter
+
+\startchapter[title={Parentheses: inspecting both fits}]
+The enlarged drawings show how both sides respond to the expression.
+In each drawing, the grey outlines are the actual glyphs and rules;
+the coloured profiles are the boundaries used to choose the spacing.
+
+\startsection[title={The wide part is below the axis}]
+\startformula
+\bubbleparentheses[trace=yes]{\frac{1}{1+x+x^2+x^3}}
+\stopformula
+\midaligned{\scale[sx=2,sy=2]{\showbubbleparenthesisprofiles}}
+\stopsection
+\startsection[title={The wide part is above the axis}]
+\startformula
+\bubbleparentheses[trace=yes]{\frac{1+x+x^2+x^3}{1}}
+\stopformula
+\midaligned{\scale[sx=2,sy=2]{\showbubbleparenthesisprofiles}}
+\stopsection
+\stopchapter
+
+\startchapter[title={Parentheses: adjusting the strength}]
+Every row uses the same expression. Zero gives ordinary spacing and one
+gives the complete profile fit. Intermediate values interpolate both sides.
+
+\startsection[title={Native parentheses, without the module}]
+\startformula
+\left(\frac{1}{1+x+x^2+x^3}\right)
+\stopformula
+\stopsection
+\startsection[title={Strength 0}]
+\startformula
+\bubbleparentheses[strength=0]{\frac{1}{1+x+x^2+x^3}}
+\stopformula
+\stopsection
+\startsection[title={Strength 0.25}]
+\startformula
+\bubbleparentheses[strength=.25]{\frac{1}{1+x+x^2+x^3}}
+\stopformula
+\stopsection
+\startsection[title={Strength 0.5}]
+\startformula
+\bubbleparentheses[strength=.5]{\frac{1}{1+x+x^2+x^3}}
+\stopformula
+\stopsection
+\startsection[title={Strength 0.75}]
+\startformula
+\bubbleparentheses[strength=.75]{\frac{1}{1+x+x^2+x^3}}
+\stopformula
+\stopsection
+\startsection[title={Strength 1}]
+\startformula
+\bubbleparentheses[strength=1]{\frac{1}{1+x+x^2+x^3}}
+\stopformula
+\ctxlua{
+  local m = userdata.bubbleintegrals
+  local full = m.lastparentheses
+  for i=rawlen(m.parenthesishistory)-3,rawlen(m.parenthesishistory) do
+    local t = m.parenthesishistory[i]
+    assert(math.abs(t.bodyorigin-(t.ordinarybody+t.strength*(full.targetbody-t.ordinarybody))) <= 1
+      and math.abs(t.rightorigin-(t.ordinaryright+t.strength*(full.targetright-t.ordinaryright))) <= 1,
+      "Changing strength must interpolate both parenthesis positions")
+  end
+  logs.report("bubble parenthesis test","both sides interpolate correctly at .25, .5, .75, and 1")
+}
+\stopsection
+\stopchapter
+
+\unexpanded\def\ParenthesisContextTest#1#2#3{%
+  \startsection[title={#1}]
+  Native: \m{#2}.\crlf
+  Fitted: \m{#3}.
+  \stopsection
+}
+\startchapter[title={Parentheses: inline and script styles}]
+These pairs check the surrounding spacing and the smaller styles used in
+scripts and fractions. Both versions use the same mathematical style.
+
+\setbox\BubbleReferenceBox\hbox{\m{\left(\frac{1}{1+x}\right)}}%
+\setbox\BubbleZeroBox\hbox{\m{\bubbleparentheses[strength=0]{\frac{1}{1+x}}}}%
+\ctxlua{
+  local a,b = tex.getbox(\number\BubbleReferenceBox),tex.getbox(\number\BubbleZeroBox)
+  assert(a.width==b.width and a.height==b.height and a.depth==b.depth,
+    "Strength zero must preserve native parenthesis dimensions")
+  logs.report("bubble parenthesis test","strength zero matches native width, height, and depth")
+}
+\ParenthesisContextTest{Function argument and a following sum}
+  {f\left(x+y\right)+z}
+  {f\bubbleparentheses{x+y}+z}
+\ParenthesisContextTest{A named function}
+  {\sin\left(x+y\right)}
+  {\sin\bubbleparentheses{x+y}}
+\ParenthesisContextTest{Parentheses inside a superscript}
+  {X^{\left(\frac{1}{1+x}\right)}}
+  {X^{\bubbleparentheses{\frac{1}{1+x}}}}
+\ParenthesisContextTest{Parentheses inside a subscript}
+  {X_{\left(i+j\right)}}
+  {X_{\bubbleparentheses{i+j}}}
+\ParenthesisContextTest{Parentheses in a numerator}
+  {\frac{\left(x+y\right)}{1+x^2}}
+  {\frac{\bubbleparentheses{x+y}}{1+x^2}}
+\ParenthesisContextTest{A superscript on the complete pair}
+  {\left(\frac{1}{1+x}\right)^2}
+  {\bubbleparentheses{\frac{1}{1+x}}^2}
+\ParenthesisContextTest{Two adjacent pairs}
+  {\left(x\right)\left(y\right)}
+  {\bubbleparentheses{x}\bubbleparentheses{y}}
+\stopchapter
+
+\startchapter[title={Parentheses: very tall delimiters}]
+The invisible rule sets a height of 110pt and a depth of 90pt. Only the
+letter is ink inside the parentheses. Native delimiter sizing, including
+extensible pieces when needed, is preserved; fitting changes the horizontal
+positions only. The two parentheses must also clear each other.
+
+\ParenthesisTest{An expression with 200pt of vertical extent}
+  {x\vphantom{\vrule width0pt height110pt depth90pt}}
+
+\startsection[title={Usage}]
+\starttyping
+\bubbleparentheses{\frac{1}{1+x^2}}
+\bubbleparentheses[strength=.5]{x+y}
+\bubbleparentheses[strength=0]{x+y}
+\bubbleparentheses[clearance=.08em,padding=.02em]{f(x)}
+\showbubbleparenthesisprofiles
+\stoptyping
+The short name \type{\bubbleparen} is also available. As with the integral
+macro, each fitted construction is unbreakable.
+\stopsection
+\stopchapter
+
+\stoptext

@@ -1,0 +1,575 @@
+local utilitydata = { }
+
+utilitydata.comment={
+ ["escape"]="[===[ ... ]===]",
+ ["file"]="somerville-oplus-sizes-check",
+ ["format"]="cont-en",
+ ["stamp"]="2026.10.01 18:42",
+ ["version"]=0x1.547ae147ae148p+0,
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.variables then utilitydata.job.variables = { } end
+
+utilitydata.job.variables.checksums={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.variables then utilitydata.job.variables = { } end
+
+utilitydata.job.variables.collected={
+ ["macros"]={},
+ ["randomseed"]=0x1.cafc21fe375dap-2,
+ ["sectionblockorder"]={},
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.structure then utilitydata.job.structure = { } end
+
+utilitydata.job.structure.collected={
+ ["branches"]={},
+ ["name"]="",
+ ["type"]="text",
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.positions then utilitydata.job.positions = { } end
+
+utilitydata.job.positions.collected={
+ ["shared"]={
+  ["x_h_d"]={},
+  ["x_h_d_hs"]={},
+  ["x_y_w_h"]={},
+  ["y_w_h_d"]={},
+ },
+ ["user"]={},
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.datasets then utilitydata.job.datasets = { } end
+
+utilitydata.job.datasets.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.pagestates then utilitydata.job.pagestates = { } end
+
+utilitydata.job.pagestates.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.specials then utilitydata.structures.specials = { } end
+
+utilitydata.structures.specials.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.sections then utilitydata.structures.sections = { } end
+
+utilitydata.structures.sections.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.counters then utilitydata.structures.counters = { } end
+
+utilitydata.structures.counters.collected={
+ ["chemical"]={
+  { 0 },
+ },
+ ["combination"]={
+  { 0 },
+ },
+ ["endnote"]={
+  { 0 },
+ },
+ ["figure"]={
+  { 0 },
+ },
+ ["float"]={
+  { 0 },
+ },
+ ["footnote"]={
+  { 0 },
+ },
+ ["formula"]={
+  { 0 },
+ },
+ ["graphic"]={
+  { 0 },
+ },
+ ["intermezzo"]={
+  { 0 },
+ },
+ ["itemgroup:itemize"]={
+  { 0 },
+ },
+ ["itemgroup:itemize:note"]={
+  { 0 },
+ },
+ ["linenote"]={
+  { 0 },
+ },
+ ["mathnote"]={
+  { 0 },
+ },
+ ["paragraph"]={
+  { 0 },
+ },
+ ["publicationnote"]={
+  { 0 },
+ },
+ ["realpage"]={
+  { 16 },
+ },
+ ["subpage"]={
+  { 16 },
+ },
+ ["table"]={
+  { 0 },
+ },
+ ["textnote:note"]={
+  { 0 },
+ },
+ ["userpage"]={
+  { 16 },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
+
+utilitydata.structures.lists.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.pages then utilitydata.structures.pages = { } end
+
+utilitydata.structures.pages.collected={
+ {
+  ["block"]="bodypart",
+  ["number"]=1,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=2,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=3,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=4,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=5,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=6,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=7,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=8,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=9,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=10,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=11,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=12,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=13,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=14,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=15,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=16,
+  ["numberdata"]=1,
+  ["prefixdata"]=2,
+  ["state"]="start",
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.references then utilitydata.structures.references = { } end
+
+utilitydata.structures.references.collected={
+ [""]={
+  ["lettertest:micro:Black"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=4,
+    ["realpage"]=4,
+    ["reference"]="lettertest:micro:Black",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:micro:Bold"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=3,
+    ["realpage"]=3,
+    ["reference"]="lettertest:micro:Bold",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:micro:Regular"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=2,
+    ["realpage"]=2,
+    ["reference"]="lettertest:micro:Regular",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:micro:SemiLight"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=1,
+    ["realpage"]=1,
+    ["reference"]="lettertest:micro:SemiLight",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:needlepoint:Black"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=16,
+    ["realpage"]=16,
+    ["reference"]="lettertest:needlepoint:Black",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:needlepoint:Bold"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=15,
+    ["realpage"]=15,
+    ["reference"]="lettertest:needlepoint:Bold",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:needlepoint:Regular"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=14,
+    ["realpage"]=14,
+    ["reference"]="lettertest:needlepoint:Regular",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:needlepoint:SemiLight"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=13,
+    ["realpage"]=13,
+    ["reference"]="lettertest:needlepoint:SemiLight",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:regular:Black"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=8,
+    ["realpage"]=8,
+    ["reference"]="lettertest:regular:Black",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:regular:Bold"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=7,
+    ["realpage"]=7,
+    ["reference"]="lettertest:regular:Bold",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:regular:Regular"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=6,
+    ["realpage"]=6,
+    ["reference"]="lettertest:regular:Regular",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:regular:SemiLight"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=5,
+    ["realpage"]=5,
+    ["reference"]="lettertest:regular:SemiLight",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:titling:Black"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=12,
+    ["realpage"]=12,
+    ["reference"]="lettertest:titling:Black",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:titling:Bold"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=11,
+    ["realpage"]=11,
+    ["reference"]="lettertest:titling:Bold",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:titling:Regular"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=10,
+    ["realpage"]=10,
+    ["reference"]="lettertest:titling:Regular",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+  ["lettertest:titling:SemiLight"]={
+   ["metadata"]=3,
+   ["references"]={
+    ["block"]="bodypart",
+    ["internal"]=9,
+    ["realpage"]=9,
+    ["reference"]="lettertest:titling:SemiLight",
+    ["section"]=0,
+    ["view"]="fit",
+   },
+  },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.references then utilitydata.structures.references = { } end
+
+utilitydata.structures.references.referred={
+ { 1, 1 },
+ { 1, 5 },
+ { 2, 9 },
+ { 2, 13 },
+ { 3, 22 },
+ { 4, 29 },
+ { 5, 37 },
+ { 6, 48 },
+ { 7, 60 },
+ { 8, 70 },
+ { 9, 79 },
+ { 10, 90 },
+ { 11, 102 },
+ { 12, 112 },
+ { 13, 119 },
+ { 14, 127 },
+ { 15, 136 },
+ { 16, 143 },
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.parwrappers then utilitydata.job.parwrappers = { } end
+
+utilitydata.job.parwrappers.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.objects then utilitydata.job.objects = { } end
+
+utilitydata.job.objects.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.itemgroups then utilitydata.structures.itemgroups = { } end
+
+utilitydata.structures.itemgroups.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.synonyms then utilitydata.structures.synonyms = { } end
+
+utilitydata.structures.synonyms.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.registers then utilitydata.structures.registers = { } end
+
+utilitydata.structures.registers.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.blocks then utilitydata.structures.blocks = { } end
+
+utilitydata.structures.blocks.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.linkedlists then utilitydata.job.linkedlists = { } end
+
+utilitydata.job.linkedlists.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.files then utilitydata.job.files = { } end
+
+utilitydata.job.files.collected={
+}
+
+if not utilitydata.publications then utilitydata.publications = { } end
+
+utilitydata.publications.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.meshedup then utilitydata.job.meshedup = { } end
+
+utilitydata.job.meshedup.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.fileobjreferences then utilitydata.job.fileobjreferences = { } end
+
+utilitydata.job.fileobjreferences.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.embedded then utilitydata.job.embedded = { } end
+
+utilitydata.job.embedded.collected={
+}
+
+utilitydata.job.packed={
+ ["index"]={
+  {
+   ["conversionset"]="pagenumber",
+  },
+  {
+   ["connector"]="–",
+   ["prefix"]="no",
+   ["set"]="part",
+  },
+  {
+   ["kind"]="page",
+  },
+ },
+ ["keys"]={
+  ["directives"]=true,
+  ["metadata"]=true,
+  ["numberdata"]=true,
+  ["numbers"]=true,
+  ["ownnumbers"]=true,
+  ["pagedata"]=true,
+  ["prefixdata"]=true,
+  ["processors"]=true,
+  ["sectiondata"]=true,
+  ["specification"]=true,
+ },
+ ["skip"]={
+  ["datasets"]=true,
+  ["positions"]=true,
+  ["userdata"]=true,
+ },
+ ["version"]=0x1.051eb851eb852p+0,
+}
+
+return utilitydata

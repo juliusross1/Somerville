@@ -1,0 +1,744 @@
+% !TEX program = context
+% !TEX root = mechanism-chapter-1.tex
+%
+% Mary Somerville, Mechanism of the Heavens (1831).
+% Book I, Chapter I: Definitions, Axioms, &c., printed pages 4--18.
+% Source PDF pages 80--94. Diagrams are schematic MetaFun reconstructions.
+% Run here: context mechanism-chapter-1.tex
+% Styling, paper color and texture controls are in mechanism-environment.tex.
+% Partial derivatives follow the notation in the existing pp. 10--12 document.
+% Two apparent original misprints are corrected, with comments at each formula:
+% p. 11, a-x in the proportion is x-a; p. 15, du/dr in N^2{...} is du/dx.
+
+\environment mechanism-environment
+\setupinteraction[state=stop,
+  title={Mechanism of the Heavens - Book I, Chapter I},author={Mary Somerville}]
+\setupuserpagenumber[number=4]
+\HeavensChapterHeaders{I}{DEFINITIONS, AXIOMS, \&c.}
+
+\startuseMPgraphic{heavens:figure1}
+  numeric u; u := .24mm;
+  pair M,A,B,C,N;
+  M := (0,0); A := (112u,0); B := (72u,-2u); C := (142u,0); N:=(0,-2u);
+  pickup pencircle scaled .35pt;
+  draw M--A; draw N--B;
+  fill fullcircle scaled 1.6pt shifted M;
+  fill fullcircle scaled 1.2pt shifted C;
+  label.lft(textext("\tfx\m{m}"),M);
+  label.rt(textext("\tfx A"),A);
+  label.bot(textext("\tfx B"),B);
+  label.rt(textext("\tfx C"),C);
+  label(textext("\tfx{\it fig.}\,1."),(55u,16u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure2}
+  numeric u; u := .24mm;
+  pair A,M,B;
+  A := (0,0); M := (48u,0); B := (132u,0);
+  pickup pencircle scaled .35pt;
+  draw A--B;
+  fill fullcircle scaled 1.6pt shifted M;
+  label.lft(textext("\tfx A"),A);
+  label.top(textext("\tfx\m{m}"),M);
+  label.rt(textext("\tfx B"),B);
+  label(textext("\tfx{\it fig.}\,2."),(88u,20u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure3}
+  numeric u; u := .19mm;
+  pair O,A,B,C,P,Q,R;
+  O := (0,0); A := (45u,0); B := (-19u,-20u); C := (0,31u);
+  P := A+B; Q := A+C; R := B+C;
+  pickup pencircle scaled .35pt;
+  draw O--A--P--B--cycle;
+  draw O--C--Q--A; draw C--R--B;
+  draw O--(115u,0); draw O--(0,90u); draw O--(-54u,-58u);
+  label.rt(textext("\tfx\m{x}"),(115u,0));
+  label.top(textext("\tfx\m{z}"),(0,90u));
+  label.bot(textext("\tfx\m{y}"),(-54u,-58u));
+  label.urt(textext("\tfx\m{o}"),O);
+  label.bot(textext("\tfx A"),A);
+  label.bot(textext("\tfx B"),B);
+  label.urt(textext("\tfx C"),C);
+  label.bot(textext("\tfx P"),P);
+  label.rt(textext("\tfx Q"),Q);
+  label.lft(textext("\tfx R"),R);
+  label(textext("\tfx{\it fig.}\,3."),(79u,66u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure4}
+  numeric u; u := .19mm;
+  pair O,A,B,C,P,Q,R,M;
+  O := (0,0); A := (50u,0); B := (-15u,-15u); C := (0,32u);
+  P := A+B; Q := A+C; R := B+C; M := A+B+C;
+  pickup pencircle scaled .35pt;
+  draw O--A--P--B--cycle;
+  draw C--Q--M--R--cycle;
+  draw O--C; draw A--Q; draw B--R; draw P--M;
+  draw O--(112u,0); draw O--(0,89u); draw O--(-54u,-58u);
+  label.rt(textext("\tfx\m{x}"),(112u,0));
+  label.top(textext("\tfx\m{z}"),(0,89u));
+  label.bot(textext("\tfx\m{y}"),(-54u,-58u));
+  label.urt(textext("\tfx\m{o}"),O);
+  label.bot(textext("\tfx A"),A);
+  label.bot(textext("\tfx B"),B);
+  label.urt(textext("\tfx C"),C);
+  label.bot(textext("\tfx P"),P);
+  label.rt(textext("\tfx Q"),Q);
+  label.lft(textext("\tfx R"),R);
+  label.ulft(textext("\tfx\m{m}"),M);
+  label(textext("\tfx{\it fig.}\,4."),(82u,66u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure5}
+  numeric u; u := .19mm;
+  pair O,A,B,Q,R,M,C;
+  O := (0,0); A := (50u,0); B := (-20u,-22u); C := (0,30u);
+  M := A+B; Q := A+C; R := B+C;
+  pickup pencircle scaled .35pt;
+  draw O--A--M--B--cycle;
+  draw B--R--C--Q--A;
+  draw O--M;
+  draw O--(115u,0); draw O--(0,86u); draw O--(-56u,-61u);
+  label.rt(textext("\tfx\m{x}"),(115u,0));
+  label.top(textext("\tfx\m{z}"),(0,86u));
+  label.bot(textext("\tfx\m{y}"),(-56u,-61u));
+  label.lft(textext("\tfx\m{o}"),O);
+  label.bot(textext("\tfx A"),A);
+  label.bot(textext("\tfx B"),B);
+  label.rt(textext("\tfx Q"),Q);
+  label.lft(textext("\tfx R"),R);
+  label.bot(textext("\tfx\m{m}"),M);
+  label(textext("\tfx{\it fig.}\,5."),(81u,66u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure6}
+  numeric u; u := .25mm;
+  pair O,M,A,B,C,AA,BB;
+  O := (0,0); M := (20u,12u); AA := (82u,12u);
+  BB := (20u,42u); C := (82u,42u);
+  A := (63u,26u); B := (39u,28u);
+  pickup pencircle scaled .35pt;
+  draw O--(108u,0); draw O--(0,92u);
+  draw M--AA--C--BB--cycle;
+  draw M--A--C--B--cycle; draw M--C;
+  label.lft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{x}"),(108u,0));
+  label.top(textext("\tfx\m{y}"),(0,92u));
+  label.llft(textext("\tfx\m{m}"),M);
+  label.lrt(textext("\tfx\m{a}"),AA);
+  label.ulft(textext("\tfx\m{b}"),BB);
+  label.urt(textext("\tfx\m{c}"),C);
+  label.bot(textext("\tfx A"),A);
+  label.top(textext("\tfx B"),B);
+  label(textext("\tfx{\it fig.}\,6."),(78u,88u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure7}
+  numeric u; u := .27mm;
+  pair M,A,B,C,D,E;
+  M := (0,0); A := (43u,0); B := (23u,28u); C := A+B;
+  D := (xpart C,0); E := .5*(C+(-ypart C,xpart C));
+  % Orthogonal projection of C onto the oblique component direction MB.
+  E := ((C dotprod B)/(B dotprod B))*B;
+  pickup pencircle scaled .35pt;
+  draw M--(105u,0); draw M--(2.25B);
+  draw M--C; draw A--C--B;
+  draw C--D; draw C--E;
+  label.llft(textext("\tfx\m{m}"),M);
+  label.bot(textext("\tfx A"),A);
+  label.lft(textext("\tfx B"),B);
+  label.rt(textext("\tfx C"),C);
+  label.bot(textext("\tfx D"),D);
+  label.ulft(textext("\tfx E"),E);
+  label(textext("\tfx{\it fig.}\,7."),(85u,57u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure8}
+  numeric u; u := .23mm;
+  pair O,A,B,C,P,Q,R,M;
+  O := (0,0); A := (45u,0); B := (-9u,-16u); C := (0,34u);
+  R := A+B; Q := A+C; P := B+C; M := A+B+C;
+  pickup pencircle scaled .35pt;
+  draw O--(101u,0); draw O--(0,93u); draw O--(4B);
+  draw O--A--R--B--cycle; draw C--Q--M--P--cycle;
+  draw O--C; draw A--Q; draw B--P; draw R--M;
+  draw O--M; draw O--P; draw O--Q;
+  label.llft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{x}"),(101u,0));
+  label.top(textext("\tfx\m{z}"),(0,93u));
+  label.bot(textext("\tfx\m{y}"),4B);
+  label.lrt(textext("\tfx A"),A);
+  label.bot(textext("\tfx B"),B);
+  label.ulft(textext("\tfx C"),C);
+  label.lft(textext("\tfx P"),P);
+  label.top(textext("\tfx Q"),Q);
+  label.bot(textext("\tfx R"),R);
+  label.ulft(textext("\tfx\m{m}"),M);
+  label(textext("\tfx{\it fig.}\,8."),(65u,75u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure9}
+  numeric u; u := .23mm;
+  pair O,M,A,B,C,D;
+  O := (0,0); M := (36u,22u);
+  A := M+(-17u,43u); B := M+(2u,66u);
+  C := M+(32u,53u); D := M+(34u,21u);
+  pickup pencircle scaled .35pt;
+  draw O--(104u,0); draw O--(0,100u); draw O--(-43u,-44u);
+  draw M--A; draw M--B; draw M--C; draw M--D;
+  label.llft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{x}"),(104u,0));
+  label.top(textext("\tfx\m{z}"),(0,100u));
+  label.bot(textext("\tfx\m{y}"),(-43u,-44u));
+  label.bot(textext("\tfx\m{m}"),M);
+  label.top(textext("\tfx A"),A);
+  label.top(textext("\tfx B"),B);
+  label.top(textext("\tfx C"),C);
+  label.rt(textext("\tfx D"),D);
+  label(textext("\tfx{\it fig.}\,9."),(-25u,83u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure12}
+  numeric u; u := .28mm;
+  pair O,N,M,MM,E,T;
+  path arc;
+  O := (0,0); N := (15u,34u);
+  M := (29u,62u); MM := (35u,58u); E := (29u,34u);
+  T := M+(37u,-20u);
+  arc := (0,70u){right}..M..MM..{down}(73u,-8u);
+  pickup pencircle scaled .35pt;
+  draw O--(98u,0); draw O--(0,95u);
+  draw arc;
+  draw N--M--T; draw N--MM;
+  draw N--(xpart N,0); draw M--(xpart M,0);
+  draw (0,ypart N)--E;
+  draw MM--(MM+.35*(MM-N)) dashed evenly scaled .5;
+  label.llft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{x}"),(98u,0));
+  label.lft(textext("\tfx\m{y}"),(0,86u));
+  label.ulft(textext("\tfx N"),N);
+  label.top(textext("\tfx\m{m}"),M);
+  label.urt(textext("\tfx\m{m'}"),MM);
+  label.rt(textext("\tfx E"),E);
+  label.rt(textext("\tfx T"),T);
+  label(textext("\tfx{\it fig.}\,12."),(70u,87u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure13}
+  numeric u; u := .22mm;
+  pair M,A,N,P,MM,AA,NN,PP;
+  M := (6u,0); A := (72u,79u); N := (5u,26u); P := (18u,14u);
+  MM := (121u,55u); AA := (58u,-18u); NN := (109u,87u); PP := (129u,64u);
+  pickup pencircle scaled .35pt;
+  draw M--A; draw M--N--P;
+  draw AA--PP; draw MM--NN--PP;
+  label.bot(textext("\tfx\m{m}"),M);
+  label.urt(textext("\tfx A"),A);
+  label.ulft(textext("\tfx\m{n}"),N);
+  label.rt(textext("\tfx\m{a}"),P);
+  label.lrt(textext("\tfx\m{m}"),MM);
+  label.bot(textext("\tfx A"),AA);
+  label.top(textext("\tfx\m{n}"),NN);
+  label.rt(textext("\tfx\m{a}"),PP);
+  label(textext("\tfx{\it fig.}\,13."),(22u,90u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure14}
+  numeric u; u := .23mm;
+  pair A,B,C,D,M;
+  A := (51u,28u); B := (39u,48u); C := (73u,60u);
+  D := (126u,43u); M := (86u,15u);
+  pickup pencircle scaled .35pt;
+  draw (0,0)--(156u,0);
+  draw A--B--C--D--M--cycle;
+  for P=A,B,C,D,M: draw P--(xpart P,0); endfor;
+  label.ulft(textext("\tfx A"),A);
+  label.ulft(textext("\tfx B"),B);
+  label.top(textext("\tfx C"),C);
+  label.rt(textext("\tfx D"),D);
+  label.top(textext("\tfx M"),M);
+  label.lft(textext("\tfx\m{o}"),(0,0));
+  label.rt(textext("\tfx\m{x}"),(156u,0));
+  label.bot(textext("\tfx\m{a}"),(xpart A,0));
+  label.bot(textext("\tfx\m{b}"),(xpart B,0));
+  label.bot(textext("\tfx\m{c}"),(xpart C,0));
+  label.bot(textext("\tfx\m{d}"),(xpart D,0));
+  label.bot(textext("\tfx\m{m}"),(xpart M,0));
+  label(textext("\tfx{\it fig.}\,14."),(13u,64u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure15}
+  numeric u; u := .25mm;
+  pair M,N,Q,P;
+  M := (8u,9u); N := (130u,12u); Q := (69u,38u); P := (69u,0);
+  pickup pencircle scaled .35pt;
+  draw (0,0)--(149u,0);
+  draw M..Q..N;
+  draw P--Q;
+  label.lft(textext("\tfx M"),M);
+  label.rt(textext("\tfx N"),N);
+  label.top(textext("\tfx\m{m}"),Q);
+  label.bot(textext("\tfx\m{p}"),P);
+  label(textext("\tfx{\it fig.}\,15."),(17u,40u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure16}
+  numeric u; u := .24mm;
+  pair M,A,Q,N;
+  M := (11u,7u); A := (45u,39u); Q := (70u,52u); N := (128u,60u);
+  pickup pencircle scaled .35pt;
+  draw (0,0)--(143u,0);
+  draw M..A..Q..N;
+  draw A--(xpart A,0); draw Q--(xpart Q,0);
+  label.lft(textext("\tfx M"),M);
+  label.ulft(textext("\tfx A"),A);
+  label.top(textext("\tfx\m{m}"),Q);
+  label.rt(textext("\tfx N"),N);
+  label.top(textext("\tfx\m{ds}"),(.52[A,Q]+(0,1u)));
+  label(textext("\tfx{\it fig.}\,16."),(15u,62u));
+\stopuseMPgraphic
+
+\ifdefined\MechanismCombined\else\starttext\fi
+% Mary Somerville, Mechanism of the Heavens (1831), printed pp. 4--7.
+% PDF pages 80--83. Figures 1--5 are schematic MetaFun reconstructions.
+
+% Original printed page 4.
+
+\blank[12mm]
+\midaligned{\tfb BOOK I.}
+\blank[4mm]
+\midaligned{\blackrule[width=7mm,height=.35pt]}
+\blank[5mm]
+\midaligned{\tfa CHAPTER I.}
+\blank[4mm]
+\midaligned{\sc DEFINITIONS, AXIOMS, \&c.}
+\blank[4mm]
+
+\Article{1}The activity of matter seems to be a law of the universe, as we know of no particle that is at rest. Were a body absolutely at rest, we could not prove it to be so, because there are no fixed points to which it could be referred; consequently, if only one particle of matter were in existence, it would be impossible to ascertain whether it were at rest or in motion. Thus, being totally ignorant of absolute motion, relative motion alone forms the subject of investigation: a body is, therefore, said to be in motion, when it changes its position with regard to other bodies which are assumed to be at rest.
+
+\Article{2}The cause of motion is unknown, force being only a name given to a certain set of phenomena preceding the motion of a body, known by the experience of its effects alone. Even after experience, we cannot prove that the same consequents will invariably follow certain antecedents; we only believe that they will, and experience tends to confirm this belief.
+
+\Article{3}No idea of force can be formed independent of matter; all the forces of which we have any experience are exerted by matter; as gravity, muscular force, electricity, chemical attractions and repulsions, \&c. \&c., in all which cases, one portion of matter acts upon another.
+
+\Article{4}When bodies in a state of motion or rest are not acted upon by matter under any of these circumstances, we know by experience that they will remain in that state: hence a body will continue to move uniformly in the direction of the force which caused its motion, unless in some of the cases enumerated, in which we have ascertained by experience that a change of motion will take place, then a force is said to act.
+
+% Original printed page 5 begins within the following paragraph.
+\Article{5}Force is proportional to the differential of the velocity, divided by the differential of the time, or analytically \m{\Force=\frac{dv}{dt}}, which is all we know about it.
+
+\Article{6}The direction of a force is the straight line in which it causes a body to move. This is known by experience only.
+
+\Article{7}In dynamics, force is proportional to the indefinitely small space caused to be moved over in a given indefinitely small time.
+
+\Article{8}Velocity is the space moved over in a given time, how small soever the parts may be into which the interval is divided.
+
+\Article{9}The velocity of a body moving uniformly, is the straight line or space over which it moves in a given interval of time; hence if the velocity \m{v} be the space moved over in one second or unit of time, \m{vt} is the space moved over in \m{t} seconds or units of time; or representing the space by \m{s}, \m{s=vt}.
+
+\Article{10}Thus it is proved that the space described with a uniform motion is proportional to the product of the time and the velocity.
+
+\Article{11}Conversely, \m{v}, the space moved over in one second of time, is equal to \m{s}, the space moved over in \m{t} seconds of time, multiplied by \m{\frac{1''}{t}}, \quad or \m{v=s\,\frac{1''}{t}=\frac{s}{t}}.
+
+\Article{12}Hence the velocity varies directly as the space, and inversely as the time; and because \m{t=\frac{s}{v}},
+
+\Article{13}The time varies directly as the space, and inversely as the velocity.
+
+\Article{14}Forces are proportional to the velocities they generate in equal times.
+
+\noindent\hskip1em The intensity of forces can only be known by comparing their effects under precisely similar circumstances. Thus two forces are equal, which in a given time will generate equal velocities in bodies of the same magnitude; and one force is said to be double of another which, in a given time, will generate double the velocity in one body that it will do in another body of the same magnitude.
+
+\Article{15}The intensity of a force may therefore be expressed by the ratios of numbers, or both its intensity and direction by the ratios of lines, since the direction of a force is the straight line in which it causes the body to move.
+
+\Article{16}In general, a line expressing the intensity of a force is taken in the direction of the force, beginning from the point of application.
+
+% Original printed page 6.
+
+\Article{17}Since motion is the change of rectilinear distance between two points, it appears that force, velocity, and motion are expressed by the ratios of spaces; we are acquainted with the ratios of quantities only.
+
+\blank[4mm]
+\midaligned{\it Uniform Motion.}
+\blank[4mm]
+
+\Article{18}A body is said to move uniformly, when, in equal successive intervals of time, how short soever, it moves over equal intervals of space.
+
+\Article{19}Hence in uniform motion the space is proportional to the time.
+
+\Article{20}The only uniform motion that comes under our observation is the rotation of the earth upon its axis; all other motions in nature are accelerated or retarded. The rotation of the earth forms the only standard of time to which all recurring periods are referred. To be certain of the uniformity of its rotation is, therefore, of the greatest importance. The descent of materials from a higher to a lower level at its surface, or a change of internal temperature, would alter the length of the radius, and consequently the time of rotation: such causes of disturbance do take place; but it will be shown that their effects are so minute as to be insensible, and that the earth's rotation has suffered no sensible change from the earliest times recorded.
+
+\Article{21}The equality of successive intervals of time may be measured by the recurrence of an event under circumstances as precisely similar as possible: for example, from the oscillations of a pendulum. When dissimilarity of circumstances takes place, we rectify our conclusions respecting the presumed equality of the intervals, by introducing an equation, which is a quantity to be added or taken away, in order to obtain the equality.
+
+\blank[4mm]
+\midaligned{\it Composition and Resolution of Forces.}
+\blank[4mm]
+
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure1}}
+% Original printed page 7 begins within the following paragraph.
+\Article{22}Let \m{m} be a particle of matter which is free to move in every direction; if two forces, represented both in intensity and direction by the lines \m{m\mathrm{A}} and \m{m\mathrm{B}}, be applied to it, and urge it towards C, the particle will move by the combined action of these two forces, and it will require a force equal to their sum, applied in a contrary direction, to keep it at rest. It is then said to be in a state of equilibrium.
+\par\flushsidefloats
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure2}}
+\Article{23}If the forces \m{m\mathrm{A}}, \m{m\mathrm{B}}, be applied to a particle \m{m} in contrary directions, and if \m{m\mathrm{B}} be greater than \m{m\mathrm{A}}, the particle \m{m} will be put in motion by the difference of these forces, and a force equal to their difference acting in a contrary direction will be required to keep the particle at rest.
+\par\flushsidefloats
+
+\Article{24}When the forces \m{m\mathrm{A}}, \m{m\mathrm{B}} are equal, and in contrary directions, the particle will remain at rest.
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure3}}
+\Article{25}It is usual to determine the position of points, lines, surfaces, and the motions of bodies in space, by means of three plane surfaces, \m{o\mathrm{P}}, \m{o\mathrm{Q}}, \m{o\mathrm{R}}, fig.~3, intersecting at given angles. The intersecting or co-ordinate planes are generally assumed to be perpendicular to each other, so that \m{xoy}, \m{xoz}, \m{yoz}, are right angles. The position of \m{ox}, \m{oy}, \m{oz}, the axes of the co-ordinates, and their origin \m{o}, are arbitrary; that is, they may be placed where we please, and are therefore always assumed to be known.
+\par\flushsidefloats
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure4}}
+\noindent Hence the position of a point \m{m} in space is determined, if its distance from each co-ordinate plane be given; for by taking \m{o\mathrm{A}}, \m{o\mathrm{B}}, \m{o\mathrm{C}}, fig.~4, respectively equal to the given distances, and drawing three planes through A, B, and C, parallel to the co-ordinate planes, they will intersect in \m{m}.
+\par\flushsidefloats
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure5}}
+% Original printed page 8 begins within the following paragraph.
+% Mary Somerville, Mechanism of the Heavens (1831), printed pp. 8--9.
+% Body fragment; source PDF pp. 84--85. Figures are schematic reconstructions.
+\Article{26}If a force applied to a particle of matter at \m{m}, (fig.~5,) make it approach to the plane \m{o\mathrm{Q}} uniformly by the space \m{m\mathrm{A}}, in a given time \m{t}; and if another force applied to \m{m} cause it to approach the plane \m{o\mathrm{R}} uniformly by the space \m{m\mathrm{B}}, in the same time \m{t}, the particle will move in the diagonal \m{mo}, by the simultaneous action of these two forces. For, since the forces are proportional to the spaces, if \m{a} be the space described in one second, \m{at} will be the space described in \m{t} seconds; hence if \m{at} be equal to the space \m{m\mathrm{A}}, and \m{bt} equal to the space \m{m\mathrm{B}}, we have \m{t=\frac{m\mathrm{A}}{a}=\frac{m\mathrm{B}}{b}}; whence \m{m\mathrm{A}=\frac{a}{b}m\mathrm{B}} which is the equation to a straight line \m{mo}, passing through \m{o}, the origin of the co-ordinates. If the co-ordinates be rectangular, \m{\frac{a}{b}} is the tangent of the angle \m{mo\mathrm{A}}, for \m{m\mathrm{B}=o\mathrm{A}}, and \m{o\mathrm{A}m} is a right angle; hence \m{o\mathrm{A}:\mathrm{A}m\mathrel{::}1:\tan\mathrm{A}om}; whence \m{m\mathrm{A}=o\mathrm{A}\times\tan\mathrm{A}om =m\mathrm{B}\mathbin{.}\tan\mathrm{A}om}. As this relation is the same for every point of the straight line \m{mo}, it is called its equation. Now since forces are proportional to the velocities they generate in equal times, \m{m\mathrm{A}}, \m{m\mathrm{B}} are proportional to the forces, and may be taken to represent them. The forces \m{m\mathrm{A}}, \m{m\mathrm{B}} are called component or partial forces, and \m{mo} is called the resulting force. The resulting force being that which, taken in a contrary direction, will keep the component forces in equilibrio.
+\par\flushsidefloats
+
+\Article{27}Thus the resulting force is represented in magnitude and direction by the diagonal of a parallelogram, whose sides are \m{m\mathrm{A}}, \m{m\mathrm{B}} the partial ones.
+
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure6}}
+\Article{28}Since the diagonal \m{cm}, fig.~6, is the resultant of the two forces \m{m\mathrm{A}}, \m{m\mathrm{B}}, whatever may be the angle they make with each other, so, conversely these two forces may be used in place of the single force \m{mc}. But \m{mc} may be resolved into any two forces whatever which form the sides of a parallelogram of which it is the diagonal; it may, therefore, be resolved into two forces \m{ma}, \m{mb}, which are at right angles to each other. Hence it is always possible to resolve a force \m{mc} into two others which are parallel to two rectangular axes \m{ox}, \m{oy}, situate in the same plane with the force; by drawing through \m{m} the lines \m{ma}, \m{mb}, respectively, parallel to \m{ox}, \m{oy}, and completing the parallelogram \m{macb}.
+\par\flushsidefloats
+
+% Original printed page 9 begins within the following paragraph.
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure7}}
+\Article{29}If from any point \m{\mathrm{C}}, fig.~7, of the direction of a resulting force \m{m\mathrm{C}}, perpendiculars \m{\mathrm{CD}}, \m{\mathrm{CE}}, be drawn on the directions of the component forces \m{m\mathrm{A}}, \m{m\mathrm{B}}, these perpendiculars are reciprocally as the component forces. That is, \m{\mathrm{CD}} is to \m{\mathrm{CE}} as \m{\mathrm{CA}} to \m{\mathrm{CB}}, or as their equals \m{m\mathrm{B}} to \m{m\mathrm{A}}.
+\par\flushsidefloats
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure8}}
+\Article{30}Let \m{\mathrm{BQ}}, fig.~8, be a figure formed by parallel planes seen in perspective, of which \m{mo} is the diagonal. If \m{mo} represent any force both in direction and intensity, acting on a material point \m{m}, it is evident from what has been said, that this force may be resolved into two other forces, \m{m\mathrm{C}}, \m{m\mathrm{R}}, because \m{mo} is the diagonal of the parallelogram \m{m\mathrm{C}o\mathrm{R}}. Again \m{m\mathrm{C}} is the diagonal of the parallelogram \m{m\mathrm{QCP}}, therefore it may be resolved into the two forces \m{m\mathrm{Q}}, \m{m\mathrm{P}}; and thus the force \m{mo} may be resolved into three forces, \m{m\mathrm{P}}, \m{m\mathrm{Q}}, and \m{m\mathrm{R}}; and as this is independent of the angles of the figure, the force \m{mo} may be resolved into three forces at right angles to each other. It appears then, that any force \m{mo} may be resolved into three other forces parallel to three rectangular axes given in position: and conversely, three forces \m{m\mathrm{P}}, \m{m\mathrm{Q}}, \m{m\mathrm{R}}, acting on a material point \m{m}, the resulting force \m{mo} may be obtained by constructing the figure \m{\mathrm{BQ}} with sides proportional to these forces, and drawing the diagonal \m{mo}.
+\par\flushsidefloats
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure9}}
+\Article{31}Therefore, if the directions and intensities with which any number of forces urge a material point be given, they may be reduced to one single force whose direction and intensity is known. For example, if there were four forces, \m{m\mathrm{A}}, \m{m\mathrm{B}}, \m{m\mathrm{C}}, \m{m\mathrm{D}}, fig.~9, acting on \m{m}, if the resulting force of \m{m\mathrm{A}} and \m{m\mathrm{B}} be found, and then that of \m{m\mathrm{C}} and \m{m\mathrm{D}}; these four forces would be reduced to two, and by finding the resulting force of these two, the four forces would be reduced to one.
+\par\flushsidefloats
+
+% Original printed page 10 begins within the following paragraph.
+% Printed pages 10--12; content preserved from the original three-page transcription.
+% Printed page 10 / PDF page 86.
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure10}}
+\Article{32}Again, this single resulting force may be resolved into three forces parallel to three rectangular axes \m{ox}, \m{oy}, \m{oz}, fig.~10, which would represent the action of the forces \m{m\mathrm{A}}, \m{m\mathrm{B}}, \&c., estimated in the direction of the axes; or, which is the same thing, each of the forces \m{m\mathrm{A}}, \m{m\mathrm{B}}, \&c. acting on \m{m}, may be resolved into three other forces parallel to the axes.
+\par\flushsidefloats
+
+\Article{33}It is evident that when the partial forces act in the same direction, their sum is the force in that axis; and when some act in one direction, and others in an opposite direction, it is their difference that is to be estimated.
+
+\Article{34}Thus any number of forces of any kind are capable of being resolved into other forces, in the direction of two or of three rectangular axes, according as the forces act in the same or in different planes.
+
+\Article{35}If a particle of matter remain in a state of equilibrium, though acted upon by any number of forces, and free to move in every direction, the resulting force must be zero.
+
+\Article{36}If the material point be in equilibrio on a curved surface, or on a curved line, the resulting force must be perpendicular to the line or surface, otherwise the particle would slide. The line or surface resists the resulting force with an equal and contrary pressure.
+
+\Article{37}Let \m{o\mathrm{A}=\ForceX}, \m{o\mathrm{B}=\ForceY}, \m{o\mathrm{C}=\ForceZ}, fig.~10, be three rectangular component forces, of which \m{om=\Force} is their resulting force. Then, if \m{m\mathrm{A}}, \m{m\mathrm{B}}, \m{m\mathrm{C}} be joined, \m{om=\Force} will be the hypothenuse common to three rectangular triangles, \m{o\mathrm{A}m}, \m{o\mathrm{B}m}, and \m{o\mathrm{C}m}. Let the angles
+\startformula
+  mo\mathrm{A}=a,\quad mo\mathrm{B}=b,\quad mo\mathrm{C}=c;
+  \quad\text{then}
+\stopformula
+\placeformula[eq:direction-cosines]
+\startformula
+  \ForceX=\Force\cos a,\quad
+  \ForceY=\Force\cos b,\quad
+  \ForceZ=\Force\cos c.
+\stopformula
+\noindent Thus the partial forces are proportional to the cosines of the angles which their directions make with their resultant. But \m{\mathrm{BQ}} being a rectangular parallelopiped
+\placeformula[eq:resultant-magnitude]
+\startformula
+  \Force^2=\ForceX^2+\ForceY^2+\ForceZ^2.
+\stopformula
+\noindent Hence
+\startformula
+  \frac{\ForceX^2+\ForceY^2+\ForceZ^2}{\Force^2}
+    =\cos^2 a+\cos^2 b+\cos^2 c=1.
+\stopformula
+% Original printed page 11 begins within the following paragraph.
+% Printed page 11 / PDF page 87.
+\noindent When the component forces are known, equation~(2) will give a value of the resulting force, and equations~(1) will determine its direction by the angles \m{a}, \m{b}, and \m{c}; but if the resulting force be given, its resolution into the three component forces \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, making with it the angles \m{a}, \m{b}, \m{c}, will be given by~(1). If one of the component forces as \m{\ForceZ} be zero, then
+\startformula
+  c=\circ 90^{\HeavensCircle},\quad
+  \Force=\sqrt{\ForceX^2+\ForceY^2},\quad
+  \ForceX=\Force\cos a,\quad \ForceY=\Force\cos b.
+\stopformula
+
+\Article{38}Velocity and force being each represented by the same space, whatever has been explained with regard to the resolution and composition of the one applies equally to the other.
+
+\blank[medium]
+\startalignment[middle]
+  {\it The general Principles of Equilibrium.}
+\stopalignment
+\blank[medium]
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure11}}
+\Article{39}The general principles of equilibrium may be expressed analytically, by supposing \m{o} to be the origin of a force \m{\Force}, acting on a particle of matter at \m{m}, fig.~11, in the direction \m{om}. If \m{o'} be the origin of the co-ordinates; \m{a}, \m{b}, \m{c}, the co-ordinates of \m{o}, and \m{x}, \m{y}, \m{z}, those of \m{m}; the diagonal \m{om}, which may be represented by \m{r}, will be
+\par\flushsidefloats
+\startformula
+  r=\sqrt{(x-a)^2+(y-b)^2+(z-c)^2}
+\stopformula
+\noindent But \m{\Force}, the whole force in \m{om}, is to its component force in
+% Editorial correction: the scan prints a-x in this ratio. Use x-a,
+% consistent with the force component and derivative immediately below.
+\startformula
+  o\mathrm{A}\mathrel{::}r\mathrel{:}x-a,
+\stopformula
+\noindent hence the component force parallel to the axis \m{ox} is
+\startformula
+  \Force\frac{(x-a)}{r}.
+\stopformula
+\noindent In the same manner it may be shown, that
+\startformula
+  \Force\frac{(y-b)}{r};\quad \Force\frac{(z-c)}{r}
+\stopformula
+\noindent are the component forces parallel to \m{oy} and \m{oz}. Now the equation of the diagonal gives
+\startformula
+  \Der{r}{x}=\frac{(x-a)}{r},\quad
+  \Der{r}{y}=\frac{(y-b)}{r};\quad
+  \Der{r}{z}=\frac{(z-c)}{r};
+\stopformula
+\noindent hence the component forces of \m{\Force} are
+\startformula
+  \Force\left(\Der{r}{x}\right);\quad
+  \Force\left(\Der{r}{y}\right);\quad
+  \Force\left(\Der{r}{z}\right).
+\stopformula
+
+\noindent\hskip1em\relax Again, if \m{\Force'} be another force acting on the particle at \m{m} in another direction \m{r'}, its component forces parallel to the co-ordinates will be,
+\startformula
+  \Force'\left(\Der{r'}{x}\right);\quad
+  \Force'\left(\Der{r'}{y}\right);\quad
+  \Force'\left(\Der{r'}{z}\right).
+\stopformula
+
+% Printed page 12 / PDF page 88.
+% Original printed page 12.
+\noindent And any number of forces acting on the particle \m{m} may be resolved in the same manner, whatever their directions may be. If \m{\HeavensSigma} be employed to denote the sum of any number of finite quantities, represented by the same general symbol
+\startformula
+  \SumForce\left(\Der{r}{x}\right)
+    =\Force\left(\Der{r}{x}\right)
+    +\Force'\left(\Der{r'}{x}\right)
+    +\Force''\left(\Der{r''}{x}\right)+\text{\&c.}
+\stopformula
+\noindent is the sum of the partial forces urging the particle parallel to the axis \m{ox}. Likewise \m{\SumForce\left(\Der{r}{y}\right);\; \SumForce\left(\Der{r}{z}\right);} are the sums of the partial forces that urge the particle parallel to the axis \m{oy} and \m{oz}. Now if \m{\Resultant} be the resulting force of all the forces \m{\Force}, \m{\Force'}, \m{\Force''}, \&c. that act on the particle \m{m}, and if \m{u} be the straight line drawn from the origin of the resulting force to \m{m}, by what precedes
+\startformula
+  \Resultant\left(\Der{u}{x}\right);\quad
+  \Resultant\left(\Der{u}{y}\right);\quad
+  \Resultant\left(\Der{u}{z}\right),
+\stopformula
+\noindent are the expressions of the resulting force \m{\Resultant}, resolved in directions parallel to the three co-ordinates; hence
+\startformula
+  % Preserve the original single-line presentation of these three equations.
+  \hbox{\scale[width=\textwidth]{\m{\displaystyle
+    \Resultant\left(\Der{u}{x}\right)=\SumForce\left(\Der{r}{x}\right);\quad
+    \Resultant\left(\Der{u}{y}\right)=\SumForce\left(\Der{r}{y}\right);\quad
+    \Resultant\left(\Der{u}{z}\right)=\SumForce\left(\Der{r}{z}\right),
+  }}}
+\stopformula
+\noindent or if the sums of the component forces parallel to the axis \m{x}, \m{y}, \m{z}, be represented by \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, we shall have
+\startformula
+  \Resultant\left(\Der{u}{x}\right)=\ForceX;\quad
+  \Resultant\left(\Der{u}{y}\right)=\ForceY;\quad
+  \Resultant\left(\Der{u}{z}\right)=\ForceZ.
+\stopformula
+\noindent If the first of these be multiplied by \m{\HeavensDelta x}, the second by \m{\HeavensDelta y}, and the third by \m{\HeavensDelta z}, their sum will be
+\startformula
+  \Resultant\HeavensDelta u=\ForceX\HeavensDelta x+\ForceY\HeavensDelta y+\ForceZ\HeavensDelta z.
+\stopformula
+
+\Article{40}If the intensity of the force can be expressed in terms of the distance of its point of application from its origin, \m{\ForceX}, \m{\ForceY}, and \m{\ForceZ} may be eliminated from this equation, and the resulting force will then be given in functions of the distance only. All the forces in nature are functions of the distance, gravity for example, which varies inversely as the square of the distance of its origin from the point of its application. Were that not the case, the preceding equation could be of no use.
+
+\Article{41}When the particle is in equilibrio, the resulting force is zero; consequently
+\placeformula[eq:free-particle-equilibrium]
+\startformula
+  \ForceX\HeavensDelta x+\ForceY\HeavensDelta y+\ForceZ\HeavensDelta z=0,
+\stopformula
+\noindent which is the general equation of the equilibrium of a free particle.
+% Mary Somerville, Mechanism of the Heavens (1831), printed pp. 13--14.
+% Body fragment; source PDF pp. 89--90. Figure 12 is schematic.
+
+% Original printed page 13.
+\Article{42}Thus, when a particle of matter urged by any forces whatever remains in equilibrio, the sum of the products of each force by the element of its direction is zero. As the equation is true, whatever be the values of \m{\HeavensDelta x}, \m{\HeavensDelta y}, \m{\HeavensDelta z}, it is equivalent to the three partial equations in the direction of the axes of the co-ordinates, that is to
+\startformula
+  \ForceX=0,\quad \ForceY=0,\quad \ForceZ=0,
+\stopformula
+\noindent for it is evident that if the resulting force be zero, its component forces must also be zero.
+
+\blank[medium]
+\startalignment[middle]
+  {\it On Pressure.}
+\stopalignment
+\blank[medium]
+
+\Article{43}A pressure is a force opposed by another force, so that no motion takes place.
+
+\Article{44}Equal and proportionate pressures are such as are produced by forces which would generate equal and proportionate motions in equal times.
+
+\Article{45}Two contrary pressures will balance each other, when the motions which the forces would separately produce in contrary directions are equal; and one pressure will counterbalance two others, when it would produce a motion equal and contrary to the resultant of the motions which would be produced by the other forces.
+
+\Article{46}It results from the comparison of motions, that if a body remain at rest, by means of three pressures, they must have the same ratio to one another, as the sides of a triangle parallel to the directions.
+
+\blank[medium]
+\startalignment[middle]
+  {\it On the Normal.}
+\stopalignment
+\blank[medium]
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure12}}
+\Article{47}The normal to a curve, or surface in any point \m{m}, fig.~12, is the straight line \m{m\mathrm{N}} perpendicular to the tangent \m{m\mathrm{T}}. If \m{mm'} be a plane curve
+\startformula
+  m\mathrm{N}=\sqrt{(x-a)^2+(y-b)^2}
+\stopformula
+\noindent \m{x} and \m{y} being the co-ordinates of \m{m}, \m{a} and \m{b} those of \m{\mathrm{N}}. If the point \m{m} be on a surface, or curve of double curvature, in which no two of its elements are in the same plane, then,
+\par\flushsidefloats
+\startformula
+  m\mathrm{N}=\sqrt{(x-a)^2+(y-b)^2+(z-c)^2}
+\stopformula
+% Original printed page 14 begins within the following paragraph.
+\noindent \m{x}, \m{y}, \m{z} being the co-ordinates of \m{m}, and \m{a}, \m{b}, \m{c} those of \m{\mathrm{N}}. The centre of curvature \m{\mathrm{N}}, which is the intersection of two consecutive normals \m{m\mathrm{N}}, \m{m'\mathrm{N}}, never varies in the circle and sphere, because the curvature is every where the same; but in all other curves and surfaces the position of \m{\mathrm{N}} changes with every point in the curve or surface, and \m{a}; \m{b}; \m{c}; are only constant from one point to another. By this property, the equation of the radius of curvature is formed from the equation of the curve, or surface. If \m{r} be the radius of curvature, it is evident, that though it may vary from one point to another, it is constant for any one point \m{m} where \m{\HeavensDelta r=0}.
+
+\blank[medium]
+\startalignment[middle]
+  {\it Equilibrium of a Particle on a curved Surface:}
+\stopalignment
+\blank[medium]
+
+\Article{48}The equation (3) is sufficient for the equilibrium of a particle of matter, if it be free to move in any direction; but if it be constrained to remain on a curved surface, the resulting force of all the forces acting upon it must be perpendicular to the surface, otherwise it would slide along it; but as by experience it is found that re-action is equal and contrary to action, the perpendicular force will be resisted by the re-action of the surface, so that the re-action is equal, and contrary to the force destroyed; hence if \m{\mathrm{R}_{1}} be the resistance of the surface, the equation of equilibrium will be
+\startformula
+  \ForceX\HeavensDelta x+\ForceY\HeavensDelta y+\ForceZ\HeavensDelta z
+    =-\mathrm{R}_{1}\HeavensDelta r.
+\stopformula
+\noindent \m{\HeavensDelta x}; \m{\HeavensDelta y}, \m{\HeavensDelta z} are arbitrary; these variations may therefore be assumed to take place in the direction of the curved surface on which the particle moves: then by the property of the normal, \m{\HeavensDelta r=0}; which reduces the preceding equation to
+\startformula
+  \ForceX\HeavensDelta x+\ForceY\HeavensDelta y+\ForceZ\HeavensDelta z=0.
+\stopformula
+\noindent But this equation is no longer equivalent to three equations, but to two only, since one of the elements \m{\HeavensDelta x}, \m{\HeavensDelta y}, \m{\HeavensDelta z}, must be eliminated by the equation of the surface.
+
+\Article{49}The same result may be obtained in another way. For if \m{u=0} be the equation of the surface, then \m{\HeavensDelta u=0}; but as the equation of the normal is derived from that of the surface, the equation \m{\HeavensDelta r=0} is connected with the preceding, so that \m{\HeavensDelta r=\mathrm{N}\HeavensDelta u}. But
+\startformula
+  r=\sqrt{(x-a)^2+(y-b)^2+(z-c)^2}
+\stopformula
+\noindent whence
+\startformula
+  \Der{r}{x}=\frac{x-a}{r};\quad
+  \Der{r}{y}=\frac{y-b}{r};\quad
+  \Der{r}{z}=\frac{z-c}{r};
+\stopformula
+% Mechanism of the Heavens, Chapter I, printed pp. 15--18 / PDF pp. 91--94.
+% Body fragment for mechanism-chapter-1.tex. Figures 13--16 are schematic.
+
+% Original printed page 15.
+\noindent consequently,
+\startformula
+  \left\{\left(\Der{r}{x}\right)^2+
+  \left(\Der{r}{y}\right)^2+
+  \left(\Der{r}{z}\right)^2\right\}=1,
+\stopformula
+\noindent on account of which, the equation
+% Editorial correction: the scan prints du/dr (with variation deltas)
+% in the first squared term below. Use du/dx, as required by the preceding
+% identity and by every subsequent expression for N in the original.
+\startformula
+  \HeavensDelta r=\mathrm{N}\HeavensDelta u
+  \quad\text{gives}\quad
+  \mathrm{N}^2\left\{\left(\Der{u}{x}\right)^2+
+  \left(\Der{u}{y}\right)^2+
+  \left(\Der{u}{z}\right)^2\right\}=1,
+\stopformula
+\noindent or
+\startformula
+  \mathrm{N}=\frac{1}{\sqrt{\left(\Der{u}{x}\right)^2+
+  \left(\Der{u}{y}\right)^2+\left(\Der{u}{z}\right)^2}},
+\stopformula
+\noindent for \m{u} is a function of \m{x}, \m{y}, \m{z}; hence,
+\startformula
+  \mathrm{R}_1\HeavensDelta r=
+  \frac{\mathrm{R}_1\HeavensDelta u}{\sqrt{\left(\Der{u}{x}\right)^2+
+  \left(\Der{u}{y}\right)^2+\left(\Der{u}{z}\right)^2}};
+  \quad\text{and if}
+\stopformula
+\startformula
+  \HeavensLambda=\frac{\mathrm{R}_1}{\sqrt{\left(\Der{u}{x}\right)^2+
+  \left(\Der{u}{y}\right)^2+\left(\Der{u}{z}\right)^2}},
+\stopformula
+\noindent then \m{\mathrm{R}_1\HeavensDelta r} becomes \m{\HeavensLambda\HeavensDelta u}, and the equation of the equilibrium of a particle \m{m}, on a curved line or surface, is
+\placeformula[eq:constrained-particle-equilibrium]
+\startformula
+  \ForceX\HeavensDelta x+\ForceY\HeavensDelta y+
+  \ForceZ\HeavensDelta z+\HeavensLambda\HeavensDelta u=0
+\stopformula
+\noindent where \m{\HeavensDelta u} is a function of the elements \m{\HeavensDelta x}, \m{\HeavensDelta y}, \m{\HeavensDelta z}: and as this equation exists whatever these elements may be, each of them may be made zero, which will divide it into three equations; but they will be reduced to two by the elimination of \m{\HeavensLambda}. And these two, with the equation of the surface \m{u=0}, will suffice to determine \m{x}, \m{y}, \m{z}, the co-ordinates of \m{m} in its position of equilibrium. These found, \m{\mathrm{N}} and consequently \m{\HeavensLambda} become known. And since \m{\mathrm{R}_1} is the resistance
+\startformula
+  \mathrm{R}_1=\HeavensLambda\sqrt{\left(\Der{u}{x}\right)^2+
+  \left(\Der{u}{y}\right)^2+\left(\Der{u}{z}\right)^2}
+\stopformula
+\noindent is the pressure, which is equal and contrary to the resistance, and is therefore determined.
+
+\Article{50}Thus if a particle of matter, either free or obliged to remain on a curved line or surface, be urged by any number of forces, it will continue in equilibrio, if the sum of the products of each force by the element of its direction be zero.
+
+% Original printed page 16.
+\blank[medium]
+\startalignment[middle]
+  {\it Virtual Velocities.}
+\stopalignment
+\blank[medium]
+
+\Article{51}This principle, discovered by John Bernouilli, and called the principle of virtual velocities, is perfectly general, and may be expressed thus:---
+
+\noindent\hskip1em\relax If a particle of matter be arbitrarily moved from its position through an indefinitely small space, so that it always remains on the curve or surface, which it ought to follow, if not entirely free, the sum of the forces which urge it, each multiplied by the element of its direction, will be zero in the case of equilibrium.
+
+\noindent\hskip1em\relax On this general law of equilibrium, the whole theory of statics depends.
+
+\placefigure[here,none]{}{\useMPgraphic{heavens:figure13}}
+\Article{52}An idea of what virtual velocity is, may be formed by supposing that a particle of matter \m{m} is urged in the direction \m{m\mathrm{A}} by a force applied to \m{m}. If \m{m} be arbitrarily moved to any place \m{n} indefinitely near to \m{m}, then \m{mn} will be the virtual velocity of \m{m}.
+\par\flushsidefloats
+
+\Article{53}Let \m{na} be drawn at right angles to \m{m\mathrm{A}}, then \m{ma} is the virtual velocity of \m{m} resolved in the direction of the force \m{m\mathrm{A}}: it is also the projection of \m{mn} on \m{m\mathrm{A}}; for
+\startformula
+  mn:ma\mathrel{::}1:\cos nma
+  \quad\text{and}\quad ma=mn\cos nma.
+\stopformula
+
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure14}}
+\Article{54}Again, imagine a polygon \m{\mathrm{ABCDM}} of any number of sides, either in the same plane or not, and suppose the sides \m{\mathrm{MA}}, \m{\mathrm{AB}}, \&c., to represent, both in magnitude and direction, any forces applied to a particle at \m{\mathrm{M}}. Let these forces be resolved in the direction of the axis \m{ox}, so that \m{ma}, \m{ab}, \m{bc}, \&c. may be the projections of the sides of the polygon, or the cosines of the angles made by the sides of the polygon with \m{ox} to the several radii \m{\mathrm{MA}}, \m{\mathrm{AB}}, \&c., then will the segments \m{ma}, \m{ab}, \m{bc}, \&c. of the axis represent the resolved portions of the forces estimated in that single direction, and calling \m{\HeavensAlpha}, \m{\HeavensBeta}, \m{\HeavensGamma}, \&c. the angles above mentioned,
+\par\flushsidefloats
+\startformula
+  ma=\mathrm{MA}\cos\HeavensAlpha;\quad ab=\mathrm{AB}\cos\HeavensBeta;
+  \quad\text{and}\quad bc=\mathrm{BC}\cos\HeavensGamma,
+\stopformula
+
+% Original printed page 17.
+\noindent\&c. and the sum of these partial forces will be
+\startformula
+  \mathrm{MA}\cos\HeavensAlpha+\mathrm{AB}\cos\HeavensBeta+
+  \mathrm{BC}\cos\HeavensGamma+\text{\&c.}=0
+\stopformula
+\noindent by the general property of polygons, as will also be evident if we consider that \m{dm}, \m{ma}, \m{ab} lying towards \m{o} are to be taken positively, and \m{bc}, \m{cd} lying towards \m{x} negatively; and the latter making up the same whole \m{bd} as the former, their sums must be zero. Thus it is evident, that if any number of forces urge a particle of matter, the sum of these forces when estimated in any given direction, must be zero when the particle is in equilibrio; and {\it vice versâ}, when this condition holds, the equilibrium will take place. Hence, we see that a point will rest, if urged by forces represented by the sides of a polygon, taken in order.
+
+\noindent\hskip1em\relax In this case also, the sum of the virtual velocities is zero; for, if \m{\mathrm{M}} be removed from its place through an infinitely small space in any direction, since the position of \m{ox} is arbitrary, it may represent that direction, and \m{ma}, \m{ab}, \m{bc}, \m{cd}, \m{dm}, will therefore represent the virtual velocities of \m{\mathrm{M}} in directions of the several forces, whose sum, as above shown, is zero.
+
+\Article{55}The principle of virtual velocities is the same, whether we consider a material particle, a body, or a system of bodies.
+
+\blank[medium]
+\startalignment[middle]
+  {\it Variations.}
+\stopalignment
+\blank[medium]
+
+\Article{56}The symbol \m{\HeavensDelta} is appropriated to the calculus of variations, whose general object is to subject to analytical investigation the changes which quantities undergo when the relations which connect them are altered, and when the functions which are the objects of discussion undergo a change of form, and pass into other functions by the gradual variation of some of their elements, which had previously been regarded as constant. In this point of view, variations are only differentials on another hypothesis of constancy and variability, and are therefore subject to all the laws of the differential calculus.
+
+% Original printed page 18 begins within the following paragraph.
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure15}}
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure16}}
+\Article{57}The variation of a function may be illustrated by problems of maxima and minima, of which there are two kinds, one not subject to the law of variations, and another that is. In the former case, the quantity whose maximum or minimum is required depends by known relations on some arbitrary independent variable;---for example, in a given curve \m{\mathrm{MN}}, fig.~15, it is required to determine the point in which the ordinate \m{pm} is the greatest possible. In this case, the curve, or function expressing the curve, remains the same; but in the other case, the form of the function whose maximum or minimum is required, is variable; for, let \m{\mathrm{M}}, \m{\mathrm{N}}, fig.~16, be any two given points in space, and suppose it were required, among the infinite number of curves that can be drawn between these two points, to determine that whose length is a minimum.
+\par\flushsidefloats
+\par\flushsidefloats
+\noindent If \m{ds} be the element of the curve, \m{\int ds} is the curve itself; now as the required curve must be a minimum, the variation of \m{\int ds} when made equal to zero, will give that curve, for when quantities are at their maxima or minima, their increments are zero. Thus the form of the function \m{\int ds} varies so as to fulfil the conditions of the problem, that is to say, in place of retaining its general form, it takes the form of that particular curve, subject to the conditions required.
+
+\Article{58}It is evident from the nature of variations, that the variation of a quantity is independent of its differential, so that we may take the differential of a variation as \m{d\mathpunct{.}\HeavensDelta y}, or the variation of a differential as \m{\HeavensDelta\mathpunct{.}dy}, and that \m{d\mathpunct{.}\HeavensDelta y=\HeavensDelta\mathpunct{.}dy}.
+
+\testpage[10]
+\Article{59}From what has been said, it appears that virtual velocities are real variations; for if a body be moving on a curve, the virtual velocity may be assumed either to be on the curve or not on the curve; it is consequently independent of the law by which the co-ordinates of the curve vary, unless when we choose to subject it to that law.
+
+\blank[2*line]
+\startalignment[middle]
+  \blackrule[width=45mm,height=.3pt]
+\stopalignment
+\ifdefined\MechanismCombined\else\expandafter\stoptext\fi

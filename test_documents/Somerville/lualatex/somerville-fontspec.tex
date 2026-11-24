@@ -1,0 +1,23 @@
+% !TeX root = somerville-fontspec.tex
+% !TeX program = lualatex
+% Compile from this directory: lualatex somerville-fontspec.tex
+\documentclass{article}
+\usepackage{unicode-math}
+
+\defaultfontfeatures{Path=../../../../fontoutputs/}
+\input{../../../../fontoutputs/Somervillecustom.fontspec}
+\setmainfont{Somervillecustom}
+
+\begin{document}
+\noindent
+\begin{tabular}{@{}l@{\quad}l@{}}
+Text & The quick brown fox 0123456789. \\
+Math & \(\symup{The\ quick\ brown\ fox\ 0123456789} x^2+y^2=z^2\). \\
+Bold & \textbf{The\ quick\ brown\ fox\ 0123456789.} \\
+Math bold & \(\symbf{The\ quick\ brown\ fox 0123456789oooABCxyz123}\). \\
+Italic & \textit{The quick brown fox 0123456789.} \\
+Math italic & \(\symit{The\ quick\ brown\ fox\ 0123456789 oooABCxyz123}\). \\
+Bold italic & \textbf{\textit{The quick brown fox 0123456789.}} \\
+Math bold italic & \(\symbfit{oooABCxyz123}\).
+\end{tabular}
+\end{document}

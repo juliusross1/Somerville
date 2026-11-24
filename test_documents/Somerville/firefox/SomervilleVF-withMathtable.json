@@ -1,0 +1,547 @@
+{
+  "source": "/Users/juliusross/Documents/Somerville/test_documents/Somerville/firefox/SomervilleVF-withMathtable-original.ttf",
+  "source_sha256": "ebbd5c4caeb95d33ed54be7b7e951ac6ad25f521caa2ffeb6bedbccc96eb1235",
+  "output": "/Users/juliusross/Documents/Somerville/test_documents/Somerville/firefox/SomervilleVF-withMathtable.ttf",
+  "mechanism": "MATH MathValueRecord DeviceTable -> VariationIndex 0x8000 -> GDEF.VarStore",
+  "variation_axis": "INSL",
+  "axis_default": 0.0,
+  "axis_maximum": 100.0,
+  "fraction_spacing_delta": 1240,
+  "constants": [
+    {
+      "constant": "MathLeading",
+      "origin": 0,
+      "delta": 200,
+      "at_insl_100": 200,
+      "variation_index": 65536
+    },
+    {
+      "constant": "AxisHeight",
+      "origin": 265,
+      "delta": 530,
+      "at_insl_100": 795,
+      "variation_index": 65537
+    },
+    {
+      "constant": "AccentBaseHeight",
+      "origin": 550,
+      "delta": 1100,
+      "at_insl_100": 1650,
+      "variation_index": 65538
+    },
+    {
+      "constant": "FlattenedAccentBaseHeight",
+      "origin": 708,
+      "delta": 1416,
+      "at_insl_100": 2124,
+      "variation_index": 65539
+    },
+    {
+      "constant": "SubscriptShiftDown",
+      "origin": 230,
+      "delta": 460,
+      "at_insl_100": 690,
+      "variation_index": 65540
+    },
+    {
+      "constant": "SubscriptTopMax",
+      "origin": 350,
+      "delta": 700,
+      "at_insl_100": 1050,
+      "variation_index": 65541
+    },
+    {
+      "constant": "SubscriptBaselineDropMin",
+      "origin": 225,
+      "delta": 450,
+      "at_insl_100": 675,
+      "variation_index": 65542
+    },
+    {
+      "constant": "SuperscriptShiftUp",
+      "origin": 440,
+      "delta": 880,
+      "at_insl_100": 1320,
+      "variation_index": 65543
+    },
+    {
+      "constant": "SuperscriptShiftUpCramped",
+      "origin": 350,
+      "delta": 700,
+      "at_insl_100": 1050,
+      "variation_index": 65544
+    },
+    {
+      "constant": "SuperscriptBottomMin",
+      "origin": 120,
+      "delta": 240,
+      "at_insl_100": 360,
+      "variation_index": 65545
+    },
+    {
+      "constant": "SuperscriptBaselineDropMax",
+      "origin": 320,
+      "delta": 640,
+      "at_insl_100": 960,
+      "variation_index": 65546
+    },
+    {
+      "constant": "SubSuperscriptGapMin",
+      "origin": 176,
+      "delta": 352,
+      "at_insl_100": 528,
+      "variation_index": 65547
+    },
+    {
+      "constant": "SuperscriptBottomMaxWithSubscript",
+      "origin": 410,
+      "delta": 820,
+      "at_insl_100": 1230,
+      "variation_index": 65548
+    },
+    {
+      "constant": "SpaceAfterScript",
+      "origin": 45,
+      "delta": 200,
+      "at_insl_100": 245,
+      "variation_index": 65549
+    },
+    {
+      "constant": "UpperLimitGapMin",
+      "origin": 160,
+      "delta": 320,
+      "at_insl_100": 480,
+      "variation_index": 65550
+    },
+    {
+      "constant": "UpperLimitBaselineRiseMin",
+      "origin": 60,
+      "delta": 200,
+      "at_insl_100": 260,
+      "variation_index": 65551
+    },
+    {
+      "constant": "LowerLimitGapMin",
+      "origin": 60,
+      "delta": 200,
+      "at_insl_100": 260,
+      "variation_index": 65552
+    },
+    {
+      "constant": "LowerLimitBaselineDropMin",
+      "origin": 700,
+      "delta": 1400,
+      "at_insl_100": 2100,
+      "variation_index": 65553
+    },
+    {
+      "constant": "StackTopShiftUp",
+      "origin": 320,
+      "delta": 640,
+      "at_insl_100": 960,
+      "variation_index": 65554
+    },
+    {
+      "constant": "StackTopDisplayStyleShiftUp",
+      "origin": 320,
+      "delta": 640,
+      "at_insl_100": 960,
+      "variation_index": 65555
+    },
+    {
+      "constant": "StackBottomShiftDown",
+      "origin": 240,
+      "delta": 480,
+      "at_insl_100": 720,
+      "variation_index": 65556
+    },
+    {
+      "constant": "StackBottomDisplayStyleShiftDown",
+      "origin": 225,
+      "delta": 450,
+      "at_insl_100": 675,
+      "variation_index": 65557
+    },
+    {
+      "constant": "StackGapMin",
+      "origin": 190,
+      "delta": 380,
+      "at_insl_100": 570,
+      "variation_index": 65558
+    },
+    {
+      "constant": "StackDisplayStyleGapMin",
+      "origin": 190,
+      "delta": 380,
+      "at_insl_100": 570,
+      "variation_index": 65559
+    },
+    {
+      "constant": "StretchStackTopShiftUp",
+      "origin": 100,
+      "delta": 200,
+      "at_insl_100": 300,
+      "variation_index": 65560
+    },
+    {
+      "constant": "StretchStackBottomShiftDown",
+      "origin": 100,
+      "delta": 200,
+      "at_insl_100": 300,
+      "variation_index": 65561
+    },
+    {
+      "constant": "StretchStackGapAboveMin",
+      "origin": 50,
+      "delta": 200,
+      "at_insl_100": 250,
+      "variation_index": 65562
+    },
+    {
+      "constant": "StretchStackGapBelowMin",
+      "origin": 50,
+      "delta": 200,
+      "at_insl_100": 250,
+      "variation_index": 65563
+    },
+    {
+      "constant": "FractionNumeratorShiftUp",
+      "origin": 374,
+      "delta": 1240,
+      "at_insl_100": 1614,
+      "variation_index": 65564
+    },
+    {
+      "constant": "FractionNumeratorDisplayStyleShiftUp",
+      "origin": 374,
+      "delta": 1240,
+      "at_insl_100": 1614,
+      "variation_index": 65565
+    },
+    {
+      "constant": "FractionDenominatorShiftDown",
+      "origin": 334,
+      "delta": 1240,
+      "at_insl_100": 1574,
+      "variation_index": 65566
+    },
+    {
+      "constant": "FractionDenominatorDisplayStyleShiftDown",
+      "origin": 334,
+      "delta": 1240,
+      "at_insl_100": 1574,
+      "variation_index": 65567
+    },
+    {
+      "constant": "FractionNumeratorGapMin",
+      "origin": 97,
+      "delta": 1240,
+      "at_insl_100": 1337,
+      "variation_index": 65568
+    },
+    {
+      "constant": "FractionNumDisplayStyleGapMin",
+      "origin": 97,
+      "delta": 1240,
+      "at_insl_100": 1337,
+      "variation_index": 65569
+    },
+    {
+      "constant": "FractionRuleThickness",
+      "origin": 47,
+      "delta": 200,
+      "at_insl_100": 247,
+      "variation_index": 65570
+    },
+    {
+      "constant": "FractionDenominatorGapMin",
+      "origin": 95,
+      "delta": 1240,
+      "at_insl_100": 1335,
+      "variation_index": 65571
+    },
+    {
+      "constant": "FractionDenomDisplayStyleGapMin",
+      "origin": 95,
+      "delta": 1240,
+      "at_insl_100": 1335,
+      "variation_index": 65572
+    },
+    {
+      "constant": "SkewedFractionHorizontalGap",
+      "origin": 0,
+      "delta": 1240,
+      "at_insl_100": 1240,
+      "variation_index": 65573
+    },
+    {
+      "constant": "SkewedFractionVerticalGap",
+      "origin": 0,
+      "delta": 1240,
+      "at_insl_100": 1240,
+      "variation_index": 65574
+    },
+    {
+      "constant": "OverbarVerticalGap",
+      "origin": 150,
+      "delta": 300,
+      "at_insl_100": 450,
+      "variation_index": 65575
+    },
+    {
+      "constant": "OverbarRuleThickness",
+      "origin": 39,
+      "delta": 200,
+      "at_insl_100": 239,
+      "variation_index": 65576
+    },
+    {
+      "constant": "OverbarExtraAscender",
+      "origin": 100,
+      "delta": 200,
+      "at_insl_100": 300,
+      "variation_index": 65577
+    },
+    {
+      "constant": "UnderbarVerticalGap",
+      "origin": 200,
+      "delta": 400,
+      "at_insl_100": 600,
+      "variation_index": 65578
+    },
+    {
+      "constant": "UnderbarRuleThickness",
+      "origin": 39,
+      "delta": 200,
+      "at_insl_100": 239,
+      "variation_index": 65579
+    },
+    {
+      "constant": "UnderbarExtraDescender",
+      "origin": 100,
+      "delta": 200,
+      "at_insl_100": 300,
+      "variation_index": 65580
+    },
+    {
+      "constant": "RadicalVerticalGap",
+      "origin": 100,
+      "delta": 200,
+      "at_insl_100": 300,
+      "variation_index": 65581
+    },
+    {
+      "constant": "RadicalDisplayStyleVerticalGap",
+      "origin": 100,
+      "delta": 200,
+      "at_insl_100": 300,
+      "variation_index": 65582
+    },
+    {
+      "constant": "RadicalRuleThickness",
+      "origin": 47,
+      "delta": 200,
+      "at_insl_100": 247,
+      "variation_index": 65583
+    },
+    {
+      "constant": "RadicalExtraAscender",
+      "origin": 100,
+      "delta": 200,
+      "at_insl_100": 300,
+      "variation_index": 65584
+    },
+    {
+      "constant": "RadicalKernBeforeDegree",
+      "origin": 50,
+      "delta": 200,
+      "at_insl_100": 250,
+      "variation_index": 65585
+    },
+    {
+      "constant": "RadicalKernAfterDegree",
+      "origin": -350,
+      "delta": -700,
+      "at_insl_100": -1050,
+      "variation_index": 65586
+    }
+  ],
+  "unchanged_plain_constants": {
+    "ScriptPercentScaleDown": 75,
+    "ScriptScriptPercentScaleDown": 55,
+    "DelimitedSubFormulaMinHeight": 1505,
+    "DisplayOperatorMinHeight": 1500,
+    "RadicalDegreeBottomRaisePercent": 60
+  },
+  "samples": [
+    {
+      "INSL": 0.0,
+      "values": {
+        "MathLeading": 0.0,
+        "AxisHeight": 265.0,
+        "AccentBaseHeight": 550.0,
+        "FlattenedAccentBaseHeight": 708.0,
+        "SubscriptShiftDown": 230.0,
+        "SubscriptTopMax": 350.0,
+        "SubscriptBaselineDropMin": 225.0,
+        "SuperscriptShiftUp": 440.0,
+        "SuperscriptShiftUpCramped": 350.0,
+        "SuperscriptBottomMin": 120.0,
+        "SuperscriptBaselineDropMax": 320.0,
+        "SubSuperscriptGapMin": 176.0,
+        "SuperscriptBottomMaxWithSubscript": 410.0,
+        "SpaceAfterScript": 45.0,
+        "UpperLimitGapMin": 160.0,
+        "UpperLimitBaselineRiseMin": 60.0,
+        "LowerLimitGapMin": 60.0,
+        "LowerLimitBaselineDropMin": 700.0,
+        "StackTopShiftUp": 320.0,
+        "StackTopDisplayStyleShiftUp": 320.0,
+        "StackBottomShiftDown": 240.0,
+        "StackBottomDisplayStyleShiftDown": 225.0,
+        "StackGapMin": 190.0,
+        "StackDisplayStyleGapMin": 190.0,
+        "StretchStackTopShiftUp": 100.0,
+        "StretchStackBottomShiftDown": 100.0,
+        "StretchStackGapAboveMin": 50.0,
+        "StretchStackGapBelowMin": 50.0,
+        "FractionNumeratorShiftUp": 374.0,
+        "FractionNumeratorDisplayStyleShiftUp": 374.0,
+        "FractionDenominatorShiftDown": 334.0,
+        "FractionDenominatorDisplayStyleShiftDown": 334.0,
+        "FractionNumeratorGapMin": 97.0,
+        "FractionNumDisplayStyleGapMin": 97.0,
+        "FractionRuleThickness": 47.0,
+        "FractionDenominatorGapMin": 95.0,
+        "FractionDenomDisplayStyleGapMin": 95.0,
+        "SkewedFractionHorizontalGap": 0.0,
+        "SkewedFractionVerticalGap": 0.0,
+        "OverbarVerticalGap": 150.0,
+        "OverbarRuleThickness": 39.0,
+        "OverbarExtraAscender": 100.0,
+        "UnderbarVerticalGap": 200.0,
+        "UnderbarRuleThickness": 39.0,
+        "UnderbarExtraDescender": 100.0,
+        "RadicalVerticalGap": 100.0,
+        "RadicalDisplayStyleVerticalGap": 100.0,
+        "RadicalRuleThickness": 47.0,
+        "RadicalExtraAscender": 100.0,
+        "RadicalKernBeforeDegree": 50.0,
+        "RadicalKernAfterDegree": -350.0
+      }
+    },
+    {
+      "INSL": 50.0,
+      "values": {
+        "MathLeading": 100.0,
+        "AxisHeight": 530.0,
+        "AccentBaseHeight": 1100.0,
+        "FlattenedAccentBaseHeight": 1416.0,
+        "SubscriptShiftDown": 460.0,
+        "SubscriptTopMax": 700.0,
+        "SubscriptBaselineDropMin": 450.0,
+        "SuperscriptShiftUp": 880.0,
+        "SuperscriptShiftUpCramped": 700.0,
+        "SuperscriptBottomMin": 240.0,
+        "SuperscriptBaselineDropMax": 640.0,
+        "SubSuperscriptGapMin": 352.0,
+        "SuperscriptBottomMaxWithSubscript": 820.0,
+        "SpaceAfterScript": 145.0,
+        "UpperLimitGapMin": 320.0,
+        "UpperLimitBaselineRiseMin": 160.0,
+        "LowerLimitGapMin": 160.0,
+        "LowerLimitBaselineDropMin": 1400.0,
+        "StackTopShiftUp": 640.0,
+        "StackTopDisplayStyleShiftUp": 640.0,
+        "StackBottomShiftDown": 480.0,
+        "StackBottomDisplayStyleShiftDown": 450.0,
+        "StackGapMin": 380.0,
+        "StackDisplayStyleGapMin": 380.0,
+        "StretchStackTopShiftUp": 200.0,
+        "StretchStackBottomShiftDown": 200.0,
+        "StretchStackGapAboveMin": 150.0,
+        "StretchStackGapBelowMin": 150.0,
+        "FractionNumeratorShiftUp": 994.0,
+        "FractionNumeratorDisplayStyleShiftUp": 994.0,
+        "FractionDenominatorShiftDown": 954.0,
+        "FractionDenominatorDisplayStyleShiftDown": 954.0,
+        "FractionNumeratorGapMin": 717.0,
+        "FractionNumDisplayStyleGapMin": 717.0,
+        "FractionRuleThickness": 147.0,
+        "FractionDenominatorGapMin": 715.0,
+        "FractionDenomDisplayStyleGapMin": 715.0,
+        "SkewedFractionHorizontalGap": 620.0,
+        "SkewedFractionVerticalGap": 620.0,
+        "OverbarVerticalGap": 300.0,
+        "OverbarRuleThickness": 139.0,
+        "OverbarExtraAscender": 200.0,
+        "UnderbarVerticalGap": 400.0,
+        "UnderbarRuleThickness": 139.0,
+        "UnderbarExtraDescender": 200.0,
+        "RadicalVerticalGap": 200.0,
+        "RadicalDisplayStyleVerticalGap": 200.0,
+        "RadicalRuleThickness": 147.0,
+        "RadicalExtraAscender": 200.0,
+        "RadicalKernBeforeDegree": 150.0,
+        "RadicalKernAfterDegree": -700.0
+      }
+    },
+    {
+      "INSL": 100.0,
+      "values": {
+        "MathLeading": 200.0,
+        "AxisHeight": 795.0,
+        "AccentBaseHeight": 1650.0,
+        "FlattenedAccentBaseHeight": 2124.0,
+        "SubscriptShiftDown": 690.0,
+        "SubscriptTopMax": 1050.0,
+        "SubscriptBaselineDropMin": 675.0,
+        "SuperscriptShiftUp": 1320.0,
+        "SuperscriptShiftUpCramped": 1050.0,
+        "SuperscriptBottomMin": 360.0,
+        "SuperscriptBaselineDropMax": 960.0,
+        "SubSuperscriptGapMin": 528.0,
+        "SuperscriptBottomMaxWithSubscript": 1230.0,
+        "SpaceAfterScript": 245.0,
+        "UpperLimitGapMin": 480.0,
+        "UpperLimitBaselineRiseMin": 260.0,
+        "LowerLimitGapMin": 260.0,
+        "LowerLimitBaselineDropMin": 2100.0,
+        "StackTopShiftUp": 960.0,
+        "StackTopDisplayStyleShiftUp": 960.0,
+        "StackBottomShiftDown": 720.0,
+        "StackBottomDisplayStyleShiftDown": 675.0,
+        "StackGapMin": 570.0,
+        "StackDisplayStyleGapMin": 570.0,
+        "StretchStackTopShiftUp": 300.0,
+        "StretchStackBottomShiftDown": 300.0,
+        "StretchStackGapAboveMin": 250.0,
+        "StretchStackGapBelowMin": 250.0,
+        "FractionNumeratorShiftUp": 1614.0,
+        "FractionNumeratorDisplayStyleShiftUp": 1614.0,
+        "FractionDenominatorShiftDown": 1574.0,
+        "FractionDenominatorDisplayStyleShiftDown": 1574.0,
+        "FractionNumeratorGapMin": 1337.0,
+        "FractionNumDisplayStyleGapMin": 1337.0,
+        "FractionRuleThickness": 247.0,
+        "FractionDenominatorGapMin": 1335.0,
+        "FractionDenomDisplayStyleGapMin": 1335.0,
+        "SkewedFractionHorizontalGap": 1240.0,
+        "SkewedFractionVerticalGap": 1240.0,
+        "OverbarVerticalGap": 450.0,
+        "OverbarRuleThickness": 239.0,
+        "OverbarExtraAscender": 300.0,
+        "UnderbarVerticalGap": 600.0,
+        "UnderbarRuleThickness": 239.0,
+        "UnderbarExtraDescender": 300.0,
+        "RadicalVerticalGap": 300.0,
+        "RadicalDisplayStyleVerticalGap": 300.0,
+        "RadicalRuleThickness": 247.0,
+        "RadicalExtraAscender": 300.0,
+        "RadicalKernBeforeDegree": 250.0,
+        "RadicalKernAfterDegree": -1050.0
+      }
+    }
+  ],
+  "validation": "Save/reopen, INSL 0/50/100, independence from wght, existing GDEF data and all unrelated tables checked."
+}

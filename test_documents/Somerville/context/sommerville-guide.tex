@@ -1,0 +1,1091 @@
+% !TEX program = context
+% !TEX root = sommerville-guide.tex
+
+\input type-imp-somerville.mkxl
+%\enabletrackers[visualizers.line]
+
+\setupbodyfontenvironment[default][em=italic]
+
+\definecolor[guide-paper][h=FBF4D8]
+\setupbackgrounds[page][background=color,backgroundcolor=guide-paper]
+
+% Page furniture and headings after Mechanism of the Heavens (1831).
+\definecharacterkerning[guide-capitals][factor=.12]
+\definecharacterkerning[guide-headings][factor=.04]
+\definefontfeature[guide-smallcaps][smcp=yes]
+\definefontfeature[guide-tabular-figures][lnum=yes,tnum=yes]
+\definefontfeature[guide-typing-figures][lnum=yes,onum=no,tnum=no,pnum=yes]
+\unexpanded\def\GuideSectionHeading#1#2{%
+  \vbox{%
+    \hsize\textwidth
+    \midaligned{{\setcharacterkerning[guide-headings]#1:\enspace#2}}%
+  }%
+}
+\setuphead[section]
+  [command=\GuideSectionHeading,
+   style={\switchtobodyfont[somerville-subheading,12pt]\tf\addff{guide-smallcaps}},
+   number=yes,
+   conversion=Romannumerals,
+   sectionsegments=current,
+   before={\blank[2*big]},
+   after={\blank[big]},
+   indentnext=yes]
+\unexpanded\def\GuidePartHeading#1#2{%
+  \vbox{%
+    \hsize\textwidth
+    \midaligned{{\setcharacterkerning[guide-headings]Part #1:\enspace#2}}%
+    \blank[small]
+    \midaligned{\blackrule[width=8mm,height=.3pt,depth=0pt]}%
+  }%
+}
+\setuphead[part]
+  [command=\GuidePartHeading,
+   style={\switchtobodyfont[somerville-subheading,17pt]\tf\addff{guide-smallcaps}},
+   placehead=yes,
+   number=yes,
+   conversion=Characters,
+   sectionsegments=current,
+   page=yes,
+   before={\blank[2*big]},
+   after={\blank[2*big]},
+   indentnext=yes]
+
+\setuppagenumbering[location=]
+\setupheader[style={\switchtobodyfont[somerville-micro,8pt]\rm\tf}]
+\setupheadertexts
+  [{\hbox to \makeupwidth{%
+      \hss\WORD{\getmarking[part]}\hss\llap{\userfolio}%
+    }}]
+\setupfootertexts[]
+
+\setupbodyfont[somerville-regular,12pt]
+\setupmathematics[differentiald=upright]
+\setupindenting[yes,medium]
+
+% Use the Micro optical design for inline and displayed verbatim text.
+\setuptype[style={\switchtobodyfont[somerville-micro]\rm\tf}]
+% Verbatim resets added features, so bake lining figures into its font.
+\definefontsynonym[GuideTypingFont][file:PlayfairRomanVF.ttf]
+  [features={default,somerville-micro-text-axes,guide-typing-figures}]
+\definefont[GuideTyping][GuideTypingFont sa 1]
+\setuptyping[style=\GuideTyping]
+
+
+% Display a full-width buffer with its vertical title to the left of the text area. Options: title={line one\crlf line two}, font=typeface.
+\newbox\ShowSampleBox
+\unexpanded\def\ShowSample{\dodoubleempty\doShowSample}
+\unexpanded\def\doShowSample[#1][#2]{%
+  \blank
+  \begingroup
+  \getparameters[ShowSample][title=,font=,minheight=0pt,#2]%
+  \setbox\ShowSampleBox\vbox{%
+    \doifnotempty{\ShowSamplefont}{\switchtobodyfont[\ShowSamplefont]}%
+    \hsize\textwidth
+    \setupindenting[no,0pt]
+    \parindent=0pt
+    \getbuffer[#1]\par
+  }%
+  \ifdim\ht\ShowSampleBox<\ShowSampleminheight\relax
+    \setbox\ShowSampleBox\vbox to \ShowSampleminheight{%
+      \vfil\box\ShowSampleBox\vfil}%
+  \fi
+  \noindent\hbox{%
+    \vbox to \ht\ShowSampleBox{%
+      \vfil
+      \hbox to 0pt{%
+        \kern-1.6cm
+        \doifnotempty{\ShowSampletitle}{%
+          \rotate[rotation=90]{%
+            \framed[frame=off,offset=0pt,align=middle,width=\ht\ShowSampleBox]
+              {\switchtobodyfont[somerville-micro,8pt]\ShowSampletitle}%
+          }%
+        }%
+        \hss
+      }%
+      \vfil
+    }%
+    \box\ShowSampleBox
+  }\par
+  \endgroup
+  \blank
+}
+
+
+
+\definefontfeature[somerville-ss15][ss15=yes]
+\starttypescript[math][somerville-regular-ss15]
+  \definefontsynonym[MathRoman][file:SomervilleMathVF.ttf]
+    [features={math\mathsizesuffix,mathextra,somerville-regular-math-axes,somerville-ss15}]
+\stoptypescript
+\definetypeface[somerville-regular-ss15][rm][serif][somerville-regular-text][default]
+\definetypeface[somerville-regular-ss15][mm][math][somerville-regular-ss15][default]
+
+\definefontfeature[somerville-ss16][ss16=yes]
+\starttypescript[math][somerville-regular-ss16]
+  \definefontsynonym[MathRoman][file:SomervilleMathVF.ttf]
+    [features={math\mathsizesuffix,mathextra,somerville-regular-math-axes,somerville-ss16}]
+\stoptypescript
+\definetypeface[somerville-regular-ss16][rm][serif][somerville-regular-text][default]
+\definetypeface[somerville-regular-ss16][mm][math][somerville-regular-ss16][default]
+
+\definefontfeature[somerville-ss17][ss17=yes]
+\starttypescript[math][somerville-regular-ss17]
+  \definefontsynonym[MathRoman][file:SomervilleMathVF.ttf]
+    [features={math\mathsizesuffix,mathextra,somerville-regular-math-axes,somerville-ss17}]
+\stoptypescript
+\definetypeface[somerville-regular-ss17][rm][serif][somerville-regular-text][default]
+\definetypeface[somerville-regular-ss17][mm][math][somerville-regular-ss17][default]
+
+\setupSomerville
+  {instance=regular,Width=107}
+  {somerville-regular-semisemiexpanded}
+
+\setupSomerville
+  {instance=regular,Integral Slant=50}
+  {somerville-regular-integralslant50}
+
+\setupSomerville
+  {instance=regular,Integral Slant=100}
+  {somerville-regular-integralslant100}
+
+\setupSomerville
+  {instance=regular}
+  {somerville-regular-arrowlength100}
+
+\setupSomerville
+  {instance=regular,Arrow Length=50}
+  {somerville-regular-arrowlength50}
+
+\setupSomerville
+  {instance=regular,Arrow Length=200}
+  {somerville-regular-arrowlength200}
+
+\setupSomerville
+  {instance=regular,Arrow Head=150}
+  {somerville-regular-arrowhead150}
+
+\setupSomerville
+  {instance=regular,Arrow Head=200}
+  {somerville-regular-arrowhead200}
+
+\setupSomerville
+  {instance=regular,Math Weight=25}
+  {somerville-regular-mathweight25}
+
+\setupSomerville
+  {instance=regular,Math Weight=75}
+  {somerville-regular-mathweight75}
+
+\setupSomerville
+  {instance=regular,Math Weight=0}
+  {somerville-regular-mathweight0}
+
+\setupSomerville
+  {instance=regular,Math Weight=100}
+  {somerville-regular-mathweight100}
+
+\starttext
+
+\startstandardmakeup[align=middle]
+  \blank[15mm]
+  {\switchtobodyfont[somerville-headline,26pt]\setcharacterkerning[guide-capitals]SOMERVILLE}\par
+  \blank[18mm]
+  {\switchtobodyfont[somerville-headline,22pt]\setcharacterkerning[guide-capitals]GUIDE.}\par
+  \blank[20mm]
+  {\switchtobodyfont[somerville-micro,8pt]BY}\par
+  \blank[8mm]
+  {\switchtobodyfont[somerville-subheading,13pt]\setcharacterkerning[guide-headings]JULIUS ROSS.}\par
+  \vfill
+  {\switchtobodyfont[somerville-subheading,10pt]SPECIMENS AND USAGE.}\par
+  \blank[4mm]
+  \midaligned{\blackrule[width=8mm,height=.3pt,depth=0pt]}
+  \blank[15mm]
+\stopstandardmakeup
+
+Somerville is a work-in-progress Opentype mathematics font designed by Julius Ross to accompany Playfair designed by Claus Eggers Sørensen.  It is intended to be used in {\CONTEXT} where it has received the most testing, but can also be used in other systems such as {\LATEX}.     The font is not expected at present to be useful for actual mathematics documents since it remains incomplete in many ways, the most serious being a lack of greek characters.   
+
+\blank[2*big]
+\midaligned{{\switchtobodyfont[somerville-subheading,12pt]\addff{guide-smallcaps}Contents}}
+\blank[big]
+\placelist[part][criterium=all,alternative=c,headnumber=always,numbersegments=1,numberstarter={Part\space},numberstopper={:},width=5em,style={\addff{guide-smallcaps}}]
+
+
+\part{Variation}
+
+Somerville experiments with combining OpenType variation and the OpenType mathematics table\footnote{It is noted that a variable MATH table is not an Opentype standard}, allowing the following features to be adjusted:
+
+\startitemize
+\item Weight, Width and Optical Size 
+\item Integral Slant
+\item Arrow Length and Arrow Head
+\item Math Weight (for the Mathematical Bold letters)
+\stopitemize
+
+% One table per column keeps numeric columns aligned across axis sections.
+\start
+\setupinterlinespace[line=12.5pt]
+\setupindenting[no]
+\hbox to \textwidth{\hfil%
+\vtop{\hsize=.30\textwidth
+\starttabulate[|p(70pt)|r|][unit=.4em,before={\blank[small]},after={\blank[medium]}]
+\NC {Width} \NC {\switchtobodyfont[somerville-regular]\addff{guide-tabular-figures}88--113} \NR
+\HL
+\NC SemiCondensed \NC {\addff{guide-tabular-figures}88} \NR
+\NC Regular \NC {\addff{guide-tabular-figures}100} \NR
+\NC SemiExpanded \NC {\addff{guide-tabular-figures}113} \NR
+\HL
+\TB[big]
+\NC {Weight} \NC {\switchtobodyfont[somerville-regular]\addff{guide-tabular-figures}360--900} \NR
+\HL
+\NC SemiLight \NC {\addff{guide-tabular-figures}360} \NR
+\NC Regular \NC {\addff{guide-tabular-figures}400} \NR
+\NC Medium \NC {\addff{guide-tabular-figures}500} \NR
+\NC SemiBold \NC {\addff{guide-tabular-figures}600} \NR
+\NC Bold \NC {\addff{guide-tabular-figures}700} \NR
+\NC ExtraBold \NC {\addff{guide-tabular-figures}800} \NR
+\NC Black \NC {\addff{guide-tabular-figures}900} \NR
+\HL
+\TB[big]
+\NC {Math Weight} \NC {\switchtobodyfont[somerville-regular]\addff{guide-tabular-figures}0--100} \NR
+\HL
+\NC None \NC {\addff{guide-tabular-figures}0} \NR
+\NC Lighter \NC {\addff{guide-tabular-figures}25} \NR
+\NC Regular \NC {\addff{guide-tabular-figures}50} \NR
+\NC Heavier \NC {\addff{guide-tabular-figures}75} \NR
+\NC Heaviest \NC {\addff{guide-tabular-figures}100} \NR
+\HL
+\stoptabulate
+\blank[small]
+}%
+\hskip.06\textwidth
+\vtop{\hsize=.30\textwidth
+\starttabulate[|p(70pt)|r|][unit=.4em,before={\blank[small]},after={\blank[medium]}]
+\NC {Optical Size} \NC {\switchtobodyfont[somerville-regular]\addff{guide-tabular-figures}5--1200} \NR
+\HL
+\NC Micro \NC {\addff{guide-tabular-figures}5} \NR
+\NC Minuscule \NC {\addff{guide-tabular-figures}6} \NR
+\NC Miniature \NC {\addff{guide-tabular-figures}7} \NR
+\NC Caption \NC {\addff{guide-tabular-figures}8} \NR
+\NC Regular \NC {\addff{guide-tabular-figures}12} \NR
+\NC SubHeading \NC {\addff{guide-tabular-figures}16} \NR
+\NC Trumpet \NC {\addff{guide-tabular-figures}21} \NR
+\NC Headline \NC {\addff{guide-tabular-figures}32} \NR
+\NC Display \NC {\addff{guide-tabular-figures}48} \NR
+\NC Titling \NC {\addff{guide-tabular-figures}72} \NR
+\NC Hairline \NC {\addff{guide-tabular-figures}96} \NR
+%\NC Needlepoint \NC {\addff{guide-tabular-figures}1200} \NR
+\HL
+\stoptabulate
+\blank[small]
+}%
+\hskip.06\textwidth
+\vtop{\hsize=.30\textwidth
+\starttabulate[|p(70pt)|r|][unit=.4em,before={\blank[small]},after={\blank[medium]}]
+\NC {Integral Slant} \NC {\switchtobodyfont[somerville-regular]\addff{guide-tabular-figures}0--100} \NR
+\HL
+\NC Regular \NC {\addff{guide-tabular-figures}0} \NR
+\NC SemiSlanted \NC {\addff{guide-tabular-figures}50} \NR
+\NC Slanted \NC {\addff{guide-tabular-figures}100} \NR
+\HL
+\TB[big]
+\NC {Arrow Length} \NC {\switchtobodyfont[somerville-regular]\addff{guide-tabular-figures}0--200} \NR
+\HL
+\NC Shortest \NC {\addff{guide-tabular-figures}0} \NR
+\NC Short \NC {\addff{guide-tabular-figures}50} \NR
+\NC Regular \NC {\addff{guide-tabular-figures}100} \NR
+\NC Long \NC {\addff{guide-tabular-figures}150} \NR
+\NC Longest \NC {\addff{guide-tabular-figures}200} \NR
+\HL
+\TB[big]
+\NC {Arrow Head} \NC {\switchtobodyfont[somerville-regular]\addff{guide-tabular-figures}100--200} \NR
+\HL
+\NC Regular \NC {\addff{guide-tabular-figures}100} \NR
+\NC Larger \NC {\addff{guide-tabular-figures}150} \NR
+\NC Largest \NC {\addff{guide-tabular-figures}200} \NR
+\HL
+\stoptabulate
+\blank[small]
+}%
+\hfil}\par
+\stop
+
+\startbuffer[mathsamplesubheading]
+Lorem ipsum dolor sit amet, \m{x^n + y^n=z^n} consectetur adipiscing elit, sed \m{g=|\hat{w}|} eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, \m{\fenced[angle]{\tilde{u},\dot{v}}=0} quis nostrud exercitation ullamco laboris nisi ut \m{ \{ \hbar: \hbar<2 \}} aliquip ex ea commodo consequat.
+\stopbuffer
+
+\startbuffer[mathsampleone]
+Lorem ipsum dolor sit amet, \m{x^n + y^n=z^n} consectetur adipiscing elit, sed \m{g=|\hat{w}|} eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min veniam, \m{\fenced[angle]{\tilde{u},\dot{v}}=0} quis nostrud exercitation ullamco laboris nisi ut \m{ \{ \hbar: \hbar<2 \}} aliquip ex ea commodo consequat.
+\startformula
+\Delta(s) = \sum[size=\dimexpr\bodyfontsize*16/12\relax]{\frac{1}{n^s}}_{n=1}^{\infty} = \prod[size=\dimexpr\bodyfontsize*16/12\relax]{\fenced[parenthesis]{1-\frac{1}{p^s}}^{-1}}_{p\ \mathrm{primi}}, \qquad \mathrm{Re}(s)>1.
+\stopformula
+\stopbuffer
+
+\startbuffer[mathsamplemedium]
+Lorem ipsum dolor sit amet, \m{x^n + y^n = z^n} consectetur adipiscing elit.%\crlf \m{\fenced[angle]{a,b}=0}
+\stopbuffer
+
+\startbuffer[mathsampleheadline]
+Lorem ipsum dolor sit amet\crlf \m{x^n + y^n = z^n}
+\stopbuffer
+
+\startbuffer[mathsampledisplay]
+Lorem ipsum dolor \crlf 
+\m{x^n + y^n = z^n}
+\stopbuffer
+
+\startbuffer[mathsampletitling]
+%Lorem ipsum\crlf 
+%\m{x^n + y^n = z^n}
+Lorem ipsum \crlf 
+\m{x^n + y^n = z^n}
+\stopbuffer
+
+\startbuffer[mathsampleshort]
+Lorem ips.\crlf
+\m{x^n + y^n=z^n}
+\stopbuffer
+
+\page
+\section{Width}
+%\chapter[Widths]
+\ShowSample[mathsampleone][title={Width = 88\crlf (SemiCondensed)},font=somerville-regular-semicondensed]
+
+\ShowSample[mathsampleone][title={Width = 100\crlf (Regular)},font=somerville-regular]
+
+\ShowSample[mathsampleone][title={Width = 107},font=somerville-regular-semisemiexpanded]
+
+\ShowSample[mathsampleone][title={Width = 113\crlf (SemiExpanded)},font=somerville-regular-semiexpanded]
+
+\page
+\section{Weight}
+
+\ShowSample[mathsampleone][title={Weight = 360\crlf (SemiLight)},font=somerville-regular-semilight]
+
+\ShowSample[mathsampleone][title={Weight = 400\crlf (Regular)},font=somerville-regular]
+
+\ShowSample[mathsampleone][title={Weight = 500\crlf (Medium)},font=somerville-regular-medium]
+
+\ShowSample[mathsampleone][title={Weight = 600\crlf (SemiBold)},font=somerville-regular-semibold]
+
+\ShowSample[mathsampleone][title={Weight = 700\crlf (Bold)},font=somerville-regular-bold]
+
+\ShowSample[mathsampleone][title={Weight = 800\crlf (ExtraBold)},font=somerville-regular-extrabold]
+
+\ShowSample[mathsampleone][title={Weight = 900\crlf (Black)},font=somerville-regular-black]
+
+\page
+\section{Optical Size}
+
+\ShowSample[mathsampleone][title={opsz = 5 at 5pt\crlf (Micro)},font={somerville-micro,5pt}]
+
+\ShowSample[mathsampleone][title={opsz = 6 at 6pt\crlf (Minuscule)},font={somerville-minuscule,6pt}]
+
+\ShowSample[mathsampleone][title={opsz = 7 at 7pt\crlf (Miniature)},font={somerville-miniature,7pt}]
+
+\ShowSample[mathsampleone][title={opsz = 8 at 8pt\crlf (Caption)},font={somerville-caption,8pt}]
+
+\ShowSample[mathsampleone][title={opsz = 12 at 12pt\crlf (Regular)},font={somerville-regular,12pt}]
+
+\ShowSample[mathsamplesubheading][title={opsz = 16 at 16pt\crlf (SubHeading)},font={somerville-subheading,16pt}]
+
+\ShowSample[mathsamplemedium][title={opsz = 21 at 21pt\crlf (Trumpet)},font={somerville-trumpet,21pt},minheight=80pt]
+\page
+\ShowSample[mathsampleheadline][title={opsz = 32 \crlf at 32pt\crlf (Headline)},font={somerville-headline,32pt}]
+
+\ShowSample[mathsampledisplay][title={opsz = 48 at 48pt\crlf (Display)},font={somerville-display,48pt}]
+
+\ShowSample[mathsampletitling][title={opsz = 72 at 72pt\crlf (Titling)},font={somerville-titling,72pt}]
+
+\ShowSample[mathsampleshort][title={opsz = 96 at 96pt\crlf (Hairline)},font={somerville-hairline,96pt}]
+
+
+\section{Integral Slant}
+
+\startbuffer[integralsample]
+Sit fundamentalum \m{\int_a^b u'(t) \dd t=u(b)-u(a)} et amet Pompeii integralis:
+
+
+\startformula
+  % Cauchy--Pompeiu: a is in D; the boundary is positively oriented; f is C^1 near the closure of D.
+  f(a)=\frac{1}{2\pi i}\oint{\frac{f(z)}{z-a} \dd z}_{\partial D}
+  -\frac{1}{\pi}\iint{\frac{1}{z-a}\frac{\partial f}{\partial\bar z} \dd x\! \dd y}_{D}.
+\stopformula
+
+% \startformula
+%   \iint{\frac{\mathrm{d}x\,\mathrm{d}y}{1+x^2+y^2}}_{D},
+%   \qquad
+%   \iiint{\frac{\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z}{1+x^2+y^2+z^2}}_{B},
+%   \qquad
+%   \iiiint{\frac{e^{-(x_1^2+x_2^2+x_3^2+x_4^2)}}{\pi^2}\,\mathrm{d}^4x}_{\mathrm{R}^4}=1.
+% \stopformula
+\stopbuffer
+
+\ShowSample[integralsample][title={Integral \crlf Slant = 0\crlf (Regular)},font={somerville-regular,12pt}]
+
+\ShowSample[integralsample][title={Integral \crlf Slant = 50\crlf (SemiSlanted)},font={somerville-regular-integralslant50,12pt}]
+
+\ShowSample[integralsample][title={Integral \crlf Slant = 100\crlf (Slanted)},font={somerville-regular-integralslant100,12pt}]
+
+\section{Arrows}
+
+
+
+
+
+\startbuffer[arrowsample]
+\vbox to 48pt{\vfil
+\startformula
+  \hbox to \textwidth{\hss
+    \def\ArrowSampleCell#1{%
+      \hbox to \dimexpr\textwidth/24\relax{\hss\m{#1}\hss}}%
+    \ArrowSampleCell{←}%
+    \ArrowSampleCell{→}%
+    \ArrowSampleCell{↔}%
+    \ArrowSampleCell{⇐}%
+    \ArrowSampleCell{⇒}%
+    \ArrowSampleCell{⇔}%
+    \ArrowSampleCell{↚}%
+    \ArrowSampleCell{↛}%
+    \ArrowSampleCell{↮}%
+    \ArrowSampleCell{⇄}%
+    \hss}
+\stopformula
+\vfil}
+\stopbuffer
+
+\ShowSample[arrowsample][title={Arrow Length\crlf = 50\crlf (Short)},font={somerville-regular-arrowlength50}]
+
+\ShowSample[arrowsample][title={Arrow Length\crlf = 100\crlf (Regular)},font={somerville-regular-arrowlength100}]
+
+\ShowSample[arrowsample][title={Arrow Length\crlf = 200\crlf (Longest)},font={somerville-regular-arrowlength200}]
+
+\ShowSample[arrowsample][title={Arrow Head\crlf = 150\crlf (Larger)},font={somerville-regular-arrowhead150}]
+
+\ShowSample[arrowsample][title={Arrow Head\crlf = 200\crlf (Largest)},font={somerville-regular-arrowhead200}]
+
+
+
+
+\section{Mathematics Weight}
+
+\startbuffer[mathweightsample]
+\startformula
+\startalign[n=2]
+  \NC \nabla\cdot\mathbf{E}=0,
+  \NC \nabla\cdot\mathbf{B}=0, \NR
+  \NC \nabla\times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t},
+  \NC \nabla\times\mathbf{B}=\frac{1}{c^2}\frac{\partial\mathbf{E}}{\partial t}. \NR
+\stopalign
+\stopformula
+\stopbuffer
+
+\ShowSample[mathweightsample][title={Math\crlf Weight = 0\crlf (None)},font={somerville-regular-mathweight0}]
+
+\ShowSample[mathweightsample][title={Math\crlf Weight= 25\crlf (Lighter)},font={somerville-regular-mathweight25}]
+
+\ShowSample[mathweightsample][title={Math\crlf Weight= 50\crlf (Regular)},font={somerville}]
+
+\ShowSample[mathweightsample][title={Math\crlf Weight= 75\crlf (Heavier)},font={somerville-regular-mathweight75}]
+
+\ShowSample[mathweightsample][title={Math\crlf Weight = 100\crlf (Heaviest)},font={somerville-regular-mathweight100}]
+
+
+\part{Symbols}
+
+\section{Mathematical Alphabets}
+
+\startformula
+  \mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}
+\stopformula
+
+\startformula
+  \mathrm{abcdefghijklmnopqrstuvwxyz}
+\stopformula
+
+\startformula
+  \mathit{ABCDEFGHIJKLMNOPQRSTUVWXYZ}
+\stopformula
+
+\startformula
+  \mathit{abcdefghijklmnopqrstuvwxyz}
+\stopformula
+
+\startformula
+  {\bi ABCDEFGHIJKLMNOPQRSTUVWXYZ}
+\stopformula
+
+\startformula
+  {\bi abcdefghijklmnopqrstuvwxyz}
+\stopformula
+
+\startformula
+  \mathrm{0123456789}
+\stopformula
+
+\startformula
+  \mathbf{0123456789}
+\stopformula
+
+
+% Greek letters available in the exported font; each row uses supported styles.
+\startformula
+  \mathrm{\Delta\Omega\beta\gamma\lambda\mu\pi\tau}
+\stopformula
+
+\startformula
+  \mathit{\Delta\Omega\lambda\mu\pi}
+\stopformula
+
+\startformula
+  \mathbf{\Delta\Omega\lambda\mu\pi\tau}
+\stopformula
+
+\startformula
+  {\bi \Delta\Omega\lambda\mu\pi}
+\stopformula
+
+\startformula
+  \mathbb{Q}
+\stopformula
+
+\section{Accents and Primes}
+
+\startformula
+f' = u'' = g'''= u''''
+\stopformula
+
+\startformula
+  \grave{a}\quad \acute{a}\quad \hat{f}\quad \check{v}\quad
+  \breve{u}\quad \bar{z}\quad \tilde{x}\quad \dot{x}\quad \ddot{x} \quad \dddot{x} \quad \ddddot{x}
+\stopformula
+
+\startformula
+  \widehat{x}\quad \widehat{xy}\quad \widehat{x_1+x_2+x_3}
+  \qquad
+  \widetilde{x}\quad \widetilde{xy}\quad \widetilde{x_1+x_2+x_3}
+\stopformula
+
+\startformula
+  \overline{z_1+z_2}
+  \qquad
+  \overline{\frac{a+b}{c+d}}
+\stopformula
+
+% The Ext example from the earlier Stacks Project sample.
+\startformula
+ \widetilde{\mathrm{Ext}_A^{d-i}(M,A)} = 0.
+\stopformula
+
+
+
+
+\section{Radicals}
+
+\startformula
+  r=\sqrt{x^2+y^2},
+  \qquad
+  x=\frac{-b\pm\sqrt{b^2-4ac}}{2a},
+  \qquad
+  x_{\mathrm{rms}}=\sqrt{\frac{\sum{x_i^2}_{i=1}^{n}}{n}}.
+\stopformula
+
+\startformula
+  \sqrt{1+\frac{x^2}{1+\sqrt{1+x^2}}}
+    =\sqrt[4]{1+x^2},
+  \qquad
+  \sqrt{\frac{1+\frac{x^2}{1+y^2}}{1+\frac{y^2}{1+x^2}}}
+    =\sqrt{\frac{1+x^2}{1+y^2}}.
+\stopformula
+
+
+
+
+
+
+\section{Big Operators}
+
+
+% \startformula
+% \bigcup \bigcap \bigsqcap \bigsqcup \bigotimes \bigoplus \sum \prod \coprod \bigodot \biguplus \bigudot \bigtimes
+% \stopformula
+% \startformula
+% \doloopoverlist{2,3,4,5,6,7,8,9,10,11,12}{
+% \Umathchar 0 0 \getmathvariant\recursestring "2211\relax\quad}
+% \stopformula
+% \startformula
+% \doloopoverlist{13,14,15,16,17,18,19,20,21}{
+% \Umathchar 0 0 \getmathvariant\recursestring "2211\relax\quad}
+% \stopformula
+
+% Cycle through the operators above, increasing the variant size each time.
+\newcount\GuideBigOperatorSize
+% Centre each selected variant's box on the current math axis.
+\unexpanded\def\GuideAxisCenteredBigOperator#1{%
+  \vcenter{\hbox{\m{\textstyle
+    \Umathchar 0 0 \getmathvariant\GuideBigOperatorSize "#1\relax}}}%
+}
+\GuideBigOperatorSize=2
+\startformula
+\doloopoverlist{2A02,22C2,2A05,2A06,2A02,2A01,2211,220F,2210,2A00,2A04}{%
+  \GuideAxisCenteredBigOperator{\recursestring}\quad
+  \advance\GuideBigOperatorSize by 1\relax}
+\stopformula
+\GuideBigOperatorSize=13
+\startformula
+\doloopoverlist{2A03,2A09,22C3,22C2,2A05,2A06}{%
+  \GuideAxisCenteredBigOperator{\recursestring}\quad
+  \advance\GuideBigOperatorSize by 1\relax}
+\stopformula
+\GuideBigOperatorSize=19
+\startformula
+\doloopoverlist{2A02,2A01,2211}{%
+  \GuideAxisCenteredBigOperator{\recursestring}\quad
+  \advance\GuideBigOperatorSize by 1\relax}
+\stopformula
+
+\blank[25pt]
+
+\startformula
+  \sum[size=26pt]{\frac{
+    \bigcup{\frac{\bigcap{A_i}}{\bigsqcup{B_i}}}
+  }{
+    \bigoplus{\frac{\bigotimes{C_k}}{\bigsqcap{D_l}}}
+  }}
+  \prod[size=26pt]{\frac{
+    \bigodot{\frac{\biguplus{E_i}}{\bigtimes{F_j}}}
+  }{
+    \coprod{\frac{\sum{a_k}}{\prod{b_l}}}
+  }}
+  \bigoplus[size=28pt]{\frac{
+    \bigsqcup{\frac{\bigcup[size=4pt]{G_i}}{\biguplus[size=4pt]{H_i}}}
+  }{
+    \bigotimes{\frac{\bigsqcap{K_k}}{\bigodot{L_l}}}
+  }}\biguplus[size=26pt]{\frac{
+    \bigsqcap{\frac{M_i}{N_j}}
+  }{
+    \sum{\frac{P_k}{Q_l}}
+  }}.
+\stopformula
+
+% \startformula
+%   \hbox{\startoverlay
+%     {\color[black]{\m{\displaystyle\bigudot[size=4pt]}}}
+%     {\color[red]{\m{\displaystyle\bigcup[size=4pt]}}}
+%   \stopoverlay}
+% \stopformula
+
+% \startformula
+%   \bigcup[size=56pt]\sum[size=56pt]\prod[size=56pt]\bigotimes[size=50pt]\bigoplus[size=50pt]
+% \stopformula
+
+% \dm{
+% \Umathchar 1 0 \getmathvariant21 "2A02\relax 
+% }
+
+\section{Integrals}
+
+%\startformula
+%   \int_0^1 \ast \iint_0^1 \ast \iiint_0^1 \ast \iiiint_0^1 \ast \oint_0^1
+%\stopformula
+
+
+\doloopoverlist{10pt,15pt,30pt}{
+\startformula
+   \int[size=\recursestring]_0^1 \ast \iint[size=\recursestring]_0^1 \ast \iiint[size=\recursestring]_0^1 \ast \iiiint[size=\recursestring]_0^1 \ast \oint[size=\recursestring]_0^1
+\stopformula
+}
+
+\section{Fences}
+
+\startbuffer[fencesample]
+\startformula
+\startalign[n=1]
+  \NC \fenced[parenthesis]{x+y} \quad \fenced[bracket]{0,1} \quad \fenced[brace]{x,y}
+      \quad \fenced[angle]{u,v} \quad \fenced[doubleangle]{M,N} \NR
+  \NC \fenced[floor]{x} \quad \fenced[ceiling]{x}
+      \quad \fenced[bar]{x} \quad \fenced[doublebar]{\mathbf{v}} \NR
+  \NC \fenced[parenthesis]{\frac{x+y}{2}}
+      \quad \fenced[bracket]{\frac{a}{b},\frac{c}{d}}
+      \quad \fenced[brace]{\frac{1}{n}:n\geq1}
+      \quad \fenced[angle]{\frac{u}{2},\frac{v}{3}}
+      \quad \fenced[doubleangle]{\frac{M}{2},\frac{N}{3}} \NR
+  % \NC \fenced[floor]{\frac{x}{2}}
+  %     \quad \fenced[ceiling]{\frac{x}{2}}
+  %     \quad \fenced[bar]{\frac{x-y}{x+y}}
+  %     \quad \fenced[doublebar]{\frac{\mathbf{v}}{2}} \NR
+  \NC \fenced[parenthesis]{\frac{1+\frac{1}{x}}{1+x^2}}
+      \quad \fenced[bracket]{0,\frac{1}{1+\frac{1}{n}}}
+      \quad \fenced[brace]{\frac{1}{1+\frac{1}{n}}:n\geq1}
+      \quad \fenced[angle]{\frac{u}{1+\frac{1}{n}},v}
+      \quad \fenced[doubleangle]{\frac{M}{1+\frac{1}{n}},N} \NR
+  \NC \fenced[floor]{\frac{x}{1+\frac{1}{n}}}
+      \quad \fenced[ceiling]{\frac{x}{1+\frac{1}{n}}}
+      \quad \fenced[bar]{\frac{x-y}{1+\frac{x}{y}}}
+      \quad \fenced[doublebar]{\frac{\mathbf{v}}{1+\frac{1}{n}}} \NR
+\stopalign
+\stopformula
+\stopbuffer
+\getbuffer[fencesample]
+
+
+
+\section{Arrows}
+% Standard-size horizontal arrows and harpoons supported by Somerville.
+\startbuffer[allhorizontalarrows]
+\startformula
+\startalign[n=1]
+  \NC ← \quad → \quad ↔ \quad ⇐ \quad ⇒ \quad ⇔ \quad ↚ \quad ↛ \quad ↮ \quad ⇍ \quad ⇏ \quad ⇎ \quad ↞ \quad ↠ \quad ↢ \quad ↣ \NR
+  \NC ↤ \quad ↦ \quad ⇤ \quad ⇥ \quad ⤆ \quad ⤇ \quad ⇷ \quad ⇸ \quad ⇹ \quad ⇺ \quad ⇻ \quad ⤀ \quad ⤁ \quad ⤂ \quad ⤃ \quad ⤄ \NR
+  \NC ⤅ \quad ⤑ \quad ⤔ \quad ⤕ \quad ⤖ \quad ⤗ \quad ⤘ \quad ⇄ \quad ⇆ \quad ⇇ \quad ⇉ \quad ↹ \quad ⤙ \quad ⤚ \quad ⤛ \quad ⤜ \NR
+  \NC ↼ \quad ↽ \quad ⇀ \quad ⇁ \quad ⇋ \quad ⇌ \quad ⥊ \quad ⥋ \quad ⥎ \quad ⥐ \quad ⥒ \quad ⥓ \quad ⥖ \quad ⥗ \quad ⥚ \quad ⥛ \NR
+  \NC ⥞ \quad ⥟ \quad ⥢ \quad ⥤ \quad ⥦ \quad ⥧ \quad ⥨ \quad ⥩ \quad ⥪ \quad ⥫ \quad ⥬ \quad ⥭ \NR
+\stopalign
+\stopformula
+% Long horizontal variants.
+\startformula
+\startalign[n=1]
+  \NC ⟵ \quad ⟶ \quad ⟷ \quad ⟸ \quad ⟹ \quad ⟺ \quad ⟻ \quad ⟼ \quad ⟽ \quad ⟾ \NR
+\stopalign
+\stopformula
+\stopbuffer
+\getbuffer[allhorizontalarrows]
+\section{Docked Arrows}
+
+\startbuffer[dockedhorizontalarrows]
+\startformula
+\startalign[n=1]
+  \NC ← \quad → \quad ⇐ \quad ⇒ \quad ↚ \quad ↛ \quad ↮ \quad ⇍ \quad ⇏ \quad ↞ \quad ↠ \quad ↢ \quad ↣ \quad ⇤ \quad ⇥ \NR
+  \NC ⇷ \quad ⇸ \quad ⇺ \quad ⇻ \quad ⤀ \quad ⤁ \quad ⤂ \quad ⤃ \quad ⤔ \quad ⤕ \quad ⤖ \quad ⤗ \quad ⤘ \quad ⇄ \quad ⇆ \NR
+  \NC ⇇ \quad ⇉ \quad ↹ \quad ↼ \quad ↽ \quad ⇀ \quad ⇁ \quad ⇋ \quad ⇌ \quad ⥒ \quad ⥓ \quad ⥖ \quad ⥗ \quad ⥢ \quad ⥤ \NR
+  \NC ⥦ \quad ⥧ \quad ⥨ \quad ⥩ \quad ⥪ \quad ⥫ \quad ⥬ \quad ⥭ \quad ⟵ \quad ⟶ \quad ⟸ \quad ⟹ \NR
+\stopalign
+\stopformula
+\stopbuffer
+
+\ShowSample[dockedhorizontalarrows][title={ss17 = yes},font={somerville-regular-ss17,12pt}]
+
+\section{Extended Arrows}
+
+
+\start
+\switchtobodyfont[somerville-regular,10pt]
+\startlinecorrection[blank]
+\midaligned{
+\startMPcode
+  picture arrow[], uppernode[], lowernode[], thirdnode[];
+  numeric dx[], nodewidth[], dy, gap, arrowcode[];
+  arrowcode[0] := 8594; % U+2192 →
+  arrowcode[1] := 8596; % U+2194 ↔
+  arrowcode[2] := 8658; % U+21D2 ⇒
+  arrowcode[3] := 8660; % U+21D4 ⇔
+  arrowcode[4] := 8602; % U+219A ↚
+  arrowcode[5] := 8603; % U+219B ↛
+  arrowcode[6] := 8622; % U+21AE ↮
+  arrowcode[7] := 8653; % U+21CD ⇍
+  arrowcode[8] := 8606; % U+219E ↞
+  arrowcode[9] := 8608; % U+21A0 ↠
+  arrowcode[10] := 8647; % U+21C7 ⇇
+  arrowcode[11] := 8649; % U+21C9 ⇉
+  arrowcode[12] := 8644; % U+21C4 ⇄
+  arrowcode[13] := 8655; % U+21CF ⇏
+  arrowcode[14] := 8654; % U+21CE ⇎
+  arrowcode[15] := 8614; % U+21A6 ↦
+  arrowcode[16] := 8612; % U+21A4 ↤
+  arrowcode[17] := 8646; % U+21C6 ⇆
+  arrowcode[18] := 8651; % U+21CB ⇋
+  arrowcode[19] := 8652; % U+21CC ⇌
+  arrowcode[20] := 8640; % U+21C0 ⇀
+  arrowcode[21] := 8641; % U+21C1 ⇁
+  for i = 0 upto 21:
+    if (i < 8) or ((i >= 13) and (i <= 16)):
+      arrow[i] := textext("\hbox to 6em{\mathfiller{" & decimal arrowcode[i] & "}}");
+    else:
+      arrow[i] := textext("\hbox to 2em{\mathfiller{" & decimal arrowcode[i] & "}}");
+    fi;
+    arrow[i] := arrow[i] shifted -(center arrow[i]);
+  endfor;
+  gap := 4pt;
+  dy := bbwidth(arrow[8]) + 18pt;
+  uppernode[0] := textext("\m{0}");
+  uppernode[1] := textext("\m{H_n(X)}");
+  uppernode[2] := textext("\m{\displaystyle\frac{C_n(X)}{B_n(X)}}");
+  uppernode[3] := textext("\m{B_{n-1}(X)}");
+  uppernode[4] := textext("\m{0}");
+  lowernode[0] := textext("\m{0}");
+  lowernode[1] := textext("\m{H_n(Y)}");
+  lowernode[2] := textext("\m{\displaystyle\frac{C_n(Y)}{B_n(Y)}}");
+  lowernode[3] := textext("\m{B_{n-1}(Y)}");
+  lowernode[4] := textext("\m{0}");
+  thirdnode[0] := textext("\m{0}");
+  thirdnode[1] := textext("\m{H_n(Z)}");
+  thirdnode[2] := textext("\m{\displaystyle\frac{C_n(Z)}{B_n(Z)}}");
+  thirdnode[3] := textext("\m{B_{n-1}(Z)}");
+  thirdnode[4] := textext("\m{0}");
+  for c = 0 upto 4:
+    nodewidth[c] := max(bbwidth(uppernode[c]), bbwidth(lowernode[c]), bbwidth(thirdnode[c]));
+  endfor;
+  dx[0] := 0;
+  for c = 1 upto 4:
+    dx[c] := dx[c-1] + nodewidth[c-1]/2 + nodewidth[c]/2
+             + bbwidth(arrow[0]) + 2gap;
+  endfor;
+
+  for c = 0 upto 4:
+    draw uppernode[c] shifted ((dx[c],0) - center uppernode[c]);
+    draw lowernode[c] shifted ((dx[c],-dy) - center lowernode[c]);
+    draw thirdnode[c] shifted ((dx[c],-2dy) - center thirdnode[c]);
+    draw arrow[c+8] rotated -90 shifted (dx[c], -dy/2);
+    draw arrow[c+17] rotated -90 shifted (dx[c], -1.5dy);
+  endfor;
+  for c = 0 upto 3:
+    draw arrow[c] shifted (dx[c] + nodewidth[c]/2 + gap + bbwidth(arrow[0])/2, 0);
+    draw arrow[c+4] shifted (dx[c] + nodewidth[c]/2 + gap + bbwidth(arrow[0])/2, -dy);
+    draw arrow[c+13] shifted (dx[c] + nodewidth[c]/2 + gap + bbwidth(arrow[0])/2, -2dy);
+  endfor;
+\stopMPcode
+}
+\stoplinecorrection
+\stop
+
+
+\section{Mathematical Symbols}
+
+% Remaining symbols in the current export, beyond the samples above.
+\m{
+  ÷ \quad\allowbreak ∓ \quad\allowbreak ∔ \quad\allowbreak ∸ \quad\allowbreak ⁒ \quad\allowbreak
+  ∗ \quad\allowbreak ∘ \quad\allowbreak ∖ \quad\allowbreak ∩ \quad\allowbreak ∪ \quad\allowbreak
+  ⊍ \quad\allowbreak ⊕ \quad\allowbreak ⊖ \quad\allowbreak ⊘ \quad\allowbreak ⊚ \quad\allowbreak ⊛ \quad\allowbreak
+  ∈ \quad\allowbreak ∣ \quad\allowbreak ≠ \quad\allowbreak ≤ \quad\allowbreak
+  ≐ \quad\allowbreak ≑ \quad\allowbreak ≒ \quad\allowbreak ≓ \quad\allowbreak ≕ \quad\allowbreak
+  ≖ \quad\allowbreak ≗ \quad\allowbreak ⩦ \quad\allowbreak ⩵ \quad\allowbreak ⩶ \quad\allowbreak ⩷ \quad\allowbreak
+  . \quad\allowbreak • \quad\allowbreak … \quad\allowbreak  \quad\allowbreak  \quad\allowbreak
+  ! \quad\allowbreak ■ \quad\allowbreak □ \quad\allowbreak ◊ \quad\allowbreak
+}
+
+\section{Serif Alternates}
+
+\startbuffer[serifalternates]
+\startformula
+\doloopoverlist{10pt,16pt}{%
+  \bigcup[size=\recursestring] \bigcap[size=\recursestring] \bigsqcup[size=\recursestring] \bigsqcap[size=\recursestring] \biguplus[size=\recursestring] \bigudot[size=\recursestring]
+}
+\stopformula
+\stopbuffer
+
+\ShowSample[serifalternates][title={ss15 = yes},font={somerville-regular-ss15,12pt}]
+
+
+\section{White Rim Alternates}
+
+\startbuffer[whiterimalternates]
+\startformula
+  \bigotimes \bigoplus
+  \bigotimes[size=12pt] \bigoplus[size=12pt] \bigotimes[size=18pt] \bigoplus[size=18pt]
+\stopformula
+\stopbuffer
+
+\ShowSample[whiterimalternates][title={ss16 = yes},font={somerville-regular-ss16,12pt}]
+
+
+% Needlepoint omitted for now.
+% \startitemize
+% \item Variable weight  (SemiLight, Regular, Medium, SemiBold, Bold, ExtraBold, Black).
+% \item Variable width  (SemiCondensed, Regular, SemiExpanded).
+% \item Variable optical size (Micro, Minuscule, Miniature, Caption, Regular, SubHeading, Trumpet, Headline, Display, Titling, Hairline, Needlepoint).
+% \item Variable mathematics bold weight
+% \item Variable arrow length and size
+% \item Variable integral slant
+% \stopitemize
+
+
+
+\part{Usage}
+
+\section{Opentype Features}
+
+\noindent{Playfair}\par
+
+\start
+\switchtobodyfont[small]
+\starttabulate[|l|l|c|c|]
+\NC {Tag} \NC {Feature} \NC {Roman} \NC {\bf Italic} \NR
+\HL
+\NC \type{aalt} \NC Access all alternates \NC Yes \NC Yes \NR
+\NC \type{afrc} \NC Alternative fractions \NC Yes \NC Yes \NR
+\NC \type{c2sc} \NC Small capitals from capitals \NC Yes \NC Yes \NR
+\NC \type{calt} \NC Contextual alternates \NC Yes \NC Yes \NR
+\NC \type{case} \NC Case-sensitive forms \NC Yes \NC Yes \NR
+\NC \type{ccmp} \NC Glyph composition and decomposition \NC Yes \NC Yes \NR
+\NC \type{cpsp} \NC Capital spacing \NC Yes \NC Yes \NR
+\NC \type{curs} \NC Cursive attachment positioning \NC Yes \NC -- \NR
+\NC \type{cv01} \NC Character variant set 1 (different selections in Roman and Italic) \NC Yes \NC Yes \NR
+\NC \type{dlig} \NC Discretionary ligatures \NC Yes \NC Yes \NR
+\NC \type{dnom} \NC Denominators \NC Yes \NC Yes \NR
+\NC \type{frac} \NC Diagonal fractions \NC Yes \NC Yes \NR
+\NC \type{kern} \NC Kerning \NC Yes \NC Yes \NR
+\NC \type{liga} \NC Standard ligatures \NC Yes \NC Yes \NR
+\NC \type{lnum} \NC Lining figures \NC Yes \NC Yes \NR
+\NC \type{locl} \NC Localized forms \NC Yes \NC Yes \NR
+\NC \type{mark} \NC Mark-to-base positioning \NC Yes \NC Yes \NR
+\NC \type{mkmk} \NC Mark-to-mark positioning \NC Yes \NC Yes \NR
+\NC \type{numr} \NC Numerators \NC Yes \NC Yes \NR
+\NC \type{onum} \NC Oldstyle figures \NC Yes \NC Yes \NR
+\NC \type{ordn} \NC Ordinals \NC Yes \NC Yes \NR
+\NC \type{pnum} \NC Proportional figures \NC Yes \NC Yes \NR
+\NC \type{rlig} \NC Required ligatures \NC Yes \NC Yes \NR
+\NC \type{sinf} \NC Scientific inferior figures \NC Yes \NC Yes \NR
+\NC \type{smcp} \NC Small capitals \NC Yes \NC Yes \NR
+\NC \type{ss01} \NC Alternate p \NC -- \NC Yes \NR
+\NC \type{ss02} \NC Alternate E \NC -- \NC Yes \NR
+\NC \type{ss03} \NC Alternate Cyrillic yus (U+046B) \NC -- \NC Yes \NR
+\NC \type{ss04} \NC Alternate Cyrillic em (U+043C) \NC -- \NC Yes \NR
+\NC \type{ss05} \NC Alternate g \NC Yes \NC Yes \NR
+\NC \type{ss06} \NC Alternate y \NC -- \NC Yes \NR
+\NC \type{ss07} \NC Alternate T \NC -- \NC Yes \NR
+\NC \type{ss08} \NC Straight Th ligature \NC -- \NC Yes \NR
+\NC \type{ss09} \NC Swash Th ligature \NC -- \NC Yes \NR
+\NC \type{ss10} \NC Th ligature \NC Yes \NC -- \NR
+\NC \type{ss11} \NC Alternate sterling symbol \NC Yes \NC Yes \NR
+\NC \type{ss12} \NC Alternate Z, ezh, z and small ezh \NC -- \NC Yes \NR
+\NC \type{ss13} \NC Alternate X and x \NC -- \NC Yes \NR
+\NC \type{ss14} \NC Tabular punctuation \NC Yes \NC Yes \NR
+\NC \type{subs} \NC Subscript figures \NC Yes \NC Yes \NR
+\NC \type{sups} \NC Superscript figures \NC Yes \NC Yes \NR
+\NC \type{tnum} \NC Tabular figures \NC Yes \NC Yes \NR
+\NC \type{zero} \NC Slashed zero \NC Yes \NC Yes \NR
+\HL
+\stoptabulate
+\stop
+
+\blank[medium]
+\noindent{SomervilleMath}\par
+
+\start
+\switchtobodyfont[small]
+\starttabulate[|l|l|]
+\NC {Tag} \NC {Feature} \NR
+\HL
+\NC \type{aalt} \NC Access all alternates \NR
+\NC \type{case} \NC Case-sensitive forms \NR
+\NC \type{ccmp} \NC Glyph composition and decomposition \NR
+\NC \type{curs} \NC Cursive attachment positioning \NR
+\NC \type{dtls} \NC Dotless forms for mathematical accents \NR
+\NC \type{kern} \NC Kerning \NR
+\NC \type{mark} \NC Mark-to-base positioning \NR
+\NC \type{mkmk} \NC Mark-to-mark positioning \NR
+\NC \type{rvrn} \NC Required variation substitutions \NR
+\NC \type{ss01} \NC Alternate italic and bold italic p \NR
+\NC \type{ss02} \NC Alternate italic and bold italic E \NR
+\NC \type{ss05} \NC Alternate bold italic g \NR
+\NC \type{ss06} \NC Alternate italic and bold italic y \NR
+\NC \type{ss07} \NC Alternate italic and bold italic T \NR
+\NC \type{ss12} \NC Alternate italic and bold italic Z and z \NR
+\NC \type{ss13} \NC Alternate italic and bold italic X and x \NR
+\NC \type{ss15} \NC Serif (slab) operator alternates \NR
+\NC \type{ss16} \NC White rim operator alternates \NR
+\NC \type{ss17} \NC Docked arrows \NR
+\NC \type{ssty} \NC Mathematical script and scriptscript forms \NR
+\NC \type{zero} \NC Slashed zero \NR
+\HL
+\stoptabulate
+\stop
+
+
+\section{Simple Usage in ConTeXt}
+The simplest usage in {\CONTEXT} is with
+
+\starttyping
+\input type-imp-somerville.mkxl
+\setupbodyfont[somerville]
+\stoptyping
+
+\noindent To select mathematics features set \type{mathextra} before loading the typescript
+
+\starttyping
+\definefontfeature[mathextra][{ss16=yes,ss17=yes}]
+\input type-imp-somerville.mkxl
+\setupbodyfont[somerville]
+\stoptyping
+
+\section{Instances in ConTeXt}
+
+Other instances of the font are named as follows:
+\starttyping
+somerville-OPTICALSIZE[-WIDTH][-WEIGHT]
+\stoptyping
+\noindent where the square brackets indicate optional terms.  The options are:
+\startitemize
+\item \type{OPTICALSIZE} is one of \type{micro}, \type{minuscule}, \type{miniature}, \type{caption}, \type{regular}, \crlf \type{subheading}, \type{trumpet}, \type{headline}, \type{display}, \type{titling}, \type{hairline}.
+\item \type{WIDTH} is one of \type{semicondensed} or \type{semiexpanded}; omit this for regular width.
+\item \type{WEIGHT} is one of \type{semilight}, \type{medium}, \type{semibold}, \type{bold}, \type{extrabold}, or \type{black}; omit this for regular weight.
+\stopitemize
+\noindent For example: 
+\noindent \starttyping
+\setupbodyfont[somerville-regular-semiexpanded-bold]
+\setupbodyfont[somerville-regular-semicondensed]
+\setupbodyfont[somerville-micro,5pt]
+\stoptyping
+\noindent In particular \type{somerville-regular} selects regular optical size, width, and weight and \type{somerville} is an alias for this instance.
+
+\section{Custom Axes Values in ConTeXt}
+
+For a custom axes values use the function \type{\setupSomerville}.  Its first argument lists the axis settings; the second names the new typeface. 
+\starttyping
+\setupSomerville
+  {Width=106,Weight=400,Optical Size=12,Math Weight=750,
+   Arrow Length=100,Arrow Head=100,Integral Slant=50}
+  {somerville-custom}
+\setupbodyfont[somerville-custom, 12pt]
+\stoptyping
+
+\noindent The optical size value is independent of the point size: \type{Optical Size=12} selects the optical sizing designed for 12 point text, while \type{12pt} sets the size of the text.  These do not have to agree, so this is also valid
+\starttyping
+\setupbodyfont[somerville-custom, 22pt]
+\stoptyping
+
+\noindent Axis values can also use the names in the reference tables
+\starttyping
+\setupSomerville
+  {Width=Regular,Weight=Medium,Optical Size=15,
+   Arrow Head=188, Integral Slant=Slanted}
+  {somerville-customtwo}
+\setupbodyfont[somerville-customtwo]
+\stoptyping
+
+\noindent It is also possible to start from a name instance and override individual axes, and set features:
+\starttyping
+\definefontfeature[myfeatures][ss17=yes]
+\setupSomerville
+  {instance=micro-semicondensed,Arrow Head=200,mathfeatures=myfeatures}
+  {somerville-micro-semicondensed-largearrowheads}
+\setupbodyfont[somerville-micro-semicondensed-largearrowheads]
+\stoptyping
+
+\section{Usage in LaTeX}
+
+At present other typesetting systems do not support variable mathematics, so to use Somerville you need to create static fonts using \type{instantiate_somerville.py}.
+
+The following commands list the available instances and give an example export:
+\starttyping
+python3 instantiate_somerville.py --list-instances
+python3 instantiate_somerville.py somerville-regular
+\stoptyping
+\noindent The script produces a static mathematics font and \type{.fontspec} file that can be used in LuaLaTeX.   It is also possible to set the axes manually.  Use 
+\starttyping python3 instantiate_somerville.py --help\stoptyping 
+\noindent to see how to do this.   Here is a sample usage in {\LaTeX}:
+\starttyping
+\documentclass{article}
+\usepackage{unicode-math}
+\input{SomervilleRegular.fontspec}
+\setmainfont{SomervilleRegular}
+\begin{document}
+Here is some text in Playfair and  \text{ ome bold text} 
+and \emph{some italic text}.  Here is some mathematics in Somerville:
+\[
+    \nabla\times\symbf{E} = -\frac{\partial\symbf{B}}{\partial t}
+\]
+\end{document}
+\stoptyping
+
+
+\stoptext

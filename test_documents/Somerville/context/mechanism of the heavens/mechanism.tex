@@ -1,0 +1,38 @@
+% !TEX program = context
+% !TEX root = mechanism.tex
+%
+% Compile here with: context mechanism.tex
+% The individual components can also be compiled on their own.
+% Frontmatter is followed directly by Chapters I, II, III and IV; the intervening
+% material in the original book is not included in this partial edition.
+
+\environment mechanism-environment
+
+\def\MechanismCombined{yes}
+\starttext
+
+\definemakeup[mechanism-notice]
+  [page=yes,doublesided=no,align=middle,pagestate=stop]
+\startmakeup[mechanism-notice]
+This is a partial reproduction.  It is typeset in Playfair and Somerville with greek letters from GFS Porsons.  It is for typographical testing only, and differs from the original. 
+\stopmakeup
+
+\input mechanism-frontmatter.tex
+
+% Each frontmatter makeup restores the shared chapter layout on exit.
+\input mechanism-chapter-1.tex
+
+\page
+\input mechanism-chapter-2.tex
+
+\page
+\input mechanism-chapter-3.tex
+
+\page
+\input mechanism-chapter-4.tex
+
+\setupinteraction[state=stop,
+  title={Mechanism of the Heavens - Frontmatter and Chapters I-IV},
+  author={Mary Somerville}]
+
+\stoptext

@@ -1,0 +1,1406 @@
+% !TEX program = context
+% !TEX root = mechanism-chapter-2.tex
+%
+% Mary Somerville, Mechanism of the Heavens (1831).
+% Book I, Chapter II: Variable Motion, printed pages 19--53.
+% Source PDF pages 95--129. Diagrams are schematic MetaFun reconstructions.
+% Run here: context mechanism-chapter-2.tex
+% Styling, paper color and texture controls are in mechanism-environment.tex.
+% Original wording, values, and apparent printing errors are retained; comments
+% identify notable source peculiarities. The original skips article number 98.
+% Multivariable partial derivatives follow the notation used in Chapter I.
+
+\environment mechanism-environment
+\setupinteraction[state=stop,
+  title={Mechanism of the Heavens - Book I, Chapter II},author={Mary Somerville}]
+\ifdefined\MechanismCombined\else\setupuserpagenumber[number=19]\fi
+\HeavensChapterHeaders{II}{VARIABLE MOTION.}
+% Explicit original equation tags, also convenient for isolated page previews.
+\unexpanded\def\BookFormula#1#2{%
+  \setnumber[formula][\number\numexpr#1-1\relax]%
+  \placeformula[eq:chapter2-#1]%
+  \startformula #2\stopformula
+}
+
+% Chapter II starts on a right-hand printed page, with binding on the left.
+\defineoverlay[heavens:aged-paper]
+  [{\ctxlua{
+      MP.heavenspaperpage = 1 + \the\realpageno;
+      MP.heavenspaperseed = \HeavensPaperSeed;
+      MP.heavenspaperstrength = \HeavensPaperStrength;
+    }\useMPgraphic{heavens:aged-paper}}]
+
+\startuseMPgraphic{heavens:figure17}
+  numeric u; u := .23mm;
+  pair O,M,A,B,C,D,E,H,a,b,c;
+  O := (0,0); M := (145u,-20u); A := (150u,15u);
+  B := (130u,18u); C := (116u,54u); D := (102u,52u);
+  E := (61u,82u); H := (77u,90u);
+  a := (124u,-17u); b := (113u,16u); c := (85u,44u);
+  pickup pencircle scaled .35pt;
+  draw O--M--A--O; draw O--B--C--O;
+  draw O--D--H--O; draw O--E;
+  draw M--B--D--E;
+  draw M--C; draw B--H; draw D--(26u,103u);
+  draw a--B; draw b--D; draw c--E;
+  label.lft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{m}"),M);
+  label.rt(textext("\tfx A"),A);
+  label.urt(textext("\tfx B"),B);
+  label.rt(textext("\tfx C"),C);
+  label.top(textext("\tfx D"),D);
+  label.top(textext("\tfx E"),E);
+  label.bot(textext("\tfx\m{a}"),a);
+  label.ulft(textext("\tfx\m{b}"),b);
+  label.lft(textext("\tfx\m{c}"),c);
+  label(textext("\tfx{\it fig.}\,17."),(19u,84u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure18}
+  numeric u; u := .22mm;
+  pair O,M,A,B,C,D,a,b;
+  O := (0,0); M := (114u,0); A := (114u,40u);
+  B := (105u,42u); C := (89u,80u); D := (80u,80u);
+  a := (105u,0); b := (96u,35u);
+  pickup pencircle scaled .35pt;
+  draw O--M--A--O; draw O--B--C--O; draw O--D;
+  draw M..B..D; draw D--(50u,101u);
+  draw a--B; draw b--D;
+  label.lft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{m}"),M);
+  label.rt(textext("\tfx A"),A);
+  label.urt(textext("\tfx B"),B);
+  label.urt(textext("\tfx C"),C);
+  label.ulft(textext("\tfx D"),D);
+  label.bot(textext("\tfx\m{a}"),a);
+  label.lft(textext("\tfx\m{b}"),b);
+  label(textext("\tfx{\it fig.}\,18."),(20u,89u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure19}
+  numeric u; u := .23mm;
+  pair M,A,Q,N,D;
+  M := (0,52u); A := (27u,56u); Q := (52u,51u); N := (110u,0);
+  D := (xpart A,ypart Q);
+  pickup pencircle scaled .35pt;
+  draw (-8u,0)--(125u,0);
+  draw M..A..Q..N;
+  draw A--(xpart A,0); draw Q--(xpart Q,0);
+  draw A--D--Q;
+  label.lft(textext("\tfx M"),M);
+  label.top(textext("\tfx A"),A);
+  label.top(textext("\tfx\m{m}"),Q);
+  label.rt(textext("\tfx N"),N);
+  label.lft(textext("\tfx D"),D);
+  label(textext("\tfx{\it fig.}\,19."),(110u,54u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure20}
+  numeric u; u := .24mm;
+  pair A,B;
+  A := (90u,83u); B := (0,0);
+  pickup pencircle scaled .35pt;
+  draw B{(1,3)}..A{(3,1)};
+  label.urt(textext("\tfx A"),A);
+  label.lft(textext("\tfx B"),B);
+  label(textext("\tfx{\it fig.}\,20."),(17u,78u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure21}
+  numeric u; u := .22mm;
+  pair S,A,B,C,D,I,R,rr;
+  S := (0,0); A := (0,68u); B := (0,-58u);
+  C := (-55u,0); D := (55u,0); I := (39u,60u);
+  R := (-25u,-53u); rr := (-33u,61u);
+  pickup pencircle scaled .35pt;
+  draw C--D; draw A--B; draw I--S--R; draw S--rr;
+  label.urt(textext("\tfx S"),S);
+  label.rt(textext("\tfx A"),A);
+  label.rt(textext("\tfx B"),B);
+  label.lft(textext("\tfx C"),C);
+  label.rt(textext("\tfx D"),D);
+  label.rt(textext("\tfx I"),I);
+  label.rt(textext("\tfx R"),R);
+  label.lft(textext("\tfx\m{r}"),rr);
+  label(textext("\tfx{\it fig.}\,21."),(-45u,43u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:unfig82}
+  numeric u; u := .23mm;
+  pickup pencircle scaled .35pt;
+  draw (0,0)--(104u,0); draw (42u,0)--(101u,22u);
+  draw (67u,0){up}..(65u,8u);
+  label.lft(textext("\tfx\m{c}"),(0,0));
+  label.top(textext("\tfx\m{b}"),(42u,0));
+  label.rt(textext("\tfx\m{e}"),(104u,0));
+  label.rt(textext("\tfx\m{a}"),(101u,22u));
+  label.top(textext("\tfx\m{\HeavensBeta}"),(74u,4u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure22}
+  numeric u; u := .23mm;
+  pair O,M,A,B,C,D;
+  O := (0,0); M := (20u,34.641u); A := (7u,39.383u);
+  B := (28u,-28.566u); C := (xpart M,0); D := (xpart A,ypart M);
+  pickup pencircle scaled .35pt;
+  draw fullcircle scaled (80u);
+  draw (-64u,0)--(62u,0);
+  draw (-62u,45u){right}..A..M..{down}(61u,-19u);
+  draw O--M; draw M--C; draw A--(xpart A,0); draw A--M--D;
+  label.top(textext("\tfx M"),(-62u,45u));
+  label.rt(textext("\tfx N"),(57u,0));
+  label.top(textext("\tfx A"),A);
+  label.rt(textext("\tfx B"),B);
+  label.urt(textext("\tfx\m{m}"),M);
+  label.llft(textext("\tfx\m{o}"),O);
+  label.bot(textext("\tfx\m{c}"),C);
+  label.lft(textext("\tfx D"),(2u,31u));
+  label(textext("\tfx{\it fig.}\,22."),(41u,59u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure23}
+  numeric u; u := .23mm;
+  pair O,M,N,E;
+  O := (0,0); M := (0,37u); N := (29u,31u);
+  E := (37u/abs(N))*N;
+  pickup pencircle scaled .35pt;
+  draw fullcircle scaled (74u);
+  draw (-68u,0)--(69u,0);
+  draw (-51u,35u){right}..M..{(1,-.5)}(57u,0);
+  draw M--N; draw (-.95N)--N;
+  label.top(textext("\tfx M"),(-51u,35u));
+  label.rt(textext("\tfx N"),(57u,0));
+  label.top(textext("\tfx\m{m}"),M);
+  label.urt(textext("\tfx\m{n}"),N);
+  label.llft(textext("\tfx\m{o}"),O);
+  label.lrt(textext("\tfx E"),E);
+  label(textext("\tfx{\it fig.}\,23."),(-57u,19u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure24}
+  numeric u; u := .28mm;
+  pair O,M,D;
+  O := (43u,0); M := (43u,67u); D := (16u,49u);
+  pickup pencircle scaled .35pt;
+  draw (0,-2u){(1,3)}..M..{(3,1)}(96u,92u);
+  draw (3u,40u)--(73u,87u);
+  draw O--M; draw O--D;
+  label.bot(textext("\tfx M"),(0,-2u));
+  label.rt(textext("\tfx N"),(96u,92u));
+  label.top(textext("\tfx\m{m}"),M);
+  label.top(textext("\tfx D"),D);
+  label.bot(textext("\tfx\m{o}"),O);
+  label(textext("\tfx{\it fig.}\,24."),(30u,99u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure25}
+  numeric u; u := .25mm;
+  pair O,A,M,AA;
+  O := (0,0); A := (31u,25.3u); M := (40u,0); AA := (31u,0);
+  pickup pencircle scaled .35pt;
+  draw fullcircle scaled (80u);
+  draw O--A; draw O--AA; draw A--AA;
+  label.llft(textext("\tfx\m{o}"),O);
+  label.urt(textext("\tfx A"),A);
+  label.rt(textext("\tfx\m{m}"),M);
+  label.bot(textext("\tfx\m{a}"),AA);
+  label(textext("\tfx{\it fig.}\,25."),(0,53u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure26}
+  numeric u; u := .33mm;
+  pair O,M,A,B,MM,E,C,D,N,T;
+  path trajectory;
+  O := (0,0); M := (0,29u); A := (37u,45u);
+  MM := (53u,50u); B := (70u,52u);
+  E := (37u,0); C := (53u,0); D := (70u,0);
+  N := (101u,0); T := (80u,70u);
+  trajectory := M{(2,1)}..A..MM..B{right}..{down}N;
+  pickup pencircle scaled .35pt;
+  draw O--(126u,0); draw O--(0,78u); draw O--(-29u,-43u);
+  draw trajectory; draw M--T;
+  draw E--(37u,47.9625u); draw C--(53u,56.1625u);
+  draw D--(70u,64.875u);
+  label.llft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{x}"),(126u,0));
+  label.top(textext("\tfx\m{z}"),(0,78u));
+  label.bot(textext("\tfx\m{y}"),(-29u,-43u));
+  label.llft(textext("\tfx M"),M);
+  label.llft(textext("\tfx A"),A);
+  label.llft(textext("\tfx B"),B);
+  label.bot(textext("\tfx\m{m}"),MM);
+  label.bot(textext("\tfx E"),E);
+  label.bot(textext("\tfx C"),C);
+  label.bot(textext("\tfx D"),D);
+  label.rt(textext("\tfx N"),N);
+  label.rt(textext("\tfx T"),T);
+  label.top(textext("\tfx\m{d}"),(37u,47.9625u));
+  label.top(textext("\tfx\m{f}"),(53u,56.1625u));
+  label(textext("\tfx{\it fig.}\,26."),(44u,79u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure27}
+  numeric u; u := .24mm;
+  pair S,M,D,A,C,B;
+  S := (48u,91u); M := (80u,17u); D := (15u,17u);
+  A := (46u,25u); C := (46u,9u); B := (46u,17u);
+  pickup pencircle scaled .35pt;
+  draw S--(122u,91u); draw S--(0,116u); draw S--(46u,-13u);
+  draw S--D; draw S--M;
+  draw fullcircle xscaled 65u yscaled 16u shifted (47.5u,17u);
+  draw B--M;
+  label.top(textext("\tfx S"),S);
+  label.rt(textext("\tfx\m{x}"),(122u,91u));
+  label.lft(textext("\tfx\m{y}"),(0,116u));
+  label.bot(textext("\tfx\m{z}"),(46u,-13u));
+  label.rt(textext("\tfx\m{m}"),M);
+  label.lft(textext("\tfx D"),D);
+  label.top(textext("\tfx A"),A);
+  label.bot(textext("\tfx C"),C);
+  label.lft(textext("\tfx\m{b}"),B);
+  label(textext("\tfx{\it fig.}\,27."),(104u,114u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure28}
+  numeric u; u := .24mm;
+  pair S,B,D,C,M,A,H,P;
+  S := (51u,51u); B := (98u,33u); D := (4u,33u); C := (51u,0);
+  M := (91u,20u); A := (85u,13u); H := (51u,33u); P := (51u,20u);
+  pickup pencircle scaled .35pt;
+  draw fullcircle scaled 102u shifted S;
+  draw (51u,102u)--C; draw D--B; draw P--M;
+  draw S--B; draw S--M; draw S--A;
+  label.lft(textext("\tfx S"),S);
+  label.rt(textext("\tfx B"),B);
+  label.lft(textext("\tfx D"),D);
+  label.bot(textext("\tfx C"),C);
+  label.rt(textext("\tfx\m{m}"),M);
+  label.bot(textext("\tfx A"),A);
+  label.llft(textext("\tfx H"),H);
+  label.llft(textext("\tfx\m{p}"),P);
+  label(textext("\tfx{\it fig.}\,28."),(51u,114u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure29}
+  numeric u; u := .24mm;
+  pair O,C,D,M,A,P;
+  O := (48u,48u); C := (48u,0); D := (48u,16u);
+  M := (84u,16u); A := (76u,9u); P := (69u,19u);
+  pickup pencircle scaled .35pt;
+  draw fullcircle scaled 96u shifted O;
+  draw (0,48u)--(96u,48u); draw O--C;
+  draw O--M; draw O--A; draw D--M; draw M--A;
+  label.ulft(textext("\tfx\m{o}"),O);
+  label.bot(textext("\tfx C"),C);
+  label.lft(textext("\tfx D"),D);
+  label.rt(textext("\tfx\m{m}"),M);
+  label.bot(textext("\tfx A"),A);
+  label.top(textext("\tfx\m{p}"),P);
+  label(textext("\tfx{\it fig.}\,29."),(48u,113u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure30}
+  numeric u; u := .24mm;
+  pair D,E,S,B,C,Z,A;
+  path bowl;
+  D := (0,57u); E := (136u,57u); S := (68u,102u);
+  B := (36u,57u); C := (36u,0); Z := (68u,0); A := (8u,30u);
+  pickup pencircle scaled .35pt;
+  draw D--E; draw S--Z;
+  bowl := D{down}..Z{right}..{up}E;
+  draw bowl; draw D{right}..{up}S; draw S{down}..{right}E;
+  draw fullcircle scaled 57u shifted (36u,28.5u);
+  draw B--C; draw A--C;
+  label.lft(textext("\tfx D"),D);
+  label.rt(textext("\tfx E"),E);
+  label.top(textext("\tfx S"),S);
+  label.top(textext("\tfx B"),B);
+  label.bot(textext("\tfx C"),C);
+  label.bot(textext("\tfx\m{z}"),Z);
+  label.lft(textext("\tfx A"),A);
+  label(textext("\tfx{\it fig.}\,30."),(20u,99u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure31}
+  numeric u; u := .23mm;
+  pair O,A,B,M;
+  O := (44u,44u); A := (44u,0); B := (88u,44u); M := (76u,14u);
+  pickup pencircle scaled .35pt;
+  draw fullcircle scaled 88u shifted O;
+  draw A--O--B; draw O--M; draw A--M;
+  label.ulft(textext("\tfx\m{o}"),O);
+  label.bot(textext("\tfx A"),A);
+  label.rt(textext("\tfx B"),B);
+  label.rt(textext("\tfx\m{m}"),M);
+  label(textext("\tfx{\it fig.}\,31."),(44u,104u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure32}
+  numeric u; u := .23mm;
+  pair A,B,C,D,E,O;
+  O := (44u,44u); A := (44u,0); D := (44u,88u);
+  B := (81u,20u); C := (44u,20u); E := (23u,82u);
+  pickup pencircle scaled .35pt;
+  draw fullcircle scaled 88u shifted O;
+  draw A--D--B--A; draw A--E; draw C--B;
+  label.bot(textext("\tfx A"),A);
+  label.rt(textext("\tfx B"),B);
+  label.urt(textext("\tfx C"),C);
+  label.top(textext("\tfx D"),D);
+  label.ulft(textext("\tfx E"),E);
+  label(textext("\tfx{\it fig.}\,32."),(44u,106u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure33}
+  numeric u; u := .24mm;
+  pair O,C,P,Q,M,N,MM,MN;
+  O := (0,0); C := (0,126u); P := (0,57u); Q := (0,18u);
+  M := (14u,57u); N := (36u,18u); MM := (78u,0); MN := (19u,18u);
+  pickup pencircle scaled .35pt;
+  draw O--(107u,0); draw O--(0,142u);
+  draw C{down}..M..N..MM{right}..(105u,9u);
+  draw M{down}..MN..MM;
+  draw P--M; draw Q--N;
+  label.llft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{y}"),(107u,0));
+  label.top(textext("\tfx\m{z}"),(0,142u));
+  label.rt(textext("\tfx C"),C);
+  label.lft(textext("\tfx P"),P);
+  label.lft(textext("\tfx\m{p}"),Q);
+  label.rt(textext("\tfx M"),M);
+  label.rt(textext("\tfx\m{m}"),N);
+  label.top(textext("\tfx\m{m'}"),MM);
+  label.bot(textext("\tfx\m{n}"),MN);
+  label(textext("\tfx{\it fig.}\,33."),(78u,100u));
+\stopuseMPgraphic
+
+\ifdefined\MechanismCombined\else\starttext\fi
+% Mary Somerville, Mechanism of the Heavens (1831), Chapter II, pp. 19--29.
+% PDF pp. 95--105. Figures 17--21 are schematic MetaFun reconstructions.
+% Apparent original printing errors are retained and noted in source comments.
+
+% Original printed page 19.
+\blank[12mm]
+\midaligned{\tfa CHAPTER II.}
+\blank[4mm]
+\midaligned{\sc VARIABLE MOTION.}
+\blank[4mm]
+
+\Article{60}When the velocity of a moving body changes, the cause of that change is called an accelerating or retarding force; and when the increase or diminution of the velocity is uniform, its cause is called a continued, or uniformly accelerating or retarding force, the increments of space which would be described in a given time with the initial velocities being always equally increased or diminished.
+
+\par\noindent\hskip1em\relax Gravitation is a uniformly accelerating force, for at the earth's surface a stone falls \m{16\frac{1}{11}} feet nearly, during the first second of its motion, \m{48\frac{3}{11}} during the second, \m{80\frac{5}{11}} during the third, \&c., falling every second \m{32\frac{2}{11}} feet more than during the preceding second.
+
+\Article{61}The action of a continued force is uninterrupted, so that the velocity is either gradually increased or diminished; but to facilitate mathematical investigation it is assumed to act by repeated impulses, separated by indefinitely small intervals of time, so that a particle of matter moving by the action of a continued force is assumed to describe indefinitely small but unequal spaces with a uniform motion, in indefinitely small and equal intervals of time.
+
+\Article{62}In this hypothesis, whatever has been demonstrated regarding uniform motion is equally applicable to motion uniformly varied; and \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, which have hitherto represented the components of an impulsive force, may now represent the components of a force acting uniformly.
+
+\blank[3mm]
+\midaligned{\it Central Force.}
+\blank[2mm]
+
+\Article{63}If the direction of the force be always the same, the motion will be in a straight line; but where the direction of a continued force is perpetually varying it will cause the particle to describe a curved line.
+
+\par\noindent\hskip1em\relax {\it Demonstration.}---Suppose a particle impelled in the direction \m{m\mathrm{A}}, fig.~17, and at the same time attracted by a continued force whose origin is in \m{o}, the force being supposed to act impulsively at equal successive infinitely small times. By the first impulse alone, in any given time the particle would move equably to A: but in the same time the action of the continued, or as it must now be considered the impulsive force alone, would cause it to move uniformly through
+
+% Original printed page 20.
+\noindent \m{ma}; hence at the end of that time the particle would be found in
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure17}}
+B, having described the diagonal \m{m\mathrm{B}}. Were the particle now left to itself, it would move uniformly to C in the next equal interval of time; but the action of the second impulse of the attractive force would bring it equably to \m{b} in the same time. Thus at the end of the second interval it would be found in D, having described the diagonal BD, and so on. In this manner the particle would describe the polygon \m{m\mathrm{BDE}}; but if the intervals between the successive impulses of the attractive force be indefinitely small, the diagonals \m{m\mathrm{B}}, BD, DE, \&c., will also be indefinitely small, and will coincide with the curve passing through the points \m{m}, B, D, E, \&c.
+\par\flushsidefloats
+
+\Article{64}In this hypothesis, no error can arise from assuming that the particle describes the sides of a polygon with a uniform motion; for the polygon, when the number of its sides is indefinitely multiplied, coincides entirely with the curve.
+
+\Article{65}The lines \m{m\mathrm{A}}, BC, \&c., fig.~17, are tangents to the curve in the points, \m{m}, B, \&c.; it therefore follows that when a particle is moving in a curved line in consequence of any continued force, if the force should cease to act at any instant, the particle would move on in the tangent with an equable motion, and with a velocity equal to what it had acquired when the force ceased to act.
+
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure18}}
+\Article{66}The spaces \m{ma}, \m{\mathrm{B}b}, CD, fig.~18, \&c., are the sagittæ of the indefinitely small arcs \m{m\mathrm{B}}, BD, DE, \&c. Hence the effect of the central force is measured by \m{ma}, the sagitta of the arc \m{m\mathrm{B}} described in an indefinitely small given time, or by \m{\frac{(\text{arc }m\mathrm{B})^2}{2\mathpunct{.}om}=ma}, \m{om} being the radius of the circle coinciding with the curve in \m{m}.
+\par\flushsidefloats
+
+% Original printed page 21 begins within the following paragraph.
+\Article{67}We shall consider the element or differential of time to be a constant quantity; the element of space to be the indefinitely small space moved over in an element of time, and the element of velocity to be the velocity that a particle would acquire, if acted on by a constant force during an element of time. Thus, if \m{t}, \m{s} and \m{v} be the time, space, and velocity, the elements of these quantities are \m{dt}, \m{ds}, and \m{dv}; and as each element is supposed to express an arbitrary unit of its kind, these heterogeneous quantities become capable of comparison. As a decrement only differs from an increment by its sign, any expressions regarding increasing quantities will apply to those that decrease by changing the signs of the differentials; and thus the theory of retarded motion is included in that of accelerated motion.
+
+\Article{68}In uniformly accelerated motion, the force at any instant is directly proportional to the second element of the space, and inversely as the square of the element of the time.
+
+\par\noindent\hskip1em\relax {\it Demonstration.}---Because in uniformly accelerated motion, the velocity is only assumed to be constant for an indefinitely small time, \m{v=\frac{ds}{dt}}, and as the element of the time is constant, the differential of the velocity is \m{dv=\frac{d^2s}{dt}}; but since a constant force, acting for an indefinitely small time, produces an indefinitely small velocity, \m{\Force dt=dv}; hence \m{\Force=\frac{d^2s}{dt^2}}.
+
+\blank[4mm]
+\midaligned{\it General Equations of the Motions of a Particle of Matter.}
+\blank[2mm]
+
+\Article{69}The general equation of the motion of a particle of matter, when acted on by any forces whatever, may be reduced to depend on the law of equilibrium.
+
+\par\noindent\hskip1em\relax {\it Demonstration.}---Let \m{m} be a particle of matter perfectly free to obey any forces \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, urging it in the direction of three rectangular co-ordinates \m{x}, \m{y}, \m{z}. Then regarding velocity as an effect of force, and as its measure, by the laws of motion these forces will produce in the instant \m{dt}, the velocities \m{\ForceX dt}, \m{\ForceY dt}, \m{\ForceZ dt}, proportional to the intensities of these forces, and in their directions. Hence when \m{m} is free, by article 68,
+\BookFormula{5}{
+  d\mathpunct{.}\frac{dx}{dt}=\ForceX dt;\quad d\mathpunct{.}\frac{dy}{dt}=\ForceY dt;\quad d\mathpunct{.}\frac{dz}{dt}=\ForceZ dt;
+}
+% Original printed page 22 begins within the following paragraph.
+\noindent for the forces \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, being perpendicular to each other, each one is independent of the action of the other two, and may be regarded as if it acted alone. If the first of these equations be multiplied by \m{\HeavensDelta x}, the second by \m{\HeavensDelta y}, and the third by \m{\HeavensDelta z}, their sum will be
+\BookFormula{6}{
+  0=\left(\ForceX-\frac{d^2x}{dt^2}\right)\HeavensDelta x+
+  \left(\ForceY-\frac{d^2y}{dt^2}\right)\HeavensDelta y+
+  \left(\ForceZ-\frac{d^2z}{dt^2}\right)\HeavensDelta z,
+}
+\noindent and since \m{\ForceX-\frac{d^2x}{dt^2}}; \m{\ForceY-\frac{d^2y}{dt^2}}; \m{\ForceZ-\frac{d^2z}{dt^2}}; are separately zero, \m{\HeavensDelta x}, \m{\HeavensDelta y}, \m{\HeavensDelta z}, are absolutely arbitrary and independent; and {\it vice versâ, if they are so}, this one equation will be equivalent to the three separate ones.
+
+\par\noindent\hskip1em\relax This is the general equation of the motion of a particle of matter, when free to move in every direction.
+
+\par\noindent\hskip1em\relax
+2nd case.---But if the particle \m{m} be not free, it must either be constrained to move on a curve, or on a surface, or be subject to a resistance, or otherwise subject to some condition. But matter is not moved otherwise than by force; therefore, whatever constrains it, or subjects it to conditions, is a {\it force}. If a curve, or surface, or a string constrains it, the force is called reaction: if a fluid medium, the force is called resistance: if a condition however abstract,
+(as for example that it move in a tautochrone,) still this condition,
+by obliging it to move out of its free course, or with an unnatural velocity, must ultimately resolve itself into {\it force}; only that in this case it is an implicit and not an explicit function of the co-ordinates. This new force may therefore be considered first, as involved in \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}; or secondly, as added to them when it is resolved into \m{\ForceX'}, \m{\ForceY'}, \m{\ForceZ'}.
+
+\par\noindent\hskip1em\relax In the first case, if it be regarded as included in \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, these really contain an indeterminate function: but the equations
+\startformula
+  \ForceX dt=\frac{d^2x}{dt};\quad
+  \ForceY dt=\frac{d^2y}{dt};\quad
+  \ForceZ dt=\frac{d^2z}{dt},
+\stopformula
+\noindent still subsist; and therefore also equation (6).
+
+\par\noindent\hskip1em\relax {\it Now} however, there are not enough of equations to determine \m{x}, \m{y}, \m{z}, in functions of \m{t}, because of the unknown forms of \m{\ForceX'}, \m{\ForceY'}, \m{\ForceZ'}; but if the equation \m{u=0}, which expresses the condition of restraint, with all its consequences \m{du=0}, \m{\HeavensDelta u=0}, \&c., be superadded to these, there will then be enough to determine the problem. Thus the equations are
+\startformula
+  u=0;\quad \ForceX-\frac{d^2x}{dt^2}=0;\quad
+  \ForceY-\frac{d^2y}{dt^2}=0;\quad
+  \ForceZ-\frac{d^2z}{dt^2}=0.
+\stopformula
+
+% Original printed page 23.
+\noindent \m{u} is a function of \m{x}, \m{y}, \m{z}, \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, and \m{t}. Therefore the equation \m{u=0} establishes the existence of a relation
+\startformula
+  \HeavensDelta u=p\HeavensDelta x+q\HeavensDelta y+r\HeavensDelta z=0
+\stopformula
+\noindent between the variations \m{\HeavensDelta x}, \m{\HeavensDelta y}, \m{\HeavensDelta z}, which can no longer be regarded as arbitrary; but the equation (6) subsists whether they be so or not, and may therefore be used simultaneously with \m{\HeavensDelta u=0} to eliminate one; after which the other two being {\it really} arbitrary, their co-efficients {\it must} be separately zero.
+
+\par\noindent\hskip1em\relax In the second case; if we do not regard the forces arising from the conditions of constraint as involved in \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, let \m{\HeavensDelta u=0} be that condition, and let \m{\ForceX'}, \m{\ForceY'}, \m{\ForceZ'}, be the unknown forces brought into action by that condition, by which the action of \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, is modified; then will the whole forces acting on \m{m} be \m{\ForceX+\ForceX'}, \m{\ForceY+\ForceY'}, \m{\ForceZ+\ForceZ'}, and under the influence of these the particle will move as a {\it free particle}; and therefore \m{\HeavensDelta x}, \m{\HeavensDelta y}, \m{\HeavensDelta z}, being any variations
+\startformula
+  0=\left(\ForceX+\ForceX'-\frac{d^2x}{dt^2}\right)\HeavensDelta x+
+  \left(\ForceY+\ForceY'-\frac{d^2y}{dt^2}\right)\HeavensDelta y+
+  \left(\ForceZ+\ForceZ'-\frac{d^2z}{dt^2}\right)\HeavensDelta z
+\stopformula
+\noindent or,
+\BookFormula{7}{
+  \eqalign{
+    0={}&\left(\ForceX-\frac{d^2x}{dt^2}\right)\HeavensDelta x+
+    \left(\ForceY-\frac{d^2y}{dt^2}\right)\HeavensDelta y+
+    \left(\ForceZ-\frac{d^2z}{dt^2}\right)\HeavensDelta z\cr
+    &+\ForceX'\HeavensDelta x+\ForceY'\HeavensDelta y+\ForceZ'\HeavensDelta z;\cr
+  }
+}
+\noindent and this equation is independent of any particular relation between \m{\HeavensDelta x}, \m{\HeavensDelta y}, \m{\HeavensDelta z}, and holds good whether they subsist or not. But the condition \m{\HeavensDelta u=0} establishes a relation of the form \m{p\HeavensDelta x+q\HeavensDelta y+r\HeavensDelta z=0}, where
+\startformula
+  p=\left(\Der{u}{x}\right),\quad q=\left(\Der{u}{y}\right),\quad r=\left(\Der{u}{z}\right);
+\stopformula
+\noindent and since this is true, it is so when multiplied by any arbitrary quantity \m{\HeavensLambda}; therefore,
+\startformula
+  \HeavensLambda\,(p\HeavensDelta x+q\HeavensDelta y+r\HeavensDelta z)=0,
+  \quad\text{or }\HeavensLambda\HeavensDelta u=0;
+\stopformula
+\noindent because
+\startformula
+  \HeavensDelta u=p\HeavensDelta x+q\HeavensDelta y+r\HeavensDelta z=0.
+\stopformula
+\noindent If this be added to equation (7), it becomes
+% The original changes the added multiplier to -lambda here; retain its sign.
+\startformula
+  \eqalign{
+    0={}&\left(\ForceX-\frac{d^2x}{dt^2}\right)\HeavensDelta x+
+    \left(\ForceY-\frac{d^2y}{dt^2}\right)\HeavensDelta y+
+    \left(\ForceZ-\frac{d^2z}{dt^2}\right)\HeavensDelta z\cr
+    &+\ForceX'\HeavensDelta x+\ForceY'\HeavensDelta y+\ForceZ'\HeavensDelta z
+    -\HeavensLambda\HeavensDelta u,\cr
+  }
+\stopformula
+\noindent which is true whatever \m{\HeavensDelta x}, \m{\HeavensDelta y}, \m{\HeavensDelta z}, or \m{\HeavensLambda} may be.
+
+\par\noindent\hskip1em\relax Now since \m{\ForceX'}, \m{\ForceY'}, \m{\ForceZ'}, are forces acting in the direction \m{x}, \m{y}, \m{z},
+(though unknown) they may be compounded into one resultant \m{\mathrm{R}_1},
+% Original printed page 24 begins within the following paragraph.
+which must have one direction, whose element may be represented by \m{\HeavensDelta s}. And since the single force \m{\mathrm{R}_1} is resolved into \m{\ForceX'}, \m{\ForceY'}, \m{\ForceZ'}, we must have
+\startformula
+  \ForceX'\HeavensDelta x+\ForceY'\HeavensDelta y+\ForceZ'\HeavensDelta z
+  =\mathrm{R}_1\HeavensDelta s;
+\stopformula
+\noindent so that the preceding equation becomes
+\BookFormula{8}{
+  \eqalign{
+    0={}&\left(\ForceX-\frac{d^2x}{dt^2}\right)\HeavensDelta x+
+    \left(\ForceY-\frac{d^2y}{dt^2}\right)\HeavensDelta y+
+    \left(\ForceZ-\frac{d^2z}{dt^2}\right)\HeavensDelta z\cr
+    &+\mathrm{R}_1\HeavensDelta s-\HeavensLambda\HeavensDelta u\cr
+  }
+}
+\noindent and this is true whatever \m{\HeavensLambda} may be.
+
+\par\noindent\hskip1em\relax But \m{\HeavensLambda} being thus left arbitrary, we are at liberty to determine it by any convenient condition. Let this condition be \m{\mathrm{R}_1\HeavensDelta s-\HeavensLambda\HeavensDelta u=0}, or \m{\HeavensLambda=\mathrm{R}_1\mathpunct{.}\frac{\HeavensDelta s}{\HeavensDelta u}}, which reduces equation (8) to equation (6). So when \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, are the only acting forces explicitly given, this equation still suffices to resolve the problem, provided it be taken in conjunction with the equation \m{\HeavensDelta u=0}, or, which is the same thing,
+\startformula
+  p\HeavensDelta x+q\HeavensDelta y+r\HeavensDelta z=0,
+\stopformula
+\noindent which establishes a relation between \m{\HeavensDelta x}, \m{\HeavensDelta y}, \m{\HeavensDelta z}.
+
+\par\noindent\hskip1em\relax
+% The source prints s (not R_1) in this repeated condition.
+Now let the condition \m{\HeavensLambda=s\mathpunct{.}\frac{\HeavensDelta s}{\HeavensDelta u}} be considered which determines \m{\HeavensLambda}.
+
+\par\noindent\hskip1em\relax Since \m{\mathrm{R}_1} is the resultant of the forces \m{\ForceX'}, \m{\ForceY'}, \m{\ForceZ'}, its magnitude must be represented by \m{\sqrt{\ForceX'^2+\ForceY'^2+\ForceZ'^2}} by article 37, and since \m{\mathrm{R}_1\HeavensDelta s=\HeavensLambda\HeavensDelta u}, or
+\startformula
+  \ForceX'\HeavensDelta x+\ForceY'\HeavensDelta y+\ForceZ'\HeavensDelta z=
+  \HeavensLambda\mathpunct{.}\Der{u}{x}\HeavensDelta x+
+  \HeavensLambda\mathpunct{.}\Der{u}{y}\HeavensDelta y+
+  \HeavensLambda\mathpunct{.}\Der{u}{z}\HeavensDelta z,
+\stopformula
+\noindent therefore, in order that \m{dx}, \m{dy}, \m{dz}, may remain arbitrary, we must have
+\startformula
+  \ForceX'=\HeavensLambda\Der{u}{x};\quad
+  \ForceY'=\HeavensLambda\Der{u}{y};\quad
+  \ForceZ'=\HeavensLambda\Der{u}{z};
+\stopformula
+\noindent and consequently
+\BookFormula{9}{
+  \mathrm{R}_1=\sqrt{\ForceX'^2+\ForceY'^2+\ForceZ'^2}
+  =\HeavensLambda\mathpunct{.}\sqrt{
+    \left(\Der{u}{x}\right)^2+\left(\Der{u}{y}\right)^2+
+    \left(\Der{u}{z}\right)^2}
+}
+\noindent and
+\startformula
+  \HeavensLambda=\frac{\mathrm{R}_1}{\sqrt{
+    \left(\Der{u}{x}\right)^2+\left(\Der{u}{y}\right)^2+
+    \left(\Der{u}{z}\right)^2}}
+\stopformula
+\noindent and if to abridge
+\startformula
+  \frac{1}{\sqrt{
+    \left(\Der{u}{x}\right)^2+\left(\Der{u}{y}\right)^2+
+    \left(\Der{u}{z}\right)^2}}=\mathrm{K};
+  \quad\text{then if }\HeavensAlpha,\HeavensBeta,\HeavensGamma,
+\stopformula
+\noindent be the angles that the normal to the curve or surface makes with the co-ordinates,
+\startformula
+  \mathrm{K}\Der{u}{x}=\cos\HeavensAlpha,\quad
+  \mathrm{K}\Der{u}{y}=\cos\HeavensBeta,\quad
+  \mathrm{K}\Der{u}{z}=\cos\HeavensGamma,
+\stopformula
+\noindent and
+% Y_1 and Z_1 are printed with subscripts here, whereas X has a prime.
+\startformula
+  \ForceX'=\mathrm{R}_1\mathpunct{.}\cos\HeavensAlpha,\quad
+  \ForceY_1=\mathrm{R}_1\mathpunct{.}\cos\HeavensBeta,\quad
+  \ForceZ_1=\mathrm{R}_1\mathpunct{.}\cos\HeavensGamma.
+\stopformula
+
+% Original printed page 25.
+\noindent Thus if \m{u} be given in terms of \m{x}, \m{y}, \m{z}; the four quantities \m{\HeavensLambda}, \m{\ForceX'}, \m{\ForceY'}, and \m{\ForceZ'}, will be determined. If the condition of constraint expressed by \m{u=0} be pressure against a surface, \m{\mathrm{R}_1} is the re-action.
+
+\par\noindent\hskip1em\relax Thus the general equation of a particle of matter moving on a curved surface, or subject to any given condition of constraint, is proved to be
+\BookFormula{10}{
+  0=\left(\ForceX-\frac{d^2x}{dt^2}\right)\HeavensDelta x+
+  \left(\ForceY-\frac{d^2y}{dt^2}\right)\HeavensDelta y+
+  \left(\ForceZ-\frac{d^2z}{dt^2}\right)\HeavensDelta z+
+  \HeavensLambda\HeavensDelta u.
+}
+
+\Article{70}The whole theory of the motion of a particle of matter is contained in equations (6) and (10); but the finite values of these equations can only be found when the variations of the forces are expressed at least implicitly in functions of the distance of the moving particle from their origin.
+
+\Article{71}When the particle is free, if the forces \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, be eliminated from
+% The second equation prints X, not Y; preserve the source.
+\startformula
+  \ForceX-\frac{d^2x}{dt^2}=0;\quad
+  \ForceX-\frac{d^2y}{dt^2}=0;\quad
+  \ForceZ-\frac{d^2z}{dt^2}=0
+\stopformula
+\noindent by functions of the distance, these equations, which then may be integrated at least by approximation, will only contain space and time; and by the elimination of the latter, two equations will remain, both functions of the co-ordinates which will determine the curve in which the particle moves.
+
+\Article{72}Because the force which urges a particle of matter in motion, is given in functions of the indefinitely small increments of the co-ordinates, the path or trajectory of the particle depends on the nature of the force. Hence if the force be given, the curve in which the particle moves may be found; and if the curve be given, the law of the force may be determined.
+
+\Article{73}Since one constant quantity may vanish from an equation at each differentiation, so one must be added at each integration; hence the integral of the three equations of the motion of a particle being of the second order, will contain six arbitrary constant quantities, which are the data of the problem, and are determined in each case either by observation, or by some known circumstances peculiar to each problem.
+
+% Original printed page 26 begins within the following paragraph.
+\Article{74}In most cases finite values of the general equation of the motion of a particle cannot be obtained, unless the law according to which the force varies with the distance be known; but by assuming from experience, that the intensity of the forces in nature varies according to some law of the distance and leaving them otherwise indeterminate, it is possible to deduce certain properties of a moving particle, so general that they would exist whatever the forces might in other respects be. Though the variations differ materially, and must be carefully distinguished from the differentials \m{dx}, \m{dy}, \m{dz}, which are the spaces moved over by the particle parallel to the co-ordinates in the instant \m{dt}; yet being arbitrary, we may assume them to be equal to these, or to any other quantities consistent with the nature of the problem under consideration. Therefore let \m{\HeavensDelta x}, \m{\HeavensDelta y}, \m{\HeavensDelta z}, be assumed equal to \m{dx}, \m{dy}, \m{dz}, in the general equation of motion (6), which becomes in consequence
+\startformula
+  \ForceX dx+\ForceY dy+\ForceZ dz=
+  \frac{dx\,d^2x+dy\,d^2y+dz\,d^2z}{dt^2}.
+\stopformula
+
+\Article{75}The integral of this equation can only be obtained when the first member is a complete differential, which it will be if all the forces acting on the particle, in whatever directions, be functions of its distance from their origin.
+
+\par\noindent\hskip1em\relax {\it Demonstration.}---If \m{\Force} be a force acting on the particle, and \m{s} the distance of the particle from its origin, \m{\Force\frac{x}{s}} is the resolved portion parallel to the axis \m{x}; and if \m{\Force'}, \m{\Force''}, \&c., be the other forces acting on the particle, then \m{\ForceX=\HeavensSigma\mathpunct{.}\Force\frac{x}{s}} will be the sum of all these forces resolved in a direction parallel to the axis \m{x}. In the same manner, \m{\ForceY=\HeavensSigma\mathpunct{.}\Force\frac{y}{s}}; \m{\ForceZ=\HeavensSigma\mathpunct{.}\Force\frac{z}{s}} are the sums of the forces resolved in a direction parallel to the axes \m{y} and \m{z}, so that
+\startformula
+  \ForceX dx+\ForceY dy+\ForceZ dz=
+  \HeavensSigma\mathpunct{.}\Force\frac{x\,dx+y\,dy+z\,dz}{s}=
+  \HeavensSigma\mathpunct{.}\Force\frac{s\,ds}{s}=\HeavensSigma\mathpunct{.}\Force ds,
+\stopformula
+\noindent which is a complete differential when \m{\Force}, \m{\Force'}, \&c., are functions of \m{s}.
+
+% Original printed page 27 begins within the following paragraph.
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure19}}
+\Article{76}In this case, the integral of the first member of the equation is \m{\int{(\ForceX dx+\ForceY dy+\ForceZ dz)}}, or \m{f(x,y,z,)}, a function of \m{x}, \m{y}, \m{z}; and by integration the second is \m{\frac12\frac{dx^2+dy^2+dz^2}{dt^2}} which is evidently the half of the square of the velocity; for if any curve MN, fig.~19, be represented by \m{s}, its first differential \m{ds} or \m{\mathrm{A}m} is \m{\sqrt{\mathrm{AD}^2+\mathrm{D}m^2}=\sqrt{dx^2+dy^2}}; hence, \m{ds^2=dx^2+dy^2} when the curve is in one plane, but when in space it is \m{ds^2=dx^2+dy^2+dz^2}: and as \m{\frac{ds}{dt}}, [the element of the space divided by the element of the time is the velocity: therefore,
+\par\flushsidefloats
+% The unmatched opening bracket before "the element" is present in the source.
+\startformula
+  \frac12\frac{dx^2+dy^2+dz^2}{dt^2}=\frac12v^2;
+\stopformula
+\noindent consequently,
+\startformula
+  2f(x,y,z)+c=v^2,
+\stopformula
+\noindent \m{c} being an arbitrary constant quantity introduced by integration.
+
+\Article{77}This equation will give the velocity of the particle in any point of its path, provided its velocity in any other point be known: for if A be its velocity in that point of its trajectory whose co-ordinates are \m{a}, \m{b}, \m{c}, then
+\startformula
+  \mathrm{A}^2=c+2f(a,b,c),
+\stopformula
+\noindent and
+\startformula
+  v^2-\mathrm{A}^2=2f(x,y,z)-2f(a,b,c);
+\stopformula
+\noindent whence \m{v} will be found when A is given, and the co-ordinates \m{a}, \m{b}, \m{c}, \m{x}, \m{y}, \m{z}, are known.
+
+\par\noindent\hskip1em\relax It is evident, from the equation being independent of any particular curve, that if the particle begins to move from any given point with a given velocity, it will arrive at another given point with the same velocity, whatever the curve may be that it has described.
+
+\Article{78}When the particle is not acted on by any forces, then \m{\ForceX}, \m{\ForceY}, and \m{\ForceZ} are zero, and the equation becomes \m{v^2=c}. The velocity in this case, being occasioned by a primitive impulse, will be constant; and the particle, in moving from one given point to another, will always take the shortest path that can be traced between these points, which is a particular case of a more general law, called the principle of Least Action.
+
+\blank[4mm]
+\midaligned{\it Principle of Least Action.}
+\blank[2mm]
+
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure20}}
+% Original printed page 28 begins within the following paragraph.
+\Article{79}Suppose a particle beginning to move from a given point A, fig.~20, to arrive at another given point B, and that its velocity at the point A is given in magnitude but not in direction. Suppose also that it is urged by accelerating forces \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, such, that the finite value of \m{\ForceX dx+\ForceY dy+\ForceZ dz} can be obtained. We may then determine \m{v} the velocity of the particle in terms of \m{x}, \m{y}, \m{z}, without knowing the curve described by the particle in moving from A to B. If \m{ds} be the element of the curve, the finite value of \m{vds} between A and B will depend on the nature of the path or curve in which the body moves. The principle of Least Action consists in this, that if the particle be free to move in every direction between these two points, except in so far as it obeys the action of the forces \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, it will in virtue of this action, choose the path in which the integral \m{\int{vds}} is a minimum; and if it be constrained to move on a given surface, it will still move in the curve in which \m{\int{vds}} is a minimum among all those that can be traced on the surface between the given points.
+\par\flushsidefloats
+
+\par\noindent\hskip1em\relax To demonstrate this principle, it is required to prove the variation of \m{\int{vds}} to be zero, when A and B, the extreme points of the curve are fixed.
+
+\par\noindent\hskip1em\relax By the method of variations \m{\HeavensDelta\int{vds}=\int{\HeavensDelta\mathpunct{.}vds}}:
+% The following integral sign names the operation, so its integrand is empty.
+for \m{\int{}} the mark of integration being relative to the differentials, is independent of the variations.
+
+\par\noindent\hskip1em\relax Now
+\startformula
+  \HeavensDelta\mathpunct{.}vds=\HeavensDelta v\mathpunct{.}ds+v\HeavensDelta ds,
+  \quad\text{but }v=\frac{ds}{dt}\quad\text{or }ds=vdt;
+\stopformula
+\noindent hence
+\startformula
+  \HeavensDelta v\mathpunct{.}ds=v\HeavensDelta vdt=
+  dt\,\frac12\HeavensDelta\mathpunct{.}v^2,
+\stopformula
+\noindent and therefore
+\startformula
+  \HeavensDelta\mathpunct{.}vds=dt\mathpunct{.}\frac12\HeavensDelta\mathpunct{.}v^2+
+  v\mathpunct{.}\HeavensDelta\mathpunct{.}ds.
+\stopformula
+\noindent The values of the two last terms of this equation must be found separately. To find \m{dt\mathpunct{.}\frac12\HeavensDelta\mathpunct{.}v^2}. It has been shown that
+\startformula
+  v^2=c+2\int{(\ForceX dx+\ForceY dy+\ForceZ dz)},
+\stopformula
+\noindent its differential is
+\startformula
+  vdv=(\ForceX dx+\ForceY dy+\ForceZ dz),
+\stopformula
+\noindent and changing the differentials into variations,
+\startformula
+  \frac12\HeavensDelta\mathpunct{.}v^2=
+  \ForceX\HeavensDelta x+\ForceY\HeavensDelta y+\ForceZ\HeavensDelta z.
+\stopformula
+\noindent If \m{\frac12\HeavensDelta\mathpunct{.}v^2} be substituted in the general equation of the motion of a particle on its surface, it becomes
+% The source appends =0 to this entire equality; retain it literally.
+\startformula
+  \frac12\HeavensDelta\mathpunct{.}v^2=
+  \frac{d^2x}{dt^2}\HeavensDelta x+\frac{d^2y}{dt^2}\HeavensDelta y+
+  \frac{d^2z}{dt^2}\HeavensDelta z+\HeavensLambda\HeavensDelta u=0.
+\stopformula
+\noindent But \m{\HeavensLambda\HeavensDelta u} does not enter into this equation when the particle is free; and when it must move on the surface whose equation is \m{u=0}, \m{\HeavensDelta u} is also zero; hence in every case the term \m{\HeavensLambda\HeavensDelta u} vanishes; therefore
+% The original omits dt multiplying the right-hand side of this equality.
+\startformula
+  dt\mathpunct{.}\frac12\HeavensDelta\mathpunct{.}v^2=
+  \frac{d^2x}{dt^2}\HeavensDelta x+\frac{d^2y}{dt^2}\HeavensDelta y+
+  \frac{d^2z}{dt^2}\HeavensDelta z
+\stopformula
+\noindent is the value of the first term required.
+
+\par\noindent\hskip1em\relax A value of the second term \m{v\mathpunct{.}\HeavensDelta\mathpunct{.}ds} must now be found. Since
+\startformula
+  ds^2=dx^2+dy^2+dz^2,
+\stopformula
+
+% Original printed page 29.
+\noindent its variation is \m{ds\mathpunct{.}\HeavensDelta ds=dx\mathpunct{.}\HeavensDelta dx+ dy\mathpunct{.}\HeavensDelta dy+dz\mathpunct{.}\HeavensDelta dz}, but \m{ds=vdt}, hence
+\startformula
+  v\mathpunct{.}\HeavensDelta ds=\frac{dx}{dt}\HeavensDelta dx+
+  \frac{dy}{dt}\HeavensDelta dy+\frac{dz}{dt}\HeavensDelta dz,
+\stopformula
+\noindent which is the value of the second term; and if the two be added, their sum is
+\startformula
+  \HeavensDelta\mathpunct{.}vds=d\left\{
+    \frac{dx}{dt}\HeavensDelta x+\frac{dy}{dt}\HeavensDelta y+
+    \frac{dz}{dt}\HeavensDelta z\right\},
+\stopformula
+\noindent as may easily be seen by taking the differential of the last member of this equation. Its integral is
+\startformula
+  \HeavensDelta\int{vds}=\frac{dx}{dt}\HeavensDelta x+
+  \frac{dy}{dt}\HeavensDelta y+\frac{dz}{dt}\HeavensDelta z.
+\stopformula
+
+\par\noindent\hskip1em\relax If the given points A and B be moveable in space, the last member of this equation will determine their motion; but if they be fixed points, the last member which is the variation of the co-ordinates of these points is zero: hence also \m{\HeavensDelta\int{vds}=0}, which indicates either a maximum or minimum, but it is evident from the nature of the problem that it can only be a minimum. If the particle be not urged by accelerating forces, the velocity is constant, and the integral is \m{vs}. Then the curve \m{s} described by the particle between the points A and B is a minimum; and since the velocity is uniform, the particle will describe that curve in a shorter time than it would have done any other curve that could be drawn between these two points.
+
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure21}}
+\Article{80}The principle of least action was first discovered by Euler: it has been very elegantly applied to the reflection and refraction of light. If a ray of light IS, fig.~21, falls on any surface CD, it will be turned back or reflected in the direction \m{\mathrm{S}r}, so that \m{\mathrm{ISA}=r\mathrm{SA}}. But if the medium whose surface is CD be diaphanous, as glass or water, it will be broken or refracted at S, and will enter the denser medium in the direction SR, so that the sine of the angle of incidence ISA will be to the sine of the angle of refraction RSB, in a constant ratio for any one medium. Ptolemy discovered that light, when reflected from any surface, passed from one given point to another by the shortest path, and in the shortest time possible, its velocity being uniform.
+\par\flushsidefloats
+% Mechanism of the Heavens (1831), Chapter II, printed pp. 30--41.
+% Source PDF pp. 106--117. Wording and equations follow the printed source,
+% including its occasional apparent sign slips. Figures are schematic MetaFun.
+
+% Original printed page 30.
+\noindent\hskip1em\relax Fermat extended the same principle to the refraction of light; and supposing the velocity of a ray of light to be less in the denser medium, he found that the ratio of the sine of the angle of incidence to that of the angle of refraction, is constant and greater than unity. Newton however proved by the attraction of the denser medium on the ray of light, that in the corpuscular hypothesis its velocity is greater in that medium than in the rarer, which induced Maupertuis to apply the theory of maxima and minima to this problem. If \m{\mathrm{IS}}, a ray of light moving in a rare medium, fall obliquely on \m{\mathrm{CD}} the surface of a medium that is more dense, it moves uniformly from \m{\mathrm{I}} to \m{\mathrm{S}}; but at the point \m{\mathrm{S}} both its direction and velocity are changed, so that at the instant of its passage from one to the other, it describes an indefinitely small curve, which may be omitted without sensible error: hence the whole trajectory of the light is \m{\mathrm{ISR}}; but \m{\mathrm{IS}} and \m{\mathrm{SR}} are described with different velocities; and if these velocities be \m{v} and \m{v'}, then the variation of \m{\mathrm{IS}\times v+\mathrm{SR}\times v'} must be zero, in order that the trajectory may be a minimum: hence the general expression \m{\HeavensDelta\int{vds}=0} becomes in this case \m{\HeavensDelta\mathpunct{.}(\mathrm{IS}\times v+\mathrm{SR}\times v')=0}, when applied to the refraction of light; from whence it is easily found, by the ordinary analysis of maxima and minima, that \m{v\sin\mathrm{ISA}=v'\sin\mathrm{RBS}}. As the ratio of these sines depends on the ratio of the velocities, it is constant for the transition out of any one medium into another, but varies with the media, on account of the velocity of light being different in different media. If the denser medium be a crystallized diaphanous substance, the velocity of light in it will depend on the direction of the luminous ray; it is constant for any one ray, but variable from one ray to another. Double refraction, as in Iceland spar and in crystallized bodies, arises from the different velocities of the rays; in these substances two images are seen instead of one. Huygens first gave a distinct account of this phenomenon, which has since been investigated by others.
+
+\blank[medium]
+\midaligned{\it Motion of a Particle on a curved Surface.}
+\blank[medium]
+
+% Original printed page 31 begins within the following paragraph.
+\Article{81}The motion of a particle, when constrained to move on a curve or surface, is easily determined from equation (7); for if the variations be changed into differentials, and if \m{\ForceX'}, \m{\ForceY'}, \m{\ForceZ'} be eliminated by their values in the end of article 69, that equation becomes
+\startformula
+  \startalign[n=1,align=middle]
+  \NC \frac{dx\mathbin{.}d^2x+dy\mathbin{.}d^2y+dz\mathbin{.}d^2z}{dt^2}
+       =\ForceX dx+\ForceY dy+\ForceZ dz \NR
+  \NC +\mathrm{R}_{1}
+       \{dx\mathbin{.}\cos\HeavensAlpha+dy\mathbin{.}\cos\HeavensBeta
+                         +dz\mathbin{.}\cos\HeavensGamma\}, \NR
+  \stopalign
+\stopformula
+\noindent \m{\mathrm{R}_{1}} being the reaction in the normal, and \m{\HeavensAlpha}, \m{\HeavensBeta}, \m{\HeavensGamma} the angles made by the normal with the co-ordinates. But the equation of the surface being \m{u=0},
+\startformula
+  du=\Der{u}{x}\mathbin{.}dx+\Der{u}{y}\mathbin{.}dy
+                       +\Der{u}{z}\mathbin{.}dz=0;
+\stopformula
+\noindent consequently, by article 69,
+\startformula
+  \HeavensLambda du=dx\mathbin{.}\cos\HeavensAlpha
+    +dy\mathbin{.}\cos\HeavensBeta+dz\mathbin{.}\cos\HeavensGamma=0;
+\stopformula
+\noindent so that the pressure vanishes from the preceding equation; and when the forces are functions of the distance, the integral is
+\startformula
+  2f(x,y,z)+c=v^2,
+\stopformula
+\noindent and
+\startformula
+  \mathrm{A}^2-v^2=2f(x,y,z)-2f(a,b,c),
+\stopformula
+\noindent as before. Hence, if the particle be urged by accelerating forces, the velocity is independent of the curve or surface on which the particle moves; and if it be not urged by accelerating forces, the velocity is constant. Thus the principle of Least Action not only holds with regard to the curves which a particle describes in space, but also for those it traces when constrained to move on a surface.
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:unfig82}}
+\Article{82}It is easy to see that the velocity must be constant, because a particle moving on a curve or surface only loses an indefinitely small part of its velocity of the second order in passing from one indefinitely small plane of a surface or side of a curve to the consecutive; for if the particle be moving on \m{ab} with the velocity \m{v}; then if the angle \m{abe=\HeavensBeta}, the velocity in \m{bc} will be \m{v\cos\HeavensBeta}; but \m{\cos\HeavensBeta=1-\frac12\HeavensBeta^2-\text{\&c.}}; therefore the velocity on \m{bc} differs from the velocity on \m{ab} by the indefinitely small quantity \m{\frac12v\mathbin{.}\HeavensBeta^2}. In order to determine the pressure of the particle on the surface, the analytical expression of the radius of curvature must be found.
+\par\flushsidefloats
+
+% Original printed page 32.
+\blank[medium]
+\midaligned{\it Radius of Curvature.}
+\blank[medium]
+
+\Article{83}The circle \m{\mathrm{A}m\mathrm{B}}, fig.~22, which coincides with a curve or curved surface through an indefinitely small space on each side of \m{m} the point of contact, is called the curve of equal curvature, or the osculating circle of the curve \m{\mathrm{MN}}, and \m{om} is the radius of curvature.
+
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure22}}
+\noindent\hskip1em\relax In a plane curve the radius of curvature \m{r}, is expressed by
+\startformula
+  r=\frac{ds^2}{\sqrt{(d^2x)^2+(d^2y)^2}}
+\stopformula
+\noindent and in a curve of double curvature it is
+\startformula
+  r=\frac{ds^2}{\sqrt{(d^2x)^2+(d^2y)^2+(d^2z)^2}},
+\stopformula
+\noindent \m{ds} being the constant element of the curve.
+\par\flushsidefloats
+
+\noindent\hskip1em\relax Let the angle \m{com} be represented by \m{\HeavensTheta}, then if \m{\mathrm{A}m} be the indefinitely small but constant element of the curve \m{\mathrm{MN}}, the triangles \m{com} and \m{\mathrm{AD}m} are similar; hence \m{m\mathrm{A}:m\mathrm{D}\mathrel{::}om:mc}, or \m{ds:dx\mathrel{::}1:\sin\HeavensTheta}, and \m{\sin\HeavensTheta=\frac{dx}{ds}}. In the same manner \m{\cos\HeavensTheta=\frac{dy}{ds}}. But \m{d\mathbin{.}\cos\HeavensTheta=-d\HeavensTheta\sin\HeavensTheta}, and \m{d\HeavensTheta=-\frac{d\mathbin{.}\cos\HeavensTheta}{\sin\HeavensTheta}}; also \m{d\mathbin{.}\sin\HeavensTheta=d\HeavensTheta\cos\HeavensTheta}, and \m{d\HeavensTheta=\frac{d\mathbin{.}\sin\HeavensTheta}{\cos\HeavensTheta}}; but these evidently become
+\startformula
+  d\HeavensTheta=+\frac{ds}{dy}\mathbin{.}d\frac{dx}{ds}
+  \quad\text{and}\quad
+  d\HeavensTheta=-\frac{ds}{dx}\mathbin{.}d\frac{dy}{ds};\quad\text{or}
+\stopformula
+\startformula
+  d\HeavensTheta=+\frac{d^2x}{dy},\quad\text{and}\quad d\HeavensTheta=-\frac{d^2y}{dx}.
+\stopformula
+% Original printed page 33 begins within the following paragraph.
+\noindent Now if \m{om} the radius of curvature be represented by \m{r}, then \m{mo\mathrm{A}} being the indefinitely small increment \m{d\HeavensTheta} of the angle \m{com}, we have \m{r:ds\mathrel{::}1:d\HeavensTheta}; for the sine of the infinitely small angle is to be considered as coinciding with the arc: hence \m{d\HeavensTheta=\frac{ds}{r}}, whence \m{r=-\frac{ds\mathbin{.}dy}{d^2x}=\frac{dsdx}{d^2y}}. But \m{dx^2+dy^2=ds^2}, and as \m{ds} is constant \m{dx\mathbin{.}d^2x+dyd^2y=0}. Whence \m{\frac{d^2x}{d^2y}=-\frac{dy}{dx}}, or \m{\left(\frac{d^2x}{d^2y}\right)^2=\frac{dy^2}{dx^2}}, and adding one to each side of the last equation, it becomes
+\startformula
+  \frac{dx^2+dy^2}{dx^2}=\frac{ds^2}{dx^2}
+    =\frac{(d^2x)^2+(d^2y)^2}{(d^2y)^2}.
+\stopformula
+\noindent Whence
+\startformula
+  \frac{dx}{d^2y}=\frac{ds}{\sqrt{(d^2x)^2+(d^2y)^2}}.
+\stopformula
+\noindent But it has been shown that \m{r=\frac{dxds}{d^2y}}; hence in a plane curve the radius of curvature is
+\startformula
+  r=\frac{ds^2}{\sqrt{(d^2x)^2+(d^2y)^2}}.
+\stopformula
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure23}}
+\noindent\hskip1em\relax We may imagine \m{\mathrm{MN}} to be the projection of a curve of double curvature on the plane \m{xoy}, then
+\startformula
+  r=\frac{ds^2}{\sqrt{(d^2x)^2+(d^2y)^2}}
+\stopformula
+\noindent will be the projection of the radius of curvature on \m{xoy}, and it is evident that a similar expression will be found for the projection of the radius of curvature on each of the other co-ordinate planes. In fact \m{\frac12\sqrt{(d^2x)^2+(d^2y)^2}} is the sagitta of curvature \m{n\mathrm{E}}; for
+\par\flushsidefloats
+\startformula
+  (nm)^2=2r\mathbin{.}n\mathrm{E},
+\stopformula
+\noindent or
+\startformula
+  r=\frac{(nm)^2}{2n\mathrm{E}}=\frac{ds^2}{2n\mathrm{E}}
+    =\frac{ds^2}{\sqrt{(d^2x)^2+(d^2y)^2}}
+\stopformula
+\noindent for the arc being indefinitely small, the tangent may be considered as coinciding with it. Thus the three projections of the sagitta of curvature of the surface, or curve of double curvature, are
+\startformula
+  \frac12\sqrt{(d^2x)^2+(d^2y)^2};\quad
+  \frac12\sqrt{(d^2x)^2+(d^2z)^2};\quad
+  \frac12\sqrt{(d^2y)^2+(d^2z)^2};
+\stopformula
+\noindent hence the sum of their squares is
+\startformula
+  \frac12\sqrt{(d^2x)^2+(d^2y)^2+(d^2z)^2};
+\stopformula
+\noindent and the radius of curvature of a surface, or curve of double curvature, is
+\startformula
+  r=\frac{ds^2}{\sqrt{(d^2x)^2+(d^2y)^2+(d^2z)^2}}.
+\stopformula
+
+% Original printed page 34.
+\blank[big]
+\midaligned{\it Pressure of a Particle moving on a curved Surface.}
+\blank[big]
+
+\Article{84}If the particle be moving on a curved surface, it exerts a pressure which the surface opposes with an equal and contrary pressure.
+
+\noindent\hskip1em\relax {\it Demonstration.}---For if \m{\Force} be the resulting force of the partial accelerating forces \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, acting on the particle at \m{m}, it may be resolved into two forces, one in the direction of the tangent \m{m\mathrm{T}}, and the other in the normal \m{m\mathrm{N}}, fig.~12. The forces in the tangent have their full effect, and produce a change in the velocity of the particle, but those in the normal are destroyed by the resistance of the surface. If the particle were in equilibrio, the whole pressure would be that in the normal; but when the particle is in motion, the velocity in the tangent produces another pressure on the surface, in consequence of the continual effort the particle makes to fly off in the tangent. Hence when the particle is in motion, its whole pressure on the surface is the difference of these two pressures, which are both in the direction of the normal, but one tends to the interior of the surface and the other from it. The velocity in the tangent is variable in consequence of the accelerating forces \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, and becomes uniform if we suppose them to cease.
+
+\blank[big]
+\midaligned{\it Centrifugal Force.}
+\blank[big]
+
+\Article{85}When the particle is not urged by accelerating forces, its motion is owing to a primitive impulse, and is therefore uniform. In this case \m{\ForceX}, \m{\ForceY}, \m{\ForceZ}, are zero, the pressure then arising from the velocity only, tends to the exterior of the surface.
+
+\noindent\hskip1em\relax And as \m{v} the velocity is constant, if \m{ds} be the element of the curve described in the time \m{dt}, then
+\startformula
+  ds=vdt,\quad\text{whence}\quad dt=\frac{ds}{v},
+\stopformula
+% Original printed page 35 begins within the following paragraph.
+\noindent therefore \m{ds} is constant; and when this value of \m{dt} is substituted in equation (7), in consequence of the values of \m{\ForceX'}, \m{\ForceY'}, \m{\ForceZ'}, in the end of article 69, it gives
+\startformula
+  \startalign[n=2,align={right,left}]
+  \NC v^2\mathbin{.}\frac{d^2x}{ds^2}\NC =\mathrm{R}_{1}\cos\HeavensAlpha \NR
+  \NC v^2\mathbin{.}\frac{d^2y}{ds^2}\NC =\mathrm{R}_{1}\cos\HeavensBeta \NR
+  \NC v^2\mathbin{.}\frac{d^2z}{ds^2}\NC =\mathrm{R}_{1}\cos\HeavensGamma \NR
+  \stopalign
+\stopformula
+\noindent for by article 81 the particle may be considered as free, whence
+\startformula
+  \mathrm{R}_{1}=\frac{v^2\sqrt{(d^2x)^2+(d^2y)^2+(d^2z)^2}}{ds^2};
+\stopformula
+\noindent and as the osculating radius is
+\startformula
+  r=\frac{ds^2}{\sqrt{(d^2x)^2+(d^2y)^2+(d^2z)^2}},
+\stopformula
+\noindent so
+\startformula
+  \mathrm{R}_{1}=\frac{v^2}{r}.
+\stopformula
+\noindent The first member of this equation was shown to be the pressure of the particle on the surface, which thus appears to be equal to the square of the velocity, divided by the radius of curvature.
+
+\Article{86}It is evident that when the particle moves on a surface of unequal curvature, the pressure must vary with the radius of curvature.
+
+\Article{87}When the surface is a sphere, the particle will describe that great circle which passes through the primitive direction of its motion. In this case the circle \m{\mathrm{A}m\mathrm{B}} is itself the path of the particle; and in every part of its motion, its pressure on the sphere is equal to the square of the velocity divided by the radius of the circle in which it moves; hence its pressure is constant.
+
+% Original printed page 36 begins within the following paragraph.
+\Article{88}Imagine the particle attached to the extremity of a thread assumed to be without mass, whereof the other extremity is fixed to the centre of the surface; it is clear that the pressure which the particle exerts against the circumference is equal to the tension of the thread, provided the particle be restrained in its motion by the thread alone. The effort made by the particle to stretch the thread, in order to get away from the centre, is the centrifugal force. Hence the centrifugal force of a particle revolving about a centre, is equal to the square of its velocity divided by the radius.
+
+\Article{89}The plane of the osculating circle, or the plane that passes through two consecutive and indefinitely small sides of the curve described by the particle, is perpendicular to the surface on which the particle moves. And the curve described by the particle is the shortest line that can be drawn between any two points of the surface, consequently this singular law in the motion of a particle on a surface depends on the principle of least action. With regard to the Earth, this curve drawn from point to point on its surface is called a perpendicular to the meridian; such are the lines which have been measured both in France and England, in order to ascertain the true figure of the globe.
+
+\Article{90}It appears that when there are no constant or accelerating forces, the pressure of a particle on any point of a curved surface is equal to the square of the velocity divided by the radius of curvature at that point. If to this the pressure due to the accelerating forces be added, the whole pressure of the particle on the surface will be obtained, when the velocity is variable.
+
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure24}}
+\Article{91}If the particle moves on a surface, the pressure due to the centrifugal force will be equal to what it would exert against the curve it describes resolved in the direction of the normal to the surface in that point; that is, it will be equal to the square of the velocity divided by the radius of the osculating circle, and multiplied by the sine of the angle that the plane of that circle makes with the tangent plane to the surface. Let \m{\mathrm{MN}}, fig.~24, be the path of a particle on the surface; \m{mo} the radius of the osculating circle at \m{m}, and \m{m\mathrm{D}} a tangent to the surface at \m{m}; then \m{om} being radius, \m{o\mathrm{D}} is the sine of the inclination of the plane of the osculating circle on the plane that is tangent to the surface at \m{m}, the centrifugal force is equal to
+\par\flushsidefloats
+\startformula
+  \frac{v^2\times o\mathrm{D}}{om}.
+\stopformula
+% Original printed page 37 begins within the following paragraph.
+% The scan splits accelerat-ing across pp. 36--37; the word is joined here.
+\noindent If to this, the part of the pressure which is due to the accelerating forces be added, the sum will be the whole pressure on the surface.
+
+\Article{92}It appears that the centrifugal force is that part of the pressure which depends on velocity alone; and when there are no accelerating forces it is the pressure itself.
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure25}}
+\Article{93}It is very easy to show that in a circle, the centrifugal force is equal and contrary to the central force.
+
+\noindent\hskip1em\relax {\it Demonstration.}---By article 63 a central force \m{\Force} combined with an impulse, causes a particle to describe an indefinitely small arc \m{m\mathrm{A}}, fig.~25, in the time \m{dt}. As the sine may be taken for the tangent, the space described from the impulse alone is
+\par\flushsidefloats
+\startformula
+  a\mathrm{A}=vdt;
+\stopformula
+\noindent but
+\startformula
+  (a\mathrm{A})^2=2r\mathbin{.}am,
+\stopformula
+\noindent so
+\startformula
+  am=\frac{v^2dt^2}{2r},
+\stopformula
+\noindent \m{r} being radius. But as the central force causes the particle to move through the space
+\startformula
+  am=\frac12\Force\mathbin{.}dt^2,
+\stopformula
+\noindent in the same time,
+\startformula
+  \frac{v^2}{r}=\Force.
+\stopformula
+
+\Article{94}If \m{v} and \m{v'} be the velocities of two bodies, moving in circles whose radii are \m{r} and \m{r'}, their velocities are as the circumferences divided by the times of their revolutions; that is, directly as the space, and inversely as the time, since circular motion is uniform. But the radii are as their circumferences, hence
+\startformula
+  v^2:v'^2\mathrel{::}\frac{r^2}{t^2}:\frac{r'^2}{t'^2},
+\stopformula
+\noindent \m{t} and \m{t'} being the times of revolution. If \m{c} and \m{c'} be the centrifugal forces of the two bodies, then
+\startformula
+  c:c'\mathrel{::}\frac{v^2}{r}:\frac{v'^2}{r'},
+\stopformula
+\noindent or, substituting for \m{v^2} and \m{v'^2}, we have
+
+% Original printed page 38.
+\startformula
+  c:c'\mathrel{::}\frac{r}{t^2}:\frac{r'}{t'^2}.
+\stopformula
+\noindent Thus the centrifugal forces are as the radii divided by the squares of the times of revolution.
+
+\Article{95}With regard to the Earth the times of rotation are everywhere the same; hence the centrifugal forces, in different latitudes, are as the radii of these parallels. These elegant theorems discovered by Huygens, led Newton to the general theory of motion in curves, and to the law of universal gravitation.
+
+\blank[medium]
+\midaligned{\it Motion of Projectiles.}
+\blank[medium]
+
+\Article{96}From the general equation of motion is also derived the motion of projectiles.
+
+\noindent\hskip1em\relax Gravitation affords a perpetual example of a continued force; its influence on matter is the same whether at rest or in motion; it penetrates its most intimate recesses, and were it not for the resistance of the air, it would cause all bodies to fall with the same velocity: it is exerted at the greatest heights to which man has been able to ascend, and in the most profound depths to which he has penetrated. Its direction is perpendicular to the horizon, and therefore varies for every point on the earth's surface; but in the motion of projectiles it may be assumed to act in parallel straight lines; for, any curves that projectiles could describe on the earth may be esteemed as nothing in comparison of its circumference.
+
+\noindent\hskip1em\relax The mean radius of the earth is about 4000 miles, and MM. Biot and Gay Lussac ascended in a balloon to the height of about four miles, which is the greatest elevation that has been attained, but even that is only the 1000th part of the radius.
+
+\noindent\hskip1em\relax The power of gravitation at or near the earth's surface may, without sensible error, be considered as a uniform force; for the decrease of gravitation, inversely as the square of the distance, is hardly perceptible at any height within our reach.
+
+% Original printed page 39 begins within the following paragraph.
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure26}}
+\Article{97}{\it Demonstration.}---If a particle be projected in a straight line \m{\mathrm{MT}}, fig.~26, forming any angle whatever with the horizon, it will constantly deviate from the direction \m{\mathrm{MT}} by the action of the gravitating force, and will describe a curve \m{\mathrm{MN}}, which is concave towards the horizon, and to which \m{\mathrm{MT}} is tangent at \m{\mathrm{M}}. On this particle there are two forces acting at every instant of its motion: the resistance of the air, which is always in a direction contrary to the motion of the particle; and the force of gravitation, which urges it with an accelerated motion, according to the perpendiculars \m{\mathrm{E}d}, \m{\mathrm{C}f}, \&c. The resistance of the air may be resolved into three partial forces, in the direction of the three axes \m{ox}, \m{oy}, \m{oz}, but gravitation acts on the particle in the direction of \m{oz} alone. If \m{\mathrm{A}} represents the resistance of the air, its component force in the axis \m{ox} is evidently \m{-\mathrm{A}\frac{dx}{ds}}; for if \m{\mathrm{A}m} or \m{ds} be the space proportional to the resistance, then
+\par\flushsidefloats
+\startformula
+  \mathrm{A}m:\mathrm{E}c\mathrel{::}\mathrm{A}:
+    \mathrm{A}\frac{\mathrm{E}c}{\mathrm{A}m}
+      =\mathrm{A}\frac{dx}{ds};
+\stopformula
+\noindent but as this force acts in a direction contrary to the motion of the particle, it must be taken with a negative sign. The resistance in the axes \m{oy} and \m{oz} are \m{-\mathrm{A}\frac{dy}{ds},-\mathrm{A}\frac{dz}{ds}}; hence if \m{g} be the force of gravitation, the forces acting on the particle are
+\startformula
+  \ForceX=-\mathrm{A}\frac{dx}{ds};\quad
+  \ForceY=-\mathrm{A}\frac{dy}{ds};\quad
+  \ForceZ=g-\mathrm{A}\frac{dz}{ds}.
+\stopformula
+\noindent As the particle is free, each of the virtual velocities is zero; hence we have
+\startformula
+  \frac{d^2x}{dt^2}=-\mathrm{A}\frac{dx}{ds};\quad
+  \frac{d^2y}{dt^2}=-\mathrm{A}\frac{dy}{ds};\quad
+  \frac{d^2z}{dt^2}=g-\mathrm{A}\frac{dz}{ds};
+\stopformula
+\noindent for the determination of the motion of the projectile. If \m{\mathrm{A}} be eliminated between the two first, it appears that
+% The scan prints dt (without a square) below d^2x and d^2y here.
+\startformula
+  \frac{d^2x}{dt}\mathbin{.}\frac{dy}{dt}
+    =\frac{d^2y}{dt}\mathbin{.}\frac{dx}{dt},\quad\text{or}\quad
+  d\log\frac{dx}{dt}=d\log\frac{dy}{dt};
+\stopformula
+
+% Original printed page 40.
+\noindent and integrating, \m{\log\frac{dx}{dt}=\log\mathrm{C}+\log\frac{dy}{dt}}. Whence \m{\frac{dx}{dt}=\mathrm{C}\frac{dy}{dt}}, or \m{dx=\mathrm{C}dy}, and if we integrate a second time,
+\startformula
+  x=\mathrm{C}y+\mathrm{D},
+\stopformula
+% Preserve the printed denominator dt, although p39 has dy/ds.
+\noindent in which \m{\mathrm{C}} and \m{\mathrm{D}} are the constant quantities introduced by double integration. As this is the equation to a straight line, it follows that the projection of the curve in which the body moves on the plane \m{xoy} is a straight line, consequently the curve \m{\mathrm{MN}} is in the plane \m{zox}, that is at right angles to \m{xoy}; thus \m{\mathrm{MN}} is a plane curve, and the motion of the projectile is in a plane at right angles to the horizon. Since the projection of \m{\mathrm{MN}} on \m{xoy} is the straight line \m{\mathrm{ED}}, therefore \m{y=0}, and the equation \m{\frac{d^2y}{dt^2}=-\mathrm{A}\frac{dy}{dt}} is of no use in the solution of the problem, there being no motion in the direction \m{oy}. Theoretical reasons, confirmed to a certain extent by experience, show that the resistance of the air supposed of uniform density is proportional to the square of the velocity; hence,
+\startformula
+  \mathrm{A}=hv^2=h\frac{ds^2}{dt^2},
+\stopformula
+\noindent \m{h} being a quantity that varies with the density, and is constant when it is uniform; thus the general equations become
+\startformula
+  \text{(a)}\quad
+  \frac{d^2x}{dt^2}=-h\mathbin{.}\frac{ds}{dt}\mathbin{.}\frac{dx}{dt};\quad
+  \frac{d^2z}{dt^2}=g-h\mathbin{.}\frac{ds}{dt}\mathbin{.}\frac{dz}{dt};
+\stopformula
+\noindent the integral of the first is
+\startformula
+  \frac{dx}{dt}=\mathrm{C}\mathbin{.}c^{-hs},
+\stopformula
+\noindent \m{\mathrm{C}} being an arbitrary constant quantity, and \m{c} the number whose hyperbolic logarithm is unity.
+
+\noindent\hskip1em\relax In order to integrate the second, let \m{dz=udx}, \m{u} being a function of \m{z}; then the differential according to \m{t} gives
+\startformula
+  \frac{d^2z}{dt^2}=\frac{du}{dt}\mathbin{.}\frac{dx}{dt}
+                       +u\mathbin{.}\frac{d^2x}{dt^2}.
+\stopformula
+\noindent\hskip1em\relax If this be put in the second of equations (a), it becomes, in consequence of the first,
+% Preserve the minus sign before g as printed.
+\startformula
+  \frac{du}{dt}\mathbin{.}\frac{dx}{dt}=-g;
+\stopformula
+
+% Original printed page 41.
+\noindent or, eliminating \m{dt} by means of the preceding integral, and making
+\startformula
+  -\frac{g}{2\mathrm{C}^2}=a,
+\stopformula
+\noindent it becomes
+% The source prints exponent 2h (without s); compare c^{-hs} on p40.
+\startformula
+  \frac{du}{dx}=2ac^{2h}.
+\stopformula
+\noindent\hskip1em\relax The integral of this equation will give \m{u} in functions of \m{x}, and when substituted in
+\startformula
+  dz=udx,
+\stopformula
+\noindent it will furnish a new equation of the first order between \m{z}, \m{x}, and \m{t}, which will be the differential equation of the trajectory.
+
+% The original prints no article number 98 in this passage (or on pp.39--40);
+% the next numbered article, on p42, is 99. No missing number is supplied.
+\noindent\hskip1em\relax If the resistance of the medium be zero, \m{h=0}, and the preceding equation gives
+\startformula
+  u=2ax+b,
+\stopformula
+\noindent and substituting \m{\frac{dz}{dx}} for \m{u}, and integrating again
+\startformula
+  z=ax^2+bx+b'
+\stopformula
+\noindent \m{b} and \m{b'} being arbitrary constant quantities. This is the equation to a parabola whose axis is vertical, which is the curve a projectile would describe in vacuo. When
+\startformula
+  h=0,\quad d^2z=gdt^2;
+\stopformula
+\noindent and as the second differential of the preceding integral gives
+\startformula
+  d^2z=2adx^2;\quad dt=dx\sqrt{\frac{2a}{g}},
+\stopformula
+\noindent therefore
+\startformula
+  t=x\sqrt{\frac{2a}{g}}+a'.
+\stopformula
+\noindent If the particle begins to move from the origin of the co-ordinates, the time as well as \m{x}, \m{y}, \m{z}, are estimated from that point; hence \m{b'} and \m{a'} are zero, and the two equations of motion become
+\startformula
+  z=ax^2+bx;\quad\text{and}\quad t=x\sqrt{\frac{2a}{g}};
+\stopformula
+\noindent whence
+\startformula
+  z=g\frac{t^2}{2}+tb\sqrt{\frac{g}{2a}}.
+\stopformula
+% Mechanism of the Heavens, Chapter II, printed pp. 42--53 / PDF 118--129.
+% Transcribed from the scans. Figures 27--33 are schematic MetaFun drawings.
+% Source peculiarities are retained, including T=365^d.2564 on p. 43,
+% initial-velocity symbol I on p. 45, and unprimed ds in p. 52 denominators.
+
+% Original printed page 42.
+\noindent These three equations contain the whole theory of projectiles in vacuo; the second equation shows that the horizontal motion is uniform, being proportional to the time; the third expresses that the motion in the perpendicular is uniformly accelerated, being as the square of the time.
+
+\blank[big]
+\startalignment[middle]
+  {\it Theory of Falling Bodies.}
+\stopalignment
+\blank[medium]
+
+\Article{99}If the particle begins to move from a state of rest, \m{b=0}, and the equations of motion are
+\startformula
+  \frac{dz}{dt}=gt,\quad\text{and}\quad z=\tfrac12gt^2.
+\stopformula
+\noindent The first shows that the velocity increases as the time; the second shows that the space increases as the square of the time, and that the particle moving uniformly with the velocity it has acquired in the time \m{t}, would describe the space \m{2z}, that is, double the space it has moved through. Since \m{gt} expresses the velocity \m{v}, the last of the preceding equations gives
+\startformula
+  2gz=g^2t^2=v^2,
+\stopformula
+\noindent where \m{z} is the height through which the particle must have descended from rest, in order to acquire the velocity \m{v}. In fact, were the particle projected perpendicularly upwards, the parabola would then coincide with the vertical: thus the laws of parabolic motion include those of falling bodies; for the force of gravitation overcomes the force of projection, so that the initial velocity is at length destroyed, and the body then begins to fall from the highest point of its ascent by the force of gravitation, as from a state of rest. By experience it is found to acquire a velocity of nearly 32.19 feet in the first second of its descent at London, and in two seconds it acquires a velocity of 64.38, having fallen through 16.095 feet in the first second, and in the next \m{32.19+16.095=48.285} feet, \&c. The spaces described are as the odd numbers 1, 3, 5, 7, \&c.
+
+\noindent\hskip1em\relax These laws, on which the whole theory of motion depends, were discovered by Galileo.
+
+% Original printed page 43.
+\blank[medium]
+\startalignment[middle]
+  {\it Comparison of the Centrifugal Force with Gravity.}
+\stopalignment
+\blank[medium]
+
+\Article{100}The centrifugal force may now be compared with gravity, for if \m{v} be the velocity of a particle moving in the circumference of a circle of which \m{r} is the radius, its centrifugal force is \m{f=\frac{v^2}{r}}. Let \m{h} be the space or height through which a body must fall in order to acquire a velocity equal to \m{v}; then by what was shown in article~99, \m{v^2=2hg}, for the accelerating force in the present case is gravity; hence \m{f=\frac{2\mathbin{.}h\mathbin{.}g}{r}}. If we suppose \m{h=\tfrac12r}, the centrifugal force becomes equal to gravity.
+
+\Article{101}Thus, if a heavy body be attached to one extremity of a thread, and if it be made to revolve in a horizontal plane round the other extremity of the thread fixed to a point in the plane; if the velocity of revolution be equal to what the body would acquire by falling through a space equal to half the length of the thread, the body will stretch the thread with the same force as if it hung vertically.
+
+\Article{102}Suppose the body to employ the time \m{\mathrm{T}} to describe the circumference whose radius is \m{r}; then \m{\HeavensPi} being the ratio of the circumference to the diameter, \m{v=\frac{2\HeavensPi r}{\mathrm{T}}}, whence
+\startformula
+  f=\frac{4\HeavensPi^{2}r}{\mathrm{T}^2}.
+\stopformula
+\noindent Thus the centrifugal force is directly proportional to the radius, and in the inverse ratio of the square of the time employed to describe the circumference. Therefore, with regard to the earth, the centrifugal force increases from the poles to the equator, and gradually diminishes the force of gravity. The equatorial radius, computed from the mensuration of degrees of the meridian, is 20920600 feet, \m{\mathrm{T}=365^{\mathrm{d}}.2564}, and as it appears, by experiments with the pendulum, that bodies fall at the equator 16.0436 feet in a second, the preceding formulæ give the ratio of the centrifugal force to gravity at the equator equal to \m{\frac{1}{289}}. Therefore if the rotation of the earth were 17 times more rapid, the centrifugal force would be equal to gravity, and at the equator bodies would be in equilibrio from the action of these two forces.
+
+% Original printed page 44.
+\blank[medium]
+\startalignment[middle]
+  {\it Simple Pendulum.}
+\stopalignment
+\blank[medium]
+
+\Article{103}A particle of matter suspended at the extremity of a thread, supposed to be without weight, and fixed at its other extremity, forms the simple pendulum.
+
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure27}}
+\Article{104}Let \m{m}, fig.~27, be the particle of matter, \m{\mathrm{S}m} the thread, and \m{\mathrm{S}} the point of suspension. If an impulse be given to the particle, it will move in a curve \m{m\mathrm{ADC}}, as if it were on the surface of the sphere of which \m{\mathrm{S}} is the centre; and the greatest deviation from the vertical \m{\mathrm{S}z} would be measured by the sine of the angle \m{\mathrm{CS}m}. This motion arises from the combined action of gravitation and the impulse.
+\par\flushsidefloats
+
+% Original printed page 45 begins within the following paragraph.
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure28}}
+\Article{105}The impulse may be such as to make the particle describe a curve of double curvature; or if it be given in the plane \m{x\mathrm{S}z}, the particle will describe the arc of a circle \m{\mathrm{DC}m}, fig.~28; but it is evident that the extent of the arc will be in proportion to the intensity of the impulse, and it may be so great as to cause the particle to describe an indefinite number of circumferences. But if the impulse be small, or if the particle be drawn from the vertical to a point \m{\mathrm{B}} and then left to itself, it will be urged in the vertical by gravitation, which will cause it to describe the arc \m{m\mathrm{C}} with an accelerated velocity; when at \m{\mathrm{C}} it will have acquired so much velocity that it will overcome the force of gravitation, and having passed that point, it will proceed to \m{\mathrm{D}}; but in this half of the arc its motion will be as much retarded by gravitation as it was accelerated in the other half; so that on arriving at \m{\mathrm{D}} it will have lost all its velocity, and it will descend through \m{\mathrm{DC}} with an accelerated motion which will carry it to \m{\mathrm{B}} again. In this manner it would continue to move for ever, were it not for the resistance of the air. This kind of motion is called oscillation. The time of an oscillation is the time the particle employs to move through the arc \m{\mathrm{BCD}}.
+\par\flushsidefloats
+
+\Article{106}{\it Demonstration.}---Whatever may be the nature of the curve, it has already been shown in article~99, that at any point \m{m}, \m{v^2=2gz}, \m{g} being the force of gravitation, and \m{z=\mathrm{H}p}, the height through which the particle must have descended in order to acquire the velocity \m{v}. If the particle has been impelled instead of falling from rest, and if \m{\mathrm{I}} be the velocity generated by the impulse, the equation becomes \m{v^2=\mathrm{I}+2gz}. The velocity at \m{m} is directly as the element of the space, and inversely as the element of the time; hence
+\startformula
+  v^2=\frac{(\mathrm{A}m)^2}{dt^2}=\frac{ds^2}{dt^2}
+     =\mathrm{I}+2g\mathbin{.}z;
+\stopformula
+\noindent whence
+\startformula
+  dt=\frac{-ds}{\sqrt{\mathrm{I}+2g\mathbin{.}z}}.
+\stopformula
+\noindent The sign is made negative, because \m{z} diminishes as \m{t} augments. If the equation of the trajectory or curve \m{m\mathrm{CD}} be given, the value of \m{ds=\mathrm{A}m} may be obtained from it in terms of \m{z=\mathrm{H}p}, and then the finite value of the preceding equation will give the time of an oscillation in that curve.
+
+\Article{107}The case of greatest importance is that in which the trajectory is a circle of which \m{\mathrm{S}m} is the radius; then if an impulse be given to the pendulum at the point \m{\mathrm{B}} perpendicular to \m{\mathrm{SB}}, and in the plane \m{xoz}, it will oscillate in that plane. Let \m{h} be the height through which the particle must fall in order to acquire the velocity given by the impulse, the initial velocity \m{\mathrm{I}} will then be \m{2gh}; and if \m{\mathrm{BSC}=\HeavensAlpha} be the greatest amplitude, or greatest deviation of the pendulum from the vertical, it will be a constant quantity. Let the variable angle \m{m\mathrm{SC}=\HeavensTheta}, and if the radius be \m{r}, then
+\startformula
+  \mathrm{S}p=r\cos\HeavensTheta;\quad
+  \mathrm{SH}=r\cos\HeavensAlpha;\quad
+  \mathrm{H}p=\mathrm{S}p-\mathrm{SH}
+    =r(\cos\HeavensTheta-\cos\HeavensAlpha),
+\stopformula
+\noindent and the elementary arc \m{m\mathrm{A}=r\,d\HeavensTheta}; hence the expression for the time becomes
+\startformula
+  dt=\frac{-r\,d\HeavensTheta}
+    {\sqrt{2g(h+r\cos\HeavensTheta-r\cos\HeavensAlpha)}}.
+\stopformula
+\noindent This expression will take a more convenient form, if \m{x=\mathrm{C}p=(1-\cos\HeavensTheta)} be the versed sine of \m{m\mathrm{SC}}, and \m{\HeavensBeta=(1-\cos\HeavensAlpha)} the versed sine of \m{\mathrm{BSC}}; then \m{d\HeavensTheta=\frac{dx}{\sqrt{2x-x^2}}}, and
+
+% Original printed page 46.
+\startformula
+  dt=\frac{-r\,dx}{\sqrt{2x-x^2}\mathbin{.}
+                 \sqrt{2g(h+r\HeavensBeta-rx)}}
+\stopformula
+\startformula
+  v=\sqrt{2g(h+r\HeavensBeta-rx)}.
+\stopformula
+\noindent Since the versed sine never can surpass 2, if \m{h+r\HeavensBeta>2r}, the velocity will never be zero, and the pendulum will describe an indefinite number of circumferences; but if \m{h+r\HeavensBeta<2r}, the velocity \m{v} will be zero at that point of the trajectory where \m{x=\frac{h+r\HeavensBeta}{r}}, and the pendulum will oscillate on each side of the vertical.
+
+\noindent\hskip1em\relax If the origin of motion be at the commencement of an oscillation, \m{h=0}, and
+\startformula
+  dt=-\tfrac12\sqrt{\frac{r}{g}}\mathbin{.}
+  \frac{dx}{\sqrt{\HeavensBeta x-x^2}\sqrt{1-\frac{x}{2}}}.
+  \quad\text{Now}
+\stopformula
+\startformula
+  \left(1-\frac{x}{2}\right)^{-\frac12}
+  =1+\frac12\mathbin{.}\frac{x}{2}
+   +\frac{1\mathbin{.}3}{2\mathbin{.}4}\mathbin{.}\frac{x^2}{4}
+   +\frac{1\mathbin{.}3\mathbin{.}5}{2\mathbin{.}4\mathbin{.}6}
+       \mathbin{.}\frac{x^3}{8}+\text{\&c.}
+\stopformula
+\noindent therefore,
+\startformula
+  dt=-\tfrac12\sqrt{\frac{r}{g}}\mathbin{.}
+  \frac{dx}{\sqrt{\HeavensBeta x-x^2}}
+  \left\{1+\frac12\mathbin{.}\frac{x}{2}
+   +\frac{1\mathbin{.}3}{2\mathbin{.}4}\mathbin{.}\frac{x^2}{4}
+   +\text{\&c.}\right\}
+\stopformula
+\noindent\hskip1em\relax By La Croix' {\it Integral Calculus},
+\startformula
+  \int{\frac{-dx}{\sqrt{\HeavensBeta x-x^2}}}
+   =\mathop{\rm arc}\left(\cos=\frac{2x-\HeavensBeta}{\HeavensBeta}\right)
+    +\text{constant};
+\stopformula
+\noindent But the integral must be taken between the limits \m{x=\HeavensBeta} and \m{x=0}, that is, from the greatest amplitude to the point \m{\mathrm{C}}. Hence
+\startformula
+  \int{\frac{-dx}{\sqrt{\HeavensBeta x-x^2}}}=\HeavensPi;
+\stopformula
+\noindent \m{\HeavensPi} being the ratio of the circumference to the diameter. From the same author it will be found that
+\startformula
+  \int{\frac{-x\,dx}{\sqrt{\HeavensBeta x-x^2}}}
+    =\tfrac12\HeavensBeta\HeavensPi;\quad
+  \int{\frac{-x^2\,dx}{\sqrt{\HeavensBeta x-x^2}}}
+    =\tfrac12\mathbin{.}\tfrac34\HeavensBeta^{2}\HeavensPi,
+    \quad\text{\&c. \&c.}
+\stopformula
+\noindent between the same limits. Hence, if \m{\tfrac12\mathrm{T}} be the time of half an oscillation,
+\startformula
+  \startalign[n=1,align=middle]
+    \NC\mathrm{T}=\HeavensPi\sqrt{\frac{r}{g}}
+      \left\{1+\left(\frac12\right)^2\frac{\HeavensBeta}{2}
+      +\left(\frac{1\mathbin{.}3}{2\mathbin{.}4}\right)^2
+         \frac{\HeavensBeta^{2}}{4}\right.\NR
+    \NC\left.\qquad
+      +\left(\frac{1\mathbin{.}3\mathbin{.}5}{2\mathbin{.}4\mathbin{.}6}\right)^2
+         \frac{\HeavensBeta^{3}}{8}+\text{\&c.}\right\}\NR
+  \stopalign
+\stopformula
+
+% Original printed page 47.
+\noindent This series gives the time whatever may be the extent of the oscillations; but if they be very small, \m{\frac{\HeavensBeta}{2}} may be omitted in most cases; then
+\BookFormula{11}{\mathrm{T}=\HeavensPi\sqrt{\frac{r}{g}}.}
+\noindent As this equation does not contain the arcs, the time is independent of their amplitude, and only depends on the length of the thread and the intensity of gravitation; and as the intensity of gravitation is invariable for any one place on the earth, the time is constant at that place. It follows, that the small oscillations of a pendulum are performed in equal times, whatever their comparative extent may be.
+
+\noindent\hskip1em\relax The series in which the time of an oscillation is given however, shows that it is not altogether independent of the amplitude of the arc. In very delicate observations the two first terms are retained; so that
+\BookFormula{12}{
+  \mathrm{T}=\HeavensPi\sqrt{\frac{r}{g}}
+    \left\{1+\left(\frac12\right)^2\frac{\HeavensBeta}{2}\right\},
+  \quad\text{or}\quad
+  \mathrm{T}=\HeavensPi\sqrt{\frac{r}{g}}
+    \left\{1+\left(\frac12\right)^2\frac{\HeavensAlpha^{2}}{4}\right\}
+}
+\noindent for as \m{\HeavensBeta} is the versed sine of the arc \m{\HeavensAlpha}, when the arc is very small, \m{\HeavensBeta=\frac{\HeavensAlpha^{2}}{2}} nearly. The term \m{\HeavensPi\sqrt{\frac{r}{g}}\left(\frac12\right)^2 \frac{\HeavensAlpha^{2}}{4}}, which is very small, is the correction due to the magnitude of the arc described, and is the equation alluded to in article~9, which must be applied to make the times equal. This correction varies with the arc when the pendulum oscillates in air, therefore the resistance of the medium has an influence on the duration of the oscillation.
+
+% Original printed page 48 begins within the following paragraph.
+\Article{108}The intensity of gravitation at any place on the earth may be determined from the time and the corresponding length of the pendulum. If the earth were a sphere, and at rest, the intensity of gravitation would be the same in every point of its surface; because every point in its surface would then be equally distant from its centre. But as the earth is flattened at the poles, the intensity of gravitation increases from the equator to the poles; therefore the pendulum that would oscillate in a second at the equator, must be lengthened in moving towards the poles. If \m{h} be the space a body would describe by its gravitation during the time \m{\mathrm{T}}, then \m{2h=g\mathrm{T}^2}, and because \m{\mathrm{T}^2=\HeavensPi^{2}\mathbin{.}\frac{r}{g}}; therefore
+\BookFormula{13}{h=\tfrac12\HeavensPi^{2}\mathbin{.}r.}
+\noindent If \m{r} be the length of a pendulum beating seconds in any latitude, this expression will give \m{h}, the height described by a heavy body during the first second of its fall.
+
+\noindent\hskip1em\relax The length of the seconds pendulum at London is 39.1387 inches; consequently in that latitude gravitation causes a heavy body to fall through 16.0951 feet during the first second of its descent.
+
+\noindent\hskip1em\relax Huygens had the merit of discovering that the rectilinear motion of heavy bodies might be determined by the oscillations of the pendulum. It is found by experiments first made by Sir Isaac Newton, that the length of a pendulum vibrating in a given time is the same, whatever the substance may be of which it is composed; hence gravitation acts equally on all bodies, producing the same velocity in the same time, when there is no resistance from the air.
+
+\blank[big]
+\startalignment[middle]
+  {\it Isochronous Curve.}
+\stopalignment
+\blank[medium]
+
+\Article{109}The oscillations of a pendulum in circular arcs being isochronous only when the arc is very small, it is now proposed to investigate the nature of the curve in which a particle must move, so as to oscillate in equal times, whatever the amplitude of the arcs may be.
+
+% Original printed page 49 begins within the following paragraph.
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure29}}
+\noindent\hskip1em\relax The forces acting on the pendulum at any point of the curve are the force of gravitation resolved in the direction of the arc, and the resistance of the air which retards the motion. The first is \m{-g\frac{\mathrm{A}p}{\mathrm{A}m}}, or \m{-g\mathbin{.}\frac{dz}{ds}}, the arc \m{\mathrm{A}m} being indefinitely small; and the second, which is proportional to the square of the velocity, is expressed by \m{-n\left(\frac{ds}{dt}\right)^2}, in which \m{n} is any number, for the velocity is directly as the element of the space, and inversely as the element of the time. Thus \m{-g\mathbin{.}\frac{dz}{ds}-n\frac{ds^2}{dt^2}} is the whole force acting on the pendulum, hence the equation \m{\Force=\frac{d^2s}{dt^2}} article~68, becomes \m{-g\frac{dz}{ds}-n\frac{ds^2}{dt^2}=\frac{d^2s}{dt^2}}. The integral of which will give the isochronous curve in air; but the most interesting results are obtained when the particle is assumed to move in vacuo; then \m{n=0}, and the equation becomes \m{\frac{d^2s}{dt^2}=-g\frac{dz}{ds}}, which, multiplied by \m{2ds} and integrated, gives \m{\frac{ds^2}{dt^2}=c-2gz}, \m{c} being an arbitrary constant quantity.
+\par\flushsidefloats
+
+\noindent\hskip1em\relax Let \m{z=h} at \m{m}, fig.~29, where the motion begins, the velocity being zero at that point, then will \m{c=2gh}, and therefore
+\startformula
+  \frac{ds^2}{dt^2}=2g(h-z);
+\stopformula
+\noindent whence
+\startformula
+  dt=-\frac{ds}{\sqrt{2g(h-z)}}:
+\stopformula
+\noindent the sign is negative, because the arc diminishes as the time increases. When the radical is developed,
+\startformula
+  dt=-\frac{ds}{\sqrt{2gh}}
+  \left\{1+\tfrac12\frac{z}{h}
+  +\frac{1\mathbin{.}3}{2\mathbin{.}4}\mathbin{.}\frac{z^2}{h^2}
+  +\text{\&c.}\right\}
+\stopformula
+\noindent Whatever the nature of the required curve may be, \m{s} is a function of \m{z}; and supposing this function developed according to the powers of \m{z}, its differential will have the form,
+\startformula
+  \frac{ds}{dz}=az^i+bz^{i'}+\text{\&c.}
+\stopformula
+\noindent Substituting this value of \m{ds} in the preceding equation, it becomes
+\startformula
+  \startalign[n=2,align={right,left}]
+    \NC dt={}\NC-\frac{a}{\sqrt{2g}}\mathbin{.}\frac{z^i}{h^{\frac12}}
+      \left\{1+\frac12\mathbin{.}\frac{z}{h}
+      +\frac{1\mathbin{.}3}{2\mathbin{.}4}\mathbin{.}\frac{z^2}{h^2}
+      +\text{\&c.}\right\}dz\NR
+    \NC\NC-\frac{b}{\sqrt{2g}}\mathbin{.}\frac{z^{i'}}{h^{\frac12}}
+      \left\{1+\frac12\mathbin{.}\frac{z}{h}
+      +\frac{1\mathbin{.}3}{2\mathbin{.}4}\mathbin{.}\frac{z^2}{h^2}
+      +\text{\&c.}\right\}dz.\NR
+  \stopalign
+\stopformula
+% Original printed page 50 begins within the following paragraph.
+\noindent The integral of this equation, taken from \m{z=h} to \m{z=0}, will give the time employed by the particle in descending to \m{\mathrm{C}}, the lowest point of the curve. But according to the conditions of the problem, the time must be independent of \m{h}, the height whence the particle has descended; consequently to fulfil that condition, all the terms of the value of \m{dt} must be zero, except the first; therefore \m{b} must be zero, and \m{i+1=\tfrac12}, or \m{i=-\tfrac12}; thus \m{ds=az^{-\frac12}dz}; the integral of which is \m{s=2az^{\frac12}}, the equation to a cycloid \m{\mathrm{D}z\mathrm{E}}, fig.~30, with a horizontal base, the only curve in vacuo having the property required. Hence the oscillations of a pendulum moving in a cycloid are rigorously isochronous in vacuo. If \m{r=2\mathrm{BC}}, by the properties of the cycloid \m{r=2a^2}, and if the preceding value of \m{ds} be put in
+\startformula
+  dt=-\frac{ds}{\sqrt{2g(h-z)}}
+\stopformula
+\noindent its integral is
+\startformula
+  t=\tfrac12\sqrt{\frac{r}{g}}\mathbin{.}
+    \mathop{\rm arc}\left(\cos=\frac{2z-h}{h}\right).
+\stopformula
+\noindent It is unnecessary to add a constant quantity if \m{z=h} when \m{t=0}. If \m{\tfrac12\mathrm{T}} be the time that the particle takes to descend to the lowest point in the curve where \m{z=0}, then
+\startformula
+  \mathrm{T}=\sqrt{\frac{r}{g}}\mathbin{.}
+     \mathop{\rm arc}(\cos=-1)
+     =\HeavensPi\mathbin{.}\sqrt{\frac{r}{g}}.
+\stopformula
+\noindent Thus the time of descent through the cycloidal arc is equal to a semi-oscillation of the pendulum whose length is \m{r}, and whose oscillations are very small, because at the lowest point of the curve the cycloidal arc \m{ds} coincides with the indefinitely small arc of the osculating circle whose vertical diameter is \m{2r}.
+
+% Original printed page 51 begins within the following paragraph.
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure30}}
+\Article{110}The cycloid in question is formed by supposing a circle \m{\mathrm{ABC}}, fig.~30, to roll along a straight line \m{\mathrm{ED}}. The curve \m{\mathrm{EAD}} traced by a point \m{\mathrm{A}} in its circumference is a cycloid. In the same manner the cycloidal arcs \m{\mathrm{SD}}, \m{\mathrm{SE}}, may be traced by a point in a circle, rolling on the other side of \m{\mathrm{DE}}. These arcs are such, that if we imagine a thread fixed at \m{\mathrm{S}} to be applied to \m{\mathrm{SD}}, and then unrolled so that it may always be tangent to \m{\mathrm{SD}}, its extremity \m{\mathrm{D}} will trace the cycloid \m{\mathrm{D}z\mathrm{E}}; and the tangent \m{z\mathrm{S}} is equal to the corresponding arc \m{\mathrm{DS}}. It is evident also, that the line \m{\mathrm{DE}} is equal to the circumference of the circle \m{\mathrm{ABC}}. The curve \m{\mathrm{SD}} is called the involute, and the curve \m{\mathrm{D}z} the evolute. In applying this principle to the construction of clocks, it is so difficult to make the cycloidal arcs \m{\mathrm{SE}}, \m{\mathrm{SD}}, round which the thread of the pendulum winds at each vibration, that the motion in small circular arcs is preferred. The properties of the isochronous curve were discovered by Huygens, who first applied the pendulum to clocks.
+\par\flushsidefloats
+
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure31}}
+\Article{111}The time of the very small oscillation of a circular pendulum is expressed by \m{\mathrm{T}=\HeavensPi\sqrt{\frac{r}{g}}} \m{r} being the length of the pendulum, and consequently the radius of the circle \m{\mathrm{A}m\mathrm{B}}, fig.~31. Also \m{t=\sqrt{\frac{2z}{g}}} is the time employed by a heavy body to fall by the force of gravitation through a height equal to \m{z}.
+\par\flushsidefloats
+\noindent Now the time employed by a heavy body to fall through a space equal to twice the length of the pendulum will be \m{t=\sqrt{\frac{4r}{g}}} hence
+\startformula
+  \tfrac12\mathrm{T}:t\mathrel{::}
+    \tfrac12\HeavensPi\sqrt{\frac{r}{g}}:\sqrt{\frac{4r}{g}},
+\stopformula
+\noindent or
+\startformula
+  \frac{\mathrm{T}}{2}:t\mathrel{::}\frac{\HeavensPi}{2}:2
+\stopformula
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure32}}
+\noindent that is, the time employed to move through the arc \m{\mathrm{A}m}, which is half an oscillation, is to the time of falling through twice the length of the pendulum, as a fourth of the circumference of the circle \m{\mathrm{A}m\mathrm{B}} to its diameter. But the times of falling through all chords drawn to the lowest point \m{\mathrm{A}}, fig.~32, of a circle are equal: for the accelerating force \m{\Force} in any chord \m{\mathrm{AB}}, is to that of gravitation as \m{\mathrm{AC}:\mathrm{AB}}, or as \m{\mathrm{AB}} to \m{\mathrm{AD}}, since the triangles are similar. But the forces being as the spaces, the times are equal: for as
+\par\flushsidefloats
+\startformula
+  \Force:g\mathrel{::}\mathrm{AB}:\mathrm{AD}
+  \quad\text{and}\quad \mathrm{T}:t\mathrel{::}
+    \frac{\mathrm{AB}}{\Force}:\frac{\mathrm{AD}}{g},
+\stopformula
+\noindent it follows that \m{\mathrm{T}=t}.
+
+% Original printed page 52 begins within the following paragraph.
+\Article{112}Hence the time of falling through the chord \m{\mathrm{AB}}, is the same with that of falling through the diameter; and thus the time of falling through the arc \m{\mathrm{AB}} is to the time of falling through the chord \m{\mathrm{AB}} as \m{\frac{\HeavensPi}{2}:2}, that is, as one-fourth of the circumference to the diameter, or as 1.57079 to 2. Thus the straight line \m{\mathrm{AB}}, though the shortest that can be drawn between the points \m{\mathrm{B}} and \m{\mathrm{A}}, is not the line of quickest descent.
+
+\blank[medium]
+\startalignment[middle]
+  {\it Curve of quickest Descent.}
+\stopalignment
+\blank[medium]
+
+\Article{113}In order to find the curve in which a heavy body will descend from one given point to another in the shortest time possible, let
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure33}}
+\m{\mathrm{CP}=z}, \m{\mathrm{PM}=y}, and \m{\mathrm{CM}=s}, fig.~33. The velocity of a body moving in the curve at \m{\mathrm{M}} will be \m{\sqrt{2gz}}, \m{g} being the force of gravitation. Therefore
+\startformula
+  \sqrt{2gz}=\frac{ds}{dt}
+  \quad\text{or}\quad dt=\frac{ds}{\sqrt{2gz}}
+\stopformula
+\noindent the time employed in moving from \m{\mathrm{M}} to \m{m}. Now let \m{\mathrm{C}p=z+dz=z'}, \m{pm=y+dy=y'}, and \m{\mathrm{C}m=ds+s=s'}.
+\par\flushsidefloats
+\noindent Then the time of moving through \m{mm'} is \m{\frac{ds'}{\sqrt{2gz'}}}. Therefore the time of moving from \m{\mathrm{M}} to \m{m'} is \m{\frac{ds}{\sqrt{2gz}}+\frac{ds'}{\sqrt{2gz'}}}, which by hypothesis must be a minimum, or, by the method of variations,
+\startformula
+  \HeavensDelta\frac{ds}{\sqrt{z}}
+  +\HeavensDelta\frac{ds'}{\sqrt{z'}}=0.
+\stopformula
+\noindent The values of \m{z} and \m{z'} are the same for any curves that can be drawn between the points \m{\mathrm{M}} and \m{m'}: hence \m{\HeavensDelta dz=0\quad\HeavensDelta dz'=0}. Besides, whatever the curves may be, the ordinate \m{om'} is the same for all; hence \m{dy+dy'} is constant, therefore \m{\HeavensDelta(dy+dy')=0}: whence \m{\HeavensDelta dy=-\HeavensDelta dy'}; and \m{\HeavensDelta\frac{ds}{\sqrt{z}} +\HeavensDelta\frac{ds'}{\sqrt{z'}}=0}, from these considerations, becomes
+\startformula
+  \frac{dy}{ds\sqrt{z}}-\frac{dy'}{ds\sqrt{z'}}=0.
+\stopformula
+\noindent Now it is evident, that the second term of this equation is only the first term in which each variable quantity is augmented by its increment, so that
+\startformula
+  \frac{dy}{ds\sqrt{z}}-\frac{dy'}{ds\sqrt{z'}}
+     =d\mathbin{.}\frac{dy}{ds\sqrt{z}}=0,
+\stopformula
+
+% Original printed page 53.
+\noindent whence
+\startformula
+  \frac{dy}{ds\sqrt{z}}=\mathrm{A}.
+\stopformula
+\noindent\hskip1em\relax But \m{\frac{dy}{ds}} is the sine of the angle that the tangent to the curve makes with the line of the abscissæ, and at the point where the tangent is horizontal this angle is a right angle, so that \m{\frac{dy}{ds}=1}: hence if \m{a} be the value of \m{z} at that point, \m{\mathrm{A}=\frac{1}{\sqrt{a}}}, and \m{\frac{dy}{ds}=\sqrt{\frac{z}{a}}}, but, \m{ds^2=dy^2+dz^2}, therefore
+\startformula
+  \frac{dy}{dz}=\sqrt{\frac{z}{a-z}},
+\stopformula
+\noindent the equation to the cycloid, which is the curve of quickest descent.
+
+\blank[3*line]
+\startalignment[middle]
+  \blackrule[width=45mm,height=.3pt]
+\stopalignment
+\ifdefined\MechanismCombined\else\expandafter\stoptext\fi

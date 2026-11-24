@@ -1,15 +1,128 @@
 % !TEX program = context
 % !TEX root = somerville-letter-test.tex
 
+% Show line boxes, including their baselines (equivalent to \showmakeup[line]).
+%\enabletrackers[visualizers.line]
+
+%\definepapersize[somerville-wide][width=315mm,height=297mm]
+%\setuppapersize[somerville-wide][somerville-wide]
+\definepapersize[somerville-long][width=350mm,height=594mm]
+\setuppapersize[somerville-long][somerville-long]
+\definefontfeature[mathextra][{ss15=yes}]
+
+% This proof also loads reduced fonts. ConTeXt's expansion vector assumes a
+% complete math glyph set, so disable it for direct editor builds as well.
+\definefontfeature[mathematics][mathematics][mathexpansion=no]
+\definefontfeature[math][math][mathexpansion=no]
+\definefontfeature[math-text][math-text][mathexpansion=no]
+\definefontfeature[math-script][math-script][mathexpansion=no]
+\definefontfeature[math-scriptscript][math-scriptscript][mathexpansion=no]
+
 \input type-imp-somerville.mkxl
 
 \setupbodyfontenvironment[default][em=italic]
 
+\definecolor[guide-paper][h=FBF4D8]
+\setupbackgrounds[page][background=color,backgroundcolor=guide-paper]
 
 \setupbodyfont[somerville-regular]
+\setupinteraction[state=start,color=,contrastcolor=,style=]
+
+% Keep the viewer's current horizontal/vertical position and zoom on every jump.
+% ConTeXt's default page links use /Fit; its standard focus also moves the view.
+\startluacode
+local references = structures.references
+references.specials.lettertestview = function(var)
+    local entries = references.collected[""] or { }
+    local entry = entries[var.operation]
+    local page = entry and entry.references.realpage
+    if page then
+        return lpdf.dictionary {
+            S = lpdf.constant("GoTo"),
+            D = lpdf.array {
+                lpdf.reference(lpdf.pagereference(page)),
+                lpdf.constant("XYZ"), lpdf.null(), lpdf.null(), lpdf.null(),
+            },
+        }
+    end
+end
+\stopluacode
+
+% Weight rows, in display order. Edit this comma-separated list.
+% Available: SemiLight, Regular, Medium, SemiBold, Bold, ExtraBold, Black.
+\def\LetterTestWeights{SemiLight,Regular,Bold,Black}
+%\def\LetterTestWeights{SemiLight}
+
+% Optical-size tables, in display order. Edit this comma-separated list.
+% Available: micro, minuscule, miniature, caption, regular, subheading,
+% trumpet, headline, display, titling, hairline, needlepoint.
+\def\LetterTestOpticalSizes{micro,regular,hairline}
+%\def\LetterTestOpticalSizes{micro}
+
+% Width columns, in display order. Edit this comma-separated list.
+% Available: semicondensed, regular, semiexpanded.
+\def\LetterTestWidths{semicondensed,regular,semiexpanded}
+%\def\LetterTestWidths{semicondensed}
+%\def\LetterTestWidths{semiexpanded}
+
+
+\getparameters[LetterTestWidthTitle]
+  [semicondensed=SemiCondensed,regular=Regular,semiexpanded=SemiExpanded]
+
+% Internal coordinates for the table labels; changing the list needs no edits here.
+\getparameters[LetterTestOpticalCoordinate]
+  [micro=5,minuscule=200,miniature=325,caption=400,regular=550,
+   subheading=640,trumpet=700,headline=800,display=900,titling=980,
+   hairline=1020,needlepoint=1200]
+
+% Derive navigation from the selected lists, including their endpoints.
+\unexpanded\def\LetterTestRegisterNeighbor#1{%
+  \setxvalue{LetterTestPrevious\testnavigationprefix:#1}{\testprevious}%
+  \setvalue{LetterTestNext\testnavigationprefix:#1}{}%
+  \ifx\testprevious\empty\else
+    \setvalue{LetterTestNext\testnavigationprefix:\testprevious}{#1}%
+  \fi
+  \edef\testprevious{#1}%
+}
+\def\testnavigationprefix{Weight}
+\let\testprevious\empty
+\processcommacommand[\LetterTestWeights]\LetterTestRegisterNeighbor
+\def\testnavigationprefix{Optical}
+\let\testprevious\empty
+\processcommacommand[\LetterTestOpticalSizes]\LetterTestRegisterNeighbor
+
+% Draw arrows independently of the test font's glyph coverage.
+\startuniqueMPgraphic{LetterTestUpArrow}
+  drawarrow (0,0)--(0,5pt) withpen pencircle scaled .35pt;
+  setbounds currentpicture to unitsquare xscaled 4pt yscaled 6pt
+    shifted (-2pt,-.5pt);
+\stopuniqueMPgraphic
+\startuniqueMPgraphic{LetterTestDownArrow}
+  drawarrow (0,5pt)--(0,0) withpen pencircle scaled .35pt;
+  setbounds currentpicture to unitsquare xscaled 4pt yscaled 6pt
+    shifted (-2pt,-.5pt);
+\stopuniqueMPgraphic
+
+\unexpanded\def\LetterTestNavigation#1#2#3{%
+  \edef\testnext{\getvalue{LetterTestNext#1:#2}}%
+  \edef\testprevious{\getvalue{LetterTestPrevious#1:#2}}%
+  \ifx\testnext\empty\else
+    \doifelse{#1}{Weight}
+      {\edef\testdestination{lettertest:\testopticalsize:\testnext}}
+      {\edef\testdestination{lettertest:\testnext:\testweight}}%
+    \goto{\uniqueMPgraphic{LetterTestUpArrow}}[lettertestview(\testdestination)]\hskip.4em\relax%
+  \fi
+  #3%
+  \ifx\testprevious\empty\else
+    \doifelse{#1}{Weight}
+      {\edef\testdestination{lettertest:\testopticalsize:\testprevious}}
+      {\edef\testdestination{lettertest:\testprevious:\testweight}}%
+    \hskip.4em\goto{\uniqueMPgraphic{LetterTestDownArrow}}[lettertestview(\testdestination)]%
+  \fi
+}
 
 \unexpanded\def\LetterTestCell#1{%
-  \bTD
+  \bTD[align=normal]
     \switchtobodyfont[#1]%
     \getbuffer[lettertest]%
   \eTD
@@ -22,23 +135,336 @@
   \eTD
 }
 
+\unexpanded\def\LetterTestWeightRow#1{%
+  \lowercase{\def\testweightsuffix{-#1}}%
+  \doif{#1}{Regular}{\let\testweightsuffix\empty}%
+  \bTR
+    \LetterTestLabel{\LetterTestNavigation{Weight}{#1}{#1}}%
+    \processcommacommand[\LetterTestWidths]\LetterTestWidthCell
+  \eTR
+}
+
+\unexpanded\def\LetterTestWidthCell#1{%
+  \edef\testwidthsuffix{-#1}%
+  \doif{#1}{regular}{\let\testwidthsuffix\empty}%
+  \expanded{\LetterTestCell{somerville-\testopticalsize\testwidthsuffix\testweightsuffix}}%
+}
+
+\unexpanded\def\LetterTestWidthHeading#1{%
+  \LetterTestLabel{\getvalue{LetterTestWidthTitle#1}}%
+}
+
+% One weight per page keeps each optical-size header's links tied to that weight.
+\unexpanded\def\LetterTestWeightTable#1{%
+  \def\testweight{#1}%
+  \pagereference[lettertest:\testopticalsize:#1]%
+  \getbuffer[lettertest-table]%
+  \page
+}
+
 \unexpanded\def\LetterTestOpticalTable#1#2{%
   \begingroup
   \def\testopticalsize{#1}%
   \def\testopticalcoordinate{#2}%
-  \getbuffer[lettertest-table]%
-  \blank
+  \processcommacommand[\LetterTestWeights]\LetterTestWeightTable
   \endgroup
 }
 
-\startbuffer[lettertest]
+\unexpanded\def\LetterTestNamedOpticalTable#1{%
+  \LetterTestOpticalTable{#1}{\getvalue{LetterTestOpticalCoordinate#1}}%
+}
 
-\m{ABDTHJL 1c{\rm c}\in x+l\in R + c\in d\in a\in b}
+\startbuffer[lettertest]
+%\setupbodyfont[ibmplex]
+%% == Accents done
+%% Acute
+%% Grave
+%% dot, ddot, dddot
+%% hat
+%% brev
+%% ring
+%% hook
+
+%% Accents Todo
+%% Widehat
+%% Widecheck
+%% Widegrave (ibmplex has this)
+%% Wideacute(ibmplex has this)
+%% Widebrev
+
+%% Accent tests
+%\m{ \grave{H} \cdot \grave{HH} \cdot \grave{HHHHH}} \crlf
+
+%\m{ \widegrave{H} \cdot \widegrave{HH} \cdot \widegrave{HHHHH}} \crlf
+
+%\m{ \acute{H}\cdot \acute{HH} \cdot \acute{HHHHH}} \crlf
+
+%\m{ \wideacute{H}\cdot \wideacute{HH} \cdot \wideacute{HHHHH}} \crlf
+
+%\m{ \hat{H} \hat{x} \hat{t}} \crlf
+
+%\m{ \widehat{H}\cdot \widehat{HHH} \cdot \widehat{HHHHHHHH}} \crlf
+
+%\m{ \breve{H} \breve{x} \breve{t}} \crlf
+
+%\m{ \widebrev{H}\cdot \widebrev{HHH} \cdot \widebrev{HHHHHHHH}} \crlf
+
+%\m{ \dot{H} \dot{x} \dot{t}} \crlf
+%\m{ \ddot{H} \ddot{x} \ddot{t}} \crlf
+%\m{ \dddot{H} \dddot{x} \dddot{t}} \crlf
+%\m{ \ring{H} \ring{x} \ring{t}} \crlf
+ %\m{ \check{H} \check{x} \check{t}} \crlf
+%\m{ \ddddot{H} \ddddot{x} \ddddot{t}} \crlf
+%\m{ \vec{H} \vec{x} \vec{t}}\crlf
+\setupmathaccent[widebar][stretch=no]
+
+
+%\definemathtopaccent[top][asteraccent]["20F0] 
+% \m{ \bar{H} \widebar{x} \widebar{t}}\crlf
+
+% \m{ \widebar{i}}
+
+% \m{\widebar{ii}}
+
+% \m{\widebar{iii}}
+
+% \m{\widebar{iiiii}} 
+
+% \m{\widebar{\rm HHHHHHHHHHH}} 
+
+% \doloopoverlist{0.1cm,0.2cm,0.3cm,0.4cm,0.5cm,0.6cm,2cm}{
+% \m{\overline{\blackrule[width=\recursestring, height=4pt]}}
+% }
+
+% \startformula
+% \widebar{c_a + c_b + \ldots + c_d}
+% =c_d + \ldots + c_b + c_a.
+% \stopformula
+
+% \startformula
+% \left.\widebar{\mathrm{Ext}_A^{d-i}(M,A)}
+% \right|_{\mathrm{PSpec} A} = 0.
+% \stopformula
+
+
+%\m{ \wideundertilde{H} \wideundertilde{x} \wideundertilde{t}}\crlf
+%\m{ \bar{H} \bar{x} \bar{t}} \crlf
+
+
+%% Fences Test
+% \m{
+%   \fenced[angle][size=1]{x}_{\rm M}___{\rm M}^{\rm M}^^^{\rm M}
+%   \fenced[angle][size=2]{x}_{\rm M}___{\rm M}^{\rm M}^^^{\rm M}
+%   \fenced[angle][size=5]{x}_{\rm M}___{\rm M}^{\rm M}^^^{\rm M}
+%   \fenced[angle][size=10]{x}_{\rm M}___{\rm M}^{\rm M}^^^{\rm M}
+%   \fenced[angle][size=20]{x}_{\rm M}___{\rm M}^{\rm M}^^^{\rm M}
+% }
+
+%\m{A\setminus B = C}
+
+%% Angle Test
+%\m{\rm \fenced[angle]{H}\fenced[parenthesis]{H} +\fenced[angle]{x} + (x) + [y]}
+%\setupbodyfont[stixtwo]
+%\m{M^2 + M^M + H^H + H^{H^H} + \rm \circ A \circ A \circ M^{\circ}}
+
+
+%% bigudot TEST
+% This is some text to test the Weight
+% \startformula
+% \bigcap A \bigcap B \bigcap C
+% \stopformula
+
+% \startformula
+% \bigcap_{i=1}^n A \bigcap_{j=1}^n B \bigcap_{k=1}^m C
+% \stopformula
+
+% This is some text to test the Weight
+
+% \startformula
+% \bigcap{\frac{A}{B}}_{i=1}^n  \bigcap{\frac{C}{D}}_{i=1}^n  
+% \stopformula
+
+% \startformula
+% \bigcap{\frac{A}{B_2}}_{i=1}^n  \bigcap{\frac{C}{\frac{D}{N}}}_{i=1}^n  
+% \stopformula
+
+% %\m{{\rm M} \cap {\rm N} \cup B \cup {\rm U} \cap {\rm U} \cup {\rm u} \cup u}
+% \m{\cup\bigcap}
+
+% nAryCircledPlusOperator (U+2A01): base glyph (0) and variants s01--s20.
+
+%\doloopoverlist{0,1,2,3,15,17,18,19,20,21}{
+%\m{\Umathchar 0 0 \getmathvariant\recursestring "220F\relax}
+%}
+%naryunion 22c3
+%bigsqcap 2A05
+%bigsqcup 
+%prod 220F
+
+%\doloopoverlist{0,5,10,21}{
+%\m{\Umathchar 0 0 \getmathvariant\recursestring "220F\relax}
+%}
+
+%\m{TEST CMAP ∩︀ \quad ∪︀ \quad ⋂︀ \quad ⋃︀}
+
+%\break[5pt]
+% Focus this sample on union, intersection, square union and square intersection.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+Ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+%mathaxisontop
+
+\m{{\rm HMN}= \bigudot \bigudot \bigudot \bigsqcup}
+
+\m{\sum \sum_{i=1}^n \prod_{i=1}^n \bigudot_{i=1}^n \bigudot{i=1}^n \coprod_{i=1}^n {\rm HMN} } 
+
+
+
+
+Let \m{A_1,\ldots,A_n} be subsets of a common set. Their union is \m{\prod}
+
+\m{U=\bigoplus{A_i}_{i=1}^{n}}, while their common part is \m{\bigudot}
+\m{I=\bigudot_{i=1}^n b_i = \prod{A_i}_{i=1}^n= \bigudot{A_i}_{i=1}^{n}}
+
+\m{\sum{A_i}_{i=1}^{n} \bigsqcap_i\bigoplus}. \crlf Intersecting each set with a fixed set \m{B}
+gives the distributive identity
+
+\m{ \prod{A}\bigsqcap{A}}
+\startformula
+ \bigoplus{k=1}^n {\rm H}_i =\bigudot{B\cap A_i}_{i=1}^{n} = \bigudot
+\stopformula
+In a distributive lattice, square union denotes join and square intersection
+ denotes meet. For elements \m{x_1,\ldots,x_n}, write
+\m{p=\bigoplus{x_i}_{i=1}^{n}} and
+\m{q=\sum{x_i}_{i=1}^{n}}. Reversing the order of the elements does not change their meet:
+%\startformula
+%  \bigsqcap{x_i}_{i=1}^{n}
+%  =\bigsqcap{x_{n+1-i}}_{i=1}^{n}.
+%\stopformula
+
+%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+%ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam; pellentesque
+%ornare sem lacinia quam venenatis vestibulum.
+
+% Now let \m{A_{ij}} be sets indexed by \m{1\leq i\leq n} and
+% \m{1\leq j\leq m}. Let \m{F} contain all functions choosing one column index
+% for each row. Choosing one set from each row gives
+% \startformula
+%   \bigcap \bigudot{A_{ij}}
+%   =\bigudot \bigcap{A_{i,f(i)}}
+% \stopformula
+% \startformula
+%   \bigcap_{i=1}^{n} \bigudot{A_{ij}}_{j=1}^{m}
+%   =\bigudot_{f\in F} \bigcap{A_{i,f(i)}}_{i=1}^{n}.
+% \stopformula
+% For lattice elements \m{x_{ij}}, finite distributivity gives the corresponding
+% identity with joins and meets:
+% \startformula
+%   \bigsqcap{\bigsqcup{x_{ij}}_{j=1}^{m}}_{i=1}^{n}
+%   =\bigsqcup{\bigsqcap{x_{i,f(i)}}_{i=1}^{n}}_{f\in F}.
+% \stopformula
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.
+Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis
+interdum; nulla vitae elit libero, a pharetra \m{\bigoplus A_i \bigudot \bigoplus} augue.
+
+%\startformula  
+%  \bigsqcap[size=48pt]{\bigsqcup[size=48pt]{x_{ij}}_{j=1}^{m}}_{i=1}^{n}
+%  =\bigsqcup[size=48pt]{\bigsqcap[size=48pt]{x_{i,f(i)}}_{i=1}^{n}}_{f\in F}.
+%\stopformula
+
+
+
+%\m{ x\in H\cup H\cap H}
+%% Letter Test
 % \m{|x|.|y|.|{\rm H}|.{|\testletter|}. (\testletter).
 % \testletter___{\rm H}^^^{\rm H}\cdot \testletter^{\rm H}_{\rm H} \cdot \testletter^{\rm H}_{\rm H}^^^{\rm H}___{\rm H}\cdot
-% \testletter___{H}^^^{H}\cdot \testletter^H_H \cdot \testletter^H_H^^^H___H \cdot
-% \testletter^2.\cdot \hat{\testletter} }\crlf
+% \testletter___{I}^^^{I}\cdot \testletter^I_I \cdot \testletter^I_I^^^I___I \cdot
+% \testletter^2.\cdot \dot{\testletter} \cdot \hat{\testletter} }\crlf
 
+% Larger set identity: 55pt outer operators and 40pt inner operators.
+% \startformula
+%   \bigcap[size=55pt]{\bigudot[size=40pt]{A_{ij}}_{j=1}^{m}}_{i=1}^{n}
+%   =\bigoplus[size=55pt]{\bigcap[size=40pt]{A_{i,f(i)}}_{i=1}^{n}}_{f\in F}.
+% \stopformula
+
+% \startformula
+% \bigoplus  \bigoplus[size=8pt]{\bigsqcup[size=12pt]{A_{ij}}_{j=1}^{m}}_{i=1}^{n}
+%   =\bigoplus[size=8pt]{\bigcap[size=12pt]{A_{i,f(i)}}_{i=1}^{n}}_{f\in F}.
+% \stopformula
+
+\startformula
+\bigudot  \bigudot  \bigsqcup  \bigudot   \bigudot[size=8pt]{\bigudot[size=12pt]{A_{ij}}_{j=1}^{m}}_{i=1}^{n}
+  =\bigcap[size=8pt]{\bigudot[size=12pt]{A_{i,f(i)}}_{i=1}^{n}}_{f\in F}.
+\stopformula
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+Ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.
+
+
+\startformula
+ \bigoplus  \bigudot   \bigsqcup[size=12pt]{\bigudot[size=12pt]{A_{ij}}_{j=1}^{m}}_{i=1}^{n}
+  =\prod[size=12pt]{\sum[size=12pt]{A_{i,f(i)}}_{i=1}^{n}}_{f\in F}.
+\stopformula
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+Ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.
+
+
+\startformula
+  \bigoplus[size=55pt]{\bigsqcup[size=40pt]{A_{ij}}_{j=1}^{m}}_{i=1}^{n}
+  =\bigudot[size=55pt]{\sum[size=40pt]{A_{i,f(i)}}_{i=1}^{n}}_{f\in F}.
+\stopformula
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+Ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.
+
+
+% \startformula
+%   \bigoplus[size=55pt]\bigudot[size=55pt]{\prod[size=55pt]{A_{ij}}_{j=1}^{m}}_{i=1}^{n}
+%   =\bigoplus[size=55pt]{\bigotimes[size=40pt]{A_{i,f(i)}}_{i=1}^{n}}_{f\in F}.
+% \stopformula
+
+\startformula
+  \bigoplus[size=55pt]\bigcap[size=55pt]{\bigudot[size=55pt]{A_{ij}}_{j=1}^{m}}_{i=1}^{n}
+  =\bigudot[size=55pt]{\bigsqcup[size=40pt]{A_{i,f(i)}}_{i=1}^{n}}_{f\in F}.
+\stopformula
+
+\startbuffer[allbigoperators]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+Ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi.
+
+
+\startformula
+  \sum[size=26pt]{\frac{
+    \bigudot{\frac{\bigcap{A_i}}{\bigsqcup{B_i}}}
+  }{
+    \bigoplus{\frac{\bigotimes{C_k}}{\bigsqcap{D_l}}}
+  }}
+  \prod[size=26pt]{\frac{
+    \bigoplus{\frac{\bigudot{E_i}}{\bigoplus{F_j}}}
+  }{
+    \coprod{\frac{\sum{a_k}}{\prod{b_l}}}
+  }}
+  \bigoplus[size=28pt]{\frac{
+    \bigsqcup{\frac{\bigudot[size=4pt]{G_i}}{\bigudot{H_i}}}
+  }
+  {
+    \bigoplus{\frac{\bigsqcap{K_k}}{\bigoplus{L_l}}}
+  }}
+  \stopformula
+  \startformula
+  \biguplus[size=26pt]{\frac{
+    \bigoplus{\frac{M_i}{N_j}}
+  }{
+    \sum{\frac{P_k}{Q_l}}
+  }}.
+\stopformula
+
+\stopbuffer
+\getbuffer[allbigoperators]
+%% Letter scripts comparison test
 % \doloopoverlist{x,y,u,w,m,n}
 % {\edef\letterA{\recursestring}
 % \doloopoverlist{x,y,u,w,m,n}{
@@ -46,78 +472,128 @@
 % }
 % }
 % \crlf
+
 \stopbuffer
 
 \startbuffer[lettertest-table]
-% Rows: SemiLight, Regular, Black.
-% Columns: SemiCondensed, Regular, SemiExpanded.
+% Rows follow \LetterTestWeights above.
+% Columns follow \LetterTestWidths above.
 \bTABLE[frame=off,align=middle,offset=4pt]
+  \bTABLEhead
   \bTR
-    \LetterTestLabel{\testopticalsize\crlf internal opsz: \testopticalcoordinate}
-    \LetterTestLabel{SemiCondensed}
-    \LetterTestLabel{Regular}
-    \LetterTestLabel{SemiExpanded}
+    \LetterTestLabel{\LetterTestNavigation{Optical}{\testopticalsize}{\testopticalsize}%
+      \crlf internal opsz: \testopticalcoordinate}
+    \processcommacommand[\LetterTestWidths]\LetterTestWidthHeading
   \eTR
-  \bTR
-    \LetterTestLabel{SemiLight}
-    \LetterTestCell{somerville-\testopticalsize-semicondensed-semilight}
-%    \LetterTestCell{somerville-\testopticalsize-semilight}
-%    \LetterTestCell{somerville-\testopticalsize-semiexpanded-semilight}
-  \eTR
-  \bTR
-    \LetterTestLabel{Regular}
-    \LetterTestCell{somerville-\testopticalsize-semicondensed}
-%    \LetterTestCell{somerville-\testopticalsize}
-%    \LetterTestCell{somerville-\testopticalsize-semiexpanded}
-  \eTR
-  \bTR
-    \LetterTestLabel{Black}
-    \LetterTestCell{somerville-\testopticalsize-semicondensed-black}
-%    \LetterTestCell{somerville-\testopticalsize-black}
-%    \LetterTestCell{somerville-\testopticalsize-semiexpanded-black}
-  \eTR
+  \eTABLEhead
+  \bTABLEbody
+  \expanded{\LetterTestWeightRow{\testweight}}%
+  \eTABLEbody
 \eTABLE
 \stopbuffer
 
-\startbuffer[lettertables-basic]
-\LetterTestOpticalTable{micro}{5}
-\LetterTestOpticalTable{regular}{550}
-\LetterTestOpticalTable{titling}{980}
+\startbuffer[lettertables]
+\processcommacommand[\LetterTestOpticalSizes]\LetterTestNamedOpticalTable
 \stopbuffer
 
-\startbuffer[lettertables-optical]
-\LetterTestOpticalTable{micro}{5}
-\LetterTestOpticalTable{minuscule}{200}
-\LetterTestOpticalTable{miniature}{325}
-\page
-\LetterTestOpticalTable{caption}{400}
-\LetterTestOpticalTable{regular}{550}
-%\LetterTestOpticalTable{subheading}{640}
-\page
-\LetterTestOpticalTable{trumpet}{700}
-%\LetterTestOpticalTable{headline}{800}
-%\LetterTestOpticalTable{display}{900}
-\page
-\LetterTestOpticalTable{titling}{980}
-%\LetterTestOpticalTable{hairline}{1020}
-%\LetterTestOpticalTable{needlepoint}{1200}
-\stopbuffer
-
-% Optical-size comparison; edit the getbuffer selection below.
+% Optical-size comparison; edit \LetterTestOpticalSizes above.
 \startbuffer[optical-comparison]
 \begingroup
 % Keep the same typesetting size across all optical instances.
 \switchtobodyfont[somerville-regular,8pt]
-\doloopoverlist{p,m,n,u}{
+\doloopoverlist{s}{
 \edef\testletter{\recursestring}
 
-% Choose one buffer: lettertables-basic or lettertables-optical.
-\getbuffer[lettertables-basic]
+\getbuffer[lettertables]
 \page
 }
 \endgroup
 \stopbuffer
 
 \starttext
+
+\startbuffer[bigoperators]
+\setupbodyfont[sommerville]
+\startformula
+{%
+  \math{\displaystyle
+    \coprod{
+      \sum{
+        \frac{
+          \prod{
+            \frac{
+              \bigcap
+            }{
+              \bigoplus
+            }
+          }
+        }{
+          \bigoplus{
+            \frac{
+              \bigotimes
+            }{
+              \bigudot
+            }
+          }
+        }
+      }
+    }
+      \bigoplus{
+      \bigcap{
+        \frac{
+          \bigudot{
+            \frac{
+              \sum \bigcap 
+            }{
+              \prod \coprod
+            }
+          }
+        }{
+          \bigotimes{
+            \frac{
+              \bigoplus \sum 
+            }{
+              \coprod \bigudot
+            }
+          }
+        }
+      }
+    }
+          \bigoplus{
+      \bigcap{
+        \frac{
+          \bigudot{
+            \frac{
+              \sum \bigcap 
+            }{
+              \prod \coprod
+            }
+          }
+        }{
+          \bigotimes{
+            \frac{
+              \bigoplus \sum 
+            }{
+              \coprod \bigudot
+            }
+          }
+        }
+      }
+    }
+  }%
+}
+\stopformula
+\stopbuffer
+
 \getbuffer[optical-comparison]
+\page
+% \begingroup
+% \switchtobodyfont[stixtwo,8pt]
+% {\bf STIX Two — same lettertest buffer, 8pt}\par
+% \blank
+% \getbuffer[lettertest]
+% \par
+% \endgroup
+
 \stoptext
+

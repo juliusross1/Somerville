@@ -1,0 +1,694 @@
+% !TEX program = context
+% !TEX root = mechanism-chapter-4.tex
+%
+% Mary Somerville, Mechanism of the Heavens (1831).
+% Book I, Chapter IV: Motion of a System of Bodies.
+% Original printed pages 69--81; local source PDF pages 145--155 cover 69--79.
+% Missing printed pages 80--81 are supplied from the ETH-Bibliothek scan:
+% https://doi.org/10.3931/e-rara-49450 (IIIF images 13588720 and 13588721).
+% Run here: context mechanism-chapter-4.tex
+% Styling and shared Greek fonts are in mechanism-environment.tex.
+% Original wording and notation are retained; comments identify source errors.
+% Figures 41--47 are schematic MetaFun reconstructions.
+
+\environment mechanism-environment
+\setupinteraction[state=stop,
+  title={Mechanism of the Heavens - Book I, Chapter IV},author={Mary Somerville}]
+\ifdefined\MechanismCombined\else\setupuserpagenumber[number=69]\fi
+\HeavensChapterHeaders{IV}{MOTION OF A SYSTEM OF BODIES.}
+
+% Keep the original equation numbers and chapter-specific reference names.
+\unexpanded\def\BookFormula#1#2{%
+  \setnumber[formula][\number\numexpr#1-1\relax]%
+  \placeformula[eq:chapter4-#1]%
+  \startformula #2\stopformula
+}
+
+\ifdefined\MechanismCombined\else\starttext\fi
+
+\blank[12mm]
+\midaligned{\tfa CHAPTER IV.}
+\blank[4mm]
+\midaligned{\sc MOTION OF A SYSTEM OF BODIES.}
+\blank[4mm]
+
+% Book I, Chapter IV, articles 144--156; printed pages 69--73.
+% Source PDF pages 145--149. Figure 41 is a schematic reconstruction.
+
+\startuseMPgraphic{heavens:figure41}
+  numeric u; u := .25mm;
+  pair O,A,B,C,T;
+  O := (-25u,0); A := (0,0); B := (62u,0); C := (0,42u);
+  T := (92u,100u);
+  pickup pencircle scaled .35pt;
+  draw O--(112u,0); draw A--(0,113u);
+  draw C--T;
+  draw (31u,0)--(31u,61.54u);
+  draw B--(62u,81.09u);
+  label.lft(textext("\tfx\m{o}"),O);
+  label.bot(textext("\tfx A"),A);
+  label.bot(textext("\tfx B"),B);
+  label.lft(textext("\tfx C"),C);
+  label.rt(textext("\tfx\m{x}"),(112u,0));
+  label.top(textext("\tfx\m{y}"),(0,113u));
+  label(textext("\tfx{\it fig.}\,41."),(94u,51u));
+\stopuseMPgraphic
+
+% Original printed page 69.
+\Article{144}It is known by observation, that the relative motions of a system of bodies, are entirely independent of any motion common to the whole; hence it is impossible to judge from appearances alone, of the absolute motions of a system of bodies of which we form a part; the knowledge of the true system of the world was retarded, from the difficulty of comprehending the relative motions of projectiles on the earth, which has the double motion of rotation and revolution. But all the motions of the solar system, determined according to this law, are verified by observation.
+
+\par\noindent\hskip1em\relax By article 117, the equation of the motion of a body only differs from that of a particle, by the mass; hence, if only one body be considered, of which \m{m} is the mass, the motion of its centre of gravity will be determined from equation (6), which in this case becomes
+\startformula
+  m\left\{\ForceX-\frac{d^2x}{dt^2}\right\}\HeavensDelta x
+  +m\left\{\ForceY-\frac{d^2y}{dt^2}\right\}\HeavensDelta y
+  +m\left\{\ForceZ-\frac{d^2z}{dt^2}\right\}\HeavensDelta z=0.
+\stopformula
+\noindent A similar equation may be found for each body in the system, and one condition to be fulfilled is, that the sum of all such equations must be zero;---hence the general equation of a system of bodies is
+\BookFormula{21}{
+  0=\HeavensSigma m\left(\ForceX-\frac{d^2x}{dt^2}\right)\HeavensDelta x
+    +\HeavensSigma m\left(\ForceY-\frac{d^2y}{dt^2}\right)\HeavensDelta y
+    +\HeavensSigma m\left(\ForceZ-\frac{d^2z}{dt^2}\right)\HeavensDelta z;
+}
+\noindent in which
+\startformula
+  \HeavensSigma m\ForceX,\quad\HeavensSigma m\ForceY,\quad\HeavensSigma m\ForceZ,
+\stopformula
+\noindent are the sums of the products of each mass by its corresponding component force, for
+\startformula
+  \HeavensSigma m\ForceX=m\ForceX+m'\ForceX'+m''\ForceX''+\text{\&c.};
+\stopformula
+\noindent and so for the other two.
+
+\par\noindent\hskip1em\relax Also
+\startformula
+  \HeavensSigma m\frac{d^2x}{dt^2},\quad
+  \HeavensSigma m\frac{d^2y}{dt^2},\quad
+  \HeavensSigma m\frac{d^2z}{dt^2},
+\stopformula
+\noindent are the sums of the products of each mass, by the second increments of the space respectively described by them, in an element of time in the direction of each axis, since
+\startformula
+  \HeavensSigma m\frac{d^2x}{dt^2}
+    =m\frac{d^2x}{dt^2}+m'\frac{d^2x'}{dt^2}+\text{\&c.}
+\stopformula
+% Original printed page 70.
+\noindent the expressions
+\startformula
+  \HeavensSigma m\frac{d^2y}{dt^2},\quad
+  \HeavensSigma m\frac{d^2z}{dt^2}
+\stopformula
+\noindent have a similar signification.
+
+\par\noindent\hskip1em\relax From this equation all the motions of the solar system are directly obtained.
+
+\Article{145}If the forces be invariably supposed to have the same intensity at equal distances from the points to which they are directed, and to vary in some ratio of that distance, all the principles of motion that have been derived from the general equation (6), may be obtained from this, provided the sum of the masses be employed instead of the particle.
+
+\Article{146}For example, if the equation, in article 74, be multiplied by \m{\HeavensSigma m}, its finite value is found to be
+\startformula
+  \HeavensSigma m\mathrm{V}^2=\mathrm{C}+2\HeavensSigma\int m(\ForceX dx+\ForceY dy+\ForceZ dz).
+\stopformula
+\noindent This is the Living Force or Impetus of a system, which is the sum of the masses into the square of their respective velocities, and is analogous to the equation
+\startformula
+  \mathrm{V}^2=\mathrm{C}+2v,
+\stopformula
+\noindent relating to a particle.
+
+\Article{147}When the motion of the system changes by insensible degrees, and is subject to the action of accelerating forces, the sum of the indefinitely small increments of the impetus is the same, whatever be the path of the bodies, provided that the points of departure and arrival be the same.
+
+\Article{148}When there is a primitive impulse without accelerating forces, the impetus is constant.
+
+\Article{149}Impetus is the true measure of labour; for if a weight be raised ten feet, it will require four times the labour to raise an equal weight forty feet. If both these weights be allowed to descend freely by their gravitation, at the end of their fall their velocities will be as 1 to 2; that is, as the square roots of their heights. But the effects produced will be as their masses into the heights from whence they fell, or as their masses into 1 and 4; but these are the squares of the velocities, hence the impetus is the mass into the square of the velocity. Thus the impetus is the true measure of the labour employed to raise the weights, and of the effects of their descent, and is entirely independent of time.
+
+% The following sentence continues onto original printed page 71.
+\Article{150}The principle of least action for a particle was shown, in article 80, to be expressed by \m{\HeavensDelta\int vds=0}, when the extreme points of its path are fixed; hence, for a system of bodies, it is
+\startformula
+  \HeavensSigma\HeavensDelta\int mvds=0,\quad\text{or}\quad
+  \HeavensSigma\HeavensDelta\int mv^2dt=0.
+\stopformula
+\noindent Thus the sum of the living forces of a system of bodies is a minimum, during the time that it takes to pass from one position to another.
+
+\par\noindent\hskip1em\relax If the bodies be not urged by accelerating forces, the impetus of the system during a given time, is proportional to that time, therefore the system moves from one given position to another, in the shortest time possible: which is the principle of least action in a system of bodies.
+
+\testpage[5]
+\blank[medium]
+\midaligned{\it On the Motion of the Centre of Gravity of a System of Bodies.}
+\blank[small]
+
+\Article{151}In a system of bodies the common centre of gravity of the whole either remains at rest or moves uniformly in a straight line, as if all the bodies of the system were united in that point, and the concentrated forces of the system applied to it.
+
+\par\noindent\hskip1em\relax {\it Demonstration.}---These properties are derived from the general equation (21) by considering that, if the centre of gravity of the system be moved, each body will have a corresponding and equal motion independent of any motions the bodies may have among themselves: hence each of the virtual velocities \m{\HeavensDelta x}, \m{\HeavensDelta y}, \m{\HeavensDelta z}, will be increased by the virtual velocity of the centre of gravity resolved in the direction of the axes; so that they become
+\startformula
+  \HeavensDelta x+\HeavensDelta\bar{x},\quad
+  \HeavensDelta y+\HeavensDelta\bar{y},\quad
+  \HeavensDelta z+\HeavensDelta\bar{z}:
+\stopformula
+\noindent thus the equation of the motion of a system of bodies is increased by the term,
+\startformula
+  \startalign[n=1,align=middle]
+    \NC \HeavensSigma\mathbin{.}m\left\{\ForceX-\frac{d^2x}{dt^2}\right\}\HeavensDelta\bar{x}
+      +\HeavensSigma\mathbin{.}m\left\{\ForceY-\frac{d^2y}{dt^2}\right\}\HeavensDelta\bar{y} \NR
+    \NC {}+\HeavensSigma\mathbin{.}m\left\{\ForceZ-\frac{d^2z}{dt^2}\right\}\HeavensDelta\bar{z} \NR
+  \stopalign
+\stopformula
+\noindent arising from the consideration of the centre of gravity. If the system be free and unconnected with bodies foreign to it, the virtual velocity of the centre of gravity, is independent of the connexion of the bodies of the system with each other; therefore \m{\HeavensDelta\bar{x}}, \m{\HeavensDelta\bar{y}}, \m{\HeavensDelta\bar{z}} may each be zero, whatever the virtual velocity of the bodies themselves may be; hence
+\startformula
+  \HeavensSigma\mathbin{.}m\left\{\ForceX-\frac{d^2x}{dt^2}\right\}=0,
+\stopformula
+% Original printed page 72.
+\startformula
+  \HeavensSigma\mathbin{.}m\left\{\ForceY-\frac{d^2y}{dt^2}\right\}=0,\qquad
+  \HeavensSigma\mathbin{.}m\left\{\ForceZ-\frac{d^2z}{dt^2}\right\}=0.
+\stopformula
+\noindent But it has been shewn that the co-ordinates of the centre of gravity are,
+\startformula
+  \bar{x}=\frac{\HeavensSigma\mathbin{.}mx}{\HeavensSigma\mathbin{.}m};\quad
+  \bar{y}=\frac{\HeavensSigma\mathbin{.}my}{\HeavensSigma\mathbin{.}m};\quad
+  \bar{z}=\frac{\HeavensSigma\mathbin{.}mz}{\HeavensSigma\mathbin{.}m}.
+\stopformula
+\noindent Consequently,
+\startformula
+  d^2\bar{x}=\frac{\HeavensSigma\mathbin{.}md^2x}{\HeavensSigma\mathbin{.}m};\quad
+  d^2\bar{y}=\frac{\HeavensSigma\mathbin{.}md^2y}{\HeavensSigma\mathbin{.}m};\quad
+  d^2\bar{z}=\frac{\HeavensSigma\mathbin{.}md^2z}{\HeavensSigma\mathbin{.}m}.
+\stopformula
+\noindent Now
+\startformula
+  \startalign[n=1,align=middle]
+    \NC \HeavensSigma\mathbin{.}md^2x=dt^2\mathbin{.}\HeavensSigma\mathbin{.}m\ForceX;\quad
+      \HeavensSigma\mathbin{.}md^2y=dt^2\HeavensSigma m\ForceY; \NR
+    \NC \HeavensSigma\mathbin{.}md^2z=dt^2\HeavensSigma\mathbin{.}m\ForceZ; \NR
+  \stopalign
+\stopformula
+\noindent hence
+\BookFormula{22}{
+  \frac{d^2\bar{x}}{dt^2}=\frac{\HeavensSigma\mathbin{.}m\ForceX}{\HeavensSigma\mathbin{.}m};\quad
+  \frac{d^2\bar{y}}{dt^2}=\frac{\HeavensSigma\mathbin{.}m\ForceY}{\HeavensSigma\mathbin{.}m};\quad
+  \frac{d^2\bar{z}}{dt^2}=\frac{\HeavensSigma\mathbin{.}m\ForceZ}{\HeavensSigma\mathbin{.}m}.
+}
+\noindent These three equations determine the motion of the centre of gravity.
+
+\Article{152}Thus the centre of gravity moves as if all the bodies of the system were united in that point, and as if all the forces which act on the system were applied to it.
+
+\Article{153}If the mutual attraction of the bodies of the system be the only accelerating force acting on these bodies, the three quantities \m{\HeavensSigma m\ForceX}, \m{\HeavensSigma m\ForceY}, \m{\HeavensSigma m\ForceZ} are zero.
+
+\par\noindent\hskip1em\relax {\it Demonstration.}---This evidently arises from the law of reaction being equal and contrary to action; for if \m{\Force} be the action that an element of the mass \m{m} exercises on an element of the mass \m{m'}, whatever may be the nature of this action, \m{m'\Force} will be the accelerating force with which \m{m} is urged by the action of \m{m'}; then if \m{f} be the mutual distance of \m{m} and \m{m'}, by this action only
+\BookFormula{23}{
+  \ForceX=\frac{m'\Force(x'-x)}{f};\quad
+  \ForceY=\frac{m'\Force(y'-y)}{f};\quad
+  \ForceZ=\frac{m'\Force(z'-z)}{f}.
+}
+% The source repeats "the action of m' on m" here; retain its wording.
+\noindent For the same reasons, the action of \m{m'} on \m{m} will give
+\startformula
+  \ForceX'=\frac{m\Force(x-x')}{f};\quad
+  \ForceY'=\frac{m\Force(y-y')}{f};\quad
+  \ForceZ'=\frac{m\Force(z-z')}{f};
+\stopformula
+\noindent hence
+\startformula
+  m\ForceX+m'\ForceX'=0;\quad
+  m\ForceY+m'\ForceY'=0;\quad
+  m\ForceZ+m'\ForceZ'=0;
+\stopformula
+\noindent and as all the bodies of the system, taken two and two, give the same results, therefore generally
+\startformula
+  \HeavensSigma\mathbin{.}m\ForceX=0;\quad
+  \HeavensSigma\mathbin{.}m\ForceY=0;\quad
+  \HeavensSigma\mathbin{.}m\ForceZ=0.
+\stopformula
+
+% Original printed page 73.
+\Article{154}Consequently
+\startformula
+  \frac{d^2\bar{x}}{dt^2}=0;\quad
+  \frac{d^2\bar{y}}{dt^2}=0;\quad
+  \frac{d^2\bar{z}}{dt^2}=0;
+\stopformula
+\noindent and integrating,
+\startformula
+  \bar{x}=at+b;\quad\bar{y}=a't+b';\quad\bar{z}=a''t+b'';
+\stopformula
+\testpage[13]
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure41}}
+\noindent in which \m{a}, \m{a'}, \m{a''}; \m{b}, \m{b'}, \m{b''}, are the arbitrary constant quantities introduced by the double integration. These are equations to straight lines; for, suppose the centre of gravity to begin to move at A, fig.~41, in the direction \m{ox}, the distance \m{o\mathrm{A}} is invariable, and is represented by \m{b}; and as \m{at} increases with the time \m{t}, it represents the straight line AB.
+\par\flushsidefloats
+
+\Article{155}Thus the motion of the centre of gravity in the direction of each axis is a straight line, and by the composition of motions it describes a straight line in space; and as the space it moves over increases with the time, its velocity is uniform; for the velocity, being directly as the element of the space, and inversely as the element of the time, is
+\startformula
+  \sqrt{\left(\frac{d\bar{x}}{dt}\right)^2
+    +\left(\frac{d\bar{y}}{dt}\right)^2
+    +\left(\frac{d\bar{z}}{dt}\right)^2};
+\stopformula
+\noindent or
+\startformula
+  \sqrt{a^2+a'^2+a''^2}.
+\stopformula
+\noindent Thus the velocity is constant, and therefore the motion uniform.
+
+\Article{156}These equations are true, even if some of the bodies, by their mutual action, lose a finite quantity of motion in an instant.
+% Book I, Chapter IV, articles 157--162; printed pages 73--77.
+% Source PDF pages 149--153. Figures are schematic MetaFun reconstructions.
+
+\startuseMPgraphic{heavens:figure42}
+  numeric u; u := .23mm;
+  pair O,A,B,M,N;
+  O := (0,0); A := (101u,28.7u); M := (76u,44.6u);
+  B := (52u,50.9u); N := (55u,-19u);
+  pickup pencircle scaled .35pt;
+  draw fullcircle xscaled 156u yscaled 104u shifted (36u,0);
+  draw (-42u,0)--(123u,0); draw O--(0,105u);
+  draw O--A; draw O--M; draw O--B; draw A--N;
+  label.bot(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{x}"),(123u,0));
+  label.lft(textext("\tfx\m{y}"),(0,105u));
+  label.urt(textext("\tfx A"),A);
+  label.top(textext("\tfx B"),B);
+  label.top(textext("\tfx M"),M);
+  label.llft(textext("\tfx N"),N);
+  label(textext("\tfx{\it fig.}\,42."),(99u,87u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure43}
+  numeric u; u := .23mm;
+  pair O,A,D,C,DD,M,N,m,n;
+  O := (0,0); A := (-5u,-11u); D := (-9u,-23u);
+  C := (78u,0); DD := (91u,0);
+  m := (91u,-11u); n := (78u,-23u);
+  M := m+(0,64u); N := n+(0,97u);
+  pickup pencircle scaled .35pt;
+  draw (-25u,-67u)--O--(116u,0); draw O--(0,94u);
+  draw O--M--N--O;
+  draw O--m--n--O; draw M--m; draw N--n;
+  draw A--m dashed evenly; draw D--n dashed evenly;
+  draw C--n; draw DD--m;
+  label.ulft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{x}"),(116u,0));
+  label.rt(textext("\tfx\m{y}"),(-25u,-67u));
+  label.lft(textext("\tfx\m{z}"),(0,94u));
+  label.lft(textext("\tfx A"),A);
+  label.lft(textext("\tfx B"),D);
+  label.ulft(textext("\tfx C"),C);
+  label.urt(textext("\tfx D"),DD);
+  label.rt(textext("\tfx M"),M);
+  label.top(textext("\tfx N"),N);
+  label.rt(textext("\tfx\m{m}"),m);
+  label.bot(textext("\tfx\m{n}"),n);
+  label(textext("\tfx{\it fig.}\,43."),(106u,83u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure44}
+  numeric u; u := .19mm;
+  pair O,M,N,m,n,MM,NN,mone,nn,MMM,NNN,mmm,nnn;
+  O := (0,0);
+  m := (87u,-15u); n := (76u,-21u);
+  M := (87u,39u); N := (76u,62u);
+  mone := (44u,-29u); nn := (30u,-34u);
+  MM := (44u,81u); NN := (30u,96u);
+  mmm := (-57u,-25u); nnn := (-69u,-11u);
+  MMM := (-57u,61u); NNN := (-69u,43u);
+  pickup pencircle scaled .35pt;
+  draw (-135u,0)--(138u,0); draw O--(0,124u);
+  draw O--(-85u,-74u);
+  draw O--M--N--O; draw O--m--n--O; draw M--m; draw N--n;
+  draw O--MM--NN--O; draw O--mone--nn--O; draw MM--mone; draw NN--nn;
+  draw O--MMM--NNN--O; draw O--mmm--nnn--O; draw MMM--mmm; draw NNN--nnn;
+  label.bot(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{x}"),(138u,0));
+  label.lft(textext("\tfx\m{x'}"),(-135u,0));
+  label.rt(textext("\tfx\m{y}"),(-85u,-74u));
+  label.lft(textext("\tfx\m{z}"),(0,124u));
+  label.rt(textext("\tfx M"),M); label.top(textext("\tfx N"),N);
+  label.rt(textext("\tfx\m{m}"),m); label.bot(textext("\tfx\m{n}"),n);
+  label.rt(textext("\tfx\m{M'}"),MM); label.top(textext("\tfx\m{N'}"),NN);
+  label.rt(textext("\tfx\m{m'}"),mone); label.bot(textext("\tfx\m{n'}"),nn);
+  label.top(textext("\tfx\m{M''}"),MMM); label.lft(textext("\tfx\m{N''}"),NNN);
+  label.bot(textext("\tfx\m{m''}"),mmm); label.lft(textext("\tfx\m{n''}"),nnn);
+  label(textext("\tfx{\it fig.}\,44."),(-92u,103u));
+\stopuseMPgraphic
+
+% Original printed page 73.
+\Article{157}Thus, it is possible that the whole solar system may be moving in space; a circumstance which can only be ascertained by a comparison of its position with regard to the fixed stars at very distant periods. In consequence of the proportionality of force to velocity, the bodies of the solar system would maintain their relative motions, whether the system were in motion or at rest.
+
+\blank[medium]
+\midaligned{\it On the Constancy of Areas.}
+\blank[small]
+
+\testpage[17]
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure42}}
+\Article{158}If a body propelled by an impulse describe a curve A M B, fig.~42, in consequence of a force of attraction in the point \m{o}, that force may be resolved into two, one in the direction of the normal AN, and the other in the direction of the element of the curve or tangent: the first is balanced by the centrifugal force, the second augments or diminishes the velocity of the body; but the velocity is always such that the areas AoM, MoB, described by the radius vector Ao, are proportional to the time; that is, if the body moves from A to M in the same time that it would move from M to B, the area AoM will be equal to the area MoB.
+\par\flushsidefloats
+
+% Original printed page 74.
+\testpage[18]
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure43}}
+\par\noindent\hskip1em\relax If a system of bodies revolve about any point in consequence of an impulse and a force of attraction directed to that point, the sums of their masses respectively multiplied by the areas described by their radii vectores, when projected on the three co-ordinate planes, are proportional to the time. {\it Demonstration.}---For if we only consider the areas that are projected on the plane \m{xoy}, fig.~43, the forces in the direction \m{oz}, which are perpendicular to that plane, must be zero; hence
+\par\flushsidefloats
+\startformula
+  \ForceZ=0,\quad \ForceZ'=0,\quad \text{\&c.;}
+\stopformula
+\noindent and the general equation of the motion of a system of bodies becomes
+\startformula
+  \HeavensSigma m\left\{\ForceX-\frac{d^2x}{dt^2}\right\}\HeavensDelta x
+  +\HeavensSigma\mathpunct{.}m\left\{\ForceY-\frac{d^2y}{dt^2}\right\}\HeavensDelta y=0.
+\stopformula
+\par\noindent\hskip1em\relax If the same assumptions be made here as in article 133, namely,
+\startformula
+  \startalign[n=1,align=middle]
+  \NC \HeavensDelta x=y\HeavensDelta\HeavensVarpi\qquad
+       \HeavensDelta y=-x\HeavensDelta\HeavensVarpi \NR
+  \NC \HeavensDelta x'=y'\HeavensDelta\HeavensVarpi\qquad
+       \HeavensDelta y'=-x'\HeavensDelta\HeavensVarpi,\quad\text{\&c. \&c.,} \NR
+  \stopalign
+\stopformula
+\noindent and if these be substituted in the preceding equation, it becomes, with regard to the plane \m{xoy},
+\startformula
+  \HeavensSigma\mathpunct{.}m\left(\frac{xd^2y-yd^2x}{dt^2}\right)
+  =\HeavensSigma m\mathbin{.}(x\ForceY-y\ForceX).
+\stopformula
+
+% Original printed page 75.
+\par\noindent\hskip1em\relax In the same manner
+\BookFormula{24}{
+  \startalign[n=1,align=middle]
+  \NC \HeavensSigma m\mathbin{.}\left(\frac{zd^2x-xd^2z}{dt^2}\right)
+       =\HeavensSigma m\mathbin{.}(z\ForceX-x\ForceZ) \NR
+  \NC \HeavensSigma m\mathbin{.}\left(\frac{yd^2z-zd^2y}{dt^2}\right)
+       =\HeavensSigma m\mathbin{.}(y\ForceZ-z\ForceY) \NR
+  \stopalign
+}
+\noindent are obtained for the motions of the system with regard to the planes \m{xoz}, \m{yoz}. These three equations, together with
+\BookFormula{25}{
+  \HeavensSigma m\mathbin{.}\frac{d^2x}{dt^2}=\HeavensSigma m\ForceX,\quad
+  \HeavensSigma m\mathbin{.}\frac{d^2y}{dt^2}=\HeavensSigma m\ForceY,\quad
+  \HeavensSigma m\mathbin{.}\frac{d^2z}{dt^2}=\HeavensSigma m\ForceZ,
+}
+\noindent are the general equations of the motions of a system of bodies which does not contain a fixed point.
+
+\Article{159}When the bodies are independent of foreign forces, and only subject to their reciprocal attraction and to the force at \m{o}, the sum of the terms
+\startformula
+  m\{\ForceX y-\ForceY x\}+m'\{\ForceX'y'-\ForceY'x'\},
+\stopformula
+\noindent arising from the mutual action of any two bodies in the system, \m{m}, \m{m'}, is zero, by reason of the equality and opposition of action and reaction; and this is true for every such pair as \m{m} and \m{m''}, \m{m'} and \m{m''}, \&c. If \m{f} be the distance of \m{m} from \m{o}, \m{\Force} the force which urges the body \m{m} towards that origin, then
+\startformula
+  \ForceX=-\Force\frac{x}{f},\qquad
+  \ForceY=-\Force\frac{y}{f},\qquad
+  \ForceZ=-\Force\frac{z}{f}
+\stopformula
+\noindent are its component forces; and when substituted in the preceding equations, \m{\Force} vanishes; the same may be shown with regard to \m{m'}, \m{m''}, \&c. Hence the equations of areas are reduced to
+% The first numerator reverses the order used in the preceding equation,
+% and in its own following integral; the source's sign is retained.
+\startformula
+  \startalign[n=1,align=middle]
+  \NC \HeavensSigma m\left\{\frac{yd^2x-xd^2y}{dt^2}\right\}=0, \NR
+  \NC \HeavensSigma m\left\{\frac{zd^2x-xd^2z}{dt^2}\right\}=0, \NR
+  \NC \HeavensSigma m\left\{\frac{yd^2z-zd^2y}{dt^2}\right\}=0, \NR
+  \stopalign
+\stopformula
+\noindent and their integrals are
+\BookFormula{26}{
+  \startalign[n=1,align=middle]
+  \NC \HeavensSigma m\{xdy-ydx\}=cdt. \NR
+  \NC \HeavensSigma m\{zdx-xdz\}=c'dt. \NR
+  \NC \HeavensSigma m\{ydz-zdy\}=c''dt. \NR
+  \stopalign
+}
+\noindent As the first members of these equations are the sum of the masses of all the bodies of the system, respectively multiplied by the projections of double the areas they describe on the co-ordinate planes, this sum is proportional to the time.
+
+% Original printed page 76.
+\par\noindent\hskip1em\relax If the centre of gravity be the origin of the co-ordinates, the preceding equations may be expressed thus,
+\startformula
+  cdt=\frac{\HeavensSigma mm'\{(x'-x)(dy'-dy)-(y'-y)(dx'-dx)\}}{\HeavensSigma m}
+\stopformula
+\startformula
+  c'dt=\frac{\HeavensSigma mm'\{(z'-z)(dx'-dx)-(x'-x)(dz'-dz)\}}{\HeavensSigma m}
+\stopformula
+\startformula
+  c''dt=\frac{\HeavensSigma mm'\{(y'-y)(dz'-dz)-(z'-z)(dy'-dy)\}}{\HeavensSigma m}.
+\stopformula
+\noindent So that the principle of areas is reduced to depend on the co-ordinates of the mutual distances of the bodies of the system.
+
+\testpage[19]
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure44}}
+\Article{160}These results may be expressed by a diagram. Let \m{m}, \m{m'}, \m{m''}, fig.~44, \&c., be a system of bodies revolving about \m{o}, the origin of the co-ordinates, in consequence of a central force and a primitive impulse.---Suppose that each of the radii vectores, \m{om}, \m{om'}, \m{om''}, \&c., describes the indefinitely small areas, MoN, \m{M'oN'}, \&c., in an indefinitely small time, represented by \m{dt}; and let \m{mon}, \m{m'on'}, \&c., be the projections of these areas on the plane \m{xoy}. Then the equation
+\par\flushsidefloats
+\startformula
+  \HeavensSigma m\{xdy-ydx\}=cdt,
+\stopformula
+\noindent shows that the sum of the products of twice the area \m{mon} by the mass \m{m}, twice the area \m{m'on'} by the mass \m{m'}, twice \m{m''on''} by the mass \m{m''}, \&c., is proportional to the element of the time in which they are described: whence it follows that the sum of the projections of the areas, each multiplied by the corresponding mass, is proportional to the finite time in which they are described. The other two equations express similar results for the areas projected on the planes \m{xoz}, \m{yoz}.
+
+% This article continues onto original printed page 77.
+\Article{161}The constancy of areas is evidently true for any plane whatever, since the position of the co-ordinate planes is arbitrary. The three equations of areas give the space described by the bodies on each co-ordinate plane in value of the time: hence, if the time be known or assumed, the corresponding places of the bodies will be found on the three planes, and from thence their true positions in space may be determined, since that of the co-ordinate planes is supposed to be known. It was shown, in article 132, that
+% The third expression has the opposite sign from equation (26), as printed.
+\startformula
+  \startalign[n=1,align=middle]
+  \NC \HeavensSigma m\{xdy-ydx\}, \NR
+  \NC \HeavensSigma m\{zdx-xdz\}, \NR
+  \NC \HeavensSigma m\{zdy-ydz\}, \NR
+  \stopalign
+\stopformula
+\noindent are the pressures of the system, tending to make it turn round each of the axes of the co-ordinates: hence the principle of areas consists in this---that the sum of the rotatory pressures which cause a system of bodies to revolve about a given point, is zero when the system is in equilibrio, and proportional to the time when the system is in motion.
+
+\Article{162}Let us endeavour to ascertain whether any planes exist on which the sums of the areas are zero when the system is in motion. To solve this problem it is necessary to determine one set of co-ordinates in values of another.
+% Book I, Chapter IV, articles 163--168; original printed pages 77--81.
+% Figures 45--47 are schematic MetaFun reconstructions.
+
+\startuseMPgraphic{heavens:figure45}
+  numeric u; u := .23mm;
+  pair O,X,Y,Z,XX,YY,ZZ;
+  O := (0,0); X := (75u,0); Y := (-55u,-57u); Z := (0,74u);
+  XX := (73u,-22u); YY := (-68u,-42u); ZZ := (20u,74u);
+  pickup pencircle scaled .35pt;
+  draw X--O--Y; draw O--Z; draw XX--O--YY; draw O--ZZ;
+  label.lft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx\m{x}"),X);
+  label.rt(textext("\tfx\m{x'}"),XX);
+  label.lft(textext("\tfx\m{y}"),Y);
+  label.lft(textext("\tfx\m{y'}"),YY);
+  label.top(textext("\tfx\m{z}"),Z);
+  label.top(textext("\tfx\m{z'}"),ZZ);
+  label(textext("\tfx{\it fig.}\,45."),(-43u,72u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure46}
+  numeric u; u := .25mm;
+  pair O,E,N,G,X,XX,Y,YY,Z,ZZ;
+  path oldplane,newplane;
+  O := (0,0); E := (74u,0); N := (-29u,48u); G := (21u,-48u);
+  X := (38u,-40u); XX := (61u,-30u);
+  Y := (48u,63u); YY := (28u,57u); Z := (-52u,73u); ZZ := (-14u,89u);
+  oldplane := fullcircle xscaled 148u yscaled 94u;
+  newplane := fullcircle xscaled 151u yscaled 91u rotated 34;
+  pickup pencircle scaled .35pt;
+  draw oldplane; draw newplane;
+  draw Z--O--G; draw O--ZZ; draw O--Y;
+  draw O--YY dashed evenly; draw O--E dashed evenly;
+  draw O--X dashed evenly; draw O--XX dashed evenly;
+  draw N--G;
+  label.lft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx E"),E);
+  label.ulft(textext("\tfx N"),N);
+  label.bot(textext("\tfx\m{\HeavensGamma}"),G);
+  label.ulft(textext("\tfx\m{x}"),X);
+  label.rt(textext("\tfx\m{x'}"),XX);
+  label.top(textext("\tfx\m{y}"),Y);
+  label.lft(textext("\tfx\m{y'}"),YY);
+  label.ulft(textext("\tfx\m{z}"),Z);
+  label.top(textext("\tfx\m{z'}"),ZZ);
+  label(textext("\tfx\m{\HeavensPsi}"),(13u,-32u));
+  label(textext("\tfx\m{\HeavensPhi}"),(48u,-51u));
+  label(textext("\tfx\m{\HeavensTheta}"),(47u,-36u));
+  label(textext("\tfx{\it fig.}\,46."),(67u,95u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure47}
+  numeric u; u := .23mm;
+  pair O,P,X,Y,Z,A,B,C,M,OO,AA,CC;
+  O := (0,0); P := (-91u,-42u); X := (95u,0);
+  Y := (69u,-37u); Z := (0,63u);
+  A := (37u,0); C := (18u,-11u); B := A+C; M := B+(0,25u);
+  OO := (0,25u); AA := A+OO; CC := C+OO;
+  pickup pencircle scaled .35pt;
+  draw P--O--X; draw O--Y; draw O--Z;
+  draw O--A--B--C--cycle;
+  draw OO--AA--M--CC--cycle;
+  draw O--OO; draw A--AA; draw B--M; draw C--CC;
+  draw O--M;
+  label.lft(textext("\tfx\m{o}"),O);
+  label.lft(textext("\tfx P"),P);
+  label.rt(textext("\tfx\m{x}"),X);
+  label.bot(textext("\tfx\m{y'}"),Y);
+  label.top(textext("\tfx\m{z'}"),Z);
+  label.ulft(textext("\tfx A"),A);
+  label.lrt(textext("\tfx B"),B);
+  label.rt(textext("\tfx\m{m}"),M);
+  label(textext("\tfx{\it fig.}\,47."),(-51u,57u));
+\stopuseMPgraphic
+
+% Original printed page 77.
+\testpage[15]
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure45}}
+\Article{163}If \m{ox}, \m{oy}, \m{oz}, fig.~45, be the co-ordinates of a point \m{m}, it is required to determine the position of \m{m} by means of \m{ox'}, \m{oy'}, \m{oz'}, three new rectangular co-ordinates, having the same origin as the former.
+
+\par\noindent\hskip1em\relax We shall find a value of \m{ox} or \m{x} first. Now,
+\par\flushsidefloats
+\startformula
+  \startalign[n=2,align={middle,middle}]
+  \NC ox:ox'\mathrel{::}1:\cos xox' \NC \qquad\text{or}\quad x'=x\cos xox'. \NR
+  \NC ox:oy'\mathrel{::}1:\cos xoy' \NC \qquad\text{or}\quad y'=x\cos xoy'. \NR
+  \NC ox:oz'\mathrel{::}1:\cos xoz' \NC \qquad\text{or}\quad z'=x\cos xoz'. \NR
+  \stopalign
+\stopformula
+\noindent If the sum of these quantities be taken, after multiplying the first by \m{\cos xox'}, the second by \m{\cos xoy'}, and the third by \m{\cos xoz'}, we shall have
+\startformula
+  \startalign[n=1,align=middle]
+  \NC x'\cos xox'+y'\cos xoy'+z'\cos xoz'= \NR
+  \NC x\{\cos^2 xox'+\cos^2 xoy'+\cos^2 xoz'\}=x. \NR
+  \stopalign
+\stopformula
+
+% This paragraph continues onto original printed page 78.
+\testpage[16]
+\placefigure[left,none]{}{\useMPgraphic{heavens:figure46}}
+\par\noindent\hskip1em\relax Let \m{o\HeavensGamma}, fig.~46, be the intersection of the old plane \m{xoy} with the new \m{x'oy'}; and let \m{\HeavensTheta} be the inclination of these two planes; also let \m{\HeavensGamma ox}, \m{\HeavensGamma ox'} be represented by \m{\HeavensPsi} and \m{\HeavensPhi}. Values of the cosines of \m{xox'}, \m{xoy'}, \m{xoz'}, must be found in terms of \m{\HeavensTheta}, \m{\HeavensPsi}, and \m{\HeavensPhi}. In the right-angled triangle \m{\HeavensGamma xx'}, the sides \m{\HeavensGamma x}, \m{\HeavensGamma x'}, are \m{\HeavensPsi} and \m{\HeavensPhi}, and the angle opposite the side \m{xx'} is \m{\HeavensTheta}:---hence, by spherical trigonometry,
+\par\flushsidefloats
+\startformula
+  \cos xox'=\cos\HeavensTheta\sin\HeavensPhi\sin\HeavensPsi+\cos\HeavensPsi\cos\HeavensPhi.
+\stopformula
+\par\noindent\hskip1em\relax This equation exists, whatever the values of \m{\HeavensPhi} and \m{\HeavensPsi} may be; hence, if \m{\HeavensPhi+90^{\circ}} be put for \m{\HeavensPhi}, the line \m{ox'} will take the place of \m{oy'}, the angle \m{xox'} will become \m{xoy'}, and the preceding equation will give
+\startformula
+  \cos xoy'=\cos\HeavensTheta\sin\HeavensPsi\cos\HeavensPhi-\cos\HeavensPsi\sin\HeavensPhi.
+\stopformula
+\par\noindent\hskip1em\relax Cos \m{xoz'} is found from the triangle whose three sides are the arcs intercepted by the angles \m{\HeavensGamma oz'}, \m{\HeavensGamma ox}, and \m{xoz'}. The angle opposite to the last side is
+\startformula
+  90^{\circ}-\HeavensTheta,\quad \HeavensGamma oz'=90^{\circ},\quad \HeavensGamma ox=\HeavensPsi,
+\stopformula
+\noindent then the general equation becomes
+\startformula
+  \cos xoz'=\sin\HeavensTheta\sin\HeavensPsi.
+\stopformula
+\par\noindent\hskip1em\relax If these expressions for the cosines be substituted in the value of \m{x}, it becomes
+\startformula
+  \startalign[n=1,align=middle]
+  \NC x=x'\{\cos\HeavensTheta\sin\HeavensPhi\sin\HeavensPsi+\cos\HeavensPsi\cos\HeavensPhi\}+{} \NR
+  \NC y'\{\cos\HeavensTheta\cos\HeavensPhi\sin\HeavensPsi-\cos\HeavensPsi\sin\HeavensPhi\}+z'\sin\HeavensTheta\sin\HeavensPsi. \NR
+  \stopalign
+\stopformula
+\par\noindent\hskip1em\relax In the same manner, the values of \m{y} and \m{z} are found to be
+\startformula
+  \startalign[n=1,align=middle]
+  \NC y=x'\{\cos\HeavensTheta\cos\HeavensPsi\sin\HeavensPhi-\sin\HeavensPsi\cos\HeavensPhi\}+{} \NR
+  \NC y'\{\cos\HeavensTheta\cos\HeavensPsi\cos\HeavensPhi+\sin\HeavensPsi\sin\HeavensPhi\}+z'\{\sin\HeavensTheta\cos\HeavensPsi\}, \NR
+  \NC z=-x'\{\sin\HeavensTheta\sin\HeavensPhi\}-y'\{\sin\HeavensTheta\cos\HeavensPhi\}+z'\cos\HeavensTheta. \NR
+  \stopalign
+\stopformula
+\noindent By substituting these values of \m{x}, \m{y}, \m{z}, in any equation, it will be transformed from the planes \m{xoy}, \m{xoz}, \m{yoz}, to the new planes \m{x'oy'}, \m{x'oz'}, \m{y'oz'}.
+
+% Article 164 continues from original printed page 78 onto page 79.
+\Article{164}We have now the means of ascertaining whether, among the infinite number of co-ordinate planes whose origin is in \m{o}, the centre of gravity of a system of bodies, there be any on which the sums of the areas are zero. This may be known by substituting the preceding values of \m{x}, \m{y}, \m{z}, and their differentials in the equations of areas: for the angles \m{\HeavensTheta}, \m{\HeavensPsi}, and \m{\HeavensPhi} being arbitrary, such values may be assumed for two of them as will make the sums of the projected areas on two of the co-ordinate planes zero; and if there be any incongruity in this assumption, it will appear in the determination of the third angle, which in that case would involve some absurdity in the areas on the third plane. That, however, is by no means the case, for the sum of the areas on the third plane is then found to be a maximum. If the substitution be made, and the angles \m{\HeavensPsi} and \m{\HeavensTheta} so assumed that
+\startformula
+  \sin\HeavensTheta\sin\HeavensPsi=\frac{c''}{\sqrt{c^2+c'^2+c''^2}};\quad
+  \sin\HeavensTheta\cos\HeavensPsi=\frac{c'}{\sqrt{c^2+c'^2+c''^2}},
+\stopformula
+\noindent it follows that
+\startformula
+  \cos\HeavensTheta=\frac{c}{\sqrt{c^2+c'^2+c''^2}},
+\stopformula
+\noindent whence
+\BookFormula{27}{
+  \HeavensSigma m\frac{x'dy'-y'dx'}{dt}=\sqrt{c^2+c'^2+c''^2},
+}
+\startformula
+  \HeavensSigma m\frac{x'dz'-z'dx'}{dt}=0,\qquad
+  \HeavensSigma m\frac{y'dz'-z'dy'}{dt}=0.
+\stopformula
+\noindent Thus, in every system of revolving bodies, there does exist a plane, on which the sum of the projected areas is a maximum; and on every plane at right angles to it, they are zero. One plane alone possesses that property.
+
+\Article{165}If the attractive force at \m{o} were to cease, the bodies would move by the primitive impulse alone, and the principle of areas would be also true in this case; it even exists independently of any abrupt changes of motion or velocity, among the bodies; and also when the centre of gravity has a rectilinear motion in space. Indeed it follows as a matter of course, that all the properties which have been proved to exist in the motions of a system of bodies, whose centre of gravity is at rest, must equally exist, if that point has a uniform and rectilinear motion in space, since experience shows that the relative motions of a system of bodies, is independent of any motion common to them all.
+
+% Demonstration continues onto printed page 80, absent from the local scan.
+% Missing printed pages 80--81 are transcribed from ETH Zurich's 1831 copy:
+% https://www.e-rara.ch/zut/content/titleinfo/13588565
+% IIIF images 13588720 (p. 80) and 13588721 (p. 81).
+\testpage[15]
+\placefigure[right,none]{}{\useMPgraphic{heavens:figure47}}
+\par\noindent\hskip1em\relax {\it Demonstration.}---However, that will readily appear, if \m{\bar{x}}, \m{\bar{y}}, \m{\bar{z}}, be assumed, as the co-ordinates of \m{o}, the moveable centre of gravity estimated from a fixed point P, fig.~47, and if \m{o\mathrm{A}}, \m{\mathrm{AB}}, \m{\mathrm{B}m}, or \m{x'}, \m{y'}, \m{z'}, be the co-ordinates of \m{m}, one of the bodies of the system with regard to the moveable point \m{o}. Then the co-ordinates of \m{m} relatively to P will be \m{\bar{x}+x'}, \m{\bar{y}+y'}, \m{\bar{z}+z'}. If these be put instead of \m{x}, \m{y}, \m{z}, in the different equations relative to the motions of a system, by attending to the properties of the centre of gravity, \m{\bar{x}}, \m{\bar{y}}, \m{\bar{z}}, vanish from these equations, which then become independent of them. If \m{\bar{x}+x'}, \m{\bar{y}+y'}, \m{\bar{z}+z'} be put for \m{x}, \m{y}, \m{z}, in equations (25), they become
+\par\flushsidefloats
+\startformula
+  \startalign[n=1,align=middle]
+  \NC \HeavensSigma\mathpunct{.}m\{d^2\bar{x}+d^2x'\}-\HeavensSigma m\ForceX dt^2=0. \NR
+  \NC \HeavensSigma\mathpunct{.}m\{d^2\bar{y}+d^2y'\}-\HeavensSigma m\ForceY dt^2=0. \NR
+  \NC \HeavensSigma\mathpunct{.}m\{d^2\bar{z}+d^2z'\}-\HeavensSigma\mathpunct{.}m\ForceZ dt^2=0. \NR
+  \stopalign
+\stopformula
+\par\noindent\hskip1em\relax But when the centre of gravity has a rectilinear and uniform motion in space, it has been shown, that
+% The source's middle denominator is dt, not dt^2; retained as printed.
+\startformula
+  \frac{d^2\bar{x}}{dt^2}=0;\quad
+  \frac{d^2\bar{y}}{dt}=0;\quad
+  \frac{d^2\bar{z}}{dt^2}=0;
+\stopformula
+\noindent which reduces the preceding equations to their original form, namely,
+\startformula
+  \HeavensSigma\mathpunct{.}m\frac{d^2x'}{dt^2}=\HeavensSigma m\ForceX,\quad
+  \HeavensSigma m\mathpunct{.}\frac{d^2y'}{dt^2}=\HeavensSigma m\ForceY,\quad
+  \HeavensSigma m\mathpunct{.}\frac{d^2z'}{dt^2}=\HeavensSigma m\ForceZ.
+\stopformula
+\par\noindent\hskip1em\relax If the same substitution be made in
+\startformula
+  \HeavensSigma m\left\{\frac{xd^2y-yd^2x}{dt^2}\right\}=\HeavensSigma m(x\ForceY-y\ForceX)
+\stopformula
+\noindent it becomes
+\startformula
+  \startalign[n=1,align=middle]
+  \NC \frac{\bar{x}\HeavensSigma\mathpunct{.}md^2y'-\bar{y}\HeavensSigma md^2x'}{dt^2}+\HeavensSigma m\mathpunct{.}\frac{x'd^2y'-y'd^2x'}{dt^2} \NR
+  \NC =\HeavensSigma m\mathpunct{.}(\ForceY x'-\ForceX y')+\bar{x}\mathpunct{.}\HeavensSigma m\ForceY-\bar{y}\mathpunct{.}\HeavensSigma m\ForceX. \NR
+  \stopalign
+\stopformula
+\noindent But in consequence of the preceding equations it is reduced to
+% The source omits the closing parenthesis on the right; retained as printed.
+\startformula
+  \HeavensSigma\mathpunct{.}m\mathpunct{.}\left\{\frac{x'd^2y'-y'd^2x'}{dt^2}\right\}=\HeavensSigma\mathpunct{.}m\mathpunct{.}(x'\ForceY-y'\ForceX.
+\stopformula
+\par\noindent\hskip1em\relax In the same manner it may be shown that
+\startformula
+  \startalign[n=1,align=middle]
+  \NC \HeavensSigma\mathpunct{.}m\mathpunct{.}\left\{\frac{z'd^2x'-x'd^2z'}{dt^2}\right\}=\HeavensSigma\mathpunct{.}m\mathpunct{.}(z'\ForceX-x'\ForceZ), \NR
+  \NC \HeavensSigma\mathpunct{.}m\mathpunct{.}\left\{\frac{y'd^2z'-z'd^2y'}{dt^2}\right\}=\HeavensSigma\mathpunct{.}m\mathpunct{.}(y'\ForceZ-z'\ForceY). \NR
+  \stopalign
+\stopformula
+\par\noindent\hskip1em\relax Thus the equations that determine the motions of a system of bodies are the same, whether the centre of gravity be at rest, or moving uniformly in a straight line; consequently the principles of Impetus, of Least Action, and of the Conservation of Areas, exist in either case.
+
+% Article 166 starts on original printed page 80 and continues onto page 81.
+\Article{166}Let the effect produced by the motion of the centre of gravity on the position of the plane for which the areas are a maximum, be now determined.
+
+% The source's substitution here has unprimed x, y, z; retained as printed.
+\par\noindent\hskip1em\relax If \m{\bar{x}+x}, \m{\bar{y}+y}, \m{\bar{z}+z}, be put for \m{x}, \m{y}, \m{z} in equations (26), they will retain the same form, namely,
+\startformula
+  \startalign[n=1,align=middle]
+  \NC \HeavensSigma m(x'dy'-y'dx')=c dt, \NR
+  \NC \HeavensSigma m(z'dx'-x'dz')=c' dt, \NR
+  \NC \HeavensSigma m(y'dz'-z'dy')=c''dt; \NR
+  \stopalign
+\stopformula
+\noindent for, in consequence of the rectilinear motion of the origin,
+\startformula
+  \bar{x}d\bar{y}-\bar{y}d\bar{x}=0,\quad
+  \bar{z}d\bar{x}-\bar{x}d\bar{z}=0,\quad
+  \bar{y}d\bar{z}-\bar{z}d\bar{y}=0.
+\stopformula
+\noindent And as the position of the plane in question is determined by the constant quantities \m{c}, \m{c'}, and \m{c''}, it will always remain parallel to itself during the motion of the system; on that account it is called the Invariable Plane.
+
+\Article{167}Thus, when there are no foreign forces acting on the system, the centre of gravity either remains at rest, or moves uniformly in a straight line; and if that point be assumed as the origin of the co-ordinates, the principles of the conservation of areas and living forces will exist with regard to it; and the invariable plane, always passing through that point, will remain parallel to itself, and will be carried along with the centre of gravity in the general motion of the system.
+
+\blank[medium]
+\midaligned{\it On the Motion of a System of Bodies in all possible Mathematical}
+\midaligned{\it relations between Force and Velocity.}
+\blank[small]
+
+\Article{168}In nature, force is proportional to velocity; but as a matter of speculation, La Place has investigated the motions of a system of bodies in every possible relation between these two quantities. It is rather singular that such an hypothesis should involve no contradiction; on the contrary, principles similar to the preservation of impetus, the constancy of areas, the motion of the centre of gravity, and the least action, actually exist.
+
+\par\flushsidefloats
+\blank[small]
+\startalignment[middle]
+  \blackrule[width=45mm,height=.3pt]
+\stopalignment
+\ifdefined\MechanismCombined\else\expandafter\stoptext\fi

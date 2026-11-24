@@ -1,0 +1,222 @@
+% Shared Somerville styling and MetaFun graphics for the book transcriptions.
+
+\startenvironment mechanism-environment
+
+\usepath[..]
+\input type-imp-somerville.mkxl
+
+\setupbodyfontenvironment[default][em=italic]
+\setupSomerville
+  {Width=100,Weight=400,Optical Size=12,Math Weight=700,Arrow Length=200,Arrow Head=100,Integral Slant=100}
+  {somerville-heavens}
+\setupbodyfont[somerville-heavens,11pt]
+
+% Base size matches cap heights: Playfair 708/1240 at 11pt, Porson 1440/2048.
+% Base Porson size = 11 * (708/1240) / (1440/2048) = 8.932473pt.
+% Enlarge Greek by 10% from that base, including the varpi fallback below.
+% Script sizes use 75% and 55% of the text size.
+% Use BMP Greek codes: Porson does not encode mathematical-alphanumeric Greek.
+% ConTeXt's weight effect adds 0.008em to stroke thickness: about 10% of
+% Porson's typical 160/2048em stem. It scales with each font size.
+\definefontfeature[heavens-greek-weight][default]
+  [effect={effect=both,weight=0.08}]
+\definefont[HeavensSymbols]            [file:GFSPorson.ttf*heavens-greek-weight at 9.82575pt]
+\definefont[HeavensScriptSymbols]      [file:GFSPorson.ttf*heavens-greek-weight at 7.3693125pt]
+\definefont[HeavensScriptScriptSymbols][file:GFSPorson.ttf*heavens-greek-weight at 5.4041625pt]
+\unexpanded\def\HeavensGreek#1{%
+  \mathord{\mathchoice
+    {\hbox{\HeavensSymbols #1}}%
+    {\hbox{\HeavensSymbols #1}}%
+    {\hbox{\HeavensScriptSymbols #1}}%
+    {\hbox{\HeavensScriptScriptSymbols #1}}}%
+}
+\unexpanded\def\HeavensSigma  {\HeavensGreek{\char"03A3\relax}}
+\unexpanded\def\HeavensAlpha  {\HeavensGreek{\char"03B1\relax}}
+\unexpanded\def\HeavensBeta   {\HeavensGreek{\char"03B2\relax}}
+\unexpanded\def\HeavensGamma  {\HeavensGreek{\char"03B3\relax}}
+\unexpanded\def\HeavensDelta  {\HeavensGreek{\char"03B4\relax}}
+\unexpanded\def\HeavensEpsilon{\HeavensGreek{\char"03B5\relax}}
+\unexpanded\def\HeavensTheta  {\HeavensGreek{\char"03B8\relax}}
+\unexpanded\def\HeavensLambda {\HeavensGreek{\char"03BB\relax}}
+\unexpanded\def\HeavensMu     {\HeavensGreek{\char"03BC\relax}}
+\unexpanded\def\HeavensNu     {\HeavensGreek{\char"03BD\relax}}
+\unexpanded\def\HeavensPi     {\HeavensGreek{\char"03C0\relax}}
+\unexpanded\def\HeavensRho    {\HeavensGreek{\char"03C1\relax}}
+\unexpanded\def\HeavensPhi    {\HeavensGreek{\char"03C6\relax}}
+\unexpanded\def\HeavensPsi    {\HeavensGreek{\char"03C8\relax}}
+\unexpanded\def\HeavensOmega  {\HeavensGreek{\char"03C9\relax}}
+
+% Porson lacks the mathematical pi symbol (varpi); retain its distinct shape.
+\definefont[HeavensVariantSymbols]            [file:latinmodern-math.otf*heavens-greek-weight at 12.1pt]
+\definefont[HeavensScriptVariantSymbols]      [file:latinmodern-math.otf*heavens-greek-weight at 9.075pt]
+\definefont[HeavensScriptScriptVariantSymbols][file:latinmodern-math.otf*heavens-greek-weight at 6.655pt]
+\unexpanded\def\HeavensVarpi{%
+  \mathord{\mathchoice
+    {\hbox{\HeavensVariantSymbols\char"1D71B\relax}}%
+    {\hbox{\HeavensVariantSymbols\char"1D71B\relax}}%
+    {\hbox{\HeavensScriptVariantSymbols\char"1D71B\relax}}%
+    {\hbox{\HeavensScriptScriptVariantSymbols\char"1D71B\relax}}}%
+}
+\unexpanded\def\HeavensCircle{\circ}
+
+\definepapersize[heavens][width=150mm,height=240mm]
+\setuppapersize[heavens][heavens]
+% Aged paper: change strength to 0 for flat cream, or increase it for more age.
+% The seed and page number make the texture repeatable and different per page.
+\definecolor[heavens-paper][h=FBF4D8]
+\def\HeavensPaperStrength{0}
+\def\HeavensPaperSeed{1831}
+
+\startluacode
+do
+    local exp, sin, floor, min, max = math.exp, math.sin, math.floor, math.min, math.max
+    local function byte(value)
+        return max(0, min(255, value))
+    end
+
+    function MP.HeavensPaperColor(value, x, y)
+        -- These dimensions match the MetaFun bytemap below (about 122 dpi).
+        local u, v = x / 719, y / 1151
+        local page = MP.heavenspaperpage or 1
+        local seed = MP.heavenspaperseed or 1831
+        local strength = MP.heavenspaperstrength or 1
+
+        -- Large cloudy changes in the paper's yellow/brown tone.
+        local cloud = (value - 127.5) / 127.5
+
+        -- Soft edge ageing, with a slightly wider shadow at the binding.
+        -- The chapter begins on printed page 4, with binding on the right.
+        local edge = .65 * exp(-min(u, 1-u) / .018)
+                   + .45 * exp(-min(v, 1-v) / .015)
+        local bindingdistance = page % 2 == 1 and (1-u) or u
+        local binding = exp(-bindingdistance / .045)
+
+        -- Deterministic, very low contrast grain; no global random state.
+        local hash = sin(x * 12.9898 + y * 78.233 + page * 37.719 + seed * .123) * 43758.5453
+        local grain = 2 * (hash - floor(hash)) - 1
+
+        return byte(251 + strength * (-8  * cloud - 3  * edge - 3.5 * binding + .5 * grain)),
+               byte(244 + strength * (-12 * cloud - 6  * edge - 7   * binding + .8 * grain)),
+               byte(216 + strength * (-24 * cloud - 10 * edge - 11  * binding +      grain))
+    end
+end
+\stopluacode
+
+\startuseMPgraphic{heavens:aged-paper}
+  draw lmt_noise [
+    bytemap       = 31,
+    nx            = 720,
+    ny            = 1152,
+    nz            = 3,
+    method        = "perlin",
+    iterations    = 3,
+    frequency     = .008,
+    persistence   = .45,
+    lacunarity    = 2,
+    minimum       = 0,
+    maximum       = 255,
+    z             = \HeavensPaperSeed/100 + .73*\the\realpageno,
+    colorfunction = "HeavensPaperColor",
+  ] xysized (OverlayWidth,OverlayHeight);
+\stopuseMPgraphic
+
+\defineoverlay[heavens:aged-paper]
+  [{\ctxlua{
+      MP.heavenspaperpage = \the\realpageno;
+      MP.heavenspaperseed = \HeavensPaperSeed;
+      MP.heavenspaperstrength = \HeavensPaperStrength;
+    }\useMPgraphic{heavens:aged-paper}}]
+\setupbackgrounds[page]
+  [background=heavens:aged-paper,backgroundcolor=heavens-paper]
+\setuplayout
+  [backspace=17mm,topspace=10mm,width=116mm,height=218mm,
+   header=7mm,headerdistance=4mm,footer=0mm]
+\setuppagenumbering[location=]
+\setupinterlinespace[line=12.8pt]
+\setupwhitespace[none]
+\setupindenting[no]
+\setupalign[normal,verytolerant]
+\setupformulas[spacebefore=3pt,spaceafter=3pt]
+\setupfloats[spacebefore=none,spaceafter=none]
+
+% Upright force and point labels, as in the original; variables stay italic.
+\unexpanded\def\Force{\mathrm{F}}
+\unexpanded\def\ForceX{\mathrm{X}}
+\unexpanded\def\ForceY{\mathrm{Y}}
+\unexpanded\def\ForceZ{\mathrm{Z}}
+\unexpanded\def\Resultant{\Force_{1}}
+\unexpanded\def\Der#1#2{\frac{\partial #1}{\partial #2}}
+\unexpanded\def\SumForce{\HeavensSigma\mathpunct{.}\Force\mathpunct{.}}
+\unexpanded\def\Article#1{\par\noindent\hskip1em\relax #1.\enspace}
+\unexpanded\def\HeavensChapterHeaders#1#2{%
+  \setupheadertexts
+    [{\hbox to \makeupwidth{%
+       \ifodd\userpageno
+         \rlap{Chap. #1.]}\hss{#2}\hss\llap{\userfolio}%
+       \else
+         \rlap{\userfolio}\hss{#2}\hss\llap{[Book I.}%
+       \fi}}]%
+}
+
+\startuseMPgraphic{heavens:figure10}
+  numeric u; u := .20mm;
+  pair O,A,B,C,P,Q,R,M;
+  O := (0,0); A := (68u,0); B := (-18u,-22u); C := (0,52u);
+  P := A+B; Q := A+C; R := B+C; M := A+B+C;
+  pickup pencircle scaled .35pt;
+  draw O--A--P--B--cycle;
+  draw C--Q--M--R--cycle;
+  draw O--C; draw A--Q; draw B--R; draw P--M;
+  draw O--M; draw A--M; draw B--M; draw C--M;
+  draw O--(116u,0); draw O--(0,92u); draw O--2.4B;
+  label.rt(textext("\tfx\m{x}"),(116u,0));
+  label.top(textext("\tfx\m{z}"),(0,92u));
+  label.bot(textext("\tfx\m{y}"),2.4B);
+  label.llft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx A"),A);
+  label.bot(textext("\tfx B"),B);
+  label.ulft(textext("\tfx C"),C);
+  label.bot(textext("\tfx P"),P);
+  label.urt(textext("\tfx Q"),Q);
+  label.lft(textext("\tfx R"),R);
+  label.ulft(textext("\tfx\m{m}"),M);
+  label(textext("\tfx{\it fig.}\,10."),(68u,98u));
+\stopuseMPgraphic
+
+\startuseMPgraphic{heavens:figure11}
+  numeric u; u := .20mm;
+  pair E,O,A,B,C,P,Q,R,M;
+  E := (-46u,-46u);
+  O := (0,0); A := (65u,0); B := (-23u,-17u); C := (0,44u);
+  P := A+B; Q := A+C; R := B+C; M := A+B+C;
+  pickup pencircle scaled .35pt;
+  draw E--(112u,ypart E);
+  draw E--(xpart E,91u);
+  draw E--(E+(-53u,-38u));
+  draw O--A--P--B--cycle;
+  draw C--Q--M--R--cycle;
+  draw O--C; draw A--Q; draw B--R; draw P--M;
+  draw O--M dashed evenly scaled .5;
+  label.rt(textext("\tfx\m{x}"),(112u,ypart E));
+  label.top(textext("\tfx\m{z}"),(xpart E,91u));
+  label.bot(textext("\tfx\m{y}"),E+(-53u,-38u));
+  label.ulft(textext("\tfx\m{o'}"),E);
+  label.llft(textext("\tfx\m{o}"),O);
+  label.rt(textext("\tfx A"),A);
+  label.bot(textext("\tfx B"),B);
+  label.ulft(textext("\tfx C"),C);
+  label.bot(textext("\tfx P"),P);
+  label.urt(textext("\tfx Q"),Q);
+  label.lft(textext("\tfx R"),R);
+  label.lrt(textext("\tfx\m{m}"),M);
+  label(textext("\tfx{\it fig.}\,11."),(80u,78u));
+\stopuseMPgraphic
+
+
+% Fit a long display without allowing a break inside an equation.
+\unexpanded\def\FitFormula#1{%
+  \startformula
+    \hbox{\scale[maxwidth=\textwidth]{\m{\displaystyle #1}}}%
+  \stopformula
+}
+\stopenvironment

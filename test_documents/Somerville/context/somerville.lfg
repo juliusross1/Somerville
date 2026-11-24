@@ -9,16 +9,24 @@ return {
     copyright   = "",
     mathematics = {
         parameters = {
-            --PrimeShiftUpCramped               = "SuperscriptShiftUp",
+            -- PrimeShiftUpCramped               = "SuperscriptShiftUp",
             -- RadicalKernBeforeExtensible    = 100,
             -- RadicalDisplayStyleVerticalGap = 0,
             --RadicalDegreeBottomRaisePercent   = 60,
             --RadicalKernAfterDegree            = -300,
-            --PrimeShiftUp = 1500,
-            --PrimeShiftUpCramped = 500,
+            --PrimeShiftUp = 200,
+            --PrimeShiftUpCramped = 150,
         },
         tweaks = {
             aftercopying = {
+                --{
+                --    tweak = "kernpairs",
+                --    list = {
+                --        [0x0064] = { -- upright d
+                --            [0x1D466] = -0.15, -- italic y; approximately -1.5mu
+                --        },
+                --    },
+                --},
                 --{
                 --    tweak = "accentdimensions",
                 --},

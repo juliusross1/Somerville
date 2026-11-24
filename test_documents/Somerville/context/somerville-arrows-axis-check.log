@@ -1,0 +1,254 @@
+open source     > level 1, order 1, name 'cont-yes.mkiv'
+system          > 
+system          > ConTeXt  ver: 2026.10.01 18:42 LMTX  fmt: 2026.10.22  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname '/tmp/somerville-arrows-axis-check', input '/tmp/somerville-arrows-axis-check.tex', result '/tmp/somerville-arrows-axis-check'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 2, order 3, name '/tmp/somerville-arrows-axis-check.tex'
+open source     > level 3, order 4, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=16000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=2000000 | min=2000000 | ptr=2000001 | set=10000000 | stp=1000000 | top=2000000
+tex memory      > bumping category 'pool' succeeded, details: all=6202485 | ext=0 | ini=977320 | itm=1 | max=100000000 | mem=6202485 | min=10000000 | ptr=-1 | set=10000000 | stp=1000000 | top=-1
+tex memory      > bumping category 'token' succeeded, details: all=24000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=3000000 | min=2000000 | ptr=3000001 | set=10000000 | stp=1000000 | top=3000000
+close source    > level 3, order 4, name 'type-imp-somerville.mkxl'
+fonts           > goodies > goodie file 'somerville-heavy-regular' is not found (suffixes: lfg lua)
+fonts           > bodyfont '26pt' is defined (can better be done global (maybe use \usebodyfont)
+fonts           > bodyfont '22pt' is defined (can better be done global (maybe use \usebodyfont)
+fonts           > bodyfont '13pt' is defined (can better be done global (maybe use \usebodyfont)
+pages           > flushing realpage 1, userpage 1, subpage 1
+pages           > flushing realpage 2, userpage 1, subpage 2
+structure       > sectioning > part @ level 1 : 1 -> Variation
+fonts           > bodyfont '17pt' is defined (can better be done global (maybe use \usebodyfont)
+pages           > flushing realpage 3, userpage 2, subpage 3
+structure       > sectioning > section @ level 3 : 1.0.1 -> Width
+pages           > flushing realpage 4, userpage 3, subpage 4
+structure       > sectioning > section @ level 3 : 1.0.2 -> Weight
+pages           > flushing realpage 5, userpage 4, subpage 5
+pages           > flushing realpage 6, userpage 5, subpage 6
+structure       > sectioning > section @ level 3 : 1.0.3 -> Optical Size
+fonts           > bodyfont '16pt' is defined (can better be done global (maybe use \usebodyfont)
+fonts           > bodyfont '21pt' is defined (can better be done global (maybe use \usebodyfont)
+pages           > flushing realpage 7, userpage 6, subpage 7
+fonts           > bodyfont '32pt' is defined (can better be done global (maybe use \usebodyfont)
+fonts           > bodyfont '48pt' is defined (can better be done global (maybe use \usebodyfont)
+fonts           > bodyfont '72pt' is defined (can better be done global (maybe use \usebodyfont)
+fonts           > bodyfont '96pt' is defined (can better be done global (maybe use \usebodyfont)
+structure       > sectioning > section @ level 3 : 1.0.4 -> Integrals
+pages           > flushing realpage 8, userpage 7, subpage 8
+pages           > flushing realpage 9, userpage 8, subpage 9
+structure       > sectioning > section @ level 3 : 1.0.5 -> Arrows
+pack quality    > overfull hbox at line 347 in file '/tmp/somerville-arrows-axis-check.tex': Length=100 (8.05038pt)
+pack quality    > overfull hbox at line 349 in file '/tmp/somerville-arrows-axis-check.tex': Length=0 (0.84003pt)
+pack quality    > overfull hbox at line 351 in file '/tmp/somerville-arrows-axis-check.tex': Length=200 (9.19012pt)
+structure       > sectioning > section @ level 3 : 1.0.6 -> Mathematics Weight
+pages           > flushing realpage 10, userpage 9, subpage 10
+structure       > sectioning > part @ level 1 : 2 -> Symbols
+structure       > sectioning > section @ level 3 : 2.0.1 -> Big Operators
+structure       > sectioning > section @ level 3 : 2.0.2 -> Serif Alternates
+structure       > sectioning > section @ level 3 : 2.0.3 -> White Rim Alternates
+structure       > sectioning > section @ level 3 : 2.0.4 -> Radicals
+pages           > flushing realpage 11, userpage 10, subpage 11
+structure       > sectioning > section @ level 3 : 2.0.5 -> Accents
+structure       > sectioning > section @ level 3 : 2.0.6 -> Mathematical Alphabets
+pages           > flushing realpage 12, userpage 11, subpage 12
+structure       > sectioning > part @ level 1 : 3 -> Usage
+structure       > sectioning > section @ level 3 : 3.0.1 -> Instances in ConTeXt
+pack quality    > overfull hbox at line 567 - 568 in file '/tmp/somerville-arrows-axis-check.tex':  [[[[•]]]]WIDTH is one of semicondensed or semiexpanded; omit this for regular width. (2.89957pt)
+structure       > sectioning > section @ level 3 : 3.0.2 -> Custom Variation in ConTeXt
+pack quality    > overfull hbox at line 580 - 581 in file '/tmp/somerville-arrows-axis-check.tex':  For a custom typeface using other variation, use the function \setupSomerville. (1.72215pt)
+pages           > flushing realpage 13, userpage 12, subpage 13
+structure       > sectioning > section @ level 3 : 3.0.3 -> {Other Typesetting Systems}
+pack quality    > overfull hbox at line 605 - 606 in file '/tmp/somerville-arrows-axis-check.tex':  Run it from a directory containing SomervilleMathVF.ttf, PlayfairRomanVF.ttf, (9.58066pt)
+pack quality    > overfull hbox at line 612 - 613 in file '/tmp/somerville-arrows-axis-check.tex':  With the prefix -o Somerville, the script writes SomervilleRoman.ttf, SomervilleItalic.ttf, (69.30983pt)
+pages           > flushing realpage 14, userpage 13, subpage 14
+pages           > flushing realpage 15, userpage 14, subpage 15
+close source    > level 2, order 4, name '/tmp/somerville-arrows-axis-check.tex'
+close source    > level 1, order 4, name 'cont-yes.mkiv'
+backend         > xmp > using file '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+backend         > fonts > start embedded fonts
+backend         > fonts >     1 : file 'PlayfairRomanVF.ttf', base 'OYTFGU+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-arrowhead100arrowlength200integralslant0mathweight750opticalsize36weight400width100-0'
+backend         > fonts >     2 : file 'PlayfairRomanVF.ttf', base 'CXJMLF+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz5wdth100wght400-0'
+backend         > fonts >     3 : file 'PlayfairRomanVF.ttf', base 'ZUZIUP+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-arrowhead100arrowlength200integralslant0mathweight750opticalsize18weight400width100-0'
+backend         > fonts >     4 : file 'PlayfairRomanVF.ttf', base 'HNECNK+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-arrowhead100arrowlength200integralslant0mathweight700opticalsize12weight300width100-0'
+backend         > fonts >     5 : file 'PlayfairRomanVF.ttf', base 'YQVENE+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth88wght400-0'
+backend         > fonts >     6 : file 'SomervilleMathVF.ttf', base 'IRLDFJ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz12stya5styb5wdth95wght400-0'
+backend         > fonts >     7 : file 'PlayfairRomanVF.ttf', base 'IRJVQV+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth100wght400-0'
+backend         > fonts >     8 : file 'SomervilleMathVF.ttf', base 'ZWZTLM+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz12stya5styb5wdth100wght400-0'
+backend         > fonts >     9 : file 'PlayfairRomanVF.ttf', base 'DZBZHG+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-mathweight750opticalsize12weight400width108-0'
+backend         > fonts >    10 : file 'SomervilleMathVF.ttf', base 'EYJHPM+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-mathweight750opticalsize12weight400width108-0'
+backend         > fonts >    11 : file 'PlayfairRomanVF.ttf', base 'ZRQRNP+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth1125wght400-0'
+backend         > fonts >    12 : file 'SomervilleMathVF.ttf', base 'AVHOPX+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz12stya5styb5wdth113wght400-0'
+backend         > fonts >    13 : file 'PlayfairRomanVF.ttf', base 'BYVNZX+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth100wght360-0'
+backend         > fonts >    14 : file 'SomervilleMathVF.ttf', base 'MMHYFV+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght710opsz12stya5styb5wdth100wght360-0'
+backend         > fonts >    15 : file 'PlayfairRomanVF.ttf', base 'QGFHEO+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth100wght500-0'
+backend         > fonts >    16 : file 'SomervilleMathVF.ttf', base 'SBQDKF+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght816667opsz12stya5styb5wdth100wght500-0'
+backend         > fonts >    17 : file 'PlayfairRomanVF.ttf', base 'VTFTJH+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth100wght600-0'
+backend         > fonts >    18 : file 'SomervilleMathVF.ttf', base 'EPBPPY+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght866667opsz12stya5styb5wdth100wght600-0'
+backend         > fonts >    19 : file 'PlayfairRomanVF.ttf', base 'ZAIUBE+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth100wght700-0'
+backend         > fonts >    20 : file 'SomervilleMathVF.ttf', base 'GOYLKN+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght900opsz12stya5styb5wdth100wght700-0'
+backend         > fonts >    21 : file 'PlayfairRomanVF.ttf', base 'BBDTFR+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth100wght800-0'
+backend         > fonts >    22 : file 'SomervilleMathVF.ttf', base 'ICGYBI+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght900opsz12stya5styb5wdth100wght800-0'
+backend         > fonts >    23 : file 'PlayfairRomanVF.ttf', base 'NFTTAQ+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth100wght900-0'
+backend         > fonts >    24 : file 'SomervilleMathVF.ttf', base 'WOFESC+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght900opsz12stya5styb5wdth100wght900-0'
+backend         > fonts >    25 : file 'SomervilleMathVF.ttf', base 'ZFCXUT+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz5stya5styb5wdth100wght400-0'
+backend         > fonts >    26 : file 'PlayfairRomanVF.ttf', base 'VBDSEB+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz6wdth100wght400-0'
+backend         > fonts >    27 : file 'SomervilleMathVF.ttf', base 'QPOTAZ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz6stya5styb5wdth100wght400-0'
+backend         > fonts >    28 : file 'PlayfairRomanVF.ttf', base 'SYKLJX+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz7wdth100wght400-0'
+backend         > fonts >    29 : file 'SomervilleMathVF.ttf', base 'HVRRST+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz7stya5styb5wdth100wght400-0'
+backend         > fonts >    30 : file 'PlayfairRomanVF.ttf', base 'WIGDXR+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz8wdth100wght400-0'
+backend         > fonts >    31 : file 'SomervilleMathVF.ttf', base 'UFQDFZ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz8stya5styb5wdth100wght400-0'
+backend         > fonts >    32 : file 'PlayfairRomanVF.ttf', base 'WZHHMC+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz16wdth100wght400-0'
+backend         > fonts >    33 : file 'SomervilleMathVF.ttf', base 'POOLCX+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz16stya5styb5wdth100wght400-0'
+backend         > fonts >    34 : file 'PlayfairRomanVF.ttf', base 'NFKZLE+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz21wdth100wght400-0'
+backend         > fonts >    35 : file 'SomervilleMathVF.ttf', base 'XCZCXQ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz21stya5styb5wdth100wght400-0'
+backend         > fonts >    36 : file 'PlayfairRomanVF.ttf', base 'FXEMES+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz32wdth100wght400-0'
+backend         > fonts >    37 : file 'SomervilleMathVF.ttf', base 'TEZDAD+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz32stya5styb5wdth100wght400-0'
+backend         > fonts >    38 : file 'PlayfairRomanVF.ttf', base 'YOIXVL+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz48wdth100wght400-0'
+backend         > fonts >    39 : file 'SomervilleMathVF.ttf', base 'QZPZBY+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz48stya5styb5wdth100wght400-0'
+backend         > fonts >    40 : file 'PlayfairRomanVF.ttf', base 'QOIVNF+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz72wdth100wght400-0'
+backend         > fonts >    41 : file 'SomervilleMathVF.ttf', base 'YVNRNH+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz72stya5styb5wdth100wght400-0'
+backend         > fonts >    42 : file 'PlayfairRomanVF.ttf', base 'SFWCCA+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz96wdth100wght400-0'
+backend         > fonts >    43 : file 'SomervilleMathVF.ttf', base 'PXXYSS+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght750opsz96stya5styb5wdth100wght400-0'
+backend         > fonts >    44 : file 'PlayfairRomanVF.ttf', base 'HHNVQN+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-arrowhead100arrowlength100integralslant50mathweight750opticalsize12weight400width100-0'
+backend         > fonts >    45 : file 'SomervilleMathVF.ttf', base 'TZEWPQ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arrowhead100arrowlength100integralslant50mathweight750opticalsize12weight400width100-0'
+backend         > fonts >    46 : file 'PlayfairRomanVF.ttf', base 'DSBFPJ+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-arrowhead100arrowlength100integralslant100mathweight750opticalsize12weight400width100-0'
+backend         > fonts >    47 : file 'SomervilleMathVF.ttf', base 'CHQGXF+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arrowhead100arrowlength100integralslant100mathweight750opticalsize12weight400width100-0'
+backend         > fonts >    48 : file 'SomervilleMathVF.ttf', base 'ACVKBZ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arrowhead100arrowlength100integralslant0mathweight750opticalsize12weight400width100-0'
+backend         > fonts >    49 : file 'SomervilleMathVF.ttf', base 'DUVQEW+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arrowhead100arrowlength0integralslant0mathweight750opticalsize12weight400width100-0'
+backend         > fonts >    50 : file 'SomervilleMathVF.ttf', base 'KITOGD+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arrowhead100arrowlength200integralslant0mathweight750opticalsize12weight400width100-0'
+backend         > fonts >    51 : file 'SomervilleMathVF.ttf', base 'JEEJRP+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arrowhead100arrowlength200integralslant0mathweight700opticalsize12weight300width100-0'
+backend         > fonts > stop embedded fonts
+system          > start used files
+system          > text: somerville-arrows-axis-check
+system          > stop used files
+system          > start used files
+system          >    1: filename=cont-yes.mkiv filetype=tex format=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv usedmethod=database
+system          >    2: filename=publ-imp-default.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+system          >    3: filename=cont-new.mkxl filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
+system          >    4: filename=lang-exc.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+system          >    5: filename=lang-us.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+system          >    6: filename=/tmp/somerville-arrows-axis-check.tex format=tex foundname=/tmp/somerville-arrows-axis-check.tex fullname=/tmp/somerville-arrows-axis-check.tex usedmethod=direct
+system          >    7: filename=type-imp-somerville.mkxl format=tex foundname=type-imp-somerville.mkxl fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/type-imp-somerville.mkxl usedmethod=direct
+system          >    8: filename=context-libraries.tma filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma usedmethod=database
+system          >    9: filename=lm.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
+system          >   10: filename=PlayfairRomanVF.ttf filetype=ttf format=ttf foundname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf usedmethod=filesystem
+system          >   11: filename=SomervilleMathVF.ttf filetype=ttf format=ttf foundname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.ttf usedmethod=filesystem
+system          >   12: filename=somerville.lfg foundname=somerville.lfg fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville.lfg usedmethod=direct
+system          >   13: filename=common-math.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg usedmethod=database
+system          >   14: filename=lpdf-pdx.xml filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
+system          > stop used files
+system          > start commandline options
+system          >   batchmode="true"
+system          >   currentrun="2"
+system          >   fulljobname="/tmp/somerville-arrows-axis-check.tex"
+system          >   input="/tmp/somerville-arrows-axis-check.tex"
+system          >   kindofrun="2"
+system          >   maxnofruns="9"
+system          >   texmfbinpath="/Users/juliusross/context/tex/texmf-osx-arm64/bin"
+system          > stop commandline options
+system          > start commandline files
+system          >    1: /tmp/somerville-arrows-axis-check.tex
+system          > stop commandline files
+modules         > start used modules
+modules         > stop used modules
+system          > 
+system          > status after finishing run
+system          > 
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert        mvl
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500        500
+system          >   min     150000   10000000     150000     150000   10000000    2000000    1000000      10000        500       1000      20000     100000        250        250         50         25         10
+system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250         10
+system          >   stp     100000    1000000     100000     100000    5000000    1000000    1000000      10000        250       1000      10000      10000        250        250         50         25         10
+system          > 
+system          >   mem     250000    8712296     150000              10000000    4000000    1000000      10000        500       1000      20000      10000        250        250         50        500         10
+system          >   itm         16          1         16                     9          8          1         32         32        116          4         16          8          8         28         72        116
+system          >   ext          0          0          0          0       5440          0          0          0          0          0          0          0   13226864         96          0          0          0
+system          >   all    4000000    8712296    2400000          1   90005440   32000000    1000000     320000      16000     116000      80000     160000   13228864       2096       1400      36000       1160
+system          > 
+system          >   ini    2150736     977320          0      53567          0     591100                                                                                       0                                 
+system          >   ptr     197080                 58263     197063               3713258          0          0          0          0          0          0         58          1         28         11          0
+system          >   top     197081                495867     262146      73146    3714496        682         47          7         19         42        386        250        250         50        500         10
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          > 
+system          >   current input type    : initial
+system          > 
+system          >   approximate memory    : 155770104 (148 MB)
+system          > 
+system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 9
+system          > 
+system          >   luabytecode registers : 1028
+system          >   luabytecode bytes     : 16464 (0 MB)
+system          >   luastate bytes now    : 543182026 (518 MB)
+system          >   luastate bytes max    : 543182026 (518 MB)
+system          > 
+system          >   file callbacks        : 1238
+system          >   saved callbacks       : 2654
+system          >   direct callbacks      : 13
+system          >   function callbacks    : 114309
+system          >   value callbacks       : 644264
+system          >   message callbacks     : 0
+system          >   bytecode callbacks    : 634
+system          > 
+system          >   mp instances          : 0
+system          >   mp estimated memory   : 0 (0 MB)
+system          >   mp file callbacks     : 0
+system          >   mp text callbacks     : 0
+system          >   mp script callbacks   : 0
+system          >   mp log callbacks      : 0
+system          > 
+system          >   total callbacks       : 763112
+system          >   mp total callbacks    : 0
+system          >   backend callbacks     : 0
+system          > 
+system          >   linebreak statistics  : context      calls     first    second     final  passonly   subpass
+system          > 
+system          >   linebreak statistics  : normal         213       213         0        55         0         0
+system          >   linebreak statistics  : vbox           114       114         0         0         0         0
+system          >   linebreak statistics  : vtop             1         1         0         0         0         0
+system          > 
+system          >   linebreak statistics  :                328       328         0        55         0         0
+system          > 
+system          >   linebreak statistics  : brokenlines        6
+system          >   linebreak statistics  : textlines        256
+system          > 
+system          >   hyphenation state     : checked         359
+system          >   hyphenation state     : exceptions        4
+system          >   hyphenation state     : hyphenated      505
+system          >   hyphenation state     : lists           359
+system          >   hyphenation state     : nothing         254
+system          >   hyphenation state     : words           657
+system          > 
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.003 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 14 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 528 modules (0.121 sec), 106 tables (0.007 sec), 634 chunks (0.128 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1907, freed: 0, unreachable: 1907
+mkxl run stats  > cleaned up reserved nodes: 83 nodes, 8 lists of 446
+mkxl run stats  > node memory usage: 6 attribute, 3 attributelist, 1 dir, 114 fontspec, 1 glue, 135 gluespec, 1 kern, 661 mathspec, 2 penalty, 56 specification, 2 temp
+mkxl run stats  > node list callback tasks: 17 unique task lists, 18 instances (re)created, 2436 calls
+mkxl run stats  > driver time: 0.020 seconds 
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: resumed with value 0.96782570423457215
+mkxl run stats  > jobdata time: 0.001 seconds saving, 0.001 seconds loading
+mkxl run stats  > callbacks: file: 1238, saved: 2654, direct: 13, function: 114309, value: 644264, message: 0, bytecode: 634, late 0, total: 763112 (50874 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > interactive elements: 0 references, 1 destinations
+mkxl run stats  > loaded fonts: 2 files: playfairromanvf.ttf, somervillemathvf.ttf
+mkxl run stats  > font engine: otf 3.156, afm 1.541, tfm 1.000, 58 instances, load time 0.646 seconds 
+mkxl run stats  > body font sizes: defined: 10pt 11pt 12pt 14.4pt 17.3pt 20.7pt 4pt 5pt 6pt 7pt 8pt 9pt, undefined: 13pt 16pt 17pt 21pt 22pt 26pt 32pt 48pt 72pt 96pt
+mkxl run stats  > math tweaking time: 0.016 seconds, 90 math goodie tables
+mkxl run stats  > font embedding time: 0.071 seconds, 51 fonts
+mkxl run stats  > result saved in file: /tmp/somerville-arrows-axis-check.pdf, compresslevel 1, objectcompresslevel 3, 120 streams, 0 uncompressed, 119 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20260923, format id: 736, memory mode: 1, compiler: clang, cversion: 23
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 197063 control sequences, 262144 hash slots, 58263 misses, approximate memory usage: 148 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 524 MB, ctx: 518 MB, max: 518 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 3.832 seconds, 15 processed pages, 15 shipped pages, 3.914 pages/second

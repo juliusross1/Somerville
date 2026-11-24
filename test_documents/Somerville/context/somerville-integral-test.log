@@ -1,0 +1,914 @@
+open source     > level 1, order 1, name 'cont-yes.mkiv'
+system          > 
+system          > ConTeXt  ver: 2026.10.01 18:42 LMTX  fmt: 2026.10.22  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > files > jobname './somerville-integral-test', input './somerville-integral-test.tex', result './somerville-integral-test'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 2, order 3, name './somerville-integral-test.tex'
+open source     > level 3, order 4, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=16000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=2000000 | min=2000000 | ptr=2000001 | set=10000000 | stp=1000000 | top=2000000
+tex memory      > bumping category 'pool' succeeded, details: all=6202444 | ext=0 | ini=977320 | itm=1 | max=100000000 | mem=6202444 | min=10000000 | ptr=-1 | set=10000000 | stp=1000000 | top=-1
+tex memory      > bumping category 'token' succeeded, details: all=24000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=3000000 | min=2000000 | ptr=3000001 | set=10000000 | stp=1000000 | top=3000000
+close source    > level 3, order 4, name 'type-imp-somerville.mkxl'
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-100-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=12,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-100-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-100-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-100-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.173
+fonts           > goodies > goodie file 'somerville-heavy-regular' is not found (suffixes: lfg lua)
+metapost        > initializing instance 'metafun:1' using format 'metafun' and method 'double'
+metapost        > loading 'metafun' as '/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/metafun.mpxl' using method 'double'
+metapost        > initializing number mode 'double'
+metapost        > trace > This is MPLIB for LuaMetaTeX, version 3.15, running in double mode.
+metapost        > trace > 
+metapost        > trace > loading metafun for lmtx, including the plain 1.004 base definitions
+metapost        > trace > 
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-95-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=5,stya=5,styb=5,wdth=95,wght=360, factors: 0.0 0.0 0.5555419921875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-95-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-95-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-95-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-95-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.153
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-100-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=5,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0.0 0.5555419921875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-100-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-100-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-100-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.190
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-113-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=5,stya=5,styb=5,wdth=113,wght=360, factors: 1.0 0.0 0.5555419921875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-113-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-113-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-113-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-5-stya-5-styb-5-wdth-113-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.174
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-95-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=5,stya=5,styb=5,wdth=95,wght=400, factors: 0.0 0.0740966796875 0.629638671875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-95-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-95-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-95-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-95-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.186
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-100-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=5,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-100-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-100-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-100-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.328
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-113-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=5,stya=5,styb=5,wdth=113,wght=400, factors: 1.0 0.0740966796875 0.629638671875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-113-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-113-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-113-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-5-stya-5-styb-5-wdth-113-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.242
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-95-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=95,wght=700, factors: 0.0 0.53704833984375 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-95-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-95-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-95-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-95-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.177
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.164
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-113-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=113,wght=700, factors: 1.0 0.53704833984375 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-113-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-113-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-113-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-113-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.170
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-95-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=95,wght=900, factors: 0.0 1.0 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-95-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-95-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-95-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-95-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.156
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1.0 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.153
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-113-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=113,wght=900, factors: 1.0 1.0 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-113-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-113-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-113-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-5-stya-5-styb-5-wdth-113-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.151
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-95-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=12,stya=5,styb=5,wdth=95,wght=360, factors: 0.0 0.0 0.5555419921875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-95-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-95-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-95-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-95-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.157
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-100-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=12,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0.0 0.5555419921875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-100-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-100-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-100-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.157
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-113-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=12,stya=5,styb=5,wdth=113,wght=360, factors: 1.0 0.0 0.5555419921875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-113-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-113-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-113-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-12-stya-5-styb-5-wdth-113-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.156
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-95-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=12,stya=5,styb=5,wdth=95,wght=400, factors: 0.0 0.0740966796875 0.629638671875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-95-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-95-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-95-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-95-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.160
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-113-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=12,stya=5,styb=5,wdth=113,wght=400, factors: 1.0 0.0740966796875 0.629638671875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-113-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-113-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-113-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-12-stya-5-styb-5-wdth-113-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.167
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-95-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=95,wght=700, factors: 0.0 0.53704833984375 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-95-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-95-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-95-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-95-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.180
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.219
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-113-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=113,wght=700, factors: 1.0 0.53704833984375 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-113-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-113-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-113-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-113-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.158
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-95-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=95,wght=900, factors: 0.0 1.0 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-95-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-95-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-95-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-95-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.162
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1.0 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.156
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-113-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=113,wght=900, factors: 1.0 1.0 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-113-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-113-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-113-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-12-stya-5-styb-5-wdth-113-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.153
+pages           > flushing realpage 1, userpage 1, subpage 1
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-95-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=72,stya=5,styb=5,wdth=95,wght=360, factors: 0.0 0.0 0.5555419921875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-95-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-95-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-95-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-95-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.172
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-100-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=72,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0.0 0.5555419921875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-100-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-100-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-100-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.157
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-113-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=72,stya=5,styb=5,wdth=113,wght=360, factors: 1.0 0.0 0.5555419921875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-113-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-113-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-113-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-72-stya-5-styb-5-wdth-113-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.154
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-95-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=72,stya=5,styb=5,wdth=95,wght=400, factors: 0.0 0.0740966796875 0.629638671875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-95-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-95-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-95-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-95-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.154
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-100-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=72,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-100-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-100-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-100-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.155
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-113-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=72,stya=5,styb=5,wdth=113,wght=400, factors: 1.0 0.0740966796875 0.629638671875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-113-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-113-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-113-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-72-stya-5-styb-5-wdth-113-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.169
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-95-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=95,wght=700, factors: 0.0 0.53704833984375 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-95-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-95-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-95-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-95-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.155
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.155
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-113-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=113,wght=700, factors: 1.0 0.53704833984375 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-113-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-113-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-113-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-113-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.153
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-95-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=95,wght=900, factors: 0.0 1.0 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-95-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-95-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-95-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-95-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.153
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1.0 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.171
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-113-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=113,wght=900, factors: 1.0 1.0 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-113-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-113-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-113-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-72-stya-5-styb-5-wdth-113-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.152
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-95-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=1200,stya=5,styb=5,wdth=95,wght=360, factors: 0.0 0.0 0.5555419921875 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-95-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-95-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-95-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-95-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.152
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-100-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=1200,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0.0 0.5555419921875 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-100-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-100-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-100-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.166
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-113-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=1200,stya=5,styb=5,wdth=113,wght=360, factors: 1.0 0.0 0.5555419921875 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-113-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-113-wght-360.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-113-wght-360.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-710-opsz-1200-stya-5-styb-5-wdth-113-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.159
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-95-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=1200,stya=5,styb=5,wdth=95,wght=400, factors: 0.0 0.0740966796875 0.629638671875 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-95-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-95-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-95-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-95-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.162
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-100-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=1200,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-100-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-100-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-100-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.195
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-113-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=1200,stya=5,styb=5,wdth=113,wght=400, factors: 1.0 0.0740966796875 0.629638671875 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-113-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-113-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-113-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-750-opsz-1200-stya-5-styb-5-wdth-113-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.176
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-95-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=1200,stya=5,styb=5,wdth=95,wght=700, factors: 0.0 0.53704833984375 1.0 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-95-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-95-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-95-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-95-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.166
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=1200,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1.0 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.169
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-113-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=1200,stya=5,styb=5,wdth=113,wght=700, factors: 1.0 0.53704833984375 1.0 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-113-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-113-wght-700.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-113-wght-700.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-113-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.222
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-95-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=1200,stya=5,styb=5,wdth=95,wght=900, factors: 0.0 1.0 1.0 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-95-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-95-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-95-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-95-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.155
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=1200,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1.0 1.0 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.153
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-113-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=1200,stya=5,styb=5,wdth=113,wght=900, factors: 1.0 1.0 1.0 1.0 0.9581298828125 0.91632080078125 -0.5 0.0 1.0
+otf reader      > cff > missing .notdef, using a rectangle instead
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-113-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-113-wght-900.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-113-wght-900.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-100-mght-900-opsz-1200-stya-5-styb-5-wdth-113-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.150
+pages           > flushing realpage 2, userpage 2, subpage 2
+close source    > level 2, order 4, name './somerville-integral-test.tex'
+close source    > level 1, order 4, name 'cont-yes.mkiv'
+backend         > xmp > using file '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+backend         > fonts > start embedded fonts
+backend         > fonts >     1 : file 'PlayfairRomanVF.ttf', base 'QWWCKO+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth100wght400-0'
+backend         > fonts >     2 : file 'SomervilleMathVF.otf', base 'ECAMCS+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth95wght360-0'
+backend         > fonts >     3 : file 'SomervilleMathVF.otf', base 'BEAETT+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth100wght360-0'
+backend         > fonts >     4 : file 'SomervilleMathVF.otf', base 'BHJSEB+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth113wght360-0'
+backend         > fonts >     5 : file 'SomervilleMathVF.otf', base 'YZPBSQ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth95wght400-0'
+backend         > fonts >     6 : file 'SomervilleMathVF.otf', base 'OXCJSP+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth100wght400-0'
+backend         > fonts >     7 : file 'SomervilleMathVF.otf', base 'GZUTRH+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth113wght400-0'
+backend         > fonts >     8 : file 'SomervilleMathVF.otf', base 'QBSNYF+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth95wght700-0'
+backend         > fonts >     9 : file 'SomervilleMathVF.otf', base 'ZSYDNR+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth100wght700-0'
+backend         > fonts >    10 : file 'SomervilleMathVF.otf', base 'ESHSVZ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth113wght700-0'
+backend         > fonts >    11 : file 'SomervilleMathVF.otf', base 'NXAPPG+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth95wght900-0'
+backend         > fonts >    12 : file 'SomervilleMathVF.otf', base 'SZTRNQ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth100wght900-0'
+backend         > fonts >    13 : file 'SomervilleMathVF.otf', base 'XSBHZE+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth113wght900-0'
+backend         > fonts >    14 : file 'SomervilleMathVF.otf', base 'EAVFNI+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth95wght360-0'
+backend         > fonts >    15 : file 'SomervilleMathVF.otf', base 'ZEARIQ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth100wght360-0'
+backend         > fonts >    16 : file 'SomervilleMathVF.otf', base 'NZQEIP+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth113wght360-0'
+backend         > fonts >    17 : file 'SomervilleMathVF.otf', base 'YADIFK+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth95wght400-0'
+backend         > fonts >    18 : file 'SomervilleMathVF.otf', base 'JOKCXH+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth100wght400-0'
+backend         > fonts >    19 : file 'SomervilleMathVF.otf', base 'HIQVIC+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth113wght400-0'
+backend         > fonts >    20 : file 'SomervilleMathVF.otf', base 'ZXXWTA+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth95wght700-0'
+backend         > fonts >    21 : file 'SomervilleMathVF.otf', base 'ZJTAHG+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth100wght700-0'
+backend         > fonts >    22 : file 'SomervilleMathVF.otf', base 'RQXRYX+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth113wght700-0'
+backend         > fonts >    23 : file 'SomervilleMathVF.otf', base 'RHKQMU+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth95wght900-0'
+backend         > fonts >    24 : file 'SomervilleMathVF.otf', base 'ZENWXQ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth100wght900-0'
+backend         > fonts >    25 : file 'SomervilleMathVF.otf', base 'RCDZYV+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth113wght900-0'
+backend         > fonts >    26 : file 'SomervilleMathVF.otf', base 'LSQEEC+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth95wght360-0'
+backend         > fonts >    27 : file 'SomervilleMathVF.otf', base 'LREDSC+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth100wght360-0'
+backend         > fonts >    28 : file 'SomervilleMathVF.otf', base 'RPLUDT+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth113wght360-0'
+backend         > fonts >    29 : file 'SomervilleMathVF.otf', base 'XOQNAS+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth95wght400-0'
+backend         > fonts >    30 : file 'SomervilleMathVF.otf', base 'BBIBHR+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth100wght400-0'
+backend         > fonts >    31 : file 'SomervilleMathVF.otf', base 'TZMBHJ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth113wght400-0'
+backend         > fonts >    32 : file 'SomervilleMathVF.otf', base 'EVIFIL+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth95wght700-0'
+backend         > fonts >    33 : file 'SomervilleMathVF.otf', base 'SKCAZL+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth100wght700-0'
+backend         > fonts >    34 : file 'SomervilleMathVF.otf', base 'UUCZQU+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth113wght700-0'
+backend         > fonts >    35 : file 'SomervilleMathVF.otf', base 'MGTMOL+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth95wght900-0'
+backend         > fonts >    36 : file 'SomervilleMathVF.otf', base 'IOCJKO+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth100wght900-0'
+backend         > fonts >    37 : file 'SomervilleMathVF.otf', base 'CPPRWC+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth113wght900-0'
+backend         > fonts > stop embedded fonts
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=12,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0.0 0.5555419921875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth100wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth100wght360-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth100wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth100wght360-0.tmd' stripped
+backend         > fonts > width units in 'ZEARIQ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=12,stya=5,styb=5,wdth=113,wght=360, factors: 1.0 0.0 0.5555419921875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth113wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth113wght360-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth113wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth113wght360-0.tmd' stripped
+backend         > fonts > width units in 'NZQEIP+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=12,stya=5,styb=5,wdth=95,wght=360, factors: 0.0 0.0 0.5555419921875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth95wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth95wght360-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth95wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz12stya5styb5wdth95wght360-0.tmd' stripped
+backend         > fonts > width units in 'EAVFNI+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=5,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0.0 0.5555419921875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth100wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth100wght360-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth100wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth100wght360-0.tmd' stripped
+backend         > fonts > width units in 'BEAETT+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=5,stya=5,styb=5,wdth=113,wght=360, factors: 1.0 0.0 0.5555419921875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth113wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth113wght360-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth113wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth113wght360-0.tmd' stripped
+backend         > fonts > width units in 'BHJSEB+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=5,stya=5,styb=5,wdth=95,wght=360, factors: 0.0 0.0 0.5555419921875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth95wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth95wght360-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth95wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz5stya5styb5wdth95wght360-0.tmd' stripped
+backend         > fonts > width units in 'ECAMCS+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=72,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0.0 0.5555419921875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth100wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth100wght360-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth100wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth100wght360-0.tmd' stripped
+backend         > fonts > width units in 'LREDSC+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=72,stya=5,styb=5,wdth=113,wght=360, factors: 1.0 0.0 0.5555419921875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth113wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth113wght360-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth113wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth113wght360-0.tmd' stripped
+backend         > fonts > width units in 'RPLUDT+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=710,opsz=72,stya=5,styb=5,wdth=95,wght=360, factors: 0.0 0.0 0.5555419921875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth95wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth95wght360-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth95wght360-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght710opsz72stya5styb5wdth95wght360-0.tmd' stripped
+backend         > fonts > width units in 'LSQEEC+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=12,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth100wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth100wght400-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth100wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth100wght400-0.tmd' stripped
+backend         > fonts > width units in 'JOKCXH+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=12,stya=5,styb=5,wdth=113,wght=400, factors: 1.0 0.0740966796875 0.629638671875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth113wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth113wght400-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth113wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth113wght400-0.tmd' stripped
+backend         > fonts > width units in 'HIQVIC+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=12,stya=5,styb=5,wdth=95,wght=400, factors: 0.0 0.0740966796875 0.629638671875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth95wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth95wght400-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth95wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth95wght400-0.tmd' stripped
+backend         > fonts > width units in 'YADIFK+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=5,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth100wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth100wght400-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth100wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth100wght400-0.tmd' stripped
+backend         > fonts > width units in 'OXCJSP+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=5,stya=5,styb=5,wdth=113,wght=400, factors: 1.0 0.0740966796875 0.629638671875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth113wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth113wght400-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth113wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth113wght400-0.tmd' stripped
+backend         > fonts > width units in 'GZUTRH+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=5,stya=5,styb=5,wdth=95,wght=400, factors: 0.0 0.0740966796875 0.629638671875 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth95wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth95wght400-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth95wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz5stya5styb5wdth95wght400-0.tmd' stripped
+backend         > fonts > width units in 'YZPBSQ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=72,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth100wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth100wght400-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth100wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth100wght400-0.tmd' stripped
+backend         > fonts > width units in 'BBIBHR+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=72,stya=5,styb=5,wdth=113,wght=400, factors: 1.0 0.0740966796875 0.629638671875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth113wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth113wght400-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth113wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth113wght400-0.tmd' stripped
+backend         > fonts > width units in 'TZMBHJ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=750,opsz=72,stya=5,styb=5,wdth=95,wght=400, factors: 0.0 0.0740966796875 0.629638671875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth95wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth95wght400-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth95wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght750opsz72stya5styb5wdth95wght400-0.tmd' stripped
+backend         > fonts > width units in 'XOQNAS+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth100wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth100wght700-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth100wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth100wght700-0.tmd' stripped
+backend         > fonts > width units in 'ZJTAHG+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1.0 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth100wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth100wght900-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth100wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth100wght900-0.tmd' stripped
+backend         > fonts > width units in 'ZENWXQ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=113,wght=700, factors: 1.0 0.53704833984375 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth113wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth113wght700-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth113wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth113wght700-0.tmd' stripped
+backend         > fonts > width units in 'RQXRYX+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=113,wght=900, factors: 1.0 1.0 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth113wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth113wght900-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth113wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth113wght900-0.tmd' stripped
+backend         > fonts > width units in 'RCDZYV+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=95,wght=700, factors: 0.0 0.53704833984375 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth95wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth95wght700-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth95wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth95wght700-0.tmd' stripped
+backend         > fonts > width units in 'ZXXWTA+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=12,stya=5,styb=5,wdth=95,wght=900, factors: 0.0 1.0 1.0 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth95wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth95wght900-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth95wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz12stya5styb5wdth95wght900-0.tmd' stripped
+backend         > fonts > width units in 'RHKQMU+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth100wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth100wght700-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth100wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth100wght700-0.tmd' stripped
+backend         > fonts > width units in 'ZSYDNR+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1.0 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth100wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth100wght900-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth100wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth100wght900-0.tmd' stripped
+backend         > fonts > width units in 'SZTRNQ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=113,wght=700, factors: 1.0 0.53704833984375 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth113wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth113wght700-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth113wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth113wght700-0.tmd' stripped
+backend         > fonts > width units in 'ESHSVZ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=113,wght=900, factors: 1.0 1.0 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth113wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth113wght900-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth113wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth113wght900-0.tmd' stripped
+backend         > fonts > width units in 'XSBHZE+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=95,wght=700, factors: 0.0 0.53704833984375 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth95wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth95wght700-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth95wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth95wght700-0.tmd' stripped
+backend         > fonts > width units in 'QBSNYF+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=5,stya=5,styb=5,wdth=95,wght=900, factors: 0.0 1.0 1.0 0.0 0.0 0.0 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth95wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth95wght900-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth95wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz5stya5styb5wdth95wght900-0.tmd' stripped
+backend         > fonts > width units in 'NXAPPG+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth100wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth100wght700-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth100wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth100wght700-0.tmd' stripped
+backend         > fonts > width units in 'SKCAZL+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1.0 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth100wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth100wght900-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth100wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth100wght900-0.tmd' stripped
+backend         > fonts > width units in 'IOCJKO+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=113,wght=700, factors: 1.0 0.53704833984375 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth113wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth113wght700-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth113wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth113wght700-0.tmd' stripped
+backend         > fonts > width units in 'UUCZQU+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=113,wght=900, factors: 1.0 1.0 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth113wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth113wght900-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth113wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth113wght900-0.tmd' stripped
+backend         > fonts > width units in 'CPPRWC+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=95,wght=700, factors: 0.0 0.53704833984375 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth95wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth95wght700-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth95wght700-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth95wght700-0.tmd' stripped
+backend         > fonts > width units in 'EVIFIL+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=100,mght=900,opsz=72,stya=5,styb=5,wdth=95,wght=900, factors: 0.0 1.0 1.0 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0.0 1.0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth95wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth95wght900-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth95wght900-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl100mght900opsz72stya5styb5wdth95wght900-0.tmd' stripped
+backend         > fonts > width units in 'MGTMOL+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+system          > start used files
+system          > text: somerville-integral-test
+system          > stop used files
+system          > start used files
+system          >    1: filename=cont-yes.mkiv filetype=tex format=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv usedmethod=database
+system          >    2: filename=publ-imp-default.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+system          >    3: filename=cont-new.mkxl filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
+system          >    4: filename=lang-exc.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+system          >    5: filename=lang-us.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+system          >    6: filename=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-integral-test.tex format=tex foundname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-integral-test.tex fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-integral-test.tex usedmethod=direct
+system          >    7: filename=type-imp-somerville.mkxl format=tex foundname=type-imp-somerville.mkxl fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/type-imp-somerville.mkxl usedmethod=direct
+system          >    8: filename=context-libraries.tma filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma usedmethod=database
+system          >    9: filename=lm.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
+system          >   10: filename=PlayfairRomanVF.ttf filetype=ttf format=ttf foundname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf usedmethod=filesystem
+system          >   11: filename=SomervilleMathVF.otf filetype=otf format=otf foundname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf fullname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf usedmethod=filesystem
+system          >   12: filename=somerville.lfg foundname=somerville.lfg fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville.lfg usedmethod=direct
+system          >   13: filename=common-math.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg usedmethod=database
+system          >   14: filename=metafun.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/metafun.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/metafun.mpxl usedmethod=database
+system          >   15: filename=mp-base.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-base.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-base.mpxl usedmethod=database
+system          >   16: filename=mp-tool.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-tool.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-tool.mpxl usedmethod=database
+system          >   17: filename=mp-luas.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-luas.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-luas.mpxl usedmethod=database
+system          >   18: filename=mp-mlib.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-mlib.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-mlib.mpxl usedmethod=database
+system          >   19: filename=mp-math.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-math.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-math.mpxl usedmethod=database
+system          >   20: filename=mp-cont.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-cont.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-cont.mpxl usedmethod=database
+system          >   21: filename=mp-page.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-page.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-page.mpxl usedmethod=database
+system          >   22: filename=mp-butt.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-butt.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-butt.mpxl usedmethod=database
+system          >   23: filename=mp-shap.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-shap.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-shap.mpxl usedmethod=database
+system          >   24: filename=mp-grph.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grph.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grph.mpxl usedmethod=database
+system          >   25: filename=mp-grid.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grid.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grid.mpxl usedmethod=database
+system          >   26: filename=mp-form.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-form.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-form.mpxl usedmethod=database
+system          >   27: filename=mp-figs.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-figs.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-figs.mpxl usedmethod=database
+system          >   28: filename=mp-func.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-func.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-func.mpxl usedmethod=database
+system          >   29: filename=mp-node.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-node.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-node.mpxl usedmethod=database
+system          >   30: filename=mp-apos.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-apos.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-apos.mpxl usedmethod=database
+system          >   31: filename=mp-abck.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-abck.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-abck.mpxl usedmethod=database
+system          >   32: filename=mp-asnc.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-asnc.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-asnc.mpxl usedmethod=database
+system          >   33: filename=mp-blob.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-blob.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-blob.mpxl usedmethod=database
+system          >   34: filename=mp-lmtx.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-lmtx.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-lmtx.mpxl usedmethod=database
+system          >   35: filename=mp-text.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-text.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-text.mpxl usedmethod=database
+system          >   36: filename=mp-thrd.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-thrd.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-thrd.mpxl usedmethod=database
+system          >   37: filename=mp-stip.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-stip.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-stip.mpxl usedmethod=database
+system          >   38: filename=lpdf-pdx.xml filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
+system          > stop used files
+system          > start commandline options
+system          >   currentrun="1"
+system          >   fulljobname="./somerville-integral-test.tex"
+system          >   input="./somerville-integral-test.tex"
+system          >   kindofrun="1"
+system          >   maxnofruns="9"
+system          >   texmfbinpath="/Users/juliusross/context/tex/texmf-osx-arm64/bin"
+system          > stop commandline options
+system          > start commandline files
+system          >    1: ./somerville-integral-test.tex
+system          > stop commandline files
+modules         > start used modules
+modules         > stop used modules
+system          > 
+system          > status after finishing run
+system          > 
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert        mvl
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500        500
+system          >   min     150000   10000000     150000     150000   10000000    2000000    1000000      10000        500       1000      20000     100000        250        250         50         25         10
+system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250         10
+system          >   stp     100000    1000000     100000     100000    5000000    1000000    1000000      10000        250       1000      10000      10000        250        250         50         25         10
+system          > 
+system          >   mem     250000    8526089     150000              10000000    4000000    1000000      10000        500       1000      20000      10000        250        250         50        500         10
+system          >   itm         16          1         16                     9          8          1         32         32        116          4         16          8          8         28         72        116
+system          >   ext          0          0          0          0       5640          0          0          0          0          0          0          0   22087320         96          0          0          0
+system          >   all    4000000    8526089    2400000          1   90005640   32000000    1000000     320000      16000     116000      80000     160000   22089320       2096       1400      36000       1160
+system          > 
+system          >   ini    2150736     977320          0      53567          0     591100                                                                                       0                                 
+system          >   ptr     192915                 56067     192898               3614924          0          0          0          0          0          0         96          1          0         11          0
+system          >   top     192916                495867     262146      78480    3632190        407         51         13         12         50        583        250        250         50        500         10
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          > 
+system          >   current input type    : initial
+system          > 
+system          >   approximate memory    : 165566985 (157 MB)
+system          > 
+system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 6
+system          > 
+system          >   luabytecode registers : 1028
+system          >   luabytecode bytes     : 16464 (0 MB)
+system          >   luastate bytes now    : 1368731606 (1305 MB)
+system          >   luastate bytes max    : 1368731606 (1305 MB)
+system          > 
+system          >   file callbacks        : 1197
+system          >   saved callbacks       : 3533
+system          >   direct callbacks      : 6
+system          >   function callbacks    : 112605
+system          >   value callbacks       : 609227
+system          >   message callbacks     : 0
+system          >   bytecode callbacks    : 634
+system          > 
+system          >   mp instances          : 1
+system          >   mp estimated memory   : 0 (0 MB)
+system          >   mp file callbacks     : 15990
+system          >   mp text callbacks     : 0
+system          >   mp script callbacks   : 441
+system          >   mp log callbacks      : 26
+system          > 
+system          >   total callbacks       : 727202
+system          >   mp total callbacks    : 16457
+system          >   backend callbacks     : 0
+system          > 
+system          >   linebreak statistics  : context      calls     first    second     final  passonly   subpass
+system          > 
+system          >   linebreak statistics  : normal         406       406         0         6         0         0
+system          >   linebreak statistics  : vbox             8         8         0         0         0         0
+system          > 
+system          >   linebreak statistics  :                414       414         0         6         0         0
+system          > 
+system          >   linebreak statistics  : textlines        288
+system          > 
+system          >   hyphenation state     : checked         242
+system          >   hyphenation state     : hyphenated      264
+system          >   hyphenation state     : lists           242
+system          >   hyphenation state     : nothing          26
+system          >   hyphenation state     : words           276
+system          > 
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.003 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 38 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 528 modules (0.110 sec), 106 tables (0.007 sec), 634 chunks (0.117 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1911, freed: 0, unreachable: 1911
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 8 lists of 461
+mkxl run stats  > node memory usage: 20 attribute, 8 attributelist, 1 dir, 153 fontspec, 2 glue, 135 gluespec, 2 hlist, 1 kern, 661 mathspec, 3 penalty, 56 specification, 2 temp, 6 whatsit, stale properties: 6
+mkxl run stats  > node list callback tasks: 17 unique task lists, 12 instances (re)created, 2525 calls
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: resumed with value 0.29251526272780781
+mkxl run stats  > jobdata time: 0.001 seconds saving, 0.000 seconds loading
+mkxl run stats  > callbacks: file: 1197, saved: 3533, direct: 6, function: 112605, value: 609227, message: 0, bytecode: 634, late 0, total: 727202 (363601 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > interactive elements: 51 references, 16 destinations
+mkxl run stats  > loaded fonts: 2 files: playfairromanvf.ttf, somervillemathvf.otf
+mkxl run stats  > font engine: otf 3.156, afm 1.541, tfm 1.000, 96 instances, load time 9.375 seconds 
+mkxl run stats  > metapost: 0.000 seconds, loading: 0.027, execution: 0.000, n: 4, average: 0.007, instances: 1, luacalls: 16457 (file: 15990, text: 0, script: 441, log: 26), memory: 0.000 M
+mkxl run stats  > math tweaking time: 0.025 seconds, 144 math goodie tables
+mkxl run stats  > pdf annotations: 49 links (36 unique), 0 special
+mkxl run stats  > font embedding time: 3.981 seconds, 37 fonts
+mkxl run stats  > result saved in file: somerville-integral-test.pdf, compresslevel 1, objectcompresslevel 3, 81 streams, 0 uncompressed, 80 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20260923, format id: 736, memory mode: 1, compiler: clang, cversion: 23
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 192898 control sequences, 262144 hash slots, 56067 misses, approximate memory usage: 157 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 1277 MB, ctx: 1305 MB, max: 1305 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 16.298 seconds, 2 processed pages, 2 shipped pages, 0.123 pages/second

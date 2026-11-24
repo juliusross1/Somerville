@@ -1,0 +1,28 @@
+% !TEX program = context
+% !TEX root = somerville-cff-test.tex
+\def\CFFTestFontFile{SomervilleMathCFFtestVF.otf}
+
+\def\CFFTestAxes{wdth=95,wght=360,opsz=5}
+\definefontfeature[cff-test-axes][default]
+  [axis={\CFFTestAxes},expansion=no,protrusion=no,wipemath=no]
+
+\starttypescript[serif][cff-test]
+  \definefontsynonym[Serif]
+    [file:\CFFTestFontFile][features=cff-test-axes]
+  \definefontsynonym[SerifBold][Serif]
+\stoptypescript
+
+\starttypescript[math][cff-test]
+  \definefontsynonym[MathRoman]
+    [file:\CFFTestFontFile]
+    [features=cff-test-math\mathsizesuffix]
+\stoptypescript
+
+\definetypeface[cff-test][rm][serif][cff-test][default]
+\definetypeface[cff-test][mm][math][cff-test][default]
+
+\setupbodyfont[cff-test]
+
+\starttext
+\m{A \bigoplus  V}
+\stoptext

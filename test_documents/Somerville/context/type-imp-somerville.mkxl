@@ -5,35 +5,95 @@
 \startluacode
 userdata = userdata or {}
 
--- Custom-axis text bold weight: min(Weight + 300, 900).
--- All other axis assignments are preserved.
-function userdata.somervilleboldaxes(axes)
+-- Names and fallback values follow the guide's axis reference tables.
+-- Without an instance, omitted axes remain omitted.
+local function axisname(value)
+    return tostring(value):lower():gsub("[%s_%-]+", "")
+end
+local namedaxes = {
+    wdth = { default = 100, semicondensed = 88, regular = 100, semiexpanded = 113 },
+    wght = { default = 400, semilight = 360, regular = 400, medium = 500,
+             semibold = 600, bold = 700, extrabold = 800, black = 900 },
+    opsz = { default = 12, micro = 5, minuscule = 6, miniature = 7, caption = 8,
+             regular = 12, subheading = 16, trumpet = 21, headline = 32,
+             display = 48, titling = 72, hairline = 96, needlepoint = 1200 },
+    MGHT = { default = 50, none = 0, lighter = 25, regular = 50,
+             heavier = 75, heaviest = 100, maximum = 100 },
+    INSL = { default = 0, slanted = 100 },
+    ARLN = { default = 100, short = 0, long = 200 },
+    ARHD = { default = 100, large = 200 },
+}
+local axistags = {
+    width = "wdth", wdth = "wdth", weight = "wght", wght = "wght",
+    opticalsize = "opsz", opsz = "opsz",
+    mathweight = "MGHT", mathematicalweight = "MGHT", mght = "MGHT",
+    integralslant = "INSL", insl = "INSL",
+    arrowlength = "ARLN", arln = "ARLN", arrowhead = "ARHD", arhd = "ARHD",
+}
+userdata.somervilleinstances = {}
+function userdata.somervilleaxes(axes, bold, text)
     local settings = utilities.parsers.settings_to_hash(axes)
-    local result = {}
-
+    local resolved, result = {}, {}
+    -- Resolve the base first so explicit axes win regardless of input order.
     for key, value in pairs(settings) do
-        local normalized = key:lower():gsub("%s+", "")
-        if normalized == "weight" or normalized == "wght" then
-            value = math.min(
-                assert(tonumber(value), "Weight must be numeric") + 300,
-                900
-            )
+        if axisname(key) == "instance" then
+            local name = axisname(value):gsub("^somerville", "")
+            if name == "" then name = "regular" end
+            local instance = userdata.somervilleinstances[name]
+                          or userdata.somervilleinstances.regular
+            for tag, coordinate in pairs(instance[text and "text" or "math"]) do
+                resolved[tag] = coordinate
+            end
         end
+    end
+    for key, value in pairs(settings) do
+        local option = axisname(key)
+        if option ~= "instance" and option ~= "mathfeatures" then
+            local tag = axistags[axisname(key)]
+            local targetkey, targetvalue = key, value
+            if tag then
+                local names = namedaxes[tag]
+                targetvalue = tonumber(value) or names[axisname(value)]
+                           or resolved[tag] or names.default
+                targetkey = tag
+            end
+            resolved[targetkey] = targetvalue
+        end
+    end
+    if bold and resolved.wght then
+        resolved.wght = math.min(resolved.wght + 300, 900)
+    end
+    for key, value in pairs(resolved) do
         result[#result + 1] = key .. "=" .. tostring(value)
     end
-
     table.sort(result)
     return table.concat(result, ",")
+end
+
+-- A separate option: feature-set names must not enter the axis assignments.
+function userdata.somervillemathfeatures(axes)
+    local settings = utilities.parsers.settings_to_hash(axes)
+    for key, value in pairs(settings) do
+        if axisname(key) == "mathfeatures" then return value end
+    end
+    return ""
+end
+
+-- Resolve names before applying the custom-axis text bold increment.
+function userdata.somervilleboldaxes(axes)
+    return userdata.somervilleaxes(axes, true, true)
 end
 \stopluacode
 
 
 \unexpanded\gdef\setupSomerville#1#2{%
   \definefontfeature[#2-math-axes]
-    [axis={#1},goodies={somerville,somerville-heavy-regular}]%
+    [\cldcontext{userdata.somervillemathfeatures("\luaescapestring{#1}")}]
+    [axis={\cldcontext{userdata.somervilleaxes("\luaescapestring{#1}")}},%
+     goodies={somerville}]%
     
   \definefontfeature[#2-text-axes][default]
-    [axis={#1}]%
+    [axis={\cldcontext{userdata.somervilleaxes("\luaescapestring{#1}", false, true)}}]%
   \definefontfeature[#2-bold-axes][default]
     [axis={\cldcontext{
       userdata.somervilleboldaxes("\luaescapestring{#1}")
@@ -71,7 +131,7 @@ end
 % #1: typeface; #2: math user coordinates; #3: text user coordinates.
 \unexpanded\gdef\defineSomervilleAxisTypeface#1#2#3{%
   \definefontfeature[#1-math-axes]
-    [axis={#2},goodies={somerville,somerville-heavy-regular}]%
+    [axis={#2},goodies={somerville}]%
   \definefontfeature[#1-text-axes][default][axis={#3}]%
   \starttypescript[serif][#1-text]
     \definefontsynonym[Serif][file:PlayfairRomanVF.ttf][features=#1-text-axes]
@@ -357,6 +417,8 @@ local weight = { {360,360}, {400,400}, {475,500}, {550,600},
 local optical = { {5,5}, {200,6}, {325,7}, {400,8}, {550,12},
                   {640,16}, {700,21}, {800,32}, {860,41}, {900,48},
                   {980,72}, {1020,96}, {1200,1200} }
+-- insertavar2tables.py exposes internal math width 95 as user width 88.
+local mathwidth = { {95,88}, {100,100}, {113,113} }
 local textwidth = { {95,88}, {100,100}, {113,112.5} }
 local function mapped(value, mapping)
     if value <= mapping[1][1] then return mapping[1][2] end
@@ -372,12 +434,21 @@ for _, entry in ipairs(instances) do
     local name = "somerville-" .. string.lower(entry[1]):gsub("%s+", "-")
     local wght = mapped(entry[3],weight)
     local opsz = mapped(entry[5],optical)
+    -- Every named instance uses the default strength of the new MGHT scale.
     local mathaxes = string.format(
         "wdth=%g,wght=%g,MGHT=%g,opsz=%g,STYA=%g,STYB=%g,ARLN=%g,ARHD=%g,INSL=%g",
-        entry[2],wght,mapped(entry[4],weight),opsz,
+        mapped(entry[2],mathwidth),wght,50,opsz,
         entry[6],entry[7],entry[8],entry[9],entry[10])
     local textaxes = string.format("wdth=%g,wght=%g,opsz=%g",
         mapped(entry[2],textwidth),wght,opsz)
+    local key = string.lower(entry[1]):gsub("[%s_%-]+", "")
+    userdata.somervilleinstances[key] = {
+        math = utilities.parsers.settings_to_hash(mathaxes),
+        text = utilities.parsers.settings_to_hash(textaxes),
+    }
+    for _, coordinates in pairs(userdata.somervilleinstances[key]) do
+        for tag, value in pairs(coordinates) do coordinates[tag] = tonumber(value) end
+    end
     context.defineSomervilleAxisTypeface(name,mathaxes,textaxes)
     if entry[1] == "Regular" then
         context.defineSomervilleAxisTypeface("somerville",mathaxes,textaxes)

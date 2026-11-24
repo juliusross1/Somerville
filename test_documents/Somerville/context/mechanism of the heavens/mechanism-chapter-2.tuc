@@ -1,0 +1,650 @@
+local utilitydata = { }
+
+utilitydata.comment={
+ ["escape"]="[===[ ... ]===]",
+ ["file"]="mechanism-chapter-2",
+ ["format"]="cont-en",
+ ["stamp"]="2026.10.01 18:42",
+ ["version"]=0x1.547ae147ae148p+0,
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.variables then utilitydata.job.variables = { } end
+
+utilitydata.job.variables.checksums={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.variables then utilitydata.job.variables = { } end
+
+utilitydata.job.variables.collected={
+ ["macros"]={},
+ ["randomseed"]=0x1.64e1da98bad4p-4,
+ ["sectionblockorder"]={},
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.structure then utilitydata.job.structure = { } end
+
+utilitydata.job.structure.collected={
+ ["branches"]={
+  {
+   ["branches"]={},
+   ["name"]="mechanism-environment",
+   ["type"]="environment",
+  },
+ },
+ ["name"]="",
+ ["type"]="text",
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.positions then utilitydata.job.positions = { } end
+
+utilitydata.job.positions.collected={
+ ["shared"]={
+  ["x_h_d"]={},
+  ["x_h_d_hs"]={},
+  ["x_y_w_h"]={},
+  ["y_w_h_d"]={},
+ },
+ ["user"]={},
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.datasets then utilitydata.job.datasets = { } end
+
+utilitydata.job.datasets.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.pagestates then utilitydata.job.pagestates = { } end
+
+utilitydata.job.pagestates.collected={
+ ["float"]={ 2, 2, 7, 8, 10, 11, 12, 12, 15, 15, 17, 21, 21, 24, 26, 26, 26, 27 },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.specials then utilitydata.structures.specials = { } end
+
+utilitydata.structures.specials.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.sections then utilitydata.structures.sections = { } end
+
+utilitydata.structures.sections.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.counters then utilitydata.structures.counters = { } end
+
+utilitydata.structures.counters.collected={
+ ["chemical"]={
+  { 0 },
+ },
+ ["combination"]={
+  { 0 },
+ },
+ ["endnote"]={
+  { 0 },
+ },
+ ["figure"]={
+  { 0 },
+ },
+ ["float"]={
+  { 0 },
+ },
+ ["footnote"]={
+  { 0 },
+ },
+ ["formula"]={
+  { 13 },
+ },
+ ["graphic"]={
+  { 0 },
+ },
+ ["intermezzo"]={
+  { 0 },
+ },
+ ["itemgroup:itemize"]={
+  { 0 },
+ },
+ ["itemgroup:itemize:note"]={
+  { 0 },
+ },
+ ["linenote"]={
+  { 0 },
+ },
+ ["mathnote"]={
+  { 0 },
+ },
+ ["paragraph"]={
+  { 0 },
+ },
+ ["publicationnote"]={
+  { 0 },
+ },
+ ["realpage"]={
+  { 28 },
+ },
+ ["subpage"]={
+  { 28 },
+ },
+ ["table"]={
+  { 0 },
+ },
+ ["textnote:note"]={
+  { 0 },
+ },
+ ["userpage"]={
+  { 46 },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
+
+utilitydata.structures.lists.collected={
+ {
+  ["metadata"]=1,
+  ["numberdata"]=3,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=1,
+   ["realpage"]=3,
+   ["reference"]="eq:chapter2-5",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=6,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=2,
+   ["realpage"]=3,
+   ["reference"]="eq:chapter2-6",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=8,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=3,
+   ["realpage"]=4,
+   ["reference"]="eq:chapter2-7",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=10,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=4,
+   ["realpage"]=5,
+   ["reference"]="eq:chapter2-8",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=12,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=5,
+   ["realpage"]=5,
+   ["reference"]="eq:chapter2-9",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=14,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=6,
+   ["realpage"]=6,
+   ["reference"]="eq:chapter2-10",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=16,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=8,
+   ["realpage"]=23,
+   ["reference"]="eq:chapter2-11",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=18,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=9,
+   ["realpage"]=23,
+   ["reference"]="eq:chapter2-12",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=20,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=10,
+   ["realpage"]=24,
+   ["reference"]="eq:chapter2-13",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.pages then utilitydata.structures.pages = { } end
+
+utilitydata.structures.pages.collected={
+ {
+  ["block"]="bodypart",
+  ["number"]=19,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=20,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=21,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=22,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=23,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=24,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=25,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=26,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=27,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=28,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=29,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=30,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=31,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=32,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=33,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=34,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=35,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=36,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=37,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=38,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=39,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=40,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=41,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=42,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=43,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=44,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=45,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=46,
+  ["numberdata"]=21,
+  ["prefixdata"]=22,
+  ["state"]="start",
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.references then utilitydata.structures.references = { } end
+
+utilitydata.structures.references.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.references then utilitydata.structures.references = { } end
+
+utilitydata.structures.references.referred={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.parwrappers then utilitydata.job.parwrappers = { } end
+
+utilitydata.job.parwrappers.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.objects then utilitydata.job.objects = { } end
+
+utilitydata.job.objects.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.itemgroups then utilitydata.structures.itemgroups = { } end
+
+utilitydata.structures.itemgroups.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.synonyms then utilitydata.structures.synonyms = { } end
+
+utilitydata.structures.synonyms.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.registers then utilitydata.structures.registers = { } end
+
+utilitydata.structures.registers.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.blocks then utilitydata.structures.blocks = { } end
+
+utilitydata.structures.blocks.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.linkedlists then utilitydata.job.linkedlists = { } end
+
+utilitydata.job.linkedlists.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.files then utilitydata.job.files = { } end
+
+utilitydata.job.files.collected={
+}
+
+if not utilitydata.publications then utilitydata.publications = { } end
+
+utilitydata.publications.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.meshedup then utilitydata.job.meshedup = { } end
+
+utilitydata.job.meshedup.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.fileobjreferences then utilitydata.job.fileobjreferences = { } end
+
+utilitydata.job.fileobjreferences.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.embedded then utilitydata.job.embedded = { } end
+
+utilitydata.job.embedded.collected={
+}
+
+utilitydata.job.packed={
+ ["index"]={
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
+   ["kind"]="formula",
+   ["level"]=0,
+   ["name"]="formula",
+  },
+  { 5 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=2,
+  },
+  {
+   ["connector"]=".",
+   ["prefix"]="yes",
+   ["segments"]="2:2",
+  },
+  { 6 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=5,
+  },
+  { 7 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=7,
+  },
+  { 8 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=9,
+  },
+  { 9 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=11,
+  },
+  { 10 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=13,
+  },
+  { 11 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=15,
+  },
+  { 12 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=17,
+  },
+  { 13 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=19,
+  },
+  {
+   ["conversionset"]="pagenumber",
+  },
+  {
+   ["connector"]="–",
+   ["prefix"]="no",
+   ["set"]="part",
+  },
+ },
+ ["keys"]={
+  ["directives"]=true,
+  ["metadata"]=true,
+  ["numberdata"]=true,
+  ["numbers"]=true,
+  ["ownnumbers"]=true,
+  ["pagedata"]=true,
+  ["prefixdata"]=true,
+  ["processors"]=true,
+  ["sectiondata"]=true,
+  ["specification"]=true,
+ },
+ ["skip"]={
+  ["datasets"]=true,
+  ["positions"]=true,
+  ["userdata"]=true,
+ },
+ ["version"]=0x1.051eb851eb852p+0,
+}
+
+return utilitydata

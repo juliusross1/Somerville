@@ -1,0 +1,1253 @@
+local utilitydata = { }
+
+utilitydata.comment={
+ ["escape"]="[===[ ... ]===]",
+ ["file"]="mechanism",
+ ["format"]="cont-en",
+ ["stamp"]="2026.10.31 00:52",
+ ["version"]=0x1.547ae147ae148p+0,
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.variables then utilitydata.job.variables = { } end
+
+utilitydata.job.variables.checksums={}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.variables then utilitydata.job.variables = { } end
+
+utilitydata.job.variables.collected={
+ ["macros"]={},
+ ["randomseed"]=0x1.be6560c5af008p-2,
+ ["sectionblockorder"]={},
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.structure then utilitydata.job.structure = { } end
+
+utilitydata.job.structure.collected={
+ ["branches"]={
+  {
+   ["branches"]={},
+   ["name"]="mechanism-environment",
+   ["type"]="environment",
+  },
+ },
+ ["name"]="",
+ ["type"]="text",
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.positions then utilitydata.job.positions = { } end
+
+utilitydata.job.positions.collected={
+ ["shared"]={
+  ["x_h_d"]={},
+  ["x_h_d_hs"]={},
+  ["x_y_w_h"]={},
+  ["y_w_h_d"]={},
+ },
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.datasets then utilitydata.job.datasets = { } end
+
+utilitydata.job.datasets.collected={}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.pagestates then utilitydata.job.pagestates = { } end
+
+utilitydata.job.pagestates.collected={
+ ["float"]={ 7, 7, 7, 7, 8, 8, 8, 9, 9, 9, 10, 12, 15, 15, 16, 16, 19, 19, 24, 25, 27, 28, 29, 29, 32, 32, 34, 38, 38, 41, 43, 43, 43, 44, 48, 48, 50, 51, 51, 55, 61, 62, 62, 64, 65, 65, 67 },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.specials then utilitydata.structures.specials = { } end
+
+utilitydata.structures.specials.collected={}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.sections then utilitydata.structures.sections = { } end
+
+utilitydata.structures.sections.collected={}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.counters then utilitydata.structures.counters = { } end
+
+utilitydata.structures.counters.collected={
+ ["chemical"]={
+  { 0 },
+ },
+ ["combination"]={
+  { 0 },
+ },
+ ["endnote"]={
+  { 0 },
+ },
+ ["figure"]={
+  { 0 },
+ },
+ ["float"]={
+  { 0 },
+ },
+ ["footnote"]={
+  { 0 },
+ },
+ ["formula"]={
+  { 27 },
+ },
+ ["graphic"]={
+  { 0 },
+ },
+ ["intermezzo"]={
+  { 0 },
+ },
+ ["itemgroup:itemize"]={
+  { 0 },
+ },
+ ["itemgroup:itemize:note"]={
+  { 0 },
+ },
+ ["linenote"]={
+  { 0 },
+ },
+ ["mathnote"]={
+  { 0 },
+ },
+ ["paragraph"]={
+  { 0 },
+ },
+ ["publicationnote"]={
+  { 0 },
+ },
+ ["realpage"]={
+  { 68 },
+ },
+ ["subpage"]={
+  { 68 },
+ },
+ ["table"]={
+  { 0 },
+ },
+ ["textnote:note"]={
+  { 0 },
+ },
+ ["userpage"]={
+  { 67 },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
+
+utilitydata.structures.lists.collected={
+ {
+  ["metadata"]=1,
+  ["numberdata"]=3,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=1,
+   ["realpage"]=10,
+   ["reference"]="eq:direction-cosines",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=6,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=2,
+   ["realpage"]=10,
+   ["reference"]="eq:resultant-magnitude",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=8,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=4,
+   ["realpage"]=12,
+   ["reference"]="eq:free-particle-equilibrium",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=10,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=6,
+   ["realpage"]=14,
+   ["reference"]="eq:constrained-particle-equilibrium",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=12,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=8,
+   ["realpage"]=20,
+   ["reference"]="eq:chapter2-5",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=14,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=9,
+   ["realpage"]=20,
+   ["reference"]="eq:chapter2-6",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=16,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=10,
+   ["realpage"]=21,
+   ["reference"]="eq:chapter2-7",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=18,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=11,
+   ["realpage"]=22,
+   ["reference"]="eq:chapter2-8",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=20,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=12,
+   ["realpage"]=22,
+   ["reference"]="eq:chapter2-9",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=22,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=13,
+   ["realpage"]=23,
+   ["reference"]="eq:chapter2-10",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=24,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=15,
+   ["realpage"]=40,
+   ["reference"]="eq:chapter2-11",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=26,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=16,
+   ["realpage"]=40,
+   ["reference"]="eq:chapter2-12",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=28,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=17,
+   ["realpage"]=41,
+   ["reference"]="eq:chapter2-13",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=30,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=19,
+   ["realpage"]=49,
+   ["reference"]="eq:chapter3-14",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=32,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=21,
+   ["realpage"]=52,
+   ["reference"]="eq:chapter3-15",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=34,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=22,
+   ["realpage"]=53,
+   ["reference"]="eq:chapter3-16",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=36,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=23,
+   ["realpage"]=54,
+   ["reference"]="eq:chapter3-17",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=38,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=24,
+   ["realpage"]=54,
+   ["reference"]="eq:chapter3-18",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=40,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=26,
+   ["realpage"]=56,
+   ["reference"]="eq:chapter3-19",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=42,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=27,
+   ["realpage"]=56,
+   ["reference"]="eq:chapter3-20",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=44,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=28,
+   ["realpage"]=58,
+   ["reference"]="eq:chapter4-21",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=46,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=29,
+   ["realpage"]=60,
+   ["reference"]="eq:chapter4-22",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=48,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=30,
+   ["realpage"]=61,
+   ["reference"]="eq:chapter4-23",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=50,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=32,
+   ["realpage"]=63,
+   ["reference"]="eq:chapter4-24",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=52,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=33,
+   ["realpage"]=63,
+   ["reference"]="eq:chapter4-25",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=54,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=34,
+   ["realpage"]=63,
+   ["reference"]="eq:chapter4-26",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=56,
+  ["prefixdata"]=4,
+  ["references"]={
+   ["internal"]=36,
+   ["realpage"]=66,
+   ["reference"]="eq:chapter4-27",
+   ["section"]=0,
+   ["view"]="fit",
+  },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.pages then utilitydata.structures.pages = { } end
+
+utilitydata.structures.pages.collected={
+ {
+  ["block"]="bodypart",
+  ["number"]=1,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="stop",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=1,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="stop",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=1,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="stop",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=1,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="stop",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=4,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=5,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=6,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=7,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=8,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=9,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=10,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=11,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=12,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=13,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=14,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=15,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=16,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=17,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=18,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=19,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=20,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=21,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=22,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=23,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=24,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=25,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=26,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=27,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=28,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=29,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=30,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=31,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=32,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=33,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=34,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=35,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=36,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=37,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=38,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=39,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=40,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=41,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=42,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=43,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=44,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=45,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=46,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=47,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=48,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=49,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=50,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=51,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=52,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=53,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=54,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=55,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=56,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=57,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=58,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=59,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=60,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=61,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=62,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=63,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=64,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=65,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=66,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=67,
+  ["numberdata"]=57,
+  ["prefixdata"]=58,
+  ["state"]="start",
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.references then utilitydata.structures.references = { } end
+
+utilitydata.structures.references.collected={}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.references then utilitydata.structures.references = { } end
+
+utilitydata.structures.references.referred={}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.parwrappers then utilitydata.job.parwrappers = { } end
+
+utilitydata.job.parwrappers.collected={}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.objects then utilitydata.job.objects = { } end
+
+utilitydata.job.objects.collected={}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.itemgroups then utilitydata.structures.itemgroups = { } end
+
+utilitydata.structures.itemgroups.collected={}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.synonyms then utilitydata.structures.synonyms = { } end
+
+utilitydata.structures.synonyms.collected={}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.registers then utilitydata.structures.registers = { } end
+
+utilitydata.structures.registers.collected={}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.blocks then utilitydata.structures.blocks = { } end
+
+utilitydata.structures.blocks.collected={}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.linkedlists then utilitydata.job.linkedlists = { } end
+
+utilitydata.job.linkedlists.collected={}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.files then utilitydata.job.files = { } end
+
+utilitydata.job.files.collected={}
+
+if not utilitydata.publications then utilitydata.publications = { } end
+
+utilitydata.publications.collected={}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.meshedup then utilitydata.job.meshedup = { } end
+
+utilitydata.job.meshedup.collected={}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.fileobjreferences then utilitydata.job.fileobjreferences = { } end
+
+utilitydata.job.fileobjreferences.collected={}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.embedded then utilitydata.job.embedded = { } end
+
+utilitydata.job.embedded.collected={}
+
+utilitydata.job.packed={
+ ["index"]={
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
+   ["kind"]="formula",
+   ["level"]=0,
+   ["name"]="formula",
+  },
+  { 1 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=2,
+  },
+  {
+   ["connector"]=".",
+   ["prefix"]="yes",
+   ["segments"]="2:2",
+  },
+  { 2 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=5,
+  },
+  { 3 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=7,
+  },
+  { 4 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=9,
+  },
+  { 5 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=11,
+  },
+  { 6 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=13,
+  },
+  { 7 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=15,
+  },
+  { 8 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=17,
+  },
+  { 9 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=19,
+  },
+  { 10 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=21,
+  },
+  { 11 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=23,
+  },
+  { 12 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=25,
+  },
+  { 13 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=27,
+  },
+  { 14 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=29,
+  },
+  { 15 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=31,
+  },
+  { 16 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=33,
+  },
+  { 17 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=35,
+  },
+  { 18 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=37,
+  },
+  { 19 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=39,
+  },
+  { 20 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=41,
+  },
+  { 21 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=43,
+  },
+  { 22 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=45,
+  },
+  { 23 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=47,
+  },
+  { 24 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=49,
+  },
+  { 25 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=51,
+  },
+  { 26 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=53,
+  },
+  { 27 },
+  {
+   ["conversionset"]="formula",
+   ["counter"]="formula",
+   ["level"]=1,
+   ["numbers"]=55,
+  },
+  {
+   ["conversionset"]="pagenumber",
+  },
+  {
+   ["connector"]="–",
+   ["prefix"]="no",
+   ["set"]="part",
+  },
+ },
+ ["keys"]={
+  ["directives"]=true,
+  ["metadata"]=true,
+  ["numberdata"]=true,
+  ["numbers"]=true,
+  ["ownnumbers"]=true,
+  ["pagedata"]=true,
+  ["prefixdata"]=true,
+  ["processors"]=true,
+  ["sectiondata"]=true,
+  ["specification"]=true,
+ },
+ ["skip"]={
+  ["datasets"]=true,
+  ["positions"]=true,
+  ["userdata"]=true,
+ },
+ ["version"]=0x1.051eb851eb852p+0,
+}
+
+return utilitydata

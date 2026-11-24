@@ -1,0 +1,204 @@
+open source     > level 1, order 1, name 'cont-yes.mkiv'
+system          > 
+system          > ConTeXt  ver: 2026.10.01 18:42 LMTX  fmt: 2026.10.22  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > files > jobname '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter', input '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter.tex', result '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 2, order 3, name '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter.tex'
+open source     > level 3, order 4, name 'mechanism-environment.tex'
+system          > jobfiles > using path: ..
+open source     > level 4, order 5, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=16000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=2000000 | min=2000000 | ptr=2000001 | set=10000000 | stp=1000000 | top=2000000
+tex memory      > bumping category 'pool' succeeded, details: all=6202444 | ext=0 | ini=977320 | itm=1 | max=100000000 | mem=6202444 | min=10000000 | ptr=-1 | set=10000000 | stp=1000000 | top=-1
+tex memory      > bumping category 'token' succeeded, details: all=24000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=3000000 | min=2000000 | ptr=3000001 | set=10000000 | stp=1000000 | top=3000000
+close source    > level 4, order 5, name 'type-imp-somerville.mkxl'
+fonts           > goodies > goodie file 'somerville-heavy-regular' is not found (suffixes: lfg lua)
+close source    > level 3, order 5, name 'mechanism-environment.tex'
+fonts           > bodyfont '21pt' is defined (can better be done global (maybe use \usebodyfont)
+fonts           > bodyfont '25pt' is defined (can better be done global (maybe use \usebodyfont)
+fonts           > bodyfont '15pt' is defined (can better be done global (maybe use \usebodyfont)
+fonts           > bodyfont '13pt' is defined (can better be done global (maybe use \usebodyfont)
+fonts           > bodyfont '10.5pt' is defined (can better be done global (maybe use \usebodyfont)
+metapost        > initializing instance 'metafun:1' using format 'metafun' and method 'double'
+metapost        > loading 'metafun' as '/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/metafun.mpxl' using method 'double'
+metapost        > initializing number mode 'double'
+metapost        > trace > This is MPLIB for LuaMetaTeX, version 3.15, running in double mode.
+metapost        > trace > 
+metapost        > trace > loading metafun for lmtx, including the plain 1.004 base definitions
+metapost        > trace > 
+resolvers       > lua > loading file '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/mlib-eff.lmt' succeeded
+pages           > flushing realpage 1, userpage 1, subpage 1
+pages           > flushing realpage 2, userpage 1, subpage 2
+pages           > flushing realpage 3, userpage 1, subpage 3
+close source    > level 2, order 5, name '/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter.tex'
+close source    > level 1, order 5, name 'cont-yes.mkiv'
+backend         > xmp > using file '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+backend         > fonts > start embedded fonts
+backend         > fonts >     1 : file 'PlayfairRomanVF.ttf', base 'KODOIN+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-arrowhead100arrowlength200integralslant100mathweight700opticalsize36weight400width100-0'
+backend         > fonts >     2 : file 'PlayfairRomanVF.ttf', base 'SELCRG+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-arrowhead100arrowlength200integralslant100mathweight700opticalsize7weight500width100-0'
+backend         > fonts >     3 : file 'PlayfairRomanVF.ttf', base 'ELKOCB+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-arrowhead100arrowlength200integralslant100mathweight700opticalsize18weight400width100-0'
+backend         > fonts >     4 : file 'PlayfairItalicVF.ttf', base 'HOOIBX+PlayfairItalic-MicroSemiCondensedSemiLightItalic', instance 'playfairitalicvfttf-1-arrowhead100arrowlength200integralslant100mathweight700opticalsize7weight500width100-0'
+backend         > fonts >     5 : file 'PlayfairRomanVF.ttf', base 'QHUYLM+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-arrowhead100arrowlength200integralslant100mathweight700opticalsize12weight400width100-0'
+backend         > fonts >     6 : file 'PlayfairItalicVF.ttf', base 'YKHESS+PlayfairItalic-MicroSemiCondensedSemiLightItalic', instance 'playfairitalicvfttf-1-arrowhead100arrowlength200integralslant100mathweight700opticalsize12weight400width100-0'
+backend         > fonts > stop embedded fonts
+system          > start used files
+system          > text: mechanism-frontmatter
+system          >   environment: mechanism-environment
+system          > stop used files
+system          > start used files
+system          >    1: filename=cont-yes.mkiv filetype=tex format=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv usedmethod=database
+system          >    2: filename=publ-imp-default.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+system          >    3: filename=cont-new.mkxl filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
+system          >    4: filename=lang-exc.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+system          >    5: filename=lang-us.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+system          >    6: filename=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter.tex format=tex foundname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter.tex fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter.tex usedmethod=direct
+system          >    7: filename=mechanism-environment.tex format=tex foundname=mechanism-environment.tex fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-environment.tex usedmethod=direct
+system          >    8: filename=type-imp-somerville.mkxl filetype=tex format=tex foundname=../type-imp-somerville.mkxl fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/type-imp-somerville.mkxl usedmethod=filesystem
+system          >    9: filename=context-libraries.tma filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma usedmethod=database
+system          >   10: filename=lm.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
+system          >   11: filename=PlayfairRomanVF.ttf filetype=ttf format=ttf foundname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf usedmethod=filesystem
+system          >   12: filename=SomervilleMathVF.ttf filetype=ttf format=ttf foundname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.ttf usedmethod=filesystem
+system          >   13: filename=somerville.lfg filetype=tex foundname=../somerville.lfg fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville.lfg usedmethod=filesystem
+system          >   14: filename=common-math.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg usedmethod=database
+system          >   15: filename=metafun.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/metafun.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/metafun.mpxl usedmethod=database
+system          >   16: filename=mp-base.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-base.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-base.mpxl usedmethod=database
+system          >   17: filename=mp-tool.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-tool.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-tool.mpxl usedmethod=database
+system          >   18: filename=mp-luas.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-luas.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-luas.mpxl usedmethod=database
+system          >   19: filename=mp-mlib.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-mlib.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-mlib.mpxl usedmethod=database
+system          >   20: filename=mp-math.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-math.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-math.mpxl usedmethod=database
+system          >   21: filename=mp-cont.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-cont.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-cont.mpxl usedmethod=database
+system          >   22: filename=mp-page.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-page.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-page.mpxl usedmethod=database
+system          >   23: filename=mp-butt.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-butt.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-butt.mpxl usedmethod=database
+system          >   24: filename=mp-shap.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-shap.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-shap.mpxl usedmethod=database
+system          >   25: filename=mp-grph.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grph.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grph.mpxl usedmethod=database
+system          >   26: filename=mp-grid.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grid.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grid.mpxl usedmethod=database
+system          >   27: filename=mp-form.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-form.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-form.mpxl usedmethod=database
+system          >   28: filename=mp-figs.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-figs.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-figs.mpxl usedmethod=database
+system          >   29: filename=mp-func.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-func.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-func.mpxl usedmethod=database
+system          >   30: filename=mp-node.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-node.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-node.mpxl usedmethod=database
+system          >   31: filename=mp-apos.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-apos.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-apos.mpxl usedmethod=database
+system          >   32: filename=mp-abck.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-abck.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-abck.mpxl usedmethod=database
+system          >   33: filename=mp-asnc.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-asnc.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-asnc.mpxl usedmethod=database
+system          >   34: filename=mp-blob.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-blob.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-blob.mpxl usedmethod=database
+system          >   35: filename=mp-lmtx.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-lmtx.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-lmtx.mpxl usedmethod=database
+system          >   36: filename=mp-text.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-text.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-text.mpxl usedmethod=database
+system          >   37: filename=mp-thrd.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-thrd.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-thrd.mpxl usedmethod=database
+system          >   38: filename=mp-stip.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-stip.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-stip.mpxl usedmethod=database
+system          >   39: filename=mlib-eff.lmt filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/mlib-eff.lmt fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/mlib-eff.lmt usedmethod=database
+system          >   40: filename=PlayfairItalicVF.ttf filetype=ttf format=ttf foundname=/Users/juliusross/Documents/fontoutputs/PlayfairItalicVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/PlayfairItalicVF.ttf usedmethod=filesystem
+system          >   41: filename=lpdf-pdx.xml filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
+system          > stop used files
+system          > start commandline options
+system          >   currentrun="1"
+system          >   file-line-error="true"
+system          >   fulljobname="/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter.tex"
+system          >   input="/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter.tex"
+system          >   interaction="nonstopmode"
+system          >   kindofrun="1"
+system          >   maxnofruns="9"
+system          >   synctex="1"
+system          >   texmfbinpath="/Users/juliusross/context/tex/texmf-osx-arm64/bin"
+system          > stop commandline options
+system          > start commandline files
+system          >    1: /Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter.tex
+system          > stop commandline files
+modules         > start used modules
+modules         > stop used modules
+system          > 
+system          > status after finishing run
+system          > 
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert        mvl
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500        500
+system          >   min     150000   10000000     150000     150000   10000000    2000000    1000000      10000        500       1000      20000     100000        250        250         50         25         10
+system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250         10
+system          >   stp     100000    1000000     100000     100000    5000000    1000000    1000000      10000        250       1000      10000      10000        250        250         50         25         10
+system          > 
+system          >   mem     250000    8587076     150000              10000000    4000000    1000000      10000        500       1000      20000      10000        250        250         50        500         10
+system          >   itm         16          1         16                     9          8          1         32         32        116          4         16          8          8         28         72        116
+system          >   ext          0          0          0          0       5440          0          0          0          0          0          0          0    1792888         96          0          0          0
+system          >   all    4000000    8587076    2400000          1   90005440   32000000    1000000     320000      16000     116000      80000     160000    1794888       2096       1400      36000       1160
+system          > 
+system          >   ini    2150736     977320          0      53567          0     591100                                                                                       0                                 
+system          >   ptr     194363                 56815     194346               3656901          0          0          0          0          0          0         10          1          0         11          0
+system          >   top     194364                495867     262146      18197    3659153        435         37         10         17         33        339        250        250         50        500         10
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          > 
+system          >   current input type    : initial
+system          > 
+system          >   approximate memory    : 142786588 (136 MB)
+system          > 
+system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 9
+system          > 
+system          >   luabytecode registers : 1028
+system          >   luabytecode bytes     : 16464 (0 MB)
+system          >   luastate bytes now    : 147076715 (140 MB)
+system          >   luastate bytes max    : 147076715 (140 MB)
+system          > 
+system          >   file callbacks        : 721
+system          >   saved callbacks       : 221
+system          >   direct callbacks      : 12
+system          >   function callbacks    : 108979
+system          >   value callbacks       : 622616
+system          >   message callbacks     : 0
+system          >   bytecode callbacks    : 634
+system          > 
+system          >   mp instances          : 1
+system          >   mp estimated memory   : 0 (0 MB)
+system          >   mp file callbacks     : 15997
+system          >   mp text callbacks     : 0
+system          >   mp script callbacks   : 464
+system          >   mp log callbacks      : 32
+system          > 
+system          >   total callbacks       : 733183
+system          >   mp total callbacks    : 16493
+system          >   backend callbacks     : 0
+system          > 
+system          >   linebreak statistics  : context      calls     first    second     final  passonly   subpass
+system          > 
+system          >   linebreak statistics  : normal          11        11         0         3         0         0
+system          >   linebreak statistics  : vbox            14        14         0         0         0         0
+system          > 
+system          >   linebreak statistics  :                 25        25         0         3         0         0
+system          > 
+system          >   linebreak statistics  : textlines         12
+system          > 
+system          >   hyphenation state     : checked          22
+system          >   hyphenation state     : exceptions        1
+system          >   hyphenation state     : hyphenated       40
+system          >   hyphenation state     : lists            22
+system          >   hyphenation state     : nothing          11
+system          >   hyphenation state     : words            58
+system          > 
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.003 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 41 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 528 modules (0.118 sec), 106 tables (0.007 sec), 634 chunks (0.125 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1909, freed: 2, unreachable: 1907
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 8 lists of 445
+mkxl run stats  > node memory usage: 14 attribute, 7 attributelist, 1 dir, 26 fontspec, 3 glue, 135 gluespec, 1 kern, 661 mathspec, 4 penalty, 56 specification, 2 temp
+mkxl run stats  > node list callback tasks: 17 unique task lists, 10 instances (re)created, 178 calls
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: resumed with value 0.41636812942433332
+mkxl run stats  > jobdata time: 0.001 seconds saving, 0.000 seconds loading
+mkxl run stats  > callbacks: file: 721, saved: 221, direct: 12, function: 108979, value: 622616, message: 0, bytecode: 634, late 0, total: 733183 (244394 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > loaded fonts: 3 files: playfairitalicvf.ttf, playfairromanvf.ttf, somervillemathvf.ttf
+mkxl run stats  > font engine: otf 3.156, afm 1.541, tfm 1.000, 10 instances, load time 0.127 seconds 
+mkxl run stats  > body font sizes: defined: 10pt 11pt 12pt 14.4pt 17.3pt 20.7pt 4pt 5pt 6pt 7pt 8pt 9pt, undefined: 10.5pt 13pt 15pt 21pt 25pt
+mkxl run stats  > metapost: 1.249 seconds, loading: 0.021, execution: 1.237, n: 5, average: 0.501, instances: 1, luacalls: 16493 (file: 15997, text: 0, script: 464, log: 32), memory: 0.000 M
+mkxl run stats  > math tweaking time: 0.002 seconds, 12 math goodie tables
+mkxl run stats  > font embedding time: 0.006 seconds, 6 fonts
+mkxl run stats  > result saved in file: /Users/juliusross/Documents/Somerville/test_documents/Somerville/context/mechanism of the heavens/mechanism-frontmatter.pdf, compresslevel 1, objectcompresslevel 3, 21 streams, 3 uncompressed, 17 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20260923, format id: 736, memory mode: 1, compiler: clang, cversion: 23
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 194346 control sequences, 262144 hash slots, 56815 misses, approximate memory usage: 136 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 143 MB, ctx: 140 MB, max: 140 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 4.173 seconds, 3 processed pages, 3 shipped pages, 0.719 pages/second

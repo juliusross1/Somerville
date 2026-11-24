@@ -1,0 +1,145 @@
+open source     > level 1, order 1, name 'cont-yes.mkiv'
+system          > 
+system          > ConTeXt  ver: 2026.10.01 18:42 LMTX  fmt: 2026.10.22  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname '/tmp/somerville-cff-test-debug', input '/tmp/somerville-cff-test-debug.tex', result '/tmp/somerville-cff-test-debug'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 2, order 3, name '/tmp/somerville-cff-test-debug.tex'
+fonts           > ignoring feature overload 'mathexpansion' in 'mathematics'
+fonts           > preloading modern (mono)
+fonts           > 'fallback modern tt 11pt' is loaded
+fonts           > otf loading > math data wiped from 'SomervilleMath SomervilleMathCFFtest'
+structure       > sectioning > subject @ level 3 : 0.0.0 -> Somerville alphabet export test
+TESTFONT 1 t={
+ ["compacteffect"]={
+  ["extend"]=1000,
+  ["slant"]=0,
+  ["squeeze"]=1000,
+  ["weight"]=0,
+ },
+ ["filename"]="/Users/juliusross/Documents/fontoutputs/SomervilleMathCFFtestVF.ttf",
+ ["finalized"]=true,
+ ["fontname"]="SomervilleMathSomervilleMathCFFtest-SomervilleMathCFFtest",
+ ["format"]="truetype",
+ ["fullname"]="SomervilleMath SomervilleMathCFFtest",
+ ["hash"]="/users/juliusross/documents/fontoutputs/somervillemathcfftestvf @  @ normal:\"autolanguage\"=\"position\"+\"autoscript\"=\"position\"+\"axis\"=\"mght=360,opsz=5,wdth=95,wght=360\"+\"checkmissing\"=true+\"compoundhyphen\"=true+\"curs\"=true+\"expansion\"=false+\"itlc\"=true+\"kern\"=true+\"liga\"=true+\"mark\"=true+\"mkmk\"=true+\"mode\"=\"node\"+\"protrusion\"=false+\"rvrn\"=true+\"script\"=\"auto\"+\"textcontrol\"=\"collapsehyphens,replaceapostrophe\"+\"wipemath\"=true @ 655360",
+ ["hasmath"]=false,
+ ["id"]=1,
+ ["language"]="dflt",
+ ["mode"]="node",
+ ["name"]="/Users/juliusross/Documents/fontoutputs/SomervilleMathCFFtestVF",
+ ["privates"]={
+  ["visualspace"]=1036388,
+ },
+ ["psname"]="SomervilleMathSomervilleMathCFFtest-SomervilleMathCFFtest",
+ ["script"]="dflt",
+ ["subfont"]=1,
+ ["textcontrol"]=65,
+ ["useditalicangle"]=0,
+ ["usedslant"]=0,
+ ["writingmode"]="horizontal",
+} PARAMS t={
+} FEATURES t={
+ ["analyze"]=true,
+ ["autolanguage"]="position",
+ ["autoscript"]="position",
+ ["axis"]="mght=360,opsz=5,wdth=95,wght=360",
+ ["checkautoeffect"]=true,
+ ["checkmarks"]=true,
+ ["checkmissing"]=true,
+ ["compoundhyphen"]=true,
+ ["curs"]=true,
+ ["devanagari"]=true,
+ ["dummies"]=true,
+ ["expansion"]=false,
+ ["extensions"]=true,
+ ["extrafeatures"]=true,
+ ["extraprivates"]=true,
+ ["features"]=true,
+ ["fixdot"]=true,
+ ["indic"]="auto",
+ ["itlc"]=true,
+ ["kern"]=true,
+ ["liga"]=true,
+ ["mark"]=true,
+ ["mathrules"]=true,
+ ["mkmk"]=true,
+ ["mode"]="node",
+ ["number"]=117,
+ ["parameters"]=true,
+ ["protrusion"]=false,
+ ["rvrn"]=true,
+ ["script"]="dflt",
+ ["spacekern"]=true,
+ ["textcontrol"]="collapsehyphens,replaceapostrophe",
+ ["visualspace"]=true,
+ ["wipemath"]=true,
+} KEYS characters,descriptions,fonts,goodies,original,parameters,properties,resources,shared,specification,streamprovider,textcontrol,unscaled,writingmode
+TESTFONT 2 t={
+ ["compacteffect"]={
+  ["extend"]=1000,
+  ["slant"]=0,
+  ["squeeze"]=1000,
+  ["weight"]=0,
+ },
+ ["filename"]="/Users/juliusross/Documents/fontoutputs/SomervilleMathCFFtestVF.ttf",
+ ["finalized"]=true,
+ ["fontname"]="SomervilleMathSomervilleMathCFFtest-SomervilleMathCFFtest",
+ ["format"]="truetype",
+ ["fullname"]="SomervilleMath SomervilleMathCFFtest-2",
+ ["hash"]="/users/juliusross/documents/fontoutputs/somervillemathcfftestvf @  @ normal:\"axis\"=\"mght=360,opsz=5,wdth=95,wght=360\"+\"compactmath\"=true+\"expansion\"=false+\"flattenaccents\"=true+\"kern\"=true+\"language\"=\"dflt\"+\"mathalternates\"=true+\"mathexpansion\"=false+\"mode\"=\"base\"+\"protrusion\"=false+\"rvrn\"=true+\"script\"=\"math\"+\"ssty\"=false+\"wipemath\"=false @ 655360",
+ ["hasmath"]=false,
+ ["id"]=2,
+ ["language"]="dflt",
+ ["mode"]="base",
+ ["name"]="/Users/juliusross/Documents/fontoutputs/SomervilleMathCFFtestVF",
+ ["privates"]={
+  ["visualspace"]=1036388,
+ },
+ ["psname"]="SomervilleMathSomervilleMathCFFtest-SomervilleMathCFFtest",
+ ["script"]="math",
+ ["sharedwith"]="SomervilleMath SomervilleMathCFFtest:1",
+ ["subfont"]=1,
+ ["textcontrol"]=6,
+ ["useditalicangle"]=0,
+ ["usedslant"]=0,
+ ["writingmode"]="horizontal",
+} PARAMS t={
+} FEATURES t={
+ ["analyze"]=true,
+ ["axis"]="mght=360,opsz=5,wdth=95,wght=360",
+ ["checkautoeffect"]=true,
+ ["checkmarks"]=true,
+ ["compactmath"]=true,
+ ["devanagari"]=true,
+ ["dummies"]=true,
+ ["expansion"]=false,
+ ["extensions"]=true,
+ ["extrafeatures"]=true,
+ ["extraprivates"]=true,
+ ["features"]=true,
+ ["fixdot"]=true,
+ ["flattenaccents"]=true,
+ ["indic"]="auto",
+ ["kern"]=true,
+ ["language"]="dflt",
+ ["mathalternates"]=true,
+ ["mathexpansion"]=false,
+ ["mathrules"]=true,
+ ["mode"]="base",
+ ["number"]=119,
+ ["parameters"]=true,
+ ["protrusion"]=false,
+ ["rvrn"]=true,
+ ["script"]="math",
+ ["spacekern"]=true,
+ ["ssty"]=false,
+ ["visualspace"]=true,
+ ["wipemath"]=false,
+} KEYS characters,descriptions,fonts,goodies,original,parameters,properties,resources,shared,specification,streamprovider,textcontrol,unscaled,writingmodeerror (math): invalid parameter 'axis' in style 2

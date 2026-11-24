@@ -1,0 +1,169 @@
+system          > 
+system          > ConTeXt  ver: 2026.10.31 00:52 LMTX  fmt: 2026.11.15  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 1, order 1, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 1, order 1, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > files > jobname '/tmp/somerville-naryunion-test/proof', input '/tmp/somerville-naryunion-test/proof.tex', result '/tmp/somerville-naryunion-test/proof'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 1, order 2, name '/tmp/somerville-naryunion-test/proof.tex'
+fonts           > ignoring feature overload 'mathexpansion' in 'mathematics'
+fonts           > ignoring feature overload 'mathexpansion' in 'math'
+fonts           > ignoring feature overload 'mathexpansion' in 'math-text'
+fonts           > ignoring feature overload 'mathexpansion' in 'math-script'
+fonts           > ignoring feature overload 'mathexpansion' in 'math-scriptscript'
+open source     > level 2, order 3, name '/tmp/somerville-naryunion-test/type-test.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=16000000 | ext=0 | ini=591126 | itm=8 | max=10000000 | mem=2000000 | min=2000000 | ptr=2000001 | set=10000000 | stp=1000000 | top=2000000
+tex memory      > bumping category 'pool' succeeded, details: all=6202424 | ext=0 | ini=977304 | itm=1 | max=100000000 | mem=6202424 | min=10000000 | ptr=-1 | set=10000000 | stp=1000000 | top=-1
+tex memory      > bumping category 'token' succeeded, details: all=24000000 | ext=0 | ini=591126 | itm=8 | max=10000000 | mem=3000000 | min=2000000 | ptr=3000001 | set=10000000 | stp=1000000 | top=3000000
+close source    > level 2, order 3, name '/tmp/somerville-naryunion-test/type-test.mkxl'
+fonts           > ignoring feature overload 'mathexpansion' in 'math-text,mathextra,somerville-regular-math-axes'
+fonts           > otf loading > loading '/tmp/somerville-naryunion-test/SomervilleMathVF.ttf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-50-opsz-12-stya-5-styb-5-wdth-100-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=50,opsz=12,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.4444580078125 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0 0
+otf reader      > gsub lookup s_l_12 of type 'single' is not used
+otf reader      > gsub lookup s_l_13 of type 'single' is not used
+otf reader      > gsub lookup s_l_14 of type 'single' is not used
+otf reader      > gsub lookup s_l_15 of type 'single' is not used
+otf reader      > gsub lookup s_l_16 of type 'single' is not used
+otf reader      > gsub lookup s_l_17 of type 'single' is not used
+otf reader      > discarding 2 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/tmp/somerville-naryunion-test/SomervilleMathVF.ttf' in cache
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-50-opsz-12-stya-5-styb-5-wdth-100-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-50-opsz-12-stya-5-styb-5-wdth-100-wght-400.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-50-opsz-12-stya-5-styb-5-wdth-100-wght-400.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-50-opsz-12-stya-5-styb-5-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.161
+pages           > flushing realpage 1, userpage 1, subpage 1
+close source    > level 1, order 3, name '/tmp/somerville-naryunion-test/proof.tex'
+backend         > xmp > using file '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+backend         > fonts > start embedded fonts
+backend         > fonts >     1 : file 'PlayfairRomanVF.ttf', base 'JXXCLI+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth100wght400-0'
+backend         > fonts >     2 : file 'SomervilleMathVF.ttf', base 'VLAKKH+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl0mght50opsz12stya5styb5wdth100wght400-0'
+backend         > fonts > stop embedded fonts
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=50,opsz=12,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.4444580078125 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0 0
+otf reader      > discarding 2 self referencing vertical variant entries
+system          > lua > compiling '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfttf-1-arhd100arln100insl0mght50opsz12stya5styb5wdth100wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfttf-1-arhd100arln100insl0mght50opsz12stya5styb5wdth100wght400-0.tmd'
+system          > lua > dumping '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfttf-1-arhd100arln100insl0mght50opsz12stya5styb5wdth100wght400-0.tma' into '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfttf-1-arhd100arln100insl0mght50opsz12stya5styb5wdth100wght400-0.tmd' stripped
+system          > start used files
+system          > text: /tmp/somerville-naryunion-test/proof
+system          > stop used files
+system          > start used files
+system          >    1: filename=publ-imp-default.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+system          >    2: filename=cont-new.mkxl filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
+system          >    3: filename=lang-exc.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+system          >    4: filename=lang-us.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+system          >    5: filename=/tmp/somerville-naryunion-test/proof.tex format=tex foundname=/tmp/somerville-naryunion-test/proof.tex fullname=/tmp/somerville-naryunion-test/proof.tex usedmethod=direct
+system          >    6: filename=/tmp/somerville-naryunion-test/type-test.mkxl format=tex foundname=/tmp/somerville-naryunion-test/type-test.mkxl fullname=/tmp/somerville-naryunion-test/type-test.mkxl usedmethod=direct
+system          >    7: filename=context-libraries.tma filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma usedmethod=database
+system          >    8: filename=lm.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
+system          >    9: filename=PlayfairRomanVF.ttf filetype=ttf format=ttf foundname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf usedmethod=filesystem
+system          >   10: filename=/tmp/somerville-naryunion-test/SomervilleMathVF.ttf format=ttf foundname=/tmp/somerville-naryunion-test/SomervilleMathVF.ttf fullname=/tmp/somerville-naryunion-test/SomervilleMathVF.ttf usedmethod=direct
+system          >   11: filename=somerville.lfg foundname=somerville.lfg fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville.lfg usedmethod=direct
+system          >   12: filename=common-math.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg usedmethod=database
+system          >   13: filename=lpdf-pdx.xml filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
+system          > stop used files
+system          > start commandline options
+system          >   currentrun="2"
+system          >   fulljobname="/tmp/somerville-naryunion-test/proof.tex"
+system          >   input="/tmp/somerville-naryunion-test/proof.tex"
+system          >   kindofrun="2"
+system          >   maxnofruns="9"
+system          >   result="/tmp/somerville-naryunion-test/proof"
+system          >   texmfbinpath="/Users/juliusross/context/tex/texmf-osx-arm64/bin"
+system          > stop commandline options
+system          > start commandline files
+system          >    1: /tmp/somerville-naryunion-test/proof.tex
+system          > stop commandline files
+modules         > start used modules
+modules         > stop used modules
+system          > 
+system          > status after finishing run
+system          > 
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert        mvl
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500        500
+system          >   min     150000   10000000     150000     150000   10000000    2000000    1000000      10000        500       1000      20000     100000        250        250         50         25         10
+system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250         10
+system          >   stp     100000    1000000     100000     100000    5000000    1000000    1000000      10000        250       1000      10000      10000        250        250         50         25         10
+system          > 
+system          >   mem     250000    8515006     150000              10000000    4000000    1000000      10000        500       1000      20000      10000        250        250         50        500         10
+system          >   itm         16          1         16                     9          8          1         32         32        116          4         16          8          8         28         72        116
+system          >   ext          0          0          0          0       5440          0          0          0          0          0          0          0     223564         96          0          0          0
+system          >   all    4000000    8515006    2400000          1   90005440   32000000    1000000     320000      16000     116000      80000     160000     225564       2096       1400      36000       1160
+system          > 
+system          >   ini    2150736     977304          0      53567          0     591126                                                                                       0                                 
+system          >   ptr     192527                 55884     192510               3629580          0          0          0          0          0          0          2          1          0         11          0
+system          >   top     192527                495867     262146       8506    3648680        408         35          6         12         36        194        250        250         50        500         10
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          > 
+system          >   current input type    : initial
+system          > 
+system          >   approximate memory    : 140906922 (134 MB)
+system          > 
+system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 6
+system          > 
+system          >   luabytecode registers : 1019
+system          >   luabytecode bytes     : 16320 (0 MB)
+system          >   luastate bytes now    : 62803872 (59 MB)
+system          >   luastate bytes max    : 65245392 (62 MB)
+system          > 
+system          >   file callbacks        : 515
+system          >   saved callbacks       : 106
+system          >   direct callbacks      : 4
+system          >   function callbacks    : 107202
+system          >   value callbacks       : 609232
+system          >   message callbacks     : 0
+system          >   bytecode callbacks    : 626
+system          > 
+system          >   mp instances          : 0
+system          >   mp estimated memory   : 0 (0 MB)
+system          >   mp file callbacks     : 0
+system          >   mp text callbacks     : 0
+system          >   mp script callbacks   : 0
+system          >   mp log callbacks      : 0
+system          > 
+system          >   total callbacks       : 717685
+system          >   mp total callbacks    : 0
+system          >   backend callbacks     : 0
+system          > 
+system          >   linebreak statistics  : context      calls     first    second     final  passonly   subpass
+system          > 
+system          >   linebreak statistics  : normal           5         5         0         3         0         0
+system          >   linebreak statistics  : vbox             4         4         0         0         0         0
+system          > 
+system          >   linebreak statistics  :                  9         9         0         3         0         0
+system          > 
+system          >   linebreak statistics  : textlines          3
+system          > 
+system          >   hyphenation state     : checked           5
+system          >   hyphenation state     : hyphenated        2
+system          >   hyphenation state     : lists             5
+system          >   hyphenation state     : nothing           4
+system          >   hyphenation state     : words             2
+system          > 
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.003 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 13 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 519 modules (0.126 sec), 107 tables (0.007 sec), 626 chunks (0.133 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1907, freed: 0, unreachable: 1907
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 7 lists of 445
+mkxl run stats  > node memory usage: 6 attribute, 3 attributelist, 1 dir, 6 fontspec, 1 glue, 135 gluespec, 1 kern, 661 mathspec, 2 penalty, 56 specification, 2 temp
+mkxl run stats  > node list callback tasks: 17 unique task lists, 11 instances (re)created, 73 calls
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: resumed with value 0.22436580482460478
+mkxl run stats  > jobdata time: 0.000 seconds saving, 0.000 seconds loading
+mkxl run stats  > callbacks: file: 515, saved: 106, direct: 4, function: 107202, value: 609232, message: 0, bytecode: 626, late 0, total: 717685 (717685 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > loaded fonts: 2 files: somervillemathvf.ttf, playfairromanvf.ttf
+mkxl run stats  > font engine: otf 3.158, afm 1.541, tfm 1.000, 2 instances, load time 0.191 seconds 
+mkxl run stats  > math tweaking time: 0.000 seconds, 3 math goodie tables
+mkxl run stats  > font embedding time: 0.113 seconds, 2 fonts
+mkxl run stats  > result saved in file: /tmp/somerville-naryunion-test/proof.pdf, compresslevel 1, objectcompresslevel 3, 8 streams, 0 uncompressed, 7 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20261029, format id: 737, memory mode: 1, compiler: clang, cversion: 17
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 192510 control sequences, 262144 hash slots, 55884 misses, approximate memory usage: 134 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 62 MB, ctx: 59 MB, max: 62 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 3.079 seconds, 1 processed pages, 1 shipped pages, 0.325 pages/second

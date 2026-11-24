@@ -1,0 +1,15 @@
+% !TeX root = somervillelualatex-sample-guide.tex
+% !TeX program = lualatex
+\documentclass{article}
+\usepackage{unicode-math}
+\defaultfontfeatures{Path=../../../../fontoutputs/}
+\input{../../../../fontoutputs/SomervilleRegular.fontspec}
+\setmainfont{SomervilleRegular}
+\begin{document}
+Some text in Playfair \textbf{and some bold text} and \emph{some italic text} and some mathematics in Somerville:
+\[
+  \begin{aligned}
+    \nabla\times\symbf{E} &= -\frac{\partial\symbf{B}}{\partial t}, \\
+  \end{aligned}
+\]
+\end{document}

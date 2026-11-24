@@ -1,0 +1,367 @@
+open source     > level 1, order 1, name 'cont-yes.mkiv'
+system          > 
+system          > ConTeXt  ver: 2026.10.01 18:42 LMTX  fmt: 2026.10.22  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname './somerville-bubble-integrals', input './somerville-bubble-integrals.tex', result './somerville-bubble-integrals'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 2, order 3, name './somerville-bubble-integrals.tex'
+open source     > level 3, order 4, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=16000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=2000000 | min=2000000 | ptr=2000001 | set=10000000 | stp=1000000 | top=2000000
+tex memory      > bumping category 'pool' succeeded, details: all=6202444 | ext=0 | ini=977320 | itm=1 | max=100000000 | mem=6202444 | min=10000000 | ptr=-1 | set=10000000 | stp=1000000 | top=-1
+tex memory      > bumping category 'token' succeeded, details: all=24000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=3000000 | min=2000000 | ptr=3000001 | set=10000000 | stp=1000000 | top=3000000
+close source    > level 3, order 4, name 'type-imp-somerville.mkxl'
+open source     > level 3, order 5, name 'bubble-integrals.mkxl'
+resolvers       > lua > loading file 'bubble-integrals.lua' succeeded
+close source    > level 3, order 5, name 'bubble-integrals.mkxl'
+bubble integrals > geometry self-tests passed (equal boxes/different shapes, sub-band rules)
+structures      > bookmark: Integral spacing by shape
+structure       > sectioning > chapter @ level 2 : 0.1 -> Integral spacing by shape
+structures      > bookmark: Short integrand
+structure       > sectioning > section @ level 3 : 0.1.1 -> Short integrand
+bubble integrals > profile strength 1.00: gap 0.033pt (ordinary 0.667pt); 3+6 glyphs, 0 rules
+structures      > bookmark: Fraction with a wide denominator
+structure       > sectioning > section @ level 3 : 0.1.2 -> Fraction with a wide denominator
+bubble integrals > profile strength 1.00: gap -2.040pt (ordinary 2.667pt); 1+12 glyphs, 1 rules
+structures      > bookmark: Fraction with a wide numerator
+structure       > sectioning > section @ level 3 : 0.1.3 -> Fraction with a wide numerator
+bubble integrals > profile strength 1.00: gap -0.115pt (ordinary 2.667pt); 1+12 glyphs, 1 rules
+pages           > flushing realpage 1, userpage 1, subpage 1
+structures      > bookmark: Limits and nested constructions
+structure       > sectioning > chapter @ level 2 : 0.2 -> Limits and nested constructions
+structures      > bookmark: Side limits participate in the profile
+structure       > sectioning > section @ level 3 : 0.2.1 -> Side limits participate in the profile
+bubble integrals > profile strength 1.00: gap -15.673pt (ordinary 2.667pt); 7+10 glyphs, 2 rules
+structures      > bookmark: Stacked limits participate in the profile
+structure       > sectioning > section @ level 3 : 0.2.2 -> Stacked limits participate in the profile
+bubble integrals > profile strength 1.00: gap -6.572pt (ordinary 0.000pt); 7+12 glyphs, 2 rules
+structures      > bookmark: Tall integral with side limits
+structure       > sectioning > section @ level 3 : 0.2.3 -> Tall integral with side limits
+bubble integrals > profile strength 1.00: gap -7.380pt (ordinary 2.667pt); 3+8 glyphs, 1 rules
+pages           > flushing realpage 2, userpage 2, subpage 2
+structures      > bookmark: Inspecting the envelopes
+structure       > sectioning > chapter @ level 2 : 0.3 -> Inspecting the envelopes
+bubble integrals > profile strength 1.00: gap -3.271pt (ordinary 4.667pt); 1+12 glyphs, 1 rules
+tex memory      > bumping category 'token' succeeded, details: all=32000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=4000000 | min=2000000 | ptr=4000001 | set=10000000 | stp=1000000 | top=4000000
+metapost        > initializing instance 'metafun:1' using format 'metafun' and method 'double'
+metapost        > loading 'metafun' as '/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/metafun.mpxl' using method 'double'
+metapost        > initializing number mode 'double'
+metapost        > trace > This is MPLIB for LuaMetaTeX, version 3.15, running in double mode.
+metapost        > trace > 
+metapost        > trace > loading metafun for lmtx, including the plain 1.004 base definitions
+metapost        > trace > 
+bubble integrals > profile strength 1.00: gap -1.345pt (ordinary 4.667pt); 1+12 glyphs, 1 rules
+pages           > flushing realpage 3, userpage 3, subpage 3
+structures      > bookmark: Using the module
+structure       > sectioning > chapter @ level 2 : 0.4 -> Using the module
+structures      > bookmark: Style and nesting checks
+structure       > sectioning > section @ level 3 : 0.4.1 -> Style and nesting checks
+structures      > bookmark: Bounding-box comparison
+structure       > sectioning > section @ level 3 : 0.4.2 -> Bounding-box comparison
+bubble integrals > bbox strength 1.00: gap 4.132pt (ordinary 4.667pt); 1+12 glyphs, 1 rules
+bubble integrals > profile strength 1.00: gap -3.271pt (ordinary 4.667pt); 1+12 glyphs, 1 rules
+bubble integral test > operator instance: arhd=100,arln=100,insl=100,mght=750,opsz=12,stya=5,styb=5,wdth=100,wght=400
+pages           > flushing realpage 4, userpage 4, subpage 4
+structures      > bookmark: Adjusting the strength
+structure       > sectioning > chapter @ level 2 : 0.5 -> Adjusting the strength
+structures      > bookmark: Native integral, without the module
+structure       > sectioning > section @ level 3 : 0.5.1 -> Native integral, without the module
+bubble integral test > strength zero matches native layout dimensions
+structures      > bookmark: Strength 0: ordinary spacing
+structure       > sectioning > section @ level 3 : 0.5.2 -> Strength 0: ordinary spacing
+structures      > bookmark: Strength 0.5: halfway
+structure       > sectioning > section @ level 3 : 0.5.3 -> Strength 0.5: halfway
+bubble integrals > profile strength 0.50: gap 0.916pt (ordinary 4.667pt); 3+7 glyphs, 1 rules
+structures      > bookmark: Strength 1: full profile spacing
+structure       > sectioning > section @ level 3 : 0.5.4 -> Strength 1: full profile spacing
+bubble integrals > profile strength 1.00: gap -2.836pt (ordinary 4.667pt); 3+7 glyphs, 1 rules
+pages           > flushing realpage 5, userpage 5, subpage 5
+structures      > bookmark: Parentheses: short expressions
+structure       > sectioning > chapter @ level 2 : 0.6 -> Parentheses: short expressions
+structures      > bookmark: A single letter
+structure       > sectioning > section @ level 3 : 0.6.1 -> A single letter
+bubble integrals > parentheses profile strength 1.00: left gap -0.314pt, right gap -0.358pt; 1 body glyphs, 0 rules
+structures      > bookmark: Italic stems and a descender
+structure       > sectioning > section @ level 3 : 0.6.2 -> Italic stems and a descender
+bubble integrals > parentheses profile strength 1.00: left gap -0.710pt, right gap -3.260pt; 9 body glyphs, 0 rules
+structures      > bookmark: Subscripts and superscripts
+structure       > sectioning > section @ level 3 : 0.6.3 -> Subscripts and superscripts
+bubble integrals > parentheses profile strength 1.00: left gap -0.814pt, right gap -0.358pt; 9 body glyphs, 0 rules
+pages           > flushing realpage 6, userpage 6, subpage 6
+structures      > bookmark: Parentheses: asymmetric fractions
+structure       > sectioning > chapter @ level 2 : 0.7 -> Parentheses: asymmetric fractions
+structures      > bookmark: Wide denominator
+structure       > sectioning > section @ level 3 : 0.7.1 -> Wide denominator
+bubble integrals > parentheses profile strength 1.00: left gap -2.018pt, right gap -4.059pt; 10 body glyphs, 1 rules
+structures      > bookmark: Wide numerator
+structure       > sectioning > section @ level 3 : 0.7.2 -> Wide numerator
+bubble integrals > parentheses profile strength 1.00: left gap -2.216pt, right gap 0.401pt; 10 body glyphs, 1 rules
+structures      > bookmark: Different shapes on the two sides
+structure       > sectioning > section @ level 3 : 0.7.3 -> Different shapes on the two sides
+bubble integrals > parentheses profile strength 1.00: left gap -2.018pt, right gap 0.351pt; 13 body glyphs, 2 rules
+pages           > flushing realpage 7, userpage 7, subpage 7
+structures      > bookmark: Parentheses: radicals and scripts
+structure       > sectioning > chapter @ level 2 : 0.8 -> Parentheses: radicals and scripts
+structures      > bookmark: A square root
+structure       > sectioning > section @ level 3 : 0.8.1 -> A square root
+bubble integrals > parentheses profile strength 1.00: left gap -3.311pt, right gap 1.243pt; 5 body glyphs, 1 rules
+structures      > bookmark: Radicals of different heights
+structure       > sectioning > section @ level 3 : 0.8.2 -> Radicals of different heights
+bubble integrals > parentheses profile strength 1.00: left gap -4.922pt, right gap -3.109pt; 10 body glyphs, 3 rules
+structures      > bookmark: Scripts on both sides of a letter
+structure       > sectioning > section @ level 3 : 0.8.3 -> Scripts on both sides of a letter
+bubble integrals > parentheses profile strength 1.00: left gap -2.100pt, right gap -1.744pt; 16 body glyphs, 0 rules
+pages           > flushing realpage 8, userpage 8, subpage 8
+structures      > bookmark: Parentheses: nested constructions
+structure       > sectioning > chapter @ level 2 : 0.9 -> Parentheses: nested constructions
+structures      > bookmark: Nested fractions
+structure       > sectioning > section @ level 3 : 0.9.1 -> Nested fractions
+bubble integrals > parentheses profile strength 1.00: left gap -4.667pt, right gap -2.101pt; 7 body glyphs, 2 rules
+structures      > bookmark: An inner ordinary pair
+structure       > sectioning > section @ level 3 : 0.9.2 -> An inner ordinary pair
+bubble integrals > parentheses profile strength 1.00: left gap -7.001pt, right gap -5.425pt; 12 body glyphs, 2 rules
+structures      > bookmark: An inner fitted pair
+structure       > sectioning > section @ level 3 : 0.9.3 -> An inner fitted pair
+bubble integrals > parentheses profile strength 1.00: left gap -7.001pt, right gap -5.425pt; 12 body glyphs, 2 rules
+pages           > flushing realpage 9, userpage 9, subpage 9
+structures      > bookmark: Parentheses: matrices and operators
+structure       > sectioning > chapter @ level 2 : 0.10 -> Parentheses: matrices and operators
+structures      > bookmark: A two by two matrix
+structure       > sectioning > section @ level 3 : 0.10.1 -> A two by two matrix
+bubble integrals > parentheses profile strength 1.00: left gap -5.626pt, right gap -3.298pt; 6 body glyphs, 0 rules
+structures      > bookmark: A column with an unusually wide middle row
+structure       > sectioning > section @ level 3 : 0.10.2 -> A column with an unusually wide middle row
+bubble integrals > parentheses profile strength 1.00: left gap -9.920pt, right gap -9.796pt; 11 body glyphs, 0 rules
+structures      > bookmark: An integral and its stacked limits
+structure       > sectioning > section @ level 3 : 0.10.3 -> An integral and its stacked limits
+bubble integrals > parentheses profile strength 1.00: left gap -2.359pt, right gap -15.670pt; 10 body glyphs, 1 rules
+pages           > flushing realpage 10, userpage 10, subpage 10
+structures      > bookmark: Parentheses: integrals and empty regions
+structure       > sectioning > chapter @ level 2 : 0.11 -> Parentheses: integrals and empty regions
+structures      > bookmark: Fitted parentheses inside a fitted integral
+structure       > sectioning > section @ level 3 : 0.11.1 -> Fitted parentheses inside a fitted integral
+structures      > bookmark: A short letter with a tall invisible strut
+structure       > sectioning > section @ level 3 : 0.11.2 -> A short letter with a tall invisible strut
+bubble integrals > parentheses profile strength 1.00: left gap -6.161pt, right gap -0.421pt; 1 body glyphs, 0 rules
+structures      > bookmark: Empty and phantom-only parentheses
+structure       > sectioning > section @ level 3 : 0.11.3 -> Empty and phantom-only parentheses
+pages           > flushing realpage 11, userpage 11, subpage 11
+structures      > bookmark: Parentheses: inspecting both fits
+structure       > sectioning > chapter @ level 2 : 0.12 -> Parentheses: inspecting both fits
+structures      > bookmark: The wide part is below the axis
+structure       > sectioning > section @ level 3 : 0.12.1 -> The wide part is below the axis
+bubble integrals > parentheses profile strength 1.00: left gap -2.018pt, right gap -4.059pt; 10 body glyphs, 1 rules
+structures      > bookmark: The wide part is above the axis
+structure       > sectioning > section @ level 3 : 0.12.2 -> The wide part is above the axis
+bubble integrals > parentheses profile strength 1.00: left gap -2.216pt, right gap 0.401pt; 10 body glyphs, 1 rules
+pages           > flushing realpage 12, userpage 12, subpage 12
+structures      > bookmark: Parentheses: adjusting the strength
+structure       > sectioning > chapter @ level 2 : 0.13 -> Parentheses: adjusting the strength
+structures      > bookmark: Native parentheses, without the module
+structure       > sectioning > section @ level 3 : 0.13.1 -> Native parentheses, without the module
+structures      > bookmark: Strength 0
+structure       > sectioning > section @ level 3 : 0.13.2 -> Strength 0
+structures      > bookmark: Strength 0.25
+structure       > sectioning > section @ level 3 : 0.13.3 -> Strength 0.25
+structures      > bookmark: Strength 0.5
+structure       > sectioning > section @ level 3 : 0.13.4 -> Strength 0.5
+structures      > bookmark: Strength 0.75
+structure       > sectioning > section @ level 3 : 0.13.5 -> Strength 0.75
+structures      > bookmark: Strength 1
+structure       > sectioning > section @ level 3 : 0.13.6 -> Strength 1
+bubble parenthesis test > both sides interpolate correctly at .25, .5, .75, and 1
+pages           > flushing realpage 13, userpage 13, subpage 13
+structures      > bookmark: Parentheses: inline and script styles
+structure       > sectioning > chapter @ level 2 : 0.14 -> Parentheses: inline and script styles
+bubble parenthesis test > strength zero matches native width, height, and depth
+structures      > bookmark: Function argument and a following sum
+structure       > sectioning > section @ level 3 : 0.14.1 -> Function argument and a following sum
+structures      > bookmark: A named function
+structure       > sectioning > section @ level 3 : 0.14.2 -> A named function
+structures      > bookmark: Parentheses inside a superscript
+structure       > sectioning > section @ level 3 : 0.14.3 -> Parentheses inside a superscript
+structures      > bookmark: Parentheses inside a subscript
+structure       > sectioning > section @ level 3 : 0.14.4 -> Parentheses inside a subscript
+structures      > bookmark: Parentheses in a numerator
+structure       > sectioning > section @ level 3 : 0.14.5 -> Parentheses in a numerator
+structures      > bookmark: A superscript on the complete pair
+structure       > sectioning > section @ level 3 : 0.14.6 -> A superscript on the complete pair
+structures      > bookmark: Two adjacent pairs
+structure       > sectioning > section @ level 3 : 0.14.7 -> Two adjacent pairs
+pages           > flushing realpage 14, userpage 14, subpage 14
+structures      > bookmark: Parentheses: very tall delimiters
+structure       > sectioning > chapter @ level 2 : 0.15 -> Parentheses: very tall delimiters
+structures      > bookmark: An expression with 200pt of vertical extent
+structure       > sectioning > section @ level 3 : 0.15.1 -> An expression with 200pt of vertical extent
+bubble integrals > parentheses profile strength 1.00: left gap -13.603pt, right gap 6.927pt; 1 body glyphs, 0 rules
+structures      > bookmark: Usage
+structure       > sectioning > section @ level 3 : 0.15.2 -> Usage
+pages           > flushing realpage 15, userpage 15, subpage 15
+close source    > level 2, order 5, name './somerville-bubble-integrals.tex'
+close source    > level 1, order 5, name 'cont-yes.mkiv'
+backend         > xmp > using file '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+backend         > fonts > start embedded fonts
+backend         > fonts >     1 : file 'PlayfairRomanVF.ttf', base 'EMIXAJ+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-0-0'
+backend         > fonts >     2 : file 'PlayfairRomanVF.ttf', base 'JFLWZF+PlayfairRoman-MicroSemiCondensedSemiLight', instance 'playfairromanvfttf-1-opsz12wdth100wght400-0'
+backend         > fonts >     3 : file 'SomervilleMathVF.ttf', base 'CIPPKK+SomervilleMathSomervilleMathVariable-SomervilleMathVariable', instance 'somervillemathvfttf-1-arhd100arln100insl100mght750opsz12stya5styb5wdth100wght400-0'
+backend         > fonts >     4 : file 'lmmono10-regular.otf', base 'MSPABH+LMMono10-Regular', instance 'lmmono10regularotf-1-0-0'
+backend         > fonts > stop embedded fonts
+system          > start used files
+system          > text: somerville-bubble-integrals
+system          > stop used files
+system          > start used files
+system          >    1: filename=cont-yes.mkiv filetype=tex format=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/cont-yes.mkiv usedmethod=database
+system          >    2: filename=publ-imp-default.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+system          >    3: filename=cont-new.mkxl filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
+system          >    4: filename=lang-exc.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+system          >    5: filename=lang-us.lua filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/Users/juliusross/context/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+system          >    6: filename=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-bubble-integrals.tex format=tex foundname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-bubble-integrals.tex fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville-bubble-integrals.tex usedmethod=direct
+system          >    7: filename=type-imp-somerville.mkxl format=tex foundname=type-imp-somerville.mkxl fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/type-imp-somerville.mkxl usedmethod=direct
+system          >    8: filename=context-libraries.tma filetype=lua foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma usedmethod=database
+system          >    9: filename=lm.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
+system          >   10: filename=bubble-integrals.mkxl format=tex foundname=bubble-integrals.mkxl fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/bubble-integrals.mkxl usedmethod=direct
+system          >   11: filename=bubble-integrals.lua format=tex foundname=bubble-integrals.lua fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/bubble-integrals.lua usedmethod=direct
+system          >   12: filename=PlayfairRomanVF.ttf filetype=ttf format=ttf foundname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf usedmethod=filesystem
+system          >   13: filename=SomervilleMathVF.ttf filetype=ttf format=ttf foundname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.ttf fullname=/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.ttf usedmethod=filesystem
+system          >   14: filename=somerville.lfg foundname=somerville.lfg fullname=/Users/juliusross/Documents/Somerville/test_documents/Somerville/context/somerville.lfg usedmethod=direct
+system          >   15: filename=common-math.lfg filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg fullname=/Users/juliusross/context/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg usedmethod=database
+system          >   16: filename=metafun.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/metafun.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/metafun.mpxl usedmethod=database
+system          >   17: filename=mp-base.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-base.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-base.mpxl usedmethod=database
+system          >   18: filename=mp-tool.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-tool.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-tool.mpxl usedmethod=database
+system          >   19: filename=mp-luas.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-luas.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-luas.mpxl usedmethod=database
+system          >   20: filename=mp-mlib.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-mlib.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-mlib.mpxl usedmethod=database
+system          >   21: filename=mp-math.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-math.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-math.mpxl usedmethod=database
+system          >   22: filename=mp-cont.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-cont.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-cont.mpxl usedmethod=database
+system          >   23: filename=mp-page.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-page.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-page.mpxl usedmethod=database
+system          >   24: filename=mp-butt.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-butt.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-butt.mpxl usedmethod=database
+system          >   25: filename=mp-shap.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-shap.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-shap.mpxl usedmethod=database
+system          >   26: filename=mp-grph.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grph.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grph.mpxl usedmethod=database
+system          >   27: filename=mp-grid.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grid.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-grid.mpxl usedmethod=database
+system          >   28: filename=mp-form.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-form.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-form.mpxl usedmethod=database
+system          >   29: filename=mp-figs.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-figs.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-figs.mpxl usedmethod=database
+system          >   30: filename=mp-func.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-func.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-func.mpxl usedmethod=database
+system          >   31: filename=mp-node.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-node.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-node.mpxl usedmethod=database
+system          >   32: filename=mp-apos.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-apos.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-apos.mpxl usedmethod=database
+system          >   33: filename=mp-abck.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-abck.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-abck.mpxl usedmethod=database
+system          >   34: filename=mp-asnc.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-asnc.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-asnc.mpxl usedmethod=database
+system          >   35: filename=mp-blob.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-blob.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-blob.mpxl usedmethod=database
+system          >   36: filename=mp-lmtx.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-lmtx.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-lmtx.mpxl usedmethod=database
+system          >   37: filename=mp-text.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-text.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-text.mpxl usedmethod=database
+system          >   38: filename=mp-thrd.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-thrd.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-thrd.mpxl usedmethod=database
+system          >   39: filename=mp-stip.mpxl filetype=mp foundname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-stip.mpxl fullname=/Users/juliusross/context/tex/texmf-context/metapost/context/base/mpxl/mp-stip.mpxl usedmethod=database
+system          >   40: filename=lmmono10-regular filetype=otf format=otf foundname=/Users/juliusross/context/tex/texmf/fonts/data/gust/lm/lmmono10-regular.otf fullname=/Users/juliusross/context/tex/texmf/fonts/data/gust/lm/lmmono10-regular.otf usedmethod=database
+system          >   41: filename=lpdf-pdx.xml filetype=tex foundname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/Users/juliusross/context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
+system          > stop used files
+system          > start commandline options
+system          >   batchmode="true"
+system          >   currentrun="1"
+system          >   fulljobname="./somerville-bubble-integrals.tex"
+system          >   input="./somerville-bubble-integrals.tex"
+system          >   kindofrun="1"
+system          >   maxnofruns="9"
+system          >   texmfbinpath="/Users/juliusross/context/tex/texmf-osx-arm64/bin"
+system          > stop commandline options
+system          > start commandline files
+system          >    1: ./somerville-bubble-integrals.tex
+system          > stop commandline files
+modules         > start used modules
+modules         > stop used modules
+system          > 
+system          > status after finishing run
+system          > 
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert        mvl
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500        500
+system          >   min     150000   10000000     150000     150000   10000000    2000000    1000000      10000        500       1000      20000     100000        250        250         50         25         10
+system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250         10
+system          >   stp     100000    1000000     100000     100000    5000000    1000000    1000000      10000        250       1000      10000      10000        250        250         50         25         10
+system          > 
+system          >   mem     250000    8539600     150000              10000000    5000000    1000000      10000        500       1000      20000      10000        250        250         50        500         10
+system          >   itm         16          1         16                     9          8          1         32         32        116          4         16          8          8         28         72        116
+system          >   ext          0          0          0          0       5440          0          0          0          0          0          0          0     587484         96          0          0          0
+system          >   all    4000000    8539600    2400000          1   90005440   40000000    1000000     320000      16000     116000      80000     160000     589484       2096       1400      36000       1160
+system          > 
+system          >   ini    2150736     977320          0      53567          0     591100                                                                                       0                                 
+system          >   ptr     193165                 56228     193148               3626975          0          0          0          0          0          0          4          1         28         11          0
+system          >   top     193166                495867     262146      33361    4451551        398         41          7         12         43        299        250        250         50        500         10
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          > 
+system          >   current input type    : initial
+system          > 
+system          >   approximate memory    : 149352780 (142 MB)
+system          > 
+system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 8
+system          > 
+system          >   luabytecode registers : 1028
+system          >   luabytecode bytes     : 16464 (0 MB)
+system          >   luastate bytes now    : 127176375 (121 MB)
+system          >   luastate bytes max    : 127176375 (121 MB)
+system          > 
+system          >   file callbacks        : 1018
+system          >   saved callbacks       : 2994
+system          >   direct callbacks      : 92
+system          >   function callbacks    : 110393
+system          >   value callbacks       : 613772
+system          >   message callbacks     : 0
+system          >   bytecode callbacks    : 634
+system          > 
+system          >   mp instances          : 1
+system          >   mp estimated memory   : 0 (0 MB)
+system          >   mp file callbacks     : 16004
+system          >   mp text callbacks     : 0
+system          >   mp script callbacks   : 443
+system          >   mp log callbacks      : 38
+system          > 
+system          >   total callbacks       : 728903
+system          >   mp total callbacks    : 16485
+system          >   backend callbacks     : 0
+system          > 
+system          >   linebreak statistics  : context      calls     first    second     final  passonly   subpass
+system          > 
+system          >   linebreak statistics  : normal         264       264         0        34         0         0
+system          >   linebreak statistics  : vbox           179       179         0         0         0         0
+system          > 
+system          >   linebreak statistics  :                443       443         0        34         0         0
+system          > 
+system          >   linebreak statistics  : brokenlines        4
+system          >   linebreak statistics  : textlines        277
+system          > 
+system          >   hyphenation state     : checked         444
+system          >   hyphenation state     : hyphenated      381
+system          >   hyphenation state     : lists           444
+system          >   hyphenation state     : nothing         314
+system          >   hyphenation state     : words           522
+system          > 
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: readable: '/Users/juliusross/context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e' | readable+writable: '/var/folders/39/n4hml8nx3t30zm26fvwkxc2h0000gn/T/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e'
+mkxl run stats  > resource resolver: loadtime 0.005 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 41 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 528 modules (0.147 sec), 106 tables (0.009 sec), 634 chunks (0.156 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1908, freed: 1, unreachable: 1907
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 9 lists of 454
+mkxl run stats  > node memory usage: 6 attribute, 3 attributelist, 1 dir, 9 fontspec, 1 glue, 135 gluespec, 1 kern, 661 mathspec, 2 penalty, 56 specification, 2 temp
+mkxl run stats  > node list callback tasks: 17 unique task lists, 15 instances (re)created, 2953 calls
+mkxl run stats  > driver time: 0.020 seconds 
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: resumed with value 0.79670503252700453
+mkxl run stats  > jobdata time: 0.003 seconds saving, 0.001 seconds loading
+mkxl run stats  > callbacks: file: 1018, saved: 2994, direct: 92, function: 110393, value: 613772, message: 0, bytecode: 634, late 0, total: 728903 (48594 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > interactive elements: 0 references, 62 destinations
+mkxl run stats  > loaded fonts: 3 files: lmmono10-regular.otf, playfairromanvf.ttf, somervillemathvf.ttf
+mkxl run stats  > font engine: otf 3.156, afm 1.541, tfm 1.000, 4 instances, load time 0.069 seconds 
+mkxl run stats  > metapost: 0.112 seconds, loading: 0.042, execution: 0.042, n: 6, average: 0.033, instances: 1, luacalls: 16485 (file: 16004, text: 0, script: 443, log: 38), memory: 0.000 M
+mkxl run stats  > math tweaking time: 0.000 seconds, 3 math goodie tables
+mkxl run stats  > font embedding time: 0.007 seconds, 4 fonts
+mkxl run stats  > result saved in file: somerville-bubble-integrals.pdf, compresslevel 1, objectcompresslevel 3, 27 streams, 0 uncompressed, 26 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20260923, format id: 736, memory mode: 1, compiler: clang, cversion: 23
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 193148 control sequences, 262144 hash slots, 56228 misses, approximate memory usage: 142 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 125 MB, ctx: 121 MB, max: 121 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 3.922 seconds, 15 processed pages, 15 shipped pages, 3.825 pages/second

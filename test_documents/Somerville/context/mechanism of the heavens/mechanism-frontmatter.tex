@@ -1,0 +1,86 @@
+% !TEX program = context
+% !TEX root = mechanism-frontmatter.tex
+%
+% Mary Somerville, Mechanism of the Heavens (1831).
+% Title, printer's imprint, and dedication: original PDF pages 7--9.
+% Run here: context mechanism-frontmatter.tex
+% Transcribes the printed matter, omitting library stamps and handwriting.
+
+\environment mechanism-environment
+\setupinteraction[state=stop,
+  title={Mechanism of the Heavens - Frontmatter},author={Mary Somerville}]
+
+\setupSomerville
+  {Width=100,Weight=400,Optical Size=36,Math Weight=700,Arrow Length=200,Arrow Head=100,Integral Slant=100}
+  {somerville-front-title}
+\setupSomerville
+  {Width=100,Weight=400,Optical Size=18,Math Weight=700,Arrow Length=200,Arrow Head=100,Integral Slant=100}
+  {somerville-front-heading}
+\setupSomerville
+  {Width=100,Weight=500,Optical Size=7,Math Weight=700,Arrow Length=200,Arrow Head=100,Integral Slant=100}
+  {somerville-front-small}
+
+\definelayout[mechanism-front]
+  [backspace=0mm,topspace=0mm,width=150mm,height=240mm,
+   header=0mm,headerdistance=0mm,footer=0mm]
+\definemakeup[mechanism-front]
+  [page=yes,doublesided=no,top=,bottom=,pagestate=stop]
+
+% Place a centered line by its top edge, measured from the page top.
+\unexpanded\def\FrontLine#1#2{%
+  \vbox to 0pt{\kern#1\hbox to \textwidth{\hss#2\hss}\vss}%
+}
+\unexpanded\def\FrontRule#1#2{%
+  \FrontLine{#1}{\blackrule[width=#2,height=.3pt,depth=0pt]}%
+}
+
+\ifdefined\MechanismCombined\else\starttext\fi
+
+% Original PDF page 7: title page.
+\startmakeup[mechanism-front]
+\offinterlineskip
+\FrontLine{28mm}{{\switchtobodyfont[somerville-front-title,21pt]MECHANISM}}
+\FrontLine{53mm}{{\switchtobodyfont[somerville-front-small,7pt]OF}}
+\FrontLine{73mm}{{\switchtobodyfont[somerville-front-title,25pt]THE HEAVENS.}}
+\FrontLine{104mm}{{\switchtobodyfont[somerville-front-small,7pt]BY}}
+\FrontLine{120mm}{{\switchtobodyfont[somerville-front-heading,15pt]MRS. SOMERVILLE.}}
+\FrontLine{193mm}{{\switchtobodyfont[somerville-front-heading,13pt]LONDON:}}
+\FrontLine{204mm}{{\switchtobodyfont[somerville-front-heading,10.5pt]JOHN MURRAY, ALBEMARLE-STREET.}}
+\FrontRule{212mm}{6mm}
+\FrontLine{215mm}{{\switchtobodyfont[somerville-front-small,7pt]MDCCCXXXI.}}
+\stopmakeup
+
+% Original PDF page 8: printer's imprint on the title verso.
+\startmakeup[mechanism-front]
+\offinterlineskip
+\FrontLine{111mm}{{\switchtobodyfont[somerville-front-small,7pt]LONDON:}}
+\FrontLine{115mm}{{\switchtobodyfont[somerville-front-small,7pt]PRINTED BY WILLIAM CLOWES,}}
+\FrontLine{119mm}{{\switchtobodyfont[somerville-front-small,7pt]Stamford-street.}}
+\stopmakeup
+
+% Original PDF page 9: dedication. Preserve the original wording and date.
+\startmakeup[mechanism-front]
+\offinterlineskip
+\FrontLine{39mm}{{\switchtobodyfont[somerville-front-small,7pt]TO}}
+\FrontLine{51mm}{{\switchtobodyfont[somerville-front-heading,13pt]HENRY, LORD BROUGHAM AND VAUX,}}
+\FrontLine{61mm}{{\switchtobodyfont[somerville-front-small,7pt]\it LORD HIGH CHANCELLOR OF GREAT BRITAIN,}}
+\FrontRule{72mm}{14mm}
+\vbox to 0pt{\kern82mm
+  \hbox to \textwidth{\hss\vbox{\hsize=116mm
+    \switchtobodyfont[somerville-heavens,11pt]
+    \setupinterlinespace[line=20pt]
+    \setupalign[normal,verytolerant]
+    \setupindenting[4mm,yes,first]
+    This Work, undertaken at His Lordship's request, is inscribed as a testimony of the Author's esteem and regard.\par
+    \blank[5mm]
+    Although it has unavoidably exceeded the limits of the Publications of the Society for the Diffusion of Useful Knowledge, for which it was originally intended, his Lordship still thinks it may tend to promote the views of the Society in its present form. To concur with that Society in the diffusion of useful knowledge, would be the highest ambition of the Author,\par
+    \blank[6mm]
+    \rightaligned{MARY SOMERVILLE.}
+    \blank[19mm]
+    \setupindenting[no]
+    {\it Royal Hospital, Chelsea,}\par
+    \hskip8mm {\it 21st July,} 1831.\par
+  }\hss}\vss}
+\stopmakeup
+
+\ifdefined\MechanismCombined\else\expandafter\stoptext\fi

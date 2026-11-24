@@ -1,0 +1,90 @@
+% !TEX program = context
+% !TEX root = somerville-ssty-comparison.tex
+
+\definefontfeature[mathextra][ss15=no]
+
+% Allow the proof to use reduced big-operator exports.
+\definefontfeature[mathematics][mathematics][mathexpansion=no]
+\definefontfeature[math][math][mathexpansion=no]
+\definefontfeature[math-text][math-text][mathexpansion=no]
+\definefontfeature[math-script][math-script][mathexpansion=no]
+\definefontfeature[math-scriptscript][math-scriptscript][mathexpansion=no]
+
+\input type-imp-somerville.mkxl
+
+\edef\SomervilleFontDirectory{\cldcontext{os.getenv("HOME")}/Documents/fontoutputs}
+\definefontfeature[agate-comparison-axes]
+  [axis={\cldcontext{userdata.somervilleaxes("instance=microsemicondensedsemilight")}},
+   goodies={somerville}]
+
+\unexpanded\def\DefineComparisonTypeface#1#2{%
+  \starttypescript[math][#1]
+    \definefontsynonym[MathRoman]
+      [file:\SomervilleFontDirectory/#2]
+      [features={math\mathsizesuffix,mathextra,agate-comparison-axes}]
+  \stoptypescript
+  \definetypeface[#1][rm][serif][somerville-micro-semicondensed-semilight-text][default]%
+  \definetypeface[#1][mm][math][#1][default]%
+}
+
+\DefineComparisonTypeface{agate-current}{SomervilleMathVF.ttf}
+\DefineComparisonTypeface{agate-backup}{SomervilleMathVF-withoutssty.ttf}
+\setupbodyfont[somerville-micro-semicondensed-semilight,8pt]
+
+\setupcolors[pagecolormodel=rgb]
+\definecolor[overlay-current][r=.05,g=.43,b=.73,a=1,t=.58]
+\definecolor[overlay-backup][r=.87,g=.21,b=.37,a=1,t=.58]
+
+% Formula from somerville-letter-test.tex, lines 429-449.
+\startbuffer[comparison-formula]
+  \sum[size=26pt]{\frac{
+    \bigcup{\frac{\bigcap{A_i}}{\bigsqcup{B_i}}}
+  }{
+    \bigoplus{\frac{\bigotimes{C_k}}{\bigsqcap{D_l}}}
+  }}
+  \prod[size=26pt]{\frac{
+    \bigodot{\frac{\bigcup{E_i}}{\bigtimes{F_j}}}
+  }{
+    \coprod{\frac{\sum{a_k}}{\prod{b_l}}}
+  }}
+  \bigoplus[size=28pt]{\frac{
+    \bigsqcup{\frac{\bigcup[size=4pt]{G_i}}{\bigcup{H_i}}}
+  }{
+    \bigotimes{\frac{\bigsqcap{K_k}}{\bigodot{L_l}}}
+  }}\biguplus[size=26pt]{\frac{
+    \bigsqcap{\frac{M_i}{N_j}}
+  }{
+    \sum{\frac{P_k}{Q_l}}
+  }}\text{.}
+\stopbuffer
+
+\starttext
+\subject{Agate SemiCondensed SemiLight, 8 pt}
+
+\start
+  \switchtobodyfont[agate-current,8pt]
+  \subsubject{Current export}
+  \startformula\getbuffer[comparison-formula]\stopformula
+\stop
+
+\start
+  \switchtobodyfont[agate-backup,8pt]
+  \subsubject{Backup without SSTY}
+  \startformula\getbuffer[comparison-formula]\stopformula
+\stop
+
+\subsubject{Overlay}
+\color[overlay-current]{Current export}\quad
+\color[overlay-backup]{Backup without SSTY}
+\blank[medium]
+
+% Both layers share a display-style baseline and horizontal center.
+\noindent\hbox{%
+  \rlap{\hbox to \hsize{\hss
+    \switchtobodyfont[agate-current,8pt]%
+    \color[overlay-current]{\dm{\getbuffer[comparison-formula]}}\hss}}%
+  \hbox to \hsize{\hss
+    \switchtobodyfont[agate-backup,8pt]%
+    \color[overlay-backup]{\dm{\getbuffer[comparison-formula]}}\hss}%
+}\par
+\stoptext

@@ -11,102 +11,61 @@ This is an experiment with a variable math font.  Variable math is not an openty
 
 The goal here was to explore.  In addition to this experimental font we have
 - Notes on how this font was made [Creation.md](Creation.md)
-- A simple tool for editing the math constants in a variable font (to be uploaded)
 - Some AI-created Glyphs scripts that were used to make this font, and could be used in the future
 
 The idea behind the above glyph scrips is that many mathematical glyphs can be created automatically (or semiautomatically) from a small number of core component glyphs, which makes organizing and maintaining easier and could be used to assit creation of math companion fonts in the future.
 
 ## Features
-
-See the [Somerville sample] document to see some of the features, along with a description of the axes.
-
 There are some features in Somerville that are not present in any existing math font I am aware of:
 - It is a variable font with 3 axes; weight, width, optical size
-- Like many math fonts, Somerville has size variants for integrals and brackets.  But Somerville also has many size variants for big operators such as summation, product, radical, coproduct, times, oplus, otimes, odot.   See the test page.
-- You can make the bold letters more bold (Math Weight axis)
-- Horizontal arrows have additional variation (Arrow Length axis,  Arrow Head Axis).  
+- Like many math fonts, Somerville has size variants for integrals and brackets.  But Somerville also has many size variants for big operators such as summation, product, radical, coproduct, times, oplus, otimes, odot. 
+- You can make the mathematics bold letters heavier or lighter (Math Weight axis)
+- Horizontal arrows have additional variation (Arrow Length,  Arrow Head).  
 - Integrals have addition variation (Integral Slant axis).
 
+## Guide
 
-## Use in ConTeXt
- Variable math is supported in the most recent versions of ConTeXt.
- 
-```
-\unexpanded\def\setupSomerville#1#2{%
-  \definefontfeature[#2-math-axes]
-    [axis={#1},goodies=somerville]%
-  \definefontfeature[#2-text-axes][default]
-    [axis={#1}]%
-  \starttypescript[serif][#2-text]
-    \definefontsynonym[Serif]
-      [file:PlayfairRomanVF.ttf]
-      [features=#2-text-axes]
-    \definefontsynonym[SerifItalic]
-      [file:PlayfairItalicVF.ttf]
-      [features=#2-text-axes]
-  \stoptypescript
-  \starttypescript[math][#2]
-    \definefontsynonym[MathRoman]
-      [file:SomervilleMathVF.ttf]
-      [features={math\mathsizesuffix,mathextra,#2-math-axes}]
-  \stoptypescript
-  \definetypeface[#2][rm][serif][#2-text][default]%
-  \definetypeface[#2][mm][math][#2][default]%
-}
 
-% Valid ranges:
-% Width: 95..113, Weight:360..900,Math Weight:0..100,Arrow Length:100..200,
-% Arrow Head: 100..200, Integral Slant:0..100
+## Sample Documents
 
-\setupSomerville
-  {Width=100,Weight=400,Optical Size=12,Math Weight=660,Arrow Length=200,Arrow Head=100,integral slant=0}
-  {somerville-custom} 
-\setupbodyfont[somerville-custom,12pt]
+## Building a naryunion proof
 
-\starttext
-Here is some text {a^2+b^2=c^2} and a formula
-\startformula
-\int_0^1 f(x) dx =0
-\stopformula
-```
+Run `sources/build.sh --bigoperators-only` to export a reduced proofing font before
+the usual axis conversion, ConTeXt build, and Skim preview. The separate
+`sources/naryunion_prefilter.py` runs inside the Glyphs CLI and only changes its
+in-memory font; it never saves the source package. It retains the source's
+exporting letters and numerals, `= + −`, round union/intersection and their n-ary forms,
+the n-ary square union/intersection, all their size and ss15 variants, recursive
+components, and space/.notdef where present. Small square union/intersection
+are retained if present in the source (currently they are absent). Other numbers and symbols are
+removed from the CLI's in-memory font before variable export, so Glyphs avoids
+preparing their outlines. They are never removed from the source package.
+Documents testing those glyphs will show missing characters or fallbacks.
+Feature substitutions referring to omitted glyphs are removed; unsupported
+complex features are disabled for this proofing mode. Running `sources/build.sh`
+without the option follows the normal export path.
+The letter test disables math expansion because its default vector assumes
+omitted symbols exist. This also allows direct editor builds with a reduced font.
 
-## Use in other systems (e.g. LuaLaTeX)
-To use SomerVille in other typesetting systems, create static fonts with the script below (requires [fontTools](https://github.com/fonttools/fonttools)). Place `SomervilleMathVF.ttf`, `PlayfairRomanVF.ttf`, and `PlayfairItalicVF.ttf` in the same input folder:
+For an even smaller variable proof, use `sources/build.sh --union-only`. It also
+excludes letters, retaining only the union family, its components, and font
+infrastructure. Other math in the sample will be missing or use fallbacks.
+Both subset modes preserve all masters and variable axes, and keep autohinting.
+After axis conversion, `sources/fix_variable_font_bounds.py` expands the generated
+TTF's `head` bounding box to enclose variable outlines. This prevents ConTeXt/PDF
+clipping of wide instances (notably the largest union), without changing glyph
+outlines, advances, or variation data. The calculation includes sparse gvar
+deltas and component transforms; it does not modify the Glyphs source.
 
-```sh
-python3 instantiate_somerville.py "Weight=700" "Math Weight=900" \
-"Optical Size=12" "Arrow Head=200" "Arrow Length=150" -o Somerville
-```
-
-This will create `SomervilleRoman.ttf`, `SomervilleItalic.ttf`, and `SomervilleMath.ttf`.   In LuaLaTeX this can be used as follows:
-
-```
-\documentclass{article}
-\usepackage{unicode-math}
-
-\setmainfont{SomervilleRoman.ttf}[ItalicFont=SomervilleItalic.ttf]
-%% Bold and BoldItalics are not done just yet **fixme**
-\setmathfont{SomervilleMath.ttf}
-
-\begin{document}
-
-Here is some text \emph{and some emphasized text}:
-
-Inline mathematics: $a^2+b^2=c^2$, $e^{i\pi}+1=0$,
-$h'(x)$, $u''(x)$, $x_{i_j}^{n+1}$, and $\sqrt{1+x^2}$.
-
-\[
-  x=\frac{-b\pm\sqrt{b^2-4ac}}{2a},
-  \qquad
-  \frac{1}{1+\frac{1}{1+x}},
-  \qquad
-  \sqrt[3]{1+\sqrt{1+x^2}}.
-\]
-
-\end{document}
-```
+Filter checks: `sources/venv/bin/python -m unittest discover -s sources -p test_naryunion_prefilter.py`.
 
 
 ## About the Name
 [Mary Somerville](https://en.wikipedia.org/wiki/Mary_Somerville) was a Scottish mathematician.
 
+
+Batch instantiation validates all requested names before generating fonts. An unknown name stops the command with an error and no output fonts are published. Axis overrides apply to every selected instance. For multiple instances, `-o NAME` produces `SomervilleMathNAMESTYLE.ttf` and `SomervilleNAMESTYLE.fontspec`. Without `-o`, `--allinstances` uses the standard instance names.
+
+Use `--output-dir DIR` to save the generated fonts in a directory, which is created if needed. It works with individual instances, batches, and `--allinstances`. When combining it with `-o`, use a name without a directory, for example `--output-dir ./static-fonts -o Custom`.
+
+Output validation is optional: add `--validate` to reopen and check each saved font before publishing it. Each export receives its final filename immediately after saving (and validation, if enabled). Completed exports remain if a later export fails. Input checks, MATH variation resolution, and overwrite protection always apply.

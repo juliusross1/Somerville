@@ -1,0 +1,46 @@
+open source     > level 1, order 1, name 'cont-yes.mkiv'
+system          > 
+system          > ConTeXt  ver: 2026.10.01 18:42 LMTX  fmt: 2026.10.22  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 2, order 2, name '/Users/juliusross/context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname '/tmp/show-sample-vertical-test', input '/tmp/show-sample-vertical-test.tex', result '/tmp/show-sample-vertical-test'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 2, order 3, name '/tmp/show-sample-vertical-test.tex'
+open source     > level 3, order 4, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=16000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=2000000 | min=2000000 | ptr=2000001 | set=10000000 | stp=1000000 | top=2000000
+tex memory      > bumping category 'pool' succeeded, details: all=6202444 | ext=0 | ini=977320 | itm=1 | max=100000000 | mem=6202444 | min=10000000 | ptr=-1 | set=10000000 | stp=1000000 | top=-1
+tex memory      > bumping category 'token' succeeded, details: all=24000000 | ext=0 | ini=591100 | itm=8 | max=10000000 | mem=3000000 | min=2000000 | ptr=3000001 | set=10000000 | stp=1000000 | top=3000000
+close source    > level 3, order 4, name 'type-imp-somerville.mkxl'
+fonts           > goodies > goodie file 'somerville-heavy-regular' is not found (suffixes: lfg lua)
+structure       > sectioning > title @ level 2 : 0.0 -> Somerville Guide
+fonts           > bodyfont '30pt' is defined (can better be done global (maybe use \usebodyfont)
+pack quality    > overfull hbox at line 67 - 68 in file '/tmp/show-sample-vertical-test.tex':  The first part of this document showcases the features; the second part describes (1.04967pt)
+structure       > sectioning > section @ level 3 : 0.0.1 -> Variation
+pack quality    > overfull hbox at line 71 - 72 in file '/tmp/show-sample-vertical-test.tex': Somerville is an experiment in combining opentype variation and the opentype math- (9.4388pt)
+tex error       > tex error on line 87 in file /tmp/show-sample-vertical-test.tex: 
+77     \item Variable integral slant
+78     \stopitemize
+79     
+80     \startbuffer[mathsampleone]
+81     Lorem ipsum dolor sit amet, \m{x^n + y^n=z^n} consectetur adipiscing elit, sed \m{|\dot{v}|} eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, \m{\fenced[angle]{a,b}=0} quis nostrud exercitation ullamco laboris nisi ut \m{ \{ x: x<2 \}} aliquip ex ea commodo consequat.
+82     \startformula
+83     \Delta(s) = \sum{\frac{1}{n^s}}_{n=1}^{\infty} = \prod{\fenced[parenthesis]{1-\frac{1}{p^s}}^{-1}}_{p\ \mathrm{prime}}, \qquad \mathrm{Re}(s)>1.
+84     \stopformula
+85     \stopbuffer
+86     
+87 >>  \ShowSample[mathsampleone][Sample label][julius]
+88     
+89     
+90     % \startitemize
+91     % \item Variable weight  (SemiLight, Regular, Medium, SemiBold, Bold, ExtraBold, Black).
+92     % \item Variable width  (SemiCondensed, Regular, SemiExpanded).
+93     % \item Variable optical size (Micro, Minuscule, Miniature, Caption, Regular, SubHeading, Trumpet, Headline, Display, Titling, Hairline, Needlepoint).
+94     % \item Variable mathematics bold weight
+95     % \item Variable arrow length and size
+96     % \item Variable integral slant
+97     % \stopitemize

@@ -6,7 +6,7 @@
 \setupbodyfontenvironment[default][em=italic]
 
 \setupSomerville
-  {Width=97,Weight=400,Optical Size=12,Math Weight=700,Arrow Length=200,Arrow Head=100,Integral Slant=0}
+  {Width=100,Weight=300,Optical Size=12,Math Weight=700,Arrow Length=200,Arrow Head=100,Integral Slant=0}
   {somerville-body}
 % Separate variable-font instance for heavier text and math in headings.
 
@@ -14,20 +14,38 @@
   {Width=100,Weight=700,Optical Size=24,Math Weight=900,Arrow Length=200,Arrow Head=100,Integral Slant=0}
   {somerville-headings}
 
+\setupSomerville
+  {Width=100,Weight=700,Optical Size=96,Math Weight=900,Arrow Length=200,Arrow Head=100,Integral Slant=0}
+  {somerville-title}
+
 \setuphead[title]
-  [style={\switchtobodyfont[somerville-headings]\tfc}]
+  [align=middle,
+   style={\switchtobodyfont[somerville-title,30pt]\it}]
+\definefontfeature[somerville-lining-figures][lnum=yes,onum=no]
 \setuphead[subject]
-  [style={\switchtobodyfont[somerville-headings]\tfb}]
+  [incrementnumber=yes,
+   number=yes,
+   sectionsegments=current,
+   sectionstopper=.,
+   numberstyle={\switchtobodyfont[somerville-headings]\tfb\addff{somerville-lining-figures}},
+   style={\switchtobodyfont[somerville-headings]\tfb}]
 
 \setupbodyfont[somerville-body,12pt]
 
 \starttext
-\title{Somerville Sample: \m{E=mc^2}}
+\title{Lorem Ipsum Mathematicum}
 \blank[small]
 
-Here is some text {\it some italics} and {\bf some bold} and {\bi some bold italics}
+%Here is some text {\it some italics} and {\bf some bold} and {\bi some bold italics}
 
-Comparisons
+%Comparisons
+
+%{\setupbodyfont[stix two] \m{u'=f' + u^2 + M^2}}
+
+%{\setupbodyfont[modern] \m{u'=f'+ u^2 + M^2}}
+
+
+\startbuffer[basics]
 
 {\it text italics} \m{math italics} \crlf
 {\bf text bold} \m{\bf math bold} \crlf
@@ -56,11 +74,11 @@ Nested scripts: \m{|z|=|y|=|f| = f_i^2+x_{i_j}^{n+1}+e^{x^2}}.
   \sqrt{1+\sqrt{1+\sqrt{x}}}
 \stopformula
 
-\subject{Integrals, sums, and products: \m{\int{f(x)\,\mathrm{d}x}_{a}^{b}}}
+\subject{Integrals, sums, and products: \m{\int{f(x)\mathrm{d}x}_{a}^{b}}}
 \startformula
-  \int{x^2\,\mathrm{d}x}_{0}^{1}=\frac{1}{3}
+  \int{x^2\mathrm{d}x}_{0}^{1}=\frac{1}{3}
   \qquad
-  \int{e^{-x^2}\,\mathrm{d}x}_{-\infty}^{\infty}=\sqrt{p}
+  \int{e^{-x^2}\mathrm{d}x}_{-\infty}^{\infty}=\sqrt{p}
 \stopformula
 \startformula
   \sum{k}_{k=1}^{n}=\frac{n(n+1)}{2}
@@ -84,7 +102,7 @@ Nested scripts: \m{|z|=|y|=|f| = f_i^2+x_{i_j}^{n+1}+e^{x^2}}.
 \startformula
   \lim_{h\to0}\frac{f(x+h)-f(x)}{h}=f'(x)
   \qquad
-  \widehat{f}(x)=\int{f(x)e^{-2p i xx}\,\mathrm{d}x}_{-\infty}^{\infty}
+  \widehat{f}(x)=\int{f(x)e^{-2p i xx}\mathrm{d}x}_{-\infty}^{\infty}
 \stopformula
 \startformula
   u'+v'=w'
@@ -118,26 +136,44 @@ The identical limit letters make horizontal shifts easier to compare.
 \IntegralCorrectionTest{18pt}
 \IntegralCorrectionTest{36pt}
 \IntegralCorrectionTest{48pt}
-
-\page
-\setupbodyfont[somerville-regular-black]
-\subject{Miscellanea \emph{mathematica}: \m{e^{ip}+1=0}}
+\stopbuffer
 
 
-Lorem ipsum dolor sit amet, \m{x\in{R}} consectetur adipiscing elit.
-Sed vestibulum \m{[0,1]}, ut \m{e>0} fermentum \emph{aculis ornare}.
-Curabitur consequat \m{a_n=1/(n+1)} neque vitae sollicitudin;
-pellentesque habitant \m{b_n=(-1)^n a_n} morbi tristique senectus et netus.
+\let\mathbb\mathbf
+Lorem ipsum dolor sit amet, \m{x\in{\mathbb R}} consectetur adipiscing elit.
+Sed vestibulum \m{[0,1]}, ut \m{e>0} fermentum \emph{aculis ornare}
+\startformula
+  \Delta = \frac{1}{3} + \frac{1}{1} + \frac{1}{4}
+  + \frac{1}{1} + \frac{1}{5} + \frac{1}{9} + \frac{1}{2}
+  + \frac{1}{6} + ... 
+\stopformula
+sotum.  Curabitur consequat 1067 ospare, \m{a_n=1/(n+1)} neque vitae sollicitudin;
+pellentesque habitant 57, \m{b_n=(-1)^n a_n} morbi tristique senectus et netus.
 Praesent \m{N\geq1}, commodo viverra \m{s_N=\sum{a_n}_{n=1}^{N}} quisque feugiat
 lobortis sapien. Nulla facilisi: etiam \m{d>0} tincidunt augue,
 vel \m{M<\infty} porttitor massa, donec malesuada hendrerit arcu.
-Suspendisse finibus ipsum nec turpis sodales, non posuere justo dictum.
+Suspendisse finibus 23 ipsum nec turpis sodales, non posuere justo dictum:
 \startformula
-  \int{x^n\,\mathrm{d}x}_{0}^{1}=\frac{1}{n+1},
+ 0= \fenced[angle][middle="002C]{
+    \fenced[bracket]{\startmatrix
+      \NC 1 \NC a \NC 2 \NR
+      \NC a \NC 3 \NC b \NR
+      \NC 2 \NC b \NC c \NR
+    \stopmatrix} \fence
+    \fenced[bracket]{\startmatrix
+      \NC 0  \NC x  \NC 4 \NR
+      \NC -x \NC 0  \NC y \NR
+      \NC -4 \NC -y \NC 0 \NR
+    \stopmatrix}
+  }=2
+\stopformula
+etum
+\startformula
+  \int{x^n\mathrm{d}x}_{0}^{1}=\frac{1}{n^2+1},
   \qquad
-  \sum{\frac{z^n}{n!}}_{n=0}^{\infty}=e^z,
+  \sum{\frac{z^n}{n!}}_{n=0}^{\infty}=0,
   \qquad
-  \lim_{n\to\infty}\left(1+\frac{t}{n}\right)^n=e^t.
+  \lim_{n\to\infty}\left(1+\frac{t}{n}\right)^n=t^e.
 \stopformula
 
 Vestibulum ante ipsum primis in faucibus, \m{f} mollis nunc
@@ -147,10 +183,10 @@ ligula, vel \emph{fermentum arcu dignissim sed}. Maecenas
 \m{a<b} et \m{g\leq d}, sollicitudin ornare nibh,
 quisque consequat \m{\frac{p}{q}} vitae facilisis
 \m{\sqrt{1+\sqrt{1+x^2}}}. Sed posuere, nunc et semper, consequat
-urna consectetur, aliquam erat volutpat, etiam porta tellus.
+urna consectetur, aliquam erat volutpat, $1/a + 1/b = 1/(a+b)$ etiam porta tellus:
 \startformula
-  u'(a) = f(a+h)=f(a)+hf'(a)+\frac{h^2}{2!}f''(a)
-  +\frac{1}{2}\int{(h-t)^2f'''(a+t)\,\mathrm{d}t}_{0}^{h}.
+  f(a+h)=f(a)+h(f')^2(a)+\frac{h^2}{2!}(f'')^3(a)
+  +\frac{1}{2}\int{\frac{(h-t)^2}{f'''(a+t)}\mathrm{d}t}_{0}^{h}.
 \stopformula
 
 Integer pretium \m{(m,n)\in\mathbb{Z}^2} vestibulum magna, dictum
@@ -168,7 +204,12 @@ Phasellus \m{A\subseteq B\subseteq X} porttitor ornare;
   \sum{z^k}_{k=0}^{N}=\frac{1-z^{N+1}}{1-z}.
 \stopformula
 
-Aliquam erat volutpat. Sit \m{V=\mathbb{R}^3}, etiam
+Aliquam erat volutpat,
+\startformula
+\left.\widetilde{\mathrm{Ext}_A^{d-i}(M,A)}
+\right|_{\mathrm{PSpec} A} = 0.
+\stopformula
+Sit \m{V=\mathbb{R}^3}, etiam
 \m{u,v\in V}, atque \m{\langle u,v\rangle=\sum{u_jv_j}_{j=1}^{3}} nunc vehicula.
 Nulla \m{\|u\|=\sqrt{\langle u,u\rangle}} facilisis eleifend,
 sed \m{t} tempus fermentum. Vestibulum
@@ -201,11 +242,11 @@ ligula praesent. Donec dignissim blandit massa,
 ab \m{-\infty} ad \m{+\infty}, commodo arcu
 pellentesque habitant morbi tristique senectus et netus.
 \startformula
-  \int{r(x)\,\mathrm{d}x}_{-\infty}^{\infty}=1,
+  \int{r(x)\mathrm{d}x}_{-\infty}^{\infty}=1,
   \qquad
-  \int{xr(x)\,\mathrm{d}x}_{-\infty}^{\infty}=0,
+  \int{xr(x)\mathrm{d}x}_{-\infty}^{\infty}=0,
   \qquad
-  \int{x^2r(x)\,\mathrm{d}x}_{-\infty}^{\infty}=1.
+  \int{x^2r(x)\mathrm{d}x}_{-\infty}^{\infty}=1.
 \stopformula
 
 Phasellus consectetur \m{\sin(nx)} et \m{\cos(nx)}
@@ -216,9 +257,9 @@ et \m{2p}; etiam \m{g(x)=e^{-x^2}}
 urna sodales, finibus nisl vitae, porta neque.
 Ut enim ad minim veniam, cursus commodo facilisis consequat.
 \startformula
-  \widehat f(n)=\frac{1}{2p}\int{f(x)e^{-inx}\,\mathrm{d}x}_{-p}^{p},
+  \widehat f(n)=\frac{1}{2p}\int{f(x)e^{-inx}\mathrm{d}x}_{-p}^{p},
   \qquad
-  \frac{1}{2p}\int{|f(x)|^2\,\mathrm{d}x}_{-p}^{p}
+  \frac{1}{2p}\int{|f(x)|^2\mathrm{d}x}_{-p}^{p}
     =\sum{|\widehat f(n)|^2}_{n\in\mathbb{Z}}.
 \stopformula
 
@@ -226,13 +267,13 @@ Nunc varius, \m{u=u(x,t)} sollicitudin \m{\partial_tu=k\partial_x^2u}
 cum \m{k>0}. Praesent tincidunt augue vel massa
 blandit, malesuada arcu semper \m{t\to\infty}.
 Etiam \m{\nabla f}, interdum \m{Df}, atque
-\m{\partial^2f/(\partial x\,\partial y)} consequat
+\m{\partial^2f/(\partial x\partial y)} consequat
 nibh vestibulum. Aenean \m{u_0\in L^1(\mathbb{R})}
 finibus lorem, pellentesque sapien, dignissim semper magna.
 \startformula
   u(x,t)=\frac{1}{\sqrt{4pk t}}
     \int{\exp\left(-\frac{(x-y)^2}{4k t}\right)
-    u_0(y)\,\mathrm{d}y}_{-\infty}^{\infty},
+    u_0(y)\mathrm{d}y}_{-\infty}^{\infty},
   \qquad t>0.
 \stopformula
 
@@ -243,6 +284,13 @@ porttitor \m{X\to Y} donec \m{Y\to Z}.
 Sive \m{p\Rightarrow q} vel \m{p\Leftrightarrow q}, posuere
 ligula \m{0<e\ll1}, malesuada cursus tellus,
 etiam finibus \m{\sqrt{a^2+b^2}\leq|a|+|b|}.
+
+
+\subject{Declaratio intelligentiae artificialis}
+
+In hoc opusculo, Chattum Gepettum adhibitum est ad verba componenda, sententias ordinandas, et errores corrigendos. Auctor omnia recognovit atque approbavit; responsabilitas finalis penes auctorem manet.
+
+
 
 \subject{De campis electromagneticis: \m{\nabla\times\mathbf{E}=-\partial_t\mathbf{B}}}
 
@@ -266,18 +314,18 @@ sollicitudin lorem, vitae elementum risus neque sed justo.
 \stopformula
 
 Praesent integralia \m{\partial V} et \m{\partial S} circumveniunt,
-dum \m{\mathbf{n}} normalis, \m{\mathrm{d}\boldsymbol{\ell}} tangentialis,
-et \m{Q_V=\int{r\,\mathrm{d}V}_{V}} massa verborum ornant.
+dum \m{\mathbf{n}} normalis, \m{\mathrm{d}{\bf u}} tangentialis,
+et \m{Q_V=\int{r\mathrm{d}V}_{V}} massa verborum ornant.
 Aenean quis lacus vitae sapien bibendum cursus. Integer ut augue
 convallis, ornare arcu sed, dictum mauris; etiam \m{F_B}
 interdum varius, sed \m{e_0>0} semper constans.
 \startformula
-  \int{\mathbf{E}\cdot\mathbf{n}\,\mathrm{d}S}_{\partial V}
-    =\frac{1}{e_0}\int{r\,\mathrm{d}V}_{V},
+  \int{\mathbf{E}\cdot\mathbf{n}\mathrm{d}S}_{\partial V}
+    =\frac{1}{e_0}\int{r\mathrm{d}V}_{V},
   \qquad
-  \oint{\mathbf{E}\cdot\mathrm{d}\boldsymbol{\ell}}_{\partial S}
+  \oint{\mathbf{E}\cdot\mathrm{d}\boldsymbol{l}}_{\partial S}
     =-\frac{\mathrm{d}}{\mathrm{d}t}
-      \int{\mathbf{B}\cdot\mathbf{n}\,\mathrm{d}S}_{S}.
+      \int{\mathbf{B}\cdot\mathbf{n}\mathrm{d}S}_{S}.
 \stopformula
 
 Pellentesque Poyntingiana, \m{\mathbf{S}=m_0^{-1}\mathbf{E}\times\mathbf{B}}
@@ -316,17 +364,20 @@ vestibulum probabilitatis, quisque elementum pretium sapien.
   i\hbar\frac{\partial q}{\partial t}
     =\left[-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf{x},t)\right]q,
   \qquad
-  \int{|q(\mathbf{x},t)|^2\,\mathrm{d}^3\mathbf{x}}_{\mathbb{R}^3}=1.
+  \int{|q(\mathbf{x},t)|^2\mathrm{d}^3\mathbf{x}}_{\mathbb{R}^3}=1.
 \stopformula
 \startformula
   \left[\widehat{x},\widehat{p}\right]=i\hbar I,
   \qquad
-  D x\,D p\geq\frac{\hbar}{2},
+  D xD p\geq\frac{\hbar}{2},
   \qquad
   E_n=\hbar w\left(n+\frac12\right),\quad n=0,1,2,\ldots.
 \stopformula
 
-Aliquam Pauli matrices, \m{\boldsymbol{s}=(s_1,s_2,s_3)}
+\subject{Miscellanea \emph{mathematica}: \m{e^{ip}+1=0}}
+
+
+Aliquam Pauli matricium, \m{\boldsymbol{s}=(s_1,s_2,s_3)}
 ornare neque. Donec \m{s_j^2=I} tempus erat,
 \m{s_1s_2=is_3} blandit justo, atque
 \m{\mathbf{a}\cdot\boldsymbol{s}} porttitor risus.
@@ -360,7 +411,7 @@ ornare constans, \m{T_{mn}} fermentum materiae, atque
 \m{\nabla_m T^{mn}=0} consequat conservatum.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit;
 morbi at arcu nec augue accumsan suscipit. Etiam
-\m{\mathrm{d}s^2=g_{mn}\,\mathrm{d}x^m\mathrm{d}x^n}
+\m{\mathrm{d}s^2=g_{mn}\mathrm{d}x^m\mathrm{d}x^n}
 interdum posuere, nec \m{t} neque \m{l} facilisis desunt.
 \startformula
   R_{mn}-\frac12 Rg_{mn}+L g_{mn}
@@ -406,7 +457,7 @@ Praesent non ligula nec ipsum consequat sodales; maecenas
 \m{\mathbf{p}=\partial L/\partial\dot{\mathbf{q}}} fermentum
 neque, dum \m{H=\mathbf{p}\cdot\dot{\mathbf{q}}-L} finibus arcu.
 \startformula
-  S[\mathbf{q}]=\int{L(\mathbf{q},\dot{\mathbf{q}},t)\,\mathrm{d}t}_{t_0}^{t_1},
+  S[\mathbf{q}]=\int{L(\mathbf{q},\dot{\mathbf{q}},t)\mathrm{d}t}_{t_0}^{t_1},
   \qquad
   \frac{\mathrm{d}}{\mathrm{d}t}
     \frac{\partial L}{\partial\dot q_j}
@@ -436,23 +487,23 @@ Donec \m{G(n+1)=n!} volutpat sapien, at
   z(s)=\sum{\frac{1}{n^s}}_{n=1}^{\infty}
     =\prod{\frac{1}{1-p^{-s}}}_{p\ \mathrm{prime}},
   \qquad
-  G(s)=\int{t^{s-1}e^{-t}\,\mathrm{d}t}_{0}^{\infty}.
+  G(s)=\int{t^{s-1}e^{-t}\mathrm{d}t}_{0}^{\infty}.
 \stopformula
 \startformula
   G(s)G(1-s)=\frac{p}{\sin p s},
   \qquad
-  n!\sim\sqrt{2p n}\left(\frac{n}{e}\right)^n.
+  n!==\sqrt{2p n}\left(\frac{n}{e}\right)^n.
 \stopformula
 
 Morbi Cauchyana, \m{f} holomorpha, \m{g} curva positiva,
 et \m{z_0} punctum interius. Vestibulum ante ipsum primis,
 \m{f^{(n)}(z_0)} sollicitudin alta, \m{n!} consequat frequens.
 Sed ut perspiciatis, finibus neque sed, blandit massa;
-\m{\oint{f(z)\,\mathrm{d}z}_{g}} circumdat margines,
+\m{\oint{f(z)\mathrm{d}z}_{g}} circumdat margines,
 nec \m{2p i} nec \m{z-z_0} memoria deficit.
 \startformula
   f^{(n)}(z_0)=\frac{n!}{2p i}
-    \oint{\frac{f(z)}{(z-z_0)^{n+1}}\,\mathrm{d}z}_{g},
+    \oint{\frac{f(z)}{(z-z_0)^{n+1}}\mathrm{d}z}_{g},
   \qquad
   \int{\frac{\mathrm{d}x}{1+x^2}}_{-\infty}^{\infty}=p.
 \stopformula
@@ -463,16 +514,16 @@ Suspendisse Bayesiana, \m{\mathbb{P}(B)>0} porta aperta,
 \m{\mathbb{P}(A\mid B)} condimentum novum. Praesent
 \m{p_i>0}, \m{q_i>0}, et \m{\sum{p_i}_{i}=\sum{q_i}_{i}=1}
 ornare simplex. Cras consectetur sapien vel urna commodo,
-interdum \m{\boldsymbol{t}\in\mathbb{R}^d} fermentum variabile,
-interdum \m{\nabla_{\boldsymbol{t}}\ell} sagittis ascendens.
+interdum \m{{\bf t}\in\mathbb{R}^d} fermentum variabile,
+interdum \m{\nabla_{{\bf t}}l} sagittis ascendens.
 Mauris accumsan lorem ut magna pretium, in placerat massa dictum.
-\startformula
+\startformula\showglyphs
   \mathbb{P}(A\mid B)
     =\frac{\mathbb{P}(B\mid A)\mathbb{P}(A)}{\mathbb{P}(B)},
   \qquad
   H(p)=-\sum{p_i\log p_i}_{i},
   \qquad
-  D(p\|q)=\sum{p_i\log\frac{p_i}{q_i}}_{i}\geq0.
+  D(p\mid q)=\sum{p_i\log\frac{p_i}{q_i}}_{i}\geq0.
 \stopformula
 
 Denique Gaussiana, \m{\mathbf{x},\boldsymbol{m}\in\mathbb{R}^d},
@@ -483,7 +534,7 @@ transpositum. Lorem ipsum dolor sit amet, consectetur adipiscing
 elit; etiam dictum magna, porta serena, finibus purus.
 \startformula
   p(\mathbf{x})=
-    \frac{\exp\!\left[-\frac12
+    \frac{\exp \left[-\frac12
       (\mathbf{x}-\boldsymbol{m})^{\mathrm{T}}
       \boldsymbol{S}^{-1}
       (\mathbf{x}-\boldsymbol{m})\right]}
@@ -507,7 +558,7 @@ Curabitur superius et inferius, cras posuere nibh; nam
 \stopformula
 \startformula
   \frac{\displaystyle\sum{\frac{a_j}{\sqrt{1+b_j^2}}}_{j=1}^{n}}
-    {\displaystyle 1+\int{\frac{\sqrt{1+t^4}}{1+t^2}\,\mathrm{d}t}_{0}^{1}}
+    {\displaystyle 1+\int{\frac{\sqrt{1+t^4}}{1+t^2}\mathrm{d}t}_{0}^{1}}
   \qquad
   \sqrt{\frac{\displaystyle 1+\frac{x^2}{1+y^2}}
     {\displaystyle 1+\frac{y^2}{1+x^2}}}
@@ -515,14 +566,14 @@ Curabitur superius et inferius, cras posuere nibh; nam
   \sqrt[3]{\sqrt[5]{\sqrt[7]{1+z^{105}}}}.
 \stopformula
 
-\subject{De indicibus et litteris inclinatis: \m{\mathbf{T}_{i_j}^{k^\ell}}}
+\subject{De indicibus et litteris inclinatis: \m{\mathbf{T}_{i_j}^{k^l}}}
 
 Vestibulum \m{f_i}, \m{f^j}, \m{f_i^j}, \m{f^{j^2}_{i_k}}
 et \m{f_{i_{j_k}}^{n^{m^2}}} ornare creberrimum.
 Aliquam \m{J_a^b}, \m{T_a^b}, \m{V_a^b}, \m{W_a^b},
 \m{G_a^b} et \m{\int{}_{a}^{b}} finibus obliquis;
 \m{f'^2}, \m{f''_i}, \m{f'''(x)}, \m{x^{\prime\prime}_n}
-semper praesent. Donec \m{\mathbf{A}_{i_j}^{k^\ell}}
+semper praesent. Donec \m{\mathbf{A}_{i_j}^{k^l}}
 nec \m{\boldsymbol{S}_{a_b}^{g^d}}
 facilisis desunt, in hac habitasse platea dictumst.
 \startformula
@@ -544,7 +595,7 @@ facilisis desunt, in hac habitasse platea dictumst.
   \left.\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}
     e^{-x^2}\right|_{x=0}
   \qquad
-  \left(\frac{x_i^{j_k}}{y_{m_n}^{p^q}}\right)^{\!2}.
+  \left(\frac{x_i^{j_k}}{y_{m_n}^{p^q}}\right)^{2}.
 \stopformula
 
 \subject{De limitibus multiplicibus: \m{\sum{a_{ij}}_{i,j=1}^{n}}}
@@ -584,23 +635,23 @@ Sed \m{\int{\mathrm{d}w}_{M}=\int{w}_{\partial M}}
 vestibulum antiquum; praesent limites superiores atque inferiores,
 commodo arcu, finibus serenis.
 \startformula
-  \int[method=nolimits]{\frac{1}{\sqrt{1+\frac{x^2}{1+x^4}}}\,\mathrm{d}x}_{0}^{1}
+  \int[method=nolimits]{\frac{1}{\sqrt{1+\frac{x^2}{1+x^4}}}\mathrm{d}x}_{0}^{1}
   \qquad
-  \int[method=limits]{\frac{1}{\sqrt{1+\frac{x^2}{1+x^4}}}\,\mathrm{d}x}_{0}^{1}.
+  \int[method=limits]{\frac{1}{\sqrt{1+\frac{x^2}{1+x^4}}}\mathrm{d}x}_{0}^{1}.
 \stopformula
 \startformula
-  \int[method=nolimits]{\left[\frac{\displaystyle\int{e^{-x^2t^2}\,\mathrm{d}t}_{0}^{1}}
+  \int[method=nolimits]{\left[\frac{\displaystyle\int{e^{-x^2t^2}\mathrm{d}t}_{0}^{1}}
       {\displaystyle 1+\frac{x^2}{1+x^2}}\right]
-      e^{-x^2}\,\mathrm{d}x}_{-\infty}^{+\infty}
+      e^{-x^2}\mathrm{d}x}_{-\infty}^{+\infty}
   \qquad
-  \int[size=36pt,method=limits]{\frac{e^{-x^2}}{\sqrt{1+x^2}}\,\mathrm{d}x}_{-\infty}^{+\infty}.
+  \int[size=36pt,method=limits]{\frac{e^{-x^2}}{\sqrt{1+x^2}}\mathrm{d}x}_{-\infty}^{+\infty}.
 \stopformula
 \startformula
-  \iint{(\nabla\times\mathbf{F})\cdot\mathbf{n}\,\mathrm{d}S}_{S}
-    =\oint{\mathbf{F}\cdot\mathrm{d}\boldsymbol{\ell}}_{\partial S},
+  \iint{(\nabla\times\mathbf{F})\cdot\mathbf{n}\mathrm{d}S}_{S}
+    =\oint{\mathbf{F}\cdot\mathrm{d}\boldsymbol{l}}_{\partial S},
   \qquad
-  \iiint{\nabla\cdot\mathbf{F}\,\mathrm{d}V}_{V}
-    =\iint{\mathbf{F}\cdot\mathbf{n}\,\mathrm{d}S}_{\partial V}.
+  \iiint{\nabla\cdot\mathbf{F}\mathrm{d}V}_{V}
+    =\iint{\mathbf{F}\cdot\mathbf{n}\mathrm{d}S}_{\partial V}.
 \stopformula
 
 \subject{De accentibus et vinculis: \m{\widehat{\mathbf{A}\mathbf{B}}}}
@@ -671,9 +722,9 @@ sed \m{\det\mathbf{A}\neq0} vestibulum necessarium.
 \startformula
   \left\{\left[
     \left(\frac{\displaystyle\int{t^{a-1}(1-t)^{b-1}
-      \,\mathrm{d}t}_{0}^{1}}{\displaystyle\frac{G(a)G(b)}
+      \mathrm{d}t}_{0}^{1}}{\displaystyle\frac{G(a)G(b)}
       {G(a+b)}}\right)
-    \right]^2\right\}^{\!1/2}=1,
+    \right]^2\right\}^{1/2}=1,
   \qquad a,b>0.
 \stopformula
 
@@ -681,7 +732,7 @@ sed \m{\det\mathbf{A}\neq0} vestibulum necessarium.
 
 Lorem ipsum distributionum, \m{d_{ij}} porttitor discretum,
 \m{d(x)} sollicitudin singularis. Praesent
-\m{\int{d(x-a)f(x)\,\mathrm{d}x}_{\mathbb{R}}=f(a)}
+\m{\int{d(x-a)f(x)\mathrm{d}x}_{\mathbb{R}}=f(a)}
 volutpat concentrata, dum \m{H'(x)=d(x)} sensu distributionum.
 Vivamus at \m{x=0} posuere media, etiam \m{x<0} et \m{x>0}
 facilisis opposita. Donec ultricies sapien vitae massa cursus,
@@ -704,7 +755,7 @@ interdum condimentum tellus, semper vestibulum purus.
       \NC =\langle\mathbf{x}+\mathbf{y},\mathbf{x}+\mathbf{y}\rangle \NR
     \NC \NC =\|\mathbf{x}\|^2+2\langle\mathbf{x},\mathbf{y}\rangle
           +\|\mathbf{y}\|^2 \NR
-    \NC \NC \leq\|\mathbf{x}\|^2+2\|\mathbf{x}\|\,\|\mathbf{y}\|
+    \NC \NC \leq\|\mathbf{x}\|^2+2\|\mathbf{x}\|\|\mathbf{y}\|
           +\|\mathbf{y}\|^2 \NR
     \NC \NC =(\|\mathbf{x}\|+\|\mathbf{y}\|)^2. \NR
   \stopalign
@@ -712,22 +763,51 @@ interdum condimentum tellus, semper vestibulum purus.
 
 \subject{De formis exterioribus et identitatibus: \m{\mathrm{d}^2w=0}}
 
-Aenean \m{w=\sum{a_i\,\mathrm{d}x^i}_{i}} vestibulum covarians,
-\m{h=\sum{b_j\,\mathrm{d}x^j}_{j}} dignissim alternans.
+Aenean \m{w=\sum{a_i\mathrm{d}x^i}_{i}} vestibulum covarians,
+\m{h=\sum{b_j\mathrm{d}x^j}_{j}} dignissim alternans.
 
 Morbi \m{w\wedge h=-h\wedge w} commodo
 antisymmetricum, et \m{\mathrm{d}^2=0} dictum breve.
 Nullam \m{\mathcal{F}}, \m{\mathcal{L}}, \m{\mathcal{H}},
 et \m{\mathbb{C}\subset\mathbb{H}} ornare varia;
 \m{\mathbf{a}\otimes\mathbf{b}} condimentum tensoriale.
+
+\m{A\cup B \cap C}
+
+\startformula
+\bigcup A \bigcap B \bigcup C
+\stopformula
+
+\startformula
+\bigcup_{i=1}^n A \bigcap_{j=1}^n B \bigcup_{k=1}^m C
+\stopformula
+
+\startformula
+\bigcup{\frac{A}{B}}_{i=1}^n  \bigcap{\frac{C}{D}}_{i=1}^n  
+\stopformula
+
+\startformula
+\bigcup{\frac{A}{\frac{B}{N}}}_{i=1}^n  \bigcap{\frac{C}{\frac{D}{N}}}_{i=1}^n  
+\stopformula
+
 \startformula
 \sum{\bigoplus{\frac{\bigotimes{a_n}}{\bigodot{b_n}}}_{i=1}^{n}} \neq
 \bigoplus{\prod{\frac{\sum{a_n}}{\bigoplus{b_n}}}_{i=1}^{n}} 
 \stopformula
 
-Denique \m{\displaystyle\frac{\int{f(x)\,\mathrm{d}x}_{0}^{1}}{\sqrt{1+a^2}}}
+\startformula
+\bigcup{\bigoplus{\frac{\bigotimes{a_n}}{\cap{b_n}}}_{i=1}^{n}} \neq
+\bigoplus{\prod{\frac{\sum{a_n}}{\bigoplus{b_n}}}_{i=1}^{n}} 
+\stopformula
+
+\startformula
+\bigcap{\bigoplus{\frac{\bigotimes{a_n}}{\cap{b_n}}}_{i=1}^{n}} \neq
+\bigoplus{\prod{\frac{\sum{a_n}}{\bigoplus{b_n}}}_{i=1}^{n}} 
+\stopformula
+
+Denique \m{\displaystyle\frac{\int{f(x)\mathrm{d}x}_{0}^{1}}{\sqrt{1+a^2}}}
 inter verba surgit, dum \m{\scriptstyle\frac{a_i^2}{1+b_j^2}}
-minuitur, et \m{\scriptscriptstyle x_{i_j}^{k^\ell}} paulatim recedit.
+minuitur, et \m{\scriptscriptstyle x_{i_j}^{k^l}} paulatim recedit.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit; \m{\mathbf{0}},
 \m{\mathbf{I}}, \m{\boldsymbol{a}}, \m{\boldsymbol{b}},
 et \m{\boldsymbol{\nabla}} vestibulum novissimum.
@@ -735,7 +815,167 @@ Quisque \m{\left\|\frac{\mathbf{x}}{\|\mathbf{x}\|}\right\|=1}
 finibus clausis, sollicitudin integra, commodo sereno.
 
 
+\startbuffer[bigoperators]
+\setupbodyfont[sommerville]
+\startformula
+{%
+  \math{\displaystyle
+    \coprod{
+      \sum{
+        \frac{
+          \prod{
+            \frac{
+              \bigcap
+            }{
+              \bigodot
+            }
+          }
+        }{
+          \bigoplus{
+            \frac{
+              \bigotimes
+            }{
+              \bigcup
+            }
+          }
+        }
+      }
+    }
+      \bigodot{
+      \bigcap{
+        \frac{
+          \bigcup{
+            \frac{
+              \sum \bigcap 
+            }{
+              \prod \coprod
+            }
+          }
+        }{
+          \bigotimes{
+            \frac{
+              \bigoplus \sum 
+            }{
+              \coprod \bigcup
+            }
+          }
+        }
+      }
+    }
+          \bigodot{
+      \bigcap{
+        \frac{
+          \bigcup{
+            \frac{
+              \sum \bigcap 
+            }{
+              \prod \coprod
+            }
+          }
+        }{
+          \bigotimes{
+            \frac{
+              \bigoplus \sum 
+            }{
+              \coprod \bigcup
+            }
+          }
+        }
+      }
+    }
+  }%
+}
+\stopformula
+\stopbuffer
 
+\startbuffer[bigoperatorswithlimits]
+\setupbodyfont[sommerville]
+\startformula
+{%
+  \math{\displaystyle
+    \coprod{
+      \sum{
+        \frac{
+          \prod{
+            \frac{
+              \bigcap{A_i}_{i=1}^{n}
+            }{
+              \bigodot{b_j}
+            }
+          }
+        }{
+          \bigoplus{
+            \frac{
+              \bigotimes{V_k}_{k=1}^{r}
+            }{
+              \bigcup{B_j}
+            }
+          }
+        }
+      }_{i=1}^{n}
+    }
+      \bigodot{
+      \bigcap{
+        \frac{
+          \bigcup{
+            \frac{
+              \sum{a_i}_{i=1}^{n} \bigcap{C_j} 
+            }{
+              \prod{b_j}_{j=1}^{m} \coprod{X_k}
+            }
+          }
+        }{
+          \bigotimes{
+            \frac{
+              \bigoplus{U_i}_{i=1}^{n} \sum{c_k} 
+            }{
+              \coprod{Y_j}_{j=1}^{m} \bigcup{D_k}
+            }
+          }
+        }
+      }_{j=1}^{m}
+    }
+          \bigodot{
+      \bigcap{
+        \frac{
+          \bigcup{
+            \frac{
+              \sum{a_i}_{i=1}^{n} \bigcap{C_j} 
+            }{
+              \prod{b_j}_{j=1}^{m} \coprod{X_k}
+            }
+          }
+        }{
+          \bigotimes{
+            \frac{
+              \bigoplus{U_i}_{i=1}^{n} \sum{c_k} 
+            }{
+              \coprod{Y_j}_{j=1}^{m} \bigcup{D_k}
+            }
+          }
+        }
+      }
+    }
+  }%
+}
+\stopformula
+\startformula
+  \bigcup{
+    \fenced[brace]{ T_a\cup S_x : 
+      \frac{
+        \sum{
+          \frac{a_i^2+x_i^2}{1+b_i^2}
+        }_{i=1}^{n}
+      }{
+        \prod{
+          \frac{1+c_j^2}{1+d_j^2}
+        }_{j=1}^{m}
+      }\ge v
+    }
+  }_{a\in A}
+\stopformula
+\stopbuffer
+\getbuffer[bigoperatorswithlimits]
 \subject{De partitionibus et spectris: \m{Z_N(b)}}
 
 Vestibulum harmonicum, \m{b>0}, \m{w_j>0}, et
@@ -743,9 +983,13 @@ Vestibulum harmonicum, \m{b>0}, \m{w_j>0}, et
 fermentum discretum. Praesent \m{\mathbf{n}\in\mathbb{N}_0^N}
 porttitor occupationis; quisque modus suam frequentiam retinet,
 dum \m{Z_N(b)} consequat multiplicativa colligit.
+
+\getbuffer[bigoperators]
+
+
 \startformula
   Z_N(b)
-  =\sum[size=24pt,method=limits]{\exp\!\left[
+  =\sum[size=24pt,method=limits]{\exp\left[
       -b\sum{\hbar w_j\left(n_j+\frac12\right)}_{j=1}^{N}
     \right]}_{\mathbf{n}\in\mathbb{N}_0^N}
   =\prod[size=24pt,method=limits]{\frac{e^{-b\hbar w_j/2}}
@@ -754,14 +998,14 @@ dum \m{Z_N(b)} consequat multiplicativa colligit.
 
 Mauris \m{\mathbf{A}\in\mathbb{C}^{N\times N}} vestibulum spectrale,
 \m{l_1,\ldots,l_N} radices ordinatae.
-Nam \m{|z|\,\|\mathbf{A}\|<1} porta convergentiae,
+Nam \m{\fenced[bar]{z} \fenced[bar]{\mathbf{A}}<1} porta convergentiae,
 et \m{\mathop{\mathrm{tr}}(\mathbf{A}^r)=\sum{l_j^r}_{j}}
 dictum invarians. Integer finibus purus, curabitur series
 concordes, donec determinantia in exponentia conveniunt.
 \startformula
   \det(\mathbf{I}-z\mathbf{A})^{-1}
   =\prod[size=18pt,method=limits]{\frac{1}{1-zl_j}}_{j=1}^{N}
-  =\exp\!\left[
+  =\exp\left[
     \sum[size=24pt,method=limits]{\frac{z^r}{r}\mathop{\mathrm{tr}}(\mathbf{A}^r)}_{r=1}^{\infty}
   \right].
 \stopformula
