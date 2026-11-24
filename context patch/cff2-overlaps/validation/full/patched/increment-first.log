@@ -1,0 +1,162 @@
+system          > 
+system          > ConTeXt  ver: 2026.10.31 00:52 LMTX  fmt: 2026.11.15  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 1, order 1, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 1, order 1, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname './increment-first', input './increment-first.tex', result './increment-first'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 1, order 2, name './increment-first.tex'
+fonts           > ignoring feature overload 'wipemath' in 'default'
+fonts           > preloading latin modern fonts (second stage)
+fonts           > 'fallback modern rm 12pt' is loaded
+fonts           > otf loading > loading '../fixtures/increment-variable.otf', hash 'increment-variable-opsz-5-wdth-95-wght-360'
+otf reader      > user instance: opsz=5,wdth=95,wght=360, factors: 0 0 0 0 0 0 0 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '../fixtures/increment-variable.otf' in cache
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/increment-variable-opsz-5-wdth-95-wght-360.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/increment-variable-opsz-5-wdth-95-wght-360.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/increment-variable-opsz-5-wdth-95-wght-360.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/increment-variable-opsz-5-wdth-95-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.214
+pages           > flushing realpage 1, userpage 1, subpage 1
+close source    > level 1, order 2, name './increment-first.tex'
+backend         > xmp > using file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+backend         > fonts > start embedded fonts
+backend         > fonts >     1 : file 'lmroman10-regular.otf', base 'AHGOXL+LMRoman10-Regular', instance 'lmroman10regularotf-1-0-0'
+backend         > fonts >     2 : file 'increment-variable.otf', base 'NESDUZ+CFF2OverlapFixture-6', instance 'incrementvariableotf-1-opsz5wdth95wght360-0'
+backend         > fonts > stop embedded fonts
+otf reader      > user instance: opsz=5,wdth=95,wght=360, factors: 0 0 0 0 0 0 0 0 0
+otf reader      > cff2 overlaps > resolved 2 glyphs (1 changed); helper wall time 0.0068388749787118286 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/incrementvariableotf-1-opsz5wdth95wght360-cff2overlapsv2.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/incrementvariableotf-1-opsz5wdth95wght360-cff2overlapsv2.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/incrementvariableotf-1-opsz5wdth95wght360-cff2overlapsv2.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/incrementvariableotf-1-opsz5wdth95wght360-cff2overlapsv2.tmd' stripped
+backend         > fonts > width units in 'NESDUZ+CFF2OverlapFixture-6' are 1240, forcing 1000 instead
+system          > start used files
+system          > text: ./increment-first
+system          > stop used files
+system          > start used files
+system          >    1: filename=publ-imp-default.lua filetype=lua foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+system          >    2: filename=cont-new.mkxl filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
+system          >    3: filename=lang-exc.lua filetype=lua foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+system          >    4: filename=lang-us.lua filetype=lua foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+system          >    5: filename=/Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/validation/full/patched/increment-first.tex format=tex foundname=/Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/validation/full/patched/increment-first.tex fullname=/Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/validation/full/patched/increment-first.tex usedmethod=direct
+system          >    6: filename=context-libraries.tma filetype=lua foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma usedmethod=database
+system          >    7: filename=lm.lfg filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
+system          >    8: filename=lmroman10-regular filetype=otf format=otf foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/lmroman10-regular.otf fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/lmroman10-regular.otf usedmethod=database
+system          >    9: filename=modern-text.lfg filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/modern-text.lfg fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/modern-text.lfg usedmethod=database
+system          >   10: filename=latinmodern-math.otf filetype=otf format=otf foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/latinmodern-math.otf fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/latinmodern-math.otf usedmethod=database
+system          >   11: filename=modern-math.lfg filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/modern-math.lfg fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/modern-math.lfg usedmethod=database
+system          >   12: filename=common-math.lfg filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg usedmethod=database
+system          >   13: filename=latinmodernmathcompanion-regular.otf filetype=otf format=otf foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/cms/companion/LatinModernMathCompanion-Regular.otf fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/cms/companion/LatinModernMathCompanion-Regular.otf usedmethod=database
+system          >   14: filename=../fixtures/increment-variable.otf format=otf foundname=../fixtures/increment-variable.otf fullname=/Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/validation/full/fixtures/increment-variable.otf usedmethod=direct
+system          >   15: filename=lpdf-pdx.xml filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
+system          >   16: filename=font-cff.lmt filetype=lua foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-cff.lmt fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-cff.lmt usedmethod=database
+system          > stop used files
+system          > start commandline options
+system          >   currentrun="1"
+system          >   fulljobname="./increment-first.tex"
+system          >   input="./increment-first.tex"
+system          >   kindofrun="3"
+system          >   maxnofruns="1"
+system          >   nonstopmode="true"
+system          >   once="true"
+system          >   texmfbinpath="/private/tmp/somerville-cff2-final-full-2/tex/texmf-osx-arm64/bin"
+system          > stop commandline options
+system          > start commandline files
+system          >    1: ./increment-first.tex
+system          > stop commandline files
+modules         > start used modules
+modules         > stop used modules
+system          > 
+system          > status after finishing run
+system          > 
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert        mvl
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500        500
+system          >   min     150000   10000000     150000     150000   10000000    2000000    1000000      10000        500       1000      20000     100000        250        250         50         25         10
+system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250         10
+system          >   stp     100000    1000000     100000     100000    5000000    1000000    1000000      10000        250       1000      10000      10000        250        250         50         25         10
+system          > 
+system          >   mem     150000     995464     150000              10000000    2000000    1000000      10000        500       1000      20000      10000        250        250         50        500         10
+system          >   itm         16          1         16                     9          8          1         32         32        116          4         16          8          8         28         72        116
+system          >   ext          0          0          0          0       5440          0          0          0          0          0          0          0    2798892         96          0          0          0
+system          >   all    2400000     995464    2400000          1   90005440   16000000    1000000     320000      16000     116000      80000     160000    2800892       2096       1400      36000       1160
+system          > 
+system          >   ini    2150736     977304          0      53567          0     591126                                                                                       0                                 
+system          >   ptr      54288                  5327      54271                600709          0          0          0          0          0          0          8          1          0         11          0
+system          >   top      54288                495867     262146       6153     601902        256         38          5         12         39        194        250        250         50        500         10
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          > 
+system          >   current input type    : initial
+system          > 
+system          >   approximate memory    : 118482452 (112 MB)
+system          > 
+system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 5
+system          > 
+system          >   luabytecode registers : 1019
+system          >   luabytecode bytes     : 16320 (0 MB)
+system          >   luastate bytes now    : 57157279 (54 MB)
+system          >   luastate bytes max    : 70221959 (66 MB)
+system          > 
+system          >   file callbacks        : 43
+system          >   saved callbacks       : 73
+system          >   direct callbacks      : 2
+system          >   function callbacks    : 601
+system          >   value callbacks       : 428
+system          >   message callbacks     : 0
+system          >   bytecode callbacks    : 626
+system          > 
+system          >   mp instances          : 0
+system          >   mp estimated memory   : 0 (0 MB)
+system          >   mp file callbacks     : 0
+system          >   mp text callbacks     : 0
+system          >   mp script callbacks   : 0
+system          >   mp log callbacks      : 0
+system          > 
+system          >   total callbacks       : 1773
+system          >   mp total callbacks    : 0
+system          >   backend callbacks     : 0
+system          > 
+system          >   linebreak statistics  : context      calls     first    second     final  passonly   subpass
+system          > 
+system          >   linebreak statistics  : normal           4         4         0         3         0         0
+system          >   linebreak statistics  : vbox             3         3         0         0         0         0
+system          > 
+system          >   linebreak statistics  :                  7         7         0         3         0         0
+system          > 
+system          >   linebreak statistics  : textlines          1
+system          > 
+system          >   hyphenation state     : checked           2
+system          >   hyphenation state     : lists             2
+system          >   hyphenation state     : nothing           2
+system          > 
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.003 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 16 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 519 modules (0.127 sec), 107 tables (0.008 sec), 626 chunks (0.134 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1907, freed: 0, unreachable: 1907
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 7 lists of 445
+mkxl run stats  > node memory usage: 6 attribute, 3 attributelist, 1 dir, 7 fontspec, 1 glue, 135 gluespec, 1 kern, 661 mathspec, 2 penalty, 56 specification, 2 temp
+mkxl run stats  > node list callback tasks: 17 unique task lists, 10 instances (re)created, 52 calls
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: initialized with value 0.59308694614991542
+mkxl run stats  > jobdata time: 0.000 seconds saving, 0.000 seconds loading
+mkxl run stats  > callbacks: file: 43, saved: 73, direct: 2, function: 601, value: 428, message: 0, bytecode: 626, late 0, total: 1773 (0 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > loaded fonts: 4 files: increment-variable.otf, latinmodernmathcompanion-regular.otf, latinmodern-math.otf, lmroman10-regular.otf
+mkxl run stats  > font engine: otf 3.158, afm 1.541, tfm 1.000, 6 instances, 2 shared in backend, 2 common vectors, 0 common hashes, load time 0.244 seconds 
+mkxl run stats  > math tweaking time: 0.020 seconds, 6 math goodie tables
+mkxl run stats  > font embedding time: 0.249 seconds, 2 fonts
+mkxl run stats  > result saved in file: ./increment-first.pdf, compresslevel 1, objectcompresslevel 3, 8 streams, 0 uncompressed, 6 compressed, 2 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20261029, format id: 737, memory mode: 1, compiler: clang, cversion: 17
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 54271 control sequences, 262144 hash slots, 5327 misses, approximate memory usage: 112 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 57 MB, ctx: 54 MB, max: 66 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 0.687 seconds, 1 processed pages, 1 shipped pages, 1.455 pages/second

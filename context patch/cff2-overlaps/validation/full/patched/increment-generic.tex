@@ -1,0 +1,2 @@
+\definefontfeature[increment][default][axis={wdth=95,wght=360,opsz=5},wipemath=no]
+\starttext{\definedfont[file:../fixtures/increment-variable.otf*increment at 30pt]\ctxlua{local d=fonts.handlers.otf.loadstreamdata(fonts.hashes.identifiers[font.current()]); assert(d.cff2complete,"generic caller did not receive a complete font")}UV}\stoptext

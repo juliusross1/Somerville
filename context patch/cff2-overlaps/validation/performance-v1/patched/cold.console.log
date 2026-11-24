@@ -1,0 +1,693 @@
+
+resolvers       | formats | executing runner 'run luametatex format': /private/tmp/somerville-cff2-final-full-2/tex/texmf-osx-arm64/bin/luametatex --interaction="nonstopmode" --jobname="./somerville-letter-test.tex" --socket --shell-escape --fmt=/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/formats/luametatex/cont-en.fmt --lua=/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/formats/luametatex/cont-en.lui  --c:currentrun=1 --c:fulljobname="./somerville-letter-test.tex" --c:input="./somerville-letter-test.tex" --c:kindofrun=3 --c:maxnofruns=1 --c:nonstopmode --c:once --c:texmfbinpath="/tmp/somerville-cff2-final-full-2/tex/texmf-osx-arm64/bin"
+system          > 
+system          > ConTeXt  ver: 2026.10.31 00:52 LMTX  fmt: 2026.11.15  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 1, order 1, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 1, order 1, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname './somerville-letter-test', input './somerville-letter-test.tex', result './somerville-letter-test'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 1, order 2, name './somerville-letter-test.tex'
+open source     > level 2, order 3, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=16000000 | ext=0 | ini=591126 | itm=8 | max=10000000 | mem=2000000 | min=2000000 | ptr=2000001 | set=10000000 | stp=1000000 | top=2000000
+tex memory      > bumping category 'pool' succeeded, details: all=6202428 | ext=0 | ini=977304 | itm=1 | max=100000000 | mem=6202428 | min=10000000 | ptr=-1 | set=10000000 | stp=1000000 | top=-1
+tex memory      > bumping category 'token' succeeded, details: all=24000000 | ext=0 | ini=591126 | itm=8 | max=10000000 | mem=3000000 | min=2000000 | ptr=3000001 | set=10000000 | stp=1000000 | top=3000000
+close source    > level 2, order 3, name 'type-imp-somerville.mkxl'
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-12-wdth-100-wght-400'
+otf reader      > user instance: opsz=12,wdth=100,wght=400, factors: 0.455993590124572 0.277799208164215 0.0740740740740741
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_73 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_76 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-400.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 4.592
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-12-stya-5-styb-5-wdth-100-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=750,opsz=12,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-12-stya-5-styb-5-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-12-stya-5-styb-5-wdth-100-wght-400.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-12-stya-5-styb-5-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-12-stya-5-styb-5-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.537
+fonts           > goodies > goodie file 'somerville-heavy-regular' is not found (suffixes: lfg lua)
+metapost        > initializing instance 'metafun:1' using format 'metafun' and method 'double'
+metapost        > loading 'metafun' as '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/metapost/context/base/mpxl/metafun.mpxl' using method 'double'
+metapost        > initializing number mode 'double'
+metapost        > trace > This is MPLIB for LuaMetaTeX, version 3.15, running in double mode.
+metapost        > trace > 
+metapost        > trace > loading metafun for lmtx, including the plain 1.004 base definitions
+metapost        > trace > 
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-5-wdth-100-wght-360'
+otf reader      > user instance: opsz=5,wdth=100,wght=360, factors: 0 0.277799208164215 0
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_73 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_75 of type 'single' is not used
+otf reader      > gsub lookup s_l_76 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-360.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 2.195
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-5-stya-5-styb-5-wdth-100-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=710,opsz=5,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0 0.5555419921875 0 0 0 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-5-stya-5-styb-5-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-5-stya-5-styb-5-wdth-100-wght-360.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-5-stya-5-styb-5-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-5-stya-5-styb-5-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.443
+pages           > flushing realpage 1, userpage 1, subpage 1
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-5-wdth-100-wght-400'
+otf reader      > user instance: opsz=5,wdth=100,wght=400, factors: 0 0.277799208164215 0.0740740740740741
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_73 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_75 of type 'single' is not used
+otf reader      > gsub lookup s_l_76 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-400.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 4.629
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-5-stya-5-styb-5-wdth-100-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=750,opsz=5,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0 0 0 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-5-stya-5-styb-5-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-5-stya-5-styb-5-wdth-100-wght-400.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-5-stya-5-styb-5-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-5-stya-5-styb-5-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 1.372
+pages           > flushing realpage 2, userpage 2, subpage 2
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-5-wdth-100-wght-700'
+otf reader      > user instance: opsz=5,wdth=100,wght=700, factors: 0 0.277799208164215 0.53703929759838
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_73 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_75 of type 'single' is not used
+otf reader      > gsub lookup s_l_76 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-700.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 3.165
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=5,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1 0 0 0 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-700.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.631
+pages           > flushing realpage 3, userpage 3, subpage 3
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-5-wdth-100-wght-900'
+otf reader      > user instance: opsz=5,wdth=100,wght=900, factors: 0 0.277799208164215 1
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_73 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_75 of type 'single' is not used
+otf reader      > gsub lookup s_l_76 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-900.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-5-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 2.448
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=5,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1 1 0 0 0 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-900.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-5-stya-5-styb-5-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.433
+pages           > flushing realpage 4, userpage 4, subpage 4
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-12-wdth-100-wght-360'
+otf reader      > user instance: opsz=12,wdth=100,wght=360, factors: 0.455993590124572 0.277799208164215 0
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_73 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_76 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-360.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 3.351
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-12-stya-5-styb-5-wdth-100-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=710,opsz=12,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0 0.5555419921875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-12-stya-5-styb-5-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-12-stya-5-styb-5-wdth-100-wght-360.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-12-stya-5-styb-5-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-12-stya-5-styb-5-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.479
+pages           > flushing realpage 5, userpage 5, subpage 5
+pages           > flushing realpage 6, userpage 6, subpage 6
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-12-wdth-100-wght-700'
+otf reader      > user instance: opsz=12,wdth=100,wght=700, factors: 0.455993590124572 0.277799208164215 0.53703929759838
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_73 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_76 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-700.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 3.071
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=12,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-700.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.527
+pages           > flushing realpage 7, userpage 7, subpage 7
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-12-wdth-100-wght-900'
+otf reader      > user instance: opsz=12,wdth=100,wght=900, factors: 0.455993590124572 0.277799208164215 1
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_73 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_76 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-900.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-12-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 2.600
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=12,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1 1 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-900.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-12-stya-5-styb-5-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 1.608
+pages           > flushing realpage 8, userpage 8, subpage 8
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-72-wdth-100-wght-360'
+otf reader      > user instance: opsz=72,wdth=100,wght=360, factors: 0.815836734109271 0.277799208164215 0
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_67 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_69 of type 'single' is not used
+otf reader      > gsub lookup s_l_70 of type 'single' is not used
+otf reader      > gsub lookup s_l_71 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-360.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 2.553
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-72-stya-5-styb-5-wdth-100-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=710,opsz=72,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0 0.5555419921875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-72-stya-5-styb-5-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-72-stya-5-styb-5-wdth-100-wght-360.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-72-stya-5-styb-5-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-72-stya-5-styb-5-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.583
+pages           > flushing realpage 9, userpage 9, subpage 9
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-72-wdth-100-wght-400'
+otf reader      > user instance: opsz=72,wdth=100,wght=400, factors: 0.815836734109271 0.277799208164215 0.0740740740740741
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_67 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_69 of type 'single' is not used
+otf reader      > gsub lookup s_l_70 of type 'single' is not used
+otf reader      > gsub lookup s_l_71 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-400.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 4.405
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-72-stya-5-styb-5-wdth-100-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=750,opsz=72,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-72-stya-5-styb-5-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-72-stya-5-styb-5-wdth-100-wght-400.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-72-stya-5-styb-5-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-72-stya-5-styb-5-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.354
+pages           > flushing realpage 10, userpage 10, subpage 10
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-72-wdth-100-wght-700'
+otf reader      > user instance: opsz=72,wdth=100,wght=700, factors: 0.815836734109271 0.277799208164215 0.53703929759838
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_67 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_69 of type 'single' is not used
+otf reader      > gsub lookup s_l_70 of type 'single' is not used
+otf reader      > gsub lookup s_l_71 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-700.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 3.622
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=72,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-700.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.459
+pages           > flushing realpage 11, userpage 11, subpage 11
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-72-wdth-100-wght-900'
+otf reader      > user instance: opsz=72,wdth=100,wght=900, factors: 0.815836734109271 0.277799208164215 1
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_67 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_69 of type 'single' is not used
+otf reader      > gsub lookup s_l_70 of type 'single' is not used
+otf reader      > gsub lookup s_l_71 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-900.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-72-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 3.201
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=72,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1 1 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-900.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-72-stya-5-styb-5-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.458
+pages           > flushing realpage 12, userpage 12, subpage 12
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-1200-wdth-100-wght-360'
+otf reader      > user instance: opsz=1200,wdth=100,wght=360, factors: 1 0.277799208164215 0
+otf reader      > gsub lookup s_l_60 of type 'single' is not used
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_67 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_69 of type 'single' is not used
+otf reader      > gsub lookup s_l_70 of type 'single' is not used
+otf reader      > gsub lookup s_l_71 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-360.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 2.031
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-1200-stya-5-styb-5-wdth-100-wght-360'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=710,opsz=1200,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0 0.5555419921875 1 0.9581298828125 0.91632080078125 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-1200-stya-5-styb-5-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-1200-stya-5-styb-5-wdth-100-wght-360.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-1200-stya-5-styb-5-wdth-100-wght-360.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-710-opsz-1200-stya-5-styb-5-wdth-100-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.305
+pages           > flushing realpage 13, userpage 13, subpage 13
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-1200-wdth-100-wght-400'
+otf reader      > user instance: opsz=1200,wdth=100,wght=400, factors: 1 0.277799208164215 0.0740740740740741
+otf reader      > gsub lookup s_l_60 of type 'single' is not used
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_67 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_69 of type 'single' is not used
+otf reader      > gsub lookup s_l_70 of type 'single' is not used
+otf reader      > gsub lookup s_l_71 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-400.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 2.585
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-1200-stya-5-styb-5-wdth-100-wght-400'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=750,opsz=1200,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 1 0.9581298828125 0.91632080078125 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-1200-stya-5-styb-5-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-1200-stya-5-styb-5-wdth-100-wght-400.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-1200-stya-5-styb-5-wdth-100-wght-400.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-750-opsz-1200-stya-5-styb-5-wdth-100-wght-400.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.320
+pages           > flushing realpage 14, userpage 14, subpage 14
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-1200-wdth-100-wght-700'
+otf reader      > user instance: opsz=1200,wdth=100,wght=700, factors: 1 0.277799208164215 0.53703929759838
+otf reader      > gsub lookup s_l_60 of type 'single' is not used
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_67 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_69 of type 'single' is not used
+otf reader      > gsub lookup s_l_70 of type 'single' is not used
+otf reader      > gsub lookup s_l_71 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-700.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 2.734
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-700'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=1200,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1 1 0.9581298828125 0.91632080078125 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-700.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-700.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-700.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.583
+pages           > flushing realpage 15, userpage 15, subpage 15
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf', hash 'playfairromanvf-opsz-1200-wdth-100-wght-900'
+otf reader      > user instance: opsz=1200,wdth=100,wght=900, factors: 1 0.277799208164215 1
+otf reader      > gsub lookup s_l_60 of type 'single' is not used
+otf reader      > gsub lookup s_l_61 of type 'single' is not used
+otf reader      > gsub lookup s_l_62 of type 'single' is not used
+otf reader      > gsub lookup s_l_63 of type 'single' is not used
+otf reader      > gsub lookup s_l_64 of type 'single' is not used
+otf reader      > gsub lookup s_l_65 of type 'single' is not used
+otf reader      > gsub lookup s_l_66 of type 'single' is not used
+otf reader      > gsub lookup s_l_67 of type 'single' is not used
+otf reader      > gsub lookup s_l_68 of type 'single' is not used
+otf reader      > gsub lookup s_l_69 of type 'single' is not used
+otf reader      > gsub lookup s_l_70 of type 'single' is not used
+otf reader      > gsub lookup s_l_71 of type 'single' is not used
+otf reader      > gsub lookup s_l_72 of type 'single' is not used
+otf reader      > gsub lookup s_l_74 of type 'single' is not used
+otf reader      > gsub lookup s_l_77 of type 'single' is not used
+otf reader      > gsub lookup s_l_78 of type 'single' is not used
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/PlayfairRomanVF.ttf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-900.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/playfairromanvf-opsz-1200-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 3.050
+fonts           > otf loading > loading '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf', hash 'somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-900'
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=1200,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1 1 1 0.9581298828125 0.91632080078125 -0.5 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf' in cache
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-900.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-900.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/somervillemathvf-arhd-100-arln-100-insl-0-mght-900-opsz-1200-stya-5-styb-5-wdth-100-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.268
+pages           > flushing realpage 16, userpage 16, subpage 16
+close source    > level 1, order 3, name './somerville-letter-test.tex'
+backend         > xmp > using file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+otf reader      > user instance: opsz=1200,wdth=100,wght=360, factors: 1 0.277799208164215 0
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght360-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght360-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght360-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght360-0.tmd' stripped
+otf reader      > user instance: opsz=1200,wdth=100,wght=400, factors: 1 0.277799208164215 0.0740740740740741
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght400-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght400-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght400-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght400-0.tmd' stripped
+otf reader      > user instance: opsz=1200,wdth=100,wght=700, factors: 1 0.277799208164215 0.53703929759838
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght700-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght700-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght700-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght700-0.tmd' stripped
+otf reader      > user instance: opsz=1200,wdth=100,wght=900, factors: 1 0.277799208164215 1
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght900-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght900-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght900-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz1200wdth100wght900-0.tmd' stripped
+otf reader      > user instance: opsz=12,wdth=100,wght=360, factors: 0.455993590124572 0.277799208164215 0
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght360-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght360-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght360-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght360-0.tmd' stripped
+otf reader      > user instance: opsz=12,wdth=100,wght=400, factors: 0.455993590124572 0.277799208164215 0.0740740740740741
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght400-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght400-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght400-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght400-0.tmd' stripped
+otf reader      > user instance: opsz=12,wdth=100,wght=700, factors: 0.455993590124572 0.277799208164215 0.53703929759838
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght700-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght700-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght700-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght700-0.tmd' stripped
+otf reader      > user instance: opsz=12,wdth=100,wght=900, factors: 0.455993590124572 0.277799208164215 1
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght900-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght900-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght900-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz12wdth100wght900-0.tmd' stripped
+otf reader      > user instance: opsz=5,wdth=100,wght=360, factors: 0 0.277799208164215 0
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght360-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght360-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght360-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght360-0.tmd' stripped
+otf reader      > user instance: opsz=5,wdth=100,wght=400, factors: 0 0.277799208164215 0.0740740740740741
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght400-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght400-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght400-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght400-0.tmd' stripped
+otf reader      > user instance: opsz=5,wdth=100,wght=700, factors: 0 0.277799208164215 0.53703929759838
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght700-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght700-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght700-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght700-0.tmd' stripped
+otf reader      > user instance: opsz=5,wdth=100,wght=900, factors: 0 0.277799208164215 1
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght900-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght900-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght900-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz5wdth100wght900-0.tmd' stripped
+otf reader      > user instance: opsz=72,wdth=100,wght=360, factors: 0.815836734109271 0.277799208164215 0
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght360-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght360-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght360-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght360-0.tmd' stripped
+otf reader      > user instance: opsz=72,wdth=100,wght=400, factors: 0.815836734109271 0.277799208164215 0.0740740740740741
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght400-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght400-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght400-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght400-0.tmd' stripped
+otf reader      > user instance: opsz=72,wdth=100,wght=700, factors: 0.815836734109271 0.277799208164215 0.53703929759838
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght700-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght700-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght700-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght700-0.tmd' stripped
+otf reader      > user instance: opsz=72,wdth=100,wght=900, factors: 0.815836734109271 0.277799208164215 1
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght900-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght900-0.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght900-0.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/playfairromanvfttf-1-opsz72wdth100wght900-0.tmd' stripped
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=710,opsz=1200,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0 0.5555419921875 1 0.9581298828125 0.91632080078125 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1278 changed); helper wall time 4.2509145420044661 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz1200stya5styb5wdth100wght360-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz1200stya5styb5wdth100wght360-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz1200stya5styb5wdth100wght360-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz1200stya5styb5wdth100wght360-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'VHVCQH+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=710,opsz=12,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0 0.5555419921875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1526 changed); helper wall time 5.201945666980464 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz12stya5styb5wdth100wght360-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz12stya5styb5wdth100wght360-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz12stya5styb5wdth100wght360-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz12stya5styb5wdth100wght360-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'XLWWVB+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=710,opsz=5,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0 0.5555419921875 0 0 0 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1308 changed); helper wall time 3.5031192080059554 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz5stya5styb5wdth100wght360-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz5stya5styb5wdth100wght360-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz5stya5styb5wdth100wght360-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz5stya5styb5wdth100wght360-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'TILLBF+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=710,opsz=72,stya=5,styb=5,wdth=100,wght=360, factors: 0.27777099609375 0 0.5555419921875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1526 changed); helper wall time 5.9312502499960829 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz72stya5styb5wdth100wght360-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz72stya5styb5wdth100wght360-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz72stya5styb5wdth100wght360-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght710opsz72stya5styb5wdth100wght360-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'OINCNY+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=750,opsz=1200,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 1 0.9581298828125 0.91632080078125 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1524 changed); helper wall time 4.4751846250146627 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz1200stya5styb5wdth100wght400-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz1200stya5styb5wdth100wght400-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz1200stya5styb5wdth100wght400-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz1200stya5styb5wdth100wght400-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'RQYPOV+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=750,opsz=12,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1532 changed); helper wall time 3.6514848750084639 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz12stya5styb5wdth100wght400-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz12stya5styb5wdth100wght400-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz12stya5styb5wdth100wght400-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz12stya5styb5wdth100wght400-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'QKUBOC+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=750,opsz=5,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0 0 0 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1509 changed); helper wall time 3.3659495000028983 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz5stya5styb5wdth100wght400-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz5stya5styb5wdth100wght400-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz5stya5styb5wdth100wght400-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz5stya5styb5wdth100wght400-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'FAILUK+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=750,opsz=72,stya=5,styb=5,wdth=100,wght=400, factors: 0.27777099609375 0.0740966796875 0.629638671875 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1532 changed); helper wall time 3.0910914170090109 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz72stya5styb5wdth100wght400-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz72stya5styb5wdth100wght400-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz72stya5styb5wdth100wght400-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght750opsz72stya5styb5wdth100wght400-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'ACTAWW+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=1200,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1 1 0.9581298828125 0.91632080078125 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1500 changed); helper wall time 3.0737460420059506 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz1200stya5styb5wdth100wght700-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz1200stya5styb5wdth100wght700-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz1200stya5styb5wdth100wght700-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz1200stya5styb5wdth100wght700-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'MWTWSD+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=1200,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1 1 1 0.9581298828125 0.91632080078125 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1232 changed); helper wall time 2.7627634159871377 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz1200stya5styb5wdth100wght900-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz1200stya5styb5wdth100wght900-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz1200stya5styb5wdth100wght900-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz1200stya5styb5wdth100wght900-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'UFHXWB+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=12,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1532 changed); helper wall time 3.3484069579862989 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz12stya5styb5wdth100wght700-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz12stya5styb5wdth100wght700-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz12stya5styb5wdth100wght700-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz12stya5styb5wdth100wght700-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'LHSURY+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=12,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1 1 0.45599365234375 0.3095703125 0.20159912109375 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1505 changed); helper wall time 3.037325166980736 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz12stya5styb5wdth100wght900-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz12stya5styb5wdth100wght900-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz12stya5styb5wdth100wght900-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz12stya5styb5wdth100wght900-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'JYZDZW+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=5,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1 0 0 0 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1485 changed); helper wall time 2.81880237502628 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz5stya5styb5wdth100wght700-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz5stya5styb5wdth100wght700-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz5stya5styb5wdth100wght700-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz5stya5styb5wdth100wght700-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'STCROR+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=5,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1 1 0 0 0 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1246 changed); helper wall time 2.9143388330121525 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz5stya5styb5wdth100wght900-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz5stya5styb5wdth100wght900-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz5stya5styb5wdth100wght900-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz5stya5styb5wdth100wght900-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'XXWXCF+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=72,stya=5,styb=5,wdth=100,wght=700, factors: 0.27777099609375 0.53704833984375 1 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1532 changed); helper wall time 3.651169040997047 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz72stya5styb5wdth100wght700-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz72stya5styb5wdth100wght700-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz72stya5styb5wdth100wght700-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz72stya5styb5wdth100wght700-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'UPNSMV+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+otf reader      > user instance: arhd=100,arln=100,insl=0,mght=900,opsz=72,stya=5,styb=5,wdth=100,wght=900, factors: 0.27777099609375 1 1 0.81585693359375 0.76226806640625 0.6903076171875 -0.5 0 0
+otf reader      > cff2 overlaps > resolved 1553 glyphs (1505 changed); helper wall time 3.1619036250049248 s
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz72stya5styb5wdth100wght900-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz72stya5styb5wdth100wght900-cff2overlapsv1.tmd'
+system          > lua > dumping '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz72stya5styb5wdth100wght900-cff2overlapsv1.tma' into '/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/somervillemathvfotf-1-arhd100arln100insl0mght900opsz72stya5styb5wdth100wght900-cff2overlapsv1.tmd' stripped
+backend         > fonts > width units in 'OBGCEU+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.005 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 38 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 519 modules (0.154 sec), 107 tables (0.009 sec), 626 chunks (0.163 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1911, freed: 0, unreachable: 1911
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 7 lists of 461
+mkxl run stats  > node memory usage: 14 attribute, 7 attributelist, 1 dir, 57 fontspec, 3 glue, 135 gluespec, 1 kern, 661 mathspec, 4 penalty, 56 specification, 2 temp, 2 whatsit, stale properties: 2
+mkxl run stats  > node list callback tasks: 17 unique task lists, 12 instances (re)created, 8939 calls
+mkxl run stats  > driver time: 0.113 seconds 
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: initialized with value 0.41381736941006919
+mkxl run stats  > jobdata time: 0.001 seconds saving, 0.000 seconds loading
+mkxl run stats  > callbacks: file: 14410, saved: 9447, direct: 5, function: 120844, value: 609931, message: 0, bytecode: 626, late 0, total: 755263 (0 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > interactive elements: 0 references, 16 destinations
+mkxl run stats  > loaded fonts: 2 files: playfairromanvf.ttf, somervillemathvf.otf
+mkxl run stats  > font engine: otf 3.158, afm 1.541, tfm 1.000, 32 instances, load time 61.472 seconds 
+mkxl run stats  > metapost: 0.007 seconds, loading: 0.078, execution: 0.006, n: 4, average: 0.023, instances: 1, luacalls: 16459 (file: 15992, text: 0, script: 441, log: 26), memory: 0.000 M
+mkxl run stats  > math tweaking time: 0.031 seconds, 48 math goodie tables
+mkxl run stats  > font embedding time: 93.505 seconds, 32 fonts
+mkxl run stats  > result saved in file: ./somerville-letter-test.pdf, compresslevel 1, objectcompresslevel 3, 85 streams, 0 uncompressed, 84 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20261029, format id: 737, memory mode: 1, compiler: clang, cversion: 17
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 192732 control sequences, 262144 hash slots, 55989 misses, approximate memory usage: 142 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 435 MB, ctx: 372 MB, max: 533 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 162.122 seconds, 16 processed pages, 16 shipped pages, 0.099 pages/second
+system          | total runtime: 162.190 seconds of 162.225 seconds
+

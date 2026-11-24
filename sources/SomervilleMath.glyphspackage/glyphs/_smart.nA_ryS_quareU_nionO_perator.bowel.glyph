@@ -4,7 +4,6 @@ axes = (
 name = height;
 },
 );
-color = 0;
 export = 0;
 glyphname = _smart.nArySquareUnionOperator.bowel;
 layers = (
@@ -347,11 +346,11 @@ pos = (3112,265);
 },
 {
 name = serif;
-pos = (471,3454);
+pos = (473,3454);
 },
 {
 name = serif_right;
-pos = (5753,3454);
+pos = (5751,3454);
 },
 );
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -378,10 +377,10 @@ nodes = (
 (5806,-3174,l),
 (5806,-2788,l),
 (5806,3454,l),
-(5700,3454,l),
-(5700,-3108,l),
-(524,-3108,l),
-(524,3454,l),
+(5696,3454,l),
+(5696,-3108,l),
+(528,-3108,l),
+(528,3454,l),
 (418,3454,l),
 (418,-2788,l),
 (418,-3174,l),
@@ -698,6 +697,6 @@ nodes = (
 width = 6264;
 },
 );
-metricLeft = "=_smart.naryunion.bowel.001";
-metricRight = "=_smart.naryunion.bowel.001";
+metricLeft = "=_smart.naryunion.bowel";
+metricRight = "=_smart.naryunion.bowel";
 }

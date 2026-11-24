@@ -1,0 +1,17 @@
+{
+  "font": "/Users/juliusross/Documents/fontoutputs/SomervilleMathVF.otf",
+  "font_sha256": "b873701f5f3684575715dbdecd2e3800903f80348294f16133b332099d1b3295",
+  "location": "default",
+  "wall_seconds": 2.630341917014448,
+  "stats": {
+    "glyphs": 1553,
+    "changed": 1061,
+    "seconds": 2.455883000016911,
+    "pathops_version": "0.9.2",
+    "unique_outlines": 1320
+  },
+  "runtime_dependencies": [
+    "skia-pathops"
+  ],
+  "note": "Standalone compiled winding checker; no FontTools or CoreGraphics runtime dependency."
+}

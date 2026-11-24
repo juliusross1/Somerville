@@ -1,0 +1,97 @@
+\setupbodyfont[modern,10pt]
+\setuppapersize[A4]
+\setuppagenumbering[location=]
+\starttext
+default variable CFF2: \par
+\definefontfeature[e2e-default][default][axis={wdth=95,wght=360,opsz=5},wipemath=no,expansion=no,protrusion=no]
+{\definedfont[file:../fixtures/variable.otf*e2e-default at 38pt]AUV\char"2A01}\par\blank[big]
+\page
+default uni2A01\par
+{\definedfont[file:../fixtures/variable.otf*e2e-default at 8pt]\char"E000}\par\blank[big]
+default uni2A01.s01\par
+{\definedfont[file:../fixtures/variable.otf*e2e-default at 8pt]\char"E001}\par\blank[big]
+default uni2A01.s08\par
+{\definedfont[file:../fixtures/variable.otf*e2e-default at 8pt]\char"E002}\par\blank[big]
+default uni2A01.s20\par
+{\definedfont[file:../fixtures/variable.otf*e2e-default at 8pt]\char"E003}\par\blank[big]
+default uni2A01.ss16\par
+{\definedfont[file:../fixtures/variable.otf*e2e-default at 8pt]\char"E004}\par\blank[big]
+default uni2A01.ss16.s01\par
+{\definedfont[file:../fixtures/variable.otf*e2e-default at 8pt]\char"E005}\par\blank[big]
+default uni2A01.ss16.s08\par
+{\definedfont[file:../fixtures/variable.otf*e2e-default at 8pt]\char"E006}\par\blank[big]
+default uni2A01.ss16.s20\par
+{\definedfont[file:../fixtures/variable.otf*e2e-default at 8pt]\char"E007}\par\blank[big]
+default u1D437\par
+{\definedfont[file:../fixtures/variable.otf*e2e-default at 8pt]\char"E008}\par\blank[big]
+default u1D46B\par
+{\definedfont[file:../fixtures/variable.otf*e2e-default at 8pt]\char"E009}\par\blank[big]
+\page
+intermediate variable CFF2: \par
+\definefontfeature[e2e-intermediate][default][axis={wdth=104,wght=630,opsz=80,MGHT=630,ARLN=200,ARHD=200,STYA=60,STYB=60,INSL=50},wipemath=no,expansion=no,protrusion=no]
+{\definedfont[file:../fixtures/variable.otf*e2e-intermediate at 38pt]AUV\char"2A01}\par\blank[big]
+\page
+intermediate uni2A01\par
+{\definedfont[file:../fixtures/variable.otf*e2e-intermediate at 8pt]\char"E000}\par\blank[big]
+intermediate uni2A01.s01\par
+{\definedfont[file:../fixtures/variable.otf*e2e-intermediate at 8pt]\char"E001}\par\blank[big]
+intermediate uni2A01.s08\par
+{\definedfont[file:../fixtures/variable.otf*e2e-intermediate at 8pt]\char"E002}\par\blank[big]
+intermediate uni2A01.s20\par
+{\definedfont[file:../fixtures/variable.otf*e2e-intermediate at 8pt]\char"E003}\par\blank[big]
+intermediate uni2A01.ss16\par
+{\definedfont[file:../fixtures/variable.otf*e2e-intermediate at 8pt]\char"E004}\par\blank[big]
+intermediate uni2A01.ss16.s01\par
+{\definedfont[file:../fixtures/variable.otf*e2e-intermediate at 8pt]\char"E005}\par\blank[big]
+intermediate uni2A01.ss16.s08\par
+{\definedfont[file:../fixtures/variable.otf*e2e-intermediate at 8pt]\char"E006}\par\blank[big]
+intermediate uni2A01.ss16.s20\par
+{\definedfont[file:../fixtures/variable.otf*e2e-intermediate at 8pt]\char"E007}\par\blank[big]
+intermediate u1D437\par
+{\definedfont[file:../fixtures/variable.otf*e2e-intermediate at 8pt]\char"E008}\par\blank[big]
+intermediate u1D46B\par
+{\definedfont[file:../fixtures/variable.otf*e2e-intermediate at 8pt]\char"E009}\par\blank[big]
+\page
+extreme variable CFF2: \par
+\definefontfeature[e2e-extreme][default][axis={wdth=113,wght=900,opsz=1200},wipemath=no,expansion=no,protrusion=no]
+{\definedfont[file:../fixtures/variable.otf*e2e-extreme at 38pt]AUV\char"2A01}\par\blank[big]
+\page
+extreme uni2A01\par
+{\definedfont[file:../fixtures/variable.otf*e2e-extreme at 8pt]\char"E000}\par\blank[big]
+extreme uni2A01.s01\par
+{\definedfont[file:../fixtures/variable.otf*e2e-extreme at 8pt]\char"E001}\par\blank[big]
+extreme uni2A01.s08\par
+{\definedfont[file:../fixtures/variable.otf*e2e-extreme at 8pt]\char"E002}\par\blank[big]
+extreme uni2A01.s20\par
+{\definedfont[file:../fixtures/variable.otf*e2e-extreme at 8pt]\char"E003}\par\blank[big]
+extreme uni2A01.ss16\par
+{\definedfont[file:../fixtures/variable.otf*e2e-extreme at 8pt]\char"E004}\par\blank[big]
+extreme uni2A01.ss16.s01\par
+{\definedfont[file:../fixtures/variable.otf*e2e-extreme at 8pt]\char"E005}\par\blank[big]
+extreme uni2A01.ss16.s08\par
+{\definedfont[file:../fixtures/variable.otf*e2e-extreme at 8pt]\char"E006}\par\blank[big]
+extreme uni2A01.ss16.s20\par
+{\definedfont[file:../fixtures/variable.otf*e2e-extreme at 8pt]\char"E007}\par\blank[big]
+extreme u1D437\par
+{\definedfont[file:../fixtures/variable.otf*e2e-extreme at 8pt]\char"E008}\par\blank[big]
+extreme u1D46B\par
+{\definedfont[file:../fixtures/variable.otf*e2e-extreme at 8pt]\char"E009}\par\blank[big]
+\page
+CFF1 unchanged control\par
+{\definedfont[file:../fixtures/static-cff1.otf at 38pt]AUV\char"2A01}\par\blank[big]
+TTF unchanged control\par
+{\definedfont[file:../fixtures/static-ttf.ttf at 38pt]AUV\char"2A01}\par\blank[big]
+\page
+Math layout using the variable CFF2 font:\par
+\definefontfeature[e2e-math][mathematics][axis={wdth=95,wght=360,opsz=5},mathexpansion=no]
+\definefontfeature[e2e-math-text][e2e-math][ssty=no]
+\definefontfeature[e2e-math-script][e2e-math][ssty=1]
+\definefontfeature[e2e-math-scriptscript][e2e-math][ssty=2]
+\starttypescript[math][e2e]
+\definefontsynonym[MathRoman][file:../fixtures/variable.otf][features=e2e-math\mathsizesuffix]
+\stoptypescript
+\definetypeface[e2e][mm][math][e2e][default]
+\switchtobodyfont[e2e]
+\m{U\bigoplus V}\par
+\startformula U\bigoplus V\stopformula
+\stoptext

@@ -1,0 +1,58 @@
+
+resolvers       | formats | executing runner 'run luametatex format': /private/tmp/somerville-cff2-final-small-2/tex/texmf-osx-arm64/bin/luametatex --interaction="nonstopmode" --jobname="./increment-first.tex" --socket --shell-escape --fmt=/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/formats/luametatex/cont-en.fmt --lua=/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/formats/luametatex/cont-en.lui  --c:currentrun=1 --c:fulljobname="./increment-first.tex" --c:input="./increment-first.tex" --c:kindofrun=3 --c:maxnofruns=1 --c:nonstopmode --c:once --c:texmfbinpath="/private/tmp/somerville-cff2-final-small-2/tex/texmf-osx-arm64/bin"
+system          > 
+system          > ConTeXt  ver: 2026.10.31 00:52 LMTX  fmt: 2026.11.15  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 1, order 1, name '/private/tmp/somerville-cff2-final-small-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 1, order 1, name '/private/tmp/somerville-cff2-final-small-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname './increment-first', input './increment-first.tex', result './increment-first'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 1, order 2, name './increment-first.tex'
+fonts           > ignoring feature overload 'wipemath' in 'default'
+fonts           > preloading latin modern fonts (second stage)
+fonts           > 'fallback modern rm 12pt' is loaded
+fonts           > otf loading > loading '../fixtures/increment-variable.otf', hash 'increment-variable-opsz-5-wdth-95-wght-360'
+otf reader      > user instance: opsz=5,wdth=95,wght=360, factors: 0 0 0
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '../fixtures/increment-variable.otf' in cache
+system          > lua > compiling '/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/increment-variable-opsz-5-wdth-95-wght-360.tma' into '/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/increment-variable-opsz-5-wdth-95-wght-360.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/increment-variable-opsz-5-wdth-95-wght-360.tma' into '/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/increment-variable-opsz-5-wdth-95-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.035
+pages           > flushing realpage 1, userpage 1, subpage 1
+close source    > level 1, order 2, name './increment-first.tex'
+backend         > xmp > using file '/private/tmp/somerville-cff2-final-small-2/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+otf reader      > user instance: opsz=5,wdth=95,wght=360, factors: 0 0 0
+otf reader      > cff2 overlaps > resolved 2 glyphs (1 changed); helper wall time 0.0042307080002501607 s
+system          > lua > compiling '/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/incrementvariableotf-1-opsz5wdth95wght360-cff2overlapsv2.tma' into '/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/incrementvariableotf-1-opsz5wdth95wght360-cff2overlapsv2.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/incrementvariableotf-1-opsz5wdth95wght360-cff2overlapsv2.tma' into '/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/incrementvariableotf-1-opsz5wdth95wght360-cff2overlapsv2.tmd' stripped
+backend         > fonts > width units in 'DPHTFQ+CFF2OverlapFixture-6' are 1240, forcing 1000 instead
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.003 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 16 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 519 modules (0.122 sec), 107 tables (0.007 sec), 626 chunks (0.129 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1907, freed: 0, unreachable: 1907
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 7 lists of 445
+mkxl run stats  > node memory usage: 6 attribute, 3 attributelist, 1 dir, 7 fontspec, 1 glue, 135 gluespec, 1 kern, 661 mathspec, 2 penalty, 56 specification, 2 temp
+mkxl run stats  > node list callback tasks: 17 unique task lists, 10 instances (re)created, 52 calls
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: initialized with value 0.69347896432942768
+mkxl run stats  > jobdata time: 0.000 seconds saving, 0.000 seconds loading
+mkxl run stats  > callbacks: file: 43, saved: 73, direct: 2, function: 601, value: 428, message: 0, bytecode: 626, late 0, total: 1773 (0 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > loaded fonts: 4 files: increment-variable.otf, latinmodernmathcompanion-regular.otf, latinmodern-math.otf, lmroman10-regular.otf
+mkxl run stats  > font engine: otf 3.158, afm 1.541, tfm 1.000, 6 instances, 2 shared in backend, 2 common vectors, 0 common hashes, load time 0.066 seconds 
+mkxl run stats  > math tweaking time: 0.016 seconds, 6 math goodie tables
+mkxl run stats  > font embedding time: 0.090 seconds, 2 fonts
+mkxl run stats  > result saved in file: ./increment-first.pdf, compresslevel 1, objectcompresslevel 3, 8 streams, 0 uncompressed, 7 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20261029, format id: 737, memory mode: 1, compiler: clang, cversion: 17
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 54271 control sequences, 262144 hash slots, 5327 misses, approximate memory usage: 112 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 55 MB, ctx: 52 MB, max: 52 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 0.343 seconds, 1 processed pages, 1 shipped pages, 2.917 pages/second
+system          | total runtime: 0.352 seconds of 0.375 seconds
+

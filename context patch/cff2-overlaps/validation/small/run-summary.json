@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "cold_helper_calls": 3,
+  "warm_helper_calls": 0,
+  "flatten_helper_calls": 3,
+  "negative_helper_failure": "nonzero exit, no stream cache entry",
+  "recovery_helper_calls": 3,
+  "cff1_ttf_without_helper": "passed",
+  "isolated_tree": "/private/tmp/somerville-cff2-final-small-2/tex",
+  "helper_sha256": "a5d4f1baad5e8aa22df43fa7798e46aecb28498cfa7e444343c97a7f6d909b77",
+  "incremental_cache": "U then V then UV, generic completion then UV: passed",
+  "v1_promotion": "passed: existing complete v1 caches promoted without helper calls"
+}

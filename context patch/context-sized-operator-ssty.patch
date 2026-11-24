@@ -1,0 +1,176 @@
+--- a/source/tex/texfont.c
++++ b/source/tex/texfont.c
+@@ -609,7 +609,7 @@
+     a little.
+ */
+ 
+-int tex_get_math_char(halfword f, int c, int size, scaled *scale, scaled *xscale, scaled *yscale, scaled *weight, int direction)
++int tex_get_math_char(halfword f, int c, int size, scaled *scale, scaled *xscale, scaled *yscale, scaled *weight, int direction, int apply_smaller)
+ {
+     if (! tex_is_valid_font(f)) {
+         if (scale) {
+@@ -636,7 +636,7 @@
+             }
+         }
+         /* */
+-        if (size && tf->compactmath) {
++        if (apply_smaller && size && tf->compactmath) {
+             for (int i=1;i<=size;i++) {
+                 charinfo *ci = &tf->chardata[id];
+                 if (ci->math) {
+--- a/source/tex/texfont.h
++++ b/source/tex/texfont.h
+@@ -479,7 +479,7 @@
+ extern int       tex_char_exists        (halfword f, int c);
+ extern void      tex_char_process       (halfword f, int c);
+ extern int       tex_math_char_exists   (halfword f, int c, int size);
+-extern int       tex_get_math_char      (halfword f, int c, int size, scaled *scale, scaled *xscale, scaled *ysale, scaled *weight, int direction);
++extern int       tex_get_math_char      (halfword f, int c, int size, scaled *scale, scaled *xscale, scaled *ysale, scaled *weight, int direction, int apply_smaller);
+ 
+ /*tex 
+     These used to be small integers, bit 22 upto 31, but now we have a 32 bit set. We actually don't 
+--- a/source/tex/texmlist.c
++++ b/source/tex/texmlist.c
+@@ -814,13 +814,13 @@
+     return tex_aux_math_y_size_scaled(fnt, tex_char_depth_from_font(fnt, chr), tex_aux_set_style_to_size(style));
+ }
+ 
+-static inline halfword tex_aux_new_math_glyph(halfword fnt, halfword chr, quarterword subtype)
++static inline halfword tex_aux_new_math_glyph(halfword fnt, halfword chr, quarterword subtype, int apply_smaller)
+ {
+     halfword scale = scaling_factor;
+     halfword xscale = scaling_factor;
+     halfword yscale = scaling_factor;
+     halfword weight = 0;
+-    halfword glyph = tex_new_glyph_node(subtype, fnt, tex_get_math_char(fnt, chr, lmt_math_state.size, &scale, &xscale, &yscale, &weight, math_direction_par), null); /* todo: data */;
++    halfword glyph = tex_new_glyph_node(subtype, fnt, tex_get_math_char(fnt, chr, lmt_math_state.size, &scale, &xscale, &yscale, &weight, math_direction_par, apply_smaller), null); /* todo: data */;
+     set_glyph_options(glyph, glyph_options_par);
+     glyph_scale(glyph) = tex_aux_math_glyph_scale(scale);
+     glyph_x_scale(glyph) = tex_aux_math_glyph_x_scale(xscale);
+@@ -832,7 +832,7 @@
+ 
+ halfword tex_new_math_glyph(halfword fnt, halfword chr)
+ {
+-    return tex_aux_new_math_glyph(fnt, chr, 0);
++    return tex_aux_new_math_glyph(fnt, chr, 0, 1);
+ }
+ 
+ static void tex_aux_trace_kerns(halfword kern, const char *what, const char *detail)
+@@ -1270,10 +1270,10 @@
+ 
+ */
+ 
+-static halfword tex_aux_char_box(halfword fnt, int chr, halfword att, scaled *ic, quarterword subtype, scaled target, int style, int shrink, int stretch, int *isscaled)
++static halfword tex_aux_char_box(halfword fnt, int chr, halfword att, scaled *ic, quarterword subtype, scaled target, int style, int shrink, int stretch, int *isscaled, int apply_smaller)
+ {
+     /*tex The new box and its character node. */
+-    halfword glyph = tex_aux_new_math_glyph(fnt, chr, subtype);
++    halfword glyph = tex_aux_new_math_glyph(fnt, chr, subtype, apply_smaller);
+     halfword box = tex_new_null_box_node(hlist_node, math_char_list);
+     scaledwhd whd = tex_char_whd_from_glyph(glyph);
+     tex_attach_attribute_list_attribute(glyph, att);
+@@ -1346,7 +1346,7 @@
+ 
+ static scaled tex_aux_stack_char_into_box(halfword box, halfword fnt, int chr, quarterword subtype, int horiziontal)
+ {
+-    halfword glyph = tex_aux_new_math_glyph(fnt, chr, subtype);
++    halfword glyph = tex_aux_new_math_glyph(fnt, chr, subtype, 1);
+     scaledwhd whd = tex_char_whd_from_glyph(glyph);
+     halfword list = box_list(box);
+     tex_attach_attribute_list_attribute(glyph, node_attr(box));
+@@ -1842,6 +1842,20 @@
+      we can register a composed delimiter which can result in a flush of these nodes.
+ */
+ 
++static halfword tex_aux_sized_operator_base(halfword fnt, halfword chr, int script_size)
++{
++    halfword alternate = tex_get_math_char(fnt, chr, script_size, NULL, NULL, NULL, NULL, 0, 1);
++    /*tex Use the script alternate only when it can participate in size selection. */
++    if (alternate != chr && (
++        tex_char_has_tag_from_font(fnt, alternate, list_tag)
++        || (tex_char_has_tag_from_font(fnt, alternate, vertical_tag)
++            && tex_char_extensible_recipe_from_font(fnt, alternate))
++    )) {
++        return alternate;
++    }
++    return chr;
++}
++
+ static halfword tex_aux_make_delimiter(halfword target, halfword delimiter, int size, scaled targetsize, int flat, int style, int shift, int *stack, scaled *delta, scaled tolerance, int nooverflow, delimiterextremes *extremes, scaled move, halfword attr, halfword variant, int reg)
+ {
+     /*tex the box that will be constructed */
+@@ -1858,6 +1872,8 @@
+     int stretch = flat && has_noad_option_stretch(target);
+     int large_attempt = 0;
+     int count = 0;
++    int operator_script_size = ! flat && target && node_type(target) == fence_noad
++        && node_subtype(target) == left_operator_side ? tex_aux_set_style_to_size(style) : text_size;
+     /*tex to save the current attribute list */
+     halfword att = null;
+     if (extremes) {
+@@ -1897,6 +1913,9 @@
+             halfword curfnt = tex_fam_fnt(curfam, size);
+             if (curchr && curfnt != null_font && tex_char_exists(curfnt, curchr)) {
+                 fnt = curfnt;
++                if (operator_script_size != text_size) {
++                    curchr = tex_aux_sized_operator_base(curfnt, curchr, operator_script_size);
++                }
+                 chr = curchr;
+                 while (--variant && tex_char_has_tag_from_font(curfnt, curchr, list_tag)) {
+                     curchr = tex_char_next_from_font(curfnt, curchr);
+@@ -1943,7 +1962,8 @@
+                 if (curfam >= 0 || nxtchr) {
+                     halfword curfnt = tex_fam_fnt(curfam, size);
+                     if (curfnt != null_font) {
+-                        curchr = nxtchr;
++                        curchr = operator_script_size == text_size
++                            ? nxtchr : tex_aux_sized_operator_base(curfnt, nxtchr, operator_script_size);
+                       CONTINUE:
+                         count++;
+                         if (tex_char_exists(curfnt, curchr)) {
+@@ -2125,7 +2145,8 @@
+                 added. See (**).
+             */
+           HERE:
+-            result = tex_aux_char_box(fnt, chr, attr ? attr : att, delta, glyph_math_delimiter_subtype, flat ? targetsize : 0, style, shrink, stretch, &isscaled);
++            /*tex The sized operator's script substitution was resolved before the size search. */
++            result = tex_aux_char_box(fnt, chr, attr ? attr : att, delta, glyph_math_delimiter_subtype, flat ? targetsize : 0, style, shrink, stretch, &isscaled, operator_script_size == text_size);
+             if (flat) {
+                 /* This will be done when we have a reasonable example. */
+             } else {
+@@ -3717,7 +3738,7 @@
+                 halfword fnt = null;
+                 tex_aux_fetch(noad_nucleus(target), "accent", &fnt, &chr);
+                 /* We have an unprocessed character, no glyph yet (in compact mode). */
+-                chr = tex_get_math_char(fnt, chr, size, NULL, NULL, NULL, NULL, 0);
++                chr = tex_get_math_char(fnt, chr, size, NULL, NULL, NULL, NULL, 0, 1);
+                 if (tex_aux_math_engine_control(fnt, math_control_accent_skew_apply)) {
+                     /*tex
+                         There is no bot_accent so let's assume that the shift also applies
+@@ -3988,7 +4009,7 @@
+             We have a base char or a variant. For traditional fonts the italic correction gets
+             added to width (not that we have these in \CONTEXT).
+         */
+-        accent = tex_aux_char_box(accentfnt, accentchr, mergedattr, NULL, glyph_math_accent_subtype, usedwidth, style, keep ? 0 : has_noad_option_shrink(target), keep ? 0 : has_noad_option_stretch(target), &isscaled); // basewidth
++        accent = tex_aux_char_box(accentfnt, accentchr, mergedattr, NULL, glyph_math_accent_subtype, usedwidth, style, keep ? 0 : has_noad_option_shrink(target), keep ? 0 : has_noad_option_stretch(target), &isscaled, 1); // basewidth
+         found = 1;
+     }
+     if (flags & top_accent_code) {
+@@ -4005,7 +4026,7 @@
+                         u = uf;
+                     }
+                     tex_flush_node(accent);
+-                    accent = tex_aux_char_box(accentfnt, flatchr, mergedattr, NULL, glyph_math_accent_subtype, usedwidth, style, keep ? 0 : has_noad_option_shrink(target), keep ? 0 : has_noad_option_stretch(target), &isscaled);
++                    accent = tex_aux_char_box(accentfnt, flatchr, mergedattr, NULL, glyph_math_accent_subtype, usedwidth, style, keep ? 0 : has_noad_option_shrink(target), keep ? 0 : has_noad_option_stretch(target), &isscaled, 1);
+                     if lmt_unlikely(tracing_math_par >= 2) {
+                         tex_print_format("%<%l[math: flattening accent, old %x, new %x]%>", accentchr, flatchr);
+                     }
+@@ -7215,7 +7236,7 @@
+ 
+                         }
+                      // printf("n=%i t=%i c=%i s=%i\n",mathclass,node_subtype(target),noad_class_main(target),subtype);
+-                        glyph = tex_aux_new_math_glyph(fnt, chr, subtype);
++                        glyph = tex_aux_new_math_glyph(fnt, chr, subtype, 1);
+                         tex_attach_attribute_list_copy(glyph, nucleus);
+                         if (node_type(nucleus) == math_char_node) {
+                             glyph_properties(glyph) = math_kernel_properties(nucleus);

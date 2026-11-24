@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "v1": [
+    {
+      "run": "cold-streams",
+      "returncode": 0,
+      "wall_seconds": 55.55603141701431,
+      "helper_seconds": 38.156779501907295,
+      "helper_calls": 16,
+      "helper_glyphs": 24848
+    },
+    {
+      "run": "warm",
+      "returncode": 0,
+      "wall_seconds": 4.083124832977774,
+      "helper_seconds": 0,
+      "helper_calls": 0,
+      "helper_glyphs": 0
+    }
+  ],
+  "v2": [
+    {
+      "run": "cold-streams",
+      "returncode": 0,
+      "wall_seconds": 9.14889799998491,
+      "helper_seconds": 1.1637435850861948,
+      "helper_calls": 16,
+      "helper_glyphs": 880
+    },
+    {
+      "run": "warm",
+      "returncode": 0,
+      "wall_seconds": 4.2905649169988465,
+      "helper_seconds": 0,
+      "helper_calls": 0,
+      "helper_glyphs": 0
+    }
+  ],
+  "cold_wall_speedup": 6.072428768700442,
+  "helper_time_speedup": 32.787961189131835,
+  "glyph_work_reduction": 28.236363636363638
+}

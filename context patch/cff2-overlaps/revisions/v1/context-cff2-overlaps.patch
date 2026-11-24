@@ -1,0 +1,138 @@
+--- a/texmf-context/tex/context/base/mkxl/font-cff.lmt
++++ b/texmf-context/tex/context/base/mkxl/font-cff.lmt
+@@ -76,6 +76,28 @@
+ local parseprivates
+ local startparsing
+ local stopparsing
++
++-- CFF2 overlap conversion is confined to the PDF glyph-stream path.
++local cff2overlapbatch
++local cff2overlapfinish
++local overlapmodule
++local function cff2overlapfatal(problem)
++    report("CFF2 overlap conversion failed: %s",tostring(problem))
++    -- The general font reader catches ordinary Lua errors and can then cache
++    -- incomplete streams. A failed conversion must terminate before that point.
++    if tex and tex.fatalerror then
++        tex.fatalerror("CFF2 overlap conversion failed; see the log for details")
++    end
++    error(problem,0)
++end
++function readers.cff2overlapmodule()
++    if not overlapmodule then
++        local source = resolvers.findfile("font-cff.lmt")
++        assert(source and source ~= "", "cannot locate CFF2 overlap support")
++        overlapmodule = dofile(file.dirname(source) .. "/font-cff-overlaps.lua")
++    end
++    return overlapmodule
++end
+ 
+ local defaultstrings = { [0] = -- taken from ff
+     ".notdef", "space", "exclam", "quotedbl", "numbersign", "dollar", "percent",
+@@ -2926,6 +2948,8 @@
+             tab = ""
+         end
+ 
++        local overlapinput = cff2overlapbatch and version == "cff2" and justpass and not hack and tab
++        local overlapvsindex = overlapinput and vsindex
+         tab     = bytetable(tab)
+ 
+         x       = 0
+@@ -3020,6 +3044,29 @@
+                 glyph.width  = width
+             else
+                 glyphs[index] = { stream = stream, width = width }
++            end
++            if overlapinput then
++                -- Keep the normal byte stream for unchanged glyphs. Decode a second
++                -- time to collect interpolated geometry, batching all glyphs in one
++                -- helper call after the CFF2 reader has finished.
++                local savedwidth, savedlsb = width, lsb
++                local savedpass, savedvsindex = justpass, vsindex
++                justpass, vsindex = false, overlapvsindex
++                processshape(glyphs,overlapinput,index,true,units)
++                justpass, vsindex = savedpass, savedvsindex
++                local batch = cff2overlapbatch
++                local segments = { }
++                for i=1,#result do
++                    local segment = result[i]
++                    -- Parser-only contour separators; both CFF1 and the helper
++                    -- close contours implicitly at the next move or glyph end.
++                    if not (segment[1] == "close" and (segment[2] == "move" or segment[2] == "path")) then
++                        segments[#segments+1] = segment
++                    end
++                end
++                batch.requests[#batch.requests+1] = { id=index, segments=segments }
++                batch.metadata[index] = { width=savedwidth, lsb=savedlsb }
++                width, lsb = savedwidth, savedlsb
+             end
+         elseif glyph then
+             glyph.segments    = keepcurve ~= false and result or nil
+@@ -3054,6 +3101,23 @@
+             report("boundingbox: % t",boundingbox)
+         end
+ 
++    end
++
++    cff2overlapfinish = function(glyphs)
++        local batch = cff2overlapbatch
++        cff2overlapbatch = nil -- do not retain outlines, including on helper failure
++        if batch then
++            local converted = readers.cff2overlapmodule().convert(batch.requests)
++            for i=1,#converted do
++                local g = converted[i]
++                if g.changed then
++                    local meta = batch.metadata[g.id]
++                    -- Old masks refer to old segment positions. Rewritten glyphs
++                    -- are deliberately emitted without hints; others stay intact.
++                    glyphs[g.id].stream = pack_result_tagged(g.segments,meta.width,meta.lsb)
++                end
++            end
++        end
+     end
+ 
+     startparsing = function(fontdata,data,streams)
+@@ -3714,11 +3778,23 @@
+             --
+             local cid = data.dictionaries[1].cid
+             local all = specification.shapes or specification.streams or false
+-            if cid and cid.fdselect then
+-                readfdselect(f,fontdata,data,glyphs,all,"cff2",specification.streams)
+-            else
+-                readnoselect(f,fontdata,data,glyphs,all,"cff2",specification.streams)
+-            end
++            if specification.streams == true then
++                cff2overlapbatch = { requests={ }, metadata={ } }
++            end
++            local parsed, problem = pcall(function()
++                if cid and cid.fdselect then
++                    readfdselect(f,fontdata,data,glyphs,all,"cff2",specification.streams)
++                else
++                    readnoselect(f,fontdata,data,glyphs,all,"cff2",specification.streams)
++                end
++            end)
++            if not parsed then
++                cff2overlapbatch = nil
++                if specification.streams == true then cff2overlapfatal(problem) end
++                error(problem,0)
++            end
++            local resolved, failure = pcall(cff2overlapfinish,glyphs)
++            if not resolved then cff2overlapfatal(failure) end
+             cleanup(data,dictionaries)
+             tableend = false
+         end
+--- a/texmf-context/tex/context/base/mkxl/font-shp.lmt
++++ b/texmf-context/tex/context/base/mkxl/font-shp.lmt
+@@ -271,6 +271,12 @@
+     local data = nil
+     if size > 0 and (kind == "otf" or kind == "ttf" or kind == "ttc") then
+         local hints = keep_hints and kind ~= "otf"
++        -- A separate persistent stream cache only for actual CFF2 fonts. Existing
++        -- CFF1, TrueType and Type 1 cache keys and code paths stay unchanged.
++        local overlap = otf.readers.cff2overlapmodule()
++        if overlap.iscff2(filename,sub,size,time) then
++            extrahash = (extrahash or "") .. overlap.cachetag
++        end
+         local hash  = makehash(filename,sub,instance,hints and ((extrahash or "") .. "hinted") or extrahash)
+         data = containers.read(cache,hash)
+         if not data or data.time ~= time or data.size ~= size then

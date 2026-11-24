@@ -1,0 +1,91 @@
+
+resolvers       | formats | executing runner 'run luametatex format': /private/tmp/somerville-cff2-context/tex/texmf-osx-arm64/bin/luametatex --interaction="nonstopmode" --jobname="./somerville-letter-test.tex" --socket --shell-escape --fmt=/tmp/somerville-cff2-context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/formats/luametatex/cont-en.fmt --lua=/tmp/somerville-cff2-context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/formats/luametatex/cont-en.lui  --c:currentrun=1 --c:fulljobname="./somerville-letter-test.tex" --c:input="./somerville-letter-test.tex" --c:kindofrun=3 --c:maxnofruns=1 --c:nonstopmode --c:once --c:texmfbinpath="/tmp/somerville-cff2-context/tex/texmf-osx-arm64/bin"
+system          > 
+system          > ConTeXt  ver: 2026.10.31 00:52 LMTX  fmt: 2026.11.15  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 1, order 1, name '/private/tmp/somerville-cff2-context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 1, order 1, name '/private/tmp/somerville-cff2-context/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname './somerville-letter-test', input './somerville-letter-test.tex', result './somerville-letter-test'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 1, order 2, name './somerville-letter-test.tex'
+open source     > level 2, order 3, name 'type-imp-somerville.mkxl'
+tex memory      > bumping category 'token' succeeded, details: all=16000000 | ext=0 | ini=591125 | itm=8 | max=10000000 | mem=2000000 | min=2000000 | ptr=2000001 | set=10000000 | stp=1000000 | top=2000000
+tex memory      > bumping category 'pool' succeeded, details: all=6202428 | ext=0 | ini=977304 | itm=1 | max=100000000 | mem=6202428 | min=10000000 | ptr=-1 | set=10000000 | stp=1000000 | top=-1
+tex memory      > bumping category 'token' succeeded, details: all=24000000 | ext=0 | ini=591125 | itm=8 | max=10000000 | mem=3000000 | min=2000000 | ptr=3000001 | set=10000000 | stp=1000000 | top=3000000
+close source    > level 2, order 3, name 'type-imp-somerville.mkxl'
+fonts           > goodies > goodie file 'somerville-heavy-regular' is not found (suffixes: lfg lua)
+metapost        > initializing instance 'metafun:1' using format 'metafun' and method 'double'
+metapost        > loading 'metafun' as '/private/tmp/somerville-cff2-context/tex/texmf-context/metapost/context/base/mpxl/metafun.mpxl' using method 'double'
+metapost        > initializing number mode 'double'
+metapost        > trace > This is MPLIB for LuaMetaTeX, version 3.15, running in double mode.
+metapost        > trace > 
+metapost        > trace > loading metafun for lmtx, including the plain 1.004 base definitions
+metapost        > trace > 
+pages           > flushing realpage 1, userpage 1, subpage 1
+pages           > flushing realpage 2, userpage 2, subpage 2
+pages           > flushing realpage 3, userpage 3, subpage 3
+pages           > flushing realpage 4, userpage 4, subpage 4
+pages           > flushing realpage 5, userpage 5, subpage 5
+pages           > flushing realpage 6, userpage 6, subpage 6
+pages           > flushing realpage 7, userpage 7, subpage 7
+pages           > flushing realpage 8, userpage 8, subpage 8
+pages           > flushing realpage 9, userpage 9, subpage 9
+pages           > flushing realpage 10, userpage 10, subpage 10
+pages           > flushing realpage 11, userpage 11, subpage 11
+pages           > flushing realpage 12, userpage 12, subpage 12
+pages           > flushing realpage 13, userpage 13, subpage 13
+pages           > flushing realpage 14, userpage 14, subpage 14
+pages           > flushing realpage 15, userpage 15, subpage 15
+pages           > flushing realpage 16, userpage 16, subpage 16
+close source    > level 1, order 3, name './somerville-letter-test.tex'
+backend         > xmp > using file '/private/tmp/somerville-cff2-context/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+backend         > fonts > width units in 'WGQEDH+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'BCNKXZ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'ZQQBZS+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'SADXLW+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'OOACBT+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'HVJQJY+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'SJMZUL+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'VKVARQ+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'PQPVED+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'LXWSAR+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'QLMMAD+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'WUWDPG+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'MHDHRK+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'CSEWHI+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'JRJIYT+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+backend         > fonts > width units in 'FAOHDW+SomervilleMathSomervilleMathVariable-SomervilleMathVariable' are 1240, forcing 1000 instead
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /tmp/somerville-cff2-context/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.014 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 37 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 519 modules (0.503 sec), 107 tables (0.013 sec), 626 chunks (0.516 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1911, freed: 0, unreachable: 1911
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 7 lists of 461
+mkxl run stats  > node memory usage: 22 attribute, 9 attributelist, 1 dir, 57 fontspec, 3 glue, 135 gluespec, 2 hlist, 1 kern, 661 mathspec, 4 penalty, 56 specification, 2 temp, 6 whatsit, stale properties: 6
+mkxl run stats  > node list callback tasks: 17 unique task lists, 12 instances (re)created, 8939 calls
+mkxl run stats  > driver time: 0.273 seconds 
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: resumed with value 0.42386860322762066
+mkxl run stats  > jobdata time: 0.001 seconds saving, 0.001 seconds loading
+mkxl run stats  > callbacks: file: 14410, saved: 9447, direct: 5, function: 120844, value: 609931, message: 0, bytecode: 626, late 0, total: 755263 (47204 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > interactive elements: 66 references, 16 destinations
+mkxl run stats  > loaded fonts: 2 files: playfairromanvf.ttf, somervillemathvf.otf
+mkxl run stats  > font engine: otf 3.158, afm 1.541, tfm 1.000, 32 instances, load time 0.709 seconds 
+mkxl run stats  > metapost: 0.001 seconds, loading: 0.053, execution: 0.000, n: 4, average: 0.014, instances: 1, luacalls: 16459 (file: 15992, text: 0, script: 441, log: 26), memory: 0.000 M
+mkxl run stats  > math tweaking time: 0.018 seconds, 48 math goodie tables
+mkxl run stats  > pdf annotations: 64 links (48 unique), 0 special
+mkxl run stats  > font embedding time: 0.106 seconds, 32 fonts
+mkxl run stats  > result saved in file: ./somerville-letter-test.pdf, compresslevel 1, objectcompresslevel 3, 85 streams, 0 uncompressed, 84 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20261029, format id: 737, memory mode: 1, compiler: clang, cversion: 17
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 192732 control sequences, 262144 hash slots, 55989 misses, approximate memory usage: 142 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 317 MB, ctx: 311 MB, max: 311 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 7.744 seconds, 16 processed pages, 16 shipped pages, 2.066 pages/second
+system          | total runtime: 8.145 seconds of 8.183 seconds
+

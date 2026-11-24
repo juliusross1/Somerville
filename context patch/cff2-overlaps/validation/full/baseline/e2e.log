@@ -1,0 +1,244 @@
+system          > 
+system          > ConTeXt  ver: 2026.10.31 00:52 LMTX  fmt: 2026.11.15  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 1, order 1, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 1, order 1, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname './e2e', input './e2e.tex', result './e2e'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 1, order 2, name './e2e.tex'
+fonts           > otf loading > loading '/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/lmroman10-regular.otf', hash 'lmroman10-regular'
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/lmroman10-regular.otf' in cache
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/lmroman10-regular.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/lmroman10-regular.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/lmroman10-regular.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/lmroman10-regular.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.032
+fonts           > otf loading > loading '/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/latinmodern-math.otf', hash 'latinmodern-math'
+otf reader      > discarding 82 self referencing horizontal variant entries
+otf reader      > discarding 94 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/latinmodern-math.otf' in cache
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/latinmodern-math.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/latinmodern-math.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/latinmodern-math.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/latinmodern-math.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.105
+fonts           > otf loading > loading '/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/cms/companion/LatinModernMathCompanion-Regular.otf', hash 'latinmodernmathcompanion-regular'
+otf reader      > discarding 43 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/cms/companion/LatinModernMathCompanion-Regular.otf' in cache
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/latinmodernmathcompanion-regular.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/latinmodernmathcompanion-regular.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/latinmodernmathcompanion-regular.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/latinmodernmathcompanion-regular.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.011
+fonts           > ignoring feature overload 'wipemath' in 'default'
+fonts           > otf loading > loading '../fixtures/variable.otf', hash 'variable-opsz-5-wdth-95-wght-360'
+otf reader      > user instance: opsz=5,wdth=95,wght=360, factors: 0 0 0 0 0 0 0 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '../fixtures/variable.otf' in cache
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-opsz-5-wdth-95-wght-360.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-opsz-5-wdth-95-wght-360.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-opsz-5-wdth-95-wght-360.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-opsz-5-wdth-95-wght-360.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.249
+pages           > flushing realpage 1, userpage 1, subpage 1
+pages           > flushing realpage 2, userpage 2, subpage 2
+fonts           > otf loading > loading '../fixtures/variable.otf', hash 'variable-arhd-200-arln-200-insl-50-mght-630-opsz-80-stya-60-styb-60-wdth-104-wght-630'
+otf reader      > user instance: arhd=200,arln=200,insl=50,mght=630,opsz=80,stya=60,styb=60,wdth=104,wght=630, factors: 0.5 0.40740966796875 0.40740966796875 0.8270263671875 0.7762451171875 0.7078857421875 0 1 0.5
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '../fixtures/variable.otf' in cache
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-arhd-200-arln-200-insl-50-mght-630-opsz-80-stya-60-styb-60-wdth-104-wght-630.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-arhd-200-arln-200-insl-50-mght-630-opsz-80-stya-60-styb-60-wdth-104-wght-630.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-arhd-200-arln-200-insl-50-mght-630-opsz-80-stya-60-styb-60-wdth-104-wght-630.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-arhd-200-arln-200-insl-50-mght-630-opsz-80-stya-60-styb-60-wdth-104-wght-630.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.209
+pages           > flushing realpage 3, userpage 3, subpage 3
+pages           > flushing realpage 4, userpage 4, subpage 4
+fonts           > otf loading > loading '../fixtures/variable.otf', hash 'variable-opsz-1200-wdth-113-wght-900'
+otf reader      > user instance: opsz=1200,wdth=113,wght=900, factors: 1 1 0 1 0.9581298828125 0.91632080078125 0 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '../fixtures/variable.otf' in cache
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-opsz-1200-wdth-113-wght-900.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-opsz-1200-wdth-113-wght-900.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-opsz-1200-wdth-113-wght-900.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/variable-opsz-1200-wdth-113-wght-900.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.208
+pages           > flushing realpage 5, userpage 5, subpage 5
+pages           > flushing realpage 6, userpage 6, subpage 6
+fonts           > otf loading > loading '../fixtures/static-cff1.otf', hash 'static-cff1'
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '../fixtures/static-cff1.otf' in cache
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/static-cff1.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/static-cff1.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/static-cff1.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/static-cff1.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.021
+fonts           > otf loading > loading '../fixtures/static-ttf.ttf', hash 'static-ttf'
+fonts           > otf loading > loading done
+fonts           > otf loading > saving '../fixtures/static-ttf.ttf' in cache
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/static-ttf.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/static-ttf.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/static-ttf.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/otl/static-ttf.tmd' stripped
+fonts           > otf loading > loading, optimizing, packing and caching time 0.013
+pages           > flushing realpage 7, userpage 7, subpage 7
+fonts           > ignoring feature overload 'mathexpansion' in 'mathematics'
+pages           > flushing realpage 8, userpage 8, subpage 8
+close source    > level 1, order 2, name './e2e.tex'
+backend         > xmp > using file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+backend         > fonts > start embedded fonts
+backend         > fonts >     1 : file 'lmroman10-regular.otf', base 'KIRWZC+LMRoman10-Regular', instance 'lmroman10regularotf-1-0-0'
+backend         > fonts >     2 : file 'variable.otf', base 'ITJOMY+CFF2OverlapFixture-6', instance 'variableotf-1-opsz5wdth95wght360-0'
+backend         > fonts >     3 : file 'variable.otf', base 'FIZYFC+CFF2OverlapFixture-6', instance 'variableotf-1-arhd200arln200insl50mght630opsz80stya60styb60wdth104wght630-0'
+backend         > fonts >     4 : file 'variable.otf', base 'SDEWUB+CFF2OverlapFixture-6', instance 'variableotf-1-opsz1200wdth113wght900-0'
+backend         > fonts >     5 : file 'static-cff1.otf', base 'UMKRLP+CFF1UnchangedControl', instance 'staticcff1otf-1-0-0'
+backend         > fonts >     6 : file 'static-ttf.ttf', base 'UZCZPQ+TTFUnchangedControl', instance 'staticttfttf-1-0-0'
+backend         > fonts > stop embedded fonts
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/lmroman10regularotf-1-0-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/lmroman10regularotf-1-0-0.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/lmroman10regularotf-1-0-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/lmroman10regularotf-1-0-0.tmd' stripped
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/staticcff1otf-1-0-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/staticcff1otf-1-0-0.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/staticcff1otf-1-0-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/staticcff1otf-1-0-0.tmd' stripped
+backend         > fonts > width units in 'UMKRLP+CFF1UnchangedControl' are 1240, forcing 1000 instead
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/staticttfttf-1-0-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/staticttfttf-1-0-0.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/staticttfttf-1-0-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/staticttfttf-1-0-0.tmd' stripped
+otf reader      > user instance: arhd=200,arln=200,insl=50,mght=630,opsz=80,stya=60,styb=60,wdth=104,wght=630, factors: 0.5 0.40740966796875 0.40740966796875 0.8270263671875 0.7762451171875 0.7078857421875 0 1 0.5
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-arhd200arln200insl50mght630opsz80stya60styb60wdth104wght630-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-arhd200arln200insl50mght630opsz80stya60styb60wdth104wght630-0.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-arhd200arln200insl50mght630opsz80stya60styb60wdth104wght630-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-arhd200arln200insl50mght630opsz80stya60styb60wdth104wght630-0.tmd' stripped
+backend         > fonts > width units in 'FIZYFC+CFF2OverlapFixture-6' are 1240, forcing 1000 instead
+otf reader      > user instance: opsz=1200,wdth=113,wght=900, factors: 1 1 0 1 0.9581298828125 0.91632080078125 0 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-opsz1200wdth113wght900-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-opsz1200wdth113wght900-0.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-opsz1200wdth113wght900-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-opsz1200wdth113wght900-0.tmd' stripped
+backend         > fonts > width units in 'SDEWUB+CFF2OverlapFixture-6' are 1240, forcing 1000 instead
+otf reader      > user instance: opsz=5,wdth=95,wght=360, factors: 0 0 0 0 0 0 0 0 0
+otf reader      > discarding 3 self referencing horizontal variant entries
+otf reader      > discarding 46 self referencing vertical variant entries
+system          > lua > compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-opsz5wdth95wght360-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-opsz5wdth95wght360-0.tmd'
+system          > lua > dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-opsz5wdth95wght360-0.tma' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/fonts/streams/variableotf-1-opsz5wdth95wght360-0.tmd' stripped
+backend         > fonts > width units in 'ITJOMY+CFF2OverlapFixture-6' are 1240, forcing 1000 instead
+system          > start used files
+system          > text: ./e2e
+system          > stop used files
+system          > start used files
+system          >    1: filename=publ-imp-default.lua filetype=lua foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.lua usedmethod=database
+system          >    2: filename=cont-new.mkxl filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl usedmethod=database
+system          >    3: filename=lang-exc.lua filetype=lua foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lang-exc.lua usedmethod=database
+system          >    4: filename=lang-us.lua filetype=lua foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/patterns/mkiv/lang-us.lua usedmethod=database
+system          >    5: filename=/Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/validation/full/baseline/e2e.tex format=tex foundname=/Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/validation/full/baseline/e2e.tex fullname=/Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/validation/full/baseline/e2e.tex usedmethod=direct
+system          >    6: filename=context-libraries.tma filetype=lua foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/context-libraries.tma usedmethod=database
+system          >    7: filename=lm.lfg filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/lm.lfg usedmethod=database
+system          >    8: filename=lmroman10-regular filetype=otf format=otf foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/lmroman10-regular.otf fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/lmroman10-regular.otf usedmethod=database
+system          >    9: filename=modern-text.lfg filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/modern-text.lfg fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/modern-text.lfg usedmethod=database
+system          >   10: filename=latinmodern-math.otf filetype=otf format=otf foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/latinmodern-math.otf fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/gust/lm/latinmodern-math.otf usedmethod=database
+system          >   11: filename=modern-math.lfg filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/modern-math.lfg fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/modern-math.lfg usedmethod=database
+system          >   12: filename=common-math.lfg filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/fonts/mkiv/common-math.lfg usedmethod=database
+system          >   13: filename=latinmodernmathcompanion-regular.otf filetype=otf format=otf foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/cms/companion/LatinModernMathCompanion-Regular.otf fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf/fonts/data/cms/companion/LatinModernMathCompanion-Regular.otf usedmethod=database
+system          >   14: filename=../fixtures/variable.otf format=otf foundname=../fixtures/variable.otf fullname=/Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/validation/full/fixtures/variable.otf usedmethod=direct
+system          >   15: filename=../fixtures/static-cff1.otf format=otf foundname=../fixtures/static-cff1.otf fullname=/Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/validation/full/fixtures/static-cff1.otf usedmethod=direct
+system          >   16: filename=../fixtures/static-ttf.ttf format=ttf foundname=../fixtures/static-ttf.ttf fullname=/Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/validation/full/fixtures/static-ttf.ttf usedmethod=direct
+system          >   17: filename=lpdf-pdx.xml filetype=tex foundname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml fullname=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml usedmethod=database
+system          > stop used files
+system          > start commandline options
+system          >   currentrun="1"
+system          >   fulljobname="./e2e.tex"
+system          >   input="./e2e.tex"
+system          >   kindofrun="3"
+system          >   maxnofruns="1"
+system          >   nonstopmode="true"
+system          >   once="true"
+system          >   texmfbinpath="/private/tmp/somerville-cff2-final-full-2/tex/texmf-osx-arm64/bin"
+system          > stop commandline options
+system          > start commandline files
+system          >    1: ./e2e.tex
+system          > stop commandline files
+modules         > start used modules
+modules         > stop used modules
+system          > 
+system          > status after finishing run
+system          > 
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert        mvl
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500        500
+system          >   min     150000   10000000     150000     150000   10000000    2000000    1000000      10000        500       1000      20000     100000        250        250         50         25         10
+system          >   set     500000   10000000     250000     250000   50000000   10000000   10000000     100000       2000      10000     100000     500000     100000        250        250        250         10
+system          >   stp     100000    1000000     100000     100000    5000000    1000000    1000000      10000        250       1000      10000      10000        250        250         50         25         10
+system          > 
+system          >   mem     150000     996588     150000              10000000    2000000    1000000      10000        500       1000      20000      10000        250        250         50        500         10
+system          >   itm         16          1         16                     9          8          1         32         32        116          4         16          8          8         28         72        116
+system          >   ext          0          0          0          0       5440          0          0          0          0          0          0          0    3935440         96          0          0          0
+system          >   all    2400000     996588    2400000          1   90005440   16000000    1000000     320000      16000     116000      80000     160000    3937440       2096       1400      36000       1160
+system          > 
+system          >   ini    2150736     977304          0      53567          0     591125                                                                                       0                                 
+system          >   ptr      54366                  5339      54349                601599          0          0          0          0          0          0         13          1          0         11          0
+system          >   top      54366                495867     262146      14276     602285        221         34          5         12         39        190        250        250         50        500         10
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          > 
+system          >   current input type    : initial
+system          > 
+system          >   approximate memory    : 119770204 (114 MB)
+system          > 
+system          >   expansion depth       : min: 10000, max: 1000000, set: 10000, top: 6
+system          > 
+system          >   luabytecode registers : 1019
+system          >   luabytecode bytes     : 16320 (0 MB)
+system          >   luastate bytes now    : 74436535 (70 MB)
+system          >   luastate bytes max    : 131662651 (125 MB)
+system          > 
+system          >   file callbacks        : 138
+system          >   saved callbacks       : 740
+system          >   direct callbacks      : 2
+system          >   function callbacks    : 999
+system          >   value callbacks       : 522
+system          >   message callbacks     : 0
+system          >   bytecode callbacks    : 626
+system          > 
+system          >   mp instances          : 0
+system          >   mp estimated memory   : 0 (0 MB)
+system          >   mp file callbacks     : 0
+system          >   mp text callbacks     : 0
+system          >   mp script callbacks   : 0
+system          >   mp log callbacks      : 0
+system          > 
+system          >   total callbacks       : 3027
+system          >   mp total callbacks    : 0
+system          >   backend callbacks     : 0
+system          > 
+system          >   linebreak statistics  : context      calls     first    second     final  passonly   subpass
+system          > 
+system          >   linebreak statistics  : normal          96        96         0        24         0         0
+system          >   linebreak statistics  : vbox            25        25         0         0         0         0
+system          > 
+system          >   linebreak statistics  :                121       121         0        24         0         0
+system          > 
+system          >   linebreak statistics  : textlines         73
+system          > 
+system          >   hyphenation state     : checked          74
+system          >   hyphenation state     : hyphenated       43
+system          >   hyphenation state     : lists            74
+system          >   hyphenation state     : nothing          38
+system          >   hyphenation state     : words            43
+system          > 
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.003 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 17 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 519 modules (0.137 sec), 107 tables (0.008 sec), 626 chunks (0.145 sec)
+mkxl run stats  > traced context lua functions: maxstack: 1907, freed: 0, unreachable: 1907
+mkxl run stats  > cleaned up reserved nodes: 80 nodes, 7 lists of 445
+mkxl run stats  > node memory usage: 6 attribute, 3 attributelist, 1 dir, 9 fontspec, 1 glue, 135 gluespec, 1 kern, 661 mathspec, 2 penalty, 56 specification, 2 temp
+mkxl run stats  > node list callback tasks: 17 unique task lists, 12 instances (re)created, 726 calls
+mkxl run stats  > used backend: pdf
+mkxl run stats  > randomizer: resumed with value 0.49985087706271081
+mkxl run stats  > jobdata time: 0.000 seconds saving, 0.000 seconds loading
+mkxl run stats  > callbacks: file: 138, saved: 740, direct: 2, function: 999, value: 522, message: 0, bytecode: 626, late 0, total: 3027 (378 per page)
+mkxl run stats  > loaded patterns: en::1, load time: 0.000
+mkxl run stats  > loaded fonts: 6 files: static-cff1.otf, static-ttf.ttf, variable.otf, latinmodernmathcompanion-regular.otf, latinmodern-math.otf, lmroman10-regular.otf
+mkxl run stats  > font engine: otf 3.158, afm 1.541, tfm 1.000, 11 instances, 3 shared in backend, 3 common vectors, 0 common hashes, load time 0.903 seconds 
+mkxl run stats  > math tweaking time: 0.034 seconds, 6 math goodie tables
+mkxl run stats  > font embedding time: 0.812 seconds, 6 fonts
+mkxl run stats  > result saved in file: ./e2e.pdf, compresslevel 1, objectcompresslevel 3, 25 streams, 0 uncompressed, 24 compressed, 1 not compressed, threshold 40
+mkxl run stats  > positions: 4 collected, 0 deltas, 0 shared partials, 0 partial entries
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20261029, format id: 737, memory mode: 1, compiler: clang, cversion: 17
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 54349 control sequences, 262144 hash slots, 5339 misses, approximate memory usage: 114 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 75 MB, ctx: 71 MB, max: 125 MB, symbol mask: utf (τεχ)
+mkxl run stats  > runtime: 1.948 seconds, 8 processed pages, 8 shipped pages, 4.108 pages/second

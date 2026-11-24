@@ -1,0 +1,1785 @@
+resolvers       | resolving | configuration files already identified
+resolvers       | resolving | loading configuration file 'selfautoparent:/texmf/web2c/texmfcnf.lua'
+resolvers       | resolving |
+resolvers       | resolving | locating list of 'home:texmf' (runtime) (tree:///home:texmf)
+resolvers       | methods | resolving, method 'locators', how 'uri', handler 'tree', argument 'tree:///home:texmf'
+resolvers       | trees | locator '/Users/juliusross/texmf' found
+resolvers       | resolving | hash 'home:texmf' appended
+resolvers       | resolving | locating list of 'selfautoparent:texmf-project' (cached)
+resolvers       | methods | resolving, method 'locators', how 'uri', handler 'file', argument 'selfautoparent:texmf-project'
+resolvers       | files | file locator 'selfautoparent:texmf-project' found as '/private/tmp/somerville-cff2-final-full-2/tex/texmf-project'
+resolvers       | resolving | locating list of 'selfautoparent:texmf-fonts' (cached)
+resolvers       | methods | resolving, method 'locators', how 'uri', handler 'file', argument 'selfautoparent:texmf-fonts'
+resolvers       | files | file locator 'selfautoparent:texmf-fonts' found as '/private/tmp/somerville-cff2-final-full-2/tex/texmf-fonts'
+resolvers       | resolving | locating list of 'selfautoparent:texmf-local' (cached)
+resolvers       | methods | resolving, method 'locators', how 'uri', handler 'file', argument 'selfautoparent:texmf-local'
+resolvers       | files | file locator 'selfautoparent:texmf-local' found as '/private/tmp/somerville-cff2-final-full-2/tex/texmf-local'
+resolvers       | resolving | locating list of 'selfautoparent:texmf-modules' (cached)
+resolvers       | methods | resolving, method 'locators', how 'uri', handler 'file', argument 'selfautoparent:texmf-modules'
+resolvers       | files | file locator 'selfautoparent:texmf-modules' found as '/private/tmp/somerville-cff2-final-full-2/tex/texmf-modules'
+resolvers       | resolving | locating list of 'selfautoparent:texmf-context' (cached)
+resolvers       | methods | resolving, method 'locators', how 'uri', handler 'file', argument 'selfautoparent:texmf-context'
+resolvers       | files | file locator 'selfautoparent:texmf-context' found as '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context'
+resolvers       | resolving | locating list of 'selfautoparent:texmf-osx-arm' (cached)
+resolvers       | methods | resolving, method 'locators', how 'uri', handler 'file', argument 'selfautoparent:texmf-osx-arm'
+resolvers       | files | file locator 'selfautoparent:texmf-osx-arm' not found
+resolvers       | resolving | locating list of 'selfautoparent:texmf' (cached)
+resolvers       | methods | resolving, method 'locators', how 'uri', handler 'file', argument 'selfautoparent:texmf'
+resolvers       | files | file locator 'selfautoparent:texmf' found as '/private/tmp/somerville-cff2-final-full-2/tex/texmf'
+resolvers       | resolving |
+resolvers       | methods | resolving, method 'generators', how 'uri', handler 'file', argument 'home:texmf'
+resolvers       | expansions | using cached scan of path 'home:texmf', branch 'home:texmf'
+resolvers       | methods | resolving, method 'generators', how 'uri', handler 'file', argument 'selfautoparent:texmf-project'
+resolvers       | expansions | scanning path 'selfautoparent:texmf-project', branch 'selfautoparent:texmf-project'
+resolvers       | expansions | 0 files found on 0 directories with 0 uppercase remappings
+resolvers       | methods | resolving, method 'generators', how 'uri', handler 'file', argument 'selfautoparent:texmf-fonts'
+resolvers       | expansions | scanning path 'selfautoparent:texmf-fonts', branch 'selfautoparent:texmf-fonts'
+resolvers       | expansions | 0 files found on 0 directories with 0 uppercase remappings
+resolvers       | methods | resolving, method 'generators', how 'uri', handler 'file', argument 'selfautoparent:texmf-local'
+resolvers       | expansions | scanning path 'selfautoparent:texmf-local', branch 'selfautoparent:texmf-local'
+resolvers       | expansions | 0 files found on 0 directories with 0 uppercase remappings
+resolvers       | methods | resolving, method 'generators', how 'uri', handler 'file', argument 'selfautoparent:texmf-modules'
+resolvers       | expansions | scanning path 'selfautoparent:texmf-modules', branch 'selfautoparent:texmf-modules'
+resolvers       | expansions | 0 files found on 0 directories with 0 uppercase remappings
+resolvers       | methods | resolving, method 'generators', how 'uri', handler 'file', argument 'selfautoparent:texmf-context'
+resolvers       | expansions | scanning path 'selfautoparent:texmf-context', branch 'selfautoparent:texmf-context'
+resolvers       | expansions | 6416 files found on 535 directories with 131 uppercase remappings
+resolvers       | methods | resolving, method 'generators', how 'uri', handler 'file', argument 'selfautoparent:texmf'
+resolvers       | expansions | scanning path 'selfautoparent:texmf', branch 'selfautoparent:texmf'
+resolvers       | expansions | 694 files found on 54 directories with 275 uppercase remappings
+resolvers       | methods | resolving, method 'generators', how 'uri', handler 'file', argument 'home:texmf'
+resolvers       | expansions | using cached scan of path 'home:texmf', branch 'home:texmf'
+resolvers       | resolving |
+resolvers       | resolving | not saving runtime tree 'home:texmf'
+resolvers       | resolving | saving tree 'selfautoparent:texmf-project'
+resolvers       | caches | hashing tree 'selfautoparent:texmf-project', hash '71c82419867f9a0df8a150196c03c86f'
+resolvers       | caching | preparing 'files' for 'selfautoparent:texmf-project'
+resolvers       | caching | category 'files', cachename 'selfautoparent:texmf-project' saved in '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/71c82419867f9a0df8a150196c03c86f.lua'
+system          | lua | compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/71c82419867f9a0df8a150196c03c86f.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/71c82419867f9a0df8a150196c03c86f.lud'
+system          | lua | dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/71c82419867f9a0df8a150196c03c86f.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/71c82419867f9a0df8a150196c03c86f.lud' stripped
+resolvers       | caching | 'files' compiled to '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/71c82419867f9a0df8a150196c03c86f.lud'
+resolvers       | resolving | saving tree 'selfautoparent:texmf-fonts'
+resolvers       | caches | hashing tree 'selfautoparent:texmf-fonts', hash '3f406286dc3075cdfb044f836920f46a'
+resolvers       | caching | preparing 'files' for 'selfautoparent:texmf-fonts'
+resolvers       | caching | category 'files', cachename 'selfautoparent:texmf-fonts' saved in '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3f406286dc3075cdfb044f836920f46a.lua'
+system          | lua | compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3f406286dc3075cdfb044f836920f46a.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3f406286dc3075cdfb044f836920f46a.lud'
+system          | lua | dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3f406286dc3075cdfb044f836920f46a.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3f406286dc3075cdfb044f836920f46a.lud' stripped
+resolvers       | caching | 'files' compiled to '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3f406286dc3075cdfb044f836920f46a.lud'
+resolvers       | resolving | saving tree 'selfautoparent:texmf-local'
+resolvers       | caches | hashing tree 'selfautoparent:texmf-local', hash '73630a261795d9c53610a28af4550cbc'
+resolvers       | caching | preparing 'files' for 'selfautoparent:texmf-local'
+resolvers       | caching | category 'files', cachename 'selfautoparent:texmf-local' saved in '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/73630a261795d9c53610a28af4550cbc.lua'
+system          | lua | compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/73630a261795d9c53610a28af4550cbc.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/73630a261795d9c53610a28af4550cbc.lud'
+system          | lua | dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/73630a261795d9c53610a28af4550cbc.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/73630a261795d9c53610a28af4550cbc.lud' stripped
+resolvers       | caching | 'files' compiled to '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/73630a261795d9c53610a28af4550cbc.lud'
+resolvers       | resolving | saving tree 'selfautoparent:texmf-modules'
+resolvers       | caches | hashing tree 'selfautoparent:texmf-modules', hash '3952aa25b6a1b9f9f8d3eeb6e65f0039'
+resolvers       | caching | preparing 'files' for 'selfautoparent:texmf-modules'
+resolvers       | caching | category 'files', cachename 'selfautoparent:texmf-modules' saved in '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3952aa25b6a1b9f9f8d3eeb6e65f0039.lua'
+system          | lua | compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3952aa25b6a1b9f9f8d3eeb6e65f0039.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3952aa25b6a1b9f9f8d3eeb6e65f0039.lud'
+system          | lua | dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3952aa25b6a1b9f9f8d3eeb6e65f0039.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3952aa25b6a1b9f9f8d3eeb6e65f0039.lud' stripped
+resolvers       | caching | 'files' compiled to '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/3952aa25b6a1b9f9f8d3eeb6e65f0039.lud'
+resolvers       | resolving | saving tree 'selfautoparent:texmf-context'
+resolvers       | caches | hashing tree 'selfautoparent:texmf-context', hash 'fb39a92c95ceca857c3f2d0ee48a2ad3'
+resolvers       | caching | preparing 'files' for 'selfautoparent:texmf-context'
+resolvers       | caching | category 'files', cachename 'selfautoparent:texmf-context' saved in '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/fb39a92c95ceca857c3f2d0ee48a2ad3.lua'
+system          | lua | compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/fb39a92c95ceca857c3f2d0ee48a2ad3.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/fb39a92c95ceca857c3f2d0ee48a2ad3.lud'
+system          | lua | dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/fb39a92c95ceca857c3f2d0ee48a2ad3.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/fb39a92c95ceca857c3f2d0ee48a2ad3.lud' stripped
+resolvers       | caching | 'files' compiled to '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/fb39a92c95ceca857c3f2d0ee48a2ad3.lud'
+resolvers       | resolving | saving tree 'selfautoparent:texmf'
+resolvers       | caches | hashing tree 'selfautoparent:texmf', hash 'dcb651482955ac31eaab7723b70e0184'
+resolvers       | caching | preparing 'files' for 'selfautoparent:texmf'
+resolvers       | caching | category 'files', cachename 'selfautoparent:texmf' saved in '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/dcb651482955ac31eaab7723b70e0184.lua'
+system          | lua | compiling '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/dcb651482955ac31eaab7723b70e0184.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/dcb651482955ac31eaab7723b70e0184.lud'
+system          | lua | dumping '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/dcb651482955ac31eaab7723b70e0184.lua' into '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/dcb651482955ac31eaab7723b70e0184.lud' stripped
+resolvers       | caching | 'files' compiled to '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/trees/dcb651482955ac31eaab7723b70e0184.lud'
+resolvers       | resolving | not saving runtime tree 'home:texmf'
+resolvers       | resolving | using given filetype 'tex'
+resolvers       | methods | resolving, method 'concatinators', how 'tag', tag 'file'
+resolvers       | resolving | remembering file 'cont-en.mkxl' using hash 'tex::cont-en.mkxl'
+resolvers       | formats | using tex source file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-en.mkxl'
+resolvers       | formats | using lua stub file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-cod.lmt'
+resolvers       | formats | changing to format path '/private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/formats/luametatex'
+resolvers       | formats | executing runner 'make luametatex format': /private/tmp/somerville-cff2-final-full-2/tex/texmf-osx-arm64/bin/luametatex --ini  --socket --shell-escape --lua=/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-cod.lmt /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-en.mkxl  
+This is LuaMetaTeX, Version 2.11.10 initex
+(/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-en.mkxl(context.mkxl(syst-ini.mkxl)(syst-obs.mkxl)(norm-ctx.mkxl)(syst-pln.mkxl)(luat-cod.mkxl<+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-cod.lmt>)(luat-bas.mkxl loading: ConTeXt Lua Macros / Basic Lua Libraries<+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-bit32.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-lua.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-package.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/l-lpeg.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/l-function.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-string.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-table.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/l-boolean.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-number.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-math.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-io.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-os.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-file.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-md5.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-sha.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-dir.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/l-unicode.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/l-url.lua>)(luat-lib.mkxl loading: ConTeXt Lua Macros / Libraries<+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-for.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-str.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-tab.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-fil.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-sac.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/util-sto.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-pck.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-prs.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/util-fmt.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-dim.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-vec.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-bmp.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/trac-set.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-log.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/trac-tmr.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/trac-inf.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-lua.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-deb.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/util-tpl.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-seq.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/util-sta.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-sbx.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-zip.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-tar.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/util-sig.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-ini.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-exp.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-env.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/data-tmp.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-met.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-res.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-inp.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-out.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-fil.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-pre.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-bin.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-tex.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/data-vir.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-zip.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-dec.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-tar.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/data-sch.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-tre.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-lua.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/data-con.lua><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/data-use.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-cbk.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-run.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-fio.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-cnf.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-sto.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-ini.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-env.lmt><+ /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/luat-env.lua>
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-sbx.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/trac-lmx.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/luat-mac.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lxml-tab.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lxml-lpt.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lxml-xml.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lxml-aux.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lxml-mis.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/util-jsn.lmt' succeeded
+open source     > level 1, order 1, name 'catc-ini.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/catc-ini.lmt' succeeded
+close source    > level 1, order 1, name 'catc-ini.mkxl'
+open source     > level 1, order 2, name 'catc-act.mkxl'
+close source    > level 1, order 2, name 'catc-act.mkxl'
+open source     > level 1, order 3, name 'catc-def.mkxl'
+close source    > level 1, order 3, name 'catc-def.mkxl'
+open source     > level 1, order 4, name 'catc-sym.mkxl'
+close source    > level 1, order 4, name 'catc-sym.mkxl'
+open source     > level 1, order 5, name 'toks-ini.mkxl'
+loading: ConTeXt Token Support / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/toks-ini.lmt' succeeded
+close source    > level 1, order 5, name 'toks-ini.mkxl'
+open source     > level 1, order 6, name 'cldf-ini.mkxl'
+loading: ConTeXt Lua Documents / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cldf-ini.lmt' succeeded
+close source    > level 1, order 6, name 'cldf-ini.mkxl'
+open source     > level 1, order 7, name 'luat-ini.mkxl'
+loading: ConTeXt Lua Macros / Initialization
+close source    > level 1, order 7, name 'luat-ini.mkxl'
+open source     > level 1, order 8, name 'toks-scn.mkxl'
+loading: ConTeXt Token Support / Scanners
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/toks-scn.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/cldf-scn.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/cldf-stp.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cldf-lmt.lmt' succeeded
+close source    > level 1, order 8, name 'toks-scn.mkxl'
+open source     > level 1, order 9, name 'cldf-pos.mkxl'
+loading: ConTeXt Posit Numbers / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cldf-pos.lmt' succeeded
+close source    > level 1, order 9, name 'cldf-pos.mkxl'
+open source     > level 1, order 10, name 'syst-aux.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/syst-aux.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/syst-mac.lmt' succeeded
+close source    > level 1, order 10, name 'syst-aux.mkxl'
+open source     > level 1, order 11, name 'syst-lua.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/syst-lua.lmt' succeeded
+close source    > level 1, order 11, name 'syst-lua.mkxl'
+open source     > level 1, order 12, name 'syst-con.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/syst-con.lmt' succeeded
+close source    > level 1, order 12, name 'syst-con.mkxl'
+open source     > level 1, order 13, name 'syst-fnt.mkxl'
+close source    > level 1, order 13, name 'syst-fnt.mkxl'
+open source     > level 1, order 14, name 'syst-rtp.mkxl'
+close source    > level 1, order 14, name 'syst-rtp.mkxl'
+open source     > level 1, order 15, name 'luat-usr.mkxl'
+loading         : ConTeXt Lua Macros / Userspace
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-usr.lmt' succeeded
+close source    > level 1, order 15, name 'luat-usr.mkxl'
+open source     > level 1, order 16, name 'file-ini.mklx'
+loading         : ConTeXt File Macros / Helpers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/file-ini.lua' succeeded
+close source    > level 1, order 16, name 'file-ini.mklx'
+open source     > level 1, order 17, name 'file-res.mklx'
+loading         : ConTeXt File Macros / Resolvers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/file-res.lua' succeeded
+close source    > level 1, order 17, name 'file-res.mklx'
+open source     > level 1, order 18, name 'file-lib.mkxl'
+loading         : ConTeXt File Macros / Libraries
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/file-lib.lua' succeeded
+close source    > level 1, order 18, name 'file-lib.mkxl'
+open source     > level 1, order 19, name 'core-lmt.mkxl'
+loading         : ConTeXt System Macros / Primitives
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/core-lmt.lmt' succeeded
+close source    > level 1, order 19, name 'core-lmt.mkxl'
+open source     > level 1, order 20, name 'supp-dir.mkxl'
+close source    > level 1, order 20, name 'supp-dir.mkxl'
+open source     > level 1, order 21, name 'char-utf.mkxl'
+loading         : ConTeXt Character Support / Unicode UTF
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/char-def.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/char-ini.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/char-utf.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/char-cjk.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/char-ran.lua' succeeded
+close source    > level 1, order 21, name 'char-utf.mkxl'
+open source     > level 1, order 22, name 'char-ini.mkxl'
+loading         : ConTeXt Character Support / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/char-fio.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/char-map.lua' succeeded
+characters      > setting up character related codes and commands
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/char-tex.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/char-ent.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/char-scr.lua' succeeded
+close source    > level 1, order 22, name 'char-ini.mkxl'
+open source     > level 1, order 23, name 'char-act.mkxl'
+loading         : ConTeXt Character Support / Active
+close source    > level 1, order 23, name 'char-act.mkxl'
+open source     > level 1, order 24, name 'mult-ini.mkxl'
+loading         : ConTeXt Multilingual Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mult-ini.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/mult-fmt.lua' succeeded
+close source    > level 1, order 24, name 'mult-ini.mkxl'
+open source     > level 1, order 25, name 'mult-sys.mkxl'
+loading         > ConTeXt Multilingual Macros / System
+interface       > defining english interface
+interface       > using english messages
+close source    > level 1, order 25, name 'mult-sys.mkxl'
+open source     > level 1, order 26, name 'mult-aux.mkxl'
+loading         > ConTeXt Multilingual Macros / Helpers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/mult-aux.lua' succeeded
+close source    > level 1, order 26, name 'mult-aux.mkxl'
+open source     > level 1, order 27, name 'mult-def.mkxl'
+interface       > initialization > loading interface definitions from 'mult-def.lua'
+interface       > initialization > loading interface messages from 'mult-mes.lua'
+interface       > initialization > loading interface definitions from 'mult-def.lua'
+interface       > initialization > loading interface messages from 'mult-mes.lua'
+interface       > initialization > loading interface definitions from 'mult-def.lua'
+interface       > initialization > loading interface messages from 'mult-mes.lua'
+interface       > initialization > loading interface definitions from 'mult-def.lua'
+interface       > initialization > loading interface messages from 'mult-mes.lua'
+interface       > initialization > loading interface definitions from 'mult-def.lua'
+interface       > initialization > loading interface messages from 'mult-mes.lua'
+interface       > initialization > loading interface definitions from 'mult-def.lua'
+interface       > initialization > loading interface messages from 'mult-mes.lua'
+interface       > initialization > loading interface definitions from 'mult-def.lua'
+interface       > initialization > loading interface messages from 'mult-mes.lua'
+interface       > initialization > definitions: 779 constants, 658 variables, 28 elements, 865 commands, 191 formats, 21 translations, 135 setupstrings
+close source    > level 1, order 27, name 'mult-def.mkxl'
+open source     > level 1, order 28, name 'mult-dim.mklx'
+loading         > ConTeXt Core Macros / General
+close source    > level 1, order 28, name 'mult-dim.mklx'
+open source     > level 1, order 29, name 'mult-tmp.mkxl'
+loading         > ConTeXt Multilingual Macros / Initialization
+close source    > level 1, order 29, name 'mult-tmp.mkxl'
+open source     > level 1, order 30, name 'cldf-int.mkxl'
+loading         > ConTeXt Multilingual Macros / Lua
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cldf-int.lmt' succeeded
+close source    > level 1, order 30, name 'cldf-int.mkxl'
+open source     > level 1, order 31, name 'trac-ctx.mkxl'
+loading         > ConTeXt Tracing Macros / TeX Trackers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/trac-ctx.lua' succeeded
+close source    > level 1, order 31, name 'trac-ctx.mkxl'
+open source     > level 1, order 32, name 'toks-aux.mkxl'
+loading         > ConTeXt Token Support / Helpers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/toks-aux.lmt' succeeded
+close source    > level 1, order 32, name 'toks-aux.mkxl'
+open source     > level 1, order 33, name 'toks-prm.mkxl'
+loading         > ConTeXt Token Support / Security
+close source    > level 1, order 33, name 'toks-prm.mkxl'
+open source     > level 1, order 34, name 'attr-ini.mkxl'
+loading         > ConTeXt Attribute Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/attr-ini.lmt' succeeded
+close source    > level 1, order 34, name 'attr-ini.mkxl'
+open source     > level 1, order 35, name 'bndr-ini.mkxl'
+loading         > ConTeXt Boundary Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/bndr-ini.lmt' succeeded
+close source    > level 1, order 35, name 'bndr-ini.mkxl'
+open source     > level 1, order 36, name 'core-ini.mkxl'
+loading         > ConTeXt Core Macros / Additional Initialization
+close source    > level 1, order 36, name 'core-ini.mkxl'
+open source     > level 1, order 37, name 'core-env.mkxl'
+loading         > ConTeXt Core Macros / Environments
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/core-env.lmt' succeeded
+close source    > level 1, order 37, name 'core-env.mkxl'
+open source     > level 1, order 38, name 'core-sys.mkxl'
+loading         > ConTeXt Core Macros / System
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/core-sys.lmt' succeeded
+close source    > level 1, order 38, name 'core-sys.mkxl'
+open source     > level 1, order 39, name 'layo-ini.mkxl'
+loading         > ConTeXt Layout Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/layo-ini.lmt' succeeded
+close source    > level 1, order 39, name 'layo-ini.mkxl'
+open source     > level 1, order 40, name 'node-ini.mkxl'
+loading         > ConTeXt Node Support / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-cmp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-ini.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-met.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-nut.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-res.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-aux.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-gcm.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-tst.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-tra.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-snp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-tsk.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-tex.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-dir.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-pro.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-ser.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-scn.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-par.lmt' succeeded
+close source    > level 1, order 40, name 'node-ini.mkxl'
+open source     > level 1, order 41, name 'node-ext.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-ext.lmt' succeeded
+close source    > level 1, order 41, name 'node-ext.mkxl'
+open source     > level 1, order 42, name 'node-syn.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-syn.lmt' succeeded
+close source    > level 1, order 42, name 'node-syn.mkxl'
+open source     > level 1, order 43, name 'node-fin.mkxl'
+loading         > ConTeXt Node Support / Finalizing
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-shp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-fin.lmt' succeeded
+close source    > level 1, order 43, name 'node-fin.mkxl'
+open source     > level 1, order 44, name 'node-mig.mkxl'
+loading         > ConTeXt Node Support / Migrations
+close source    > level 1, order 44, name 'node-mig.mkxl'
+open source     > level 1, order 45, name 'node-pag.mkxl'
+loading         > ConTeXt Node Macros / Page Building
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-pag.lmt' succeeded
+close source    > level 1, order 45, name 'node-pag.mkxl'
+open source     > level 1, order 46, name 'driv-ini.mkxl'
+loading         > ConTeXt Driver Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/driv-ini.lmt' succeeded
+close source    > level 1, order 46, name 'driv-ini.mkxl'
+open source     > level 1, order 47, name 'back-ini.mkxl'
+loading         > ConTeXt Backend Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/back-ini.lmt' succeeded
+close source    > level 1, order 47, name 'back-ini.mkxl'
+open source     > level 1, order 48, name 'back-res.mkxl'
+loading         > ConTeXt Backend Macros / Resources
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/back-res.lmt' succeeded
+close source    > level 1, order 48, name 'back-res.mkxl'
+open source     > level 1, order 49, name 'cldf-bas.mkxl'
+loading         > ConTeXt Lua Documents / Basics
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cldf-bas.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/cldf-prs.lua' succeeded
+close source    > level 1, order 49, name 'cldf-bas.mkxl'
+open source     > level 1, order 50, name 'attr-col.mkxl'
+loading         > ConTeXt Attribute Macros / Color
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/attr-col.lmt' succeeded
+close source    > level 1, order 50, name 'attr-col.mkxl'
+open source     > level 1, order 51, name 'attr-lay.mkxl'
+loading         > ConTeXt Attribute Macros / Viewerlayers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/attr-lay.lmt' succeeded
+close source    > level 1, order 51, name 'attr-lay.mkxl'
+open source     > level 1, order 52, name 'attr-neg.mkxl'
+loading         > ConTeXt Attribute Macros / Negation
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/attr-neg.lmt' succeeded
+close source    > level 1, order 52, name 'attr-neg.mkxl'
+open source     > level 1, order 53, name 'attr-eff.mkxl'
+loading         > ConTeXt Attribute Macros / Effects
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/attr-eff.lmt' succeeded
+close source    > level 1, order 53, name 'attr-eff.mkxl'
+open source     > level 1, order 54, name 'attr-alt.mkxl'
+loading         > ConTeXt Attribute Macros / Alternates
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/attr-alt.lmt' succeeded
+close source    > level 1, order 54, name 'attr-alt.mkxl'
+open source     > level 1, order 55, name 'attr-mkr.mkxl'
+loading         > ConTeXt Attribute Macros / Markers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/attr-mkr.lmt' succeeded
+close source    > level 1, order 55, name 'attr-mkr.mkxl'
+open source     > level 1, order 56, name 'trac-tex.mkxl'
+loading         > ConTeXt Tracking Macros / TeX
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/trac-tex.lmt' succeeded
+close source    > level 1, order 56, name 'trac-tex.mkxl'
+open source     > level 1, order 57, name 'trac-deb.mkxl'
+loading         > ConTeXt Tracing Macros / Debugger
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/trac-deb.lmt' succeeded
+close source    > level 1, order 57, name 'trac-deb.mkxl'
+open source     > level 1, order 58, name 'supp-box.mkxl'
+loading         > ConTeXt Support Macros / Boxes
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/supp-box.lmt' succeeded
+close source    > level 1, order 58, name 'supp-box.mkxl'
+open source     > level 1, order 59, name 'supp-ran.mkxl'
+loading         > ConTeXt Support Macros / Random Number Generation
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/supp-ran.lmt' succeeded
+close source    > level 1, order 59, name 'supp-ran.mkxl'
+open source     > level 1, order 60, name 'supp-mat.mkxl'
+loading         > ConTeXt Support Macros / Math
+close source    > level 1, order 60, name 'supp-mat.mkxl'
+open source     > level 1, order 61, name 'core-uti.mkxl'
+loading         > ConTeXt Core Macros / Utility File Handling
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/core-uti.lmt' succeeded
+close source    > level 1, order 61, name 'core-uti.mkxl'
+open source     > level 1, order 62, name 'file-job.mklx'
+loading         > ConTeXt File Macros / Job Handling
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/data-hsh.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/file-job.lmt' succeeded
+close source    > level 1, order 62, name 'file-job.mklx'
+open source     > level 1, order 63, name 'anch-pos.mkxl'
+loading         > ConTeXt Anchoring Macros / Positioning
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/anch-pos.lmt' succeeded
+close source    > level 1, order 63, name 'anch-pos.mkxl'
+open source     > level 1, order 64, name 'typo-ini.mkxl'
+loading         > ConTeXt Typographic Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-ini.lmt' succeeded
+close source    > level 1, order 64, name 'typo-ini.mkxl'
+open source     > level 1, order 65, name 'typo-lin.mkxl'
+loading         > ConTeXt Typographic Macros / Normalization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-lin.lmt' succeeded
+close source    > level 1, order 65, name 'typo-lin.mkxl'
+open source     > level 1, order 66, name 'typo-bld.mkxl'
+loading         > ConTeXt Typesetting Macros / Paragraph Building
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-bld.lmt' succeeded
+close source    > level 1, order 66, name 'typo-bld.mkxl'
+open source     > level 1, order 67, name 'typo-inj.mkxl'
+loading         > ConTeXt Typesetting Macros / Triggering Actions
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-inj.lmt' succeeded
+close source    > level 1, order 67, name 'typo-inj.mkxl'
+open source     > level 1, order 68, name 'file-syn.mklx'
+loading         > ConTeXt File Macros / Synonyms
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/file-syn.lmt' succeeded
+close source    > level 1, order 68, name 'file-syn.mklx'
+open source     > level 1, order 69, name 'file-mod.mklx'
+loading         > ConTeXt File Macros / Modules
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/file-mod.lmt' succeeded
+close source    > level 1, order 69, name 'file-mod.mklx'
+open source     > level 1, order 70, name 'core-con.mkxl'
+loading         > ConTeXt Core Macros / Conversion
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/core-con.lmt' succeeded
+close source    > level 1, order 70, name 'core-con.mkxl'
+open source     > level 1, order 71, name 'cont-fil.mkxl'
+loading         > ConTeXt File Synonyms
+close source    > level 1, order 71, name 'cont-fil.mkxl'
+open source     > level 1, order 72, name 'regi-ini.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/regi-ini.lmt' succeeded
+close source    > level 1, order 72, name 'regi-ini.mkxl'
+open source     > level 1, order 73, name 'enco-ini.mkxl'
+loading         > ConTeXt Encoding Macros / Initialization
+close source    > level 1, order 73, name 'enco-ini.mkxl'
+open source     > level 1, order 74, name 'hand-ini.mkxl'
+close source    > level 1, order 74, name 'hand-ini.mkxl'
+open source     > level 1, order 75, name 'lang-ini.mkxl'
+loading         > ConTeXt Language Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lang-ini.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lang-def.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lang-cnt.lua' succeeded
+close source    > level 1, order 75, name 'lang-ini.mkxl'
+open source     > level 1, order 76, name 'lang-hyp.mkxl'
+loading         > ConTeXt Language Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lang-dis.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lang-hyp.lmt' succeeded
+close source    > level 1, order 76, name 'lang-hyp.mkxl'
+open source     > level 1, order 77, name 'lang-lab.mkxl'
+loading         > ConTeXt Language Macros / Labels
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lang-lab.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lang-txt.lua' succeeded
+languages       > labels > defining label set 'titles'
+languages       > labels > defining label set 'texts'
+languages       > labels > defining label set 'functions'
+languages       > labels > unknown label set 'tags'
+close source    > level 1, order 77, name 'lang-lab.mkxl'
+open source     > level 1, order 78, name 'unic-ini.mkxl'
+loading         > ConTeXt Unicode Support / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/unic-ini.lmt' succeeded
+close source    > level 1, order 78, name 'unic-ini.mkxl'
+open source     > level 1, order 79, name 'core-dat.mkxl'
+loading         > ConTeXt Core Macros / Multipass Datasets
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/core-dat.lmt' succeeded
+close source    > level 1, order 79, name 'core-dat.mkxl'
+open source     > level 1, order 80, name 'core-pag.mkxl'
+loading         > ConTeXt Core Macros / Multipass Pagestate
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/core-pag.lmt' succeeded
+close source    > level 1, order 80, name 'core-pag.mkxl'
+open source     > level 1, order 81, name 'colo-ini.mkxl'
+loading         > ConTeXt Color Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/colo-ini.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/colo-icc.lmt' succeeded
+open source     > level 2, order 82, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/colo-imp-rgb.mkiv'
+close source    > level 2, order 82, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/colo-imp-rgb.mkiv'
+colors          > system 'rgb' is loaded
+close source    > level 1, order 82, name 'colo-ini.mkxl'
+open source     > level 1, order 83, name 'colo-nod.mkxl'
+loading         > ConTeXt Color Macros / Nodes
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/colo-nod.lmt' succeeded
+close source    > level 1, order 83, name 'colo-nod.mkxl'
+open source     > level 1, order 84, name 'colo-grp.mkxl'
+loading         > ConTeXt Color Macros / Groups
+close source    > level 1, order 84, name 'colo-grp.mkxl'
+open source     > level 1, order 85, name 'colo-ext.mkxl'
+loading         > ConTeXt Color Macros / Extras
+close source    > level 1, order 85, name 'colo-ext.mkxl'
+open source     > level 1, order 86, name 'pack-cut.mkxl'
+close source    > level 1, order 86, name 'pack-cut.mkxl'
+open source     > level 1, order 87, name 'lang-mis.mkxl'
+loading         > ConTeXt Language Macros / Compounds
+close source    > level 1, order 87, name 'lang-mis.mkxl'
+open source     > level 1, order 88, name 'lang-url.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lang-url.lmt' succeeded
+close source    > level 1, order 88, name 'lang-url.mkxl'
+open source     > level 1, order 89, name 'lang-def.mkxl'
+loading         > ConTeXt Language Macros / Definitions
+close source    > level 1, order 89, name 'lang-def.mkxl'
+open source     > level 1, order 90, name 'symb-ini.mkxl'
+loading         > ConTeXt Symbol Libraries / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/symb-ini.lmt' succeeded
+close source    > level 1, order 90, name 'symb-ini.mkxl'
+open source     > level 1, order 91, name 'sort-ini.mkxl'
+loading         > ConTeXt Sorting Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/sort-ini.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/sort-lan.lua' succeeded
+close source    > level 1, order 91, name 'sort-ini.mkxl'
+open source     > level 1, order 92, name 'pack-mis.mklx'
+loading         > ConTeXt Packing Macros / Misc Commands
+close source    > level 1, order 92, name 'pack-mis.mklx'
+open source     > level 1, order 93, name 'pack-ori.mkxl'
+loading         > ConTeXt Packaging Macros / Anchoring
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/pack-ori.lmt' succeeded
+close source    > level 1, order 93, name 'pack-ori.mkxl'
+open source     > level 1, order 94, name 'pack-rul.mkxl'
+loading         > ConTeXt Packaging Macros / Ruled Content
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/pack-rul.lmt' succeeded
+close source    > level 1, order 94, name 'pack-rul.mkxl'
+open source     > level 1, order 95, name 'pack-mrl.mkxl'
+loading         > ConTeXt Packaging Macros / More Rules
+close source    > level 1, order 95, name 'pack-mrl.mkxl'
+open source     > level 1, order 96, name 'pack-bck.mklx'
+loading         > ConTeXt Packaging Macros / Simple Backgrounds
+close source    > level 1, order 96, name 'pack-bck.mklx'
+open source     > level 1, order 97, name 'pack-fen.mkxl'
+loading         > ConTeXt Packaging Macros / Fences for Ruled Content
+close source    > level 1, order 97, name 'pack-fen.mkxl'
+open source     > level 1, order 98, name 'lxml-ini.mkxl'
+loading         > ConTeXt XML Support / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lxml-ent.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lxml-tex.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lxml-dir.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lxml-ini.lua' succeeded
+close source    > level 1, order 98, name 'lxml-ini.mkxl'
+open source     > level 1, order 99, name 'lxml-sor.mkxl'
+loading         > ConTeXt XML Support / Sorting
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lxml-sor.lua' succeeded
+close source    > level 1, order 99, name 'lxml-sor.mkxl'
+open source     > level 1, order 100, name 'typo-prc.mklx'
+loading         > ConTeXt Typesetting Macros / Processors
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-prc.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-man.lmt' succeeded
+close source    > level 1, order 100, name 'typo-prc.mklx'
+open source     > level 1, order 101, name 'typo-plc.mkxl'
+loading         > ConTeXt Typesetting Macros / Placeholders
+close source    > level 1, order 101, name 'typo-plc.mkxl'
+open source     > level 1, order 102, name 'strc-ini.mklx'
+loading         > ConTeXt Structure Macros / Initialization & Helpers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/strc-ini.lua' succeeded
+close source    > level 1, order 102, name 'strc-ini.mklx'
+open source     > level 1, order 103, name 'strc-tag.mkxl'
+loading         > ConTeXt Structure Macros / Tags
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-tag.lmt' succeeded
+close source    > level 1, order 103, name 'strc-tag.mkxl'
+open source     > level 1, order 104, name 'strc-doc.mkxl'
+loading         > ConTeXt Structure Macros / Document Structure
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-doc.lmt' succeeded
+close source    > level 1, order 104, name 'strc-doc.mkxl'
+open source     > level 1, order 105, name 'strc-num.mkxl'
+loading         > ConTeXt Structure Macros / Basic Numbering
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/strc-num.lua' succeeded
+close source    > level 1, order 105, name 'strc-num.mkxl'
+open source     > level 1, order 106, name 'strc-mar.mkxl'
+loading         > ConTeXt Structure Macros / Markings
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-mar.lmt' succeeded
+close source    > level 1, order 106, name 'strc-mar.mkxl'
+open source     > level 1, order 107, name 'strc-sbe.mkxl'
+loading         > ConTeXt Structure Macros / Section Block Environments
+close source    > level 1, order 107, name 'strc-sbe.mkxl'
+open source     > level 1, order 108, name 'strc-lst.mklx'
+loading         > ConTeXt Structure Macros / Lists
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-lst.lmt' succeeded
+close source    > level 1, order 108, name 'strc-lst.mklx'
+open source     > level 1, order 109, name 'strc-sec.mkxl'
+loading         > ConTeXt Structure Macros / Sectioning
+close source    > level 1, order 109, name 'strc-sec.mkxl'
+open source     > level 1, order 110, name 'strc-pag.mkxl'
+loading         > ConTeXt Structure Macros / Pagenumbering
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/strc-pag.lua' succeeded
+close source    > level 1, order 110, name 'strc-pag.mkxl'
+open source     > level 1, order 111, name 'strc-ren.mkxl'
+loading         > ConTeXt Structure Macros / Section Rendering
+close source    > level 1, order 111, name 'strc-ren.mkxl'
+open source     > level 1, order 112, name 'strc-def.mkxl'
+loading         > ConTeXt Structure Macros / Definitions
+close source    > level 1, order 112, name 'strc-def.mkxl'
+open source     > level 1, order 113, name 'strc-ref.mklx'
+loading         > ConTeXt Structure Macros / Cross Referencing
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-rsc.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-ref.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-ref.lmt' succeeded
+close source    > level 1, order 113, name 'strc-ref.mklx'
+open source     > level 1, order 114, name 'strc-lev.mklx'
+loading         > ConTeXt Structure Macros / Automatic Levels
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-lev.lmt' succeeded
+close source    > level 1, order 114, name 'strc-lev.mklx'
+open source     > level 1, order 115, name 'spac-hor.mkxl'
+loading         > ConTeXt Spacing Macros / Horizontal
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/spac-hor.lmt' succeeded
+close source    > level 1, order 115, name 'spac-hor.mkxl'
+open source     > level 1, order 116, name 'spac-ali.mkxl'
+loading         > ConTeXt Spacing Macros / Alignments
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/spac-ali.lmt' succeeded
+close source    > level 1, order 116, name 'spac-ali.mkxl'
+open source     > level 1, order 117, name 'spac-flr.mkxl'
+loading         > ConTeXt Spacing Macros / Fillers
+close source    > level 1, order 117, name 'spac-flr.mkxl'
+open source     > level 1, order 118, name 'spac-ver.mkxl'
+loading         > ConTeXt Spacing Macros / Vertical
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/spac-ver.lmt' succeeded
+close source    > level 1, order 118, name 'spac-ver.mkxl'
+open source     > level 1, order 119, name 'spac-lin.mkxl'
+loading         > ConTeXt Spacing Macros / Lines
+close source    > level 1, order 119, name 'spac-lin.mkxl'
+open source     > level 1, order 120, name 'spac-pag.mkxl'
+loading         > ConTeXt Spacing Macros / Pages
+close source    > level 1, order 120, name 'spac-pag.mkxl'
+open source     > level 1, order 121, name 'spac-par.mkxl'
+loading         > ConTeXt Spacing Macros / Paragraphs
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/spac-par.lmt' succeeded
+close source    > level 1, order 121, name 'spac-par.mkxl'
+open source     > level 1, order 122, name 'spac-def.mkxl'
+loading         > ConTeXt Spacing Macros / Definitions
+close source    > level 1, order 122, name 'spac-def.mkxl'
+open source     > level 1, order 123, name 'spac-prf.mklx'
+loading         > ConTeXt Spacing Macros / Profiling
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/spac-prf.lmt' succeeded
+close source    > level 1, order 123, name 'spac-prf.mklx'
+open source     > level 1, order 124, name 'spac-grd.mkxl'
+loading         > ConTeXt Spacing Macros / Grid Snapping
+close source    > level 1, order 124, name 'spac-grd.mkxl'
+open source     > level 1, order 125, name 'spac-pas.mkxl'
+loading         > ConTeXt Spacing Macros / Passes
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/spac-pas.lmt' succeeded
+close source    > level 1, order 125, name 'spac-pas.mkxl'
+open source     > level 1, order 126, name 'spac-imp-tests.mkxl'
+close source    > level 1, order 126, name 'spac-imp-tests.mkxl'
+open source     > level 1, order 127, name 'scrn-ini.mklx'
+loading         > ConTeXt Interaction Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/scrn-ini.lmt' succeeded
+close source    > level 1, order 127, name 'scrn-ini.mklx'
+open source     > level 1, order 128, name 'scrn-ref.mklx'
+loading         > ConTeXt Screen Macros / References
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/scrn-ref.lmt' succeeded
+close source    > level 1, order 128, name 'scrn-ref.mklx'
+open source     > level 1, order 129, name 'pack-obj.mkxl'
+loading         > ConTeXt Packaging Macros / Objects
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/pack-obj.lmt' succeeded
+close source    > level 1, order 129, name 'pack-obj.mkxl'
+open source     > level 1, order 130, name 'strc-itm.mklx'
+loading         > ConTeXt Structure Macros / Itemgroups
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-itm.lmt' succeeded
+close source    > level 1, order 130, name 'strc-itm.mklx'
+open source     > level 1, order 131, name 'strc-con.mklx'
+loading         > ConTeXt Structure Macros / Constructions
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/strc-con.lua' succeeded
+close source    > level 1, order 131, name 'strc-con.mklx'
+open source     > level 1, order 132, name 'strc-des.mklx'
+loading         > ConTeXt Structure Macros / Descriptions
+close source    > level 1, order 132, name 'strc-des.mklx'
+open source     > level 1, order 133, name 'strc-enu.mklx'
+loading         > ConTeXt Structure Macros / Enumerations
+close source    > level 1, order 133, name 'strc-enu.mklx'
+open source     > level 1, order 134, name 'strc-ind.mkxl'
+loading         > ConTeXt Structure Macros / Indented Text
+close source    > level 1, order 134, name 'strc-ind.mkxl'
+open source     > level 1, order 135, name 'strc-lab.mkxl'
+loading         > ConTeXt Structure Macros / Labels
+close source    > level 1, order 135, name 'strc-lab.mkxl'
+open source     > level 1, order 136, name 'strc-syn.mkxl'
+loading         > ConTeXt Structure Macros / Synonyms and Sorting
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-syn.lmt' succeeded
+close source    > level 1, order 136, name 'strc-syn.mkxl'
+open source     > level 1, order 137, name 'page-var.mkxl'
+loading         > ConTeXt Page Macros / Variables
+close source    > level 1, order 137, name 'page-var.mkxl'
+open source     > level 1, order 138, name 'page-otr.mklx'
+loading         > ConTeXt Page Macros / Output Routines
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/page-otr.lmt' succeeded
+close source    > level 1, order 138, name 'page-otr.mklx'
+open source     > level 1, order 139, name 'page-ini.mkxl'
+loading         > ConTeXt Page Macros / Initializations
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/page-ini.lmt' succeeded
+close source    > level 1, order 139, name 'page-ini.mkxl'
+open source     > level 1, order 140, name 'page-ins.mkxl'
+loading         > ConTeXt Core Macros / Insertions
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/page-ins.lmt' succeeded
+close source    > level 1, order 140, name 'page-ins.mkxl'
+open source     > level 1, order 141, name 'page-fac.mkxl'
+loading         > ConTeXt Page Macros / Facing Pages
+close source    > level 1, order 141, name 'page-fac.mkxl'
+open source     > level 1, order 142, name 'page-brk.mkxl'
+loading         > ConTeXt Page Macros / Breaks
+close source    > level 1, order 142, name 'page-brk.mkxl'
+open source     > level 1, order 143, name 'page-col.mkxl'
+loading         > ConTeXt Page Macros / Column Helpers
+close source    > level 1, order 143, name 'page-col.mkxl'
+open source     > level 1, order 144, name 'page-inf.mkxl'
+loading         > ConTeXt Page Macros / Tracing Info
+close source    > level 1, order 144, name 'page-inf.mkxl'
+open source     > level 1, order 145, name 'page-flt.mkxl'
+loading         > ConTeXt Page Macros / Float Management
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/page-flt.lua' succeeded
+close source    > level 1, order 145, name 'page-flt.mkxl'
+open source     > level 1, order 146, name 'page-bck.mkxl'
+loading         > ConTeXt Page Macros / Backgrounds
+close source    > level 1, order 146, name 'page-bck.mkxl'
+open source     > level 1, order 147, name 'page-not.mkxl'
+loading         > ConTeXt Page Macros / Footnotes
+close source    > level 1, order 147, name 'page-not.mkxl'
+open source     > level 1, order 148, name 'page-one.mkxl'
+loading         > ConTeXt Page Macros / Default Routine
+close source    > level 1, order 148, name 'page-one.mkxl'
+open source     > level 1, order 149, name 'page-lay.mkxl'
+loading         > ConTeXt Page Macros / Layout Specification
+close source    > level 1, order 149, name 'page-lay.mkxl'
+open source     > level 1, order 150, name 'page-box.mklx'
+loading         > ConTeXt Page Macros / Boxing
+close source    > level 1, order 150, name 'page-box.mklx'
+open source     > level 1, order 151, name 'page-txt.mklx'
+loading         > ConTeXt Page Macros / Texts
+close source    > level 1, order 151, name 'page-txt.mklx'
+open source     > level 1, order 152, name 'typo-lbx.mkxl'
+loading         > ConTeXt Typesetting Macros / Local Boxes
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-lbx.lmt' succeeded
+close source    > level 1, order 152, name 'typo-lbx.mkxl'
+open source     > level 1, order 153, name 'page-sid.mkxl'
+loading         > ConTeXt Page Macros / Side Floats
+close source    > level 1, order 153, name 'page-sid.mkxl'
+open source     > level 1, order 154, name 'strc-flt.mklx'
+loading         > ConTeXt Structure Macros / Float Numbering
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-flt.lmt' succeeded
+close source    > level 1, order 154, name 'strc-flt.mklx'
+open source     > level 1, order 155, name 'page-pst.mkxl'
+loading         > ConTeXt Page Macros / Postponing
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/page-pst.lua' succeeded
+close source    > level 1, order 155, name 'page-pst.mkxl'
+open source     > level 1, order 156, name 'page-mbk.mklx'
+loading         > ConTeXt Page Macros / Margin Floats
+close source    > level 1, order 156, name 'page-mbk.mklx'
+open source     > level 1, order 157, name 'page-mix.mkxl'
+loading         > ConTeXt Page Macros / Mixed Columns
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/page-mix.lua' succeeded
+close source    > level 1, order 157, name 'page-mix.mkxl'
+open source     > level 1, order 158, name 'page-smp.mkxl'
+close source    > level 1, order 158, name 'page-smp.mkxl'
+open source     > level 1, order 159, name 'page-mvl.mkxl'
+loading         > ConTeXt Page Macros / Columnsets
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/page-mvl.lmt' succeeded
+close source    > level 1, order 159, name 'page-mvl.mkxl'
+open source     > level 1, order 160, name 'page-pcl.mkxl'
+loading         > ConTeXt Page Macros / Page Columns
+close source    > level 1, order 160, name 'page-pcl.mkxl'
+open source     > level 1, order 161, name 'pack-lyr.mkxl'
+loading         > ConTeXt Packaging Macros / Layers
+close source    > level 1, order 161, name 'pack-lyr.mkxl'
+open source     > level 1, order 162, name 'pack-pos.mkxl'
+loading         > ConTeXt Packaging Macros / Positioning
+close source    > level 1, order 162, name 'pack-pos.mkxl'
+open source     > level 1, order 163, name 'page-mak.mklx'
+loading         > ConTeXt Page Macros / MakeUp
+close source    > level 1, order 163, name 'page-mak.mklx'
+open source     > level 1, order 164, name 'page-mcl.mkxl'
+loading         > ConTeXt Page Macros / Multicolumns Limited
+close source    > level 1, order 164, name 'page-mcl.mkxl'
+open source     > level 1, order 165, name 'strc-reg.mkxl'
+loading         > ConTeXt Structure Macros / Registers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-reg.lmt' succeeded
+close source    > level 1, order 165, name 'strc-reg.mkxl'
+open source     > level 1, order 166, name 'page-lin.mklx'
+loading         > ConTeXt Core Macros / Line Numbering
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/page-lin.lmt' succeeded
+close source    > level 1, order 166, name 'page-lin.mklx'
+open source     > level 1, order 167, name 'page-par.mkxl'
+loading         > ConTeXt Page Macros / Paragraph Numbering
+close source    > level 1, order 167, name 'page-par.mkxl'
+open source     > level 1, order 168, name 'typo-pag.mkxl'
+loading         > ConTeXt Typesetting Macros / Pages
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-pag.lmt' succeeded
+close source    > level 1, order 168, name 'typo-pag.mkxl'
+open source     > level 1, order 169, name 'typo-mar.mkxl'
+loading         > ConTeXt Typesetting Macros / Margindata
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-mar.lmt' succeeded
+close source    > level 1, order 169, name 'typo-mar.mkxl'
+open source     > level 1, order 170, name 'typo-itm.mkxl'
+loading         > ConTeXt Node Macros / Item Lists
+close source    > level 1, order 170, name 'typo-itm.mkxl'
+open source     > level 1, order 171, name 'typo-stc.mkxl'
+loading         > ConTeXt Typesetting Macros / Stacking
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-stc.lmt' succeeded
+close source    > level 1, order 171, name 'typo-stc.mkxl'
+open source     > level 1, order 172, name 'typo-swp.mkxl'
+loading         > ConTeXt Spacing Macros / Column Swapping
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-swp.lmt' succeeded
+close source    > level 1, order 172, name 'typo-swp.mkxl'
+open source     > level 1, order 173, name 'buff-ini.mkxl'
+loading         > ConTeXt Buffer Macros / Buffers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/buff-ini.lmt' succeeded
+close source    > level 1, order 173, name 'buff-ini.mkxl'
+open source     > level 1, order 174, name 'buff-ver.mkxl'
+loading         > ConTeXt Buffer Macros / Verbatim
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/buff-ver.lmt' succeeded
+open source     > level 2, order 175, name 'buff-imp-default.mkiv'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/buff-imp-default.lua' succeeded
+close source    > level 2, order 175, name 'buff-imp-default.mkiv'
+open source     > level 2, order 176, name 'buff-imp-nested.mkiv'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/buff-imp-nested.lua' succeeded
+close source    > level 2, order 176, name 'buff-imp-nested.mkiv'
+open source     > level 2, order 177, name 'buff-imp-escaped.mkiv'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/buff-imp-escaped.lua' succeeded
+close source    > level 2, order 177, name 'buff-imp-escaped.mkiv'
+close source    > level 1, order 177, name 'buff-ver.mkxl'
+open source     > level 1, order 178, name 'buff-par.mklx'
+loading         > ConTeXt Buffer Macros / Parallel
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/buff-par.lua' succeeded
+close source    > level 1, order 178, name 'buff-par.mklx'
+open source     > level 1, order 179, name 'buff-imp-tex.mkiv'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/buff-imp-tex.lua' succeeded
+system          > error: invalid parent DefaultSnippet for TexSnippet, DefaultSnippet defined too (best check it)
+close source    > level 1, order 179, name 'buff-imp-tex.mkiv'
+open source     > level 1, order 180, name 'buff-imp-mp.mkiv'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/buff-imp-mp.lua' succeeded
+close source    > level 1, order 180, name 'buff-imp-mp.mkiv'
+open source     > level 1, order 181, name 'buff-imp-lua.mkiv'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/buff-imp-lua.lua' succeeded
+close source    > level 1, order 181, name 'buff-imp-lua.mkiv'
+open source     > level 1, order 182, name 'buff-imp-xml.mkiv'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/buff-imp-xml.lua' succeeded
+close source    > level 1, order 182, name 'buff-imp-xml.mkiv'
+open source     > level 1, order 183, name 'buff-imp-parsed-xml.mkiv'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/buff-imp-parsed-xml.lua' succeeded
+close source    > level 1, order 183, name 'buff-imp-parsed-xml.mkiv'
+open source     > level 1, order 184, name 'strc-blk.mkxl'
+loading         > ConTeXt Structure Macros / Blockmoves
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/strc-blk.lua' succeeded
+close source    > level 1, order 184, name 'strc-blk.mkxl'
+open source     > level 1, order 185, name 'page-imp.mkxl'
+loading         > ConTeXt Page Macros / Pagebody Building
+close source    > level 1, order 185, name 'page-imp.mkxl'
+open source     > level 1, order 186, name 'page-sel.mklx'
+loading         > ConTeXt Page Macros / Page Selection
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/page-sel.lmt' succeeded
+close source    > level 1, order 186, name 'page-sel.mklx'
+open source     > level 1, order 187, name 'page-inj.mklx'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/page-inj.lua' succeeded
+close source    > level 1, order 187, name 'page-inj.mklx'
+open source     > level 1, order 188, name 'scrn-pag.mklx'
+loading         > ConTeXt Screen Macros / Pages
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/scrn-pag.lmt' succeeded
+close source    > level 1, order 188, name 'scrn-pag.mklx'
+open source     > level 1, order 189, name 'scrn-wid.mklx'
+loading         > ConTeXt Interaction Macros / Widgets
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/scrn-wid.lmt' succeeded
+close source    > level 1, order 189, name 'scrn-wid.mklx'
+open source     > level 1, order 190, name 'scrn-but.mklx'
+loading         > ConTeXt Screen Macros / Buttons
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/scrn-but.lua' succeeded
+close source    > level 1, order 190, name 'scrn-but.mklx'
+open source     > level 1, order 191, name 'scrn-bar.mklx'
+loading         > ConTeXt Screen Macros / Progress Bars
+close source    > level 1, order 191, name 'scrn-bar.mklx'
+open source     > level 1, order 192, name 'scrn-hlt.mkxl'
+loading         > ConTeXt Interaction Macros / Highlights
+close source    > level 1, order 192, name 'scrn-hlt.mkxl'
+open source     > level 1, order 193, name 'page-com.mkxl'
+loading         > ConTeXt Page Macros / Page Comments
+close source    > level 1, order 193, name 'page-com.mkxl'
+open source     > level 1, order 194, name 'strc-bkm.mkxl'
+loading         > ConTeXt Structure Macros / Bookmarks
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/strc-bkm.lua' succeeded
+close source    > level 1, order 194, name 'strc-bkm.mkxl'
+open source     > level 1, order 195, name 'java-ini.mkxl'
+loading         > ConTeXt JavaScript Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/java-ini.lua' succeeded
+close source    > level 1, order 195, name 'java-ini.mkxl'
+open source     > level 1, order 196, name 'scrn-fld.mklx'
+loading         > ConTeXt Screen Macros / Fields
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/scrn-fld.lua' succeeded
+close source    > level 1, order 196, name 'scrn-fld.mklx'
+open source     > level 1, order 197, name 'scrn-hlp.mklx'
+loading         > ConTeXt Screen Macros / Help popups
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/scrn-hlp.lua' succeeded
+close source    > level 1, order 197, name 'scrn-hlp.mklx'
+open source     > level 1, order 198, name 'char-enc.mkxl'
+loading         > ConTeXt Character Support / Encodings
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/char-enc.lua' succeeded
+close source    > level 1, order 198, name 'char-enc.mkxl'
+open source     > level 1, order 199, name 'font-lib.mklx'
+loading         > ConTeXt Font Macros / Libraries
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-ini.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-log.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-con.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-enc.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-fmp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-agl.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-cid.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-map.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-otr.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-web.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-cff.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-ttf.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-dsp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-hsh.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-vfc.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-prv.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-vir.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-nod.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-oti.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-ott.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-otl.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-oto.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-otj.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-oup.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-ota.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-ots.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-otd.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-otc.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-oth.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-osd.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-ogr.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-onr.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-one.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-afk.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-txt.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-tpk.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-tfm.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-syn.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-trt.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-shp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-pat.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-fnt.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-lua.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-enh.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/good-ini.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/good-gen.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/good-ctx.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/good-mth.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-def.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-ctx.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-checks.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-ligatures.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-imp-tex.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-imp-reorder.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-imp-properties.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-imp-unicode.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-text.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-math.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-imp-notused.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-effects.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-quality.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-italics.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-dimensions.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-imp-spacekerns.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-imp-tweaks.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-imp-combining.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-scripts.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-sanitize.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-digits.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-compound.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-collapse.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-imp-tracing.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-fbk.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-aux.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-lig.lmt' succeeded
+close source    > level 1, order 199, name 'font-lib.mklx'
+open source     > level 1, order 200, name 'font-fil.mklx'
+loading         > ConTeXt Font Macros / Classes and Files
+close source    > level 1, order 200, name 'font-fil.mklx'
+open source     > level 1, order 201, name 'font-var.mklx'
+loading         > ConTeXt Font Macros / Common Variables
+close source    > level 1, order 201, name 'font-var.mklx'
+open source     > level 1, order 202, name 'font-fea.mklx'
+loading         > ConTeXt Font Macros / Features
+close source    > level 1, order 202, name 'font-fea.mklx'
+open source     > level 1, order 203, name 'font-mat.mklx'
+loading         > ConTeXt Font Macros / Math
+close source    > level 1, order 203, name 'font-mat.mklx'
+open source     > level 1, order 204, name 'font-ini.mklx'
+loading         > ConTeXt Font Macros / Initialization
+close source    > level 1, order 204, name 'font-ini.mklx'
+open source     > level 1, order 205, name 'font-glf.mklx'
+loading         > ConTeXt Font Macros / Glyph Scaling
+close source    > level 1, order 205, name 'font-glf.mklx'
+open source     > level 1, order 206, name 'font-sym.mklx'
+loading         > ConTeXt Font Macros / Symbolic Access
+close source    > level 1, order 206, name 'font-sym.mklx'
+open source     > level 1, order 207, name 'font-sty.mklx'
+loading         > ConTeXt Font Macros / Styles
+close source    > level 1, order 207, name 'font-sty.mklx'
+open source     > level 1, order 208, name 'font-set.mklx'
+loading         > ConTeXt Font Macros / Initial Loading
+close source    > level 1, order 208, name 'font-set.mklx'
+open source     > level 1, order 209, name 'font-emp.mklx'
+loading         > ConTeXt Font Macros / Emphasis
+close source    > level 1, order 209, name 'font-emp.mklx'
+open source     > level 1, order 210, name 'font-pre.mkxl'
+loading         > ConTeXt Font Macros / Predefined
+fonts           > checks > registering extra script 'auto'
+fonts           > ignoring feature overload 'script' in 'devanagari-one'
+fonts           > ignoring feature overload 'script' in 'bengali-one'
+fonts           > ignoring feature overload 'script' in 'gujarati-one'
+fonts           > ignoring feature overload 'script' in 'gurmukhi-one'
+fonts           > ignoring feature overload 'script' in 'kannada-one'
+fonts           > ignoring feature overload 'script' in 'malayalam-one'
+fonts           > ignoring feature overload 'script' in 'oriya-one'
+fonts           > ignoring feature overload 'script' in 'tamil-one'
+fonts           > ignoring feature overload 'script' in 'telugu-one'
+fonts           > ignoring feature overload 'script' in 'default'
+fonts           > ignoring feature overload 'script' in 'always'
+close source    > level 1, order 210, name 'font-pre.mkxl'
+open source     > level 1, order 211, name 'font-unk.mkxl'
+close source    > level 1, order 211, name 'font-unk.mkxl'
+open source     > level 1, order 212, name 'font-tra.mkxl'
+loading         > ConTeXt Font Macros / Tracing
+close source    > level 1, order 212, name 'font-tra.mkxl'
+open source     > level 1, order 213, name 'font-chk.mkxl'
+loading         > ConTeXt Font Macros / Checking
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-chk.lmt' succeeded
+close source    > level 1, order 213, name 'font-chk.mkxl'
+open source     > level 1, order 214, name 'font-uni.mkxl'
+loading         > ConTeXt Font Macros / Unicode
+close source    > level 1, order 214, name 'font-uni.mkxl'
+open source     > level 1, order 215, name 'font-col.mklx'
+loading         > ConTeXt Font Macros / Collections
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-col.lmt' succeeded
+close source    > level 1, order 215, name 'font-col.mklx'
+open source     > level 1, order 216, name 'font-gds.mklx'
+loading         > ConTeXt Font Support / Colorschemes
+close source    > level 1, order 216, name 'font-gds.mklx'
+open source     > level 1, order 217, name 'font-aux.mklx'
+loading         > ConTeXt Font Support / Helpers
+close source    > level 1, order 217, name 'font-aux.mklx'
+open source     > level 1, order 218, name 'font-sel.mklx'
+loading         > ConTeXt User Module / Selectfont
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-sel.lua' succeeded
+close source    > level 1, order 218, name 'font-sel.mklx'
+open source     > level 1, order 219, name 'font-tex.mkxl'
+loading         > ConTeXt Font Macros / TeX Glyphs
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-tex.lmt' succeeded
+close source    > level 1, order 219, name 'font-tex.mkxl'
+open source     > level 1, order 220, name 'typo-tal.mkxl'
+loading         > ConTeXt Typesetting Macros / Character Alignment
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-tal.lmt' succeeded
+close source    > level 1, order 220, name 'typo-tal.mkxl'
+open source     > level 1, order 221, name 'typo-par.mkxl'
+loading         > ConTeXt Node Macros / Paragraph Building
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/node-ltp.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/trac-par.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-par.lmt' succeeded
+close source    > level 1, order 221, name 'typo-par.mkxl'
+open source     > level 1, order 222, name 'typo-adj.mkxl'
+loading         > ConTeXt Typesetting Macros / Adjusters
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-adj.lmt' succeeded
+close source    > level 1, order 222, name 'typo-adj.mkxl'
+open source     > level 1, order 223, name 'typo-ada.mkxl'
+loading         > ConTeXt Typesetting Macros / Adaptive
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-ada.lmt' succeeded
+close source    > level 1, order 223, name 'typo-ada.mkxl'
+open source     > level 1, order 224, name 'tabl-com.mkxl'
+loading         > ConTeXt Table Macros / Common Code
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-ali.lmt' succeeded
+close source    > level 1, order 224, name 'tabl-com.mkxl'
+open source     > level 1, order 225, name 'tabl-tab.mkxl'
+loading         > ConTeXt Table Macros / TaBlE Embedding
+close source    > level 1, order 225, name 'tabl-tab.mkxl'
+open source     > level 1, order 226, name 'tabl-tbl.mkxl'
+loading         > ConTeXt Table Macros / Tabulation
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/tabl-tbl.lmt' succeeded
+close source    > level 1, order 226, name 'tabl-tbl.mkxl'
+open source     > level 1, order 227, name 'tabl-ntb.mkxl'
+loading         > ConTeXt Table Macros / Natural Tables
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/tabl-ntb.lmt' succeeded
+close source    > level 1, order 227, name 'tabl-ntb.mkxl'
+open source     > level 1, order 228, name 'tabl-nte.mkxl'
+loading         > ConTeXt Table Module / Natural Tables Extensions
+close source    > level 1, order 228, name 'tabl-nte.mkxl'
+open source     > level 1, order 229, name 'tabl-ltb.mkxl'
+loading         > ConTeXt Table Macros / Line Tables
+close source    > level 1, order 229, name 'tabl-ltb.mkxl'
+open source     > level 1, order 230, name 'tabl-frm.mkxl'
+loading         > ConTeXt Table Macros / Framed Tables
+close source    > level 1, order 230, name 'tabl-frm.mkxl'
+open source     > level 1, order 231, name 'tabl-tsp.mkxl'
+loading         > ConTeXt Table Macros / Splitting
+close source    > level 1, order 231, name 'tabl-tsp.mkxl'
+open source     > level 1, order 232, name 'tabl-xtb.mklx'
+loading         > ConTeXt Table Macros / Xtreme
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/tabl-xtb.lmt' succeeded
+close source    > level 1, order 232, name 'tabl-xtb.mklx'
+open source     > level 1, order 233, name 'tabl-mis.mkxl'
+loading         > ConTeXt Table Macros / Miscellaneous
+close source    > level 1, order 233, name 'tabl-mis.mkxl'
+open source     > level 1, order 234, name 'tabl-ali.mkxl'
+loading         > ConTeXt Table Macros / Alignment
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/tabl-ali.lmt' succeeded
+close source    > level 1, order 234, name 'tabl-ali.mkxl'
+open source     > level 1, order 235, name 'typo-lan.mkxl'
+loading         > ConTeXt Typography Macros / Languages
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-lan.lmt' succeeded
+close source    > level 1, order 235, name 'typo-lan.mkxl'
+open source     > level 1, order 236, name 'lxml-css.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lxml-css.lmt' succeeded
+close source    > level 1, order 236, name 'lxml-css.mkxl'
+open source     > level 1, order 237, name 'spac-chr.mkxl'
+loading         > ConTeXt Spacing Macros / Characters
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/spac-chr.lmt' succeeded
+close source    > level 1, order 237, name 'spac-chr.mkxl'
+open source     > level 1, order 238, name 'blob-ini.mkxl'
+loading         > ConTeXt Lua Typesetting / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-typ.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/blob-ini.lmt' succeeded
+close source    > level 1, order 238, name 'blob-ini.mkxl'
+open source     > level 1, order 239, name 'trac-vis.mkxl'
+loading         > ConTeXt Tracing Macros / Visualization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/trac-vis.lmt' succeeded
+close source    > level 1, order 239, name 'trac-vis.mkxl'
+open source     > level 1, order 240, name 'trac-jus.mkxl'
+loading         > ConTeXt Tracing Macros / Justification
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/trac-jus.lmt' succeeded
+close source    > level 1, order 240, name 'trac-jus.mkxl'
+open source     > level 1, order 241, name 'trac-riv.mkxl'
+loading         > ConTeXt Tracing Macros / Rivers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/trac-riv.lmt' succeeded
+close source    > level 1, order 241, name 'trac-riv.mkxl'
+open source     > level 1, order 242, name 'trac-bld.mkxl'
+loading         > ConTeXt Tracing Macros / Buildpoints
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/trac-bld.lmt' succeeded
+close source    > level 1, order 242, name 'trac-bld.mkxl'
+open source     > level 1, order 243, name 'typo-cln.mkxl'
+loading         > ConTeXt Typesetting Macros / Cleaning
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-cln.lmt' succeeded
+close source    > level 1, order 243, name 'typo-cln.mkxl'
+open source     > level 1, order 244, name 'typo-wrp.mkxl'
+loading         > ConTeXt Typesetting Macros / Wrapping
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-wrp.lmt' succeeded
+close source    > level 1, order 244, name 'typo-wrp.mkxl'
+open source     > level 1, order 245, name 'typo-spa.mkxl'
+loading         > ConTeXt Typesetting Macros / Spacing
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-spa.lmt' succeeded
+close source    > level 1, order 245, name 'typo-spa.mkxl'
+open source     > level 1, order 246, name 'typo-krn.mkxl'
+loading         > ConTeXt Typesetting Macros / Kerning
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-krn.lmt' succeeded
+close source    > level 1, order 246, name 'typo-krn.mkxl'
+open source     > level 1, order 247, name 'typo-hid.mkxl'
+loading         > ConTeXt Typesetting Macros / Hiding
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-hid.lmt' succeeded
+close source    > level 1, order 247, name 'typo-hid.mkxl'
+open source     > level 1, order 248, name 'typo-itc.mklx'
+loading         > ConTeXt Typesetting Macros / Italics Corrections
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-itc.lmt' succeeded
+close source    > level 1, order 248, name 'typo-itc.mklx'
+open source     > level 1, order 249, name 'typo-dir.mkxl'
+loading         > ConTeXt Typesetting Macros / Directions
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-dir.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-dha.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-duc.lmt' succeeded
+close source    > level 1, order 249, name 'typo-dir.mkxl'
+open source     > level 1, order 250, name 'typo-brk.mkxl'
+loading         > ConTeXt Typesetting Macros / Breakpoints
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-brk.lmt' succeeded
+close source    > level 1, order 250, name 'typo-brk.mkxl'
+open source     > level 1, order 251, name 'typo-cap.mkxl'
+loading         > ConTeXt Typesetting Macros / Caps
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-cap.lmt' succeeded
+close source    > level 1, order 251, name 'typo-cap.mkxl'
+open source     > level 1, order 252, name 'typo-dig.mkxl'
+loading         > ConTeXt Typesetting Macros / Digits
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-dig.lmt' succeeded
+close source    > level 1, order 252, name 'typo-dig.mkxl'
+open source     > level 1, order 253, name 'typo-rep.mkxl'
+loading         > ConTeXt Typesetting Macros / Stripping
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-rep.lmt' succeeded
+close source    > level 1, order 253, name 'typo-rep.mkxl'
+open source     > level 1, order 254, name 'typo-txt.mklx'
+loading         > ConTeXt Typesetting Macros / Text Hacks
+close source    > level 1, order 254, name 'typo-txt.mklx'
+open source     > level 1, order 255, name 'typo-drp.mkxl'
+loading         > ConTeXt Typesetting Macros / Initials
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-drp.lmt' succeeded
+close source    > level 1, order 255, name 'typo-drp.mkxl'
+open source     > level 1, order 256, name 'typo-fln.mkxl'
+loading         > ConTeXt Typesetting Macros / First Lines
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-fln.lmt' succeeded
+close source    > level 1, order 256, name 'typo-fln.mkxl'
+open source     > level 1, order 257, name 'typo-sus.mkxl'
+loading         > ConTeXt Typesetting Macros / Checking Suspects
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-sus.lmt' succeeded
+close source    > level 1, order 257, name 'typo-sus.mkxl'
+open source     > level 1, order 258, name 'typo-lig.mkxl'
+loading         > ConTeXt Typesetting Macros / Ligatures
+close source    > level 1, order 258, name 'typo-lig.mkxl'
+open source     > level 1, order 259, name 'typo-chr.mkxl'
+loading         > ConTeXt Typesetting Macros / Characters
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-chr.lmt' succeeded
+close source    > level 1, order 259, name 'typo-chr.mkxl'
+open source     > level 1, order 260, name 'typo-rub.mkxl'
+loading         > ConTeXt Typesetting Macros / Rubies
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-rub.lmt' succeeded
+close source    > level 1, order 260, name 'typo-rub.mkxl'
+open source     > level 1, order 261, name 'typo-fkr.mkxl'
+loading         > ConTeXt Typesetting Macros / Additional Font Kerning
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-fkr.lmt' succeeded
+close source    > level 1, order 261, name 'typo-fkr.mkxl'
+open source     > level 1, order 262, name 'typo-pnc.mkxl'
+loading         > ConTeXt Typesetting Macros / Punctuation
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-pnc.lmt' succeeded
+close source    > level 1, order 262, name 'typo-pnc.mkxl'
+open source     > level 1, order 263, name 'typo-bal.mkxl'
+loading         > ConTeXt Typesetting Macros / Balancing
+close source    > level 1, order 263, name 'typo-bal.mkxl'
+open source     > level 1, order 264, name 'typo-dif.mkxl'
+loading         > ConTeXt Typesetting Macros / Compare Text
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-dif.lmt' succeeded
+close source    > level 1, order 264, name 'typo-dif.mkxl'
+open source     > level 1, order 265, name 'typo-pin.mkxl'
+loading         > ConTeXt Typesetting Macros / Paragraph inserts
+close source    > level 1, order 265, name 'typo-pin.mkxl'
+open source     > level 1, order 266, name 'type-ini.mklx'
+loading         > ConTeXt Typescript Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/type-ini.lmt' succeeded
+close source    > level 1, order 266, name 'type-ini.mklx'
+open source     > level 1, order 267, name 'type-set.mkxl'
+open source     > level 2, order 268, name 'type-def.mkxl'
+close source    > level 2, order 268, name 'type-def.mkxl'
+open source     > level 2, order 269, name 'type-lua.mkxl'
+close source    > level 2, order 269, name 'type-lua.mkxl'
+open source     > level 2, order 270, name 'type-siz.mkxl'
+close source    > level 2, order 270, name 'type-siz.mkxl'
+open source     > level 2, order 271, name 'type-fbk.mkxl'
+close source    > level 2, order 271, name 'type-fbk.mkxl'
+open source     > level 2, order 272, name 'type-imp-latinmodern.mkiv'
+close source    > level 2, order 272, name 'type-imp-latinmodern.mkiv'
+close source    > level 1, order 272, name 'type-set.mkxl'
+open source     > level 1, order 273, name 'spac-brk.mkxl'
+loading         > ConTeXt Spacing Macros / Breakpoints
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/spac-brk.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/spac-ovl.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/spac-twi.lmt' succeeded
+close source    > level 1, order 273, name 'spac-brk.mkxl'
+open source     > level 1, order 274, name 'scrp-ini.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/scrp-ini.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/scrp-cjk.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/scrp-eth.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/scrp-tha.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/scrp-tib.lua' succeeded
+close source    > level 1, order 274, name 'scrp-ini.mkxl'
+open source     > level 1, order 275, name 'symb-emj.mkxl'
+loading         > ConTeXt Symbol Libraries / Emoji
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/symb-emj.lmt' succeeded
+close source    > level 1, order 275, name 'symb-emj.mkxl'
+open source     > level 1, order 276, name 'lang-tra.mkxl'
+loading         > ConTeXt Language Macros / Transliteration
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lang-tra.lmt' succeeded
+close source    > level 1, order 276, name 'lang-tra.mkxl'
+open source     > level 1, order 277, name 'lang-wrd.mkxl'
+loading         > ConTeXt Language Macros / Checking
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/lang-wrd.lua' succeeded
+close source    > level 1, order 277, name 'lang-wrd.mkxl'
+open source     > level 1, order 278, name 'lang-rep.mkxl'
+loading         > ConTeXt Language Macros / Replacements
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lang-rep.lmt' succeeded
+close source    > level 1, order 278, name 'lang-rep.mkxl'
+open source     > level 1, order 279, name 'mlib-ctx.mkxl'
+loading         > MetaPost Library Graphics / Initializations
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-fio.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-run.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-ctx.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-lua.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-mpf.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-scn.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-mat.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-ran.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-lmp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-int.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-lmt.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-pos.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-svg.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-fnt.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-ptr.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-msh.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-pts.lmt' succeeded
+close source    > level 1, order 279, name 'mlib-ctx.mkxl'
+open source     > level 1, order 280, name 'meta-ini.mkxl'
+loading         > MetaPost Graphics / Initializations
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/meta-ini.lmt' succeeded
+close source    > level 1, order 280, name 'meta-ini.mkxl'
+open source     > level 1, order 281, name 'meta-tex.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/meta-tex.lmt' succeeded
+close source    > level 1, order 281, name 'meta-tex.mkxl'
+open source     > level 1, order 282, name 'meta-fun.mkxl'
+loading         > MetaPost Graphics / Goodies
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/meta-fun.lua' succeeded
+close source    > level 1, order 282, name 'meta-fun.mkxl'
+open source     > level 1, order 283, name 'meta-pag.mkxl'
+loading         > MetaPost Graphics / Page Data Management
+close source    > level 1, order 283, name 'meta-pag.mkxl'
+open source     > level 1, order 284, name 'meta-grd.mkxl'
+loading         > MetaPost Graphics / Grids
+close source    > level 1, order 284, name 'meta-grd.mkxl'
+open source     > level 1, order 285, name 'meta-fnt.mkxl'
+loading         > MetaPost Graphics / Fonts
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/meta-fnt.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/font-mpf.lmt' succeeded
+close source    > level 1, order 285, name 'meta-fnt.mkxl'
+open source     > level 1, order 286, name 'meta-nod.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/meta-nod.lua' succeeded
+close source    > level 1, order 286, name 'meta-nod.mkxl'
+open source     > level 1, order 287, name 'meta-lua.mkxl'
+loading         > MetaPost Library Graphics / Templates
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/meta-lua.lua' succeeded
+close source    > level 1, order 287, name 'meta-lua.mkxl'
+open source     > level 1, order 288, name 'meta-mac.mkxl'
+close source    > level 1, order 288, name 'meta-mac.mkxl'
+open source     > level 1, order 289, name 'page-mrk.mkxl'
+loading         > ConTeXt Page Macros / Cutmarks and Colorbars
+close source    > level 1, order 289, name 'page-mrk.mkxl'
+open source     > level 1, order 290, name 'page-flw.mkxl'
+loading         > ConTeXt Page Macros / Text Flows
+close source    > level 1, order 290, name 'page-flw.mkxl'
+open source     > level 1, order 291, name 'page-spr.mkxl'
+loading         > ConTeXt Page Macros / Spreading
+close source    > level 1, order 291, name 'page-spr.mkxl'
+open source     > level 1, order 292, name 'page-plg.mkxl'
+loading         > ConTeXt Page Macros / Extra Page Building
+close source    > level 1, order 292, name 'page-plg.mkxl'
+open source     > level 1, order 293, name 'page-str.mkxl'
+loading         > ConTeXt Page Macros / Page Streams
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/page-str.lmt' succeeded
+close source    > level 1, order 293, name 'page-str.mkxl'
+open source     > level 1, order 294, name 'anch-pgr.mkxl'
+loading         > ConTeXt Anchoring Macros / Grapics
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/anch-pgr.lmt' succeeded
+close source    > level 1, order 294, name 'anch-pgr.mkxl'
+open source     > level 1, order 295, name 'anch-bck.mklx'
+loading         > ConTeXt Anchoring Macros / Backgrounds
+close source    > level 1, order 295, name 'anch-bck.mklx'
+open source     > level 1, order 296, name 'anch-tab.mkxl'
+loading         > ConTeXt Anchoring Macros / Table Extensions
+close source    > level 1, order 296, name 'anch-tab.mkxl'
+open source     > level 1, order 297, name 'anch-bar.mkxl'
+loading         > ConTeXt Anchoring Macros / Margin Bars
+close source    > level 1, order 297, name 'anch-bar.mkxl'
+open source     > level 1, order 298, name 'anch-snc.mkxl'
+loading         > ConTeXt Anchoring Macros / Synchronization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/anch-snc.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-snc.lmt' succeeded
+close source    > level 1, order 298, name 'anch-snc.mkxl'
+open source     > level 1, order 299, name 'math-ini.mkxl'
+loading         > ConTeXt Math Macros / Initializations
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-ini.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-dim.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-ext.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-vfu.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-map.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-act.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-ren.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-noa.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-tag.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-fbk.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-spa.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-fnt.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-pre.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-txt.lmt' succeeded
+close source    > level 1, order 299, name 'math-ini.mkxl'
+open source     > level 1, order 300, name 'math-pln.mkxl'
+loading         > ConTeXt Math Macros / Plain Helpers
+close source    > level 1, order 300, name 'math-pln.mkxl'
+open source     > level 1, order 301, name 'math-for.mkxl'
+loading         > ConTeXt Structure Macros / Math Formulas
+close source    > level 1, order 301, name 'math-for.mkxl'
+open source     > level 1, order 302, name 'math-def.mkxl'
+loading         > ConTeXt Math Macros / Definitions
+close source    > level 1, order 302, name 'math-def.mkxl'
+open source     > level 1, order 303, name 'math-ali.mkxl'
+loading         > ConTeXt Math Macros / Math Alignments
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-ali.lmt' succeeded
+close source    > level 1, order 303, name 'math-ali.mkxl'
+open source     > level 1, order 304, name 'math-stc.mklx'
+loading         > ConTeXt Math Macros / Stackers
+close source    > level 1, order 304, name 'math-stc.mklx'
+open source     > level 1, order 305, name 'math-frc.mkxl'
+loading         > ConTeXt Math Macros / Fractions
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-frc.lmt' succeeded
+close source    > level 1, order 305, name 'math-frc.mkxl'
+open source     > level 1, order 306, name 'math-mis.mkxl'
+loading         > ConTeXt Math Macros / Miscellaneous
+close source    > level 1, order 306, name 'math-mis.mkxl'
+open source     > level 1, order 307, name 'math-scr.mkxl'
+loading         > ConTeXt Math Macros / Scripts
+close source    > level 1, order 307, name 'math-scr.mkxl'
+open source     > level 1, order 308, name 'math-con.mkxl'
+loading         > ConTeXt Math Macros / Differentials
+close source    > level 1, order 308, name 'math-con.mkxl'
+open source     > level 1, order 309, name 'math-del.mkxl'
+loading         > ConTeXt Math Macros / Delimiters
+close source    > level 1, order 309, name 'math-del.mkxl'
+open source     > level 1, order 310, name 'math-fen.mkxl'
+loading         > ConTeXt Math Macros / Fences
+close source    > level 1, order 310, name 'math-fen.mkxl'
+open source     > level 1, order 311, name 'math-lop.mkxl'
+loading         > ConTeXt Math Macros / Large Operators
+close source    > level 1, order 311, name 'math-lop.mkxl'
+open source     > level 1, order 312, name 'math-acc.mklx'
+loading         > ConTeXt Math Macros / Accents
+close source    > level 1, order 312, name 'math-acc.mklx'
+open source     > level 1, order 313, name 'math-rad.mklx'
+loading         > ConTeXt Math Macros / Radicals
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-rad.lmt' succeeded
+close source    > level 1, order 313, name 'math-rad.mklx'
+open source     > level 1, order 314, name 'math-dld.mklx'
+loading         > ConTeXt Math Macros / Delimited
+close source    > level 1, order 314, name 'math-dld.mklx'
+open source     > level 1, order 315, name 'math-inl.mkxl'
+loading         > ConTeXt Math Macros / Inline
+close source    > level 1, order 315, name 'math-inl.mkxl'
+open source     > level 1, order 316, name 'math-dis.mkxl'
+loading         > ConTeXt Math Macros / Display
+close source    > level 1, order 316, name 'math-dis.mkxl'
+open source     > level 1, order 317, name 'math-toy.mkxl'
+loading         > ConTeXt Math Macros / Toy
+close source    > level 1, order 317, name 'math-toy.mkxl'
+open source     > level 1, order 318, name 'math-twk.mkxl'
+loading         > ConTeXt Math Macros / Tweaks
+close source    > level 1, order 318, name 'math-twk.mkxl'
+open source     > level 1, order 319, name 'math-mps.mkxl'
+loading         > ConTeXt Math Macros / MathFun
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-mps.lmt' succeeded
+close source    > level 1, order 319, name 'math-mps.mkxl'
+open source     > level 1, order 320, name 'strc-mat.mkxl'
+loading         > ConTeXt Structure Macros / Math Numbering
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-mat.lmt' succeeded
+close source    > level 1, order 320, name 'strc-mat.mkxl'
+open source     > level 1, order 321, name 'chem-ini.mkxl'
+loading         > ConTeXt Chemistry Macros / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/chem-ini.lua' succeeded
+close source    > level 1, order 321, name 'chem-ini.mkxl'
+open source     > level 1, order 322, name 'chem-str.mkxl'
+loading         > ConTeXt Chemistry Macros / Structure
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/chem-str.lua' succeeded
+close source    > level 1, order 322, name 'chem-str.mkxl'
+open source     > level 1, order 323, name 'typo-scr.mkxl'
+loading         > ConTeXt Typesetting Macros / Scripts
+close source    > level 1, order 323, name 'typo-scr.mkxl'
+open source     > level 1, order 324, name 'phys-dim.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/phys-dim.lmt' succeeded
+languages       > labels > defining label set 'prefixes'
+languages       > labels > defining label set 'units'
+languages       > labels > defining label set 'operators'
+languages       > labels > defining label set 'suffixes'
+close source    > level 1, order 324, name 'phys-dim.mkxl'
+open source     > level 1, order 325, name 'node-rul.mkxl'
+loading         > ConTeXt Core Macros / Bars
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-rul.lmt' succeeded
+close source    > level 1, order 325, name 'node-rul.mkxl'
+open source     > level 1, order 326, name 'node-bck.mkxl'
+loading         > ConTeXt Node Support / Backgrounds
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/node-bck.lmt' succeeded
+close source    > level 1, order 326, name 'node-bck.mkxl'
+open source     > level 1, order 327, name 'font-sol.mklx'
+loading         > ConTeXt Node Support / Splitters
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/font-sol.lua' succeeded
+close source    > level 1, order 327, name 'font-sol.mklx'
+open source     > level 1, order 328, name 'strc-not.mklx'
+loading         > ConTeXt Structure Macros / Note Handling
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/strc-not.lmt' succeeded
+close source    > level 1, order 328, name 'strc-not.mklx'
+open source     > level 1, order 329, name 'strc-lnt.mklx'
+loading         > ConTeXt Structure Macros / Line Notes
+close source    > level 1, order 329, name 'strc-lnt.mklx'
+open source     > level 1, order 330, name 'strc-tnt.mkxl'
+close source    > level 1, order 330, name 'strc-tnt.mkxl'
+open source     > level 1, order 331, name 'strc-usr.mkxl'
+loading         > ConTeXt Structure Macros / Userdata
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/strc-usr.lua' succeeded
+close source    > level 1, order 331, name 'strc-usr.mkxl'
+open source     > level 1, order 332, name 'pack-com.mkxl'
+loading         > ConTeXt Packaging Macros / Combinations
+close source    > level 1, order 332, name 'pack-com.mkxl'
+open source     > level 1, order 333, name 'math-com.mkxl'
+loading         > ConTeXt Math Macros / Initializations
+close source    > level 1, order 333, name 'math-com.mkxl'
+open source     > level 1, order 334, name 'typo-del.mkxl'
+loading         > ConTeXt Typesetting Macros / Delimited Content
+close source    > level 1, order 334, name 'typo-del.mkxl'
+open source     > level 1, order 335, name 'grph-trf.mkxl'
+loading         > ConTeXt Graphic Macros / Transformations
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/grph-trf.lmt' succeeded
+close source    > level 1, order 335, name 'grph-trf.mkxl'
+open source     > level 1, order 336, name 'grph-inc.mkxl'
+loading         > ConTeXt Graphic Macros / Figure Inclusion
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/grph-img.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/grph-inc.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/grph-bmp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/grph-chk.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/grph-con.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/grph-fil.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/grph-u3d.lua' succeeded
+close source    > level 1, order 336, name 'grph-inc.mkxl'
+open source     > level 1, order 337, name 'grph-fig.mkxl'
+close source    > level 1, order 337, name 'grph-fig.mkxl'
+open source     > level 1, order 338, name 'grph-raw.mkxl'
+loading         > ConTeXt Graphic Macros / Raw Bitmaps
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/grph-raw.lmt' succeeded
+close source    > level 1, order 338, name 'grph-raw.mkxl'
+open source     > level 1, order 339, name 'grph-rul.mkxl'
+loading         > ConTeXt Graphic Macros / Rule Trickery
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/grph-rul.lmt' succeeded
+close source    > level 1, order 339, name 'grph-rul.mkxl'
+open source     > level 1, order 340, name 'grph-pat.mkxl'
+loading         > ConTeXt Graphic Macros / Patterns
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/grph-pat.lua' succeeded
+close source    > level 1, order 340, name 'grph-pat.mkxl'
+open source     > level 1, order 341, name 'pack-box.mkxl'
+loading         > ConTeXt Packaging Macros / Boxes
+close source    > level 1, order 341, name 'pack-box.mkxl'
+open source     > level 1, order 342, name 'pack-mat.mkxl'
+loading         > ConTeXt Packaging Macros / Ruled Math
+close source    > level 1, order 342, name 'pack-mat.mkxl'
+open source     > level 1, order 343, name 'pack-bar.mkxl'
+loading         > ConTeXt Packaging Macros / Bars
+close source    > level 1, order 343, name 'pack-bar.mkxl'
+open source     > level 1, order 344, name 'page-app.mkxl'
+loading         > ConTeXt Page Macros / Applications
+close source    > level 1, order 344, name 'page-app.mkxl'
+open source     > level 1, order 345, name 'meta-fig.mkxl'
+loading         > MetaPost Graphics / Stand Alone Graphics
+close source    > level 1, order 345, name 'meta-fig.mkxl'
+open source     > level 1, order 346, name 'page-ffl.mkxl'
+loading         > ConTeXt Page Macros / Facing floats
+close source    > level 1, order 346, name 'page-ffl.mkxl'
+open source     > level 1, order 347, name 'page-blk.mkxl'
+loading         > ConTeXt Page Macros / Shuffling pages
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/page-blk.lmt' succeeded
+close source    > level 1, order 347, name 'page-blk.mkxl'
+open source     > level 1, order 348, name 'lang-spa.mkxl'
+loading         > ConTeXt Language Macros / Spacing
+close source    > level 1, order 348, name 'lang-spa.mkxl'
+open source     > level 1, order 349, name 'lang-hup.mkxl'
+loading         > ConTeXt Language Macros / hyphenation tracing
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lang-hup.lmt' succeeded
+close source    > level 1, order 349, name 'lang-hup.mkxl'
+open source     > level 1, order 350, name 'typo-ovl.mkxl'
+loading         > ConTeXt Typesetting Macros / Overloads
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-ovl.lmt' succeeded
+close source    > level 1, order 350, name 'typo-ovl.mkxl'
+open source     > level 1, order 351, name 'typo-syn.mkxl'
+loading         > ConTeXt Typesetting Macros / Synchronizers
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-syn.lmt' succeeded
+close source    > level 1, order 351, name 'typo-syn.mkxl'
+open source     > level 1, order 352, name 'publ-ini.mkxl'
+loading         > ConTeXt Publication Support / Initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-dat.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-ini.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-sor.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/publ-aut.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-usr.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/publ-oth.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-fnd.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-jrn.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-reg.lua' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-tra.lua' succeeded
+languages       > labels > defining label set 'btx'
+publications    > unknown dataset '', forcing 'default'
+open source     > level 2, order 353, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-commands.mkvi'
+close source    > level 2, order 353, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-commands.mkvi'
+open source     > level 2, order 354, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-definitions.mkvi'
+close source    > level 2, order 354, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-definitions.mkvi'
+open source     > level 2, order 355, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-cite.mkvi'
+close source    > level 2, order 355, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-cite.mkvi'
+open source     > level 2, order 356, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-list.mkvi'
+close source    > level 2, order 356, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-list.mkvi'
+open source     > level 2, order 357, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-page.mkvi'
+close source    > level 2, order 357, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-page.mkvi'
+open source     > level 2, order 358, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-author.mkvi'
+close source    > level 2, order 358, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-author.mkvi'
+open source     > level 2, order 359, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.mkvi'
+close source    > level 2, order 359, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-imp-default.mkvi'
+close source    > level 1, order 359, name 'publ-ini.mkxl'
+open source     > level 1, order 360, name 'publ-xml.mkxl'
+loading         > ConTeXt Publication Support / XML
+close source    > level 1, order 360, name 'publ-xml.mkxl'
+open source     > level 1, order 361, name 'publ-old.mkxl'
+close source    > level 1, order 361, name 'publ-old.mkxl'
+open source     > level 1, order 362, name 'meta-xml.mkxl'
+loading         > MetaPost Graphics / XML Hacks
+close source    > level 1, order 362, name 'meta-xml.mkxl'
+open source     > level 1, order 363, name 'cont-log.mkxl'
+loading         > ConTeXt TeX Logos
+close source    > level 1, order 363, name 'cont-log.mkxl'
+open source     > level 1, order 364, name 'cldf-ver.mkxl'
+loading         > ConTeXt Lua Documents / Verbatim
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/cldf-ver.lua' succeeded
+close source    > level 1, order 364, name 'cldf-ver.mkxl'
+open source     > level 1, order 365, name 'cldf-com.mkxl'
+loading         > ConTeXt Lua Documents / Functions
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/cldf-com.lua' succeeded
+close source    > level 1, order 365, name 'cldf-com.mkxl'
+open source     > level 1, order 366, name 'core-ctx.mkxl'
+loading         > ConTeXt Core Macros / Job Control
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/core-ctx.lua' succeeded
+close source    > level 1, order 366, name 'core-ctx.mkxl'
+open source     > level 1, order 367, name 'core-def.mkxl'
+loading         > ConTeXt Core Macros / Defaults
+open source     > level 2, order 368, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/symb-imp-mis.mkiv'
+close source    > level 2, order 368, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/symb-imp-mis.mkiv'
+fonts           > symbols > library 'mis' loaded
+open source     > level 2, order 369, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/symb-imp-nav.mkiv'
+close source    > level 2, order 369, name '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/symb-imp-nav.mkiv'
+fonts           > symbols > library 'nav' loaded
+close source    > level 1, order 369, name 'core-def.mkxl'
+open source     > level 1, order 370, name 'driv-shp.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/driv-shp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/driv-usr.lmt' succeeded
+close source    > level 1, order 370, name 'driv-shp.mkxl'
+open source     > level 1, order 371, name 'anch-loc.mkxl'
+loading         > ConTeXt Anchoring Macros / Local Positioning
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/anch-loc.lmt' succeeded
+close source    > level 1, order 371, name 'anch-loc.mkxl'
+open source     > level 1, order 372, name 'back-exp.mkxl'
+loading         > ConTeXt Backend Macros / XML export
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/back-exp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/back-exp-imp-tag.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/back-exp-imp-mth.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/back-exp-imp-ref.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/back-exp-imp-fnt.lmt' succeeded
+close source    > level 1, order 372, name 'back-exp.mkxl'
+open source     > level 1, order 373, name 'grph-exp.mkxl'
+loading         > ConTeXt Graphic Macros / Figure Export
+close source    > level 1, order 373, name 'grph-exp.mkxl'
+open source     > level 1, order 374, name 'back-imp-pdf.mkxl'
+loading         > ConTeXt Backend Macros / PDF
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-ini.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-lmt.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-sig.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-col.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-xmp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-ano.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-mis.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-ren.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-grp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-wid.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-fld.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-tag.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-fmt.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-pde.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-img.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-epa.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-emb.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-fix.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-rul.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/back-imp-pdf.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/back-imp-pdp.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-fix-imp-fonts.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-fix-imp-contents.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lxml-mms.lmt' succeeded
+open source     > level 2, order 375, name 'back-imp-u3d.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/lpdf-u3d.lmt' succeeded
+close source    > level 2, order 375, name 'back-imp-u3d.mkxl'
+close source    > level 1, order 375, name 'back-imp-pdf.mkxl'
+open source     > level 1, order 376, name 'back-imp-mps.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/back-imp-mps.lmt' succeeded
+close source    > level 1, order 376, name 'back-imp-mps.mkxl'
+open source     > level 1, order 377, name 'back-imp-lua.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/back-imp-lua.lmt' succeeded
+close source    > level 1, order 377, name 'back-imp-lua.mkxl'
+open source     > level 1, order 378, name 'mlib-pdf.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-pdf.lmt' succeeded
+close source    > level 1, order 378, name 'mlib-pdf.mkxl'
+open source     > level 1, order 379, name 'mlib-pps.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/mlib-pps.lmt' succeeded
+close source    > level 1, order 379, name 'mlib-pps.mkxl'
+open source     > level 1, order 380, name 'meta-pdf.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/meta-pdf.lua' succeeded
+loading         > MetaPost Graphics / MPS to PDF
+close source    > level 1, order 380, name 'meta-pdf.mkxl'
+open source     > level 1, order 381, name 'meta-blb.mkxl'
+loading         > MetaPost Graphics / Blobs
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/meta-blb.lua' succeeded
+close source    > level 1, order 381, name 'meta-blb.mkxl'
+open source     > level 1, order 382, name 'grph-epd.mkxl'
+loading         > ConTeXt Graphic Macros / Merging Goodies
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/grph-epd.lmt' succeeded
+close source    > level 1, order 382, name 'grph-epd.mkxl'
+open source     > level 1, order 383, name 'anch-box.mkxl'
+loading         > ConTeXt Anchoring Macros / Boxes
+close source    > level 1, order 383, name 'anch-box.mkxl'
+open source     > level 1, order 384, name 'typo-shp.mkxl'
+loading         > ConTeXt Spacing Macros / Paragraph Shapes
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/typo-shp.lmt' succeeded
+close source    > level 1, order 384, name 'typo-shp.mkxl'
+open source     > level 1, order 385, name 'math-inc.mkxl'
+loading         > ConTeXt Math Macros / XML inclusion
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/math-inc.lmt' succeeded
+close source    > level 1, order 385, name 'math-inc.mkxl'
+open source     > level 1, order 386, name 'publ-inc.mkxl'
+loading         > ConTeXt Publication Macros / XML inclusion
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkiv/publ-inc.lua' succeeded
+close source    > level 1, order 386, name 'publ-inc.mkxl'
+open source     > level 1, order 387, name 'task-ini.mkxl'
+loading         > ConTeXt Task Handler / initialization
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/task-ini.lmt' succeeded
+close source    > level 1, order 387, name 'task-ini.mkxl'
+open source     > level 1, order 388, name 'tabl-itm.mkxl'
+loading         > ConTeXt Table Macros / Itemize
+close source    > level 1, order 388, name 'tabl-itm.mkxl'
+open source     > level 1, order 389, name 'libs-ini.mkxl'
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/libs-ini.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/libs-imp-curl.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/libs-imp-ghostscript.lmt' succeeded
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/libs-imp-graphicsmagick.lmt' succeeded
+close source    > level 1, order 389, name 'libs-ini.mkxl'
+open source     > level 1, order 390, name 'trac-sig.mkxl'
+loading         > ConTeXt Tracing Macros / Squid mode
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/trac-sig.lmt' succeeded
+close source    > level 1, order 390, name 'trac-sig.mkxl'
+open source     > level 1, order 391, name 'cont-run.mkxl'
+loading         > ConTeXt Core Macros / Runner
+resolvers       > lua > loading file '/private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-run.lmt' succeeded
+close source    > level 1, order 391, name 'cont-run.mkxl'
+
+system          > 
+system          > memory configuration
+system          > 
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >           string       pool       hash     lookup       node      token     buffer      input       file       nest  parameter       save       font   language       mark     insert        mvl
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          >   max    2097152  100000000    2097152    2097152  100000000   10000000  100000000     100000       2000      10000     100000     500000     100000      10000      10000        500        500
+system          >   min     150000   10000000     150000     150000   10000000    2000000    1000000      10000        500       1000      20000     100000        250        250         50         25         10
+system          >   set     500000   20000000     250000     250000   25000000   10000000   10000000     100000       2000      10000     100000     500000        250        250         50         25         10
+system          >   stp     100000    1000000     100000     100000    5000000    1000000    1000000      10000        250       1000      10000      10000        250        250         50         25         10
+system          >   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+system          > 
+system          > creating stub file 'cont-en.lui' using directives:
+system          >
+system          >   buffersize        = { size =   10000000, step =    1000000 }
+system          >   expandsize        = { size =      10000 }
+system          >   filesize          = { size =       2000, step =        200 }
+system          >   fontsize          = { size =     100000, step =        250 }
+system          >   hashsize          = { size =     250000, step =     100000 }
+system          >   inputsize         = { size =     100000, step =      10000 }
+system          >   languagesize      = { size =        250, step =        250 }
+system          >   marksize          = { size =        250, step =         50 }
+system          >   insertsize        = { size =        250, step =         25 }
+system          >   nestsize          = { size =      10000, step =       1000 }
+system          >   nodesize          = { size =   50000000, step =     500000 }
+system          >   parametersize     = { size =     100000, step =      10000 }
+system          >   poolsize          = { size =   10000000, step =    1000000 }
+system          >   savesize          = { size =     500000, step =      10000 }
+system          >   stringsize        = { size =     500000, step =     100000 }
+system          >   tokensize         = { size =   10000000, step =     250000 }
+system          >   errorlinesize     = { size =        250 }
+system          >   halferrorlinesize = { size =        250 }
+system          >
+format banner   > ConTeXt  ver: 2026.10.31 00:52 LMTX  fmt: 2026.11.15  int: english/english  lua: 5.5, format: 6
+Dumping format in file 'cont-en.fmt': tokenlist compacted from 591771 to 591125 entries, 1648 potentially aliased lua call/value entries, max string length 69, 16 fingerprint + 16 engine + 36 preamble + 68 constants + 1031372 stringpool + 36220 nodes + 4729028 tokens + 480228 equivalents + 5092 specifications + 13240 mathcodes + 326646 textcodes + 40700 primitives + 622164 hashtable + 4 fonts + 296683 math + 284 languages + 876 inserts + 10623303 bytecodes + 4 housekeeping = 18205980 total
+system          >
+system          > registered feedback states:
+system          >
+system          > index 01, name 'export', category 'performance'
+system          > index 02, name 'tagging', category 'performance'
+system          > index 03, name 'synctex', category 'performance'
+system          > index 04, name 'structure', category 'error'
+system          > index 06, name 'module', category 'performance'
+system          > index 07, name 'badnews', category 'interference'
+system          > index 10, name 'missing characters', category 'problem'
+system          > index 11, name 'hpack quality', category 'problem'
+system          > index 12, name 'vpack quality', category 'problem'
+system          >
+mkxl run stats  > used config file: selfautoparent:/texmf/web2c/texmfcnf.lua
+mkxl run stats  > used cache path: /private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e
+mkxl run stats  > resource resolver: loadtime 0.003 seconds, 1 scans with scantime 0.000 seconds, 0 shared scans, 843 found files, scanned paths: /Users/juliusross/texmf
+mkxl run stats  > stored bytecode data: 517 modules, 107 tables, 624 chunks, 6 chunks stripped (0 bytes)
+mkxl run stats  > traced context lua functions: maxstack: 1904, freed: 0, unreachable: 1904
+mkxl run stats  > cleaned up reserved nodes: 0 nodes, 7 lists of 445
+mkxl run stats  > node memory usage: 2 attribute, 1 attributelist, 1 fontspec, 135 gluespec, 661 mathspec, 56 specification, 1 temp
+mkxl run stats  > node list callback tasks: 17 unique task lists, 6 instances (re)created, 92 calls
+mkxl run stats  > jobdata time: 0.000 seconds saving, 0.000 seconds loading
+mkxl run stats  > callbacks: file: 164420, saved: 2470, direct: 561, function: 3990, value: 478, message: 0, bytecode: 0, late 0, total: 171919 (0 per page)
+mkxl run stats  > font engine: otf 3.158, afm 1.541, tfm 1.000
+mkxl run stats  > font processing: [afm (base initializers: goodies mode features unicoding slant extend squeeze weight outline effect checkautoeffect expansion protrusion threshold itlc) (base processors: -) (base manipulators: slant extend squeeze weight outline effect dimensions fixedwidth scripts vertical boundingbox compose dummies visualspace fixdot) (node initializers: goodies mode unicoding slant extend squeeze weight outline effect checkautoeffect expansion protrusion threshold itlc) (node processors: features) (node manipulators: slant extend squeeze weight outline effect dimensions fixedwidth scripts vertical boundingbox compose dummies visualspace fixdot)] | [otf (base initializers: goodies parameters extensions featureset extrafeatures mode language script features unicoding postprocessor colorscheme keepligatures mathrules identity writingmode textcontrol compactmath mathcontrol flattenaccents slant extend squeeze weight outline effect checkautoeffect expansion mathexpansion protrusion threshold itlc mathalternates) (base processors: -) (base manipulators: metapost colr svg sbix cblc color variant checkmissing reorderlookups spacing extraprivates forceunicodes hardhyphen slant extend squeeze weight outline effect dimensions fixedwidth scripts vertical equaldigits compoundhyphen boundingbox fakecombining compose dummies visualspace fixdot box metafont mathgaps) (node initializers: goodies parameters extensions featureset extrafeatures features mode language script analyze checkmarks devanagari indic unicoding postprocessor colorscheme keepligatures mathrules identity writingmode textcontrol compactmath mathcontrol flattenaccents slant extend squeeze weight outline effect checkautoeffect expansion mathexpansion protrusion threshold itlc spacekern sanitizer mathalternates) (node processors: decomposehangul reordercombining analyze features) (node manipulators: metapost colr svg sbix cblc color variant checkmissing reorderlookups spacing extraprivates forceunicodes hardhyphen slant extend squeeze weight outline effect dimensions fixedwidth zeromarks scripts vertical equaldigits compoundhyphen boundingbox fakecombining compose dummies visualspace fixdot box metafont mathgaps)] | [tfm (base initializers: goodies mode features) (base processors: -) (base manipulators: -) (node initializers: goodies mode) (node processors: features) (node manipulators: -)]
+mkxl run stats  > used platform: osx-arm, type: unix, binary subtree: texmf-osx-arm64
+mkxl run stats  > used engine: luametatex version: 2.11.10, functionality level: 20261029, format id: 737, memory mode: 1, compiler: clang, cversion: 17
+mkxl run stats  > tex properties: 495867 eqtb slots used of 2097152, 53567 control sequences, 262144 hash slots, 5194 misses, approximate memory usage: 110 MB
+mkxl run stats  > lua properties: engine: lua 5.5, format 6, used memory: 51 MB, ctx: 49 MB, max: 49 MB, symbol mask: utf (τεχ)
+resolvers       | formats |
+resolvers       | formats | binary path      : /private/tmp/somerville-cff2-final-full-2/tex/texmf-osx-arm64/bin
+resolvers       | formats | format path      : /private/tmp/somerville-cff2-final-full-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/formats/luametatex
+resolvers       | formats | luatex engine    : luametatex
+resolvers       | formats | lua startup file : /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/luat-cod.lmt
+resolvers       | formats | context file     : /private/tmp/somerville-cff2-final-full-2/tex/texmf-context/tex/context/base/mkxl/cont-en.mkxl
+resolvers       | formats | run time         : 1.218 seconds
+resolvers       | formats | return value     : okay
+resolvers       | formats |
+system          | total runtime: 1.410 seconds of 1.447 seconds
+

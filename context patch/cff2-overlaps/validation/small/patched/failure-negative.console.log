@@ -1,0 +1,30 @@
+
+resolvers       | formats | executing runner 'run luametatex format': /private/tmp/somerville-cff2-final-small-2/tex/texmf-osx-arm64/bin/luametatex --interaction="nonstopmode" --jobname="./failure.tex" --socket --shell-escape --fmt=/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/formats/luametatex/cont-en.fmt --lua=/private/tmp/somerville-cff2-final-small-2/tex/texmf-cache/luametatex-cache/context/5fe67e0bfe781ce0dde776fb1556f32e/formats/luametatex/cont-en.lui  --c:currentrun=1 --c:fulljobname="./failure.tex" --c:input="./failure.tex" --c:kindofrun=3 --c:maxnofruns=1 --c:nonstopmode --c:once --c:texmfbinpath="/private/tmp/somerville-cff2-final-small-2/tex/texmf-osx-arm64/bin"
+system          > 
+system          > ConTeXt  ver: 2026.10.31 00:52 LMTX  fmt: 2026.11.15  int: english/english
+system          > 
+system          > 'cont-new.mkxl' loaded
+open source     > level 1, order 1, name '/private/tmp/somerville-cff2-final-small-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+system          > beware: some patches loaded from cont-new.mkxl
+close source    > level 1, order 1, name '/private/tmp/somerville-cff2-final-small-2/tex/texmf-context/tex/context/base/mkxl/cont-new.mkxl'
+
+system          > files > jobname './failure', input './failure.tex', result './failure'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > level 1, order 2, name './failure.tex'
+fonts           > ignoring feature overload 'wipemath' in 'default'
+pages           > flushing realpage 1, userpage 1, subpage 1
+fonts           > ignoring feature overload 'mathexpansion' in 'mathematics'
+pages           > flushing realpage 2, userpage 2, subpage 2
+close source    > level 1, order 2, name './failure.tex'
+backend         > xmp > using file '/private/tmp/somerville-cff2-final-small-2/tex/texmf-context/tex/context/base/mkiv/lpdf-pdx.xml'
+otf reader      > user instance: opsz=1200,wdth=113,wght=900, factors: 1 1 1
+otf reader      > cff > CFF2 overlap conversion failed: ...exmf-context/tex/context/base/mkxl/font-cff-overlaps.lua:152: CFF2 overlap helper failed: sh: /nonexistent/cff2-overlap-python: No such file or directory
+
+tex error       > tex error on line 0 in file : Emergency stop
+<initial input> 
+    
+<empty file or maybe a buffer>
+CFF2 overlap conversion failed; see the log for details
+
+mtx-context     | fatal error: return code: 1

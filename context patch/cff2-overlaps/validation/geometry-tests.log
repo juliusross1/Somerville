@@ -1,0 +1,33 @@
+test_all_somerville_glyphs_default_and_nondefault (__main__.GeometryTests.test_all_somerville_glyphs_default_and_nondefault) ... 
+Full font: 1553 glyphs, 1061 rebuilt, location {'wdth': 95.0, 'wght': 360.0, 'MGHT': 360.0, 'opsz': 5.0, 'STYA': 5.0, 'STYB': 5.0, 'ARLN': 200.0, 'ARHD': 100.0, 'INSL': 0.0}
+
+Full font: 1553 glyphs, 1531 rebuilt, location {'wdth': 104, 'wght': 630, 'MGHT': 630, 'opsz': 80, 'STYA': 60, 'STYB': 60, 'ARLN': 200.0, 'ARHD': 200.0, 'INSL': 50}
+ok
+test_closed_cubic_retains_curves (__main__.GeometryTests.test_closed_cubic_retains_curves) ... ok
+test_disjoint_contours_are_unchanged (__main__.GeometryTests.test_disjoint_contours_are_unchanged) ... ok
+test_empty_and_degenerate (__main__.GeometryTests.test_empty_and_degenerate) ... ok
+test_exact_opposite_duplicates_become_empty (__main__.GeometryTests.test_exact_opposite_duplicates_become_empty) ... ok
+test_fractional_tiny_counters_and_near_coincidence (__main__.GeometryTests.test_fractional_tiny_counters_and_near_coincidence) ... ok
+test_independent_runtime_guard_rejects_missing_contour (__main__.GeometryTests.test_independent_runtime_guard_rejects_missing_contour) ... ok
+test_inexact_float32_coordinates_cannot_bypass_conversion (__main__.GeometryTests.test_inexact_float32_coordinates_cannot_bypass_conversion) ... ok
+test_invalid_requests (__main__.GeometryTests.test_invalid_requests) ... ok
+test_island_inside_counter (__main__.GeometryTests.test_island_inside_counter) ... ok
+test_nested_same_winding_is_solid (__main__.GeometryTests.test_nested_same_winding_is_solid) ... ok
+test_opposite_winding_nested_preserves_hole (__main__.GeometryTests.test_opposite_winding_nested_preserves_hole) ... ok
+test_opposite_winding_partial_overlap_cancels (__main__.GeometryTests.test_opposite_winding_partial_overlap_cancels) ... ok
+test_plain_rectangle_is_unchanged (__main__.GeometryTests.test_plain_rectangle_is_unchanged) ... ok
+test_protocol_batch_and_cli_failure (__main__.GeometryTests.test_protocol_batch_and_cli_failure) ... ok
+test_real_somerville_glyphs_at_axis_locations (__main__.GeometryTests.test_real_somerville_glyphs_at_axis_locations) ... 
+Actual exported outlines: 682 instances checked; 568 changed
+ok
+test_ring_and_cross_gives_four_holes (__main__.GeometryTests.test_ring_and_cross_gives_four_holes) ... ok
+test_robust_cubic_ray_predicate (__main__.GeometryTests.test_robust_cubic_ray_predicate) ... ok
+test_runtime_guard_rejects_missing_tiny_triangle_counter (__main__.GeometryTests.test_runtime_guard_rejects_missing_tiny_triangle_counter) ... ok
+test_same_winding_overlapping_rectangles (__main__.GeometryTests.test_same_winding_overlapping_rectangles) ... ok
+test_self_intersecting_bowtie (__main__.GeometryTests.test_self_intersecting_bowtie) ... ok
+test_shared_edge_and_shared_point (__main__.GeometryTests.test_shared_edge_and_shared_point) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 18.948s
+
+OK

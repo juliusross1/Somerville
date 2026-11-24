@@ -1,0 +1,2792 @@
+if not modules then modules = { } end modules ['lpdf-ini'] = {
+    version   = 1.001,
+    optimize  = true,
+    comment   = "companion to lpdf-ini.mkiv",
+    author    = "Hans Hagen, PRAGMA-ADE, Hasselt NL",
+    copyright = "PRAGMA ADE / ConTeXt Development Team",
+    license   = "see context related readme files"
+}
+
+-- vkgoeswild: Pink Floyd - Shine on You Crazy Diamond - piano cover (around that
+-- time I redid the code, a reminder so to say)
+
+-- At some point I wanted to have access to the shapes so that we could use them in
+-- metapost. So, after looking at the cff and ttf specifications, I decided to write
+-- parsers. At somepoint we needed a cff parser anyway in order to calculate the
+-- dimensions. Then variable fonts came around and a option was added to recreate
+-- streams of operators and a logical next step was to do all inclusion that way. It
+-- was only then that I found out that some of the juggling also happens in the the
+-- backend, but spread over places, so I could have saved myself some time
+-- deciphering the specifications. Anyway, here we go.
+--
+-- Color fonts are a bit messy. Catching issues with older fonts will break new ones
+-- so I don't think that it's wise to build in too many catches (like for fonts with
+-- zero boundingboxes, weird dimensions, transformations that in a next version are
+-- fixed, etc.). Better is then to wait till something gets fixed. If a spec doesn't
+-- tell me how to deal with it ... I'll happily wait till it does. After all we're
+-- not in a hurry as these fonts are mostly meant for the web or special purposes
+-- with manual tweaking in desk top publishing applications. Keep in mind that Emoji
+-- can have funny dimensions (e.g. to be consistent within a font, so no tight ones).
+
+-- When we have moved to lmtx I will document a bit more. Till then it's experimental
+-- and subjected to change.
+
+local next, type, unpack, rawget = next, type, unpack, rawget
+local char, byte, gsub, sub, match, rep, gmatch, find = string.char, string.byte, string.gsub, string.sub, string.match, string.rep, string.gmatch, string.find
+local concat, sortedhash, sortedkeys, sort, count = table.concat, table.sortedhash, table.sortedkeys, table.sort, table.count
+local utfchar, utfsplit = utf.char, utf.split
+local random, round, max, abs, ceiling = math.random, math.round, math.max, math.abs, math.ceiling
+local setmetatableindex = table.setmetatableindex
+
+----- formatters = string.formatters
+local formatting = string.formatting
+local formatted  = string.formatted
+
+local pdfnull              = lpdf.null
+local pdfdictionary        = lpdf.dictionary
+local pdfarray             = lpdf.array
+local pdfconstant          = lpdf.constant
+local pdfstring            = lpdf.string
+local pdfunicode           = lpdf.unicode
+local pdfreference         = lpdf.reference
+
+local pdfreserveobject     = lpdf.reserveobject
+local pdfflushobject       = lpdf.flushobject
+local pdfflushstreamobject = lpdf.flushstreamobject
+
+local report_fonts         = logs.reporter("backend","fonts")
+
+local trace_fonts          = false
+local trace_details        = false
+
+local bpfactor <const> = number.dimenfactors.bp
+local ptfactor <const> = number.dimenfactors.pt
+
+trackers.register("backend.fonts",        function(v) trace_fonts   = v end)
+trackers.register("backend.fonts.details",function(v) trace_details = v end)
+
+local readers = fonts.handlers.otf.readers
+local getinfo = readers.getinfo
+
+local setposition = utilities.files.setposition
+local readstring  = utilities.files.readstring
+local openfile    = utilities.files.open
+local closefile   = utilities.files.close
+
+local getmapentry = fonts.mappings.getentry
+
+-- needs checking: signed vs unsigned
+
+-- todo: use streams.tocardinal4 etc
+
+-- local tocardinal1 = char
+--
+-- local function tocardinal2(n)
+--     return char((n>>8)&0xFF,(n>>0)&0xFF)
+-- end
+--
+-- local function tocardinal3(n)
+--     return char((n>>16)&0xFF,(n>>8)&0xFF,(n>>0)&0xFF)
+-- end
+--
+-- local function tocardinal4(n)
+--     return char((n>>24)&0xFF,(n>>16)&0xFF,(n>>8)&0xFF,(n>>0)&0xFF)
+-- end
+--
+-- local function tointeger2(n)
+--     return char((n>>8)&0xFF,(n>>0)&0xFF)
+-- end
+--
+-- local function tointeger3(n)
+--     return char((n>>16)&0xFF,(n>>8)&0xFF,(n>>0)&0xFF)
+-- end
+--
+-- local function tointeger4(n)
+--     return char((n>>24)&0xFF,(n>>16)&0xFF,(n>>8)&0xFF,(n>>0)&0xFF)
+-- end
+--
+-- local function tocardinal8(n)
+--     local l = n // 0x100000000
+--     local r = n % 0x100000000
+--     return char((l>>24)&0xFF,(l>>16)&0xFF,(l>>8)&0xFF,(l>>0)&0xFF,
+--                 (r>>24)&0xFF,(r>>16)&0xFF,(r>>8)&0xFF,(r>>0)&0xFF)
+-- end
+
+local tocardinal1 = sio.tocardinal1
+local tocardinal2 = sio.tocardinal2
+local tocardinal3 = sio.tocardinal3
+local tocardinal4 = sio.tocardinal4
+local tocardinal8 = sio.tocardinal8
+
+local tointeger1  = tocardinal1
+local tointeger2  = tocardinal2
+local tointeger3  = tocardinal3
+local tointeger4  = tocardinal4
+local tointeger8  = tocardinal8
+
+-- A couple of shared helpers.
+
+local tounicodedictionary, widtharray, lmtxregistry, collectindices, subsetname, forcecidset, tocidsetdictionary
+
+do
+
+    -- Because we supply tounicodes ourselves we only use bfchar mappings (as in the
+    -- backend). In fact, we can now no longer pass the tounicodes to the frontend but
+    -- pick them up from the descriptions.
+
+    local f_mapping_2 <const> = formatting("<%02X> <%s>")
+    local f_mapping_4 <const> = formatting("<%04X> <%s>")
+
+local tounicode_template <const> = [[
+%%!PS-Adobe-3.0 Resource-CMap
+%%%%DocumentNeededResources: ProcSet (CIDInit)
+%%%%IncludeResource: ProcSet (CIDInit)
+%%%%BeginResource: CMap (TeX-%s-0)
+%%%%Title: (TeX-%s-0 TeX %s 0)|
+%%%%Version: 1.000
+%%%%EndComments
+/CIDInit /ProcSet findresource begin
+  12 dict begin
+    begincmap
+      /CIDSystemInfo
+        << /Registry (TeX) /Ordering (%s) /Supplement 0 >>
+      def
+      /CMapName
+        /TeX-Identity-%s
+      def
+      /CMapType
+        2
+      def
+      1 begincodespacerange
+        <%s> <%s>
+      endcodespacerange
+      %i beginbfchar
+%s
+      endbfchar
+    endcmap
+    CMapName currentdict /CMap defineresource pop
+  end
+end
+%%%%EndResource
+%%%%EOF]]
+
+    local nounicode  do
+
+        -- The "nounicode" feature is dedicated to companies, organizations and individuals that make a
+        -- living from roaming data without consent (or blackmail by license). One is forced to *look*
+        -- at the content, not just scrape it.
+        --
+        -- \enabledirectives[backend.pdf.nounicode=❌] % =✅ | =noai | =nopilot | =justread | =...
+
+        local tounicode       = fonts.mappings.tounicode
+        local tounicodestring = tounicode
+        local random          = math.random
+        local is_nothing      = characters.is_nothing
+        local categories      = characters.categories
+
+        directives.register("backend.pdf.nounicode", function(v)
+            tounicodestring = tounicode
+            nounicode       = false
+            if type(v) == "string" then
+                local t = utfsplit(v)
+                local n = #t
+                if n > 0 then
+                    for i=1,n do
+                        t[i] = tounicode(t[i])
+                    end
+                    tounicodestring = function(u)
+                        if is_nothing[categories[u]] then
+                            return tounicode(u)
+                        else
+                            return t[random(1,n)]
+                        end
+                    end
+                    nounicode = v
+                end
+            end
+        end)
+
+        tounicodedictionary = function(details,indices,maxindex,name,wide)
+            local mapping = { }
+            local length  = 0
+            if maxindex > 0 then
+                local f_mapping = wide and f_mapping_4 or f_mapping_2
+                for index=1,maxindex do
+                    local data = indices[index]
+                    if data then
+                        length = length + 1
+                        mapping[length] = formatted(f_mapping,index,tounicodestring(data.unicode))
+                    end
+                end
+            end
+            local name  = gsub(name,"%+","-") -- like luatex does
+            local first = wide and "0000" or "00"
+            local last  = wide and "FFFF" or "FF"
+            local blob  = formatted(tounicode_template,name,name,name,name,name,first,last,length,concat(mapping,"\n"))
+            return blob
+        end
+
+    end
+
+    widtharray = function(details,indices,maxindex,units,correction,notdef)
+        local widths = pdfarray()
+        local firstindex = notdef and 0 or 1
+        if maxindex >= firstindex then
+            local length    = 0
+            local factor    = 10000 / (units * (correction or 1))
+            local lastindex = -1
+            local sublist   = nil
+            for index=firstindex,maxindex do
+                local data = index == 0 and notdef or indices[index]
+                if data then
+                    local width = data.width -- hm, is inaccurate for cff, so take from elsewhere
+                    if width then
+                        if correction then
+                         -- width = round(width * 10000 / units) / 10
+                            width = round(width * factor) / 10
+                        end
+                    else
+                        width = 0
+                    end
+                    if sublist and index == lastindex + 1 then
+                        sublist[#sublist+1] = width
+                    else
+                        if sublist then
+                            length = length + 1
+                            widths[length] = sublist
+                        end
+                        sublist = pdfarray { width }
+                        length  = length + 1
+                        widths[length] = index
+                    end
+                    lastindex = index
+                end
+            end
+            length = length + 1
+            widths[length] = sublist
+        end
+        return widths
+    end
+
+    local includebackmap = true
+    local nofregistries  = 0
+
+    directives.register("backend.pdf.includebackmap", function(v)
+ -- directives.register("backend.pdf.lmtxregistry", function(v)
+        includebackmap = v
+    end)
+
+    function lpdf.noffontregistries()
+        return nofregistries > 0 and nofregistries or nil
+    end
+
+    lmtxregistry = function(details,include,blobs,minindex,maxindex)
+        if includebackmap and maxindex > 0 then
+            local backmap    = pdfarray()
+            local streamhash = details.hash
+            local properties = details.properties
+            local filename   = file.basename(properties.filename)
+            local filetype   = file.suffix(filename) -- for now
+            local fontname   = properties.name or file.nameonly(filename)
+            local instance   = properties.instance or ""
+            if filename and (filetype == "otf" or filetype == "ttf") then
+                local streams = details.streams
+                if streams then
+                    local fontheader = streams.fontheader
+                    if fontheader then
+                        local streams = streams.streams
+                        if streams then
+                            local subfont    = details.properties.subfont or 1
+                            local length     = 0
+                            local lastindex  = -1
+                            local sublist    = nil
+                            for index=minindex,maxindex do
+                                local idx = include[index]
+                                if idx then
+                                    local data = blobs[index]
+                                    if index == lastindex + 1 then
+                                        sublist[#sublist+1] = idx
+                                    else
+                                        if sublist then
+                                            length = length + 1
+                                            backmap[length] = sublist
+                                        end
+                                        sublist = pdfarray { idx }
+                                        length  = length + 1
+                                        backmap[length] = index
+                                    end
+                                    lastindex = index
+                                end
+                            end
+                            length = length + 1
+                            backmap[length] = sublist
+                            if instance == "" then
+                                instance = nil
+                            elseif find(instance,"=") then
+                                local i = fonts.handlers.otf.readers.helpers.axistofactors(instance)
+                                instance = pdfdictionary(i)
+                            end
+                            if subfont == 1 then
+                                subfont = nil
+                            end
+                            nofregistries = nofregistries + 1
+                            return pdfreference(pdfflushobject(pdfdictionary {
+                                IndexMap   = pdfreference(pdfflushobject(backmap)) or nil,
+                                StreamHash = streamhash or nil,
+                                FileName   = filename,
+                                FontName   = fontname,
+                                SubFont    = subfont,
+                                Instance   = instance,
+                                Version    = fontheader.fontversion,
+                                GlyphCount = #streams + (streams[0] and 1 or 0),
+                                FontMode   = fonts.mode(),
+                                NoUnicode  = nounicode and pdfunicode(nounicode) or nil,
+                            } ))
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    -- we need to go through indices because descriptions can be different (take
+    -- basemode remappings)
+
+    collectindices = function(descriptions,indices,used,hash)
+        local minindex = 0xFFFF
+        local maxindex = 0
+        local reverse  = { }
+        local copies   = { }
+        local include  = { }
+        local resolved = { }
+
+        setmetatable(used,nil) -- prevent more index allocations
+        for unicode, data in next, descriptions do
+            local index = data.index
+            reverse[index or unicode] = data
+            if used[index] and data.dupindex then
+                copies[index] = data.dupindex
+            end
+        end
+        for index, usedindex in next, indices do
+            if usedindex > maxindex then
+                maxindex = usedindex
+            end
+            if usedindex < minindex then
+                minindex = usedindex
+            end
+            include[usedindex]  = copies[index] or index
+            resolved[usedindex] = reverse[index]
+        end
+        if minindex > maxindex then
+            minindex = maxindex
+        end
+        if trace_details then
+            report_fonts("embedded: hash %a, minindex %i, maxindex %i",hash,minindex,maxindex)
+            for k, v in sortedhash(include) do
+                local d = resolved[k]
+                if d and d.dupindex then
+                    report_fonts("  0x%04X : 0x%04X (duplicate 0x%05X)",k,v,d.index)
+                else
+                    report_fonts("  0x%04X : 0x%04X",k,v)
+                end
+            end
+        end
+        return resolved, include, minindex, maxindex
+    end
+
+    forcecidset = false -- for private testing only
+
+ -- function lpdf.setincludecidset(v)
+ --     -- incredible ... it's obselete, no viewer needs it but then validators (depending on version
+ --     -- and parser used) require it ... so in the end it had to be introduced again but now we just
+ --     -- ditch it in versions > 1 and ignore warnings (basically obsolete should not invalidate)
+ --     includecidset = v
+ -- end
+
+    directives.register("backend.pdf.forcecidset",function(v)
+        forcecidset = v
+    end)
+
+ -- tocidsetdictionary = function(indices,min,max) -- also works ok
+ --     if lpdf.getformatoption("cidsets") or forcecidset then
+ --         local s = sparse.new(1)
+ --         sparse.set(s,0)
+ --         for i=min,max do
+ --             if indices[i] then
+ --                 sparse.set(s,i)
+ --             end
+ --         end
+ --         s = sparse.concat(s,nil,nil,2) -- msb first
+ --         return pdfreference(pdfflushstreamobject(s))
+ --     end
+ -- end
+
+    local function tocidset(indices,min,max,forcenotdef)
+        if not max then
+            max = count(indices)
+        end
+        local b = { }
+        local m = (max // 8) + 1
+        for i=0,m do
+            b[i] = 0 -- we can do a newtable instead
+        end
+        if forcenotdef then
+            b[0] = b[0] | (1 << 7) -- force notdef into the file
+        end
+        for i in next, indices do
+            local bi = i // 8
+            local ni = i % 8
+            b[bi] = b[bi] | (1 << (7-ni))
+        end
+        return char(unpack(b,0,#b)) -- use helper
+    end
+
+    lpdf.tocidset = tocidset
+
+    tocidsetdictionary = function(indices,min,max)
+        if lpdf.majorversion() > 1 then
+            return nil
+        elseif lpdf.getformatoption("cidsets") or forcecidset then
+            local b = tocidset(indices,min,max,true)
+            return pdfreference(pdfflushstreamobject(b))
+        end
+    end
+
+    -- Actually we can use the same as we only embed once.
+
+    -- subsetname = function(name)
+    --     return "CONTEXT" .. name
+    -- end
+
+    local prefixes = { } -- todo: set fixed one
+
+    subsetname = function(name)
+        local prefix
+        while true do
+            prefix = utfchar(random(65,90),random(65,90),random(65,90),random(65,90),random(65,90),random(65,90))
+            if not prefixes[prefix] then
+                prefixes[prefix] = true
+                break
+            end
+        end
+        return prefix .. "+" .. name
+    end
+
+end
+
+-- The three writers: opentype, truetype and type1.
+
+local mainwriters  = { }
+
+do
+
+    -- advh = os2.ascender - os2.descender
+    -- tsb  = default_advh - os2.ascender
+
+    -- truetype has the following tables:
+
+    -- head : mandate
+    -- hhea : mandate
+    -- vhea : mandate
+    -- hmtx : mandate
+    -- maxp : mandate
+    -- glyf : mandate
+    -- loca : mandate
+    --
+    -- cvt  : if needed (but we flatten)
+    -- fpgm : if needed (but we flatten)
+    -- prep : if needed (but we flatten)
+    -- PCLT : if needed (but we flatten)
+    --
+    -- name : not needed for T2: backend does that
+    -- post : not needed for T2: backend does that
+    -- OS/2 : not needed for T2: backend does that
+    -- cmap : not needed for T2: backend does that
+
+    local streams       = utilities.streams
+    local openstring    = streams.openstring
+    local readcardinal2 = streams.readcardinal2
+    ----- readcardinal4 = streams.readcardinal4
+
+    local otfreaders    = fonts.handlers.otf.readers
+
+    local function readcardinal4(f) -- this needs to be sorted out
+        local a = readcardinal2(f)
+        local b = readcardinal2(f)
+        if a and b then
+            return a * 0x10000 + b
+        end
+    end
+
+    -- -- --
+
+    local tablereaders  = { }
+    local tablewriters  = { }
+    local tablecreators = { }
+    local tableloaders  = { }
+
+    local openfontfile, closefontfile, makefontfile, makemetadata  do
+
+        local details    = {
+            details        = true,
+            platformnames  = true,
+            platformextras = true,
+        }
+
+        -- .022 sec on luatex manual, neglectable:
+
+     -- local function checksum(data)
+     --     local s = openstring(data)
+     --     local n = 0
+     --     local d = #data
+     --     while true do
+     --         local c = readcardinal4(s)
+     --         if c then
+     --             n = (n + c) % 0x100000000
+     --         else
+     --             break
+     --         end
+     --     end
+     --     return n
+     -- end
+
+        local function checksum(data)
+            local s = openstring(data)
+            local n = 0
+            local d = #data
+            while true do
+                local a = readcardinal2(s)
+                local b = readcardinal2(s)
+                if b then
+                    n = (n + a * 0x10000 + b) % 0x100000000
+                else
+                    break
+                end
+            end
+            return n
+        end
+
+        openfontfile = function(details)
+            return {
+                offset  = 0,
+                order   = { },
+                used    = { },
+                details = details,
+                streams = details.streams,
+            }
+        end
+
+        closefontfile = function(fontfile)
+            for k, v in next, fontfile do
+                fontfile[k] = nil -- so it can be collected asap
+            end
+        end
+
+        local metakeys = {
+            "uniqueid", "version",
+            "copyright", "license", "licenseurl",
+            "manufacturer", "vendorurl",
+            "family", "subfamily",
+            "typographicfamily", "typographicsubfamily",
+            "fullname", "postscriptname",
+        }
+
+    local template <const> = [[
+<?xpacket begin="﻿﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+  <x:xmpmeta xmlns:x="adobe:ns:meta/">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="" xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
+
+%s
+
+      </rdf:Description>
+    </rdf:RDF>
+  </x:xmpmeta>
+<?xpacket end="w"?>]]
+
+        makemetadata = function(fontfile)
+            local names  = fontfile.streams.names
+            local list   = { }
+            for i=1,#metakeys do
+                local m = metakeys[i]
+                local n = names[m]
+                if n then
+                    list[#list+1] = formatted("<pdfx:%s>%s</pdfx:%s>",m,n,m)
+                end
+            end
+            return formatted(template,concat(list,"\n"))
+        end
+
+        makefontfile = function(fontfile)
+            local order = fontfile.order
+            local used  = fontfile.used
+            local count = 0
+            for i=1,#order do
+                local tag  = order[i]
+                local data = fontfile[tag]
+                if data and #data > 0 then
+                    count = count + 1
+                else
+                    fontfile[tag] = false
+                end
+            end
+            local offset = 12 + (count * 16)
+            local headof = 0
+            local list   = {
+                "" -- placeholder
+            }
+            local i = 1
+            local k = 0
+            while i <= count do
+                i = i << 1
+                k = k + 1
+            end
+            local searchrange   = i << 3
+            local entryselector = k - 1
+            local rangeshift    = (count  << 4) - (i << 3)
+            local index  = {
+                tocardinal4(0x00010000), -- tables.version
+                tocardinal2(count),
+                tocardinal2(searchrange),
+                tocardinal2(entryselector),
+                tocardinal2(rangeshift),
+            }
+            --
+            local ni = #index
+            local nl = #list
+            for i=1,#order do
+                local tag  = order[i]
+                local data = fontfile[tag]
+                if data then
+                    local csum    = checksum(data)
+                    local dlength = #data
+                    local length  = ((dlength + 3) // 4) * 4
+                    local padding = length - dlength
+                    nl = nl + 1 ; list[nl] = data
+                    for i=1,padding do
+                        nl = nl + 1 ; list[nl] = "\0"
+                    end
+                    if #tag == 3 then
+                        tag = tag .. " "
+                    end
+                    ni = ni + 1 ; index[ni] = tag -- must be 4 chars
+                    ni = ni + 1 ; index[ni] = tocardinal4(csum)
+                    ni = ni + 1 ; index[ni] = tocardinal4(offset)
+                    ni = ni + 1 ; index[ni] = tocardinal4(dlength)
+                    used[i] = offset -- not used
+                    if tag == "head" then
+                        headof = offset
+                    end
+                    offset = offset + length
+                end
+            end
+            list[1] = concat(index)
+            local off = headof + 1 + 8 -- headof is already a file offset (it includes the table directory)
+            list = concat(list)
+            local csum = (0xB1B0AFBA - checksum(list)) % 0x100000000
+            list = sub(list,1,off-1) .. tocardinal4(csum) .. sub(list,off+4,#list)
+            return list
+        end
+
+        local function register(fontfile,name)
+            local u = fontfile.used
+            local o = fontfile.order
+            if not u[name] then
+                o[#o+1] = name
+                u[name] = true
+            end
+        end
+
+        local function create(fontfile,name)
+            local t = { }
+            fontfile[name] = t
+            return t
+        end
+
+        local function write(fontfile,name)
+            local t = fontfile[name]
+            if not t then
+                return
+            end
+            register(fontfile,name)
+            if type(t) == "table" then
+                if t[0] then
+                    fontfile[name] = concat(t,"",0,#t)
+                elseif #t > 0 then
+                    fontfile[name] = concat(t)
+                else
+                    fontfile[name] = false
+                end
+            end
+        end
+
+        tablewriters.head = function(fontfile)
+            register(fontfile,"head")
+            local t = fontfile.streams.fontheader
+            fontfile.head = concat {
+                tocardinal4(t.version),
+                tocardinal4(t.fontversionnumber),
+                tocardinal4(t.checksum),
+                tocardinal4(t.magic),
+                tocardinal2(t.flags),
+                tocardinal2(t.units),
+                tocardinal8(t.created),
+                tocardinal8(t.modified),
+                tocardinal2(t.xmin),
+                tocardinal2(t.ymin),
+                tocardinal2(t.xmax),
+                tocardinal2(t.ymax),
+                tocardinal2(t.macstyle),
+                tocardinal2(t.smallpixels),
+                tocardinal2(t.directionhint),
+                tocardinal2(t.indextolocformat),
+                tocardinal2(t.glyphformat),
+            }
+        end
+
+        tablewriters.hhea = function(fontfile)
+            register(fontfile,"hhea")
+            local t = fontfile.streams.horizontalheader
+            local n = t and fontfile.nofglyphs or 0
+            fontfile.hhea = concat {
+                tocardinal4(t.version),
+                tocardinal2(t.ascender),
+                tocardinal2(t.descender),
+                tocardinal2(t.linegap),
+                tocardinal2(t.maxadvancewidth),
+                tocardinal2(t.minleftsidebearing),
+                tocardinal2(t.minrightsidebearing),
+                tocardinal2(t.maxextent),
+                tocardinal2(t.caretsloperise),
+                tocardinal2(t.caretsloperun),
+                tocardinal2(t.caretoffset),
+                tocardinal2(t.reserved_1),
+                tocardinal2(t.reserved_2),
+                tocardinal2(t.reserved_3),
+                tocardinal2(t.reserved_4),
+                tocardinal2(t.metricdataformat),
+                tocardinal2(n) -- t.nofmetrics
+            }
+        end
+
+        tablewriters.vhea = function(fontfile)
+            local t = fontfile.streams.verticalheader
+            local n = t and fontfile.nofglyphs or 0
+            register(fontfile,"vhea")
+            fontfile.vhea = concat {
+                tocardinal4(t.version),
+                tocardinal2(t.ascender),
+                tocardinal2(t.descender),
+                tocardinal2(t.linegap),
+                tocardinal2(t.maxadvanceheight),
+                tocardinal2(t.mintopsidebearing),
+                tocardinal2(t.minbottomsidebearing),
+                tocardinal2(t.maxextent),
+                tocardinal2(t.caretsloperise),
+                tocardinal2(t.caretsloperun),
+                tocardinal2(t.caretoffset),
+                tocardinal2(t.reserved_1),
+                tocardinal2(t.reserved_2),
+                tocardinal2(t.reserved_3),
+                tocardinal2(t.reserved_4),
+                tocardinal2(t.metricdataformat),
+                tocardinal2(n) -- t.nofmetrics
+            }
+        end
+
+        tablewriters.raw = function(fontfile,tag,data) -- copied verbatim (keephints)
+            register(fontfile,tag)
+            fontfile[tag] = data
+        end
+
+        tablewriters.maxp = function(fontfile)
+            register(fontfile,"maxp")
+            local t = fontfile.streams.maximumprofile
+            local n = fontfile.nofglyphs
+            -- if fontfile.streams.cffinfo then
+                -- error
+            -- end
+            local version = tocardinal4(0x00010000)
+            local count   = tocardinal2(n)
+            if t.points then
+                fontfile.maxp = concat {
+                    version, count,
+                    tocardinal2(t.points),
+                    tocardinal2(t.contours),
+                    tocardinal2(t.compositepoints),
+                    tocardinal2(t.compositecontours),
+                    tocardinal2(t.zones),
+                    tocardinal2(t.twilightpoints),
+                    tocardinal2(t.storage),
+                    tocardinal2(t.functiondefs),
+                    tocardinal2(t.instructiondefs),
+                    tocardinal2(t.stackelements),
+                    tocardinal2(t.sizeofinstructions),
+                    tocardinal2(t.componentelements),
+                    tocardinal2(t.componentdepth),
+                }
+            else -- catch bugged font that felt through the checking
+                local zero = tocardinal2(0)
+                fontfile.maxp = concat {
+                    version, count, zero, zero, zero, zero, zero,
+                    zero, zero, zero, zero, zero, zero, zero, zero,
+                }
+            end
+        end
+
+        tablecreators.loca = function(fontfile) return create(fontfile,"loca") end
+        tablewriters .loca = function(fontfile) return write (fontfile,"loca") end
+
+        tablecreators.glyf = function(fontfile) return create(fontfile,"glyf") end
+        tablewriters .glyf = function(fontfile) return write (fontfile,"glyf") end
+
+        tablecreators.hmtx = function(fontfile) return create(fontfile,"hmtx") end
+        tablewriters .hmtx = function(fontfile) return write (fontfile,"hmtx") end
+
+        tablecreators.vmtx = function(fontfile) return create(fontfile,"vmtx") end
+        tablewriters .vmtx = function(fontfile) return write (fontfile,"vmtx") end
+
+        tableloaders .cmap = function(fontfile) return read  (fontfile,"cmap") end
+        tablewriters .cmap = function(fontfile) return write (fontfile,"cmap") end
+
+        tableloaders .name = function(fontfile) return read  (fontfile,"name") end
+        tablewriters .name = function(fontfile) return write (fontfile,"name") end
+
+        tableloaders .post = function(fontfile) return read  (fontfile,"post") end
+        tablewriters .post = function(fontfile) return write (fontfile,"post") end
+
+    end
+
+    local sharedmetadata = setmetatableindex(function(t,fontmeta)
+        local v = fontmeta or false
+        if fontmeta then
+            v = pdfreference(pdfflushstreamobject(fontmeta))
+        end
+        t[fontmeta] = v
+        return v
+    end)
+
+    mainwriters["truetype"] = function(details)
+        --
+        local fontfile         = openfontfile(details)
+        local basefontname     = details.basefontname
+        local streams          = details.streams
+        local blobs            = streams.streams
+        local notdef           = streams.notdef or { }
+        local fontheader       = streams.fontheader
+        local horizontalheader = streams.horizontalheader
+        local verticalheader   = streams.verticalheader
+        local maximumprofile   = streams.maximumprofile
+        local names            = streams.names
+        local descriptions     = details.rawdata.descriptions
+        local metadata         = details.rawdata.metadata
+        local indices          = details.indices
+        local metabbox         = { fontheader.xmin, fontheader.ymin, fontheader.xmax, fontheader.ymax }
+        local indices,
+              include,
+              minindex,
+              maxindex         = collectindices(descriptions,indices,details.used,details.hash)
+        local glyphstreams     = tablecreators.glyf(fontfile)
+        local locations        = tablecreators.loca(fontfile)
+        local horizontals      = tablecreators.hmtx(fontfile)
+        local verticals        = tablecreators.vmtx(fontfile)
+        --
+        local zero2            = tocardinal2(0)
+        local zero4            = tocardinal4(0)
+        --
+        local horizontal       = horizontalheader.nofmetrics > 0
+        local vertical         = verticalheader.nofmetrics > 0
+        local notdefbbox       = notdef.boundingbox or { 0, 0, 0, 0 }
+        local notdefmetric     = tocardinal2(round(notdef.width or 0))
+                              .. tocardinal2(round(notdefbbox[1] or 0))
+        local notdefvertical   = tocardinal2(round(notdef.vheight or 0))
+                              .. tocardinal2(round(notdef.tsb or 0))
+        --
+        local streamoffset     = 0
+        local lastoffset       = zero4
+        local g, h, v          = 0, 0, 0
+        --
+        -- glyph zero is .notdef
+        --
+        if minindex > 0 then
+            local blob = blobs[0]
+            -- The .notdef glyph needs a loca entry and a metric.
+            locations[0] = lastoffset
+            h = h + 1 ; horizontals [h] = notdefmetric
+            if vertical then
+                v = v + 1 ; verticals[v] = notdefvertical
+            end
+            if blob and #blob > 0 then
+                g = g + 1 ; glyphstreams[g] = blob
+                streamoffset = streamoffset + #blob
+                lastoffset = tocardinal4(streamoffset)
+            else
+                report_fonts("missing .notdef in font %a",basefontname)
+            end
+            -- todo: use a rep for h/v
+            for index=1,minindex-1 do -- no needed in new low range
+                locations[index] = lastoffset
+                h = h + 1 ; horizontals[h] = zero4
+                if vertical then
+                    v = v + 1 ; verticals[v] = zero4
+                end
+            end
+        end
+
+        for index=minindex,maxindex do
+            locations[index] = lastoffset
+            local data = indices[index]
+            if data then
+                local blob = blobs[include[index]] -- we assume padding
+                if blob and #blob > 0 then
+                    g = g + 1 ; glyphstreams[g] = blob
+                    h = h + 1 ; horizontals [h] = tocardinal2(round(data.width or 0))
+                    h = h + 1 ; horizontals [h] = tocardinal2(round(data.boundingbox[1]))
+                    if vertical then
+                        v = v + 1 ; verticals[v] = tocardinal2(round(data.height or 0)) -- how about depth
+                        v = v + 1 ; verticals[v] = tocardinal2(round(data.boundingbox[3]))
+                    end
+                    streamoffset = streamoffset + #blob
+                    lastoffset   = tocardinal4(streamoffset)
+                else
+                    h = h + 1 ; horizontals[h] = zero4
+                    if vertical then
+                        v = v + 1 ; verticals[v] = zero4
+                    end
+                 -- report_fonts("missing blob for index %i in font %a",index,basefontname)
+                end
+            else
+                h = h + 1 ; horizontals[h] = zero4
+                if vertical then
+                    v = v + 1 ; verticals[v] = zero4
+                end
+            end
+        end
+
+        locations[maxindex+1] = lastoffset -- cf spec
+        --
+        local nofglyphs             = maxindex + 1 -- include zero
+        --
+        fontheader.checksum         = 0
+        fontheader.indextolocformat = 1
+        maximumprofile.nofglyphs    = nofglyphs
+        --
+        fontfile.format             = "tff"
+        fontfile.basefontname       = basefontname
+        fontfile.nofglyphs          = nofglyphs
+        --
+        tablewriters.head(fontfile)
+        tablewriters.hhea(fontfile)
+        if vertical then
+            tablewriters.vhea(fontfile)
+        end
+        tablewriters.maxp(fontfile)
+
+        tablewriters.loca(fontfile)
+        tablewriters.glyf(fontfile)
+
+        tablewriters.hmtx(fontfile)
+        if vertical then
+            tablewriters.vmtx(fontfile)
+        end
+        --
+        local hinttables = streams.hinttables -- only when fonts.truetype.keephints is enabled
+        if hinttables then
+            local tags = { "cvt", "fpgm", "prep" }
+            for i=1,#tags do
+                local tag  = tags[i]
+                local data = hinttables[tag]
+                if data then
+                    tablewriters.raw(fontfile,tag,data)
+                end
+            end
+        end
+        --
+        local fontdata = makefontfile(fontfile)
+        local fontmeta = makemetadata(fontfile)
+        --
+        fontfile = closefontfile(fontfile)
+        --
+        local units       = metadata.units
+        local basefont    = pdfconstant(basefontname)
+        local widths      = widtharray(details,indices,maxindex,units,1,notdef)
+        local object      = details.objectnumber
+        local tounicode   = tounicodedictionary(details,indices,maxindex,basefontname,true)
+        local tocidset    = tocidsetdictionary(indices,minindex,maxindex)
+        local metabbox    = metadata.boundingbox or { 0, 0, 0, 0 }
+        local fontbbox    = pdfarray { unpack(metabbox) }
+        local ascender    = metadata.ascender
+        local descender   = metadata.descender
+     -- local averagewidth= metadata.averagewidth
+        local capheight   = metadata.capheight or fontbbox[4]
+        local stemv       = metadata.weightclass
+        local italicangle = metadata.italicangle
+        local xheight     = metadata.xheight or fontbbox[4]
+        --
+        if stemv then
+            stemv = (stemv/65)^2 + 50
+        end
+        --
+        local function scale(n)
+            if n then
+                return round((n) * 10000 / units) / 10
+            else
+                return 0
+            end
+        end
+        --
+        local registry = lmtxregistry(details,include,blobs,minindex,maxindex)
+        local reserved = pdfreserveobject()
+        local child = pdfdictionary {
+            Type           = pdfconstant("Font"),
+            Subtype        = pdfconstant("CIDFontType2"),
+            BaseFont       = basefont,
+            FontDescriptor = pdfreference(reserved),
+            W              = pdfreference(pdfflushobject(widths)),
+            LMTX_Registry  = registry or nil,
+            CIDToGIDMap    = pdfconstant("Identity"),
+            CIDSystemInfo  = pdfdictionary {
+                Registry   = pdfstring("Adobe"),
+                Ordering   = pdfstring("Identity"),
+                Supplement = 0,
+            }
+        }
+        local descendants = pdfarray {
+            pdfreference(pdfflushobject(child)),
+        }
+        local descriptor = pdfdictionary {
+            Type          = pdfconstant("FontDescriptor"),
+            FontName      = basefont,
+            Flags         = 4,
+            FontBBox      = fontbbox,
+         -- FontMatrix    = pdfarray { 0.001, 0, 0, 0.001, 0, 0 },
+            Ascent        = scale(ascender),
+            Descent       = scale(descender),
+         -- AvgWidth      = scale(averagewidth),
+            ItalicAngle   = round(italicangle or 0),
+            CapHeight     = scale(capheight),
+            StemV         = scale(stemv),
+            XHeight       = scale(xheight),
+            FontFile2     = pdfreference(pdfflushstreamobject(fontdata)),
+            CIDSet        = tocidset, -- no longer needed but verifyers want it
+            LMTX_Metadata = sharedmetadata[fontmeta] or nil,
+        }
+        local parent = pdfdictionary {
+            Type            = pdfconstant("Font"),
+            Subtype         = pdfconstant("Type0"),
+            Encoding        = pdfconstant(details.properties.writingmode == "vertical" and "Identity-V" or "Identity-H"),
+            BaseFont        = basefont,
+            DescendantFonts = descendants,
+            ToUnicode       = pdfreference(pdfflushstreamobject(tounicode)),
+        }
+        pdfflushobject(reserved,descriptor)
+        pdfflushobject(object,parent)
+        --
+     -- if trace_details then
+     --     local name = "temp.ttf"
+     --     report_fonts("saving %a",name)
+     --     io.savedata(name,fontdata)
+     --     inspect(fonts.handlers.otf.readers.loadfont(name))
+     -- end
+        --
+    end
+
+    do
+        -- todo : cff2
+
+        local details    = {
+            details        = true,
+            platformnames  = true,
+            platformextras = true,
+        }
+
+        tablecreators.cff = function(fontfile)
+            fontfile.charstrings  = { }
+            fontfile.charmappings = { }
+            fontfile.cffstrings   = { }
+            fontfile.cffhash      = { }
+            return fontfile.charstrings , fontfile.charmappings
+        end
+
+        local todictnumber, todictreal, todictinteger, todictoffset  do
+
+            local maxnum  =   0x7FFFFFFF
+            local minnum  = - 0x7FFFFFFF - 1
+            local epsilon = 1.0e-5
+
+            local int2tag = "\28"
+            local int4tag = "\29"
+            local realtag = "\30"
+
+            todictinteger = function(n)
+                if not n then
+                    return char(139 & 0xFF)
+                elseif n >= -107 and n <= 107 then
+                    return char((n + 139) & 0xFF)
+                elseif n >= 108 and n <= 1131 then
+                    n = 0xF700 + n - 108
+                    return char((n >> 8) & 0xFF, n & 0xFF)
+                elseif n >= -1131 and n <= -108 then
+                    n = 0xFB00 - n - 108
+                    return char((n >> 8) & 0xFF, n & 0xFF)
+                elseif n >= -32768 and n <= 32767 then
+                 -- return char(28,extract8(n,8),extract8(n,0))
+                    return char(28,(n>>8)&0xFF,(n>>0)&0xFF)
+                else
+                 -- return char(29,extract8(n,24&0xFF,extract8(n,16),extract8(n,8),extract8(n,0))
+                    return char(29,(n>>24)&0xFF,(n>>16)&0xFF,(n>>8)&0xFF,(n>>0)&0xFF)
+                end
+            end
+
+         -- -- not called that often
+         --
+         -- local encoder = readers.cffencoder
+         --
+         -- todictinteger = function(n)
+         --     if not n then
+         --         return encoder[0]
+         --     elseif n >= -1131 and n <= 1131 then
+         --         return encoder[n]
+         --     elseif n >= -32768 and n <= 32767 then
+         --      -- return char(28,extract8(n,8),extract8(n,0))
+         --         return char(28,(n>>8)&0xFF,(n>>0)&0xFF)
+         --     else
+         --      -- return char(29,extract8(n,24),extract8(n,16),extract8(n,8),extract8(n,0))
+         --         return char(29,(n>>24)&0xFF,(n>>16)&0xFF,(n>>8)&0xFF,(n>>0)&0xFF)
+         --     end
+         -- end
+
+            todictoffset = function(n)
+                return int4tag .. tointeger4(n)
+            end
+
+            local z  = byte("0")
+            local dp = 10
+            local ep = 11
+            local em = 12
+            local mn = 14
+            local es = 15
+
+            todictreal = function(v)
+                local s = formatted("%g",v)
+                local t = { [0] = realtag }
+                local n = 0
+                local e = false
+                for s in gmatch(s,".") do
+                    if s == "e" or s == "E" then
+                        e = true
+                    elseif s == "+" then
+                        -- skip
+                    elseif s == "-" then
+                        n = n + 1
+                        if e then
+                            t[n] = em
+                            e = false
+                        else
+                            t[n] = mn
+                        end
+                    else
+                        if e then
+                            n = n + 1
+                            t[n] = ep
+                            e = false
+                        end
+                        n = n + 1
+                        if s == "." then
+                            t[n] = dp
+                        else
+                            t[n] = byte(s) - z
+                        end
+                    end
+                end
+                n = n + 1
+                t[n] = es
+                if (n % 2) ~= 0 then
+                    n = n + 1
+                    t[n] = es
+                end
+                local j = 0
+                for i=1,n,2 do
+                    j = j + 1
+                    t[j] = char(t[i]*0x10+t[i+1])
+                end
+                t = concat(t,"",0,j)
+                return t
+            end
+
+            todictnumber = function(n)
+                if not n or n == 0 then
+                    return todictinteger(0)
+                elseif (n > maxnum or n < minnum or (abs(n - round(n)) > epsilon)) then
+                    return todictreal(n)
+                else
+                    return todictinteger(n)
+                end
+            end
+
+        end
+
+        local todictkey = char
+
+        local function todictstring(fontfile,value)
+            if not value then
+                value = ""
+            end
+            local s = fontfile.cffstrings
+            local h = fontfile.cffhash
+            local n = h[value]
+            if not n then
+                n = #s + 1
+                s[n] = value
+                h[value] = n
+            end
+            return todictinteger(390+n)
+        end
+
+        local function todictboolean(b)
+            return todictinteger(b and 1 or 0)
+        end
+
+        local function todictdeltas(t)
+            local r = { }
+            for i=1,#t do
+--                r[i] = todictnumber(t[i]-(t[i-1] or 0))
+                r[i] = todictnumber(t[i]+(t[i-1] or 0))
+            end
+            return concat(r)
+        end
+
+        local function todictarray(t)
+            local r = { }
+            for i=1,#t do
+                r[i] = todictnumber(t[i])
+            end
+            return concat(r)
+        end
+
+        local function writestring(target,source,offset,what)
+            target[#target+1] = source
+         -- report_fonts("string : %-11s %06i # %05i",what,offset,#source)
+            return offset + #source
+        end
+
+        local function writetable(target,source,offset,what)
+            source = concat(source)
+            target[#target+1] = source
+         -- report_fonts("table  : %-11s %06i # %05i",what,offset,#source)
+            return offset + #source
+        end
+
+        local function writeindex(target,source,offset,what)
+            local n = #source
+            local t = #target
+            t = t + 1 ; target[t] = tocardinal2(n)
+            if n > 0 then
+                local data = concat(source)
+                local size = #data -- assume the worst
+                local offsetsize, tocardinal
+                if size < 0xFF then
+                    offsetsize, tocardinal = 1, tocardinal1
+                elseif size < 0xFFFF then
+                    offsetsize, tocardinal = 2, tocardinal2
+                elseif size < 0xFFFFFF then
+                    offsetsize, tocardinal = 3, tocardinal3
+                elseif size < 0xFFFFFFFF then
+                    offsetsize, tocardinal = 4, tocardinal4
+                end
+             -- report_fonts("index  : %-11s %06i # %05i (%i entries with offset size %i)",what,offset,#data,n,offsetsize)
+                offset = offset + 2 + 1 + (n + 1) * offsetsize + size
+                -- bytes per offset
+                t = t + 1 ; target[t] = tocardinal1(offsetsize)
+                -- list of offsets (one larger for length calculation)
+                local offset = 1 -- mandate
+                t = t + 1 ; target[t] = tocardinal(offset)
+                for i=1,n do
+                    offset = offset + #source[i]
+                    t = t + 1 ; target[t] = tocardinal(offset)
+                end
+                t = t + 1 ; target[t] = data
+            else
+             -- report_fonts("index  : %-11s %06i # %05i (no entries)",what,offset,0)
+                offset = offset + 2
+            end
+         -- print("offset",offset,#concat(target))
+            return offset
+        end
+
+        tablewriters.cff = function(fontfile)
+            --
+            local streams            = fontfile.streams
+            local cffinfo            = streams.cffinfo or { }
+            local names              = streams.names or { }
+            local fontheader         = streams.fontheader or { }
+            local basefontname       = fontfile.basefontname
+            --
+            local offset             = 0
+            local dictof             = 0
+            local target             = { }
+            --
+            local charstrings        = fontfile.charstrings
+            local nofglyphs          = #charstrings + 1
+         -- local fontmatrix         = { 0.001, 0, 0, 0.001, 0, 0 } -- todo, best not
+            local fontbbox           = fontfile.fontbbox
+            local defaultwidth       = cffinfo.defaultwidth or 0
+            local nominalwidth       = cffinfo.nominalwidth or 0
+            local bluevalues         = cffinfo.bluevalues
+            local otherblues         = cffinfo.otherblues
+            local familyblues        = cffinfo.familyblues
+            local familyotherblues   = cffinfo.familyotherblues
+            local bluescale          = cffinfo.bluescale
+            local blueshift          = cffinfo.blueshift
+            local bluefuzz           = cffinfo.bluefuzz
+            local stdhw              = cffinfo.stdhw
+            local stdvw              = cffinfo.stdvw
+            local stemsnaph          = cffinfo.stemsnaph
+            local stemsnapv          = cffinfo.stemsnapv
+            --
+            if defaultwidth == 0 then defaultwidth     = nil end
+            if nominalwidth == 0 then nominalwidth     = nil end
+            if bluevalues        then bluevalues       = todictarray(bluevalues) end
+            if otherblues        then otherblues       = todictarray(otherblues) end
+            if familyblues       then familyblues      = todictarray(familyblues) end
+            if familyotherblues  then familyotherblues = todictarray(familyotherblues) end
+            if bluescale         then bluescale        = todictnumber(bluescale) end
+            if blueshift         then blueshift        = todictnumber(blueshift) end
+            if bluefuzz          then bluefuzz         = todictnumber(bluefuzz) end
+            if stemsnaph         then stemsnaph        = todictarray(stemsnaph) end
+            if stemsnapv         then stemsnapv        = todictarray(stemsnapv) end
+            if stdhw             then stdhw            = todictnumber(stdhw) end
+            if stdvw             then stdvw            = todictnumber(stdvw) end
+            --
+            local fontversion        = todictstring(fontfile,fontheader.fontversion or "uknown version")
+            local familyname         = todictstring(fontfile,cffinfo.familyname or names.family or basefontname)
+            local fullname           = todictstring(fontfile,cffinfo.fullname or basefontname)
+            local weight             = todictstring(fontfile,cffinfo.weight or "Normal")
+            local fontbbox           = todictarray(fontbbox)
+            local strokewidth        = todictnumber(cffinfo.strokewidth)
+            local monospaced         = todictboolean(cffinfo.monospaced)
+            local italicangle        = todictnumber(cffinfo.italicangle)
+            local underlineposition  = todictnumber(cffinfo.underlineposition)
+            local underlinethickness = todictnumber(cffinfo.underlinethickness)
+            local charstringtype     = todictnumber(2)
+         -- local fontmatrix         = todictarray(fontmatrix)
+            local ros                = todictstring(fontfile,"Adobe")    -- registry
+                                    .. todictstring(fontfile,"Identity") -- identity
+                                    .. todictnumber(0)                   -- supplement
+            local cidcount           = todictnumber(fontfile.nofglyphs)
+            local fontname           = todictstring(fontfile,basefontname)
+            local fdarrayoffset      = todictoffset(0)
+            local fdselectoffset     = todictoffset(0)
+            local charstringoffset   = todictoffset(0)
+            local charsetoffset      = todictoffset(0)
+            local privateoffset      = todictoffset(0)
+            --
+            local defaultwidthx      = todictnumber(defaultwidth)
+            local nominalwidthx      = todictnumber(nominalwidth)
+            -- the order of the blues is important!
+            local private            = ""
+                                    .. (bluevalues       and (bluevalues       .. todictkey( 6))    or "")
+                                    .. (otherblues       and (otherblues       .. todictkey( 7))    or "")
+                                    .. (familyblues      and (familyblues      .. todictkey( 8))    or "")
+                                    .. (familyotherblues and (familyotherblues .. todictkey( 9))    or "")
+                                    .. (bluescale        and (bluescale        .. todictkey(12, 9)) or "")
+                                    .. (blueshift        and (blueshift        .. todictkey(12,10)) or "")
+                                    .. (bluefuzz         and (bluefuzz         .. todictkey(12,11)) or "")
+                                    .. (stdhw            and (stdhw            .. todictkey(10))    or "")
+                                    .. (stdvw            and (stdvw            .. todictkey(11))    or "")
+                                    .. (stemsnaph        and (stemsnaph        .. todictkey(12,12)) or "")
+                                    .. (stemsnapv        and (stemsnapv        .. todictkey(12,13)) or "")
+                                    .. (defaultwidthx    and (defaultwidthx    .. todictkey(20))    or "")
+                                    .. (nominalwidthx    and (nominalwidthx    .. todictkey(21))    or "")
+            local privatesize        = todictnumber(#private)
+            local privatespec        = privatesize .. privateoffset
+            --
+            -- header (fixed @ 1)
+            --
+            local header =
+                tocardinal1(1) -- major
+             .. tocardinal1(0) -- minor
+             .. tocardinal1(4) -- header size
+             .. tocardinal1(4) -- offset size
+            --
+            offset = writestring(target,header,offset,"header")
+            --
+            -- name index (fixed @ 2) (has to be sorted)
+            --
+            local names = {
+                basefontname,
+            }
+            --
+            offset = writeindex(target,names,offset,"names")
+            --
+            -- topdict index (fixed @ 3)
+            --
+            local topvars =
+                charstringoffset .. todictkey(17)
+             .. charsetoffset    .. todictkey(15)
+             .. fdarrayoffset    .. todictkey(12,36)
+             .. fdselectoffset   .. todictkey(12,37)
+             .. privatespec      .. todictkey(18)
+            --
+            local topdict = {
+                ros                   .. todictkey(12,30) -- first
+             .. cidcount              .. todictkey(12,34)
+             .. familyname            .. todictkey( 3)
+             .. fullname              .. todictkey( 2)
+             .. weight                .. todictkey( 4)
+             .. fontbbox              .. todictkey( 5)
+             .. monospaced            .. todictkey(12, 1)
+             .. italicangle           .. todictkey(12, 2)
+             .. underlineposition     .. todictkey(12, 3)
+             .. underlinethickness    .. todictkey(12, 4)
+             .. charstringtype        .. todictkey(12, 6)
+          -- .. fontmatrix            .. todictkey(12, 7)
+             .. strokewidth           .. todictkey(12, 8)
+             .. topvars
+            }
+            --
+            offset = writeindex(target,topdict,offset,"topdict")
+            dictof = #target
+            --
+            -- string index (fixed @ 4)
+            --
+            offset = writeindex(target,fontfile.cffstrings,offset,"strings")
+            --
+            -- global subroutine index (fixed @ 5)
+            --
+            offset = writeindex(target,{},offset,"globals")
+            --
+            -- Encoding (cff1)
+            --
+            -- offset = writeindex(target,{},offset,"encoding")
+            --
+            -- Charsets
+            --
+            charsetoffset = todictoffset(offset)
+            offset        = writetable(target,fontfile.charmappings,offset,"charsets")
+            --
+            -- fdselect
+            --
+            -- see printer mail thread / experiments with Leah Neukirchen: some printers
+            -- (probaby with an old GS on board) need this matrix because oitherwise they
+            -- accumulate the top one (resulting in very tiny invisible results)
+            --
+            local fdselect =
+                tocardinal1(3) -- format
+             .. tocardinal2(1) -- n of ranges
+             -- entry 1
+             .. tocardinal2(0) -- first gid
+             .. tocardinal1(0) -- fd index
+             -- entry 2
+          -- .. tocardinal2(fontfile.sparsemax-1) -- sentinel
+             .. tocardinal2(fontfile.sparsemax) -- sentinel
+            --
+            fdselectoffset = todictoffset(offset)
+            offset         = writestring(target,fdselect,offset,"fdselect")
+            --
+            -- charstrings
+            --
+            charstringoffset = todictoffset(offset)
+            offset           = writeindex(target,charstrings,offset,"charstrings")
+            --
+            -- font dict
+            --
+            -- offset = writeindex(target,{},offset,"fontdict")
+            --
+            -- private
+            --
+            privateoffset = todictoffset(offset)
+            privatespec   = privatesize .. privateoffset
+            offset        = writestring(target,private,offset,"private")
+            --
+            local fdarray = {
+                fontname       .. todictkey(12,38)
+             .. privatespec    .. todictkey(18) -- case 1
+            }
+            fdarrayoffset = todictoffset(offset)
+            offset        = writeindex(target,fdarray,offset,"fdarray")
+            --
+            topdict = target[dictof]
+            topdict = sub(topdict,1,#topdict-#topvars)
+            topvars =
+                charstringoffset .. todictkey(17)
+             .. charsetoffset    .. todictkey(15)
+             .. fdarrayoffset    .. todictkey(12,36)
+             .. fdselectoffset   .. todictkey(12,37)
+             .. privatespec      .. todictkey(18) -- case 2
+            target[dictof] = topdict .. topvars
+            --
+            target = concat(target)
+         -- if trace_details then
+         --   local name = "temp.cff"
+         --   report_fonts("saving %a",name)
+         --   io.savedata(name,target)
+         --   inspect(fonts.handlers.otf.readers.cffcheck(name))
+         -- end
+            return target
+        end
+    end
+
+    -- todo: check widths (missing a decimal)
+
+    mainwriters["opentype"] = function(details)
+        --
+        local fontfile       = openfontfile(details)
+        local basefontname   = details.basefontname
+        local streams        = details.streams
+        local blobs          = streams.streams
+        local notdef         = streams.notdef or { }
+        local fontheader     = streams.fontheader
+        local maximumprofile = streams.maximumprofile
+        local names          = streams.names -- not used
+        local descriptions   = details.rawdata.descriptions
+        local metadata       = details.rawdata.metadata
+        local indices        = details.indices
+        local used           = details.used
+        local usedfonts      = details.usedfonts -- in case of multiple loaded t1 fonts with no common description
+        local metabbox       = { fontheader.xmin, fontheader.ymin, fontheader.xmax, fontheader.ymax }
+        local correction     = 1
+        if not descriptions or not next(descriptions) then
+            -- (*) We share code with type1 and when we have old school tfm with pfb shapes
+            -- we don't have descriptions, so we need to construct these. This could be done
+            -- earlier but then we lack info about sharing. Horrible hackery. If Type1 wasn't
+            -- obsolete I'd make a dedicated mainwriter that does the index and width collect
+            -- more efficient but there is no gain now.
+            if true then
+                descriptions = { }
+                setmetatable(indices,nil)
+                setmetatable(used,nil)
+                for u in next, usedfonts do
+                    local param = fonts.hashes.parameters[u]
+                    local chars = fonts.hashes.characters[u]
+                    local units = 1000 -- to be checked (picked up)
+                    correction = param.size / 1000
+                 -- correction = correction * bpfactor / ptfactor
+                    local factor = 1000 / (units * correction)
+                    if false then
+                        for k, v in sortedhash(chars) do
+                            if descriptions[k] then
+                                local w1 = descriptions[k].width
+                                local w2 = round((v.advance or v.width or 0) * factor)
+                                if w1 ~= w2 then
+                                    local w = v.advance or v.width or 0
+                                 -- print(
+                                 --     u,k,utf.char(k),
+                                 --     w1,w2,
+                                 --     ((v.advance or v.width or 0)*param.designsize/param.size) / 1000
+                                 -- )
+                                end
+                            else
+                                descriptions[k] = {
+                                    index   = v.index,
+                                    width   = round((v.advance or v.width or 0) * factor),
+                                    unicode = v.unicode,
+                                }
+                            end
+                        end
+                    else
+                        for k, v in next, chars do
+                            if descriptions[k] then
+                                -- done
+                            else
+                                local index = v.index
+                                if indices[index] or used[index] then -- play safe
+                                    descriptions[k] = {
+                                        index   = index,
+                                        width   = round((v.advance or v.width or 0) * factor),
+                                        unicode = v.unicode,
+                                    }
+                                end
+                            end
+                        end
+                    end
+                end
+                correction = false
+            else
+                -- This is tricky as it can be the wrong one and incomplete so a first come
+                -- and go issue. The basepoint correction needs checking.
+                descriptions = details.fontdata.characters
+                correction   = details.fontdata.parameters.size / 1000
+                correction   = correction * bpfactor / ptfactor
+            end
+            metadata = { }
+        end
+        --
+        local indices,
+              include,
+              minindex,
+              maxindex       = collectindices(descriptions,indices,used,details.hash)
+        local streamoffset   = 0
+        local glyphstreams,
+              charmappings   = tablecreators.cff(fontfile)
+        --
+        local zero2          = tocardinal2(0)
+        local zero4          = tocardinal4(0)
+        --
+        -- glyph zero is .notdef
+        --
+        local blob              = blobs[0] or "\14"
+        local sparsemax         = 1
+        local lastoffset        = zero4
+        glyphstreams[sparsemax] = blob
+        charmappings[sparsemax] = tocardinal1(0) -- format 0
+        streamoffset            = streamoffset + #blob
+        lastoffset              = tocardinal4(streamoffset)
+        if minindex == 0 then
+            minindex = 1
+        end
+        --
+        for index=minindex,maxindex do
+            local idx = include[index]
+            if idx then
+                local blob = blobs[idx]
+                if not blob then
+                    blob = "\14"
+                end
+                sparsemax               = sparsemax + 1
+                glyphstreams[sparsemax] = blob
+                charmappings[sparsemax] = tocardinal2(index)
+                streamoffset            = streamoffset + #blob
+                lastoffset              = tocardinal4(streamoffset)
+            end
+        end
+        --
+        fontfile.nofglyphs    = maxindex + 1
+        fontfile.sparsemax    = sparsemax
+        fontfile.format       = "cff"
+        fontfile.basefontname = basefontname
+        fontfile.fontbbox     = metabbox
+        --
+        local fontdata = tablewriters.cff(fontfile)
+        local fontmeta = makemetadata(fontfile)
+        --
+        fontfile = closefontfile(fontfile)
+        --
+        local units = fontheader.units or metadata.units
+        if not units or units ~= 1000 then
+            -- maybe only otf
+            -- public sans has 2000 so we need to mess different from e.g. ttf
+            report_fonts("width units in %a are %i, forcing 1000 instead",basefontname,units)
+            units = 1000
+        end
+        --
+        local basefont    = pdfconstant(basefontname)
+        local widths      = widtharray(details,indices,maxindex,units,correction,notdef)
+        local object      = details.objectnumber
+        local tounicode   = tounicodedictionary(details,indices,maxindex,basefontname,true)
+        local tocidset    = tocidsetdictionary(indices,minindex,maxindex)
+        local fontbbox    = pdfarray { unpack(metabbox) }
+        local ascender    = metadata.ascender or 0
+        local descender   = metadata.descender or 0
+     -- local averagewidth= metadata.averagewidth
+        local capheight   = metadata.capheight or fontbbox[4]
+        local stemv       = metadata.weightclass
+        local italicangle = metadata.italicangle
+        local xheight     = metadata.xheight or fontbbox[4]
+        if stemv then
+            stemv = (stemv/65)^2 + 50
+        else
+         -- stemv = 2
+        end
+        --
+        local function scale(n)
+            if n then
+                return round((n) * 10000 / units) / 10
+            else
+                return 0
+            end
+        end
+        --
+        local registry = lmtxregistry(details,include,blobs,minindex,maxindex)
+        local reserved = pdfreserveobject()
+        local child = pdfdictionary {
+            Type           = pdfconstant("Font"),
+            Subtype        = pdfconstant("CIDFontType0"),
+            BaseFont       = basefont,
+            FontDescriptor = pdfreference(reserved),
+            W              = pdfreference(pdfflushobject(widths)),
+            LMTX_Registry  = registry or nil,
+            CIDSystemInfo  = pdfdictionary {
+                Registry   = pdfstring("Adobe"),
+                Ordering   = pdfstring("Identity"),
+                Supplement = 0,
+            }
+        }
+        local descendants = pdfarray {
+            pdfreference(pdfflushobject(child)),
+        }
+        local fontstream = pdfdictionary {
+            Subtype = pdfconstant("CIDFontType0C"),
+        }
+        local descriptor = pdfdictionary {
+            Type          = pdfconstant("FontDescriptor"),
+            FontName      = basefont,
+            Flags         = 4,
+            FontBBox      = fontbbox,
+         -- FontMatrix    = pdfarray { 0.001, 0, 0, 0.001, 0, 0 },
+            Ascent        = scale(ascender),
+            Descent       = scale(descender),
+         -- AvgWidth      = scale(averagewidth),
+            ItalicAngle   = round(italicangle or 0),
+            CapHeight     = scale(capheight),
+            StemV         = scale(stemv),
+            XHeight       = scale(xheight),
+            CIDSet        = tocidset,
+            FontFile3     = pdfreference(pdfflushstreamobject(fontdata,fontstream())),
+            LMTX_Metadata = sharedmetadata[fontmeta] or nil,
+        }
+        local parent = pdfdictionary {
+            Type            = pdfconstant("Font"),
+            Subtype         = pdfconstant("Type0"),
+            Encoding        = pdfconstant(details.properties.writingmode == "vertical" and "Identity-V" or "Identity-H"),
+            BaseFont        = basefont,
+            DescendantFonts = descendants,
+            ToUnicode       = pdfreference(pdfflushstreamobject(tounicode)),
+        }
+        pdfflushobject(reserved,descriptor)
+        pdfflushobject(object,parent)
+    end
+
+    mainwriters["type1"] = function(details)
+        -- We abuse the cff includer which is ok but for special cases like
+        -- tfm -> pfb we don't have the right descriptions and scale so this
+        -- is why we cheat elsewhere. Maybe I should just drop that kind of
+        -- support and assume afm files to be present. See (*) above.
+        local s = details.streams
+        local m = details.rawdata.metadata
+        if m then
+            local h = s.horizontalheader
+            local c = s.cffinfo
+            local n = s.names
+            h.ascender  = m.ascender      or h.ascender
+            h.descender = m.descender     or h.descender
+            n.copyright = m.copyright     or n.copyright
+            n.family    = m.familyname    or n.familyname
+            n.fullname  = m.fullname      or n.fullname
+            n.fontname  = m.fontname      or n.fontname
+            n.subfamily = m.subfamilyname or n.subfamilyname
+            n.version   = m.version       or n.version
+            setmetatableindex(h,m)
+            setmetatableindex(c,m)
+            setmetatableindex(n,m)
+        end
+        mainwriters["opentype"](details)
+    end
+
+    do
+
+        local version = 0.003
+        local cache   = containers.define("fonts","converted",version,true)
+        local loaded  = { }
+
+        local loadpk  = fonts.handlers.tfm.readers.loadpk
+        local findpk  = resolvers.findpk
+        local pktocff = fonts.handlers.otf.readers.potracetocff
+
+        local function loadstreams(filename,details,resolution,settings)
+            -- when we have a tfm and pfb but no afm filename can have a pfb suffix
+                  filename = file.removesuffix(filename) -- unless pk?
+            local fullname = findpk(filename,resolution)
+            local instance = fullname and fullname ~= "" and loadpk(fullname)
+            if not instance then
+                report_fonts("unable to locate %a",filename)
+                return
+            end
+            local resolution = instance.resolution
+            local streams    = { }
+            local glyphs     = instance.glyphs or { }
+            local settings   = setting or { }
+            local xmin  = false
+            local ymin  = false
+            local xmax  = false
+            local ymax  = false
+            local count = 0
+         -- local size  = 0
+            for i=0,255 do
+                local glyph = glyphs[i]
+                if glyph then
+                    local llx, lly, urx, ury, cff = pktocff(glyph,settings,resolution,i)
+                    streams[i] = cff
+                    if not xmin then
+                        xmin = llx
+                        ymin = lly
+                        xmax = urx
+                        ymax = ury
+                    else
+                        if xmin < llx then llx = xmin end
+                        if ymin < lly then lly = ymin end
+                        if xmax < urx then urx = xmax end
+                        if ymax < ury then ury = ymax end
+                    end
+                    count = count + 1
+                 -- size  = size + #cff
+                end
+            end
+         -- print(filename,size)
+            local filename = details.filename or "unknown"
+            return {
+                resolution = resolution,
+                format     = "opentype",
+                filename   = filename,
+                fullname   = fullname,
+                streams    = streams or { }, -- bad
+                names = {
+                    family   = filename,
+                    fontname = filename,
+                    fullname = filename,
+                    notice   = "Converted from MetaFont bitmaps by ConTeXt LMTX.",
+                    version  = "1.00",
+                },
+                fontheader = {
+                    fontversion = "2.004",
+                    units       = 1000,
+                    xmin        = xmin or 0,
+                    ymin        = ymin or 0,
+                    xmax        = xmax or 0,
+                    ymax        = ymax or 0,
+                },
+                cffinfo = {
+                    familyname         = filename,
+                    fullname           = filename,
+                 -- italicangle        = 0,
+                 -- monospaced         = false,
+                 -- underlineposition  = -100,
+                 -- underlinethickness = 50,
+                 -- weight             = "Medium",
+                    bluescale          = 0,
+                    blueshift          = 0,
+                    bluefuzz           = 0,
+                    expansionfactor    = 0,
+                },
+                horizontalheader = {
+                    ascender  = 0,
+                    descender = 0,
+                },
+                maximumprofile = {
+                   nofglyphs = count,
+                },
+            }
+        end
+
+        mainwriters["pkcff"] = function(details)
+            local filename   = details.filename
+            local properties = details.properties
+            local resolution = properties.resolution or 7200
+            local extrahash  = properties.extrahash or resolution
+            local cachename  = filename .. "-" .. extrahash
+            local converted = loaded[cachename]
+            if not converted then
+                converted = containers.read(cache,cachename)
+                if not converted or converted.version ~= version or converted.resolution ~= resolution or converted.extrahash ~= extrahash then
+                    converted = loadstreams(filename,details,resolution,properties.potrace)
+                    if converted then
+                        converted.version = version
+                     -- converted.resolution = resolution
+                        converted.extrahash  = extrahash
+                        containers.write(cache,cachename,converted)
+                        converted = containers.read(cache,cachename) -- frees old mem
+                        loaded[cachename] = converted
+                    end
+                end
+            end
+            details.streams = converted
+            mainwriters["type1"](details)
+        end
+
+    end
+
+    do
+
+        -- The methods might become plugins.
+
+        local methods    = { }
+
+        local pdfimage   = lpdf.epdf.image
+        local openpdf    = pdfimage.open
+        local closepdf   = pdfimage.close
+        local copypage   = pdfimage.copy
+
+        local embedimage = images.embed
+
+        local f_glyph      <const> = "G%d"
+        local f_char       <const> = "BT /V%d 1 Tf [<%04X>] TJ ET"
+        local f_width      <const> = "%N 0 d0"
+        local f_index      <const> = "I%d"
+        local f_image_xy   <const> = "%N 0 d0 1 0 0 1 %N %N cm /%s Do"
+        local f_image_c    <const> = "/%s Do"
+        ----- f_image_c_xy <const> = "%N 0 0 %N %N %N cm /%s Do"
+        local f_image_w    <const> = "%N 0 d0 %s"
+        ----- f_image_d    <const> = "%N 0 d0 1 0 0 1 0 %N cm /%s Do"
+        local f_stream     <const> = "%N 0 d0 %s"
+        local f_stream_c   <const> = "%N 0 0 0 0 0 d1 %s" -- last four bbox
+        local f_stream_cc  <const> = "%N 0 %N %N %N %N d1 %s" -- last four bbox
+        local f_stream_d   <const> = "%N 0 d0 1 0 0 1 0 %N cm %s"
+     -- local f_stream_s   <const> = "%N 0 0 %N 0 0 cm /%s Do"
+
+        local f_image_xy   <const> = "%N 0 d0 1 0 0 1 %N %N cm /Artifact BMC /%s Do EMC"
+        local f_image_c    <const> = "/Artifact BMC /%s Do EMC"
+        local f_image_c_xy <const> = "%N 0 0 %N %N %N cm /Artifact BMC /%s Do EMC"
+
+        -- A type 3 font has at most 256 characters and Acrobat also wants a zero slot
+        -- to be filled. We can share a mandate zero slot character. We also need to
+        -- make sure that we use bytes as index in the page stream as well as in the
+        -- tounicode vector.
+
+        -- All this type three magic is a tribute to Don Knuth who uses bitmap fonts in
+        -- his books.
+
+        local c_notdef = nil
+        local r_notdef = nil
+        local w_notdef = nil
+        local fontbbox = nil
+
+        -- pk inclusion (not really tested but not really used either)
+
+        -- Maybe this needs to be in font-shp .. but this is cheaper and it is only for
+        -- demos anyway.
+
+        local version = 0.011
+        local cache   = containers.define("fonts","traced",version,true)
+        local loaded  = { }
+
+        function methods.pk(filename,details)
+            local resolution = details.properties.resolution or 7200
+            local extrahash  = details.properties.extrahash or resolution
+            local potraced   = details.fontdata.potraced
+            local pkfullname = resolvers.findpk(filename,resolution)
+            if not pkfullname or pkfullname == "" then
+                report_fonts("no pk file found: %a @ %i",filename,resolution)
+                return
+            end
+            local readers = fonts.handlers.tfm.readers
+            local result  = readers.loadpk(pkfullname) -- not cached (yet)
+            if not result or result.error then
+                return
+            end
+-- hm, maybe just resolution and fault on a missing file
+                  resolution  = result.resolution
+            local widthfactor = resolution / 72
+            local scalefactor = 72 / resolution / 10
+            local factor      = widthfactor / 65536
+                              * (details.parameters.designsize / details.parameters.size) -- normalize width
+            local pktopdf     = nil
+            --
+            if potraced then -- we can also use properties.potrace
+                local cachename = filename .. "-" .. extrahash
+                local traced = loaded[cachename]
+                if not traced then
+                    traced = containers.read(cache,cachename)
+                    if not traced or traced.version ~= version or traced.resolution ~= resolution or traced.extrahash ~= extrahash then
+                        local streams = { }
+                        local convert = readers.potracedtopdf
+                        -- we have this as helper already
+                        local descriptions = details.fontdata.descriptions
+                        local indices      = { }
+                        local widths       = { }
+                        for unicode, data in next, descriptions do
+                            local di = data.index
+                            if di then
+                                indices[di] = data
+                            end
+                        end
+                        --
+                        local settings = details.properties.potrace
+                        for index, glyph in sortedhash(result.glyphs) do
+                            streams[index], widths[index] = convert(glyph,indices[index],factor,settings)
+                        end
+                        traced = {
+                            version    = version,
+                            resolution = resolution,
+                            streams    = streams,
+                            widths     = widths,
+                            extrahash  = extrahash,
+                        }
+                        containers.write(cache,cachename,traced)
+                        traced = containers.read(cache,cachename) -- frees old mem
+                        loaded[cachename] = traced
+                    end
+                end
+                local streams = traced.streams
+                local widths  = traced.widths
+                pktopdf = function(glyph,data)
+                    local index = glyph.index
+                    return streams[index], widths[index]
+                end
+            else
+                local convert = readers.pktopdf
+                pktopdf = function (glyph,data)
+                    return convert(glyph,data,factor)  -- return pdfcode, width
+                end
+            end
+            return result.glyphs, scalefactor, pktopdf, false, false
+        end
+
+        -- pdf inclusion
+
+        local used = setmetatableindex("table")
+
+        function lpdf.registerfontmethod(name,f)
+            if type(f) == "function" and not methods[name] then
+                report_fonts("registering font method %a, continue on your own risk",name)
+                methods[name] = f
+            end
+        end
+
+        function methods.pdf(filename,details) -- dropin.clones sets descriptions!
+            local properties = details.properties
+            local pdfshapes  = properties.indexdata[1]
+            local filename   = pdfshapes.filename
+            local pdfdoc     = openpdf(filename)
+            local xforms     = pdfdictionary()
+            local nofglyphs  = 0
+            if pdfdoc then
+                local scale    = 10 * details.parameters.size/details.parameters.designsize
+                local units    = details.parameters.units
+                local factor   = units * bpfactor / scale
+                local fixdepth = pdfshapes.fixdepth
+                local useddoc  = used[pdfdoc]
+                local function pdftopdf(glyph,data)
+                    local width     = (data.width or 0) * factor
+                    local image     = useddoc[glyph]
+                    local reference = nil
+                    if not image then
+                        image = embedimage(copypage(pdfdoc,glyph))
+                        if not image then
+                            report_fonts("bad image in file %a",filename)
+                            return
+                        end
+                        nofglyphs    = nofglyphs + 1
+                        local name   = formatted(f_glyph,nofglyphs)
+                        local stream = nil
+                        if fixdepth then
+                            local depth = data.depth  or 0
+                            if depth ~= 0 then
+                                local d = data.dropin.descriptions[data.index]
+                                if d then
+                                    local b     = d.boundingbox
+                                    local l     = b[1]
+                                    local r     = b[3]
+                                    local w     = r - l
+                                    local scale = w / d.width
+                                    local x     = l
+                                 -- local y     = - b[4] - b[2] - (d.depth or 0)
+                                    local y     = - (d.depth or 0)
+                                    local scale = w / (image.width * bpfactor)
+                                    stream = formatted(f_image_c_xy,scale,scale,x,y,name)
+                                else
+                                 -- report_fonts("no image in file %a, case %i",filename,1)
+                                end
+                            end
+                        end
+                        if not stream then
+                            stream = formatted(f_image_c,name)
+                        end
+                        useddoc[glyph]           = image
+                        image.embedded_name      = name
+                        image.embedded_stream    = stream
+                        image.embedded_reference = pdfreference(image.objnum)
+                    end
+                    xforms[image.embedded_name] = image.embedded_reference
+                    return formatted(f_image_w,width,image.embedded_stream), width
+                end
+                local function closepdf()
+                 -- closepdf(pdfdoc)
+                end
+                local function getresources()
+                    return pdfdictionary { XObject = xforms }
+                end
+                return pdfshapes, 1/units, pdftopdf, closepdf, getresources
+            end
+        end
+
+        -- box inclusion (todo: we can share identical glyphs if needed but the gain
+        -- is minimal especially when we use compact font mode)
+
+        function methods.box(filename,details)
+            local properties = details.properties
+            local boxes      = properties.indexdata[1]
+            local xforms     = pdfdictionary()
+            local nofglyphs  = 0
+            local scale      = 10 * details.parameters.size/details.parameters.designsize
+                  scale      = scale * (7200/7227) -- test on extensibles
+            local units      = details.parameters.units
+            local function boxtopdf(image,data) -- image == glyph
+                nofglyphs    = nofglyphs + 1
+                local scale  = units / scale -- e.g. 1000 / 12
+                local width  = (data.width  or 0) * bpfactor * scale
+                local height = (data.height or 0) * bpfactor * scale
+                local depth  = (data.depth  or 0) * bpfactor * scale
+                local name   = formatted(f_glyph,nofglyphs)
+                local stream = formatted(f_image_c_xy,scale,scale,0,-depth,name)
+                image.embedded_name      = name
+                image.embedded_stream    = stream
+                image.embedded_reference = pdfreference(image.objnum)
+                xforms[name] = image.embedded_reference
+                -- We need a matching width for validation!
+                if image.expose then
+                    return formatted(f_stream_cc,width,-10,-depth-10,width+10,height+10,stream), width
+                else
+                    return formatted(f_image_w,width,stream), width
+                end
+            end
+            local function wrapup()
+            end
+            local function getresources()
+                return pdfdictionary { XObject = xforms }
+            end
+            return boxes, 1/units, boxtopdf, wrapup, getresources
+        end
+
+        -- mps inclusion
+
+        local decompress      = gzip.decompress
+        local metapost        = metapost
+        local simplemprun     = metapost.simple
+        local setparameterset = metapost.setparameterset
+
+        function methods.mps(filename,details)
+            local properties = details.properties
+            local parameters = details.parameters
+            local mpshapes   = properties.indexdata[1] -- indexdata will change
+            if mpshapes then
+                local scale            = 10 * parameters.size/parameters.designsize
+                local units            = mpshapes.units or parameters.units
+                local factor           = units * bpfactor / scale
+                local fixdepth         = mpshapes.fixdepth
+                local usecolor         = mpshapes.usecolor
+                local specification    = mpshapes.specification or { }
+                local shapedefinitions = mpshapes.shapes
+                local instance         = mpshapes.instance
+                --
+                simplemprun(instance,"begingroup;",true,true)
+                setparameterset("mpsfont",specification)
+                specification.scale        = specification.scale or scale
+                specification.parameters   = parameters
+                specification.properties   = properties
+                specification.parentdata   = details.fontdata.parentdata
+                -------------.characters   = details.fontdata.characters
+                -------------.descriptions = details.fontdata.descriptions
+                if shapedefinitions then
+                    local preamble = shapedefinitions.parameters.preamble
+                    if preamble then
+                        simplemprun(instance,preamble,true,true)
+                    end
+                end
+                --
+                local function mpstopdf(mp,data)
+                    local kind =  type(mp)
+                    if kind == "string" then
+                        local width = data.width
+                        if decompress then
+                            mp = decompress(mp)
+                        end
+                        local pdf   = simplemprun(instance,mp,true)
+                        local width = width * factor
+                        if usecolor then
+                         -- return formatted(f_stream_c,width,pdf), width
+                            -- Zeros are fine but not for okular 2025, which does colors wrong anyway.
+                            local height = (data.height or 0) * factor
+                            local depth  = (data.depth  or 0) * factor
+                            return formatted(f_stream_cc,width,-10,-depth-10,width+10,height+10,pdf), width
+                        elseif fixdepth then
+                            -- The standard suggests that the offset is ignored but ...
+                            local depth  = data.depth  or 0
+                            local height = data.height or 0
+                            if depth ~= 0 or height ~= 0 then
+                                return formatted(f_stream_d,width,(-height-depth)*factor,pdf), width
+                            end
+                        end
+                        return formatted(f_stream,width,pdf), width
+                 -- elseif kind == "table" and mp.objnum then
+                 --     -- likely a box has been added (foo||bar) ... what to do
+                 -- else
+                 --     -- bad
+                    end
+                end
+                --
+                local function resetmps()
+                    setparameterset("mpsfont")
+                    simplemprun(instance,"endgroup;",true,true)
+                    specification.parameters   = nil
+                    specification.properties   = nil
+                    specification.parentdata   = nil
+                    -------------.characters   = nil
+                    -------------.descriptions = nil
+                end
+                --
+                local function getresources()
+                    return lpdf.collectedresources {
+                        serialize  = false,
+                    }
+                end
+                --
+                return mpshapes, 1/units, mpstopdf, resetmps, getresources
+            end
+        end
+
+        -- png inclusion
+
+        -- With d1 the image mask is used when given and obeys color. So it is needed for pure bw
+        -- bitmap fonts, so here we really need d0.
+        --
+        -- Acrobat X pro only seems to see the image mask but other viewers are doing it ok. Acrobat
+        -- reader crashes. We really need to add a notdef!
+
+        local files       = utilities.files
+        local openfile    = files.open
+        local closefile   = files.close
+        local setposition = files.setposition
+        local readstring  = files.readstring
+
+        function methods.png(filename,details)
+            local properties = details.properties
+            local pngshapes  = properties.indexdata[1]
+            if pngshapes then
+                local parameters = details.parameters
+                local png        = properties.png
+                local hash       = png.hash
+                local xforms     = pdfdictionary()
+                local nofglyphs  = 0
+                local scale      = 10 * parameters.size/parameters.designsize
+                local factor     = bpfactor / scale
+             -- local units      = parameters.units -- / 1000
+                local units      = 1000
+                local filehandle = openfile(details.filename,true)
+                local function pngtopdf(glyph,data)
+                 -- local info    = graphics.identifiers.png(glyph.data,"string")
+                    local offset  = glyph.o
+                    local size    = glyph.s
+                    local pdfdata = nil
+                    if offset and size then
+                        setposition(filehandle,offset)
+                        local blob = readstring(filehandle,size)
+                        local info = graphics.identifiers.png(blob,"string")
+                        info.enforcecmyk = pngshapes.enforcecmyk
+                        local image   = lpdf.injectors.png(info,"string")
+                        local width   = (data.width or 0) * factor
+                        if image then
+                            embedimage(image)
+                            nofglyphs     = nofglyphs + 1
+                            local xoffset = (glyph.x or 0) / units
+                            local yoffset = (glyph.y or 0) / units
+                            local name    = formatted(f_glyph,nofglyphs)
+                            xforms[name]  = pdfreference(image.objnum)
+                            pdfdata       = formatted(f_image_xy,width,xoffset,yoffset,name)
+                        end
+                    end
+                    return pdfdata or formatted(f_stream,width), width
+                end
+                local function closepng()
+                    if filehandle then
+                        closefile(filehandle)
+                    end
+                    pngshapes = nil
+                end
+                local function getresources()
+                    return pdfdictionary { XObject = xforms }
+                end
+                return pngshapes, 1, pngtopdf, closepng, getresources
+            end
+        end
+
+        local function registercolors(hash)
+            local kind     = hash.kind
+            local data     = hash.data
+            local direct   = lpdf.fonts.color_direct
+            local indirect = lpdf.fonts.color_indirect
+            if kind == "font" then
+                return setmetatableindex(function(t,k)
+                    local h = data[k]
+                    local v = h and direct(h[1]/255,h[2]/255,h[3]/255) or false
+                    t[k] = v
+                    return v
+                end)
+            elseif kind == "user" then
+                return setmetatableindex(function(t,k)
+                    local list = data[k]
+                    local v
+                    if list then
+                        local kind = list.kind
+                        if kind == "values" then
+                            local d = list.data
+                            v = direct(d.r or 0,d.g or 0,d.b or 0)
+                        elseif kind == "attributes" then
+                            v = indirect(list.color,list.transparency)
+                        else
+                            v = false -- textcolor
+                        end
+                    else
+                        v = false -- textcolor
+                    end
+                    t[k] = v
+                    return v
+                end)
+            else
+                return { }
+            end
+        end
+
+        -- we register way too much ... we can delay the t3 definition
+
+        local usedcharacters = lpdf.usedcharacters
+
+        function methods.color(filename,details)
+            local colrshapes = details.properties.indexdata[1]
+            local colrvalues = details.properties.indexdata[2]
+            local usedfonts  = { }
+            local function colrtopdf(description,data)
+                -- descriptions by index
+                local colorlist = description.colors
+                if colorlist then
+                    local dropdata     = data.dropin
+                    local dropid       = dropdata.properties.id
+                    local dropunits    = dropdata.parameters.units -- shared
+                    local descriptions = dropdata.descriptions
+                    local directcolors = registercolors(colrvalues)
+                    local fontslots    = usedcharacters[dropid]
+                    usedfonts[dropid]  = dropid
+                    local w = description.width or 0
+                    local s = #colorlist
+                    local l = false
+                    local t = { formatted(f_width,w) }
+                    local n = 1
+                    local d = #colrvalues
+                    for i=1,s do
+                        local entry = colorlist[i]
+                        local class = entry.class or d
+                        if class then
+                            -- false is textcolor (we should actually go back)
+                            local c = directcolors[class]
+                            if c and l ~= c then
+                                n = n + 1 ; t[n] = c
+                                l = c
+                            end
+                        end
+                        local e = descriptions[entry.slot]
+                        if e then
+                            local f = fontslots[e.index]
+                            if f then
+                                n = n + 1 ; t[n] = formatted(f_char,dropid,f)
+                            else
+                             -- report_fonts("no image in file %a, case %i",filename,2)
+                            end
+                        end
+                    end
+                    -- we're not going to hash this ... could be done if needed (but who mixes different
+                    -- color schemes ...)
+                    t = concat(t," ")
+                    return t, w / dropunits
+                end
+            end
+            local function getresources()
+                return lpdf.collectedresources {
+                    serialize  = false,
+                    fonts      = usedfonts,
+                    fontprefix = "V",
+                }
+            end
+            return colrshapes, 1, colrtopdf, false, getresources
+        end
+
+        mainwriters["type3"] = function(details)
+            local properties   = details.properties
+            local basefontname = properties.basefontname or properties.name
+            local askedmethod  = properties.method or "pk"
+            local method       = methods[askedmethod] or methods.pk
+            if not method or not basefontname or basefontname == "" then
+                return
+            end
+            local glyphs, scalefactor, glyphtopdf, reset, getresources = method(basefontname,details)
+            if not glyphs then
+                return
+            end
+            local parameters  = details.parameters
+            local object      = details.objectnumber
+            local factor      = parameters.factor -- normally 1
+            local fontmatrix  = pdfarray { scalefactor, 0, 0, scalefactor, 0, 0 }
+            local indices,
+                  include,
+                  minindex,
+                  maxindex    = collectindices(details.fontdata.characters,details.indices,details.used,details.hash)
+            local widths      = pdfarray()
+            local differences = pdfarray()
+            local charprocs   = pdfdictionary()
+            local basefont    = pdfconstant(basefontname)
+            local fontbbox    = nil -- { 0, 0, 0, 0 }
+            local d           = 0
+            local w           = 0
+            local forcenotdef = minindex > 0
+            local lastindex   = -0xFF
+            if forcenotdef then
+                widths[0] = 0
+                minindex  = 0
+                lastindex = 0
+                d         = 2
+                if not c_notdef then
+                    w_notdef = 0
+                    c_notdef = pdfconstant(".notdef")
+                    r_notdef = pdfreference(pdfflushstreamobject("0 0 d0"))
+                end
+                differences[1]       = w_notdef
+                differences[2]       = c_notdef
+                charprocs[".notdef"] = r_notdef
+            end
+            for i=1,maxindex-minindex+1 do
+                widths[i] = 0
+            end
+            local wd = 0
+            local ht = 0
+            local dp = 0
+            for index, data in sortedhash(indices) do
+                local name  = formatted(f_index,index)
+                local glyph = glyphs[include[index]]
+             -- if type(glyph) == "string" then
+                    local stream, width = glyphtopdf(glyph,data)
+                    if stream then
+                        if type(glyph) == "table" then
+                            local gwd = glyph.width  or 0
+                            local ght = glyph.height or 0
+                            local gdp = glyph.depth  or 0
+                            if gwd > wd then wd = gwd end
+                            if ght > ht then ht = ght end
+                            if gdp > dp then dp = gdp end
+                        end
+                        if index - 1 ~= lastindex then
+                            d = d + 1 differences[d] = index
+                        end
+                        lastindex = index
+                        d = d + 1 differences[d] = pdfconstant(name)
+                        charprocs[name]          = pdfreference(pdfflushstreamobject(stream))
+                        widths[index-minindex+1] = width
+                    end
+             -- else
+             --     report_fonts("bad or missing glyph %i in type3 font %a",index,basefontname)
+             -- end
+            end
+         -- if not fontbbox then
+                -- The specification permits zero values and these are actually also more
+                -- robust as then there are no assumptions and no accuracy is needed.
+                    fontbbox = pdfarray { 0, 0, 0, 0 }
+                -- This is okay according to the standard but okular (and old printers)
+                -- need a bbox, so let's see where this fails.
+--                     fontbbox = pdfarray { -20, -dp*bpfactor - 20, wd*bpfactor + 20, ht*bpfactor + 20 }
+         -- end
+            local encoding = pdfdictionary {
+                Type        = pdfconstant("Encoding"),
+                Differences = differences,
+            }
+            local tounicode  = tounicodedictionary(details,indices,maxindex,basefontname,false)
+            local resources  = getresources and getresources()
+            if not resources or not next(resources) then
+             -- resources = lpdf.procset(true)
+                resources = nil
+            end
+            local descriptor = pdfdictionary {
+                -- most is optional in type3
+                Type        = pdfconstant("FontDescriptor"),
+                FontName    = basefont,
+                Flags       = 4,
+                ItalicAngle = 0,
+            }
+            local parent = pdfdictionary {
+                Type           = pdfconstant("Font"),
+                Subtype        = pdfconstant("Type3"),
+                Name           = basefont,
+                FontBBox       = fontbbox,
+                FontMatrix     = fontmatrix,
+                CharProcs      = pdfreference(pdfflushobject(charprocs)),
+                Encoding       = pdfreference(pdfflushobject(encoding)),
+                FirstChar      = minindex,
+                LastChar       = maxindex,
+                Widths         = pdfreference(pdfflushobject(widths)),
+                FontDescriptor = pdfreference(pdfflushobject(descriptor)),
+                Resources      = resources,
+                ToUnicode      = tounicode and pdfreference(pdfflushstreamobject(tounicode)),
+            }
+            pdfflushobject(object,parent)
+            if reset then
+                reset()
+            end
+        end
+
+    end
+
+end
+
+-- writingmode
+
+local usedfonts = fonts.hashes.identifiers -- for now
+local noffonts  = 0
+
+-- The main injector.
+
+-- here we need to test for sharing otherwise we reserve too many objects
+
+local getstreamhash  = fonts.handlers.otf.getstreamhash
+local loadstreamdata = fonts.handlers.otf.loadstreamdata
+
+local objects = setmetatableindex(lpdf.usedfontobjects,function(t,k) -- defined in lpdf-lmt.lmt
+    local v
+    if type(k) == "number" then
+        local h = getstreamhash(k)
+        v = rawget(t,h)
+        if not v then
+            v = pdfreserveobject()
+            t[h] = v
+        end
+        if trace_fonts then
+            report_fonts("font id %i bound to hash %s and object %i",k,h,v)
+        end
+    else
+        -- no problem as it can be svg only
+     -- report_fonts("fatal error, hash %s asked but not used",k,h,v)
+        v = pdfreserveobject()
+        t[k] = v
+    end
+    return v
+end)
+
+local n = 0
+
+local names = setmetatableindex(lpdf.usedfontnames,function(t,k) -- defined in lpdf-lmt.lmt
+    local v
+    if type(k) == "number" then
+        local h = getstreamhash(k)
+        v = rawget(t,h)
+        if not v then
+            n = n + 1
+            v = n
+            t[h] = v
+        end
+        if trace_fonts then
+            report_fonts("font id %i bound to hash %s and name %i",k,h,n)
+        end
+    end
+    t[k] = v
+    return v
+end)
+
+function lpdf.flushfonts()
+
+    local mainfonts = { }
+    local namefonts = { }
+
+    statistics.starttiming(objects)
+
+    -- We loop over used characters (old approach, when we wanted to be equivalent wrt
+    -- indices with luatex) but can also decide to use usedindices. However, we then
+    -- don't have the id.
+
+    -- we can combine the two for loops .. todo
+
+    for fontid, used in sortedhash(lpdf.usedcharacters) do
+     -- for a bitmap we need a different hash unless we stick to a fixed high
+     -- resolution which makes much sense
+        local hash = getstreamhash(fontid)
+        if hash then
+            local parent = mainfonts[hash]
+            if not parent then
+                local fontdata   = usedfonts[fontid]
+                local rawdata    = fontdata.shared and fontdata.shared.rawdata
+                local resources  = fontdata.resources  -- not always there, nullfont
+                local properties = fontdata.properties -- writingmode and type3
+                local parameters = fontdata.parameters -- used in type3
+                if not rawdata then
+                    -- we have a virtual font that loaded directly ... at some point i will
+                    -- sort this out (in readanddefine we need to do a bit more) .. the problem
+                    -- is that we have a hybrid font then
+                    for xfontid, xfontdata in next, fonts.hashes.identifiers do
+                        if fontid ~= xfontid then
+                            local xhash = getstreamhash(xfontid)
+                            if hash == xhash then
+                                rawdata  = xfontdata.shared and xfontdata.shared.rawdata
+                                if rawdata then
+                                    resources  = xfontdata.resources
+                                    properties = xfontdata.properties
+                                    parameters = xfontdata.parameters
+                                    break
+                                end
+                            end
+                        end
+                    end
+                end
+             -- if rawdata then -- we don't have these when we nest vf's (as in antykwa)
+                    local hashname = names[hash] -- keys area a mix of numbers and names
+                    parent = {
+                        hash         = hash,
+                        fontdata     = fontdata,
+                        filename     = (resources and resources.filename) or properties.filename or "unset",
+                        indices      = { },
+                        usedfonts    = { [fontid] = true },
+                        used         = used,
+                        rawdata      = rawdata,
+                        properties   = properties, -- we assume consistency
+                        parameters   = parameters, -- we assume consistency
+                        streams      = { },
+                        objectnumber = objects[hash],
+                        basefontname = subsetname(properties.psname or properties.name or "unset"),
+                        name         = hashname,
+                    }
+                    mainfonts[hash] = parent
+                    if hashname then
+                        namefonts[hashname] = parent
+                    end
+                    noffonts = noffonts + 1
+             -- end
+            end
+            if parent then
+                parent.usedfonts[fontid] = true
+                local indices = parent.indices
+                for k, v in next, used do
+                    indices[k] = v
+                end
+            end
+        end
+    end
+
+    -- probbaly not yet ok:    --
+
+    logs.startfilelogging(report_fonts,"embedded fonts")
+    for k, v in sortedhash(namefonts) do
+        report_fonts("%5i : file %a, base %a, instance %a",k,file.basename(v.filename),v.basefontname,v.hash)
+    end
+    logs.stopfilelogging()
+
+--     local function identifywriter(details)
+--         local filename = details.filename
+--         local encoding, pfbfile, encfile = getmapentry(filename)
+--         if trace_fonts then
+--             report_fonts("file %a resolved to encoding %a and file %a",filename,encoding,pfbfile)
+--         end
+--         if not pfbfile or pfbfile == "" then
+--             pfbfile = file.replacesuffix(filename,"pfb")
+--         end
+--         if encoding and pfbfile then
+--             local properties   = details.properties
+--             local descriptions = { }
+--             local characters   = details.fontdata.characters
+--             --
+--             local size   = details.fontdata.parameters.size
+--             local factor = details.fontdata.parameters.factor
+--             --
+--             local names, _, _, metadata = fonts.constructors.handlers.pfb.loadvector(pfbfile)
+--             local reverse  = table.swapped(names)
+--             local vector   = encoding.vector
+--             local indices  = details.indices
+--             local remapped = { }
+--             local factor   = bpfactor * size / 65536
+--             for k, v in next, indices do
+--                 local name  = vector[k]
+--                 local index = reverse[name] or 0
+--                 local width = factor * (characters[k].width or 0)
+--                 descriptions[k] = {
+--                     width = width,
+--                     index = index,
+--                     name  = name,
+--                 }
+--                 remapped[index] = true
+--             end
+--             details.indices = remapped
+--             --
+--             details.rawdata.descriptions = descriptions
+--             details.filename             = pfbfile -- hm
+--             details.rawdata.metadata     = { }
+--             --
+--             properties.filename = pfbfile -- hm
+--             properties.format   = "type1"
+--         end
+--     end
+
+--     local function identifywriter(details)
+--         local descriptions = details.fontdata.characters
+--         for k, v in next, descriptions do
+--             v.index = v.index or v.order or k
+--         end
+--     end
+
+    for hash, details in sortedhash(mainfonts) do
+        -- the filename can be somewhat weird if we have a virtual font that starts out with some
+        local filename = details.filename
+        if next(details.indices) then
+            local properties = details.properties
+            local bitmap     = properties.usedbitmap
+            local method     = properties.method -- will be pk | pdf | svg | ...
+            local format     = properties.format
+            if trace_fonts then
+                if method then
+                    report_fonts("embedding %a hashed as %a using method %a",filename,hash,method)
+                else
+                    report_fonts("embedding %a hashed as %a",filename,hash)
+                end
+            end
+            if bitmap or method then
+                local format = "type3"
+                local writer = mainwriters[format]
+                if trace_fonts then
+                    report_fonts("using main writer %a",format)
+                end
+                writer(details)
+            elseif format == "pkcff" then
+                local writer = mainwriters[format]
+                if trace_fonts then
+                    report_fonts("using main writer %a",format)
+                end
+                writer(details)
+            else
+                local writer = mainwriters[format]
+                if writer then
+                    if trace_fonts then
+                        report_fonts("using main writer %a",format)
+                    end
+-- if format == "type1" then
+--     identifywriter(details)
+-- end
+                    -- better move this test to the writers .. cleaner
+                    local streams = loadstreamdata(details.fontdata)
+                    if streams and streams.fontheader and streams.names then
+                        details.streams = streams
+                        writer(details)
+                        details.streams = { }
+                    elseif trace_fonts then
+                        -- can be ok for e.g. emoji
+                        report_fonts("no streams in %a",filename)
+                    end
+                    -- free some  memory
+                else -- if trace_fonts then
+                    report_fonts("no %a writer for %a",format,filename)
+                end
+            end
+        else -- not problem for svg ...
+         -- report_fonts("no indices for %a",filename)
+        end
+        if trace_fonts then
+            local indices = details.indices
+            if indices and next(indices) then
+                report_fonts("embedded indices: % t",sortedkeys(details.indices))
+            end
+        end
+        mainfonts[details.hash] = false -- done
+    end
+
+    statistics.stoptiming(objects)
+
+end
+
+statistics.register("font embedding time",function()
+    if noffonts > 0 then
+        return formatted("%s seconds, %s fonts", statistics.elapsedtime(objects),noffonts)
+    end
+end)
+
+-- this is temporary
+
+function lpdf.getfontobjectnumber(k)
+    return objects[k]
+end
+
+function lpdf.getfontname(k)
+    return names[k]
+end
+
+lpdf.registerdocumentfinalizer(lpdf.flushfonts,1,"wrapping up fonts")

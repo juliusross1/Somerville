@@ -6,6 +6,14 @@ layers = (
 {
 anchors = (
 {
+name = "#entry";
+pos = (195.513,256);
+},
+{
+name = "#exit";
+pos = (405,256);
+},
+{
 name = bottom;
 pos = (304,0);
 },
@@ -16,6 +24,14 @@ pos = (281,270);
 {
 name = math.ta;
 pos = (267,737);
+},
+{
+name = reversedExit;
+pos = (405,256);
+},
+{
+name = stem;
+pos = (195.513,256);
 },
 {
 name = top;
@@ -50,13 +66,25 @@ pos = (301,512);
 ref = "_part.LC-baseline-right-outserif";
 },
 {
-angle = 180;
-piece = {
-Thinning = -100;
-Width = 117;
-};
-pos = (436,512);
-ref = "_part.LC-n-shoulder-top";
+closed = 1;
+nodes = (
+(106,256,l),
+(106,166,ls),
+(106,47,o),
+(156,-17,o),
+(250,-17,cs),
+(346,-17,o),
+(403,6,o),
+(435,143,c),
+(432,142,l),
+(412,47,o),
+(355,-2,o),
+(289,-2,cs),
+(229,-2,o),
+(196,49,o),
+(196,147,cs),
+(196,256,l),
+);
 },
 {
 anchor = "#exit";
@@ -78,6 +106,14 @@ width = 601;
 {
 anchors = (
 {
+name = "#entry";
+pos = (266,256);
+},
+{
+name = "#exit";
+pos = (487,256);
+},
+{
 name = bottom;
 pos = (376,0);
 },
@@ -88,6 +124,14 @@ pos = (337,275);
 {
 name = math.ta;
 pos = (314,737);
+},
+{
+name = reversedExit;
+pos = (487,256);
+},
+{
+name = stem;
+pos = (266,256);
 },
 {
 name = top;
@@ -122,13 +166,25 @@ pos = (442,512);
 ref = "_part.LC-baseline-right-outserif";
 },
 {
-angle = 180;
-piece = {
-Thinning = -100;
-Width = 130;
-};
-pos = (527,512);
-ref = "_part.LC-n-shoulder-top";
+closed = 1;
+nodes = (
+(176,256,l),
+(176,150,ls),
+(176,46,o),
+(235,-17,o),
+(331,-17,cs),
+(417,-17,o),
+(487,44,o),
+(525,166,c),
+(514,204,l),
+(477,110,o),
+(424,65,o),
+(357,65,cs),
+(299,65,o),
+(266,98,o),
+(266,158,cs),
+(266,256,l),
+);
 },
 {
 anchor = "#exit";
@@ -151,6 +207,14 @@ width = 753;
 {
 anchors = (
 {
+name = "#entry";
+pos = (308.3,256);
+},
+{
+name = "#exit";
+pos = (612,256);
+},
+{
 name = bottom;
 pos = (427,0);
 },
@@ -161,6 +225,14 @@ pos = (388,270);
 {
 name = math.ta;
 pos = (361,737);
+},
+{
+name = reversedExit;
+pos = (612,256);
+},
+{
+name = stem;
+pos = (308.3,256);
 },
 {
 name = top;
@@ -195,13 +267,25 @@ pos = (526,512);
 ref = "_part.LC-baseline-right-outserif";
 },
 {
-angle = 180;
-piece = {
-Thinning = -100;
-Width = 140;
-};
-pos = (653,512);
-ref = "_part.LC-n-shoulder-top";
+closed = 1;
+nodes = (
+(218,256,l),
+(218,208,ls),
+(218,58,o),
+(282,-17,o),
+(412,-17,cs),
+(520,-17,o),
+(598,43,o),
+(654,157,c),
+(655,212,l),
+(602,115,o),
+(526,65,o),
+(432,65,cs),
+(345,65,o),
+(308,111,o),
+(308,218,cs),
+(308,256,l),
+);
 },
 {
 anchor = "#exit";
@@ -224,6 +308,14 @@ width = 920;
 {
 anchors = (
 {
+name = "#entry";
+pos = (148.85,260);
+},
+{
+name = "#exit";
+pos = (377.5,260);
+},
+{
 name = bottom;
 pos = (335,0);
 },
@@ -234,6 +326,14 @@ pos = (330,270);
 {
 name = math.ta;
 pos = (307,732);
+},
+{
+name = reversedExit;
+pos = (377.5,260);
+},
+{
+name = stem;
+pos = (148.85,260);
 },
 {
 name = top;
@@ -269,14 +369,25 @@ pos = (226,520);
 ref = "_part.LC-baseline-right-outserif";
 },
 {
-alignment = -1;
-angle = 180;
-piece = {
-Thinning = -100;
-Width = 70;
-};
-pos = (411,520);
-ref = "_part.LC-n-shoulder-top";
+closed = 1;
+nodes = (
+(-31,260,l),
+(-31,186,ls),
+(-31,42,o),
+(30,-13,o),
+(180,-13,cs),
+(303,-13,o),
+(391,76,o),
+(405,131,c),
+(405,142,l),
+(372,91,o),
+(325,66,o),
+(252,66,cs),
+(175,66,o),
+(149,93,o),
+(149,172,cs),
+(149,260,l),
+);
 },
 {
 alignment = -1;
@@ -300,6 +411,14 @@ width = 636;
 {
 anchors = (
 {
+name = "#entry";
+pos = (230.55,260);
+},
+{
+name = "#exit";
+pos = (475,260);
+},
+{
 name = bottom;
 pos = (382,0);
 },
@@ -310,6 +429,14 @@ pos = (361,270);
 {
 name = math.ta;
 pos = (352,732);
+},
+{
+name = reversedExit;
+pos = (475,260);
+},
+{
+name = stem;
+pos = (230.55,260);
 },
 {
 name = top;
@@ -345,14 +472,25 @@ pos = (334,520);
 ref = "_part.LC-baseline-right-outserif";
 },
 {
-alignment = -1;
-angle = 180;
-piece = {
-Thinning = -100;
-Width = 115;
-};
-pos = (514,520);
-ref = "_part.LC-n-shoulder-top";
+closed = 1;
+nodes = (
+(51,260,l),
+(51,196,ls),
+(51,61,o),
+(124,-13,o),
+(256,-13,cs),
+(369,-13,o),
+(465,53,o),
+(527,184,c),
+(507,219,l),
+(466,139,o),
+(410,99,o),
+(341,99,cs),
+(265,99,o),
+(231,142,o),
+(231,217,cs),
+(231,260,l),
+);
 },
 {
 alignment = -1;
@@ -376,6 +514,14 @@ width = 768;
 {
 anchors = (
 {
+name = "#entry";
+pos = (183.85,256);
+},
+{
+name = "#exit";
+pos = (494,256);
+},
+{
 name = bottom;
 pos = (366,0);
 },
@@ -386,6 +532,14 @@ pos = (333,270);
 {
 name = math.ta;
 pos = (321,737);
+},
+{
+name = reversedExit;
+pos = (494,256);
+},
+{
+name = stem;
+pos = (183.85,256);
 },
 {
 name = top;
@@ -426,14 +580,25 @@ pos = (315,512);
 ref = "_part.LC-baseline-right-outserif";
 },
 {
-alignment = -1;
-angle = 180;
-piece = {
-Thinning = -100;
-Width = 140;
-};
-pos = (535,512);
-ref = "_part.LC-n-shoulder-top";
+closed = 1;
+nodes = (
+(94,256,l),
+(94,212,ls),
+(94,58,o),
+(158,-17,o),
+(291,-17,cs),
+(400,-17,o),
+(479,43,o),
+(535,156,c),
+(537,211,l),
+(483,115,o),
+(407,65,o),
+(311,65,cs),
+(222,65,o),
+(184,111,o),
+(184,220,cs),
+(184,256,l),
+);
 },
 {
 alignment = -1;
@@ -457,6 +622,14 @@ width = 725;
 {
 anchors = (
 {
+name = "#entry";
+pos = (285.7,260);
+},
+{
+name = "#exit";
+pos = (428,260);
+},
+{
 name = bottom;
 pos = (381,0);
 },
@@ -467,6 +640,14 @@ pos = (360,270);
 {
 name = math.ta;
 pos = (339,732);
+},
+{
+name = reversedExit;
+pos = (428,260);
+},
+{
+name = stem;
+pos = (285.7,260);
 },
 {
 name = top;
@@ -501,13 +682,25 @@ pos = (393,520);
 ref = "_part.LC-baseline-right-outserif";
 },
 {
-angle = 180;
-piece = {
-Thinning = -100;
-Width = 95;
-};
-pos = (466,520);
-ref = "_part.LC-n-shoulder-top";
+closed = 1;
+nodes = (
+(106,260,l),
+(106,160,ls),
+(106,47,o),
+(161,-13,o),
+(266,-13,cs),
+(360,-13,o),
+(427,37,o),
+(477,187,c),
+(456,203,l),
+(426,130,o),
+(394,99,o),
+(349,99,cs),
+(306,99,o),
+(286,123,o),
+(286,172,cs),
+(286,260,l),
+);
 },
 {
 anchor = "#exit";
@@ -534,6 +727,14 @@ width = 714;
 {
 anchors = (
 {
+name = "#entry";
+pos = (315.6,260);
+},
+{
+name = "#exit";
+pos = (556,260);
+},
+{
 name = bottom;
 pos = (436,0);
 },
@@ -544,6 +745,14 @@ pos = (399,270);
 {
 name = math.ta;
 pos = (381,732);
+},
+{
+name = reversedExit;
+pos = (556,260);
+},
+{
+name = stem;
+pos = (315.6,260);
 },
 {
 name = top;
@@ -578,13 +787,25 @@ pos = (452,520);
 ref = "_part.LC-baseline-right-outserif";
 },
 {
-angle = 180;
-piece = {
-Thinning = -100;
-Width = 140;
-};
-pos = (595,520);
-ref = "_part.LC-n-shoulder-top";
+closed = 1;
+nodes = (
+(136,260,l),
+(136,195,ls),
+(136,60,o),
+(207,-13,o),
+(341,-13,cs),
+(455,-13,o),
+(544,52,o),
+(607,181,c),
+(586,216,l),
+(545,137,o),
+(492,99,o),
+(425,99,cs),
+(349,99,o),
+(316,140,o),
+(316,213,cs),
+(316,260,l),
+);
 },
 {
 anchor = "#exit";

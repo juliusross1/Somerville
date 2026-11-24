@@ -1,0 +1,247 @@
+--- a/texmf-context/tex/context/base/mkxl/font-cff.lmt
++++ b/texmf-context/tex/context/base/mkxl/font-cff.lmt
+@@ -76,6 +76,28 @@
+ local parseprivates
+ local startparsing
+ local stopparsing
++
++-- CFF2 overlap conversion is confined to the PDF glyph-stream path.
++local cff2overlapbatch
++local cff2overlapfinish
++local overlapmodule
++local function cff2overlapfatal(problem)
++    report("CFF2 overlap conversion failed: %s",tostring(problem))
++    -- The general font reader catches ordinary Lua errors and can then cache
++    -- incomplete streams. A failed conversion must terminate before that point.
++    if tex and tex.fatalerror then
++        tex.fatalerror("CFF2 overlap conversion failed; see the log for details")
++    end
++    error(problem,0)
++end
++function readers.cff2overlapmodule()
++    if not overlapmodule then
++        local source = resolvers.findfile("font-cff.lmt")
++        assert(source and source ~= "", "cannot locate CFF2 overlap support")
++        overlapmodule = dofile(file.dirname(source) .. "/font-cff-overlaps.lua")
++    end
++    return overlapmodule
++end
+ 
+ local defaultstrings = { [0] = -- taken from ff
+     ".notdef", "space", "exclam", "quotedbl", "numbersign", "dollar", "percent",
+@@ -2926,6 +2948,9 @@
+             tab = ""
+         end
+ 
++        local overlapinput = cff2overlapbatch and version == "cff2" and justpass and not hack
++            and (not cff2overlapbatch.requested or cff2overlapbatch.requested[index]) and tab
++        local overlapvsindex = overlapinput and vsindex
+         tab     = bytetable(tab)
+ 
+         x       = 0
+@@ -3020,6 +3045,29 @@
+                 glyph.width  = width
+             else
+                 glyphs[index] = { stream = stream, width = width }
++            end
++            if overlapinput then
++                -- Keep the normal byte stream for unchanged glyphs. Decode a second
++                -- time to collect interpolated geometry, batching all glyphs in one
++                -- helper call after the CFF2 reader has finished.
++                local savedwidth, savedlsb = width, lsb
++                local savedpass, savedvsindex = justpass, vsindex
++                justpass, vsindex = false, overlapvsindex
++                processshape(glyphs,overlapinput,index,true,units)
++                justpass, vsindex = savedpass, savedvsindex
++                local batch = cff2overlapbatch
++                local segments = { }
++                for i=1,#result do
++                    local segment = result[i]
++                    -- Parser-only contour separators; both CFF1 and the helper
++                    -- close contours implicitly at the next move or glyph end.
++                    if not (segment[1] == "close" and (segment[2] == "move" or segment[2] == "path")) then
++                        segments[#segments+1] = segment
++                    end
++                end
++                batch.requests[#batch.requests+1] = { id=index, segments=segments }
++                batch.metadata[index] = { width=savedwidth, lsb=savedlsb }
++                width, lsb = savedwidth, savedlsb
+             end
+         elseif glyph then
+             glyph.segments    = keepcurve ~= false and result or nil
+@@ -3054,6 +3102,23 @@
+             report("boundingbox: % t",boundingbox)
+         end
+ 
++    end
++
++    cff2overlapfinish = function(glyphs)
++        local batch = cff2overlapbatch
++        cff2overlapbatch = nil -- do not retain outlines, including on helper failure
++        if batch then
++            local converted = readers.cff2overlapmodule().convert(batch.requests)
++            for i=1,#converted do
++                local g = converted[i]
++                if g.changed then
++                    local meta = batch.metadata[g.id]
++                    -- Old masks refer to old segment positions. Rewritten glyphs
++                    -- are deliberately emitted without hints; others stay intact.
++                    glyphs[g.id].stream = pack_result_tagged(g.segments,meta.width,meta.lsb)
++                end
++            end
++        end
+     end
+ 
+     startparsing = function(fontdata,data,streams)
+@@ -3714,11 +3779,23 @@
+             --
+             local cid = data.dictionaries[1].cid
+             local all = specification.shapes or specification.streams or false
+-            if cid and cid.fdselect then
+-                readfdselect(f,fontdata,data,glyphs,all,"cff2",specification.streams)
+-            else
+-                readnoselect(f,fontdata,data,glyphs,all,"cff2",specification.streams)
+-            end
++            if specification.streams == true then
++                cff2overlapbatch = { requests={ }, metadata={ }, requested=readers.cff2overlapmodule().requested }
++            end
++            local parsed, problem = pcall(function()
++                if cid and cid.fdselect then
++                    readfdselect(f,fontdata,data,glyphs,all,"cff2",specification.streams)
++                else
++                    readnoselect(f,fontdata,data,glyphs,all,"cff2",specification.streams)
++                end
++            end)
++            if not parsed then
++                cff2overlapbatch = nil
++                if specification.streams == true then cff2overlapfatal(problem) end
++                error(problem,0)
++            end
++            local resolved, failure = pcall(cff2overlapfinish,glyphs)
++            if not resolved then cff2overlapfatal(failure) end
+             cleanup(data,dictionaries)
+             tableend = false
+         end
+--- a/texmf-context/tex/context/base/mkxl/font-shp.lmt
++++ b/texmf-context/tex/context/base/mkxl/font-shp.lmt
+@@ -260,7 +260,59 @@
+     return containers.read(cache,hash) -- frees old mem
+ end
+ 
+-local function loadstreams(cache,filename,sub,instance,extrahash)
++-- CFF2 stream caches can grow as documents use additional glyphs. Only the
++-- PDF subset's missing glyphs are geometrically resolved. Generic consumers
++-- (no requested set) still receive an entirely corrected font.
++local function loadcff2streams(cache,filename,sub,instance,extrahash,hints,size,time,requested,overlap)
++    local function makekey(tag)
++        local extra = (extrahash or "") .. tag
++        return makehash(filename,sub,instance,hints and (extra .. "hinted") or extra)
++    end
++    local hash = makekey(overlap.cachetag)
++    local function valid(data)
++        return data and data.time == time and data.size == size and data.streams
++    end
++    local data = containers.read(cache,hash)
++    if not valid(data) then
++        data = nil
++        -- Version 1 always corrected the whole font. Reuse those valid caches
++        -- without invoking Python, leaving the old cache files intact for undo.
++        local old = containers.read(cache,makekey(overlap.legacycachetag))
++        if valid(old) then
++            data = { }
++            for k,v in next, old do data[k] = v end
++            data.cff2complete = true
++            data.cff2resolved = { }
++            for gid in next, data.streams do data.cff2resolved[gid] = true end
++            data = cachethem(cache,hash,data)
++        end
++    end
++    if overlap.covers(data,requested) then return data end
++    local missing = overlap.missing(data,requested)
++    if data and not next(missing) then
++        data.cff2complete = not requested or data.cff2complete or false
++        return cachethem(cache,hash,data)
++    end
++    local fresh = overlap.withrequested(missing,otf.readers.loadshapes,filename,sub,instance,true,hints)
++    assert(fresh and fresh.glyphs,"CFF2 overlap reader returned no glyph streams")
++    for gid in next, missing or fresh.glyphs do
++        assert(fresh.glyphs[gid],"CFF2 source has no requested glyph "..tostring(gid))
++    end
++    local streams = { }
++    for gid=0,#fresh.glyphs do
++        local glyph = fresh.glyphs[gid]
++        streams[gid] = glyph and glyph.stream or ""
++    end
++    fresh.streams = streams
++    fresh.glyphs = nil
++    fresh.size = size
++    fresh.time = time
++    fresh.format = fresh.format or "opentype"
++    data = overlap.merge(data,fresh,missing,not requested)
++    return cachethem(cache,hash,data)
++end
++
++local function loadstreams(cache,filename,sub,instance,extrahash,requested)
+     local base = file.basename(filename)
+     local name = file.removesuffix(base)
+     local kind = lower(file.suffix(filename))
+@@ -271,6 +323,12 @@
+     local data = nil
+     if size > 0 and (kind == "otf" or kind == "ttf" or kind == "ttc") then
+         local hints = keep_hints and kind ~= "otf"
++        -- A separate persistent stream cache only for actual CFF2 fonts. Existing
++        -- CFF1, TrueType and Type 1 cache keys and code paths stay unchanged.
++        local overlap = otf.readers.cff2overlapmodule()
++        if overlap.iscff2(filename,sub,size,time) then
++            return loadcff2streams(cache,filename,sub,instance,extrahash,hints,size,time,requested,overlap)
++        end
+         local hash  = makehash(filename,sub,instance,hints and ((extrahash or "") .. "hinted") or extrahash)
+         data = containers.read(cache,hash)
+         if not data or data.time ~= time or data.size ~= size then
+@@ -416,7 +474,7 @@
+     end
+ end
+ 
+-local function loadstreamdata(fontdata)
++local function loadstreamdata(fontdata,details)
+     local properties = fontdata.properties
+     local shared     = fontdata.shared
+     local rawdata    = shared and shared.rawdata
+@@ -427,7 +485,23 @@
+     local extrahash  = properties.extrahash
+     local hash       = makehash(filename,subindex,instance)
+     local loaded     = loadedstreams[hash]
+-    if not loaded then
++    local overlap    = otf.readers.cff2overlapmodule()
++    local attr       = lfs.attributes(filename)
++    local size       = attr and attr.size or 0
++    local time       = attr and attr.modification or 0
++    if size > 0 and overlap.iscff2(filename,subindex,size,time) then
++        -- In-memory hits need the same coverage checks as persistent hits:
++        -- another font ID can use further glyphs at the same axis location.
++        local extra = (extrahash or "") .. overlap.cachetag
++        if keep_hints and lower(file.suffix(filename)) ~= "otf" then extra = extra .. "hinted" end
++        hash = makehash(filename,subindex,instance,extra)
++        loaded = loadedstreams[hash]
++        local requested = overlap.selection(details)
++        if not loaded or loaded.size ~= size or loaded.time ~= time or not overlap.covers(loaded,requested) then
++            loaded = loadstreams(streamscache,filename,subindex,instance,extrahash,requested)
++            loadedstreams[hash] = loaded
++        end
++    elseif not loaded then
+         loaded = loadstreams(streamscache,filename,subindex,instance,extrahash)
+         loadedstreams[hash] = loaded
+     end
+--- a/texmf-context/tex/context/base/mkxl/lpdf-emb.lmt
++++ b/texmf-context/tex/context/base/mkxl/lpdf-emb.lmt
+@@ -2743,7 +2743,9 @@
+ --     identifywriter(details)
+ -- end
+                     -- better move this test to the writers .. cleaner
+-                    local streams = loadstreamdata(details.fontdata)
++                    -- Pass the final PDF glyph subset; CFF2 conversion can
++                    -- resolve only missing used outlines. Other formats ignore it.
++                    local streams = loadstreamdata(details.fontdata,details)
+                     if streams and streams.fontheader and streams.names then
+                         details.streams = streams
+                         writer(details)

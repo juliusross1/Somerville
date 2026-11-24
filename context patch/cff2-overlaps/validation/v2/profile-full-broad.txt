@@ -1,0 +1,30 @@
+         5680751 function calls in 3.544 seconds
+
+   Ordered by: cumulative time
+   List reduced from 65 to 22 due to restriction <22>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.017    0.017    3.604    3.604 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:409(process_request)
+     1422    0.138    0.000    3.512    0.002 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:371(resolve_segments)
+   426640    1.709    0.000    1.709    0.000 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:194(__call__)
+     1421    0.147    0.000    1.560    0.001 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:295(validation_reference)
+     1423    0.077    0.000    1.067    0.001 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:343(validate_result)
+     4266    0.204    0.000    0.674    0.000 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:34(segments_to_path)
+     2844    0.063    0.000    0.320    0.000 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:140(__init__)
+   510000    0.163    0.000    0.257    0.000 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:47(<genexpr>)
+    36228    0.047    0.000    0.246    0.000 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:311(add_probes)
+    29807    0.120    0.000    0.238    0.000 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:149(cubic)
+   136380    0.049    0.000    0.197    0.000 {method 'extend' of 'list' objects}
+    21397    0.023    0.000    0.178    0.000 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:307(line_probes)
+   403802    0.108    0.000    0.174    0.000 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:63(<genexpr>)
+   217170    0.108    0.000    0.148    0.000 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:316(<genexpr>)
+     6676    0.008    0.000    0.086    0.000 /Users/juliusross/Documents/Somerville/context patch/cff2-overlaps/font-cff-overlaps.py:317(finish_contour)
+  1032033    0.084    0.000    0.084    0.000 {built-in method builtins.isinstance}
+     1553    0.003    0.000    0.073    0.000 /opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py:185(dumps)
+     1553    0.002    0.000    0.070    0.000 /opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py:185(encode)
+     1553    0.068    0.000    0.068    0.000 /opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py:207(iterencode)
+   106946    0.043    0.000    0.064    0.000 {built-in method builtins.min}
+   111205    0.043    0.000    0.063    0.000 {built-in method builtins.max}
+   163374    0.033    0.000    0.054    0.000 /opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/enum.py:677(__call__)
+
+
