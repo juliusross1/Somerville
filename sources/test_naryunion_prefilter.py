@@ -12,7 +12,8 @@ from fontTools.feaLib.builder import addOpenTypeFeaturesFromString
 from fontTools.ttLib import TTFont
 
 from naryunion_prefilter import (feature_is_active, set_feature_active,
-                                prune_substitutions, subset_for_naryunion)
+                                prune_substitutions, subset_for_naryunion,
+                                subset_for_operators)
 
 
 class NaryunionPrefilterTests(unittest.TestCase):
@@ -176,6 +177,39 @@ class NaryunionPrefilterTests(unittest.TestCase):
         with contextlib.redirect_stdout(io.StringIO()):
             result = subset_for_naryunion(font, letters=False)
         self.assertEqual(result["exporting"], {"naryunion", "naryunion.s01"})
+        self.assertIs(font.masters[0], master)
+
+    def test_operators_subset_keeps_small_operators_and_recursive_helpers(self):
+        font = glyphsLib.GSFont()
+        font.masters.append(glyphsLib.GSFontMaster())
+        font.disableUpdateInterface = Mock()
+        font.enableUpdateInterface = Mock()
+        wanted = {"A", "zero", "zero.ssty1", "plus", "union", "intersection",
+                  "plus.circled", "parallel.circled", "squaredplus",
+                  "squaredRisingDiagonalSlash", "squaredSquare", "space", ".notdef"}
+        omitted = {"naryunion", "naryunion.s20", "summation", "summation.s04",
+                   "product", "coproduct", "integral", "contourIntegral",
+                   "nAryCircledPlusOperator", "plus.s01", "rightArrow", "unused-helper",
+                   "bigwedge", "bigwedge.ss15"}
+        for name in wanted | omitted | {"_operator.circle", "_smart.circle.small"}:
+            glyph = glyphsLib.GSGlyph(name)
+            glyph.category = "Letter" if name == "A" else "Number" if name.startswith("zero") else "Symbol"
+            glyph.subCategory = "Arrow" if name == "rightArrow" else "Math"
+            glyph.export = not name.startswith("_") and name != "unused-helper"
+            font.glyphs.append(glyph)
+        font.glyphs["bigwedge"].unicode = "22C0"
+        for parent, child in [("plus.circled", "_operator.circle"),
+                              ("_operator.circle", "_smart.circle.small")]:
+            layer = glyphsLib.GSLayer()
+            layer.components.append(glyphsLib.GSComponent(child))
+            font.glyphs[parent].layers.append(layer)
+        master = font.masters[0]
+        with contextlib.redirect_stdout(io.StringIO()):
+            result = subset_for_operators(font, exclude=True)
+        self.assertEqual(result["exporting"], wanted)
+        self.assertEqual(result["retained"], wanted | {"_operator.circle", "_smart.circle.small"})
+        self.assertEqual({g.name for g in font.glyphs}, result["retained"])
+        self.assertFalse(font.glyphs["_operator.circle"].export)
         self.assertIs(font.masters[0], master)
 
 

@@ -1,10 +1,11 @@
-"""Fast, export-only letters + naryunion proofing subset.
+"""Export-only subsets for ordinary operators, big operators or naryunion.
 
 Passed directly to ``glyphs export --script`` by build.sh --bigoperators-only.
 Only the CLI's in-memory font is modified; this script never saves it. Excluded
 glyphs are removed from that font before export, so Glyphs does not process them.
 Component helpers remain available with their original export flags. Space and .notdef
-are retained as font infrastructure. Numbers and unrelated symbols are omitted.
+are retained as font infrastructure. Ordinary-operator mode includes letters,
+numerals and Math symbols, excluding large operators and size variants.
 """
 
 from pathlib import Path
@@ -22,6 +23,30 @@ PROOF_SYMBOL_FAMILIES = {
     "nAryCircledPlusOperator", "nAryCircledDotOperator", "nAryCircledTimesOperator",
     "nArySquareUnionOperator", "nArySquareIntersectionOperator",
 }
+
+LARGE_OPERATOR_CODEPOINTS = (
+    {0x220F, 0x2210, 0x2211, 0x2AFC, 0x2AFF}
+    | set(range(0x222B, 0x2234))
+    | set(range(0x22C0, 0x22C4))
+    | set(range(0x2A00, 0x2A1D))
+)
+
+
+def is_large_operator(glyph):
+    name = glyph.name.lower()
+    if (name.startswith("nary") or ".nary" in name
+            or any(word in name for word in ("integral", "summation", "coproduct"))):
+        return True
+    if name.split(".", 1)[0] == "product":
+        return True
+    try:
+        return int(glyph.unicode, 16) in LARGE_OPERATOR_CODEPOINTS
+    except (TypeError, ValueError):
+        return False
+
+
+def subset_for_operators(font, exclude=False):
+    return subset_for_naryunion(font, exclude=exclude, operators_only=True)
 
 
 def feature_is_active(feature):
@@ -64,10 +89,10 @@ def prune_substitutions(code, exporting):
     return "\n".join(kept)
 
 
-def subset_for_naryunion(font, exclude=False, letters=True):
+def subset_for_naryunion(font, exclude=False, letters=True, operators_only=False):
     started = perf_counter()
     glyphs = {glyph.name: glyph for glyph in font.glyphs}
-    if "naryunion" not in glyphs:
+    if not operators_only and "naryunion" not in glyphs:
         raise ValueError("Naryunion prefilter requires the naryunion glyph.")
     families = {"naryunion"}
     if letters:
@@ -82,7 +107,20 @@ def subset_for_naryunion(font, exclude=False, letters=True):
             or name.split(".", 1)[0] in families
         )
     }
-    if "naryunion" not in keep:
+    if operators_only:
+        large_families = {name.split(".", 1)[0] for name, glyph in glyphs.items()
+                          if is_large_operator(glyph)}
+        keep = {
+            name for name, glyph in glyphs.items()
+            if glyph.export and (
+                glyph.category in {"Letter", "Number"}
+                or name in {"space", ".notdef"}
+                or (glyph.category == "Symbol" and glyph.subCategory == "Math"
+                    and name.split(".", 1)[0] not in large_families
+                    and not re.search(r"\.s\d+(?:\.|$)", name))
+            )
+        }
+    if not operators_only and "naryunion" not in keep:
         raise ValueError("naryunion is not enabled for export in the source.")
 
     # Walk only retained glyphs, never the thousands of discarded symbol layers.
@@ -143,10 +181,11 @@ def subset_for_naryunion(font, exclude=False, letters=True):
             font.enableUpdateInterface()
 
     elapsed = perf_counter() - started
-    print("Naryunion prefilter: %d exporting glyphs; disabled %d; "
+    print("%s prefilter: %d exporting glyphs; disabled %d; "
           "%d retained glyphs including component helpers; removed %d; "
           "%.3f seconds (not saved)."
-          % (len(exporting), disabled, len(keep), removed, elapsed), flush=True)
+          % ("Operators" if operators_only else "Naryunion",
+             len(exporting), disabled, len(keep), removed, elapsed), flush=True)
     return {"exporting": exporting, "retained": keep, "removed": removed, "seconds": elapsed}
 
 
@@ -154,9 +193,19 @@ def subset_for_naryunion(font, exclude=False, letters=True):
 if __name__ == "__main__" or "__file__" not in globals():
     from GlyphsApp import Glyphs
 
-    for font in Glyphs.fonts:
-        subset_for_naryunion(font, exclude=True,
-                            letters=os.environ.get("SOMERVILLE_UNION_ONLY") != "1")
+    try:
+        for font in Glyphs.fonts:
+            if os.environ.get("SOMERVILLE_OPERATORS_ONLY") == "1":
+                subset_for_operators(font, exclude=True)
+            else:
+                subset_for_naryunion(font, exclude=True,
+                                    letters=os.environ.get("SOMERVILLE_UNION_ONLY") != "1")
+    except Exception:
+        import traceback
+        traceback.print_exc()
+        # The CLI can continue exporting after a --script exception. Do not
+        # export the full or partially filtered font when preparation fails.
+        os._exit(1)
     # Keep the callback target alive for the complete CLI export.
     math_bootstrap = runpy.run_path(str(
         Path.home() / "Developer/Glyphs-MATH-Plugin/glyphs-cli-bootstrap.py"

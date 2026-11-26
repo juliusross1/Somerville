@@ -1,0 +1,12561 @@
+{
+axes = (
+{
+default = 1;
+name = horizontal;
+},
+{
+default = 1;
+name = vertical;
+},
+{
+default = 500;
+name = Hthickness;
+},
+{
+default = 500;
+name = Vthickness;
+},
+);
+color = 3;
+export = 0;
+glyphname = _smart.rectangle;
+layers = (
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+attr = {
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "8164D0BD-D55D-4750-BE4F-5B8B18B2975B";
+name = "Needlepoint SemiCondensed Upright Rectangle 1,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "0DEF3610-6380-4941-A47E-5F1FDF11369C";
+name = "Needlepoint SemiCondensed Upright Rectangle 1,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "D5A758D2-7DEA-4915-984A-30C20419C6FA";
+name = "Needlepoint SemiCondensed Upright Rectangle 1,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "4CEB840C-62DE-414A-8D01-FA8E5DE1268E";
+name = "Needlepoint SemiCondensed Upright Rectangle 1,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "2E490DCA-7E5B-408E-95FF-0E2097DF7003";
+name = "Needlepoint SemiCondensed Upright Rectangle 1,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "9AEAB6E4-DBDB-48AC-AC57-3494CDCF3797";
+name = "Needlepoint SemiCondensed Upright Rectangle 1,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "982737E3-37CA-4FAB-A2BD-8E89C2603377";
+name = "Needlepoint SemiCondensed Upright Rectangle 1,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "267EF9CF-EEE5-47F7-890F-7071FB2248E2";
+name = "Needlepoint SemiCondensed Upright Rectangle 1200,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "1F2AC2DE-6A90-4CA4-8F5C-786FEE444B73";
+name = "Needlepoint SemiCondensed Upright Rectangle 1200,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "30708825-D2EB-4446-912E-A97228B17DE7";
+name = "Needlepoint SemiCondensed Upright Rectangle 1200,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "D37C469C-D8F5-47EB-B4F4-049C388C3B4A";
+name = "Needlepoint SemiCondensed Upright Rectangle 1200,1,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "4DDEED9A-A350-4B15-B0C6-F686602051D0";
+name = "Needlepoint SemiCondensed Upright Rectangle 1200,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "B24DF9EF-9D7C-4274-A02B-DF062CA0D851";
+name = "Needlepoint SemiCondensed Upright Rectangle 1200,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "FC28FDF5-7D42-4800-89C8-F311D02DC7AF";
+name = "Needlepoint SemiCondensed Upright Rectangle 1200,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "CE4503FE-D173-4C17-BBC2-7CA012898085";
+name = "Needlepoint SemiCondensed Upright Rectangle 1200,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+attr = {
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "A55BB567-DAA6-4579-A1C5-760F8F45315D";
+name = "Needlepoint SemiExpanded Upright Rectangle 1,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "E4F8848D-01F9-4394-ACD4-57FDA85089A9";
+name = "Needlepoint SemiExpanded Upright Rectangle 1,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "61012367-6639-44A9-9614-CFD84D1BD054";
+name = "Needlepoint SemiExpanded Upright Rectangle 1,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "6D9D0A54-A559-4319-B2C2-5D9D8F4897BA";
+name = "Needlepoint SemiExpanded Upright Rectangle 1,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "E41F1CED-13FE-461B-89AD-A428768E5B95";
+name = "Needlepoint SemiExpanded Upright Rectangle 1,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "957D70E1-030B-45D3-AC24-65DA7834A2F0";
+name = "Needlepoint SemiExpanded Upright Rectangle 1,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "FC9A3381-8D17-4BCA-9DB2-6D59AAC28DF5";
+name = "Needlepoint SemiExpanded Upright Rectangle 1,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "7E878FED-641F-459F-9BC0-273BA5C1BA60";
+name = "Needlepoint SemiExpanded Upright Rectangle 1200,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "21B78141-2F45-4FB8-8729-564C99B923B8";
+name = "Needlepoint SemiExpanded Upright Rectangle 1200,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "A3C361A0-F149-4916-ACA6-813037B3AFC0";
+name = "Needlepoint SemiExpanded Upright Rectangle 1200,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "70A9C5EE-DC2F-4A26-A0F9-E4B1C04D39F2";
+name = "Needlepoint SemiExpanded Upright Rectangle 1200,1,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "147EB4C7-EEA5-48AC-B8A7-612E3745E522";
+name = "Needlepoint SemiExpanded Upright Rectangle 1200,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "1A570065-DC1F-4F9A-A77B-B4D843B7CD2F";
+name = "Needlepoint SemiExpanded Upright Rectangle 1200,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "DD6547C9-81AA-419C-B001-077345FFD54F";
+name = "Needlepoint SemiExpanded Upright Rectangle 1200,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "6EBEEA36-5A04-49B8-A854-380C57FAFBBA";
+name = "Needlepoint SemiExpanded Upright Rectangle 1200,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+attr = {
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "A3EAD43F-9E05-45D8-B8A7-B9A5FD06E667";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "2130A40C-370F-4BC6-B9E0-71A83E7FFD8E";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "7645543C-5D38-4F95-BAD2-4110CFF9E55B";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "04E4DE58-AC0A-47CB-B686-6A8C3E75ADF4";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "D51C2859-C6A5-4310-B306-4041D3F36735";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "829DBB94-F9DC-48D6-BD67-C6B9A5ABCDEE";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "D7869FC2-60F1-4F75-9301-09CD11671297";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "65A93DC8-BDB1-4D12-9080-36D0FD0D63B5";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1200,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "71FFB220-B501-4AA7-9CA4-6448F445F5AC";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1200,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "C6F6D7D8-1272-4BC7-8FCB-625A4D917971";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1200,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "D2A7E700-4047-414E-873E-761513B09215";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1200,1,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "D4F20CE2-FC38-49FC-A6F1-77CAEDB1640E";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1200,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "1DAD8075-F524-4D5C-9386-BAE34FB0DF4B";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1200,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "50AC8314-5FE6-4B3E-A665-8E0B988AD844";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1200,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "2410E72D-E2D5-4775-A191-C29A90EF4690";
+name = "Needlepoint Black SemiCondensed Upright Rectangle 1200,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+attr = {
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "A01A63A4-D8DD-4D4A-B6F6-74F76B0B4BB6";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "5E9E3F27-F364-4390-A633-BC1EB654D3F0";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "B4F45CA4-9894-4740-B67A-723F37C0E396";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "813ABDB2-950D-4D57-B993-5D1F22628FC5";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "BFCFDFC3-157D-4753-B12E-EE2855D9D4DF";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "468DCE49-20E0-4DFA-B146-6FAD592346B6";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "88D261C2-837A-44D8-AEDC-4600F3CB4A28";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "838C2852-CA8F-4FFD-AE3C-F1AB84596860";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1200,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "441505C3-8ED0-4579-865B-978DB0C7019F";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1200,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "4B624219-A841-4AE9-A0C6-3EC3882C55B6";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1200,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "59E3AC0E-E2D8-476D-98E6-1FD83BAACFE7";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1200,1,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "EEAB7067-1320-47EA-85C7-E0BEBE0E5C2C";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1200,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "6A4850DA-5D86-4291-89CB-360E6C88649D";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1200,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "3D55F4B3-9298-4A64-9B40-ABB40BEC3DC5";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1200,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "76C5EFE0-1832-4C79-A4CA-4F70AACAB2E6";
+name = "Needlepoint Black SemiExpanded Upright Rectangle 1200,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+attr = {
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "9C8BB563-6A9C-42DD-877F-7B2B2AC4A137";
+name = "Agate SemiCondensed Upright Rectangle 1,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "372AFE34-21A3-4243-BE69-BCCB2AAC67C7";
+name = "Agate SemiCondensed Upright Rectangle 1,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "EF440B9D-B022-4BFB-8CFC-05530E4C3377";
+name = "Agate SemiCondensed Upright Rectangle 1,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "70928FDF-C5B6-4798-8E6B-4283D919BB71";
+name = "Agate SemiCondensed Upright Rectangle 1,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "5B227EA5-B02E-4691-BCF5-605A6D821A24";
+name = "Agate SemiCondensed Upright Rectangle 1,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "AC5A686C-0809-4EF9-B400-A9738C254121";
+name = "Agate SemiCondensed Upright Rectangle 1,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "E97F264B-954F-4300-BCEB-3B72EBD2547D";
+name = "Agate SemiCondensed Upright Rectangle 1,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "13D73D47-3601-4942-A77D-E84199FDEF26";
+name = "Agate SemiCondensed Upright Rectangle 1200,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "AB3B58AE-829D-48C2-8BF1-CB7B52B83BE6";
+name = "Agate SemiCondensed Upright Rectangle 1200,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "025CBC03-8FA6-4D1B-AB38-B8C720FBD2EC";
+name = "Agate SemiCondensed Upright Rectangle 1200,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "C25E276D-D1CF-4487-90FB-907747B8D4F2";
+name = "Agate SemiCondensed Upright Rectangle 1200,1,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "FD9E5BA9-2BF2-4BAC-9BA3-4579B2EE79C1";
+name = "Agate SemiCondensed Upright Rectangle 1200,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "43ED22D4-88C1-414C-B075-D9DBF1624F72";
+name = "Agate SemiCondensed Upright Rectangle 1200,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "1F99267F-4E02-4AD0-BB37-CD712DF6BDA8";
+name = "Agate SemiCondensed Upright Rectangle 1200,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "965F20FF-D80F-4EE5-A17F-974BC75F6964";
+name = "Agate SemiCondensed Upright Rectangle 1200,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+attr = {
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "D99BC2FC-9D80-48E3-9C39-572552323B24";
+name = "Agate SemiExpanded Upright Rectangle 1,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "6A22B400-0BB4-4154-8C22-4E52E2C557A6";
+name = "Agate SemiExpanded Upright Rectangle 1,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "55E17348-2192-4C92-93EB-A5B0D711C003";
+name = "Agate SemiExpanded Upright Rectangle 1,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "5CF6AB31-CEA9-40D1-8EA6-261B8FE6C2AE";
+name = "Agate SemiExpanded Upright Rectangle 1,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "2D574D72-BC7C-40A5-9887-AF2E6633DD83";
+name = "Agate SemiExpanded Upright Rectangle 1,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "0A179A00-0368-4FA2-A78B-73147237A553";
+name = "Agate SemiExpanded Upright Rectangle 1,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "ADD261E7-B6B7-4911-949B-57FA756A0DF8";
+name = "Agate SemiExpanded Upright Rectangle 1,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "00DE7D91-E162-4B0A-9387-5457EF1B4D37";
+name = "Agate SemiExpanded Upright Rectangle 1200,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "19A0568A-1E1D-4105-90AD-F86A3A180C30";
+name = "Agate SemiExpanded Upright Rectangle 1200,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "65ABD0A5-074B-404A-8027-8159BF517568";
+name = "Agate SemiExpanded Upright Rectangle 1200,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "5EF63EE5-3E6B-40C1-A301-8BFFE1425F3B";
+name = "Agate SemiExpanded Upright Rectangle 1200,1,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "D782CE8C-51DF-4D4F-AE94-9757563936BC";
+name = "Agate SemiExpanded Upright Rectangle 1200,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "28BE7701-213C-484B-AC4E-0946FD92C31B";
+name = "Agate SemiExpanded Upright Rectangle 1200,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "31224F80-2133-45AE-851D-B9B08433663F";
+name = "Agate SemiExpanded Upright Rectangle 1200,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "E19C98FB-A769-4AFA-B85C-D675B62246F2";
+name = "Agate SemiExpanded Upright Rectangle 1200,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+attr = {
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "D8358592-C7E4-48F3-A7A7-61B3C8702B41";
+name = "Agate Black SemiCondensed Upright Rectangle 1,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "DB84552E-731E-4811-82E3-0F2D48F28D87";
+name = "Agate Black SemiCondensed Upright Rectangle 1,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "6FDE468C-D201-44BA-985A-F0CE9D1AF0A5";
+name = "Agate Black SemiCondensed Upright Rectangle 1,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "C41B1D4A-4DF1-4C0F-9EC2-47A5664826AE";
+name = "Agate Black SemiCondensed Upright Rectangle 1,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "4B492A05-99B7-44F3-B3F5-74BD0E27FC0A";
+name = "Agate Black SemiCondensed Upright Rectangle 1,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "AD27BC78-0580-4085-A64F-6EB486ABACC9";
+name = "Agate Black SemiCondensed Upright Rectangle 1,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "3C0B57A3-29A0-4759-9956-E57E9BDE3ECF";
+name = "Agate Black SemiCondensed Upright Rectangle 1,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "43EF3A1D-2EAE-4D32-BBF6-552565231623";
+name = "Agate Black SemiCondensed Upright Rectangle 1200,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "1322F14B-5BE2-4C34-A5AF-952FF7989BBA";
+name = "Agate Black SemiCondensed Upright Rectangle 1200,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "992CEC3A-3E6C-4711-B8B7-C56014A4C17C";
+name = "Agate Black SemiCondensed Upright Rectangle 1200,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "3D4CD14C-1BD0-43C4-A215-A1BA4DBE4B42";
+name = "Agate Black SemiCondensed Upright Rectangle 1200,1,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "EC5F103C-9059-46EF-B65E-284D56AF73DE";
+name = "Agate Black SemiCondensed Upright Rectangle 1200,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "A863B09E-7C52-4F25-8F37-5A205C1AFA2D";
+name = "Agate Black SemiCondensed Upright Rectangle 1200,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "451895FC-9A6A-4ACB-9FBC-16AEC506A3EB";
+name = "Agate Black SemiCondensed Upright Rectangle 1200,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "CE753AC0-CBAE-4F51-9E9E-652904D1D0C7";
+name = "Agate Black SemiCondensed Upright Rectangle 1200,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (1,266);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+attr = {
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "A2A62D23-69DE-4A22-9167-45789C8A51B6";
+name = "Agate Black SemiExpanded Upright Rectangle 1,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "78128857-8CFF-4C0E-96A9-B8F24FDC6FB9";
+name = "Agate Black SemiExpanded Upright Rectangle 1,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-0.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,264.5);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,265.5);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 1;
+};
+};
+layerId = "D5360906-62C1-4599-AA57-6EC8FAC25A22";
+name = "Agate Black SemiExpanded Upright Rectangle 1,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,249.5);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "D642F37D-888D-40C0-A720-3236AD2C0054";
+name = "Agate Black SemiExpanded Upright Rectangle 1,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "08B8F5A6-45BA-4C8E-B99F-50444AB1EBAB";
+name = "Agate Black SemiExpanded Upright Rectangle 1,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,599);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (0.5,-600);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "F8B19921-A659-42D5-9859-462345E4EDC9";
+name = "Agate Black SemiExpanded Upright Rectangle 1,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (0.5,265);
+},
+{
+name = bottom;
+pos = (0.5,-335);
+},
+{
+name = center;
+pos = (0.5,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1,265);
+},
+{
+name = top;
+pos = (0.5,865);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 1;
+vertical = 2;
+};
+};
+layerId = "F2EC63F8-1481-483B-9339-36587654E1FC";
+name = "Agate Black SemiExpanded Upright Rectangle 1,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (0.5,-350);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (16,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "0F623EDC-A4E9-49C6-B4A1-24BFB79FC20F";
+name = "Agate Black SemiExpanded Upright Rectangle 1200,1,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "017E3A12-2A22-4E13-A2BF-4BFB41A60286";
+name = "Agate Black SemiExpanded Upright Rectangle 1200,1,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-0.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "87CD41FF-1C5D-4642-AFB8-1F78545D19ED";
+name = "Agate Black SemiExpanded Upright Rectangle 1200,1,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,264.5);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,265.5);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 1;
+};
+};
+layerId = "AAB3872B-8FF5-4952-85FB-B647C2D77B5B";
+name = "Agate Black SemiExpanded Upright Rectangle 1200,1,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,249.5);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.0001,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+1,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "66E55A0A-37DC-40EA-919A-908C84F09656";
+name = "Agate Black SemiExpanded Upright Rectangle 1200,1200,1,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+1,
+500,
+);
+partSelection = {
+Hthickness = 1;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "C45AACA0-2C75-4E80-8B76-1CEF683E851C";
+name = "Agate Black SemiExpanded Upright Rectangle 1200,1200,1,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,599);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (600,-600);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+1,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 1;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "2B6BB56E-CAD6-421B-8F2E-643AA2F5CCD9";
+name = "Agate Black SemiExpanded Upright Rectangle 1200,1200,500,1";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (266,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 1200;
+};
+pos = (1465,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (600,265);
+},
+{
+name = bottom;
+pos = (600,-335);
+},
+{
+name = center;
+pos = (600,265);
+},
+{
+name = left;
+pos = (0,265);
+},
+{
+name = right;
+pos = (1200,265);
+},
+{
+name = top;
+pos = (600,865);
+},
+);
+associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
+attr = {
+coordinates = (
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+"-",
+1200,
+1200,
+500,
+500,
+);
+partSelection = {
+Hthickness = 2;
+Vthickness = 2;
+horizontal = 2;
+vertical = 2;
+};
+};
+layerId = "D7D1465E-F4BB-4C7B-8153-061072709AD1";
+name = "Agate Black SemiExpanded Upright Rectangle 1200,1200,500,500";
+shapes = (
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (600,-350);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (515,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 1200;
+};
+pos = (1215,265);
+ref = _smart.minus;
+scale = (0.1,1);
+},
+);
+width = 1200;
+},
+);
+}

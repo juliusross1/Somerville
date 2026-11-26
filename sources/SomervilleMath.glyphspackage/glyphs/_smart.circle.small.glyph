@@ -13,6 +13,10 @@ anchors = (
 name = _center;
 pos = (541,265);
 },
+{
+name = center;
+pos = (541,264);
+},
 );
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
@@ -58,6 +62,10 @@ anchors = (
 {
 name = _center;
 pos = (541,265);
+},
+{
+name = center;
+pos = (541,264);
 },
 );
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -105,6 +113,10 @@ anchors = (
 name = _center;
 pos = (638,265);
 },
+{
+name = center;
+pos = (638,264);
+},
 );
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 shapes = (
@@ -151,6 +163,10 @@ anchors = (
 name = _center;
 pos = (478,265);
 },
+{
+name = center;
+pos = (485,265);
+},
 );
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
@@ -195,6 +211,10 @@ width = 970;
 anchors = (
 {
 name = _center;
+pos = (616,265);
+},
+{
+name = center;
 pos = (616,265);
 },
 );
@@ -243,6 +263,10 @@ anchors = (
 name = _center;
 pos = (638,265);
 },
+{
+name = center;
+pos = (638,264);
+},
 );
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
 shapes = (
@@ -289,41 +313,45 @@ anchors = (
 name = _center;
 pos = (569,265);
 },
+{
+name = center;
+pos = (569,264);
+},
 );
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 shapes = (
 {
 closed = 1;
 nodes = (
-(854,-274,o),
+(860,-274,o),
 (1088,-37,o),
 (1088,265,cs),
 (1088,566,o),
-(854,802,o),
+(860,802,o),
 (569,802,cs),
-(283,802,o),
+(278,802,o),
 (50,566,o),
 (50,265,cs),
 (50,-37,o),
-(283,-274,o),
+(278,-274,o),
 (569,-274,cs),
 );
 },
 {
 closed = 1;
 nodes = (
-(364,-123,o),
-(195,48,o),
+(360,-143,o),
+(195,37,o),
 (195,265,cs),
-(195,482,o),
-(364,652,o),
-(569,652,cs),
-(773,652,o),
-(942,482,o),
+(195,493,o),
+(360,672,o),
+(569,672,cs),
+(778,672,o),
+(942,493,o),
 (942,265,cs),
-(942,48,o),
-(773,-123,o),
-(569,-123,cs),
+(942,37,o),
+(778,-143,o),
+(569,-143,cs),
 );
 },
 );
@@ -335,41 +363,45 @@ anchors = (
 name = _center;
 pos = (638,265);
 },
+{
+name = center;
+pos = (638,264);
+},
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 closed = 1;
 nodes = (
-(979,-274,o),
+(967,-274,o),
 (1226,-37,o),
 (1226,265,cs),
 (1226,566,o),
-(979,802,o),
+(967,802,o),
 (638,802,cs),
-(297,802,o),
+(309,802,o),
 (50,566,o),
 (50,265,cs),
 (50,-37,o),
-(297,-274,o),
+(309,-274,o),
 (638,-274,cs),
 );
 },
 {
 closed = 1;
 nodes = (
-(378,-123,o),
-(195,48,o),
+(390,-143,o),
+(195,37,o),
 (195,265,cs),
-(195,482,o),
-(378,652,o),
-(638,652,cs),
-(898,652,o),
-(1080,482,o),
+(195,487,o),
+(390,662,o),
+(638,662,cs),
+(886,662,o),
+(1080,487,o),
 (1080,265,cs),
-(1080,48,o),
-(898,-123,o),
-(638,-123,cs),
+(1080,37,o),
+(886,-143,o),
+(638,-143,cs),
 );
 },
 );
@@ -380,6 +412,10 @@ anchors = (
 {
 name = _center;
 pos = (139,265);
+},
+{
+name = center;
+pos = (138,264);
 },
 );
 associatedMasterId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -443,6 +479,10 @@ anchors = (
 name = _center;
 pos = (141,265);
 },
+{
+name = center;
+pos = (140,264);
+},
 );
 associatedMasterId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
 attr = {
@@ -505,6 +545,10 @@ anchors = (
 name = _center;
 pos = (141,265);
 },
+{
+name = center;
+pos = (140,264);
+},
 );
 associatedMasterId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
 attr = {
@@ -544,18 +588,18 @@ nodes = (
 {
 closed = 1;
 nodes = (
-(120,227,o),
+(120,226,o),
 (104,244,o),
 (104,265,cs),
 (104,286,o),
-(120,303,o),
-(141,303,cs),
-(161,303,o),
+(120,304,o),
+(141,304,cs),
+(161,304,o),
 (177,286,o),
 (177,265,cs),
 (177,244,o),
-(161,227,o),
-(141,227,cs),
+(161,226,o),
+(141,226,cs),
 );
 },
 );
@@ -566,6 +610,10 @@ anchors = (
 {
 name = _center;
 pos = (141,265);
+},
+{
+name = center;
+pos = (140,264);
 },
 );
 associatedMasterId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -629,6 +677,10 @@ anchors = (
 name = _center;
 pos = (141,265);
 },
+{
+name = center;
+pos = (140,264);
+},
 );
 associatedMasterId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 attr = {
@@ -690,6 +742,10 @@ anchors = (
 {
 name = _center;
 pos = (141,265);
+},
+{
+name = center;
+pos = (140,264);
 },
 );
 associatedMasterId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -753,6 +809,10 @@ anchors = (
 name = _center;
 pos = (141,265);
 },
+{
+name = center;
+pos = (140,264);
+},
 );
 associatedMasterId = "F497C50F-30EB-4580-9148-0005B36D0333";
 attr = {
@@ -814,6 +874,10 @@ anchors = (
 {
 name = _center;
 pos = (143,265);
+},
+{
+name = center;
+pos = (143,264);
 },
 );
 associatedMasterId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";

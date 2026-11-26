@@ -14,6 +14,10 @@ name = "#exit";
 pos = (574,0);
 },
 {
+name = _center;
+pos = (323,266);
+},
+{
 name = bottom;
 pos = (323,181);
 },
@@ -47,18 +51,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(574,350,l),
+(574,331,l),
 (574,351,l),
 (73,351,l),
-(73,350,l),
+(73,331,l),
 );
 },
 {
 closed = 1;
 nodes = (
 (574,181,l),
-(574,182,l),
-(73,182,l),
+(574,201,l),
+(73,201,l),
 (73,181,l),
 );
 },
@@ -74,6 +78,10 @@ pos = (73,0);
 {
 name = "#exit";
 pos = (574,0);
+},
+{
+name = _center;
+pos = (323,266);
 },
 {
 name = bottom;
@@ -138,6 +146,10 @@ name = "#exit";
 pos = (574,0);
 },
 {
+name = _center;
+pos = (323,266);
+},
+{
 name = bottom;
 pos = (323,156);
 },
@@ -198,6 +210,10 @@ pos = (63,0);
 {
 name = "#exit";
 pos = (564,0);
+},
+{
+name = _center;
+pos = (313,266);
 },
 {
 name = bottom;
@@ -262,6 +278,10 @@ name = "#exit";
 pos = (564,0);
 },
 {
+name = _center;
+pos = (313,266);
+},
+{
 name = bottom;
 pos = (313,181);
 },
@@ -322,6 +342,10 @@ pos = (88,0);
 {
 name = "#exit";
 pos = (589,0);
+},
+{
+name = _center;
+pos = (338,266);
 },
 {
 name = bottom;
@@ -386,6 +410,10 @@ name = "#exit";
 pos = (564,0);
 },
 {
+name = _center;
+pos = (313,266);
+},
+{
 name = bottom;
 pos = (313,156);
 },
@@ -446,6 +474,10 @@ pos = (63,0);
 {
 name = "#exit";
 pos = (564,0);
+},
+{
+name = _center;
+pos = (313,266);
 },
 {
 name = bottom;

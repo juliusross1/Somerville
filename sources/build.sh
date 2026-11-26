@@ -1,6 +1,8 @@
 #!/bin/zsh
 usage() {
-  printf '%s\n' 'Usage: sources/build.sh [--bigoperators-only | --union-only]' \
+  printf '%s\n' 'Usage: sources/build.sh [--operators | --bigoperators-only | --union-only]' \
+    '  --operators       Export letters, numerals and ordinary math operators, including circled' \
+    '                   and boxed operators; omit n-ary operators, integrals and size variants.' \
     '  --bigoperators-only  Export letters, numerals, = + minus, round/square union/intersection' \
     '                   and their n-ary forms, n-ary union with plus and dot, summation, product, coproduct,' \
     '                   bigoplus, bigodot, bigotimes, and bigtimes,' \
@@ -11,15 +13,22 @@ usage() {
 
 bigoperators_only=0
 union_only=0
+operators_only=0
 for option in "$@"; do
   case "$option" in
     --bigoperators-only|--big-operators-only) bigoperators_only=1 ;;
     --union-only) bigoperators_only=1; union_only=1 ;;
+    --operators) operators_only=1 ;;
     --help|-h) usage; exit 0 ;;
     *) usage >&2; exit 2 ;;
   esac
 done
+if (( operators_only && bigoperators_only )); then
+  usage >&2
+  exit 2
+fi
 export SOMERVILLE_UNION_ONLY="$union_only"
+export SOMERVILLE_OPERATORS_ONLY="$operators_only"
 
 . "$HOME/.zprofile"
 set -e
@@ -30,6 +39,10 @@ context_options=()
 if (( bigoperators_only )); then
   export_script="$source_dir/naryunion_prefilter.py"
   context_options=(--mode=bigoperators-only)
+fi
+if (( operators_only )); then
+  export_script="$source_dir/naryunion_prefilter.py"
+  context_options=(--mode=operators-only)
 fi
 export_report="$(mktemp "${TMPDIR:-/tmp}/somerville-export.XXXXXX")"
 trap 'rm -f -- "$export_report"' EXIT
@@ -68,7 +81,7 @@ run_step "$source_dir/venv/bin/python" "$source_dir/insertavar2tables.py" \
     exit 1
   }
 
-if (( bigoperators_only )); then
+if (( bigoperators_only || operators_only )); then
   run_step "$source_dir/venv/bin/python" "$source_dir/fix_variable_font_bounds.py" \
     "$HOME/Documents/fontoutputs/SomervilleMathVF.ttf"
 fi
