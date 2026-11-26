@@ -62,7 +62,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -72,7 +72,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -83,7 +83,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -94,7 +94,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -161,7 +161,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -171,7 +171,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -182,7 +182,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -193,7 +193,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -260,7 +260,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -270,7 +270,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -281,7 +281,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -292,7 +292,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -359,7 +359,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -369,7 +369,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -380,7 +380,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -391,7 +391,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -458,7 +458,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -468,7 +468,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -479,22 +479,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -557,7 +557,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -567,7 +567,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -578,22 +578,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -656,7 +656,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -666,7 +666,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -677,22 +677,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -755,7 +755,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -765,7 +765,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -776,22 +776,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -854,28 +854,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -886,7 +886,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -953,28 +953,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -985,7 +985,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -1052,28 +1052,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -1084,7 +1084,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -1151,28 +1151,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -1183,7 +1183,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -1250,43 +1250,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 1;
-width = 1200;
-};
-pos = (266,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 9999;
+};
+pos = (1465,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -1349,43 +1349,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (1215,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -1448,43 +1448,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (1465,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -1547,43 +1547,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 500;
-width = 1200;
-};
-pos = (515,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 9999;
+};
+pos = (1215,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -1629,7 +1629,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -1639,7 +1639,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -1650,7 +1650,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -1661,7 +1661,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -1728,7 +1728,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -1738,7 +1738,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -1749,7 +1749,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -1760,7 +1760,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -1827,7 +1827,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -1837,7 +1837,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -1848,7 +1848,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -1859,7 +1859,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -1926,7 +1926,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -1936,7 +1936,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -1947,7 +1947,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -1958,7 +1958,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -2025,7 +2025,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -2035,7 +2035,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -2046,22 +2046,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -2124,7 +2124,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -2134,7 +2134,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -2145,22 +2145,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -2223,7 +2223,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -2233,7 +2233,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -2244,22 +2244,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -2322,7 +2322,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -2332,7 +2332,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -2343,22 +2343,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -2421,28 +2421,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -2453,7 +2453,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -2520,28 +2520,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -2552,7 +2552,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -2619,28 +2619,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -2651,7 +2651,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -2718,28 +2718,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -2750,7 +2750,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -2817,43 +2817,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 1;
-width = 1200;
-};
-pos = (266,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 9999;
+};
+pos = (1465,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -2916,43 +2916,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (1215,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -3015,43 +3015,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (1465,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -3114,43 +3114,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 500;
-width = 1200;
-};
-pos = (515,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 9999;
+};
+pos = (1215,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -3196,7 +3196,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -3206,7 +3206,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -3217,7 +3217,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -3228,7 +3228,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -3295,7 +3295,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -3305,7 +3305,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -3316,7 +3316,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -3327,7 +3327,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -3394,7 +3394,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -3404,7 +3404,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -3415,7 +3415,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -3426,7 +3426,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -3493,7 +3493,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -3503,7 +3503,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -3514,7 +3514,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -3525,7 +3525,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -3592,7 +3592,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -3602,7 +3602,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -3613,22 +3613,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -3691,7 +3691,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -3701,7 +3701,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -3712,22 +3712,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -3790,7 +3790,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -3800,7 +3800,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -3811,22 +3811,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -3889,7 +3889,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -3899,7 +3899,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -3910,22 +3910,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -3988,28 +3988,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -4020,7 +4020,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -4087,28 +4087,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -4119,7 +4119,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -4186,28 +4186,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -4218,7 +4218,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -4285,28 +4285,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -4317,7 +4317,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -4384,43 +4384,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 1;
-width = 1200;
-};
-pos = (266,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 9999;
+};
+pos = (1465,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -4483,43 +4483,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (1215,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -4582,43 +4582,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (1465,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -4681,43 +4681,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 500;
-width = 1200;
-};
-pos = (515,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 9999;
+};
+pos = (1215,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -4763,7 +4763,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -4773,7 +4773,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -4784,7 +4784,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -4795,7 +4795,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -4862,7 +4862,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -4872,7 +4872,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -4883,7 +4883,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -4894,7 +4894,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -4961,7 +4961,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -4971,7 +4971,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -4982,7 +4982,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -4993,7 +4993,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -5060,7 +5060,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -5070,7 +5070,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -5081,7 +5081,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -5092,7 +5092,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -5159,7 +5159,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -5169,7 +5169,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -5180,22 +5180,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -5258,7 +5258,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -5268,7 +5268,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -5279,22 +5279,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -5357,7 +5357,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -5367,7 +5367,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -5378,22 +5378,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -5456,7 +5456,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -5466,7 +5466,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -5477,22 +5477,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -5555,28 +5555,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -5587,7 +5587,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -5654,28 +5654,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -5686,7 +5686,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -5753,28 +5753,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -5785,7 +5785,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -5852,28 +5852,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -5884,7 +5884,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -5951,43 +5951,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 1;
-width = 1200;
-};
-pos = (266,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 9999;
+};
+pos = (1465,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -6050,43 +6050,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (1215,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -6149,43 +6149,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (1465,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -6248,43 +6248,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 500;
-width = 1200;
-};
-pos = (515,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 9999;
+};
+pos = (1215,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -6330,7 +6330,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -6340,7 +6340,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -6351,7 +6351,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -6362,7 +6362,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -6429,7 +6429,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -6439,7 +6439,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -6450,7 +6450,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -6461,7 +6461,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -6528,7 +6528,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -6538,7 +6538,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -6549,7 +6549,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -6560,7 +6560,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -6627,7 +6627,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -6637,7 +6637,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -6648,7 +6648,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -6659,7 +6659,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -6726,7 +6726,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -6736,7 +6736,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -6747,22 +6747,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -6825,7 +6825,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -6835,7 +6835,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -6846,22 +6846,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -6924,7 +6924,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -6934,7 +6934,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -6945,22 +6945,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -7023,7 +7023,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -7033,7 +7033,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -7044,22 +7044,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -7122,28 +7122,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -7154,7 +7154,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -7221,28 +7221,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -7253,7 +7253,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -7320,28 +7320,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -7352,7 +7352,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -7419,28 +7419,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -7451,7 +7451,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -7518,43 +7518,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 1;
-width = 1200;
-};
-pos = (266,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 9999;
+};
+pos = (1465,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -7617,43 +7617,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (1215,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -7716,43 +7716,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (1465,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -7815,43 +7815,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 500;
-width = 1200;
-};
-pos = (515,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 9999;
+};
+pos = (1215,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -7897,7 +7897,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -7907,7 +7907,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -7918,7 +7918,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -7929,7 +7929,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -7996,7 +7996,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -8006,7 +8006,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -8017,7 +8017,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -8028,7 +8028,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -8095,7 +8095,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -8105,7 +8105,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -8116,7 +8116,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -8127,7 +8127,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -8194,7 +8194,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -8204,7 +8204,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -8215,7 +8215,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -8226,7 +8226,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -8293,7 +8293,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -8303,7 +8303,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -8314,22 +8314,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -8392,7 +8392,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -8402,7 +8402,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -8413,22 +8413,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -8491,7 +8491,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -8501,7 +8501,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -8512,22 +8512,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -8590,7 +8590,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -8600,7 +8600,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -8611,22 +8611,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -8689,28 +8689,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -8721,7 +8721,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -8788,28 +8788,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.99,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -8820,7 +8820,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -8887,28 +8887,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -8919,7 +8919,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -8986,28 +8986,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.99,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.99,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -9018,7 +9018,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -9085,43 +9085,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 1;
-width = 1200;
-};
-pos = (266,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 9999;
+};
+pos = (1465,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -9184,43 +9184,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.99,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.99,-600);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (1215,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -9283,43 +9283,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (1465,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -9382,43 +9382,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.99,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.99,-350);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 500;
-width = 1200;
-};
-pos = (515,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (515,264.99);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 9999;
+};
+pos = (1215,264.99);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -9464,7 +9464,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -9474,7 +9474,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -9485,7 +9485,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -9496,7 +9496,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -9563,7 +9563,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -9573,7 +9573,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -9584,7 +9584,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -9595,7 +9595,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -9662,7 +9662,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -9672,7 +9672,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -9683,7 +9683,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -9694,7 +9694,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -9761,7 +9761,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -9771,7 +9771,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -9782,7 +9782,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -9793,7 +9793,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -9860,7 +9860,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -9870,7 +9870,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -9881,22 +9881,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -9959,7 +9959,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -9969,7 +9969,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -9980,22 +9980,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -10058,7 +10058,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -10068,7 +10068,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -10079,22 +10079,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -10157,7 +10157,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -10167,7 +10167,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -10178,22 +10178,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -10256,28 +10256,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.98,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.98,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -10288,7 +10288,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -10355,28 +10355,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.98,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.98,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -10387,7 +10387,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -10454,28 +10454,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.98,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.98,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -10486,7 +10486,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -10553,28 +10553,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.98,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.98,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -10585,7 +10585,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -10652,43 +10652,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.98,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.98,-600);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 1;
-width = 1200;
-};
-pos = (266,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 9999;
+};
+pos = (1465,264.98);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -10751,43 +10751,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.98,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.98,-600);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (1215,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -10850,43 +10850,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.98,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.98,-350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (1465,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -10949,43 +10949,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.98,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.98,-350);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 500;
-width = 1200;
-};
-pos = (515,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (515,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 9999;
+};
+pos = (1215,264.98);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -11031,7 +11031,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -11041,7 +11041,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -11052,7 +11052,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -11063,7 +11063,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -11130,7 +11130,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -11140,7 +11140,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -11151,7 +11151,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -11162,7 +11162,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -11229,7 +11229,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -11239,7 +11239,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-0.5);
 ref = _smart.minus;
@@ -11250,7 +11250,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -11261,7 +11261,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (16,265);
 ref = _smart.minus;
@@ -11328,7 +11328,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-249.5);
 ref = _smart.minus;
@@ -11338,7 +11338,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,249.5);
 ref = _smart.minus;
@@ -11349,7 +11349,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -11360,7 +11360,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -11427,7 +11427,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -11437,7 +11437,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -11448,22 +11448,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -11526,7 +11526,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,599);
 ref = _smart.minus;
@@ -11536,7 +11536,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-600);
 ref = _smart.minus;
@@ -11547,22 +11547,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -11625,7 +11625,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -11635,7 +11635,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -11646,22 +11646,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -11724,7 +11724,7 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,350);
 ref = _smart.minus;
@@ -11734,7 +11734,7 @@ scale = (0.0001,1);
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (0.5,-350);
 ref = _smart.minus;
@@ -11745,22 +11745,22 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (16,265);
+pos = (16,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1;
@@ -11823,28 +11823,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.98,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.98,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -11855,7 +11855,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -11922,28 +11922,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.98,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-0.5);
+pos = (599.98,-0.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -11954,7 +11954,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -12021,28 +12021,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.98,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.98,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (266,265);
 ref = _smart.minus;
@@ -12053,7 +12053,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
 pos = (1465,265);
 ref = _smart.minus;
@@ -12120,28 +12120,28 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-249.5);
+pos = (599.98,-249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,249.5);
+pos = (599.98,249.5);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (515,265);
 ref = _smart.minus;
@@ -12152,7 +12152,7 @@ alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
 pos = (1215,265);
 ref = _smart.minus;
@@ -12219,43 +12219,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.98,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.98,-600);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 1;
-width = 1200;
-};
-pos = (266,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 1;
+width = 9999;
+};
+pos = (1465,264.98);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -12318,43 +12318,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,599);
+pos = (599.98,599);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (600,-600);
+pos = (599.98,-600);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (515,265);
+pos = (515,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (1215,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -12417,43 +12417,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.98,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.98,-350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (266,265);
+pos = (266,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 1;
-width = 1200;
+width = 9999;
 };
-pos = (1465,265);
+pos = (1465,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 );
 width = 1200;
@@ -12516,43 +12516,43 @@ shapes = (
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,350);
+pos = (599.98,350);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (600,-350);
+pos = (599.98,-350);
 ref = _smart.minus;
-scale = (0.1,1);
-},
-{
-alignment = -1;
-angle = 90;
-piece = {
-Thickness = 500;
-width = 1200;
-};
-pos = (515,265);
-ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
 },
 {
 alignment = -1;
 angle = 90;
 piece = {
 Thickness = 500;
-width = 1200;
+width = 9999;
 };
-pos = (1215,265);
+pos = (515,264.98);
 ref = _smart.minus;
-scale = (0.1,1);
+scale = (0.12,1);
+},
+{
+alignment = -1;
+angle = 90;
+piece = {
+Thickness = 500;
+width = 9999;
+};
+pos = (1215,264.98);
+ref = _smart.minus;
+scale = (0.12,1);
 },
 );
 width = 1200;

@@ -11,6 +11,9 @@ shapes = (
 ref = operator.circle;
 },
 {
+piece = {
+width = 1;
+};
 pos = (372,-1);
 ref = _smart.minus;
 },
@@ -26,6 +29,9 @@ shapes = (
 ref = operator.circle;
 },
 {
+piece = {
+width = 1;
+};
 pos = (428,-1);
 ref = _smart.minus;
 },
@@ -41,6 +47,9 @@ shapes = (
 ref = operator.circle;
 },
 {
+piece = {
+width = 1;
+};
 pos = (339,0);
 ref = _smart.minus;
 },
@@ -56,11 +65,14 @@ shapes = (
 ref = operator.circle;
 },
 {
-pos = (392,0);
+piece = {
+width = 1;
+};
+pos = (416,0);
 ref = _smart.minus;
 },
 );
-width = 787;
+width = 835;
 },
 {
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -71,6 +83,9 @@ shapes = (
 ref = operator.circle;
 },
 {
+piece = {
+width = 1;
+};
 pos = (371,-1);
 ref = _smart.minus;
 },
@@ -86,6 +101,9 @@ shapes = (
 ref = operator.circle;
 },
 {
+piece = {
+width = 1;
+};
 pos = (428,-1);
 ref = _smart.minus;
 },
@@ -101,11 +119,14 @@ shapes = (
 ref = operator.circle;
 },
 {
-pos = (366,-1);
+piece = {
+width = 2;
+};
+pos = (401,-1);
 ref = _smart.minus;
 },
 );
-width = 735;
+width = 804;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -118,7 +139,7 @@ ref = operator.circle;
 {
 piece = {
 Thickness = 100;
-width = 60;
+width = 592;
 };
 pos = (443,-1);
 ref = _smart.minus;

@@ -11,6 +11,9 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+width = 1;
+};
 pos = (399,0);
 ref = _smart.minus;
 },
@@ -26,6 +29,9 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+width = 1;
+};
 pos = (424,0);
 ref = _smart.minus;
 },
@@ -41,6 +47,9 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+width = 1;
+};
 pos = (399,0);
 ref = _smart.minus;
 },
@@ -56,6 +65,9 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+width = 1;
+};
 pos = (424,0);
 ref = _smart.minus;
 },
@@ -71,6 +83,9 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+width = 1;
+};
 pos = (399,0);
 ref = _smart.minus;
 },
@@ -86,6 +101,9 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+width = 1;
+};
 pos = (424,0);
 ref = _smart.minus;
 },
@@ -101,6 +119,9 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+width = 2;
+};
 pos = (424,0);
 ref = _smart.minus;
 },
@@ -117,7 +138,7 @@ ref = _operator.square;
 },
 {
 piece = {
-width = 10;
+width = 92;
 };
 pos = (424,0);
 ref = _smart.minus;

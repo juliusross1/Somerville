@@ -13,6 +13,9 @@ ref = _operator.square;
 {
 alignment = -1;
 angle = 45;
+piece = {
+width = 1;
+};
 pos = (587,77);
 ref = _smart.minus;
 },
@@ -30,6 +33,9 @@ ref = _operator.square;
 {
 alignment = -1;
 angle = 45;
+piece = {
+width = 1;
+};
 pos = (612,77);
 ref = _smart.minus;
 },
@@ -47,6 +53,9 @@ ref = _operator.square;
 {
 alignment = -1;
 angle = 45;
+piece = {
+width = 1;
+};
 pos = (587,77);
 ref = _smart.minus;
 },
@@ -64,6 +73,9 @@ ref = _operator.square;
 {
 alignment = -1;
 angle = 45;
+piece = {
+width = 1;
+};
 pos = (612,77);
 ref = _smart.minus;
 },
@@ -81,6 +93,9 @@ ref = _operator.square;
 {
 alignment = -1;
 angle = 45;
+piece = {
+width = 1;
+};
 pos = (587,77);
 ref = _smart.minus;
 },
@@ -98,6 +113,9 @@ ref = _operator.square;
 {
 alignment = -1;
 angle = 45;
+piece = {
+width = 1;
+};
 pos = (612,77);
 ref = _smart.minus;
 },
@@ -115,6 +133,9 @@ ref = _operator.square;
 {
 alignment = -1;
 angle = 45;
+piece = {
+width = 2;
+};
 pos = (612,77);
 ref = _smart.minus;
 },
@@ -134,7 +155,7 @@ alignment = -1;
 angle = 45;
 piece = {
 Thickness = 600;
-width = 10;
+width = 92;
 };
 pos = (612,77);
 ref = _smart.minus;

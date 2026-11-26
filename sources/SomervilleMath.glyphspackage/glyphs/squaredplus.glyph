@@ -11,6 +11,12 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+Height = 1;
+Hthickness = 500;
+Vthickness = 500;
+Width = 1;
+};
 pos = (150,0);
 ref = _smart.plus;
 },
@@ -26,6 +32,12 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+Height = 1;
+Hthickness = 500;
+Vthickness = 500;
+Width = 1;
+};
 pos = (175,0);
 ref = _smart.plus;
 },
@@ -41,6 +53,12 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+Height = 1;
+Hthickness = 500;
+Vthickness = 500;
+Width = 1;
+};
 pos = (150,0);
 ref = _smart.plus;
 },
@@ -56,6 +74,12 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+Height = 1;
+Hthickness = 500;
+Vthickness = 500;
+Width = 1;
+};
 pos = (175,0);
 ref = _smart.plus;
 },
@@ -71,6 +95,12 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+Height = 1;
+Hthickness = 500;
+Vthickness = 500;
+Width = 1;
+};
 pos = (150,0);
 ref = _smart.plus;
 },
@@ -86,6 +116,12 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+Height = 1;
+Hthickness = 500;
+Vthickness = 500;
+Width = 1;
+};
 pos = (175,0);
 ref = _smart.plus;
 },
@@ -101,6 +137,12 @@ shapes = (
 ref = _operator.square;
 },
 {
+piece = {
+Height = 2;
+Hthickness = 500;
+Vthickness = 500;
+Width = 2;
+};
 pos = (175,0);
 ref = _smart.plus;
 },
@@ -117,11 +159,12 @@ ref = _operator.square;
 },
 {
 piece = {
-Height = 2;
-Width = 2;
-thickness = 600;
+Height = 26;
+Hthickness = 600;
+Vthickness = 600;
+Width = 26;
 };
-pos = (114,0);
+pos = (136,0);
 ref = _smart.plus;
 },
 );

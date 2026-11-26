@@ -6,7 +6,7 @@ layers = (
 {
 guides = (
 {
-pos = (685,265);
+pos = (700,265);
 },
 );
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
@@ -14,15 +14,16 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Height = 32;
-Width = 32;
-thickness = 20;
+Height = 474;
+Hthickness = 21;
+Vthickness = 21;
+Width = 460;
 };
-pos = (69,0);
+pos = (84,0.961);
 ref = _smart.plus;
 },
 );
-width = 531;
+width = 647;
 },
 {
 annotations = (
@@ -34,7 +35,7 @@ type = Text;
 );
 guides = (
 {
-pos = (397,305);
+pos = (423,305);
 },
 );
 layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
@@ -42,20 +43,21 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Height = 32;
-Width = 32;
-thickness = 80;
+Height = 474;
+Hthickness = 65;
+Vthickness = 69;
+Width = 460;
 };
-pos = (35,0);
+pos = (61,0.961);
 ref = _smart.plus;
 },
 );
-width = 531;
+width = 647;
 },
 {
 guides = (
 {
-pos = (584,265);
+pos = (575,265);
 },
 );
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -63,20 +65,21 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Height = 32;
-Width = 36;
-thickness = 80;
+Height = 474;
+Hthickness = 65;
+Vthickness = 69;
+Width = 530;
 };
-pos = (35,0);
+pos = (26,2.616);
 ref = _smart.plus;
 },
 );
-width = 579;
+width = 647;
 },
 {
 guides = (
 {
-pos = (625,265);
+pos = (609,265);
 },
 );
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -84,20 +87,21 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Height = 32;
-Width = 32;
-thickness = 20;
+Height = 508;
+Hthickness = 55;
+Vthickness = 55;
+Width = 490;
 };
-pos = (59,0);
+pos = (43,0.958);
 ref = _smart.plus;
 },
 );
-width = 511;
+width = 627;
 },
 {
 guides = (
 {
-pos = (625,265);
+pos = (574,265);
 },
 );
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
@@ -105,20 +109,21 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Height = 32;
-Width = 36;
-thickness = 20;
+Height = 508;
+Hthickness = 55;
+Vthickness = 55;
+Width = 560;
 };
-pos = (59,0);
+pos = (8,0.958);
 ref = _smart.plus;
 },
 );
-width = 559;
+width = 627;
 },
 {
 guides = (
 {
-pos = (775,265);
+pos = (755,265);
 },
 );
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -126,20 +131,21 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Height = 32;
-Width = 36;
-thickness = 10;
+Height = 474;
+Hthickness = 21;
+Vthickness = 21;
+Width = 530;
 };
-pos = (84,0);
+pos = (64,0.961);
 ref = _smart.plus;
 },
 );
-width = 609;
+width = 677;
 },
 {
 guides = (
 {
-pos = (466,265);
+pos = (477,265);
 },
 );
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -147,20 +153,21 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Height = 32;
-Width = 32;
-thickness = 120;
+Height = 508;
+Hthickness = 99;
+Vthickness = 108;
+Width = 490;
 };
-pos = (6,0);
+pos = (17,-0.042);
 ref = _smart.plus;
 },
 );
-width = 512;
+width = 627;
 },
 {
 guides = (
 {
-pos = (341,265);
+pos = (317,265);
 },
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -168,15 +175,16 @@ shapes = (
 {
 alignment = -1;
 piece = {
-Height = 32;
-Width = 36;
-thickness = 120;
+Height = 508;
+Hthickness = 99;
+Vthickness = 108;
+Width = 560;
 };
-pos = (6,0);
+pos = (-18,-0.042);
 ref = _smart.plus;
 },
 );
-width = 560;
+width = 627;
 },
 );
 metricLeft = "=minus";

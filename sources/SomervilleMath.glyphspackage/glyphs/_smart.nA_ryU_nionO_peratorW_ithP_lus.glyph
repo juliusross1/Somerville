@@ -18,9 +18,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 22;
-Width = 55;
-thickness = 1;
+Height = 265;
+Hthickness = 1;
+Vthickness = 1;
+Width = 661;
 };
 pos = (79,160);
 ref = _smart.plus;
@@ -39,9 +40,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 22;
-Width = 22;
-thickness = 60;
+Height = 265;
+Hthickness = 60;
+Vthickness = 60;
+Width = 265;
 };
 pos = (252,220);
 ref = _smart.plus;
@@ -60,9 +62,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 22;
-Width = 26;
-thickness = 60;
+Height = 265;
+Hthickness = 60;
+Vthickness = 60;
+Width = 313;
 };
 pos = (371,220);
 ref = _smart.plus;
@@ -81,9 +84,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 22;
-Width = 22;
-thickness = 1;
+Height = 265;
+Hthickness = 1;
+Vthickness = 1;
+Width = 265;
 };
 pos = (321,-30);
 ref = _smart.plus;
@@ -102,9 +106,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 22;
-Width = 26;
-thickness = 1;
+Height = 265;
+Hthickness = 1;
+Vthickness = 1;
+Width = 313;
 };
 pos = (405,250);
 ref = _smart.plus;
@@ -123,9 +128,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 22;
-Width = 26;
-thickness = 1;
+Height = 265;
+Hthickness = 1;
+Vthickness = 1;
+Width = 313;
 };
 pos = (412,230);
 ref = _smart.plus;
@@ -144,9 +150,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 22;
-Width = 22;
-thickness = 120;
+Height = 266;
+Hthickness = 120;
+Vthickness = 120;
+Width = 266;
 };
 pos = (293,220);
 ref = _smart.plus;
@@ -165,9 +172,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 22;
-Width = 33;
-thickness = 120;
+Height = 266;
+Hthickness = 120;
+Vthickness = 120;
+Width = 398;
 };
 pos = (333,220);
 ref = _smart.plus;
@@ -202,9 +210,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 111;
-Width = 111;
-thickness = 67;
+Height = 1333;
+Hthickness = 67;
+Vthickness = 67;
+Width = 1333;
 };
 pos = (1596,0);
 ref = _smart.plus;
@@ -239,9 +248,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 111;
-Width = 133;
-thickness = 67;
+Height = 1333;
+Hthickness = 67;
+Vthickness = 67;
+Width = 1597;
 };
 pos = (2285,0);
 ref = _smart.plus;
@@ -277,9 +287,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 111;
-Width = 111;
-thickness = 67;
+Height = 1333;
+Hthickness = 67;
+Vthickness = 67;
+Width = 1333;
 };
 pos = (1666,0);
 ref = _smart.plus;
@@ -314,9 +325,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 111;
-Width = 133;
-thickness = 67;
+Height = 1333;
+Hthickness = 67;
+Vthickness = 67;
+Width = 1597;
 };
 pos = (2220,0);
 ref = _smart.plus;
@@ -351,11 +363,12 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 111;
-Width = 111;
-thickness = 68;
+Height = 1333;
+Hthickness = 68;
+Vthickness = 68;
+Width = 1333;
 };
-pos = (1587,0);
+pos = (1588,0);
 ref = _smart.plus;
 },
 );
@@ -388,9 +401,10 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 111;
-Width = 133;
-thickness = 68;
+Height = 1333;
+Hthickness = 68;
+Vthickness = 68;
+Width = 1597;
 };
 pos = (2296,0);
 ref = _smart.plus;
@@ -425,11 +439,12 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 111;
-Width = 111;
-thickness = 120;
+Height = 1334;
+Hthickness = 120;
+Vthickness = 120;
+Width = 1334;
 };
-pos = (1568,0);
+pos = (1569,0);
 ref = _smart.plus;
 },
 );
@@ -462,11 +477,12 @@ ref = _smart.naryunion;
 },
 {
 piece = {
-Height = 111;
-Width = 144;
-thickness = 120;
+Height = 1334;
+Hthickness = 120;
+Vthickness = 120;
+Width = 1730;
 };
-pos = (2202,0);
+pos = (2203,0);
 ref = _smart.plus;
 },
 );
