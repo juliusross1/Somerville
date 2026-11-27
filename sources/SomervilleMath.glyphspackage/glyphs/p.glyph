@@ -7,17 +7,18 @@ layers = (
 anchors = (
 {
 name = math.ta;
-pos = (296,953);
+pos = (295,953);
 },
 {
 name = top;
-pos = (296,526);
+pos = (295,526);
 },
 );
 layerId = "DF17D77B-A5C4-4843-826A-BC0F1C4CB224";
 shapes = (
 {
 alignment = -1;
+pos = (-1,0);
 ref = "_n-1st-stroke-hook";
 },
 {
@@ -26,6 +27,7 @@ piece = {
 LeftSerifWide = 50;
 RightSerifWide = 100;
 };
+pos = (-1,0);
 ref = "_part.LC-descender-stem";
 },
 {
@@ -35,11 +37,11 @@ piece = {
 ThinningBottom = -100;
 ThinningTop = -100;
 };
-pos = (599,512);
+pos = (598,512);
 ref = "_part.LC-left-bowl";
 },
 );
-width = 599;
+width = 598;
 },
 {
 anchors = (
@@ -113,17 +115,18 @@ width = 858;
 anchors = (
 {
 name = math.ta;
-pos = (314,953);
+pos = (315,953);
 },
 {
 name = top;
-pos = (314,534);
+pos = (315,534);
 },
 );
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
 shapes = (
 {
 alignment = -1;
+pos = (1,0);
 ref = "_n-1st-stroke-hook";
 },
 {
@@ -131,6 +134,7 @@ alignment = -1;
 piece = {
 RightSerifWide = 100;
 };
+pos = (1,0);
 ref = "_part.LC-descender-stem";
 },
 {
@@ -140,27 +144,28 @@ piece = {
 ThinningBottom = -100;
 ThinningTop = -100;
 };
-pos = (623,520);
+pos = (624,520);
 ref = "_part.LC-left-bowl";
 },
 );
-width = 623;
+width = 624;
 },
 {
 anchors = (
 {
 name = math.ta;
-pos = (364,953);
+pos = (362,953);
 },
 {
 name = top;
-pos = (364,534);
+pos = (362,534);
 },
 );
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
 shapes = (
 {
 alignment = -1;
+pos = (-2,0);
 ref = "_n-1st-stroke-hook";
 },
 {
@@ -168,6 +173,7 @@ alignment = -1;
 piece = {
 RightSerifWide = 100;
 };
+pos = (-2,0);
 ref = "_part.LC-descender-stem";
 },
 {
@@ -177,11 +183,11 @@ piece = {
 ThinningBottom = -100;
 ThinningTop = -100;
 };
-pos = (740,520);
+pos = (738,520);
 ref = "_part.LC-left-bowl";
 },
 );
-width = 740;
+width = 738;
 },
 {
 anchors = (
@@ -258,23 +264,24 @@ width = 643;
 anchors = (
 {
 name = math.ta;
-pos = (401,953);
+pos = (399,953);
 },
 {
 name = top;
-pos = (401,534);
+pos = (399,534);
 },
 );
 guides = (
 {
 angle = 90;
-pos = (310,-57);
+pos = (308,-57);
 },
 );
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
 shapes = (
 {
 alignment = -1;
+pos = (-2,0);
 ref = "_n-1st-stroke-hook";
 },
 {
@@ -282,6 +289,7 @@ alignment = -1;
 piece = {
 RightSerifWide = 100;
 };
+pos = (-2,0);
 ref = "_part.LC-descender-stem";
 },
 {
@@ -291,11 +299,11 @@ piece = {
 ThinningBottom = -100;
 ThinningTop = -100;
 };
-pos = (815,520);
+pos = (813,520);
 ref = "_part.LC-left-bowl";
 },
 );
-width = 815;
+width = 813;
 },
 );
 metricLeft = l;

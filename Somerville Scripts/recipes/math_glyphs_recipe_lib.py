@@ -1122,6 +1122,8 @@ def effective_component_anchor_xy(
         component_names = [component_names]
     wanted_components = set(component_names or [])
     if not wanted_components:
+        if boolean_value(use_bounds_center):
+            return component_bounds_center_xy(layer)
         return effective_layer_anchor_xy(font, layer, anchor_names)
 
     for component in components:
@@ -4317,7 +4319,7 @@ def scale_pair_from_rule(rule):
     return None
 
 
-def action_set_component_scale_by_layer_name(font, verbose=False, glyph=None, componentFilter=None, rules=None, defaultScale=None, **_kwargs):
+def action_set_component_scale_by_layer_name(font, verbose=False, glyph=None, componentFilter=None, rules=None, defaultScale=None, componentIndexes=None, **_kwargs):
     target_glyph = glyph_for_name(font, glyph)
     if target_glyph is None:
         raise RuntimeError("Missing glyph: %s" % glyph)
@@ -4340,7 +4342,9 @@ def action_set_component_scale_by_layer_name(font, verbose=False, glyph=None, co
             skipped += 1
             continue
 
-        for component in layer_components(layer):
+        for component_index, component in enumerate(layer_components(layer)):
+            if componentIndexes is not None and component_index not in componentIndexes:
+                continue
             if not component_matches_filter(component, componentFilter):
                 continue
             if set_component_scale(component, scale_pair[0], scale_pair[1]):

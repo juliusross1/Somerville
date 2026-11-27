@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- U+2218: RING OPERATOR (\circ). -->
+<plist version="1.0">
+<dict>
+	<key>formatVersion</key>
+	<integer>1</integer>
+	<key>kind</key>
+	<string>macro</string>
+	<key>constants</key>
+	<string>recipe_constants.plist</string>
+	<key>name</key>
+	<string>ringoperator</string>
+	<key>template</key>
+	<string>component_sequence_template.plist</string>
+	<key>templateName</key>
+	<string>componentSequence</string>
+	<key>parameters</key>
+	<dict>
+		<key>exportGlyph</key>
+		<string>ringoperator</string>
+		<key>components</key>
+		<array>
+			<string>_smart.circle.small</string>
+		</array>
+		<key>autoMatchingAnchors</key>
+		<false/>
+		<key>setMetrics</key>
+		<true/>
+		<key>leftMetricsGlyph</key>
+		<string>_smart.circle.small</string>
+		<key>rightMetricsGlyph</key>
+		<string>_smart.circle.small</string>
+	</dict>
+</dict>
+</plist>

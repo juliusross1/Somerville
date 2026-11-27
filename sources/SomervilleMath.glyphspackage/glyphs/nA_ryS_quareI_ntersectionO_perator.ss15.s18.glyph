@@ -13,12 +13,12 @@ alignment = -1;
 piece = {
 height = 90;
 };
-pos = (-217,519);
+pos = (-165,519);
 ref = _smart.nArySquareUnionOperator.serif;
 scale = (1,-1);
 },
 );
-width = 4010;
+width = 3764;
 },
 {
 layerId = "2AEC198B-4747-4E5F-80A7-B5A71C2761F9";
@@ -30,12 +30,12 @@ alignment = -1;
 piece = {
 height = 90;
 };
-pos = (-199,519);
+pos = (-174,519);
 ref = _smart.nArySquareUnionOperator.serif;
 scale = (1,-1);
 },
 );
-width = 5338;
+width = 5367;
 },
 {
 layerId = "F497C50F-30EB-4580-9148-0005B36D0333";
@@ -47,32 +47,15 @@ alignment = -1;
 piece = {
 height = 90;
 };
-pos = (-211,519);
+pos = (-228,519);
 ref = _smart.nArySquareUnionOperator.serif;
 scale = (1,-1);
 },
 );
-width = 4043;
+width = 3757;
 },
 {
 layerId = "41FE8A15-28AA-4FFF-A503-D6748EB37864";
-metricLeft = "=nArySquareUnionOperator.ss15";
-metricRight = "=nArySquareUnionOperator.ss15";
-shapes = (
-{
-alignment = -1;
-piece = {
-height = 90;
-};
-pos = (-198,519);
-ref = _smart.nArySquareUnionOperator.serif;
-scale = (1,-1);
-},
-);
-width = 5206;
-},
-{
-layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
 metricLeft = "=nArySquareUnionOperator.ss15";
 metricRight = "=nArySquareUnionOperator.ss15";
 shapes = (
@@ -86,7 +69,24 @@ ref = _smart.nArySquareUnionOperator.serif;
 scale = (1,-1);
 },
 );
-width = 3913;
+width = 5348;
+},
+{
+layerId = "7300F074-2CFD-43CC-B20F-1BF1EAE6C2C7";
+metricLeft = "=nArySquareUnionOperator.ss15";
+metricRight = "=nArySquareUnionOperator.ss15";
+shapes = (
+{
+alignment = -1;
+piece = {
+height = 90;
+};
+pos = (-216,519);
+ref = _smart.nArySquareUnionOperator.serif;
+scale = (1,-1);
+},
+);
+width = 3626;
 },
 {
 layerId = "2895B92B-45F5-4972-B85C-1A160E6E6488";
@@ -98,12 +98,12 @@ alignment = -1;
 piece = {
 height = 90;
 };
-pos = (-198,519);
+pos = (-207,519);
 ref = _smart.nArySquareUnionOperator.serif;
 scale = (1,-1);
 },
 );
-width = 5348;
+width = 5330;
 },
 {
 layerId = "29EF49B2-C370-4E88-B36E-A4ACD23E3F3A";
@@ -115,12 +115,12 @@ alignment = -1;
 piece = {
 height = 90;
 };
-pos = (-108,520);
+pos = (-168,520);
 ref = _smart.nArySquareUnionOperator.serif;
 scale = (1,-1);
 },
 );
-width = 4044;
+width = 3764;
 },
 {
 layerId = "58AEE805-6805-4A0B-A273-5ABBCB55D365";
@@ -132,12 +132,12 @@ alignment = -1;
 piece = {
 height = 90;
 };
-pos = (-190,521);
+pos = (-142,521);
 ref = _smart.nArySquareUnionOperator.serif;
 scale = (1,-1);
 },
 );
-width = 5451;
+width = 5471;
 },
 );
 subCategory = Math;
